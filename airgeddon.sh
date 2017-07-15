@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170712
+#Date.........: 20170715
 #Version......: 7.2
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -540,6 +540,19 @@ function auto_update_toggle() {
 			return 1
 		fi
 		auto_update=$((auto_update+1))
+	fi
+	return 0
+}
+
+#Set language as permanent
+function set_permanent_language() {
+
+	debug_print
+
+	sed -ri "s:^([l]anguage)=\"[a-zA-Z]+\":\1=\"${language}\":" "${scriptfolder}${scriptname}" 2> /dev/null
+	grep -E "^[l]anguage=\"${language}\"" "${scriptfolder}${scriptname}" > /dev/null
+	if [ "$?" != "0" ]; then
+		return 1
 	fi
 	return 0
 }
@@ -1212,8 +1225,9 @@ function option_menu() {
 	else
 		language_strings "${language}" 467
 	fi
-	print_simple_separator
 	language_strings "${language}" 447
+	print_simple_separator
+	language_strings "${language}" 174
 	print_hint ${current_menu}
 
 	read -r option_selected
@@ -1317,6 +1331,37 @@ function option_menu() {
 			fi
 		;;
 		5)
+			ask_yesno 478 "yes"
+			if [ "${yesno}" = "y" ]; then
+				local current_permanent_language
+				current_permanent_language=$(grep "language=" "${scriptfolder}${scriptname}" | grep -v "auto_change_language" | head -n 1 | awk -F "=" '{print $2}')
+				local remove_leading_quotes
+				remove_leading_quotes=$(echo "${current_permanent_language}" | sed -e 's/^"//;s/"$//')
+				if [ "${language}" = "${remove_leading_quotes}" ]; then
+					echo
+					language_strings "${language}" 480 "red"
+				else
+					local auto_change_value
+					auto_change_value=$(grep "auto_change_language=" "${scriptfolder}${scriptname}" | head -n 1 | awk -F "=" '{print $2}')
+					if [ "${auto_change_value}" -eq 1 ]; then
+						echo
+						language_strings "${language}" 479 "yellow"
+						auto_change_language_toggle
+					fi
+
+					set_permanent_language
+					if [ "$?" = "0" ]; then
+						echo
+						language_strings "${language}" 481 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+				fi
+				language_strings "${language}" 115 "read"
+			fi
+		;;
+		6)
 			return
 		;;
 		*)
@@ -9562,6 +9607,7 @@ function download_last_version() {
 	debug_print
 
 	rewrite_script_with_custom_beef "search"
+	#TODO rewrite script for persistence of language, colorization, auto update ¿? and auto lang select
 
 	local script_file_downloaded=0
 

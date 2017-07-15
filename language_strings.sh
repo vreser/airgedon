@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170714
+#Date.........: 20170715
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -405,7 +405,7 @@ function language_strings() {
 	arr["GREEK",1]="Αυτή η διεπαφή ${interface} δεν είναι κάρτα wifi. Δεν υποστηρίζει ετερόκλητη κατάσταση."
 
 	arr["ENGLISH",2]="English O.S. language detected. Supported by script. Automatically changed"
-	arr["SPANISH",2]="Idioma Español del S.O. detectado. Soportado por el script. Se cambió automaticamente"
+	arr["SPANISH",2]="Idioma Español del S.O. detectado. Soportado por el script. Se cambió automáticamente"
 	arr["FRENCH",2]="S.E. en Français détecté. Langue prise en charge par le script et changé automatiquement"
 	arr["CATALAN",2]="Idioma Català del S.O. detectat. Suportat pel script. S'ha canviat automàticament"
 	arr["PORTUGUESE",2]="S.O. em Português detectado. Compatível com o script. Linguagem automaticamente alterada"
@@ -2757,7 +2757,7 @@ function language_strings() {
 	arr["GREEK",295]="Εντοπίζεται η ανάλυση... Δεν μπορεί να εντοπιστεί!, χρησιμοποιείται η προεπιλεγμένη : ${normal_color}${resolution}"
 
 	arr["ENGLISH",296]="All parameters and requirements are set. The attack is going to start. Multiple windows will be opened, don't close anyone. When you want to stop the attack press [Enter] on this window and the script will automatically close them all"
-	arr["SPANISH",296]="Todos los parámetros y requerimientos están listos. Va a comenzar el ataque. Se abrirán múltiples ventanas, no cierres ninguna. Cuando quieras parar el ataque pulsa [Enter] en esta ventana y el script cerrará automaticamente todo"
+	arr["SPANISH",296]="Todos los parámetros y requerimientos están listos. Va a comenzar el ataque. Se abrirán múltiples ventanas, no cierres ninguna. Cuando quieras parar el ataque pulsa [Enter] en esta ventana y el script cerrará automáticamente todo"
 	arr["FRENCH",296]="Tous les paramètres de l'attaque sont prêts et elle peut comenmcer. Plusieurs consoles vont s'ouvrir, ne les fermez pas. Lorsque vous voulez arrêter l'attaque, appuyez sur [Entrée] dans cette console et le script fermera automatiquement les autres"
 	arr["CATALAN",296]="Tots els paràmetres i requeriments estan preparats. Començarà l'atac. S'obriran múltiples finestres, no tanquis cap. Quan vulguis parar l'atac prem [Enter] en aquesta finestra i el script tancarà automàticament tot"
 	arr["PORTUGUESE",296]="Todos os parâmetros e requisitos estão prontos. Você vai começar o ataque. Várias janelas iram se abrir, não feche nenhuma delas. Quando quiser parar o ataque pressione [Enter] nesta janela e o script irá fechar automaticamente"
@@ -3964,13 +3964,13 @@ function language_strings() {
 	arr["RUSSIAN",446]="${pending_of_translation} 8.  Возврат в опций меню"
 	arr["GREEK",446]="8.  Επιστροφή στο μενού επιλογών"
 
-	arr["ENGLISH",447]="5.  Return to main menu"
-	arr["SPANISH",447]="5.  Volver al menú principal"
-	arr["FRENCH",447]="5.  Retourner au menu principal"
-	arr["CATALAN",447]="5.  Tornar al menú principal"
-	arr["PORTUGUESE",447]="5.  Voltar ao menu principal"
-	arr["RUSSIAN",447]="5.  Возврат в главное меню"
-	arr["GREEK",447]="5.  Επιστροφή στο αρχικό μενού"
+	arr["ENGLISH",447]="5.  Set permanently airgeddon's language to the current one"
+	arr["SPANISH",447]="5.  Cambiar permanentemente el idioma de airgeddon al actual"
+	arr["FRENCH",447]="${pending_of_translation} 5.  Modifier définitivement la langue du airgeddon actuelle"
+	arr["CATALAN",447]="${pending_of_translation} 5.  Canviar permanentment l'idioma de airgeddon a l'actual"
+	arr["PORTUGUESE",447]="${pending_of_translation} 5.  Alterar permanentemente o idioma do airgeddon al atual"
+	arr["RUSSIAN",447]="${pending_of_translation} 5.  Установите постоянный язык airgeddon на текущий"
+	arr["GREEK",447]="${pending_of_translation} 5.  Ρυθμίστε μόνιμα τη γλώσσα του airgeddon στην τρέχουσα"
 
 	arr["ENGLISH",448]="If you installed airgeddon from a repository, you should not enable automatic updates. airgeddon will be updated when there is a new version in the repository"
 	arr["SPANISH",448]="Si instalaste airgeddon desde un repositorio, no deberías activar la actualización automática. airgeddon se actualizará cuando haya una nueva versión en el repositorio"
@@ -4094,7 +4094,7 @@ function language_strings() {
 
 	arr["ENGLISH",463]="${blue_color}Colorization (on some screen's output) is going to be enabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",463]="${blue_color}Se va a activar la colorización (en la salida de algunas pantallas). ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
-	arr["FRENCH",463]="Activation colorisation (sur certains écrans). ${green_color}Voulez-vous continuer? ${normal_color}${visual_choice}"
+	arr["FRENCH",463]="${blue_color}Activation colorisation (sur certains écrans). ${green_color}Voulez-vous continuer? ${normal_color}${visual_choice}"
 	arr["CATALAN",463]="${pending_of_translation} ${blue_color}Es va a activar la colorización (a la sortida d'algunes pantalles). ${green_color}¿Vols continuar? ${normal_color}${visual_choice}"
 	arr["PORTUGUESE",463]="${pending_of_translation} ${blue_color}Ela irá permitir colorização (na saída de algumas telas). ${green_color}Você deseja continuar? ${normal_color}${visual_choice}"
 	arr["RUSSIAN",463]="${pending_of_translation} ${blue_color}Раскраска (на выходе какого-либо экрана) будет включена. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
@@ -4205,12 +4205,44 @@ function language_strings() {
 	arr["GREEK",476]="Δεν έχει εντοπιστεί κάποιο γραφικό σύστημα παραθύρων X. Αν έχετε ήδη ένα, ελέγξτε ότι λειτουργεί σωστά. Είναι απαραίτητο για το airgeddon. Το script δεν μπορεί να συνεχίσει"
 
 	arr["ENGLISH",477]="The options in this menu containing the word \"permanently\" modify airgeddon to save the settings for the next time that is to be launched. However, you can always return to this menu to change the value of the option again"
-	arr["SPANISH",477]="${pending_of_translation} Las opciones de este menú que contienen la palabra \"permanentemente\", modifican airgeddon para que incluso la siguiente vez que sea iniciado siga guardando la configuración. No obstante, siempre puedes volver a este menú a cambiar de nuevo el valor de la opción"
-	arr["FRENCH",477]="${pending_of_translation} Les options contenant le mot \"permanente\" modifiént airgeddon de sorte que les paramétrages persisteront lors des prochains redémarrages. Vous pourrez cependant toujours modifier la configuration permanante depuis ce même menu"
+	arr["SPANISH",477]="Las opciones de este menú que contienen la palabra \"permanentemente\", modifican airgeddon para que incluso la siguiente vez que sea iniciado siga guardando la configuración. No obstante, siempre puedes volver a este menú a cambiar de nuevo el valor de la opción"
+	arr["FRENCH",477]="Les options contenant le mot \"permanente\" modifiént airgeddon de sorte que les paramétrages persisteront lors des prochains redémarrages. Vous pourrez cependant toujours modifier la configuration permanante depuis ce même menu"
 	arr["CATALAN",477]="${pending_of_translation} Les opcions d'aquest menú que contenen la paraula \"permanentment\", modifiquen airgeddon perquè fins i tot la següent vegada que sigui iniciat segueixi guardant la configuració. No obstant això, sempre pots tornar a aquest menú a canviar de nou el valor de l'opció"
 	arr["PORTUGUESE",477]="${pending_of_translation} As opções neste menu contendo a palavra \"permanentemente\" airgeddon modificado de modo que mesmo na próxima vez que for iniciado continuar a guardar a configuração. No entanto, você pode sempre voltar a este menu para alterar de volta o valor da opção"
 	arr["RUSSIAN",477]="${pending_of_translation} Параметры в этом меню, содержащие слово \"навсегда\" изменить airgeddon даже для следующего запуска, сохраняют сохраненные настройки. Однако вы всегда можете вернуться в это меню, чтобы снова изменить значение параметра"
 	arr["GREEK",477]="Οι επιλογές σε αυτό το μενού που περιέχουν τη λέξη \"μόνιμα\" τροποποιούν το airgeddon ώστε να αποθηκεύει τις ρυθμίσεις για την επόμενη φορά. Ωστόσο, μπορείτε πάντα να επιστρέψετε σε αυτό το μενού για να αλλάξετε ξανά την τιμή της επιλογής"
+
+	arr["ENGLISH",478]="${blue_color}Language is going to be set permanently to the current one, so on the next start of airgeddon it will be used directly. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
+	arr["SPANISH",478]="${blue_color}Se va a cambiar permanentemente el idioma al actual para que al siguiente inicio de airgeddon este sea el idioma en el que arranque directamente. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
+	arr["FRENCH",478]="${pending_of_translation} ${blue_color}Il changera de façon permanente la langue au courant afin que le prochain début de ce airgeddon est la langue que démarrer directement. ${green_color}Voulez-vous continuer? ${normal_color}${visual_choice}"
+	arr["CATALAN",478]="${pending_of_translation} ${blue_color}Es canviarà permanentment l'idioma a l'actual perquè al següent inici de airgeddon aquest sigui l'idioma en què arrencada directament. ${green_color}¿Vols continuar? ${normal_color}${visual_choice}"
+	arr["PORTUGUESE",478]="${pending_of_translation} ${blue_color}Ele irá alterar permanentemente o idioma para a corrente para que o próximo início de airgeddon esta é a linguagem que arrancam directamente a. ${green_color}Você deseja continuar? ${normal_color}${visual_choice}"
+	arr["RUSSIAN",478]="${pending_of_translation} ${blue_color}Язык будет постоянно установлен на текущий, поэтому при следующем запуске airgeddon он будет использоваться напрямую. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
+	arr["GREEK",478]="${pending_of_translation} ${blue_color}Η γλώσσα πρόκειται να τεθεί μόνιμα στην τρέχουσα, έτσι στην επόμενη εκκίνηση του airgeddon θα χρησιμοποιηθεί άμεσα. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
+
+	arr["ENGLISH",479]="This change conflicts with the startup language autodetection which is currently enabled. It will be disabled automatically in order to perform the change"
+	arr["SPANISH",479]="Este cambio entra en conflicto con la autodetección del idioma al inicio que en este momento está activada. Se desactivará automáticamente para poder realizar el cambio"
+	arr["FRENCH",479]="${pending_of_translation} Ce changement est en conflit avec la détection automatique de la langue au début qui est actuellement actif. Il est automatiquement désactivé pour effectuer le changement"
+	arr["CATALAN",479]="${pending_of_translation} Aquest canvi entra en conflicte amb la detecció automàtica de l'idioma a l'inici que en aquest moment està activada. Es desactivarà automàticament per a poder realitzar el canvi"
+	arr["PORTUGUESE",479]="${pending_of_translation} Esta mudança entre em conflito com a detecção automática linguagem no início que está ativo atualmente. Ele é automaticamente desativado para fazer a mudança"
+	arr["RUSSIAN",479]="${pending_of_translation} Это изменение конфликтует с автоопределением автозапуска, которое в данный момент включено. Он будет автоматически отключен для выполнения изменения"
+	arr["GREEK",479]="${pending_of_translation} Αυτή η αλλαγή έρχεται σε σύγκρουση με την αυτόματη εντοπισμό της γλώσσας εκκίνησης, η οποία είναι αυτή τη στιγμή ενεργοποιημένη. Θα απενεργοποιηθεί αυτόματα για να πραγματοποιηθεί η αλλαγή"
+
+	arr["ENGLISH",480]="Current language is the same of permanent language already set. No changes will be done"
+	arr["SPANISH",480]="El idioma actual es el mismo que ya está puesto como permanente. No se realizarán cambios"
+	arr["FRENCH",480]="${pending_of_translation} La langue en cours est le même que celui qui est déjà permanente. Pas de changements"
+	arr["CATALAN",480]="${pending_of_translation} L'idioma actual és el mateix que ja està posat com permanent. No es realitzaran canvis"
+	arr["PORTUGUESE",480]="${pending_of_translation} O idioma atual é o mesmo que já é permanente. Nenhuma alteração será feita"
+	arr["RUSSIAN",480]="${pending_of_translation} Текущий язык тот же, что и уже установленный язык. Никаких изменений не будет сделано"
+	arr["GREEK",480]="${pending_of_translation} Η τρέχουσα γλώσσα είναι η ίδια με τη μόνιμη γλώσσα που έχει ήδη οριστεί. Δεν θα γίνει καμία αλλαγή"
+
+	arr["ENGLISH",481]="Language set to the current one permanently"
+	arr["SPANISH",481]="Idioma cambiado al actual permanentemente"
+	arr["FRENCH",481]="${pending_of_translation} Langue changé au courant en permanence"
+	arr["CATALAN",481]="${pending_of_translation} Idioma canviat a l'actual permanentment"
+	arr["PORTUGUESE",481]="${pending_of_translation} Idioma alterado para o atual permanentemente"
+	arr["RUSSIAN",481]="${pending_of_translation} Язык, установленный на текущий постоянный"
+	arr["GREEK",481]="${pending_of_translation} Η γλώσσα που έχει οριστεί στη μόνιμη"
 
 	case "${3}" in
 		"yellow")
