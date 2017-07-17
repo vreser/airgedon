@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170715
+#Date.........: 20170717
 #Version......: 7.2
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -542,6 +542,15 @@ function auto_update_toggle() {
 		auto_update=$((auto_update+1))
 	fi
 	return 0
+}
+
+#Get current permanent language
+function get_current_permanent_language() {
+
+	debug_print
+
+	current_permanent_language=$(grep "language=" "${scriptfolder}${scriptname}" | grep -v "auto_change_language" | head -n 1 | awk -F "=" '{print $2}')
+	current_permanent_language=$(echo "${current_permanent_language}" | sed -e 's/^"//;s/"$//')
 }
 
 #Set language as permanent
@@ -1333,11 +1342,8 @@ function option_menu() {
 		5)
 			ask_yesno 478 "yes"
 			if [ "${yesno}" = "y" ]; then
-				local current_permanent_language
-				current_permanent_language=$(grep "language=" "${scriptfolder}${scriptname}" | grep -v "auto_change_language" | head -n 1 | awk -F "=" '{print $2}')
-				local remove_leading_quotes
-				remove_leading_quotes=$(echo "${current_permanent_language}" | sed -e 's/^"//;s/"$//')
-				if [ "${language}" = "${remove_leading_quotes}" ]; then
+				get_current_permanent_language
+				if [ "${language}" = "${current_permanent_language}" ]; then
 					echo
 					language_strings "${language}" 480 "red"
 				else
@@ -9607,12 +9613,13 @@ function download_last_version() {
 	debug_print
 
 	rewrite_script_with_custom_beef "search"
-	#TODO rewrite script for persistence of language, colorization, auto update ¿? and auto lang select
 
 	local script_file_downloaded=0
 
 	download_language_strings_file
 	if [ "$?" = "0" ]; then
+
+		get_current_permanent_language
 		timeout -s SIGTERM 15 curl -L ${urlscript_directlink} -s -o "${0}"
 
 		if [ "$?" = "0" ]; then
@@ -9636,6 +9643,17 @@ function download_last_version() {
 		if [ -n "${beef_custom_path}" ]; then
 			rewrite_script_with_custom_beef "set" "${beef_custom_path}"
 		fi
+
+		if [ "${allow_colorization}" -ne 1 ]; then
+			sed -ri 's:(allow_colorization)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
+		fi
+
+		if [ "${auto_change_language}" -ne 1 ]; then
+			sed -ri 's:(auto_change_language)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
+		fi
+
+		sed -ri "s:^([l]anguage)=\"[a-zA-Z]+\":\1=\"${current_permanent_language}\":" "${scriptfolder}${scriptname}" 2> /dev/null
+
 		language_strings "${language}" 115 "read"
 		chmod +x "${scriptfolder}${scriptname}" > /dev/null 2>&1
 		exec "${scriptfolder}${scriptname}"

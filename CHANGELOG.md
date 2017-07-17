@@ -2,7 +2,7 @@
  - Improved chipset detection
  - New language and options menu
  - Colorization, auto-update and startup language autodetection now can be enabled/disabled persistently from menu
- - Language can be set permanently from menu
+ - Language can be set permanently from menu even for next startup after an update
  - New check using xset internal tool to check for a working X window system in order to avoid uncontrolled xterm errors
 
 ### 7.11
