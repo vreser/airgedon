@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170715
+#Date.........: 20170720
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -3970,7 +3970,7 @@ function language_strings() {
 	arr["CATALAN",447]="5.  Canviar permanentment l'idioma de airgeddon a l'actual"
 	arr["PORTUGUESE",447]="5.  Alterar permanentemente o idioma do airgeddon para o atual"
 	arr["RUSSIAN",447]="${pending_of_translation} 5.  Установите постоянный язык airgeddon на текущий"
-	arr["GREEK",447]="${pending_of_translation} 5.  Ρυθμίστε μόνιμα τη γλώσσα του airgeddon στην τρέχουσα"
+	arr["GREEK",447]="5.  Θέστε μόνιμα την τρέχουσα γλώσσα του airgeddon ώς προεπιλεγμένη"
 
 	arr["ENGLISH",448]="If you installed airgeddon from a repository, you should not enable automatic updates. airgeddon will be updated when there is a new version in the repository"
 	arr["SPANISH",448]="Si instalaste airgeddon desde un repositorio, no deberías activar la actualización automática. airgeddon se actualizará cuando haya una nueva versión en el repositorio"
@@ -3986,7 +3986,7 @@ function language_strings() {
 	arr["CATALAN",449]="2.  Habilita permanentment l'actualització automàtica"
 	arr["PORTUGUESE",449]="2.  Ativar permanentemente a atualização automática"
 	arr["RUSSIAN",449]="${pending_of_translation} 2.  Постоянное включение автоматических обновлений"
-	arr["GREEK",449]="2.  Ενεργοποιήστε τις αυτόματες ενημερώσεις μόνιμα"
+	arr["GREEK",449]="2.  Ενεργοποιήστε μόνιμα τις αυτόματες ενημερώσεις"
 
 	arr["ENGLISH",450]="3.  Enable colorization permanently (on some screen's output)"
 	arr["SPANISH",450]="3.  Habilitar permanentemente la colorización (en la salida de algunas pantallas)"
@@ -3994,7 +3994,7 @@ function language_strings() {
 	arr["CATALAN",450]="3.  Habilita permanentment la coloració (a la sortida d'algunes pantalles)"
 	arr["PORTUGUESE",450]="3.  Ativar permanentemente a colorização (em algumas telas)"
 	arr["RUSSIAN",450]="${pending_of_translation} 3.  Включить раскраску навсегда (на выходе некоторых экранов)"
-	arr["GREEK",450]="3.  Ενεργοποιήστε τον χρωματισμό μόνιμα (σε κάποια σημεία)"
+	arr["GREEK",450]="3.  Ενεργοποιήστε μόνιμα τον χρωματισμό (σε κάποια σημεία)"
 
 	arr["ENGLISH",451]="Automatic updates: ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",451]="Actualizaciones automáticas: ${pink_color}Activadas${normal_color}"
@@ -4218,7 +4218,7 @@ function language_strings() {
 	arr["CATALAN",478]="${blue_color}Es canviarà permanentment l'idioma a l'actual perquè al següent inici d' airgeddon aquest sigui l'idioma en què arrenqui directament. ${green_color}¿Vols continuar? ${normal_color}${visual_choice}"
 	arr["PORTUGUESE",478]="${blue_color}A linguagem será definida permanentemente para a atual, no próximo início do airgeddon esta será a usada linguagem. ${green_color}Você deseja continuar? ${normal_color}${visual_choice}"
 	arr["RUSSIAN",478]="${pending_of_translation} ${blue_color}Язык будет постоянно установлен на текущий, поэтому при следующем запуске airgeddon он будет использоваться напрямую. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
-	arr["GREEK",478]="${pending_of_translation} ${blue_color}Η γλώσσα πρόκειται να τεθεί μόνιμα στην τρέχουσα, έτσι στην επόμενη εκκίνηση του airgeddon θα χρησιμοποιηθεί άμεσα. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
+	arr["GREEK",478]="${blue_color}Η γλώσσα πρόκειται να τεθεί μόνιμα στην τρέχουσα, έτσι στην επόμενη εκκίνηση του airgeddon θα χρησιμοποιηθεί κατ' ευθείαν αυτή. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",479]="This change conflicts with the startup language autodetection which is currently enabled. It will be disabled automatically in order to perform the change"
 	arr["SPANISH",479]="Este cambio entra en conflicto con la autodetección del idioma al inicio que en este momento está activada. Se desactivará automáticamente para poder realizar el cambio"
@@ -4226,7 +4226,7 @@ function language_strings() {
 	arr["CATALAN",479]="Aquest canvi entra en conflicte amb la detecció automàtica de l'idioma a l'inici que en aquest moment està activada. Es desactivarà automàticament per a poder realitzar el canvi"
 	arr["PORTUGUESE",479]="Esta mudança entra em conflito com a Autodeteção de linguagem, ativa atualmente. Ele é desativa para fazer a mudança"
 	arr["RUSSIAN",479]="${pending_of_translation} Это изменение конфликтует с автоопределением автозапуска, которое в данный момент включено. Он будет автоматически отключен для выполнения изменения"
-	arr["GREEK",479]="${pending_of_translation} Αυτή η αλλαγή έρχεται σε σύγκρουση με την αυτόματη εντοπισμό της γλώσσας εκκίνησης, η οποία είναι αυτή τη στιγμή ενεργοποιημένη. Θα απενεργοποιηθεί αυτόματα για να πραγματοποιηθεί η αλλαγή"
+	arr["GREEK",479]="Αυτή η αλλαγή έρχεται σε σύγκρουση με τon αυτόματo εντοπισμό της γλώσσας εκκίνησης, ο οποίος είναι αυτή τη στιγμή ενεργοποιημένος. Θα απενεργοποιηθεί αυτόματα για να πραγματοποιηθεί η αλλαγή αυτή"
 
 	arr["ENGLISH",480]="Current language is the same of permanent language already set. No changes will be done"
 	arr["SPANISH",480]="El idioma actual es el mismo que ya está puesto como permanente. No se realizarán cambios"
@@ -4234,7 +4234,7 @@ function language_strings() {
 	arr["CATALAN",480]="L'idioma actual és el mateix que ja està posat com permanent. No es realitzaran canvis"
 	arr["PORTUGUESE",480]="O idioma atual já é permanente. Nenhuma alteração será feita"
 	arr["RUSSIAN",480]="${pending_of_translation} Текущий язык тот же, что и уже установленный язык. Никаких изменений не будет сделано"
-	arr["GREEK",480]="${pending_of_translation} Η τρέχουσα γλώσσα είναι η ίδια με τη μόνιμη γλώσσα που έχει ήδη οριστεί. Δεν θα γίνει καμία αλλαγή"
+	arr["GREEK",480]="Η τρέχουσα γλώσσα είναι ίδια με τη μόνιμη γλώσσα που έχει οριστεί ήδη. Δεν θα γίνει καμία αλλαγή"
 
 	arr["ENGLISH",481]="Language set to the current one permanently"
 	arr["SPANISH",481]="Idioma cambiado al actual permanentemente"
@@ -4242,7 +4242,7 @@ function language_strings() {
 	arr["CATALAN",481]="Idioma canviat a l'actual permanentment"
 	arr["PORTUGUESE",481]="Idioma definido permanentemente para o atual "
 	arr["RUSSIAN",481]="${pending_of_translation} Язык, установленный на текущий постоянный"
-	arr["GREEK",481]="${pending_of_translation} Η γλώσσα που έχει οριστεί στη μόνιμη"
+	arr["GREEK",481]="Τέθηκε μόνιμα η τρέχουσα γλώσσα"
 
 	case "${3}" in
 		"yellow")
