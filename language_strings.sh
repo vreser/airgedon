@@ -3966,7 +3966,7 @@ function language_strings() {
 
 	arr["ENGLISH",447]="5.  Set permanently airgeddon's language to the current one"
 	arr["SPANISH",447]="5.  Cambiar permanentemente el idioma de airgeddon al actual"
-	arr["FRENCH",447]="${pending_of_translation} 5.  Modifier définitivement la langue du airgeddon actuelle"
+	arr["FRENCH",447]="5.  Etablir comme langue permanente d'airgeddon celle utilisée actuellement"
 	arr["CATALAN",447]="5.  Canviar permanentment l'idioma de airgeddon a l'actual"
 	arr["PORTUGUESE",447]="5.  Alterar permanentemente o idioma do airgeddon para o atual"
 	arr["RUSSIAN",447]="${pending_of_translation} 5.  Установите постоянный язык airgeddon на текущий"
@@ -4214,7 +4214,7 @@ function language_strings() {
 
 	arr["ENGLISH",478]="${blue_color}Language is going to be set permanently to the current one, so on the next start of airgeddon it will be used directly. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",478]="${blue_color}Se va a cambiar permanentemente el idioma al actual para que al siguiente inicio de airgeddon este sea el idioma en el que arranque directamente. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
-	arr["FRENCH",478]="${pending_of_translation} ${blue_color}Il changera de façon permanente la langue au courant afin que le prochain début de ce airgeddon est la langue que démarrer directement. ${green_color}Voulez-vous continuer? ${normal_color}${visual_choice}"
+	arr["FRENCH",478]="${blue_color}La langue actuelle va être activée de façon permanente, c'est à dire que ce sera la langue d'usage lors des prochains démarrages d'airgeddon. ${green_color}Voulez-vous continuer? ${normal_color}${visual_choice}"
 	arr["CATALAN",478]="${blue_color}Es canviarà permanentment l'idioma a l'actual perquè al següent inici d' airgeddon aquest sigui l'idioma en què arrenqui directament. ${green_color}¿Vols continuar? ${normal_color}${visual_choice}"
 	arr["PORTUGUESE",478]="${blue_color}A linguagem será definida permanentemente para a atual, no próximo início do airgeddon esta será a usada linguagem. ${green_color}Você deseja continuar? ${normal_color}${visual_choice}"
 	arr["RUSSIAN",478]="${pending_of_translation} ${blue_color}Язык будет постоянно установлен на текущий, поэтому при следующем запуске airgeddon он будет использоваться напрямую. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
@@ -4222,7 +4222,7 @@ function language_strings() {
 
 	arr["ENGLISH",479]="This change conflicts with the startup language autodetection which is currently enabled. It will be disabled automatically in order to perform the change"
 	arr["SPANISH",479]="Este cambio entra en conflicto con la autodetección del idioma al inicio que en este momento está activada. Se desactivará automáticamente para poder realizar el cambio"
-	arr["FRENCH",479]="${pending_of_translation} Ce changement est en conflit avec la détection automatique de la langue au début qui est actuellement actif. Il est automatiquement désactivé pour effectuer le changement"
+	arr["FRENCH",479]="Ce changement entre en conflit avec la détection automatique de la langue au démarrage qui est actuellement activée. Elle va être automatiquement désactivée pour effectuer le changement"
 	arr["CATALAN",479]="Aquest canvi entra en conflicte amb la detecció automàtica de l'idioma a l'inici que en aquest moment està activada. Es desactivarà automàticament per a poder realitzar el canvi"
 	arr["PORTUGUESE",479]="Esta mudança entra em conflito com a Autodeteção de linguagem, ativa atualmente. Ele é desativa para fazer a mudança"
 	arr["RUSSIAN",479]="${pending_of_translation} Это изменение конфликтует с автоопределением автозапуска, которое в данный момент включено. Он будет автоматически отключен для выполнения изменения"
@@ -4230,7 +4230,7 @@ function language_strings() {
 
 	arr["ENGLISH",480]="Current language is the same of permanent language already set. No changes will be done"
 	arr["SPANISH",480]="El idioma actual es el mismo que ya está puesto como permanente. No se realizarán cambios"
-	arr["FRENCH",480]="${pending_of_translation} La langue en cours est le même que celui qui est déjà permanente. Pas de changements"
+	arr["FRENCH",480]="La langue actuelle est la même que celle désignée comme langue permanente. Pas de changements"
 	arr["CATALAN",480]="L'idioma actual és el mateix que ja està posat com permanent. No es realitzaran canvis"
 	arr["PORTUGUESE",480]="O idioma atual já é permanente. Nenhuma alteração será feita"
 	arr["RUSSIAN",480]="${pending_of_translation} Текущий язык тот же, что и уже установленный язык. Никаких изменений не будет сделано"
@@ -4238,7 +4238,7 @@ function language_strings() {
 
 	arr["ENGLISH",481]="Language set to the current one permanently"
 	arr["SPANISH",481]="Idioma cambiado al actual permanentemente"
-	arr["FRENCH",481]="${pending_of_translation} Langue changé au courant en permanence"
+	arr["FRENCH",481]="La langue choisie est l'actuelle langue permanente"
 	arr["CATALAN",481]="Idioma canviat a l'actual permanentment"
 	arr["PORTUGUESE",481]="Idioma definido permanentemente para o atual "
 	arr["RUSSIAN",481]="${pending_of_translation} Язык, установленный на текущий постоянный"
