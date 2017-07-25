@@ -4000,7 +4000,7 @@ function language_strings() {
 	arr["SPANISH",451]="Actualizaciones automáticas: ${pink_color}Activadas${normal_color}"
 	arr["FRENCH",451]="Mises à jour automatiques: ${pink_color}Activées${normal_color}"
 	arr["CATALAN",451]="Actualitzacions automàtiques: ${pink_color}Activades${normal_color}"
-	arr["PORTUGUESE",451]="Atualizações Automáticas: ${pink_color}Ativa${normal_color}"
+	arr["PORTUGUESE",451]="Atualizações automáticas: ${pink_color}Ativa${normal_color}"
 	arr["RUSSIAN",451]="${pending_of_translation} Автоматическое обновление: ${pink_color}Включено${normal_color}"
 	arr["GREEK",451]="Αυτόματη ενημέρωση: ${pink_color}Ενεργοποιημένο${normal_color}"
 
@@ -4008,7 +4008,7 @@ function language_strings() {
 	arr["SPANISH",452]="Actualizaciones automáticas: ${pink_color}Desactivadas${normal_color}"
 	arr["FRENCH",452]="Mises à jour automatiques: ${pink_color}Désactivées${normal_color}"
 	arr["CATALAN",452]="Actualitzacions automàtiques: ${pink_color}Desactivades${normal_color}"
-	arr["PORTUGUESE",452]="Atualizações Automáticas: ${pink_color}Desativa${normal_color}"
+	arr["PORTUGUESE",452]="Atualizações automáticas: ${pink_color}Desativa${normal_color}"
 	arr["RUSSIAN",452]="${pending_of_translation} Автоматическое обновление: ${pink_color}Инвалид${normal_color}"
 	arr["GREEK",452]="Αυτόματη ενημέρωση: ${pink_color}Απενεργοποιημένο${normal_color}"
 
@@ -4088,7 +4088,7 @@ function language_strings() {
 	arr["SPANISH",462]="${blue_color}Se va a desactivar la colorización (en la salida de algunas pantallas). ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
 	arr["FRENCH",462]="${blue_color}Désactivation de la colorisation (sur certains écrans). ${green_color}Voulez-vous continuer? ${normal_color}${visual_choice}"
 	arr["CATALAN",462]="${blue_color}Es va a desactivar le coloració (a la sortida d'algunes pantalles). ${green_color}¿Vols continuar? ${normal_color}${visual_choice}"
-	arr["PORTUGUESE",462]="A coloração (em algumas telas) será desabilitada. ${green_color}Você deseja continuar? ${normal_color}${visual_choice}"
+	arr["PORTUGUESE",462]="${blue_color}A coloração (em algumas telas) será desabilitada. ${green_color}Você deseja continuar? ${normal_color}${visual_choice}"
 	arr["RUSSIAN",462]="${pending_of_translation} ${blue_color}Раскраска (на выходе какого-либо экрана) будет отключена. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",462]="${blue_color}Ο χρωματισμός (σε κάποια σημεία) πρόκειται να απενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 
