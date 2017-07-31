@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170725
+#Date.........: 20170731
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -3985,7 +3985,7 @@ function language_strings() {
 	arr["FRENCH",449]="2.  Activer de façon permanante la mise à jour automatique"
 	arr["CATALAN",449]="2.  Habilita permanentment l'actualització automàtica"
 	arr["PORTUGUESE",449]="2.  Ativar permanentemente a atualização automática"
-	arr["RUSSIAN",449]="2.  Включение постоянных автоматических обновлений""
+	arr["RUSSIAN",449]="2.  Включение постоянных автоматических обновлений"
 	arr["GREEK",449]="2.  Ενεργοποιήστε μόνιμα τις αυτόματες ενημερώσεις"
 
 	arr["ENGLISH",450]="3.  Enable colorization permanently (on some screen's output)"
@@ -4036,7 +4036,7 @@ function language_strings() {
 	arr["RUSSIAN",455]="2.  Отключить постоянные автоматические обновления"
 	arr["GREEK",455]="2.  Απενεργοποιήστε μόνιμα τις αυτόματες ενημερώσεις"
 
-	arr["ENGLISH",456]="3.  Disable colorization (on some screen's output)"
+	arr["ENGLISH",456]="3.  Disable colorization permanently (on some screen's output)"
 	arr["SPANISH",456]="3.  Deshabilitar permanentemente la colorización (en la salida de algunas pantallas)"
 	arr["FRENCH",456]="3.  Désactiver dé façon permanante (sur certains écrans)"
 	arr["CATALAN",456]="3.  Deshabilita permanentment la colorización (a la sortida d'algunes pantalles)"
