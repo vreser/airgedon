@@ -4041,7 +4041,7 @@ function language_strings() {
 	arr["FRENCH",456]="3.  Désactiver dé façon permanante (sur certains écrans)"
 	arr["CATALAN",456]="3.  Deshabilita permanentment la colorización (a la sortida d'algunes pantalles)"
 	arr["PORTUGUESE",456]="3.  Desativar permanentemente a colorização (em algumas telas)"
-	arr["RUSSIAN",456]="3.  Отключение использования цветов (в некоторых окнах программы)"
+	arr["RUSSIAN",456]="3.  Постоянное отключение использования цветов (в некоторых окнах программы)"
 	arr["GREEK",456]="3.  Απενεργοποιήστε μόνιμα τον χρωματισμό (σε κάποια σημεία)"
 
 	arr["ENGLISH",457]="${blue_color}Automatic updates are going to be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
@@ -4129,7 +4129,7 @@ function language_strings() {
 	arr["FRENCH",467]="4.  Activer de façon permanente la détection de langue au lancement"
 	arr["CATALAN",467]="4.  Habilitar permanentment l'autodetecció d'idioma a l'inici"
 	arr["PORTUGUESE",467]="4.  Ativar permanentemente autodetecção de linguagem no início"
-	arr["RUSSIAN",467]="4.  Автоматическое определение языка отключено"
+	arr["RUSSIAN",467]="4.  Автоматическое определение языка постоянно отключено"
 	arr["GREEK",467]="4.  Ενεργοποίηση του αυτόματου εντοπισμού γλώσσας κατά την εκκίνηση μόνιμα"
 
 	arr["ENGLISH",468]="4.  Disable startup language autodetection permanently"
@@ -4137,7 +4137,7 @@ function language_strings() {
 	arr["FRENCH",468]="4.  Désactiver de façon permanente la détection de langue au lancement"
 	arr["CATALAN",468]="4.  Deshabilitar permanentment l'autodetecció d'idioma a l'inici"
 	arr["PORTUGUESE",468]="4.  Desativar permanentemente a autodetecção de linguagem no início"
-	arr["RUSSIAN",468]="4.  Отключить автоматическое определение языка"
+	arr["RUSSIAN",468]="4.  Постоянное отключение автоматического определения языка"
 	arr["GREEK",468]="4.  Απενεργοποίηση του αυτόματου εντοπισμού γλώσσας κατά την εκκίνηση μόνιμα"
 
 	arr["ENGLISH",469]="${blue_color}Startup language autodetection will be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
