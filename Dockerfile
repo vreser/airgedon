@@ -52,7 +52,8 @@ RUN \
 	rfkill \
 	x11-utils \
 	wget \
-	ccze
+	ccze \
+	x11-xserver-utils
 
 #Install update tools
 RUN \
