@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170731
+#Date.........: 20170806
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -4097,7 +4097,7 @@ function language_strings() {
 	arr["FRENCH",463]="${blue_color}Activation colorisation (sur certains écrans). ${green_color}Voulez-vous continuer? ${normal_color}${visual_choice}"
 	arr["CATALAN",463]="${blue_color}Es va a activar la coloració (a la sortida d'algunes pantalles). ${green_color}¿Vols continuar? ${normal_color}${visual_choice}"
 	arr["PORTUGUESE",463]="${blue_color}A coloração (em algumas telas) será ativada. ${green_color}Você deseja continuar? ${normal_color}${visual_choice}"
-	arr["RUSSIAN",463]="Использование цветов (в некоторых окнах программы) будет включено. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice"
+	arr["RUSSIAN",463]="Использование цветов (в некоторых окнах программы) будет включено. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",463]="${blue_color}Ο χρωματισμός (σε κάποια σημεία) πρόκειται να ενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",464]="You don't have the ccze package installed so any change on this option will have no effect until you install it"
