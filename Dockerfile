@@ -10,9 +10,10 @@ LABEL \
 	maintainer="OscarAkaElvis <oscar.alfonso.diaz@gmail.com>" \
 	description="This is a multi-use bash script for Linux systems to audit wireless networks."
 
-#Url env vars
+#Env vars
 ENV AIRGEDDON_URL="https://github.com/v1s1t0r1sh3r3/airgeddon.git"
 ENV HASHCAT2_URL="https://github.com/v1s1t0r1sh3r3/hashcat2.0.git"
+ENV DEBIAN_FRONTEND="noninteractive"
 
 #Update system
 RUN apt update
