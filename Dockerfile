@@ -133,7 +133,8 @@ RUN rm -rf /opt/airgeddon/imgs > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/Dockerfile > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/binaries > /dev/null 2>&1 && \
 	rm -rf /opt/hashcat2.0 > /dev/null 2>&1 && \
-	rm -rf /tmp/* > /dev/null 2>&1
+	rm -rf /tmp/* > /dev/null 2>&1 && \
+	rm -rf /var/lib/apt/lists/* > /dev/null 2>&1
 
 #Expose BeEF control panel port
 EXPOSE 3000
