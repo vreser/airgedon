@@ -10,16 +10,17 @@ LABEL \
 	maintainer="OscarAkaElvis <oscar.alfonso.diaz@gmail.com>" \
 	description="This is a multi-use bash script for Linux systems to audit wireless networks."
 
-#Url env vars
+#Env vars
 ENV AIRGEDDON_URL="https://github.com/v1s1t0r1sh3r3/airgeddon.git"
 ENV HASHCAT2_URL="https://github.com/v1s1t0r1sh3r3/hashcat2.0.git"
+ENV DEBIAN_FRONTEND="noninteractive"
 
 #Update system
-RUN apt-get update
+RUN apt update
 
 #Set locales
 RUN \
-	apt-get -y install \
+	apt -y install \
 	locales && \
 	locale-gen en_US.UTF-8 && \
 	sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
@@ -34,7 +35,7 @@ ENV LC_ALL="en_US.UTF-8"
 
 #Install airgeddon essential tools
 RUN \
-	apt-get -y install \
+	apt -y install \
 	gawk \
 	net-tools \
 	wireless-tools \
@@ -44,24 +45,25 @@ RUN \
 
 #Install airgeddon internal tools
 RUN \
-	apt-get -y install \
+	apt -y install \
 	ethtool \
 	pciutils \
 	usbutils \
 	rfkill \
 	x11-utils \
 	wget \
-	ccze
+	ccze \
+	x11-xserver-utils
 
 #Install update tools
 RUN \
-	apt-get -y install \
+	apt -y install \
 	curl \
 	git
 
 #Install airgeddon optional tools
 RUN \
-	apt-get -y install \
+	apt -y install \
 	crunch \
 	hashcat \
 	mdk3 \
@@ -79,7 +81,7 @@ RUN \
 
 #Install needed Ruby gems
 RUN \
-	apt-get -y install \
+	apt -y install \
 	beef-xss \
 	bettercap
 
@@ -119,9 +121,9 @@ RUN \
 
 #Clean packages
 RUN \
-	apt-get clean && \
-	apt-get autoclean && \
-	apt-get autoremove
+	apt clean && \
+	apt autoclean && \
+	apt autoremove
 
 #Clean files
 RUN rm -rf /opt/airgeddon/imgs > /dev/null 2>&1 && \
@@ -131,7 +133,8 @@ RUN rm -rf /opt/airgeddon/imgs > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/Dockerfile > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/binaries > /dev/null 2>&1 && \
 	rm -rf /opt/hashcat2.0 > /dev/null 2>&1 && \
-	rm -rf /tmp/* > /dev/null 2>&1
+	rm -rf /tmp/* > /dev/null 2>&1 && \
+	rm -rf /var/lib/apt/lists/* > /dev/null 2>&1
 
 #Expose BeEF control panel port
 EXPOSE 3000
