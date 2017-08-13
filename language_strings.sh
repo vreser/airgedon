@@ -434,7 +434,7 @@ function language_strings() {
 	arr["CATALAN",5]="Sembla que la teva connexió a internet no és estable. El script no pot connectar amb el repositori. Continuarà sense actualitzar-se..."
 	arr["PORTUGUESE",5]="Parece que sua conexão com a internet não é estável. O script não pode conectar-se ao repositório. Ele continuará sem atualizar..."
 	arr["RUSSIAN",5]="Интернет-подключение кажется нестабильным. Скрипт не может подключиться к репозиторию. Он продолжит без обновления..."
-	arr["GREEK",5]="Φαίνεται πως η σύνδεση με το διαδίκτυο δεν είναι σταθερή. Το script δεν μπορεί να συνδεθεί στο repository. Θα συνεχίσει χωρίς να έχει ενημερωθεί..."
+	arr["GREEK",5]="Φαίνεται πως η σύνδεση με το διαδίκτυο δεν είναι σταθερή. Το script δεν μπορεί να συνδεθεί στο αποθετήριο. Θα συνεχίσει χωρίς να έχει ενημερωθεί..."
 
 	arr["ENGLISH",6]="Welcome to airgeddon script v${airgeddon_version}"
 	arr["SPANISH",6]="Bienvenid@ a airgeddon script v${airgeddon_version}"
@@ -2082,7 +2082,7 @@ function language_strings() {
 	arr["CATALAN",211]="Sembla que no tens connexió a internet. El script no pot connectar al repositori. Continuarà sense actualitzar-se..."
 	arr["PORTUGUESE",211]="Parece que você não tem acesso à internet. O script não pode conectar-se ao repositório. Ele continuará sem atualizar..."
 	arr["RUSSIAN",211]="Кажется, у вас нет доступа в Интернет. Скрипт не может подключится к репозиторию. Он продолжит без обновления..."
-	arr["GREEK",211]="Φαίνεται πως δεν έχετε πρόσβαση στο διαδίκτυο. Το script δεν μπορεί να συνδεθεί στο repository. Θα συνεχίσει χωρίς να έχει ενημερωθεί..."
+	arr["GREEK",211]="Φαίνεται πως δεν έχετε πρόσβαση στο διαδίκτυο. Το script δεν μπορεί να συνδεθεί στο αποθετήριο. Θα συνεχίσει χωρίς να έχει ενημερωθεί..."
 
 	arr["ENGLISH",212]="The script is already in the latest version. It doesn't need to be updated"
 	arr["SPANISH",212]="El script ya está en la última versión. No necesita ser actualizado"
@@ -3978,7 +3978,7 @@ function language_strings() {
 	arr["CATALAN",448]="Si vas instal·lar airgeddon des d'un repositori, no hauries d'activar l'actualització automàtica. airgeddon s'actualitzarà quan hi hagi una nova versió al repositori"
 	arr["PORTUGUESE",448]="Se você instalou airgeddon partir de um repositório, você não deve ativar a atualização automática. airgeddon será atualizado quando houvér nova versão no repositório"
 	arr["RUSSIAN",448]="Если вы установили airgeddon из репозитория, вам не следует включать автоматические обновления. airgeddon будет обновляться, когда в репозитории будет новая версия"
-	arr["GREEK",448]="Αν εγκαταστήσατε το airgeddon από κάποιο official repository, δεν θα πρέπει να ενεργοποιήσετε τις αυτόματες ενημερώσεις. Το airgeddon θα ενημερωθεί όταν υπάρξει κάποια νέα έκδοση στο official repository"
+	arr["GREEK",448]="Αν εγκαταστήσατε το airgeddon από κάποιο επίσημο αποθετήριο, δεν θα πρέπει να ενεργοποιήσετε τις αυτόματες ενημερώσεις. Το airgeddon θα ενημερωθεί όταν υπάρξει κάποια νέα έκδοση στο επίσημο αποθετήριο"
 
 	arr["ENGLISH",449]="2.  Enable automatic updates permanently"
 	arr["SPANISH",449]="2.  Habilitar permanentemente la actualización automática"
@@ -4066,7 +4066,7 @@ function language_strings() {
 	arr["CATALAN",459]="Si vas instal·lar airgeddon des d'un repositori no hauries d'activar aquesta opció. airgeddon s'actualitzarà quan ho facin els repositoris. Si continues, assegura't de saber bé el que fas o podries causar problemes amb flux d'actualitzacions"
 	arr["PORTUGUESE",459]="Se você instalou airgeddon a partir de um repositório você não deve ativar essa opção. airgeddon será atualizado quando você estiver disponivel nos repositórios. Se você continuar, verifique se você sabe o que está fazendo ou ou você pode causar problemas com o fluxo de atualização"
 	arr["RUSSIAN",459]="Если вы установили airgeddon из репозитория, вы не должны включать эту опцию. airgeddon будет обновляться вместе с репозиториями. Если вы продолжите, убедитесь, что знаете, что делаете, или ваши действия могут вызвать проблемы для этой программы"
-	arr["GREEK",459]="Εάν εγκαταστήσατε το airgeddon από κάποιο official repository, δεν πρέπει να ενεργοποιήσετε αυτή την επιλογή. Το airgeddon θα ενημερωθεί όταν ενημερωθούν και τα repositories. Αν συνεχίσετε, βεβαιωθείτε ότι γνωρίζετε τι κάνετε και ότι θα μπορεί να προκαλέσετε προβλήματα με τη ροή ενημέρωσης"
+	arr["GREEK",459]="Εάν εγκαταστήσατε το airgeddon από κάποιο επίσημο αποθετήριο, δεν πρέπει να ενεργοποιήσετε αυτή την επιλογή. Το airgeddon θα ενημερωθεί όταν ενημερωθούν και τα αποθετήρια. Αν συνεχίσετε, βεβαιωθείτε ότι γνωρίζετε τι κάνετε και ότι θα μπορεί να προκαλέσετε προβλήματα με τη ροή ενημέρωσης"
 
 	arr["ENGLISH",460]="Automatic updates have been enabled"
 	arr["SPANISH",460]="Se han activado las actualizaciones automáticas"
