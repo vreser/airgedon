@@ -2141,7 +2141,7 @@ function set_wep_key_script() {
 	EOF
 
 	cat >&8 <<-EOF
-			wep_key_cmd="echo -e '\t${yellow_color}${wep_texts[${language},5]} ${white_color}// ${blue_color}BSSID: ${normal_color}${bssid} ${yellow_color}// ${blue_color}${wep_texts[${language},6]}: ${normal_color}${channel} ${yellow_color}// ${blue_color}ESSID: ${normal_color}${essid}'"
+			wep_key_cmd="echo -e '\t${yellow_color}${wep_texts[${language},5]} ${white_color}// ${blue_color}BSSID: ${normal_color}${bssid} ${yellow_color}// ${blue_color}${wep_texts[${language},2]}: ${normal_color}${channel} ${yellow_color}// ${blue_color}ESSID: ${normal_color}${essid}'"
 			wep_key_cmd+="&& echo"
 			wep_key_cmd+="&& echo -e '\t${blue_color}${wep_texts[${language},4]}${normal_color}'"
 			wep_key_cmd+="&& echo"
@@ -2164,9 +2164,9 @@ function set_wep_key_script() {
 	cat >&8 <<-EOF
 			wep_key_cmd+="&& echo"
 			wep_key_cmd+="&& echo"
-			wep_key_cmd+="&& echo -e '\t${pink_color}${wep_texts[${language},7]}: [${normal_color}${weppotenteredpath}${pink_color}]${normal_color}'"
+			wep_key_cmd+="&& echo -e '\t${pink_color}${wep_texts[${language},6]}: [${normal_color}${weppotenteredpath}${pink_color}]${normal_color}'"
 			wep_key_cmd+="&& echo"
-			wep_key_cmd+="&& echo -e '\t${yellow_color}${wep_texts[${language},8]}'"
+			wep_key_cmd+="&& echo -e '\t${yellow_color}${wep_texts[${language},7]}'"
 
 			window_position="${g5_topright_window}"
 			sleep 0.5
