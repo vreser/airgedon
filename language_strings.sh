@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170816
+#Date.........: 20170817
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -303,7 +303,7 @@ function language_strings() {
 
 	et_misc_texts["ENGLISH",25]="Press [Enter] on the main script window to continue, this window will be closed"
 	et_misc_texts["SPANISH",25]="Pulsa [Enter] en la ventana principal del script para continuar, esta ventana se cerrará"
-	et_misc_texts["FRENCH",25]="Appuyez sur [Entrée] dans la fenêtre principale du script pour continuer, cette fenêtre se fermera"
+	et_misc_texts["FRENCH",25]="Appuyez sur [Enter] dans la fenêtre principale du script pour continuer, cette fenêtre se fermera"
 	et_misc_texts["CATALAN",25]="Prem [Enter] a la finestra principal del script per continuar, aquesta finestra es tancarà"
 	et_misc_texts["PORTUGUESE",25]="Pressione [Enter] na janela principal do script para continuar e esta janela será fechada"
 	et_misc_texts["RUSSIAN",25]="Нажмите [Enter] в главном окне для продолжения, это окно будет закрыто"
@@ -385,7 +385,7 @@ function language_strings() {
 
 	wep_texts["ENGLISH",7]="Press [Enter] on the main script window to continue, this window will be closed"
 	wep_texts["SPANISH",7]="Pulsa [Enter] en la ventana principal del script para continuar, esta ventana se cerrará"
-	wep_texts["FRENCH",7]="Appuyez sur [Entrée] dans la fenêtre principale du script pour continuer, cette fenêtre se fermera"
+	wep_texts["FRENCH",7]="Appuyez sur [Enter] dans la fenêtre principale du script pour continuer, cette fenêtre se fermera"
 	wep_texts["CATALAN",7]="Prem [Enter] a la finestra principal del script per continuar, aquesta finestra es tancarà"
 	wep_texts["PORTUGUESE",7]="Pressione [Enter] na janela principal do script para continuar e esta janela será fechada"
 	wep_texts["RUSSIAN",7]="Нажмите [Enter] в главном окне для продолжения, это окно будет закрыто"
@@ -730,7 +730,7 @@ function language_strings() {
 	arr["ITALIAN",33]="${pending_of_translation} A partire attacco. Una volta avviato, premere [Ctrl+C] per fermare..."
 
 	arr["ENGLISH",34]="Selected interface ${interface} is in monitor mode. Attack can be performed"
-	arr["SPANISH",34]="La interfaz seleccionado ${interface} está en modo monitor. El ataque se puede realizar"
+	arr["SPANISH",34]="La interfaz seleccionada ${interface} está en modo monitor. El ataque se puede realizar"
 	arr["FRENCH",34]="L'interface ${interface} qui a été sélectionnée est bien en mode moniteur. L'attaque peut être lancée"
 	arr["CATALAN",34]="La interfície seleccionada ${interface} està configurada en mode monitor. L'atac es pot realitzar"
 	arr["PORTUGUESE",34]="Interface selecionada ${interface} está em modo monitor. O ataque pode ser realizado"
@@ -1543,7 +1543,7 @@ function language_strings() {
 	arr["SPANISH",124]="modo monitor requerido en captura"
 	arr["FRENCH",124]="modo moniteur nécessaire pour la capture"
 	arr["CATALAN",124]="mode monitor requerit en captura"
-	arr["PORTUGUESE",124]="Modo monitor necessário para captura"
+	arr["PORTUGUESE",124]="modo monitor necessário para captura"
 	arr["RUSSIAN",124]="для захвата необходим режим монитора"
 	arr["GREEK",124]="χρειάζεται η κατάσταση παρακολούθησης για την καταγραφή"
 	arr["ITALIAN",124]="${pending_of_translation} come richiesto dal monitor di cattura"
@@ -1748,7 +1748,7 @@ function language_strings() {
 
 	arr["ENGLISH",147]="4.  Return to Handshake tools menu"
 	arr["SPANISH",147]="4.  Volver al menú de herramientas Handshake"
-	arr["FRENCH",147]="4.  Retourner au menu des outils pour la capture du handshake"
+	arr["FRENCH",147]="4.  Retourner au menu des outils pour la capture du Handshake"
 	arr["CATALAN",147]="4.  Tornar al menú d'eines Handshake"
 	arr["PORTUGUESE",147]="4.  Voltar para o menu de ferramentas Handshake"
 	arr["RUSSIAN",147]="4.  Возврат в меню инструментов для работы с рукопожатием"
@@ -1757,7 +1757,7 @@ function language_strings() {
 
 	arr["ENGLISH",148]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${handshakepath}]"
 	arr["SPANISH",148]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${handshakepath}]"
-	arr["FRENCH",148]="Entrez le chemin où vous voulez enregistrer le fichier ou bien appuyez sur [Entrée] pour prendre le chemin proposé par défaut ${normal_color}[${handshakepath}]"
+	arr["FRENCH",148]="Entrez le chemin où vous voulez enregistrer le fichier ou bien appuyez sur [Enter] pour prendre le chemin proposé par défaut ${normal_color}[${handshakepath}]"
 	arr["CATALAN",148]="Escriu la ruta on guardarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${handshakepath}]"
 	arr["PORTUGUESE",148]="Digite o caminho para salvar o arquivo ou pressione [Enter] para o caminho padrão ${normal_color}[${handshakepath}]"
 	arr["RUSSIAN",148]="Напечатайте путь, по которому сохранить файл или нажмите [Enter] для принятия предложения по умолчанию ${normal_color}[${handshakepath}]"
@@ -2371,7 +2371,7 @@ function language_strings() {
 	arr["SPANISH",216]="No se encontraron redes con Handshake capturado en el fichero seleccionado"
 	arr["FRENCH",216]="Aucun réseau avec son Handshake n'a été trouvé dans le fichier sélectionné"
 	arr["CATALAN",216]="No s'han trobat xarxes amb Handshake capturat en el fitxer seleccionat"
-	arr["PORTUGUESE",216]="Nenhuma rede encontrada no arquivo Handshake selecionado "
+	arr["PORTUGUESE",216]="Nenhuma rede encontrada no arquivo Handshake selecionado"
 	arr["RUSSIAN",216]="В выбранном файле сети с захваченным рукопожатием не найдены"
 	arr["GREEK",216]="Δεν βρέθηκαν δίκτυα με Χειραψία στο επιλεγμένο αρχείο"
 	arr["ITALIAN",216]="${pending_of_translation} Nessuna rete trovata con Handshake catturati sul file selezionato"
@@ -2522,7 +2522,7 @@ function language_strings() {
 
 	arr["ENGLISH",233]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${hashcat_potpath}]"
 	arr["SPANISH",233]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${hashcat_potpath}]"
-	arr["FRENCH",233]="Entrez le chemin où vous voulez enregistrer le fichier ou bien appuyez sur [Entrée] pour utiliser le chemin proposé ${normal_color}[${hashcat_potpath}]"
+	arr["FRENCH",233]="Entrez le chemin où vous voulez enregistrer le fichier ou bien appuyez sur [Enter] pour utiliser le chemin proposé ${normal_color}[${hashcat_potpath}]"
 	arr["CATALAN",233]="Escriu la ruta on guardarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${hashcat_potpath}]"
 	arr["PORTUGUESE",233]="Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${hashcat_potpath}]"
 	arr["RUSSIAN",233]="Напечатайте путь к сохранённому файлу или нажмите [Enter] для принятия предложения по умолчанию ${normal_color}[${hashcat_potpath}]"
@@ -2642,7 +2642,7 @@ function language_strings() {
 	arr["FRENCH",246]="Chaque fois que vous voyez un texte précédé par ${cyan_color}${pending_of_translation}${pink_color} acronyme de \"Pending of Translation\" cela signifie que la traduction a été faite automatiquement et est en attente de correction"
 	arr["CATALAN",246]="Cada vegada que vegis un text amb el prefix ${cyan_color}${pending_of_translation}${pink_color} acrònim de \"Pending of Translation\", vol dir que la traducció ha estat generada automàticament i encara està pendent de revisió"
 	arr["PORTUGUESE",246]="Cada vez que você ver um texto com o prefixo ${cyan_color}${pending_of_translation}${pink_color} acrônimo para \"Pending of Translation\" significa que a tradução foi gerada automaticamente e ainda está pendente de revisão"
-	arr["RUSSIAN",246]="Каждый раз, когда вы видите текст с префиксом ${cyan_color}${pending_of_translation}${pink_color} (акроним для \"Ожидает перевода\"), это означает, что перевод был сгенерирован автоматически и ещё ожидает проверки"
+	arr["RUSSIAN",246]="Каждый раз, когда вы видите текст с префиксом ${cyan_color}${pending_of_translation}${pink_color} (акроним для \"Pending of Translation\"), это означает, что перевод был сгенерирован автоматически и ещё ожидает проверки"
 	arr["GREEK",246]="Κάθε φορά που θα βλέπετε κείμενο με πρόθεμα ${cyan_color}${pending_of_translation}${pink_color} ακρωνύμιο για \"Pending of Translation\", σημαίνει πως η μετάφραση δημιουργήθηκε αυτόματα και αναμένεται κριτική"
 	arr["ITALIAN",246]="${pending_of_translation} Ogni volta che vedete un testo prefisso ${cyan_color}${pending_of_translation}${pink_color} acronimo \"Pending of Translation\" significa che la traduzione è stata generata automaticamente ed è ancora in attesa di revisione"
 
@@ -3089,7 +3089,7 @@ function language_strings() {
 
 	arr["ENGLISH",296]="All parameters and requirements are set. The attack is going to start. Multiple windows will be opened, don't close anyone. When you want to stop the attack press [Enter] on this window and the script will automatically close them all"
 	arr["SPANISH",296]="Todos los parámetros y requerimientos están listos. Va a comenzar el ataque. Se abrirán múltiples ventanas, no cierres ninguna. Cuando quieras parar el ataque pulsa [Enter] en esta ventana y el script cerrará automáticamente todo"
-	arr["FRENCH",296]="Tous les paramètres de l'attaque sont prêts et elle peut comenmcer. Plusieurs consoles vont s'ouvrir, ne les fermez pas. Lorsque vous voulez arrêter l'attaque, appuyez sur [Entrée] dans cette console et le script fermera automatiquement les autres"
+	arr["FRENCH",296]="Tous les paramètres de l'attaque sont prêts et elle peut comenmcer. Plusieurs consoles vont s'ouvrir, ne les fermez pas. Lorsque vous voulez arrêter l'attaque, appuyez sur [Enter] dans cette console et le script fermera automatiquement les autres"
 	arr["CATALAN",296]="Tots els paràmetres i requeriments estan preparats. Començarà l'atac. S'obriran múltiples finestres, no tanquis cap. Quan vulguis parar l'atac prem [Enter] en aquesta finestra i el script tancarà automàticament tot"
 	arr["PORTUGUESE",296]="Todos os parâmetros e requisitos estão prontos. Você vai começar o ataque. Várias janelas iram se abrir, não feche nenhuma delas. Quando quiser parar o ataque pressione [Enter] nesta janela e o script irá fechar automaticamente"
 	arr["RUSSIAN",296]="Все параметры и требования готовы. Атака может быть начата. Будет открыто много окон, не закрывайте их. Когда вы захотите остановить атаку, нажмите [Enter] в этом окне и скрипт автоматически их все закроет"
@@ -3107,7 +3107,7 @@ function language_strings() {
 
 	arr["ENGLISH",298]="Evil Twin attack has been started. Press [Enter] key on this window to stop it"
 	arr["SPANISH",298]="El ataque Evil Twin ha comenzado. Pulse la tecla [Enter] en esta ventana para pararlo"
-	arr["FRENCH",298]="L'attaque Evil Twin a commencé. Pressez la touche [Entrée] dans cette console pour l'arrêter"
+	arr["FRENCH",298]="L'attaque Evil Twin a commencé. Pressez la touche [Enter] dans cette console pour l'arrêter"
 	arr["CATALAN",298]="L'atac Evil Twin ha començat. Prem [Enter] a aquesta finestra per aturar-lo"
 	arr["PORTUGUESE",298]="Ataque Evil Twin iniciado. Pressione a tecla [Enter] nesta janela para parar"
 	arr["RUSSIAN",298]="Атака Злой Двойник начата. Для её остановки клавишу [Enter] в этом окне"
@@ -3152,7 +3152,7 @@ function language_strings() {
 
 	arr["ENGLISH",303]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${default_ettercap_logpath}]"
 	arr["SPANISH",303]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${default_ettercap_logpath}]"
-	arr["FRENCH",303]="Entrez le chemin du fichier ou bien appuyez sur [Entrée] pour utiliser le chemin proposé ${normal_color}[${default_ettercap_logpath}]"
+	arr["FRENCH",303]="Entrez le chemin du fichier ou bien appuyez sur [Enter] pour utiliser le chemin proposé ${normal_color}[${default_ettercap_logpath}]"
 	arr["CATALAN",303]="Escriu la ruta on desarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${default_ettercap_logpath}]"
 	arr["PORTUGUESE",303]="Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${default_ettercap_logpath}]"
 	arr["RUSSIAN",303]="Напечатайте путь до файла для сохранения или нажмите [Enter] для принятия предложения по умолчанию ${normal_color}[${default_ettercap_logpath}]"
@@ -3160,7 +3160,7 @@ function language_strings() {
 	arr["ITALIAN",303]="${pending_of_translation} Digitare il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${default_ettercap_logpath}]"
 
 	arr["ENGLISH",304]="Parsing sniffer log..."
-	arr["SPANISH",304]="Analizando log del sniffer.."
+	arr["SPANISH",304]="Analizando log del sniffer..."
 	arr["FRENCH",304]="Analyse du log des captures..."
 	arr["CATALAN",304]="Analitzant log del sniffer..."
 	arr["PORTUGUESE",304]="Analizando log do Sniffer..."
@@ -3278,7 +3278,7 @@ function language_strings() {
 
 	arr["ENGLISH",317]="If the password for the wifi network is achieved with the captive portal, you must decide where to save it. ${green_color}Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["SPANISH",317]="Si se consigue la contraseña de la red wifi con el portal cautivo, hay que decidir donde guardarla. ${green_color}Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${default_et_captive_portal_logpath}]"
-	arr["FRENCH",317]="Si un mot de passe est capté sur le portail captif il faut lui assigner un endroit pour être enregistré. ${green_color}Entrez le chemin du fichier ou bien appuyez sur [Entrée] pour utiliser le chemin proposé ${normal_color}[${default_et_captive_portal_logpath}]"
+	arr["FRENCH",317]="Si un mot de passe est capté sur le portail captif il faut lui assigner un endroit pour être enregistré. ${green_color}Entrez le chemin du fichier ou bien appuyez sur [Enter] pour utiliser le chemin proposé ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["CATALAN",317]="Si s'aconsegueix la contrasenya de la xarxa wifi amb el portal captiu, cal decidir on guardar-la. ${green_color}Escriu la ruta on desarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["PORTUGUESE",317]="Se a senha da rede wifi for conseguida com o portal cativo, onde deseja salvar? ${green_color}Digite um caminho para salvar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["RUSSIAN",317]="Вы должны решить, где будет сохранён пароль wifi сети, если он будет получен Перехватывающим порталом. ${green_color}Впишите путь до файла или нажмите [Enter] для принятия значения по умолчанию ${normal_color}[${default_et_captive_portal_logpath}]"
@@ -3962,7 +3962,7 @@ function language_strings() {
 
 	arr["ENGLISH",393]="Type value in seconds (10-100) for timeout or press [Enter] to accept the proposal [${normal_color}${timeout_secs_per_pin}${green_color}] :"
 	arr["SPANISH",393]="Escribe un valor en segundos (10-100) para el timeout o pulsa [Enter] para aceptar el valor propuesto [${normal_color}${timeout_secs_per_pin}${green_color}] :"
-	arr["FRENCH",393]="Entrez un intervalle de temps en secondes (10-100) pour le timeout ou appuyez sur [Entrée] pour valider la valeur proposée [${normal_color}${timeout_secs_per_pin}${green_color}] :"
+	arr["FRENCH",393]="Entrez un intervalle de temps en secondes (10-100) pour le timeout ou appuyez sur [Enter] pour valider la valeur proposée [${normal_color}${timeout_secs_per_pin}${green_color}] :"
 	arr["CATALAN",393]="Escriu un valor en segons (10-100) per al temps d'espera o prem [Enter] per acceptar el valor proposat [${normal_color}${timeout_secs_per_pin}${green_color}] :"
 	arr["PORTUGUESE",393]="Insira um valor em segundos (10-100) para o timeout ou pressione [Enter] para aceitar o valor padrão [${normal_color}${timeout_secs_per_pin}${green_color}] :"
 	arr["RUSSIAN",393]="Введите значение в секундах (10-100) для тайм-аута или нажмите [Enter], чтобы оставить по умолчанию [${normal_color}${timeout_secs_per_pin}${green_color}] :"
@@ -3971,7 +3971,7 @@ function language_strings() {
 
 	arr["ENGLISH",394]="Type value in seconds (25-2400) for Pixie Dust timeout or press [Enter] to accept the proposal [${normal_color}${timeout_secs_per_pixiedust}${green_color}] :"
 	arr["SPANISH",394]="Escribe un valor en segundos (25-2400) para el timeout de Pixie Dust o pulsa [Enter] para aceptar el valor propuesto [${normal_color}${timeout_secs_per_pixiedust}${green_color}] :"
-	arr["FRENCH",394]="Entrez un intervalle de temps en secondes (25-2400) pour le timeout Pixie Dust ou appuyez sur [Entrée] pour accepter la valeur proposée [${normal_color}${timeout_secs_per_pixiedust}${green_color}] :"
+	arr["FRENCH",394]="Entrez un intervalle de temps en secondes (25-2400) pour le timeout Pixie Dust ou appuyez sur [Enter] pour accepter la valeur proposée [${normal_color}${timeout_secs_per_pixiedust}${green_color}] :"
 	arr["CATALAN",394]="Escriu un valor en segons (25-2400) per al temps d'espera de Pixie Dust o prem [Enter] per acceptar el valor proposat [${normal_color}${timeout_secs_per_pixiedust}${green_color}] :"
 	arr["PORTUGUESE",394]="Insira um valor em segundos (25-2400) para o timeout do ataque Pixie Dust ou pressione [Enter] para aceitar o valor padrão [${normal_color}${timeout_secs_per_pixiedust}${green_color}] :"
 	arr["RUSSIAN",394]="Введите значение в секундах (25-2400) для тайм-аута Pixie Dust или нажмите [Enter], чтобы оставить по умолчанию [${normal_color}${timeout_secs_per_pixiedust}${green_color}] :"
@@ -4007,7 +4007,7 @@ function language_strings() {
 
 	arr["ENGLISH",398]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${default_bettercap_logpath}]"
 	arr["SPANISH",398]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${default_bettercap_logpath}]"
-	arr["FRENCH",398]="Entrez le chemin du fichier ou bien appuyez sur [Entrée] pour utiliser le chemin proposé ${normal_color}[${default_bettercap_logpath}]"
+	arr["FRENCH",398]="Entrez le chemin du fichier ou bien appuyez sur [Enter] pour utiliser le chemin proposé ${normal_color}[${default_bettercap_logpath}]"
 	arr["CATALAN",398]="Escriu la ruta on desarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${default_bettercap_logpath}]"
 	arr["PORTUGUESE",398]="Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${default_bettercap_logpath}]"
 	arr["RUSSIAN",398]="Напечатайте путь до файла для сохранения или нажмите [Enter] для принятия предложения по умолчанию ${normal_color}[${default_bettercap_logpath}]"
@@ -4295,7 +4295,7 @@ function language_strings() {
 
 	arr["ENGLISH",430]="If the password for the wifi network is obtained with the \"All-in-One\" WEP attack, you should decide where to save it. ${green_color}Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${wep_potpath}]"
 	arr["SPANISH",430]="Si se consigue la contraseña de la red wifi con el ataque WEP \"Todo-en-Uno\", hay que decidir donde guardarla. ${green_color}Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${wep_potpath}]"
-	arr["FRENCH",430]="Si le mot de passe est obtenu par une attaque WEP \"Tout-en-Un\", il faut ensuite indiquer l'endroit pour la garder. ${green_color}Entrez la route vers l'endroit où vous voulez garder le fichier ou bien appuyez sur [Entrée] si la route proposée par défaut vous convient ${normal_color}[${wep_potpath}]"
+	arr["FRENCH",430]="Si le mot de passe est obtenu par une attaque WEP \"Tout-en-Un\", il faut ensuite indiquer l'endroit pour la garder. ${green_color}Entrez la route vers l'endroit où vous voulez garder le fichier ou bien appuyez sur [Enter] si la route proposée par défaut vous convient ${normal_color}[${wep_potpath}]"
 	arr["CATALAN",430]="Si s'aconsegueix la contrasenya de la xarxa wifi amb l'atac WEP \"Tot-en-Un \", cal decidir on guardar-la. ${green_color}Escriu la ruta on guardarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${wep_potpath}]"
 	arr["PORTUGUESE",430]="Se a senha da rede wifi for obtida com o ataque WEP \"Tudo-em-Um\", onde deseja salvá-la?. ${green_color}Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${wep_potpath}]"
 	arr["RUSSIAN",430]="Если во время WEP атаки \"Все-в-Одном\" на Wi-Fi сеть получен пароль, вы должны решить, где его сохранить. ${green_color} Наберите путь для сохранения файла или нажмите [Enter] для принятия значения по умолчанию ${normal_color}[${wep_potpath}]"
@@ -4331,7 +4331,7 @@ function language_strings() {
 
 	arr["ENGLISH",434]="WEP \"All-in-One\" attack has been started. Press [Enter] key on this window to stop it"
 	arr["SPANISH",434]="El ataque WEP \"Todo-en-Uno\" ha comenzado. Pulse la tecla [Enter] en esta ventana para pararlo"
-	arr["FRENCH",434]="L'attaque WEP \"Tout-en-Un\" a commencé. Pressez la touche [Entrée] dans cette console pour l'arrêter"
+	arr["FRENCH",434]="L'attaque WEP \"Tout-en-Un\" a commencé. Pressez la touche [Enter] dans cette console pour l'arrêter"
 	arr["CATALAN",434]="L'atac WEP \"Tot-en-Un\" ha començat. Prem [Enter] a aquesta finestra per aturar-lo"
 	arr["PORTUGUESE",434]="Ataque WEP \"Tudo-em-Um\" iniciado. Pressione a tecla [Enter] nesta janela para parar"
 	arr["RUSSIAN",434]="Атака WEP \"Все-в-Одном\" началась. Для её остановки клавишу [Enter] в этом окне"
@@ -4356,7 +4356,7 @@ function language_strings() {
 	arr["GREEK",436]="Η έκδοση του hashcat που έχετε εγκαταστήσει (${hashcat_version}) είναι ίδια ή νεότερη από την έκδοση ${hashcat_hccapx_version}, άρα το airgeddon θα μετατρέψει τα αρχεία καταγραφής σε \"hccapx\" για να συνεχιστεί η διαδικασία. Για να επιτευχθεί αυτό χρειάζεστε ένα μετατροπέα που δεν υπάρχει στο σύστημά σας (περιέχεται στο πακέτο hashcat-utils), εγκαταστήστε το για να εκτελέσετε αυτήν την επίθεση"
 	arr["ITALIAN",436]="${pending_of_translation} Versione hashcat si è installato (${hashcat_version}) è uguale o superiore alla ${hashcat_hccapx_version} quindi necessario convertire i file di acquisizione in formato \"hccapx\", airgeddon volontà automaticamente. Ma questo richiede un convertitore che non è presente sul sistema (pacchetto hashcat-utils), installarlo per eseguire questo attacco"
 
-	arr["ENGLISH",437]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through Paypal (${mail}) or sending a fraction of a bitcoin (${bitcoin}). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${urlgithub_wiki}/Contributing"
+	arr["ENGLISH",437]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through Paypal (${normal_color}${mail}${pink_color}) or sending a fraction of a bitcoin (${normal_color}${bitcoin}${pink_color}). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["SPANISH",437]="Si te gustó el script y te pareció útil, puedes apoyar el proyecto haciendo una donación. A través de Paypal (${normal_color}${mail}${pink_color}) o enviando una fracción de bitcoin (${normal_color}${bitcoin}${pink_color}). Cualquier cantidad por pequeña que sea (1, 2, 5 $/€) es bien recibida. Más información y enlaces directos para realizarla en: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["FRENCH",437]="Si le script vous a plus et que vous l'avez trouvé utile; vous pouvez soutenir le projet en faisant un don PayPal (${normal_color}${mail}${pink_color}) ou en envoyant une fraction de bitcoin (${normal_color}${bitcoin}${pink_color}). Toute contribution  (1, 2, 5 $/€) est bienvenue. Pour faire un don allez à: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["CATALAN",437]="Si et va agradar el script i et va semblar útil, pots donar suport al projecte fent una donació. A través de Paypal (${normal_color}${mail}${pink_color}) o enviant una fracció bitcoin (${normal_color}${bitcoin}${pink_color}). Qualsevol quantitat per petita que sigui (1, 2, 5 $/€) és ben rebuda. Més informació i enllaços directes per a realitzar-la en: ${normal_color}${urlgithub_wiki}/Contributing"
@@ -4394,7 +4394,7 @@ function language_strings() {
 
 	arr["ENGLISH",441]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${aircrack_potpath}]"
 	arr["SPANISH",441]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${aircrack_potpath}]"
-	arr["FRENCH",441]="Entrez le chemin où vous voulez enregistrer le fichier ou bien appuyez sur [Entrée] pour utiliser le chemin proposé ${normal_color}[${aircrack_potpath}]"
+	arr["FRENCH",441]="Entrez le chemin où vous voulez enregistrer le fichier ou bien appuyez sur [Enter] pour utiliser le chemin proposé ${normal_color}[${aircrack_potpath}]"
 	arr["CATALAN",441]="Escriu la ruta on guardarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${aircrack_potpath}]"
 	arr["PORTUGUESE",441]="Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${aircrack_potpath}]"
 	arr["RUSSIAN",441]="Напечатайте путь к сохранённому файлу или нажмите [Enter] для принятия предложения по умолчанию ${normal_color}[${aircrack_potpath}]"
