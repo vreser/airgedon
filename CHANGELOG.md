@@ -1,6 +1,7 @@
 ### 7.21
  - Italian language translation added (Thank you to "salu90")
  - Tested compatibility with Parrot 3.7
+ - Improved check for root permissions, now mandatory
 
 ### 7.2
  - Improved chipset detection

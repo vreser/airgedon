@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170817
+#Date.........: 20170818
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -2430,14 +2430,14 @@ function language_strings() {
 	arr["GREEK",222]="Ανεπαρκής έκδοση bash (${BASH_VERSION}). Ελάχιστη απαιτούμενη έκδοση: ${minimum_bash_version_required}"
 	arr["ITALIAN",222]="${pending_of_translation} Versione bash insufficiente (${BASH_VERSION}). Versione minima richiesta: ${minimum_bash_version_required}"
 
-	arr["ENGLISH",223]="Maybe the essential tools check has failed because you are not root user or don't have enough privileges. Launch the script as root user or using \"sudo\""
-	arr["SPANISH",223]="Es posible que el chequeo de las herramientas esenciales haya fallado porque no eres usuario root o no tienes privilegios suficientes. Lanza el script como usuario root o usando \"sudo\""
-	arr["FRENCH",223]="Il est possible que la vérification des outils essentiels ait échouée parce que vous n'êtes pas logué comme root ou ne disposez pas des privilèges nécessaires. Lancez le script en tant que root ou en utilisant \"sudo\""
-	arr["CATALAN",223]="És possible que la revisió de les eines essencials hagi fallat perquè no ets usuari root o no tens privilegis suficients. Llança l'script com a usuari root o utilitzeu \"sudo\""
-	arr["PORTUGUESE",223]="Talvez a checagem das ferramentas essenciais tenha falhado porque você não é root ou não tem privilégios suficientes. Execute o script como root ou usando \"sudo\""
-	arr["RUSSIAN",223]="Может быть, проверка на базовые инструменты потерпела неудачу из-за того, что вы не пользователь root или не имеете достаточных привилегий. Запустите скрипт как root пользователь или используйте \"sudo\""
-	arr["GREEK",223]="Ίσως ο έλεγχος απαραίτητων εργαλείων απέτυχε γιατί δεν είστε root χρήστης ή δεν έχετε αρκετά δικαιώματα. Ανοίξτε το script ως root χρήστης ή χρησιμοποιήστε \"sudo\""
-	arr["ITALIAN",223]="${pending_of_translation} Forse gli strumenti essenziali di controllo non è riuscita perché non siete root o non si dispone di privilegi sufficienti. Lancia lo script come root o usando \"sudo\""
+	arr["ENGLISH",223]="airgeddon needs root permissions to work. Launch the script as root user or using \"sudo\""
+	arr["SPANISH",223]="airgeddon necesita permisos de root para funcionar. Lanza el script como usuario root o usando \"sudo\""
+	arr["FRENCH",223]="${pending_of_translation} airgeddon besoin de permissions root pour exécuter. Lancez le script en tant que root ou en utilisant \"sudo\""
+	arr["CATALAN",223]="${pending_of_translation} airgeddon necessita permisos de root per funcionar. Llança l'script com a usuari root o utilitzeu \"sudo\""
+	arr["PORTUGUESE",223]="${pending_of_translation} airgeddon precisa permissões de root para executar. Execute o script como root ou usando \"sudo\""
+	arr["RUSSIAN",223]="${pending_of_translation} airgeddon требует прав root для работы. Запустите скрипт как root пользователь или используйте \"sudo\""
+	arr["GREEK",223]="${pending_of_translation} Η airgeddon χρειάζεται δικαιώματα root για να δουλέψει. Ανοίξτε το script ως root χρήστης ή χρησιμοποιήστε \"sudo\""
+	arr["ITALIAN",223]="${pending_of_translation} airgeddon bisogno dei permessi di root per l'esecuzione. Lancia lo script come root o usando \"sudo\""
 
 	arr["ENGLISH",224]="The script execution continues from exactly the same point where it was"
 	arr["SPANISH",224]="El script continua su ejecución desde exactamente el mismo punto en el que estaba"
@@ -4778,6 +4778,15 @@ function language_strings() {
 	arr["RUSSIAN",483]="${pending_of_translation} Язык изменён на Итальянский"
 	arr["GREEK",483]="${pending_of_translation}Η γλώσσα άλλαξε σε Ιταλικά"
 	arr["ITALIAN",483]="${pending_of_translation} Lingua cambiato in Italiano"
+
+	arr["ENGLISH",484]="Root permissions successfully detected"
+	arr["SPANISH",484]="Permisos de root correctamente detectados"
+	arr["FRENCH",484]="${pending_of_translation} Autorisations de root détectés correctement"
+	arr["CATALAN",484]="${pending_of_translation} Permisos de root correctament detectats"
+	arr["PORTUGUESE",484]="${pending_of_translation} Permissões de root detectado correctamente"
+	arr["RUSSIAN",484]="${pending_of_translation} Root разрешения правильно обнаружено"
+	arr["GREEK",484]="${pending_of_translation} Δικαιώματα root ανιχνεύεται σωστά"
+	arr["ITALIAN",484]="${pending_of_translation} I permessi di root correttamente rilevati"
 
 	case "${3}" in
 		"yellow")

@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170817
+#Date.........: 20170818
 #Version......: 7.21
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -9034,8 +9034,6 @@ function general_checkings() {
 		return
 	fi
 
-	check_root_permissions
-
 	language_strings "${language}" 115 "read"
 	exit_code=1
 	exit_script_option
@@ -9048,8 +9046,12 @@ function check_root_permissions() {
 
 	user=$(whoami)
 
-	if [ "${user}" != "root" ]; then
-		language_strings "${language}" 223 "yellow"
+	if [ "${user}" = "root" ]; then
+		language_strings "${language}" 484 "yellow"
+	else
+		language_strings "${language}" 223 "red"
+		exit_code=1
+		exit_script_option
 	fi
 }
 
@@ -9550,6 +9552,8 @@ function welcome() {
 		fi
 
 		check_bash_version
+		echo
+		check_root_permissions
 
 		echo
 		if [[ ${resolution_detected} -eq 1 ]] && [[ "${xterm_ok}" -eq 1 ]]; then
