@@ -4776,7 +4776,7 @@ function language_strings() {
 	arr["CATALAN",483]="${pending_of_translation} Idioma canviat a Italià"
 	arr["PORTUGUESE",483]="${pending_of_translation} Idioma alterado para Italiano"
 	arr["RUSSIAN",483]="${pending_of_translation} Язык изменён на Итальянский"
-	arr["GREEK",483]="${pending_of_translation}Η γλώσσα άλλαξε σε Ιταλικά"
+	arr["GREEK",483]="${pending_of_translation} Η γλώσσα άλλαξε σε Ιταλικά"
 	arr["ITALIAN",483]="${pending_of_translation} Lingua cambiato in Italiano"
 
 	arr["ENGLISH",484]="Root permissions successfully detected"
