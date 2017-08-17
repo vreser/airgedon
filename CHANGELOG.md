@@ -1,6 +1,6 @@
 ### 7.21
  - Italian language translation added (Thank you to "salu90")
- - Tested compatibility with Parrot 3.7
+ - Tested compatibility with Parrot 3.7 and Fedora 26
  - Improved check for root permissions, now mandatory
 
 ### 7.2
