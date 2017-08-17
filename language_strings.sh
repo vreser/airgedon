@@ -29,7 +29,7 @@ function language_strings() {
 	unknown_chipset["PORTUGUESE"]="Desconhecido"
 	unknown_chipset["RUSSIAN"]="Неизвестно"
 	unknown_chipset["GREEK"]="Άγνωστο"
-	unknown_chipset["ITALIAN"]="${pending_of_translation} Sconosciuto"
+	unknown_chipset["ITALIAN"]="Sconosciuto"
 	unknown_chipsetvar="${unknown_chipset[${language}]}"
 
 	declare -A hintprefix
@@ -1132,7 +1132,7 @@ function language_strings() {
 	arr["PORTUGUESE",78]="1.  Alterar idioma"
 	arr["RUSSIAN",78]="1.  Сменить язык"
 	arr["GREEK",78]="1.  Αλλαγή γλώσσας"
-	arr["ITALIAN",78]="${pending_of_translation} 1.  Cambia lingua"
+	arr["ITALIAN",78]="1.  Cambiare la lingua"
 
 	arr["ENGLISH",79]="1.  English"
 	arr["SPANISH",79]="1.  Inglés"

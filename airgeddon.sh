@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170815
+#Date.........: 20170817
 #Version......: 7.21
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -410,7 +410,7 @@ function language_strings_handling_messages() {
 	language_strings_no_file["PORTUGUESE"]="Erro. O arquivo de tradução não foi encontrado"
 	language_strings_no_file["RUSSIAN"]="Ошибка. Не найден языковой файл"
 	language_strings_no_file["GREEK"]="Σφάλμα. Το αρχείο γλωσσών δεν βρέθηκε"
-	language_strings_no_file["ITALIAN"]="${pending_of_translation} Errore. Non si trova le traduzioni dei file"
+	language_strings_no_file["ITALIAN"]="Errore. Non si trova il file delle traduzioni"
 
 	declare -gA language_strings_file_mismatch
 	language_strings_file_mismatch["ENGLISH"]="Error. The language strings file found mismatches expected version"
@@ -420,7 +420,7 @@ function language_strings_handling_messages() {
 	language_strings_file_mismatch["PORTUGUESE"]="Erro. O a versão do arquivos de tradução encontrado é a incompatível"
 	language_strings_file_mismatch["RUSSIAN"]="Ошибка. Языковой файл не соответствует ожидаемой версии"
 	language_strings_file_mismatch["GREEK"]="Σφάλμα. Το αρχείο γλωσσών που έχει βρεθεί δεν αντιστοιχεί με την προαπαιτούμενη έκδοση"
-	language_strings_file_mismatch["ITALIAN"]="${pending_of_translation} Errore. Le traduzioni di file trovati non è la versione prevista"
+	language_strings_file_mismatch["ITALIAN"]="Errore. Il file delle traduzioni trovato non è la versione prevista"
 
 	declare -gA language_strings_try_to_download
 	language_strings_try_to_download["ENGLISH"]="airgeddon will try to download the language strings file..."
@@ -430,7 +430,7 @@ function language_strings_handling_messages() {
 	language_strings_try_to_download["PORTUGUESE"]="O airgeddon tentará baixar o arquivo de tradução..."
 	language_strings_try_to_download["RUSSIAN"]="airgeddon попытается загрузить языковой файл..."
 	language_strings_try_to_download["GREEK"]="Το airgeddon θα προσπαθήσει να κατεβάσει το αρχείο γλωσσών..."
-	language_strings_try_to_download["ITALIAN"]="${pending_of_translation} airgeddon tenta di scaricare le traduzioni dei file..."
+	language_strings_try_to_download["ITALIAN"]="airgeddon cercherá di scaricare il file delle traduzioni..."
 
 	declare -gA language_strings_successfully_downloaded
 	language_strings_successfully_downloaded["ENGLISH"]="Language strings file was successfully downloaded"
@@ -440,7 +440,7 @@ function language_strings_handling_messages() {
 	language_strings_successfully_downloaded["PORTUGUESE"]="O arquivo de tradução foi baixado com sucesso"
 	language_strings_successfully_downloaded["RUSSIAN"]="Языковой файл был успешно загружен"
 	language_strings_successfully_downloaded["GREEK"]="Το αρχείο γλωσσών κατέβηκε με επιτυχία"
-	language_strings_successfully_downloaded["ITALIAN"]="${pending_of_translation} È stato scaricato con successo le traduzioni dei file"
+	language_strings_successfully_downloaded["ITALIAN"]="Il file delle traduzioni è stato scaricato con successo"
 
 	declare -gA language_strings_failed_downloading
 	language_strings_failed_downloading["ENGLISH"]="The language string file can't be downloaded. Check your internet connection or download it manually from ${normal_color}${urlgithub}"
@@ -450,7 +450,7 @@ function language_strings_handling_messages() {
 	language_strings_failed_downloading["PORTUGUESE"]="Não foi possível baixar o arquivos de tradução. Verifique a sua conexão com a internet ou baixe manualmente em ${normal_color}${urlgithub}"
 	language_strings_failed_downloading["RUSSIAN"]="Языковой файл не может быть загружен. Проверьте подключение к Интернету или загрузите его вручную с ${normal_color}${urlgithub}"
 	language_strings_failed_downloading["GREEK"]="Το αρχείο γλωσσών δεν μπορεί να κατέβει. Ελέγξτε τη σύνδεση σας με το διαδίκτυο ή κατεβάστε το χειροκίνητα ${normal_color}${urlgithub}"
-	language_strings_failed_downloading["ITALIAN"]="${pending_of_translation} Impossibile scaricare le traduzioni dei file. Controlla la tua connessione internet o scaricare manualmente ${normal_color}${urlgithub}"
+	language_strings_failed_downloading["ITALIAN"]="Impossibile scaricare il file delle traduzioni. Controlla la tua connessione a internet o scaricalo manualmente ${normal_color}${urlgithub}"
 
 	declare -gA language_strings_first_time
 	language_strings_first_time["ENGLISH"]="If you are seeing this message after an automatic update, don't be scared! It's probably because airgeddon has different file structure since version 6.1. It will be automatically fixed"
@@ -460,7 +460,7 @@ function language_strings_handling_messages() {
 	language_strings_first_time["PORTUGUESE"]="Se você está vendo esta mensagem depois de uma atualização automática, não tenha medo! A partir da versão 6.1 da estrutura de arquivos do airgeddon mudou. Isso será corrigido automaticamente"
 	language_strings_first_time["RUSSIAN"]="Если вы видите это сообщение после автоматического обновления, не переживайте! Вероятно, это объясняется тем, что, начиная с версии 6.1, airgeddon имеет другую структуру файлов. Проблема будет разрешена автоматически"
 	language_strings_first_time["GREEK"]="Εάν βλέπετε αυτό το μήνυμα μετά από κάποια αυτόματη ενημέρωση, μην τρομάξετε! Πιθανόν είναι λόγω της διαφορετικής δομής του airgeddon μετά από την έκδοση 6.1. Θα επιδιορθωθεί αυτόματα"
-	language_strings_first_time["ITALIAN"]="${pending_of_translation} Se state vedendo questo messaggio dopo un aggiornamento automatico, niente panico! probabilmente è perché a partire dalla versione 6.1 struttura dei file airgeddon è cambiato. Sarà riparare automaticamente"
+	language_strings_first_time["ITALIAN"]="Se stai vedendo questo messaggio dopo un aggiornamento automatico, niente panico! probabilmente è perché a partire dalla versione 6.1 é cambiata la struttura dei file di airgeddon. Sarà riparato automaticamente"
 
 	declare -gA language_strings_exiting
 	language_strings_exiting["ENGLISH"]="Exiting airgeddon script v${airgeddon_version} - See you soon! :)"
@@ -470,7 +470,7 @@ function language_strings_handling_messages() {
 	language_strings_exiting["PORTUGUESE"]="Saindo do script airgeddon v${airgeddon_version} - Até breve! :)"
 	language_strings_exiting["RUSSIAN"]="Выход из скрипта airgeddon v${airgeddon_version} - До встречи! :)"
 	language_strings_exiting["GREEK"]="Κλείσιμο του airgeddon v${airgeddon_version} - Αντίο :)"
-	language_strings_exiting["ITALIAN"]="${pending_of_translation} Lasciando airgeddon sceneggiatura v${airgeddon_version} - A presto! :)"
+	language_strings_exiting["ITALIAN"]="Uscendo dallo script airgeddon v${airgeddon_version} - A presto! :)"
 
 	declare -gA language_strings_key_to_continue
 	language_strings_key_to_continue["ENGLISH"]="Press [Enter] key to continue..."
@@ -480,7 +480,7 @@ function language_strings_handling_messages() {
 	language_strings_key_to_continue["PORTUGUESE"]="Pressione a tecla [Enter] para continuar..."
 	language_strings_key_to_continue["RUSSIAN"]="Нажмите клавишу [Enter] для продолжения..."
 	language_strings_key_to_continue["GREEK"]="Πατήστε το κουμπί [Enter] για να συνεχίσετε..."
-	language_strings_key_to_continue["ITALIAN"]="${pending_of_translation} Premere il tasto [Enter] per continuare..."
+	language_strings_key_to_continue["ITALIAN"]="Premere il tasto [Enter] per continuare..."
 }
 
 #Toggle language auto-detection feature
