@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170818
+#Date.........: 20170819
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -1176,7 +1176,7 @@ function language_strings() {
 	arr["CATALAN",83]="Idioma canviat a Anglés"
 	arr["PORTUGUESE",83]="Idioma alterado para Inglês"
 	arr["RUSSIAN",83]="Язык изменён на английский"
-	arr["GREEK",83]="Η γλώσσα άλλαξε σε Αγγλικά"
+	arr["GREEK",83]="Η γλώσσα άλλαξε στα Αγγλικά"
 	arr["ITALIAN",83]="${pending_of_translation} Lingua cambiato in Inglese"
 
 	arr["ENGLISH",84]="Language changed to Spanish"
@@ -1185,7 +1185,7 @@ function language_strings() {
 	arr["CATALAN",84]="Idioma canviat a Espanyol"
 	arr["PORTUGUESE",84]="Idioma alterado para Espanhol"
 	arr["RUSSIAN",84]="Язык изменён на испанский"
-	arr["GREEK",84]="Η γλώσσα άλλαξε σε Ισπανικά"
+	arr["GREEK",84]="Η γλώσσα άλλαξε στα Ισπανικά"
 	arr["ITALIAN",84]="${pending_of_translation} Lingua cambiato in Spagnolo"
 
 	arr["ENGLISH",85]="Send me bugs or suggestions to ${normal_color}${mail}"
@@ -1437,7 +1437,7 @@ function language_strings() {
 	arr["CATALAN",112]="Llenguatge canviat a Francès"
 	arr["PORTUGUESE",112]="Idioma alterado para Francês"
 	arr["RUSSIAN",112]="Язык изменён на французский"
-	arr["GREEK",112]="Η γλώσσα άλλαξε σε Γαλλικά"
+	arr["GREEK",112]="Η γλώσσα άλλαξε στα Γαλλικά"
 	arr["ITALIAN",112]="${pending_of_translation} Lingua cambiato in Francese"
 
 	arr["ENGLISH",113]="3.  French"
@@ -1482,7 +1482,7 @@ function language_strings() {
 	arr["CATALAN",117]="Idioma canviat a Català"
 	arr["PORTUGUESE",117]="Idioma alterado para Catalão"
 	arr["RUSSIAN",117]="Язык изменён на каталонский"
-	arr["GREEK",117]="Η γλώσσα άλλαξε σε Καταλανικά"
+	arr["GREEK",117]="Η γλώσσα άλλαξε στα Καταλανικά"
 	arr["ITALIAN",117]="${pending_of_translation} Lingua cambiato in Catalano"
 
 	arr["ENGLISH",118]="4.  DoS attacks menu"
@@ -2661,7 +2661,7 @@ function language_strings() {
 	arr["CATALAN",248]="Idioma canviat a Portuguès"
 	arr["PORTUGUESE",248]="Idioma alterado para Português"
 	arr["RUSSIAN",248]="Язык изменён на португальский"
-	arr["GREEK",248]="Η γλώσσα άλλαξε σε Πορτογαλικά"
+	arr["GREEK",248]="Η γλώσσα άλλαξε στα Πορτογαλικά"
 	arr["ITALIAN",248]="${pending_of_translation} Lingua cambiato a Portoghese"
 
 	arr["ENGLISH",249]="5.  Portuguese"
@@ -3192,7 +3192,7 @@ function language_strings() {
 	arr["CATALAN",307]="Idioma canviat a Rus"
 	arr["PORTUGUESE",307]="Idioma alterado para Russo"
 	arr["RUSSIAN",307]="Язык изменён на русский"
-	arr["GREEK",307]="Η γλώσσα άλλαξε σε Ρωσικά"
+	arr["GREEK",307]="Η γλώσσα άλλαξε στα Ρωσικά"
 	arr["ITALIAN",307]="${pending_of_translation} Lingua cambiato in Russo"
 
 	arr["ENGLISH",308]="6.  Russian"
@@ -3417,7 +3417,7 @@ function language_strings() {
 	arr["CATALAN",332]="Idioma canviat a Grec"
 	arr["PORTUGUESE",332]="Idioma alterado para Grego"
 	arr["RUSSIAN",332]="Язык изменён на Греческий"
-	arr["GREEK",332]="Η γλώσσα άλλαξε σε Ελληνικά"
+	arr["GREEK",332]="Η γλώσσα άλλαξε στα Ελληνικά"
 	arr["ITALIAN",332]="${pending_of_translation} Lingua cambiato in Greco"
 
 	arr["ENGLISH",333]="8.  WPS attacks menu"
@@ -4767,7 +4767,7 @@ function language_strings() {
 	arr["CATALAN",482]="${pending_of_translation} 8.  Italià"
 	arr["PORTUGUESE",482]="${pending_of_translation} 8.  Italiano"
 	arr["RUSSIAN",482]="${pending_of_translation} 8.  Итальянский"
-	arr["GREEK",482]="${pending_of_translation} 8.  Ιταλικά"
+	arr["GREEK",482]="8.  Ιταλικά"
 	arr["ITALIAN",482]="${pending_of_translation} 8.  Italiano"
 
 	arr["ENGLISH",483]="Language changed to Italian"
@@ -4776,7 +4776,7 @@ function language_strings() {
 	arr["CATALAN",483]="${pending_of_translation} Idioma canviat a Italià"
 	arr["PORTUGUESE",483]="${pending_of_translation} Idioma alterado para Italiano"
 	arr["RUSSIAN",483]="${pending_of_translation} Язык изменён на Итальянский"
-	arr["GREEK",483]="${pending_of_translation} Η γλώσσα άλλαξε σε Ιταλικά"
+	arr["GREEK",483]="Η γλώσσα άλλαξε στα Ιταλικά"
 	arr["ITALIAN",483]="${pending_of_translation} Lingua cambiato in Italiano"
 
 	arr["ENGLISH",484]="Root permissions successfully detected"
@@ -4785,7 +4785,7 @@ function language_strings() {
 	arr["CATALAN",484]="${pending_of_translation} Permisos de root correctament detectats"
 	arr["PORTUGUESE",484]="${pending_of_translation} Permissões de root detectado correctamente"
 	arr["RUSSIAN",484]="${pending_of_translation} Root разрешения правильно обнаружено"
-	arr["GREEK",484]="${pending_of_translation} Δικαιώματα root ανιχνεύεται σωστά"
+	arr["GREEK",484]="Τα δικαιώματα root έχουν παραχωρηθεί επιτυχώς"
 	arr["ITALIAN",484]="${pending_of_translation} I permessi di root correttamente rilevati"
 
 	case "${3}" in
