@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170819
+#Date.........: 20170821
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -62,7 +62,7 @@ function language_strings() {
 	under_construction["PORTUGUESE"]="em construção"
 	under_construction["RUSSIAN"]="на ремонте"
 	under_construction["GREEK"]="υπό κατασκευή"
-	under_construction["ITALIAN"]="In costruzione"
+	under_construction["ITALIAN"]="in costruzione"
 	under_constructionvar="${under_construction[${language}]}"
 
 	declare -gA possible_package_names_text
@@ -466,7 +466,7 @@ function language_strings() {
 	arr["PORTUGUESE",4]="Pressione [Enter] para iniciar o ataque..."
 	arr["RUSSIAN",4]="Нажмите клавишу [Enter] для начала атаки..."
 	arr["GREEK",4]="Πατήστε [Enter] για να ξεκινήσει η επίθεση..."
-	arr["ITALIAN",4]="$Premere il tasto [Enter] per iniziare l'attacco..."
+	arr["ITALIAN",4]="Premere il tasto [Enter] per iniziare l'attacco..."
 
 	arr["ENGLISH",5]="It looks like your internet connection is unstable. The script can't connect to repository. It will continue without updating..."
 	arr["SPANISH",5]="Parece que tu conexión a internet no es estable. El script no puede conectar al repositorio. Continuará sin actualizarse..."
