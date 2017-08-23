@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170818
+#Date.........: 20170824
 #Version......: 7.21
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -4336,7 +4336,7 @@ function select_wpa_bssid_target_from_captured_file() {
 		print_hint ${current_menu}
 
 		target_network_on_file=0
-		while [[ ${target_network_on_file} -lt 1 || ${target_network_on_file} -gt ${option_counter} ]]; do
+		while [[ ! ${target_network_on_file} =~ ^[[:digit:]]+$ ]] || (( target_network_on_file < 1 || target_network_on_file > option_counter )); do
 			echo
 			language_strings "${language}" 3 "green"
 			read -r target_network_on_file
@@ -4392,7 +4392,7 @@ function aircrack_bruteforce_attack_option() {
 	set_minlength_and_maxlength
 
 	charset_option=0
-	while [[ ${charset_option} -lt 1 || ${charset_option} -gt 11 ]]; do
+	while [[ ! ${charset_option} =~ ^[[:digit:]]+$ ]] || (( charset_option < 1 || charset_option > 11 )); do
 		set_charset "aircrack"
 	done
 
@@ -4451,7 +4451,7 @@ function hashcat_bruteforce_attack_option() {
 	set_minlength_and_maxlength
 
 	charset_option=0
-	while [[ ${charset_option} -lt 1 || ${charset_option} -gt 5 ]]; do
+	while [[ ! ${charset_option} =~ ^[[:digit:]]+$ ]] || (( charset_option < 1 || charset_option > 5 )); do
 		set_charset "hashcat"
 	done
 
@@ -7638,9 +7638,9 @@ function explore_for_wps_targets_option() {
 		read -r selected_wps_target_network
 	fi
 
-	while [[ ${selected_wps_target_network} -lt 1 ]] || [[ ${selected_wps_target_network} -gt ${wash_counter} ]] || [[ ${wps_lockeds[${selected_wps_target_network}]} = "Yes" ]]; do
+	while [[ ! ${selected_wps_target_network} =~ ^[[:digit:]]+$ ]] || (( selected_wps_target_network < 1 || selected_wps_target_network > wash_counter )) || [[ ${wps_lockeds[${selected_wps_target_network}]} = "Yes" ]]; do
 
-		if [[ ${selected_wps_target_network} -ge 1 ]] && [[ ${selected_wps_target_network} -le ${wash_counter} ]]; then
+		if [[ ${selected_wps_target_network} =~ ^[[:digit:]]+$ ]] && (( selected_wps_target_network >= 1 && selected_wps_target_network <= wash_counter )); then
 			if [ "${wps_lockeds[${selected_wps_target_network}]}" = "Yes" ]; then
 				ask_yesno 350 "no"
 				if [ "${yesno}" = "y" ]; then
@@ -7745,7 +7745,7 @@ function select_target() {
 		read -r selected_target_network
 	fi
 
-	while [[ ${selected_target_network} -lt 1 ]] || [[ ${selected_target_network} -gt ${i} ]]; do
+	while [[ ! ${selected_target_network} =~ ^[[:digit:]]+$ ]] || (( selected_target_network < 1 || selected_target_network > i )); do
 		echo
 		language_strings "${language}" 72 "red"
 		echo
