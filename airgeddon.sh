@@ -5134,7 +5134,7 @@ function set_dhcp_config() {
 
 	dhcp_path="${tmpdir}${dhcpd_file}"
 	if hash apparmor_status 2> /dev/null; then
-		if apparmor_status | grep dhcpd > /dev/null; then
+		if apparmor_status 2> /dev/null | grep dhcpd > /dev/null; then
 			if [ -d /etc/dhcpd ]; then
 				cp "${tmpdir}${dhcpd_file}" /etc/dhcpd/ 2> /dev/null
 				dhcp_path="/etc/dhcpd/${dhcpd_file}"
