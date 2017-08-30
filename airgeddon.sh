@@ -2827,11 +2827,9 @@ function wep_option() {
 		echo
 		language_strings "${language}" 125 "yellow"
 		language_strings "${language}" 115 "read"
-		explore_for_targets_option
-	fi
-
-	if [ "$?" != "0" ]; then
-		return 1
+		if ! explore_for_targets_option; then
+			return 1
+		fi
 	fi
 
 	if ! check_monitor_enabled; then
@@ -6950,11 +6948,9 @@ function capture_handshake() {
 		echo
 		language_strings "${language}" 125 "yellow"
 		language_strings "${language}" 115 "read"
-		explore_for_targets_option
-	fi
-
-	if [ "$?" != "0" ]; then
-		return 1
+		if ! explore_for_targets_option; then
+			return 1
+		fi
 	fi
 
 	if ! check_monitor_enabled; then
@@ -8066,14 +8062,14 @@ function detect_internet_interface() {
 		language_strings "${language}" 285 "blue"
 		ask_yesno 284 "yes"
 		if [ "${yesno}" = "n" ]; then
-			select_internet_interface
+			if ! select_internet_interface; then
+				return 1
+			fi
 		fi
 	else
-		select_internet_interface
-	fi
-
-	if [ "$?" != "0" ]; then
-		return 1
+		if ! select_internet_interface; then
+			return 1
+		fi
 	fi
 
 	validate_et_internet_interface
