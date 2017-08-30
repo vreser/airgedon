@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170830
+#Date.........: 20170831
 #Version......: 7.21
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -1592,9 +1592,7 @@ function select_internet_interface() {
 	print_hint ${current_menu}
 
 	read -r inet_iface
-	if [ -z "${inet_iface}" ]; then
-		invalid_internet_iface_selected
-	elif [[ ${inet_iface} -lt 1 ]] || [[ ${inet_iface} -gt ${option_counter_back} ]]; then
+	if [[ ! ${inet_iface} =~ ^[[:digit:]]+$ ]] || (( inet_iface < 1 || inet_iface > option_counter_back )); then
 		invalid_internet_iface_selected
 	elif [ "${inet_iface}" -eq ${option_counter_back} ]; then
 		return_to_et_main_menu=1
@@ -1643,9 +1641,7 @@ function select_interface() {
 	print_hint ${current_menu}
 
 	read -r iface
-	if [ -z "${iface}" ]; then
-		invalid_iface_selected
-	elif [[ ${iface} -lt 1 ]] || [[ ${iface} -gt ${option_counter} ]]; then
+	if [[ ! ${iface} =~ ^[[:digit:]]+$ ]] || (( iface < 1 || iface > option_counter )); then
 		invalid_iface_selected
 	else
 		option_counter2=0
