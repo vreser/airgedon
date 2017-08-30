@@ -3,6 +3,7 @@
  - Tested compatibility with Parrot 3.7 and Fedora 26
  - Improved check for root permissions, now mandatory
  - Fixed bug for some menu inputs on special chars
+ - Code improvements, removed new shellcheck warnings
 
 ### 7.2
  - Improved chipset detection
