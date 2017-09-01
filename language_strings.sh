@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170821
+#Date.........: 20170901
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -2436,7 +2436,7 @@ function language_strings() {
 	arr["CATALAN",223]="${pending_of_translation} airgeddon necessita permisos de root per funcionar. Llança l'script com a usuari root o utilitzeu \"sudo\""
 	arr["PORTUGUESE",223]="airgeddon necessita de permissões root para funcionar. Execute o script como root ou usando \"sudo\""
 	arr["RUSSIAN",223]="${pending_of_translation} airgeddon требует прав root для работы. Запустите скрипт как root пользователь или используйте \"sudo\""
-	arr["GREEK",223]="${pending_of_translation} Η airgeddon χρειάζεται δικαιώματα root για να δουλέψει. Ανοίξτε το script ως root χρήστης ή χρησιμοποιήστε \"sudo\""
+	arr["GREEK",223]="Το airgeddon χρειάζεται root δικαιώματα για να δουλέψει. Ανοίξτε το script ως χρήστης root ή χρησιμοποιήστε \"sudo\""
 	arr["ITALIAN",223]="airgeddon ha bisogno dei permessi di root per l'esecuzione. Lancia lo script come root o usando \"sudo\""
 
 	arr["ENGLISH",224]="The script execution continues from exactly the same point where it was"
