@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170831
+#Date.........: 20170902
 #Version......: 7.21
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -6219,8 +6219,11 @@ function set_beef_config() {
 	tmpfiles_toclean=1
 	rm -rf "${tmpdir}${beef_file}" > /dev/null 2>&1
 
+	beef_db_path=""
 	if [ -d "${beef_path}db" ]; then
-		beef_db="db/${beef_db}"
+		beef_db_path="db/${beef_db}"
+	else
+		beef_db_path="${beef_db}"
 	fi
 
 	{
@@ -6252,7 +6255,7 @@ function set_beef_config() {
 	echo -e "            hook_root: false"
 	echo -e "    database:"
 	echo -e "        driver: \"sqlite\""
-	echo -e "        db_file: \"${beef_db}\""
+	echo -e "        db_file: \"${beef_db_path}\""
 	echo -e "    credentials:"
 	echo -e "        user: \"beef\""
 	echo -e "        passwd: \"${beef_pass}\""
@@ -6400,7 +6403,7 @@ function manual_beef_set() {
 			else
 				if [ -d "${manually_entered_beef_path}" ]; then
 					if [ -f "${manually_entered_beef_path}beef" ]; then
-						if head "${manually_entered_beef_path}beef" -n 1 2> /dev/null| grep ruby > /dev/null; then
+						if head "${manually_entered_beef_path}beef" -n 1 2> /dev/null | grep ruby > /dev/null; then
 							possible_beef_known_locations+=(${manually_entered_beef_path})
 							valid_possible_beef_path=1
 						else
@@ -6424,7 +6427,7 @@ function fix_beef_executable() {
 
 	rm -rf "/usr/bin/beef" > /dev/null 2>&1
 	{
-	echo -e "#!/bin/bash\n"
+	echo -e "#!/usr/bin/env bash\n"
 	echo -e "cd ${1}"
 	echo -e "./beef"
 	} >> "/usr/bin/beef"

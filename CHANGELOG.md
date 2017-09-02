@@ -4,6 +4,7 @@
  - Improved check for root permissions, now mandatory
  - Fixed bug for some menu inputs using special chars. Now sanitized
  - Code improvements, removed new shellcheck warnings
+ - Fixed bug launching BeEF Evil Twin attack twice
 
 ### 7.2
  - Improved chipset detection
