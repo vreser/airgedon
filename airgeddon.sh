@@ -2006,7 +2006,7 @@ function set_wep_key_script() {
 	exec 8>"${tmpdir}${wep_key_handler}"
 
 	cat >&8 <<-EOF
-		#!/bin/bash
+		#!/usr/bin/env bash
 		wep_key_found=0
 
 		#Check if the wep password was captured and manage to save it on a file
@@ -2165,7 +2165,7 @@ function set_wep_script() {
 	exec 6>"${tmpdir}${wep_attack_file}"
 
 	cat >&6 <<-EOF
-		#!/bin/bash
+		#!/usr/bin/env bash
 		#shellcheck disable=SC1037
 		#shellcheck disable=SC2164
 		#shellcheck disable=SC2140
@@ -5341,7 +5341,7 @@ function set_wps_attack_script() {
 	attack_cmd2=" | tee ${tmpdir}${wps_out_file}"
 
 	cat >&7 <<-EOF
-		#!/bin/bash
+		#!/usr/bin/env bash
 		script_wps_attack_tool="${wps_attack_tool}"
 		script_wps_attack_mode="${wps_attack_mode}"
 		attack_pin_counter=1
@@ -5669,7 +5669,7 @@ function set_control_script() {
 	exec 7>"${tmpdir}${control_file}"
 
 	cat >&7 <<-EOF
-		#!/bin/bash
+		#!/usr/bin/env bash
 		et_heredoc_mode=${et_mode}
 	EOF
 
@@ -6035,7 +6035,7 @@ function set_captive_portal_page() {
 	} >> "${tmpdir}${webdir}${jsfile}"
 
 	{
-	echo -e "#!/bin/bash"
+	echo -e "#!/usr/bin/env bash"
 	echo -e "echo '<!DOCTYPE html>'"
 	echo -e "echo '<html>'"
 	echo -e "echo -e '\t<head>'"
@@ -6067,7 +6067,7 @@ function set_captive_portal_page() {
 	exec 4>"${tmpdir}${webdir}${checkfile}"
 
 	cat >&4 <<-EOF
-		#!/bin/bash
+		#!/usr/bin/env bash
 		echo '<!DOCTYPE html>'
 		echo '<html>'
 		echo -e '\t<head>'
