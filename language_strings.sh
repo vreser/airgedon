@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170901
+#Date.........: 20170903
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -2722,7 +2722,7 @@ function language_strings() {
 	arr["SPANISH",255]="sin sniffing, solo AP"
 	arr["FRENCH",255]="rogue AP sans capture des données"
 	arr["CATALAN",255]="sense sniffing, només AP"
-	arr["PORTUGUESE",255]="Somente AP, sem sniffing"
+	arr["PORTUGUESE",255]="somente AP, sem sniffing"
 	arr["RUSSIAN",255]="без сниффинга, просто ТД"
 	arr["GREEK",255]="χωρίς sniffing, μόνο AP"
 	arr["ITALIAN",255]="senza sniffing, solo AP"
@@ -2785,7 +2785,7 @@ function language_strings() {
 	arr["SPANISH",262]="sin sniffing, portal cautivo"
 	arr["FRENCH",262]="sans capture des données avec portail captif"
 	arr["CATALAN",262]="sense sniffing, portal captiu"
-	arr["PORTUGUESE",262]="Sem sniffing, portal cativo"
+	arr["PORTUGUESE",262]="sem sniffing, portal cativo"
 	arr["RUSSIAN",262]="без сниффинга, перехватывающий портал"
 	arr["GREEK",262]="χωρίς sniffing, captive portal"
 	arr["ITALIAN",262]="senza sniffing, captive portal"
