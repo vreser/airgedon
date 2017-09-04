@@ -4246,7 +4246,7 @@ function language_strings() {
 	arr["PORTUGUESE",424]="A rede selecionada é inválida. O tipo de criptografia da rede deve ser WEP"
 	arr["RUSSIAN",424]="Выбранная сеть не подходит. Целевая сеть должна иметь шифрование WEP"
 	arr["GREEK",424]="Το επιλεγμένο δίκτυο δεν είναι έγκυρο. Ο τύπος κρυπτογράφησης του δικτύου-στόχος πρέπει να είναι WEP"
-	arr["ITALIAN",424]="${pending_of_translation} La rete selezionato non è valido. Il tipo di crittografia WEP dovrebbe essere la rete di destinazione"
+	arr["ITALIAN",424]="La rete selezionata non è valida. Il tipo di crittografia della rete obiettivo deve essere WEP"
 
 	arr["ENGLISH",425]="You have a valid WEP target network selected. Script can continue..."
 	arr["SPANISH",425]="Tienes una red objetivo WEP válida seleccionada. El script puede continuar..."
