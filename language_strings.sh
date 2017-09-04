@@ -4039,7 +4039,7 @@ function language_strings() {
 	arr["PORTUGUESE",401]="O pacote beef instalado não é o BeEF (Browser Exploitation Framework). Você instalou Beef (Flexible Brainfuck interpreter). Ambos possuem o mesmo nome e executável o que pode levar a confusão. Desinstale-o e instale o que o airgeddon precisa se você quiser usar esse recurso. Guia de Instalação: ${beef_installation_url}"
 	arr["RUSSIAN",401]="Установленный вами пакет beef не является пакетом BeEF (Browser Exploitation Framework). Вы установили Beef (Flexible Brainfuck interpreter). Оба исполнимых файла имеют одинаковое имя и могут вызвать путаницу. Если вы хотите использовать эту функцию, удалите его и установите тот, который требует airgeddon. Инструкция по установке: ${beef_installation_url}"
 	arr["GREEK",401]="Το πακέτο beef που έχετε εγκαταστημένο δεν είναι το BeEF (Browser Exploitation Framework). Έχετε εγκατεστημένο το Beef (Flexible Brainfuck interpreter). Και τα δύο εκτελέσιμα αρχεία έχουν το ίδιο όνομα και μπορεί να γίνει κάποιο μπέρδεμα. Απεγκαταστήστε το και εγκαταστήστε αυτό που χρειάζεται το airgeddon, αν θέλετε να χρησιμοποιήσετε αυτή την επιλογή. Οδηγός εγκατάστασης: ${beef_installation_url}"
-	arr["ITALIAN",401]="${pending_of_translation} Il pacchetto beef si è installato non è BeEF (Browser Exploitation Framework). È stato installato Beef (Flexible Brainfuck interprete). Entrambi gli eseguibili stesso nome e può essere fonte di confusione. Disinstallarlo e installarlo airgeddon bisogno se si desidera utilizzare questa funzione. Guida all'installazione: ${beef_installation_url}"
+	arr["ITALIAN",401]="Il pacchetto beef che hai installato non è BeEF (Browser Exploitation Framework). È stato installato Beef (Flexible Brainfuck interpreter). Entrambi gli eseguibili hanno lo nome e può essere fonte di confusione. Disinstallarlo e installare quello di cui ha bisogno airgeddon se si desidera utilizzare questa funzione. Guida all'installazione: ${beef_installation_url}"
 
 	arr["ENGLISH",402]="Enter the absolute path of the directory where BeEF is installed :"
 	arr["SPANISH",402]="Introduce la ruta absoluta del directorio donde está instalado BeEF :"
@@ -4048,7 +4048,7 @@ function language_strings() {
 	arr["PORTUGUESE",402]="Digite o caminho absoluto do diretório onde BeEF está instalado :"
 	arr["RUSSIAN",402]="Введите абсолютный путь к каталогу, в котором установлен BeEF :"
 	arr["GREEK",402]="Εισάγετε το απόλυτο μονοπάτι για τον κατάλογο στον όποιο βρίσκεται εγκατεστημένο το BeEF :"
-	arr["ITALIAN",402]="${pending_of_translation} Immettere il percorso assoluto della directory in cui è installato BeEF :"
+	arr["ITALIAN",402]="Immettere il percorso assoluto della directory in cui è installato BeEF :"
 
 	arr["ENGLISH",403]="The directory you entered doesn't exist"
 	arr["SPANISH",403]="El directorio introducido no existe"
@@ -4057,7 +4057,7 @@ function language_strings() {
 	arr["PORTUGUESE",403]="O diretório digitado não existe"
 	arr["RUSSIAN",403]="Каталог, который вы ввели, не существует"
 	arr["GREEK",403]="Ο κατάλογος που έχετε εισάγει δεν υπάρχει"
-	arr["ITALIAN",403]="${pending_of_translation} La cartella indicata non esiste"
+	arr["ITALIAN",403]="La cartella indicata non esiste"
 
 	arr["ENGLISH",404]="The entered path isn't absolute. An absolute path must always begin with \"/\""
 	arr["SPANISH",404]="La ruta introducida no es absoluta. Una ruta absoluta siempre debe comenzar por \"/\""
@@ -4066,7 +4066,7 @@ function language_strings() {
 	arr["PORTUGUESE",404]="O caminho digitado não é absoluto. Um caminho absoluto deve sempre começar com \"/\""
 	arr["RUSSIAN",404]="Введенный путь не является абсолютным. Абсолютный путь всегда должен начинаться с \"/\""
 	arr["GREEK",404]="Το μονοπάτι που έχετε εισάγει δεν είναι απόλυτο. Ένα απόλυτο μονοπάτι πρέπει πάντα να ξεκινάει με \"/\""
-	arr["ITALIAN",404]="${pending_of_translation} Il percorso immesso non è assoluta. Un percorso assoluto deve sempre iniziare con \"/\""
+	arr["ITALIAN",404]="Il percorso immesso non è assoluto. Un percorso assoluto deve sempre iniziare con \"/\""
 
 	arr["ENGLISH",405]="Checking BeEF..."
 	arr["SPANISH",405]="Comprobando BeEF..."
@@ -4075,7 +4075,7 @@ function language_strings() {
 	arr["PORTUGUESE",405]="Verificando BeEF..."
 	arr["RUSSIAN",405]="Проверка BeEF..."
 	arr["GREEK",405]="Γίνεται έλεγχος του BeEF..."
-	arr["ITALIAN",405]="${pending_of_translation} Controllo di BeEF..."
+	arr["ITALIAN",405]="Controllando BeEF..."
 
 	arr["ENGLISH",406]="No BeEF executable was detected in given directory"
 	arr["SPANISH",406]="No se ha detectado un ejecutable de BeEF en el directorio indicado"
@@ -4084,7 +4084,7 @@ function language_strings() {
 	arr["PORTUGUESE",406]="O executável do BeEF não foi detectado no diretório especificado"
 	arr["RUSSIAN",406]="Ни один исполняемый файл BeEF не был обнаружен в заданной директории"
 	arr["GREEK",406]="Δεν εντοπίστηκε κάποιο εκτελέσιμο αρχείο BeEF στον κατάλογο που έχετε εισάγει"
-	arr["ITALIAN",406]="${pending_of_translation} Non è stato rilevato BeEF eseguibile nella directory specificata"
+	arr["ITALIAN",406]="Non è stato rilevato un eseguibile di BeEF nella directory specificata"
 
 	arr["ENGLISH",407]="BeEF preparation"
 	arr["SPANISH",407]="Preparación BeEF"
@@ -4093,7 +4093,7 @@ function language_strings() {
 	arr["PORTUGUESE",407]="Preparando BeEF"
 	arr["RUSSIAN",407]="Подготовка BeEF"
 	arr["GREEK",407]="Προετοιμασία του BeEF"
-	arr["ITALIAN",407]="${pending_of_translation} Preparazione BeEF"
+	arr["ITALIAN",407]="Preparando BeEF"
 
 	arr["ENGLISH",408]="If you installed BeEF manually, airgeddon might not be able to find it and the attack option can appear as restricted. You can try to solve it using the special menu option to fix this. It will work only if BeEF is already correctly installed and your unique problem is the script is not detecting it"
 	arr["SPANISH",408]="Si instalaste BeEF manualmente, puede que airgeddon no sea capaz de encontrarlo y la opción del ataque te aparezca restringida. Puedes intentar solucionarlo usando la opción del menú especial para ello. Esto sólo funcionará si BeEF ya está instalado correctamente y el único problema que tienes es que el script no lo detecta"
@@ -4102,7 +4102,7 @@ function language_strings() {
 	arr["PORTUGUESE",408]="Se BeEF foi instalado manualmente, o airgeddon não pode encontrá-lo automaticamente e a opção de ataque aparecerá bloqueada. Você pode tentar corrigi-lo usando a opção de menu especial para isso. Isso só vai funcionar se BeEF já está instalado corretamente e o único problema que você tem é que o script não o detecta"
 	arr["RUSSIAN",408]="Если вы установили BeEF вручную, airgeddon может быть не в состоянии найти его, и опция атаки в меню может быть ограничена. Для исправления этого, вы можете попытаться решить эту проблему с помощью специального пункта меню. Это сработает только если BeEF уже правильно установлен, и ваша единственная проблема в том, что скрипт не обнаруживает его"
 	arr["GREEK",408]="Εάν έχετε εγκαταστήσει χειροκίνητα το BeEF, το airgeddon μπορεί να μην μπορέσει να το βρεί και η επιλογή της επίθεσης μπορεί να φανεί σαν περιορισμένη. Μπορείτε να προσπαθήσετε να διορθώσετε το πρόβλημα κάνοντας χρήση της ειδικής επιλογής στο μενού. Θα λειτουργήσει μόνο αν το BeEF έχει ήδη εγκατασταθεί σωστά και το μόνο πρόβλημα είναι ότι το script δεν το εντοπίζει"
-	arr["ITALIAN",408]="${pending_of_translation} Se è stato installato manualmente BeEF, airgeddon potrebbe non essere in grado di trovare e opzione di attacco apparirà limitato. Si può cercare di risolvere il problema utilizzando l'opzione di menu speciale per questo. Questo sarà solo funziona se la BeEF è già installato correttamente e l'unico problema che hai è che lo script non rileva"
+	arr["ITALIAN",408]="Se BeEF è stato installato manualmente, airgeddon potrebbe non essere in grado di trovarlo e l'opzione di attacco apparirà limitata. Si può cercare di risolvere il problema utilizzando l'opzione del menú specifica per questo. Questo funzionerá solo se BeEF è già installato correttamente e l'unico problema che hai è che lo script non lo rileva"
 
 	arr["ENGLISH",409]="1.  Evil Twin AP attack with sniffing and bettercap-sslstrip2/BeEF"
 	arr["SPANISH",409]="1.  Ataque Evil Twin AP con sniffing y bettercap-sslstrip2/BeEF"
@@ -4111,7 +4111,7 @@ function language_strings() {
 	arr["PORTUGUESE",409]="1.  Ataque Evil Twin AP com sniffing e bettercap-sslstrip2/BeEF"
 	arr["RUSSIAN",409]="1.  Атака Злой Двойник ТД со сниффингом и bettercap-sslstrip2/BeEF"
 	arr["GREEK",409]="1.  Επίθεση Evil Twin AP με sniffing και bettercap-sslstrip2/BeEF"
-	arr["ITALIAN",409]="${pending_of_translation} 1.  Attacco Evil Twin AP con sniffing e bettercap-sslstrip2/BeEF"
+	arr["ITALIAN",409]="1.  Attacco Evil Twin AP con sniffing e bettercap-sslstrip2/BeEF"
 
 	arr["ENGLISH",410]="2.  Try to troubleshoot manually installed BeEF dependency problem"
 	arr["SPANISH",410]="2.  Intentar solucionar problema de dependencia BeEF instalado manualmente"
@@ -4120,7 +4120,7 @@ function language_strings() {
 	arr["PORTUGUESE",410]="2.  Tentar resolver o problema de dependência do BeEF instalado manualmente"
 	arr["RUSSIAN",410]="2.  Попробуйте устранить проблему вручную установив зависимости BeEF"
 	arr["GREEK",410]="2.  Προσπαθήστε να αντιμετωπίσετε το πρόβλημα με τα dependencies του χειροκίνητα εγκατεστημένου BeEF"
-	arr["ITALIAN",410]="${pending_of_translation} 2.  Cercare di risolvere manzo problema di dipendenza installato manualmente"
+	arr["ITALIAN",410]="2.  Cercare di risolvere il problema delle dipende di BeEF installato manualmente"
 
 	arr["ENGLISH",411]="3.  Return to Evil Twin attacks menu"
 	arr["SPANISH",411]="3.  Volver al menú de ataques Evil Twin"
@@ -4129,7 +4129,7 @@ function language_strings() {
 	arr["PORTUGUESE",411]="3.  Voltar ao menu de ataques Evil Twin"
 	arr["RUSSIAN",411]="3.  Вернуться в меню атак Злой Двойник"
 	arr["GREEK",411]="3.  Επιστροφή στο μενού επιθέσεων Evil Twin"
-	arr["ITALIAN",411]="${pending_of_translation} Torna al menu attacchi Evil Twin"
+	arr["ITALIAN",411]="3.  Tornare al menú attacchi Evil Twin"
 
 	arr["ENGLISH",412]="You don't need to perform this action. Your BeEF is operational"
 	arr["SPANISH",412]="No necesitas realizar esta acción. Tu BeEF está operativo"
@@ -4138,7 +4138,7 @@ function language_strings() {
 	arr["PORTUGUESE",412]="Você não precisa fazer isso. Seu BeEF está operacional"
 	arr["RUSSIAN",412]="Вам не нужно выполнять это действие. Ваш BeEF находится в рабочем состоянии"
 	arr["GREEK",412]="Δεν χρειάζεται να εκτελέσετε αυτήν την ενέργεια. Το BeEF λειτουργεί κανονικά"
-	arr["ITALIAN",412]="${pending_of_translation} Non è necessario fare questo. El vostro BeEF è operativo"
+	arr["ITALIAN",412]="Non è necessario fare questo. Il tuo BeEF è operativo"
 
 	arr["ENGLISH",413]="airgeddon fixed the problem. Your BeEF is operational"
 	arr["SPANISH",413]="airgeddon ha solucionado el problema. Tu BeEF está operativo"
@@ -4147,7 +4147,7 @@ function language_strings() {
 	arr["PORTUGUESE",413]="O airgeddon corrigiu o problema. Seu BeEF está operacional"
 	arr["RUSSIAN",413]="airgeddon устранил проблему. Ваш BeEF находится в рабочем состоянии"
 	arr["GREEK",413]="Το airgeddon διόρθωσε το πρόβλημα. Το BeEF λειτουργεί κανονικά"
-	arr["ITALIAN",413]="${pending_of_translation} airgeddon ha risolto il problema. El vostro BeEF è operativo"
+	arr["ITALIAN",413]="airgeddon ha risolto il problema. Il tuo BeEF è operativo"
 
 	arr["ENGLISH",414]="You don't have curl installed. Is not possible to download PINs database file"
 	arr["SPANISH",414]="No tienes curl instalado. No se puede descargar el fichero de la base de datos de PINs"
@@ -4156,7 +4156,7 @@ function language_strings() {
 	arr["PORTUGUESE",414]="Você não tem o pacote curl instalado. Você não pode baixar o arquivo com banco de dados de PINs"
 	arr["RUSSIAN",414]="У вас не установлен curl. Невозможно загрузить файл базы данных PIN"
 	arr["GREEK",414]="Το curl δεν είναι εγκατεστημένο. Είναι αδύνατον να κατέβει το αρχείο με την βάση δεδομένων PIN"
-	arr["ITALIAN",414]="${pending_of_translation} Non si dispone di curl installato. Non è possibile scaricare il file dai PIN di database"
+	arr["ITALIAN",414]="Non si dispone di curl installato. Non è possibile scaricare il file della base dati dei PINs"
 
 	arr["ENGLISH",415]="${blue_color}airgeddon knows you have BeEF installed and you pass the validation, but it was unable to locate the right directory path where you have BeEF installed. Knowing the location gives some advantages for the execution because its configuration file can be customized instead of generic. ${green_color}Do you want to enter it manually? ${normal_color}${visual_choice}"
 	arr["SPANISH",415]="${blue_color}airgeddon sabe que tienes BeEF instalado y pasas la validación, pero no ha podido concretar la ruta del directorio exacto donde tienes instalado BeEF. Conocer la localización exacta tiene algunas ventajas a la hora de ejecutarlo ya que la configuración será personalizada en lugar de ser una configuración genérica. ${green_color}¿Quieres introducirla manualmente? ${normal_color}${visual_choice}"
@@ -4165,7 +4165,7 @@ function language_strings() {
 	arr["PORTUGUESE",415]="${blue_color}O airgeddon sabe que você instalou o BeEF e validou a instalacão, mas não pôde encontrar o diretório exato onde você instalou o BeEF. Saber a localização exata tem algumas vantagens quando executá-lo a configuração será personalizada em vez de uma configuração genérica. ${green_color}Você quer inseri-la manualmente? ${normal_color}${visual_choice}"
 	arr["RUSSIAN",415]="${blue_color}airgeddon знает, что у вас установлен BeEF и вы успешно прошли проверку, но скрипт оказался не в состоянии найти правильный путь к каталогу, где вы установили BeEF. Знание расположения даёт некоторые преимущества при выполнении, поскольку появляется возможность настроить его конфигурационный файл, а не использовать настройки по умолчанию. ${green_color}Вы хотите ввести расположение вручную? ${normal_color}${visual_choice}"
 	arr["GREEK",415]="${blue_color}Το airgeddon γνωρίζει ότι έχετε εγκατεστημένο το BeEF και έχετε περάσει τους απαραίτητους ελέγχους, αλλά δεν μπόρεσε να εντοπίσει το σωστό μονοπάτι για τον κατάλογο όπου έχετε εγκαταστήσει το BeEF. Γνωρίζοντας το μονοπάτι για τον κατάλογο κάνει την διαδικασία της εκτέλεσης πλεονεκτική γιατί το αρχείο παραμέτρων μπορεί να ρυθμιστεί καταλλήλως, αντιθέτως με το προεπιλεγμένο. ${green_color}Θέλετε να το εισάγετε χειροκίνητα; ${normal_color}${visual_choice}"
-	arr["ITALIAN",415]="${pending_of_translation} ${blue_color}airgeddon sa di aver installato BeEF e validazione passaggio, ma non era in grado di specificare il percorso esatto della directory in cui è stato installato BeEF. Conoscere l'esatta posizione ha alcuni vantaggi quando si esegue da quando la configurazione sarà personalizzata, piuttosto che una configurazione generica. ${green_color}Vuoi inserire manualmente? ${normal_color}${visual_choice}"
+	arr["ITALIAN",415]="${blue_color}airgeddon sa che hai BeEF installato e passi la validazione, peró non ha potuto trovare il percorso esatto della directory in cui hai installato BeEF. Conoscere l'esatta posizione ha alcuni vantaggi all'ora di eseguiro perchè la configurazione sarà personalizzata, piuttosto che una configurazione generica. ${green_color}Vuoi inserirla manualmente? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",416]="    You can run BeEF, but it is better if you run the second option before"
 	arr["SPANISH",416]="    Puedes ejecutar BeEF, pero es recomendable ejecutar la segunda opción antes"
@@ -4174,7 +4174,7 @@ function language_strings() {
 	arr["PORTUGUESE",416]="    Você pode executar BeEF, mas é recomendado executar a segunda opção de menu antes"
 	arr["RUSSIAN",416]="    Вы можете запустить BeEF, но лучше, если вы сначала запустите вторую опцию"
 	arr["GREEK",416]="    Μπορείτε να εκτελέσετε το BeEF, αλλά είναι καλύτερα να διαλέξετε τη δεύτερη επιλογή από πρίν"
-	arr["ITALIAN",416]="${pending_of_translation}     BeEF può funzionare, ma si consiglia di eseguire la seconda opzione prima"
+	arr["ITALIAN",416]="    Puoi eseguire BeEF, peró si consiglia di eseguire prima la seconda opzione"
 
 	arr["ENGLISH",417]="An unexpected error occurred, redirecting to the menu"
 	arr["SPANISH",417]="Ocurrió un error inesperado. Volviendo al menú"
@@ -4183,7 +4183,7 @@ function language_strings() {
 	arr["PORTUGUESE",417]="Ocorreu um erro inesperado, retornando ao menu"
 	arr["RUSSIAN",417]="Случилась непредвиденная ошибка, перенаправление в меню"
 	arr["GREEK",417]="Παρουσιάστηκε μη αναμενόμενο σφάλμα, γίνεται ανακατεύθυνση στο μενού"
-	arr["ITALIAN",417]="${pending_of_translation} Un errore imprevisto. Tornando al menu"
+	arr["ITALIAN",417]="Errore imprevisto. Tornando al menú"
 
 	arr["ENGLISH",418]="Restoring MAC"
 	arr["SPANISH",418]="Restaurando MAC"
@@ -4192,7 +4192,7 @@ function language_strings() {
 	arr["PORTUGUESE",418]="Restaurando MAC"
 	arr["RUSSIAN",418]="Восстановление MAC-адреса"
 	arr["GREEK",418]="Γίνεται αποκατάσταση της διεύθυνσης MAC"
-	arr["ITALIAN",418]="${pending_of_translation} Ripristino MAC"
+	arr["ITALIAN",418]="Ripristinando MAC"
 
 	arr["ENGLISH",419]="Do you want to spoof your MAC address during this attack? ${normal_color}${visual_choice}"
 	arr["SPANISH",419]="¿Deseas falsear la dirección MAC de tu tarjeta durante el ataque? ${normal_color}${visual_choice}"
@@ -4201,7 +4201,7 @@ function language_strings() {
 	arr["PORTUGUESE",419]="Você quer modificar o endereço MAC da sua interface durante o ataque? ${normal_color}${visual_choice}"
 	arr["RUSSIAN",419]="Вы хотите подменить свой MAC-адрес во время этой атаки? ${normal_color}${visual_choice}"
 	arr["GREEK",419]="Θέλετε να κρύψετε την αληθινή διεύθυνση MAC, δημιουργώντας μία ψεύτικη κατά την διάρκεια αυτής της επίθεσης; ${normal_color}${visual_choice}"
-	arr["ITALIAN",419]="${pending_of_translation} Vuoi falsificare l'indirizzo MAC della scheda durante l'attacco? ${normal_color}${visual_choice}"
+	arr["ITALIAN",419]="Vuoi falsificare l'indirizzo MAC della scheda durante l'attacco? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",420]="It has been detected that you are running airgeddon inside a Docker container. During this attack hostapd is used to create a fake AP. This component often conflicts with network-manager. From inside the container, airgeddon can't handle it. If you have network-manager installed on your host machine, close it or kill the conflicting processes or you'll get an error. For more information, see the Docker section of the Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["SPANISH",420]="Se ha detectado que estás ejecutando airgeddon en un contenedor de Docker. En este ataque se utiliza hostapd para crear un falso AP. Este componente suele dar conflicto con network-manager. Desde el contenedor, airgeddon no puede gestionarlo. Si tienes network-manager instalado en tu máquina host, ciérralo o mata los procesos en conflicto u obtendrás un error. Para más información consulta la sección Docker del Wiki: ${normal_color}${urlgithub_wiki}/Docker"
@@ -4210,7 +4210,7 @@ function language_strings() {
 	arr["PORTUGUESE",420]="Detectamos que você está executando airgeddon em um container Docker. Neste ataque é usado hostapd para criar um AP falso. Este componente tende a entrar em conflito com network-manager. A partir do container o airgeddon não pode controlá-lo. Se você tem network-manager instalado em sua máquina host feche-o, mate os processos conflitantes ou você irá obter um erro. Para mais informações consulte a seção Docker Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["RUSSIAN",420]="Определено, что вы запускаете airgeddon внутри контейнера Docker. Во время этой атаки для создания поддельной AP используется hostapd. Этот компонент часто конфликтует с network-manager. Изнутри контейнера airgeddon не может справиться с этим. Если на вашем хост-компьютере установлен network-manager, закройте его или уберите конфликтующие процессы, иначе вы получите сообщение об ошибке. Для получения дополнительной информации см. раздел Docker в Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["GREEK",420]="Εντοπίστηκε πως τρέχετε το airgeddon μέσα σε Docker container. Κατά τη διάρκεια αυτής της επίθεσης χρησιμοποιείται το hostapd για να δημιουργήσει ψεύτικο AP. Η δημιουργία αυτού κάνει conflicts με τον network-manager. Το airgeddon δεν μπορεί να το χειριστεί μέσα από το container. Αν υπάρχει ο network-manager εγκατεστημένος στον host-υπολογιστή, κλείστε τον ή διακόψτε τις διεργασίες που κάνουν conflict αλλιώς θα υπάρξουν σφάλματα. Για περισσότερες πληροφορίες, ανατρέξτε στην ενότητα Docker του Wiki: ${normal_color}${urlgithub_wiki}/Docker"
-	arr["ITALIAN",420]="${pending_of_translation} Abbiamo rilevato che si esegue airgeddon un contenitore Docker. In questo attacco hostapd viene utilizzato per creare un falso AP. Questo componente tende a conflitto con network-manager. Dal contenitore, airgeddon non può gestirlo. Se si dispone di network-manager installato sul computer host, chiuderlo o uccidere i processi in conflitto o di un errore. Per ulteriori informazioni consultare la sezione Docker Wiki: ${normal_color}${urlgithub_wiki}/Docker"
+	arr["ITALIAN",420]="È stato rilevato che si sta eseguendo airgeddon in un contenitore Docker. In questo attacco viene utilizzato hostapd per creare un falso AP. Questo componente tende a creare un conflitto con il network-manager. Dal contenitore, airgeddon non può gestirlo. Se si dispone di network-manager installato sul computer host, chiuderlo o uccidere i processi in conflitto o ci sará un errore. Per ulteriori informazioni consultare la sezione Docker della nostra Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 
 	arr["ENGLISH",421]="Doubts? Visit our Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["SPANISH",421]="¿Dudas? Visita nuestro Wiki: ${normal_color}${urlgithub_wiki}"
@@ -4219,7 +4219,7 @@ function language_strings() {
 	arr["PORTUGUESE",421]="Dúvidas? Visite a Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["RUSSIAN",421]="Вопросы? Посетите Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["GREEK",421]="Απορίες; Επισκεφθείτε το Wiki μας: ${normal_color}${urlgithub_wiki}"
-	arr["ITALIAN",421]="${pending_of_translation} Domande? Visita il nostro Wiki: ${normal_color}${urlgithub_wiki}"
+	arr["ITALIAN",421]="Domande? Visita la nostra Wiki: ${normal_color}${urlgithub_wiki}"
 
 	arr["ENGLISH",422]="The automatic update has been disabled when airgeddon is running in a Docker container. If you want to update it, download again the image tagged as \"latest\""
 	arr["SPANISH",422]="La actualización automática se ha desactivado cuando airgeddon se ejecuta en un contenedor de Docker. Si deseas actualizarlo descarga de nuevo la imagen con tag \"latest\""
@@ -4228,7 +4228,7 @@ function language_strings() {
 	arr["PORTUGUESE",422]="A atualização automática é desativada quando airgeddon é executado em um container Docker. Se você quiser atualizar faça o download novamente da imagem em \"latest\""
 	arr["RUSSIAN",422]="Когда airgeddon работает в контейнере Docker, то автоматическое обновление отключено,. Если вы хотите обновить программу, то снова загрузите образ отмеченный как \"latest\""
 	arr["GREEK",422]="Η διαδικασία της αυτόματης ενημέρωσης είναι απενεργοποιημένη όταν το airgeddon τρέχει σε Docker container. Εάν θέλετε να το ενημερώσετε, κατεβάστε ξανά το αρχείο με την ετικέτα \"latest\""
-	arr["ITALIAN",422]="${pending_of_translation} L'aggiornamento automatico è disabilitata quando airgeddon viene eseguito su un contenitore Docker. Se volete scaricare di nuovo aggiornare il tag immagine \"latest\""
+	arr["ITALIAN",422]="L'aggiornamento automatico viene disabilitato quando airgeddon viene eseguito in un contenitore Docker. Se vuoi aggiornarlo scaricare di nuovo l'immagine con il tag \"latest\""
 
 	arr["ENGLISH",423]="5.  WEP \"All-in-One\" attack"
 	arr["SPANISH",423]="5.  Ataque WEP \"Todo-en-Uno\""
@@ -4237,7 +4237,7 @@ function language_strings() {
 	arr["PORTUGUESE",423]="5.  Ataque WEP \"Tudo-em-Um\""
 	arr["RUSSIAN",423]="5.  Атака на WEP \"Все-в-Одном\""
 	arr["GREEK",423]="5.  Επίθεση WEP \"All-in-One\""
-	arr["ITALIAN",423]="${pending_of_translation} 5.  Attacco WEP \"Tutto-en-Uno\""
+	arr["ITALIAN",423]="5.  Attacco WEP \"Tutto-in-Uno\""
 
 	arr["ENGLISH",424]="The selected network is invalid. Encryption type of target network must be WEP"
 	arr["SPANISH",424]="La red seleccionada no es válida. El tipo de encriptación de la red objetivo debe ser WEP"
