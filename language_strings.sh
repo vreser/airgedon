@@ -1890,7 +1890,7 @@ function language_strings() {
 	arr["GREEK",162]="Συγχαρητήρια!!"
 	arr["ITALIAN",162]="Congratulazioni!!"
 
-	arr["ENGLISH",163]="When airgeddon requests you to enter a path to a file either to use a dictionary, a Handshake or anything else, did you know that you can drag and drop the file over the airgeddon window? in this way you don't have to type the path manually"
+	arr["ENGLISH",163]="When airgeddon requests you to enter a path to a file either to use a dictionary, a Handshake or anything else, did you know that you can drag and drop the file over the airgeddon window? In this way you don't have to type the path manually"
 	arr["SPANISH",163]="Cuando airgeddon solicita que introduzcas una ruta a un fichero ya sea para utilizar un diccionario, un Handshake o cualquier otra cosa, ¿sabías que puedes arrastrar y soltar el fichero sobre la ventana de airgeddon? así no tendrás que escribir la ruta manualmente"
 	arr["FRENCH",163]="${pending_of_translation} Lorsque airgeddon vous demande d'entrer un chemin d'accès vers un fichier soit pour utiliser un dictionnaire, une Handshake ou autre chose, saviez-vous que vous pouvez faire glisser le fichier sur la fenêtre airgeddon? donc vous n'avez pas à taper la route manuellement"
 	arr["CATALAN",163]="${pending_of_translation} Quan airgeddon sol·licita que introdueixis una ruta a un fitxer ja sigui per utilitzar un diccionari, un Handshake o qualsevol altra cosa, ¿sabies que pots arrossegar i deixar anar el fitxer sobre la finestra de airgeddon? així no hauràs d'escriure la ruta manualment"
