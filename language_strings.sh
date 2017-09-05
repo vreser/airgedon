@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170903
+#Date.........: 20170905
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -1890,14 +1890,14 @@ function language_strings() {
 	arr["GREEK",162]="Συγχαρητήρια!!"
 	arr["ITALIAN",162]="Congratulazioni!!"
 
-	arr["ENGLISH",163]="It is recommended to launch the script as root user or using \"sudo\". Make sure you have permission to launch commands like rfkill or airmon for example"
-	arr["SPANISH",163]="Se recomienda lanzar el script como usuario root o usando \"sudo\". Asegúrate de tener permisos para lanzar comandos como rfkill o airmon por ejemplo"
-	arr["FRENCH",163]="Il faut lancer le script en tant que root ou en utilisant \"sudo\". Assurez-vous de bien dsiposer des privilèges nécessaires à l’exécution de commandes comme rfkill ou airmon"
-	arr["CATALAN",163]="Es recomana llançar l'script com a usuari root o utilitzeu \"sudo\". Assegura't de tenir permisos per llançar ordres com rfkill o airmon per exemple"
-	arr["PORTUGUESE",163]="Recomenda-se iniciar o script como root ou usando \"sudo\". Certifique-se de que você tem permissão para iniciar comandos como por exemplo rfkill ou airmon"
-	arr["RUSSIAN",163]="Рекомендуется запускать скрипт от пользователя root или использовать \"sudo\". Убедитесь, что обладаете, к примеру, правами на запуск программ вроде rfkill или airmon"
-	arr["GREEK",163]="Συνιστάται να εκτελέσετε το script ως χρήστης root ή να χρησιμοποιήσετε \"sudo\". Βεβαιωθείτε πως έχετε δικαίωμα να εκτελέσετε εντολές όπως rfkill ή airmon για παράδειγμα"
-	arr["ITALIAN",163]="Si consiglia di avviare lo script come root o usando \"sudo\". Assicurati di avere i permessi di lanciare comandi come rfkill o airmon per esempio"
+	arr["ENGLISH",163]="When airgeddon requests you to enter a path to a file either to use a dictionary, a Handshake or anything else, did you know that you can drag and drop the file over the airgeddon window? in this way you don't have to type the path manually"
+	arr["SPANISH",163]="Cuando airgeddon solicita que introduzcas una ruta a un fichero ya sea para utilizar un diccionario, un Handshake o cualquier otra cosa, ¿sabías que puedes arrastrar y soltar el fichero sobre la ventana de airgeddon? así no tendrás que escribir la ruta manualmente"
+	arr["FRENCH",163]="${pending_of_translation} Lorsque airgeddon vous demande d'entrer un chemin d'accès vers un fichier soit pour utiliser un dictionnaire, une Handshake ou autre chose, saviez-vous que vous pouvez faire glisser le fichier sur la fenêtre airgeddon? donc vous n'avez pas à taper la route manuellement"
+	arr["CATALAN",163]="${pending_of_translation} Quan airgeddon sol·licita que introdueixis una ruta a un fitxer ja sigui per utilitzar un diccionari, un Handshake o qualsevol altra cosa, ¿sabies que pots arrossegar i deixar anar el fitxer sobre la finestra de airgeddon? així no hauràs d'escriure la ruta manualment"
+	arr["PORTUGUESE",163]="${pending_of_translation} Quando a airgeddon solicita que você insira um caminho para um arquivo para usar um dicionário, um Handshake ou qualquer outra coisa, você sabia que você pode arrastar e soltar o arquivo pela janela do airgeddon? então você não precisa digitar a rota manualmente"
+	arr["RUSSIAN",163]="${pending_of_translation} Когда airgeddon просит вас ввести путь к файлу, чтобы использовать словарь, рукопожатия или что-то еще, знаете ли вы, что вы можете перетаскивать файл над окном airgeddon? таким образом вам не нужно вводить путь вручную"
+	arr["GREEK",163]="${pending_of_translation} Όταν το airgeddon σας ζητήσει να εισαγάγετε μια διαδρομή σε ένα αρχείο είτε για να χρησιμοποιήσετε ένα λεξικό, ένα Handshake ή οτιδήποτε άλλο, γνωρίζατε ότι μπορείτε να μεταφέρετε και να αποθέσετε το αρχείο στο παράθυρο airgeddon; Με αυτόν τον τρόπο δεν χρειάζεται να πληκτρολογείτε τη διαδρομή με μη αυτόματο τρόπο"
+	arr["ITALIAN",163]="${pending_of_translation} Quando airgeddon chiede di immettere un percorso a un file per utilizzare un dizionario, un Handshake o qualsiasi altra cosa, sapevi che puoi trascinare e rilasciare il file sulla finestra airgeddon? in modo da non dover digitare manualmente il percorso"
 
 	arr["ENGLISH",164]="Cleaning temp files"
 	arr["SPANISH",164]="Limpiando archivos temporales"
