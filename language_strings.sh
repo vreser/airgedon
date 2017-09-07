@@ -1897,7 +1897,7 @@ function language_strings() {
 	arr["PORTUGUESE",163]="${pending_of_translation} Quando a airgeddon solicita que você insira um caminho para um arquivo para usar um dicionário, um Handshake ou qualquer outra coisa, você sabia que você pode arrastar e soltar o arquivo pela janela do airgeddon? Então você não precisa digitar a rota manualmente"
 	arr["RUSSIAN",163]="${pending_of_translation} Когда airgeddon просит вас ввести путь к файлу, чтобы использовать словарь, рукопожатия или что-то еще, знаете ли вы, что вы можете перетаскивать файл над окном airgeddon? Таким образом вам не нужно вводить путь вручную"
 	arr["GREEK",163]="Γνωρίζατε ότι μπορείτε να εισάγετε μονοπάτι για κάποιο αρχείο είτε για να χρησιμοποιήσετε λεξικό, αρχείο Χειραψίας ή οτιδήποτε άλλο, κάνοντας Drag & Drop το αρχείο αυτό στο παράθυρο του airgeddon; Με αυτόν τον τρόπο δεν χρειάζεται να πλεικτρολογείτε το μονοπάτι χειροκίνητα"
-	arr["ITALIAN",163]="${pending_of_translation} Quando airgeddon chiede di immettere un percorso a un file per utilizzare un dizionario, un Handshake o qualsiasi altra cosa, sapevi che puoi trascinare e rilasciare il file sulla finestra airgeddon? In modo da non dover digitare manualmente il percorso"
+	arr["ITALIAN",163]="Quando airgeddon chiede di introdurre il percorso di un file per utilizzare un dizionario, un Handshake o qualsiasi altra cosa, sapevi che puoi trascinare e rilasciare il file sulla finestra di airgeddon? Cosí non dovrai digitare manualmente il percorso"
 
 	arr["ENGLISH",164]="Cleaning temp files"
 	arr["SPANISH",164]="Limpiando archivos temporales"
