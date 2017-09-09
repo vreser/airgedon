@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170906
+#Date.........: 20170909
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -1894,7 +1894,7 @@ function language_strings() {
 	arr["SPANISH",163]="Cuando airgeddon solicita que introduzcas una ruta a un fichero ya sea para utilizar un diccionario, un Handshake o cualquier otra cosa, ¿sabías que puedes arrastrar y soltar el fichero sobre la ventana de airgeddon? Así no tendrás que escribir la ruta manualmente"
 	arr["FRENCH",163]="${pending_of_translation} Lorsque airgeddon vous demande d'entrer un chemin d'accès vers un fichier soit pour utiliser un dictionnaire, une Handshake ou autre chose, saviez-vous que vous pouvez faire glisser le fichier sur la fenêtre airgeddon? Donc vous n'avez pas à taper la route manuellement"
 	arr["CATALAN",163]="${pending_of_translation} Quan airgeddon sol·licita que introdueixis una ruta a un fitxer ja sigui per utilitzar un diccionari, un Handshake o qualsevol altra cosa, ¿sabies que pots arrossegar i deixar anar el fitxer sobre la finestra de airgeddon? Així no hauràs d'escriure la ruta manualment"
-	arr["PORTUGUESE",163]="Quando a airgeddon solicita que você insira o caminho de: um dicionário, um Handshake ou qualquer outra coisa, você sabia que pode arrastar o arquivo para janela do airgeddon? Assim você não precisa digitar o caminho manualmente"
+	arr["PORTUGUESE",163]="Quando a airgeddon solicita que você insira o caminho de um dicionário, um Handshake ou qualquer outra coisa, você sabia que pode arrastar o arquivo para janela do airgeddon? Assim você não precisa digitar o caminho manualmente"
 	arr["RUSSIAN",163]="${pending_of_translation} Когда airgeddon просит вас ввести путь к файлу, чтобы использовать словарь, рукопожатия или что-то еще, знаете ли вы, что вы можете перетаскивать файл над окном airgeddon? Таким образом вам не нужно вводить путь вручную"
 	arr["GREEK",163]="Γνωρίζατε ότι μπορείτε να εισάγετε μονοπάτι για κάποιο αρχείο είτε για να χρησιμοποιήσετε λεξικό, αρχείο Χειραψίας ή οτιδήποτε άλλο, κάνοντας Drag & Drop το αρχείο αυτό στο παράθυρο του airgeddon; Με αυτόν τον τρόπο δεν χρειάζεται να πλεικτρολογείτε το μονοπάτι χειροκίνητα"
 	arr["ITALIAN",163]="Quando airgeddon chiede di introdurre il percorso di un file per utilizzare un dizionario, un Handshake o qualsiasi altra cosa, sapevi che puoi trascinare e rilasciare il file sulla finestra di airgeddon? Cosí non dovrai digitare manualmente il percorso"
