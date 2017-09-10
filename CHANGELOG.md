@@ -1,6 +1,6 @@
 ### 7.21
  - Italian language translation added (Thank you to "salu90")
- - Tested compatibility with Parrot 3.7 and Fedora 26
+ - Tested compatibility with Parrot 3.7, Fedora 26 and Wifislax 64-1.1
  - Improved check for root permissions, now mandatory
  - Fixed bug for some menu inputs using special chars. Now sanitized
  - Code improvements, removed new shellcheck warnings
