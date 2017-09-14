@@ -1895,7 +1895,7 @@ function language_strings() {
 	arr["FRENCH",163]="Quand airgeddon demande d'entrer un chemin d'accès vers un fichier soit pour utiliser un dictionnaire, un Handshake ou autre chose, saviez-vous que vous pouvez faire glisser le fichier sur la fenêtre airgeddon? Donc vous n'avez pas à taper la route manuellement"
 	arr["CATALAN",163]="Quan airgeddon sol·licita que introdueixis una ruta a un fitxer ja sigui per utilitzar un diccionari, un Handshake o qualsevol altra cosa, ¿saps que pots arrossegar i deixar anar el fitxer sobre la finestra de airgeddon? Així no hauràs d'escriure la ruta manualment"
 	arr["PORTUGUESE",163]="Quando a airgeddon solicita que você insira o caminho de um dicionário, um Handshake ou qualquer outra coisa, você sabia que pode arrastar o arquivo para janela do airgeddon? Assim você não precisa digitar o caminho manualmente"
-	arr["RUSSIAN",163]="${pending_of_translation} Когда airgeddon просит вас ввести путь к файлу, чтобы использовать словарь, рукопожатия или что-то еще, знаете ли вы, что вы можете перетаскивать файл над окном airgeddon? Таким образом вам не нужно вводить путь вручную"
+	arr["RUSSIAN",163]="Когда airgeddon просит вас ввести путь до файла, будь то словарь, рукопожатие или что-то ещё, знаете ли вы, что можно захватить этот файл мышкой, перетащить и бросить этот файл прямо в окно airgeddon? Таким образом вам не придётся вводить путь до файла вручную"
 	arr["GREEK",163]="Γνωρίζατε ότι μπορείτε να εισάγετε μονοπάτι για κάποιο αρχείο είτε για να χρησιμοποιήσετε λεξικό, αρχείο Χειραψίας ή οτιδήποτε άλλο, κάνοντας Drag & Drop το αρχείο αυτό στο παράθυρο του airgeddon; Με αυτόν τον τρόπο δεν χρειάζεται να πλεικτρολογείτε το μονοπάτι χειροκίνητα"
 	arr["ITALIAN",163]="Quando airgeddon chiede di introdurre il percorso di un file per utilizzare un dizionario, un Handshake o qualsiasi altra cosa, sapevi che puoi trascinare e rilasciare il file sulla finestra di airgeddon? Cosí non dovrai digitare manualmente il percorso"
 
@@ -2435,7 +2435,7 @@ function language_strings() {
 	arr["FRENCH",223]="airgeddon a besoin de permissions root pour etre exécuter. Lancez the script en tant que root ou en utilisant \"sudo\""
 	arr["CATALAN",223]="airgeddon necessita permisos de root per funcionar. Llança l'script com a usuari root o utilitza \"sudo\""
 	arr["PORTUGUESE",223]="airgeddon necessita de permissões root para funcionar. Execute o script como root ou usando \"sudo\""
-	arr["RUSSIAN",223]="${pending_of_translation} airgeddon требует прав root для работы. Запустите скрипт как root пользователь или используйте \"sudo\""
+	arr["RUSSIAN",223]="airgeddon требует для работы прав root. Запустите скрипт как root пользователь или используйте \"sudo\""
 	arr["GREEK",223]="Το airgeddon χρειάζεται root δικαιώματα για να δουλέψει. Ανοίξτε το script ως χρήστης root ή χρησιμοποιήστε \"sudo\""
 	arr["ITALIAN",223]="airgeddon ha bisogno dei permessi di root per l'esecuzione. Lancia lo script come root o usando \"sudo\""
 
@@ -4766,7 +4766,7 @@ function language_strings() {
 	arr["FRENCH",482]="8.  Italien"
 	arr["CATALAN",482]="8.  Italià"
 	arr["PORTUGUESE",482]="8.  Italiano"
-	arr["RUSSIAN",482]="${pending_of_translation} 8.  Итальянский"
+	arr["RUSSIAN",482]="8.  Итальянский"
 	arr["GREEK",482]="8.  Ιταλικά"
 	arr["ITALIAN",482]="8.  Italiano"
 
@@ -4775,7 +4775,7 @@ function language_strings() {
 	arr["FRENCH",483]="Le script sera maintenant en Italien"
 	arr["CATALAN",483]="Idioma canviat a Italià"
 	arr["PORTUGUESE",483]="Idioma alterado para Italiano"
-	arr["RUSSIAN",483]="${pending_of_translation} Язык изменён на Итальянский"
+	arr["RUSSIAN",483]="Язык изменён на Итальянский"
 	arr["GREEK",483]="Η γλώσσα άλλαξε στα Ιταλικά"
 	arr["ITALIAN",483]="Lingua cambiata in Italiano"
 
@@ -4784,7 +4784,7 @@ function language_strings() {
 	arr["FRENCH",484]="Autorisation root detectés"
 	arr["CATALAN",484]="Permisos de root correctament detectats"
 	arr["PORTUGUESE",484]="Permissões de root detectadas correctamente"
-	arr["RUSSIAN",484]="${pending_of_translation} Root разрешения правильно обнаружено"
+	arr["RUSSIAN",484]="Успешно определены права root"
 	arr["GREEK",484]="Τα δικαιώματα root έχουν παραχωρηθεί επιτυχώς"
 	arr["ITALIAN",484]="I permessi di root sono stati rilevati correttamente"
 
