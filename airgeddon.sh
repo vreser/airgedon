@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170905
+#Date.........: 20170916
 #Version......: 7.21
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -11,10 +11,10 @@
 debug_mode=0
 
 #Enabled 1 / Disabled 0 - Auto update feature (it has no effect on debug mode) - Default value 1
-auto_update=0
+auto_update=1
 
 #Enabled 1 / Disabled 0 - Auto change language feature - Default value 1
-auto_change_language=0
+auto_change_language=1
 
 #Enabled 1 / Disabled 0 - Allow colorized output - Default value 1
 allow_colorization=1
