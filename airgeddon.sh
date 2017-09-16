@@ -11,10 +11,10 @@
 debug_mode=0
 
 #Enabled 1 / Disabled 0 - Auto update feature (it has no effect on debug mode) - Default value 1
-auto_update=1
+auto_update=0
 
 #Enabled 1 / Disabled 0 - Auto change language feature - Default value 1
-auto_change_language=1
+auto_change_language=0
 
 #Enabled 1 / Disabled 0 - Allow colorized output - Default value 1
 allow_colorization=1
