@@ -1,3 +1,6 @@
+### 7.22
+ - Script name changed from airgeddon.sh to airgeddon
+
 ### 7.21
  - Italian language translation added (Thank you to "salu90")
  - Tested compatibility with Parrot 3.7, Fedora 26 and Wifislax 64-1.1

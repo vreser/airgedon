@@ -108,7 +108,7 @@ COPY . /opt/airgeddon
 #RUN git clone -b ${BRANCH} ${AIRGEDDON_URL}
 
 #Remove auto update
-RUN sed -i 's|auto_update=1|auto_update=0|' airgeddon/airgeddon.sh
+RUN sed -i 's|auto_update=1|auto_update=0|' airgeddon/airgeddon
 
 #Make bash script files executable
 RUN chmod +x airgeddon/*.sh
@@ -141,4 +141,4 @@ RUN rm -rf /opt/airgeddon/imgs > /dev/null 2>&1 && \
 EXPOSE 3000
 
 #Start command (launching airgeddon)
-CMD ["/bin/bash", "-c", "/opt/airgeddon/airgeddon.sh"]
+CMD ["/bin/bash", "-c", "/opt/airgeddon/airgeddon"]
