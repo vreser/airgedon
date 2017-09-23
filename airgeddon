@@ -201,6 +201,7 @@ sslstrip_port="10000"
 bettercap_proxy_port="8080"
 bettercap_dns_port="5300"
 minimum_bettercap_advanced_options="1.5.9"
+minimum_bettercap_fixed_beef_iptables_issue="1.6.2"
 sslstrip_file="ag.sslstrip.log"
 ettercap_file="ag.ettercap.log"
 bettercap_file="ag.bettercap.log"
@@ -6226,6 +6227,12 @@ function set_beef_config() {
 		beef_db_path="${beef_db}"
 	fi
 
+	if compare_floats_greater_or_equal "${bettercap_version}" "${minimum_bettercap_fixed_beef_iptables_issue}"; then
+		beef_panel_restriction="        permitted_ui_subnet: \"127.0.0.1/32\""
+	else
+		beef_panel_restriction="        permitted_ui_subnet: \"0.0.0.0/0\""
+	fi
+
 	{
 	echo -e "beef:"
 	echo -e "    version: 'airgeddon integrated'"
@@ -6234,10 +6241,7 @@ function set_beef_config() {
 	echo -e "    crypto_default_value_length: 80"
 	echo -e "    restrictions:"
 	echo -e "        permitted_hooking_subnet: \"${et_ip_range}/24\""
-	echo -e "        permitted_ui_subnet: \"0.0.0.0/0\""
-	#TODO: This should be permitted_ui_subnet: "127.0.0.1/32" but is not possible to use it with bettercap's proxy because of a bug
-	#https://github.com/evilsocket/bettercap/issues/356
-	#https://github.com/beefproject/beef/issues/1337
+	echo -e "${beef_panel_restriction}"
 	echo -e "    http:"
 	echo -e "        debug: false"
 	echo -e "        host: \"0.0.0.0\""

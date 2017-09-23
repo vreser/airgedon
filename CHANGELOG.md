@@ -1,5 +1,6 @@
 ### 7.22
  - Script name changed from airgeddon.sh to airgeddon
+ - Fixes error caused by Bettercap. Bug: https://github.com/evilsocket/bettercap/issues/356
 
 ### 7.21
  - Italian language translation added (Thank you to "salu90")
