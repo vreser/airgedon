@@ -2,7 +2,7 @@
 #Title........: airgeddon
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170925
+#Date.........: 20170926
 #Version......: 7.22
 #Usage........: ./airgeddon
 #Bash Version.: 4.2 or later
@@ -879,6 +879,7 @@ function wash_json_scan() {
 
 	timeout -s SIGTERM 240 wash -i "${interface}" -j 2> /dev/null | tee "${tmpdir}wps_json_data.txt" > /dev/null 2>&1 &
 	wash_json_pid=$!
+	#TODO pending change this to get the right wash pid. Now is getting tee pid. This is causing broken pipe sometimes
 
 	while true; do
 		sleep 5
