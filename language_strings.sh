@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170918
+#Date.........: 20170925
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -4787,6 +4787,69 @@ function language_strings() {
 	arr["RUSSIAN",484]="Успешно определены права root"
 	arr["GREEK",484]="Τα δικαιώματα root έχουν παραχωρηθεί επιτυχώς"
 	arr["ITALIAN",484]="I permessi di root sono stati rilevati correttamente"
+
+	arr["ENGLISH",485]="${blue_color}Some PINs have been added calculated by algorithms, but you can still add one more (Arcadyan). Calculating it requires certain data and a background scan will have to be performed. The process may be very slow. ${green_color}Do you want to proceed with the calculation to add it? ${normal_color}${visual_choice}"
+	arr["SPANISH",485]="${blue_color}Se han añadido algunos PINs calculados por algoritmos, pero aún se puede añadir uno más (Arcadyan). Calcularlo requiere ciertos datos y habrá que realizar un escaneo en segundo plano. Es posible que el proceso sea muy lento. ${green_color}¿Quieres proceder con el cálculo para añadirlo? ${normal_color}${visual_choice}"
+	arr["FRENCH",485]="${pending_of_translation} ${blue_color}Certains codes PIN ont été ajoutés calculés par des algorithmes, mais vous pouvez encore ajouter un autre (Arcadyan). Le calcul nécessite certaines données et une analyse d'arrière-plan devra être effectuée. Le processus peut être très lent. ${green_color}Voulez-vous procéder au calcul pour l'ajouter? ${normal_color}${visual_choice}"
+	arr["CATALAN",485]="${pending_of_translation} ${blue_color}S'han afegit alguns PIN calculats per algoritmes, però encara es pot afegir un més (Arcadyan). Calcular-requereix certes dades i caldrà realitzar un escaneig en segon pla. És possible que el procés sigui molt lent. ${green_color}Vols procedir amb el càlcul per afegir-ho? ${normal_color}${visual_choice}"
+	arr["PORTUGUESE",485]="${pending_of_translation} ${blue_color}Alguns PINs foram adicionados calculados por algoritmos, mas você ainda pode adicionar um outro (Arcadyan). Calculá-lo requer certos dados e uma verificação em segundo plano terá que ser realizada. O processo pode ser muito lento. ${green_color}Deseja continuar com o cálculo para adicioná-lo? ${normal_color}${visual_choice}"
+	arr["RUSSIAN",485]="${pending_of_translation} ${blue_color}Некоторые PIN были добавлены, вычисленные алгоритмами, но вы можете добавить еще один (Arcadyan). Для его вычисления требуются определенные данные, и необходимо выполнить фоновое сканирование. Процесс может быть очень медленным. ${green_color}Вы хотите продолжить вычисление, чтобы добавить его? ${normal_color}${visual_choice}"
+	arr["GREEK",485]="${pending_of_translation} ${blue_color}Έχουν προστεθεί ορισμένοι κωδικοί PIN που υπολογίζονται με αλγόριθμους, αλλά μπορείτε να προσθέσετε ακόμα ένα (Arcadyan). Ο υπολογισμός του απαιτεί ορισμένα δεδομένα και θα πρέπει να πραγματοποιηθεί σάρωση υποβάθρου. Η διαδικασία μπορεί να είναι πολύ αργή. ${green_color}Θέλετε να συνεχίσετε με τον υπολογισμό για να το προσθέσετε; ${normal_color}${visual_choice}"
+	arr["ITALIAN",485]="${pending_of_translation} ${blue_color}Alcuni PIN sono stati aggiunti calcolati da algoritmi, ma è comunque possibile aggiungere ancora una (Arcadyan). Il calcolo richiede alcuni dati e deve essere eseguita una scansione di sfondo. Il processo può essere molto lento. ${green_color}Vuoi procedere con il calcolo per aggiungerlo? ${normal_color}${visual_choice}"
+
+	arr["ENGLISH",486]="It's not possible to generate PIN with Arcadyan algorithm. To be able to do it, update wash (included in reaver package) to a higher version including the necessary \"-j\" option"
+	arr["SPANISH",486]="No es posible generar el PIN con el algoritmo Arcadyan. Para poder hacerlo actualice wash (incluido en el paquete reaver) a una versión superior que tenga la necesaria opción \"-j\""
+	arr["FRENCH",486]="${pending_of_translation} Il n'est pas possible de générer le code PIN avec l'algorithme Arcadyan. Pour ce faire, mettez à jour le wash (inclus dans le paquet reaver) vers une version supérieure qui a l'option nécessaire \"-j\""
+	arr["CATALAN",486]="${pending_of_translation} No és possible fer el PIN amb l'algoritme Arcadyan. Per poder fer-ho actualitzi wash (inclòs en el paquet reaver) a una versió superior que tingui la necessària opció \"-j\""
+	arr["PORTUGUESE",486]="${pending_of_translation} Não é possível gerar o PIN com o algoritmo Arcadyan. Para isso, atualize a wash (incluída no pacote de reaver) para uma versão superior que tenha a opção necessária \"-j\""
+	arr["RUSSIAN",486]="${pending_of_translation} Невозможно создать PIN с алгоритмом Аркадия. Чтобы это сделать, обновите wash (включенную в пакет reaver) в более высокую версию, включая необходимую опцию \"-j\""
+	arr["GREEK",486]="${pending_of_translation} Δεν είναι δυνατό να δημιουργηθεί PIN με τον αλγόριθμο Arcadyan. Για να το κάνετε, ενημερώστε την wash (περιλαμβάνεται στο πακέτο του reaver) σε μια υψηλότερη έκδοση, συμπεριλαμβανομένης της απαραίτητης επιλογής \"-j\""
+	arr["ITALIAN",486]="${pending_of_translation} Non è possibile generare il PIN con l'algoritmo Arcadyan. Per effettuare questa operazione, aggiornare il wash (incluso nel pacchetto reaver) in una versione più alta che dispone dell'opzione necessaria \"-j\""
+
+	arr["ENGLISH",487]="PIN generated using Arcadyan algorithm (${normal_color}${arcadyan_pin}${yellow_color})"
+	arr["SPANISH",487]="Se ha generado el PIN con el algoritmo Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
+	arr["FRENCH",487]="${pending_of_translation} Le code PIN a été généré avec l'algorithme d'Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
+	arr["CATALAN",487]="${pending_of_translation} S'ha generat el PIN amb l'algoritme Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
+	arr["PORTUGUESE",487]="${pending_of_translation} O PIN foi gerado com o algoritmo Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
+	arr["RUSSIAN",487]="${pending_of_translation} PIN-код, созданный с использованием алгоритма Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
+	arr["GREEK",487]="${pending_of_translation} Το PIN δημιουργήθηκε με αλγόριθμο Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
+	arr["ITALIAN",487]="${pending_of_translation} Il PIN è stato generato con l'algoritmo Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
+
+	arr["ENGLISH",488]="PIN can't be generated usingh Arcadyan algorithm. Failed to collect a complete \"probe\" response from the access point. Probably because low quality signal"
+	arr["SPANISH",488]="No se ha podido generar el PIN con el algoritmo Arcadyan. No se ha podido recoger una respuesta \"probe\" completa del punto de acceso. Probablemente porque la señal no es buena"
+	arr["FRENCH",488]="${pending_of_translation} Impossible de générer du code PIN avec l'algorithme Arcadyan. Impossible de collecter une réponse complète de \"probe\" à partir du point d'accès. Probablement parce que le signal n'est pas bon"
+	arr["CATALAN",488]="${pending_of_translation} No s'ha pogut generar el PIN amb l'algoritme Arcadyan. No s'ha pogut recollir una resposta \"probe\" completa del punt d'accés. Probablement perquè el senyal no és bona"
+	arr["PORTUGUESE",488]="${pending_of_translation} Não foi possível gerar PIN com o algoritmo Arcadyan. Falha ao coletar uma resposta completa de \"probe\" do ponto de acesso. Provavelmente porque o sinal não é bom"
+	arr["RUSSIAN",488]="${pending_of_translation} PIN-код не может быть сгенерирован с использованием алгоритма Arcadyan. Не удалось получить полный ответ \"probe\" от точки доступа. Возможно, потому что сигнал низкого качества"
+	arr["GREEK",488]="${pending_of_translation} Το PIN δεν μπορεί να δημιουργηθεί χρησιμοποιώντας τον αλγόριθμο Arcadyan. Δεν ήταν δυνατή η συλλογή μιας πλήρους απόκρισης \"probe\" από το σημείο πρόσβασης. Πιθανώς επειδή σήμα χαμηλής ποιότητας"
+	arr["ITALIAN",488]="${pending_of_translation} Impossibile generare il PIN con l'algoritmo Arcadyan. Impossibile raccogliere una risposta \"probe\" completa dal punto di accesso. Probabilmente perché il segnale non è buono"
+
+	arr["ENGLISH",489]="Attempting to collect a complete \"probe\" response from the target access point. This process can take up to 4 minutes..."
+	arr["SPANISH",489]="Intentando recoger una respuesta \"probe\" completa del punto de acceso objetivo. Este proceso puede durar hasta 4 minutos..."
+	arr["FRENCH",489]="${pending_of_translation} En essayant de collecter une réponse complète de \"probe\" à partir du point d'accès cible. Ce processus peut prendre jusqu'à 4 minutes..."
+	arr["CATALAN",489]="${pending_of_translation} Intentant recollir una resposta \"probe\" completa del punt d'accés objectiu. Aquest procés pot durar fins a 4 minuts..."
+	arr["PORTUGUESE",489]="${pending_of_translation} Tentando coletar uma resposta completa de \"probe\" do ponto de acesso alvo. Este processo pode levar até 4 minutos..."
+	arr["RUSSIAN",489]="${pending_of_translation} Попытка собрать полный запрос \"probe\" от целевой точки доступа. Этот процесс может занять до 4 минут..."
+	arr["GREEK",489]="${pending_of_translation} Προσπάθεια συλλογής πλήρους \"probe\" από το σημείο προορισμού. Αυτή η διαδικασία μπορεί να διαρκέσει έως και 4 λεπτά..."
+	arr["ITALIAN",489]="${pending_of_translation} Tentativo di raccogliere una risposta \"probe\" completa dal punto di accesso di destinazione. Questo processo può richiedere fino a 4 minuti..."
+
+	arr["ENGLISH",490]="The Arcadyan algorithm needs a very specific data to calculate the PIN (the serial number of the access point). Getting this data can take a lot of time. You can optionally choose to try to generate it. This generated PIN is very useful in networks of type Orange-XXXX"
+	arr["SPANISH",490]="El algoritmo Arcadyan necesita un dato muy concreto para poder calcular el PIN (el número de serie del punto de acceso). Obtener este dato puede llevar bastante tiempo. Podrás elegir opcionalmente intentar generarlo. Este PIN generado es muy útil en redes del tipo Orange-XXXX"
+	arr["FRENCH",490]="${pending_of_translation} L'algorithme d'Arcadyan nécessite des données très spécifiques pour calculer le code PIN (le numéro de série du point d'accès). L'obtention de ces données peut prendre un certain temps. Vous pouvez éventuellement choisir d'essayer de le générer. Ce PIN généré est très utile dans les réseaux de type Orange-XXXX"
+	arr["CATALAN",490]="${pending_of_translation} L'algoritme Arcadyan necessita una dada molt concret per poder calcular el PIN (el número de sèrie del punt d'accés). Obtenir aquesta dada pot portar força temps. Podràs triar opcionalment intentar generar-lo. Aquest PIN generat és molt útil en xarxes del tipus Orange-XXXX"
+	arr["PORTUGUESE",490]="${pending_of_translation} O algoritmo Arcadyan precisa de dados muito específicos para calcular o PIN (o número de série do ponto de acesso). Obter esses dados pode levar bastante tempo. Você pode opcionalmente optar por tentar gerá-lo. Este PIN gerado é muito útil nas redes do tipo Orange-XXXX"
+	arr["RUSSIAN",490]="${pending_of_translation} Алгоритм Arcadyan требует очень специфических данных для расчета PIN-кода (серийный номер точки доступа). Получение этих данных может занять много времени. Вы можете при желании попытаться сгенерировать его. Этот сгенерированный PIN-код очень полезен в сетях типа Orange-XXXX"
+	arr["GREEK",490]="${pending_of_translation} Ο αλγόριθμος Arcadyan χρειάζεται πολύ συγκεκριμένα δεδομένα για τον υπολογισμό του PIN (ο σειριακός αριθμός του σημείου πρόσβασης). Η λήψη αυτών των δεδομένων μπορεί να χρειαστεί πολύ χρόνο. Μπορείτε να επιλέξετε να προσπαθήσετε να το δημιουργήσετε. Αυτό το PIN που δημιουργήθηκε είναι πολύ χρήσιμο σε δίκτυα τύπου Orange-XXXX"
+	arr["ITALIAN",490]="${pending_of_translation} L'algoritmo Arcadyan richiede dati molto specifici per calcolare il PIN (il numero di serie del punto di accesso). Ottenere questi dati può richiedere molto tempo. Puoi opzionalmente scegliere di provare a generarlo. Questo codice generato è molto utile nelle reti di tipo Orange-XXXX"
+
+	arr["ENGLISH",491]="Arcadyan algorithm is not useful for the selected target network, a valid value can't be calculated"
+	arr["SPANISH",491]="El algoritmo Arcadyan no sirve para la red objetivo seleccionada, no se puede calcular un valor válido"
+	arr["FRENCH",491]="${pending_of_translation} L'algorithme Arcadyan ne correspond pas au réseau cible sélectionné, une valeur valide ne peut pas être calculée"
+	arr["CATALAN",491]="${pending_of_translation} L'algoritme Arcadyan no serveix per a la xarxa objectiu seleccionada, no es pot calcular un valor vàlid"
+	arr["PORTUGUESE",491]="${pending_of_translation} O algoritmo Arcadyan não se encaixa na rede alvo selecionada, um valor válido não pode ser calculado"
+	arr["RUSSIAN",491]="${pending_of_translation} Алгоритм Arcadyan не полезен для выбранной целевой сети, действительное значение не может быть рассчитано"
+	arr["GREEK",491]="${pending_of_translation} Ο αλγόριθμος Arcadyan δεν είναι χρήσιμος για το επιλεγμένο δίκτυο-στόχο, μια έγκυρη τιμή δεν μπορεί να υπολογιστεί"
+	arr["ITALIAN",491]="${pending_of_translation} L'algoritmo Arcadyan non è adatto alla rete target selezionata, non è possibile calcolare un valore valido"
 
 	case "${3}" in
 		"yellow")

@@ -2,7 +2,7 @@
 #Title........: airgeddon
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170918
+#Date.........: 20170925
 #Version......: 7.22
 #Usage........: ./airgeddon
 #Bash Version.: 4.2 or later
@@ -281,7 +281,7 @@ declare option_hints=(445 250 448 477)
 declare evil_twin_hints=(254 258 264 269 309 328 400)
 declare evil_twin_dos_hints=(267 268)
 declare beef_hints=(408)
-declare wps_hints=(342 343 344 356 369 390)
+declare wps_hints=(342 343 344 356 369 390 490)
 declare wep_hints=(431 429 428 432 433)
 
 #Charset vars
@@ -860,7 +860,43 @@ function set_wps_mac_parameters() {
 	four_wpsbssid_last_digits_clean=${four_wpsbssid_last_digits//:}
 }
 
-#Calculate pin based on Zhao Chunsheng algorithm (computepin), step 1
+#Check if wash has json option
+function check_json_option_on_wash() {
+
+	debug_print
+
+	wash 2>&1 | grep "\-j" > /dev/null
+	return $?
+}
+
+#Perform wash scan using -j (json) option to gather needed data
+function wash_json_scan() {
+
+	debug_print
+
+	tmpfiles_toclean=1
+	rm -rf "${tmpdir}wps_json_data.txt" > /dev/null 2>&1
+
+	timeout -s SIGTERM 240 wash -i "${interface}" -j 2> /dev/null | tee "${tmpdir}wps_json_data.txt" > /dev/null 2>&1 &
+	wash_json_pid=$!
+
+	while true; do
+		sleep 5
+		wash_json_capture_alive=$(ps uax | awk '{print $2}' | grep -E "^${wash_json_pid}$" 2> /dev/null)
+		if [ -z "${wash_json_capture_alive}" ]; then
+			break
+		fi
+
+		if grep "${1}" "${tmpdir}wps_json_data.txt" > /dev/null; then
+			serial=$(grep "${1}" "${tmpdir}wps_json_data.txt" | awk -F '"wps_serial" : "' '{print $2}' | awk -F '"' '{print $1}' | sed 's/.*\(....\)/\1/' 2> /dev/null)
+			break
+		fi
+	done
+
+	kill "$wash_json_capture_alive" &> /dev/null
+}
+
+#Calculate pin based on Zhao Chunsheng algorithm (ComputePIN), step 1
 function calculate_computepin_algorithm_step1() {
 
 	debug_print
@@ -869,7 +905,7 @@ function calculate_computepin_algorithm_step1() {
 	computepin_pin=$((hex_to_dec % 10000000))
 }
 
-#Calculate pin based on Zhao Chunsheng algorithm (computepin), step 2
+#Calculate pin based on Zhao Chunsheng algorithm (ComputePIN), step 2
 function calculate_computepin_algorithm_step2() {
 
 	debug_print
@@ -877,7 +913,7 @@ function calculate_computepin_algorithm_step2() {
 	computepin_pin=$(printf '%08d\n' $((10#${computepin_pin} * 10 + checksum_digit)))
 }
 
-#Calculate pin based on Stefan Viehböck algorithm (easybox)
+#Calculate pin based on Stefan Viehböck algorithm (EasyBox)
 function calculate_easybox_algorithm() {
 
 	debug_print
@@ -899,6 +935,32 @@ function calculate_easybox_algorithm() {
 	Z2=$((0x${hexi[3]} ^ hex_to_dec[2]))
 
 	easybox_pin=$(printf '%08d\n' "$((0x$X1$X2$Y1$Y2$Z1$Z2$X3))" | awk '{for(i=length; i!=0; i--) x=x substr($0, i, 1);} END {print x}' | cut -c -7 | awk '{for(i=length; i!=0; i--) x=x substr($0, i, 1);} END {print x}')
+}
+
+#Calculate pin based on Arcadyan algorithm
+function calculate_arcadyan_algorithm() {
+
+	debug_print
+
+	if [ "${four_wpsbssid_last_digits_clean}" = "0000" ]; then
+		wan="fffe"
+	elif [ "${four_wpsbssid_last_digits_clean}" = "0001" ]; then
+		wan="ffff"
+	else
+		wan=$(printf "%04x" $((0x${four_wpsbssid_last_digits_clean} - 2)))
+	fi
+
+	K1=$(printf "%X\n" $(($((0x${serial:0:1} + 0x${serial:1:1} + 0x${wan:2:1} + 0x${wan:3:1})) % 16)))
+	K2=$(printf "%X\n" $(($((0x${serial:2:1} + 0x${serial:3:1} + 0x${wan:0:1} + 0x${wan:1:1})) % 16)))
+	D1=$(printf "%X\n" $((0x$K1 ^ 0x${serial:3:1})))
+	D2=$(printf "%X\n" $((0x$K1 ^ 0x${serial:2:1})))
+	D3=$(printf "%X\n" $((0x$K2 ^ 0x${wan:1:1})))
+	D4=$(printf "%X\n" $((0x$K2 ^ 0x${wan:2:1})))
+	D5=$(printf "%X\n" $((0x${serial:3:1} ^ 0x${wan:2:1})))
+	D6=$(printf "%X\n" $((0x${serial:2:1} ^ 0x${wan:3:1})))
+	D7=$(printf "%X\n" $((0x$K1 ^ 0x${serial:1:1})))
+
+	arcadyan_pin=$(printf '%07d\n' $(($(printf '%d\n' "0x$D1$D2$D3$D4$D5$D6$D7") % 10000000)))
 }
 
 #Calculate the last digit on pin following the checksum rule
@@ -941,8 +1003,40 @@ function check_and_set_common_algorithms() {
 	easybox_pin=$(printf '%08d\n' $((current_calculated_pin + checksum_digit)))
 	calculated_pins+=("${easybox_pin}")
 
-	if integrate_algorithms_pins; then
+	if check_json_option_on_wash; then
+		ask_yesno 485 "no"
+		if [ "${yesno}" = "y" ]; then
+			echo
+			language_strings "${language}" 489 "blue"
+
+			serial=""
+			wash_json_scan "${wps_bssid}"
+
+			if [ -n "${serial}" ]; then
+				if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
+					calculate_arcadyan_algorithm
+					pin_checksum_rule "${arcadyan_pin}"
+					arcadyan_pin="${arcadyan_pin}${checksum_digit}"
+					calculated_pins+=("${arcadyan_pin}")
+					echo
+					language_strings "${language}" 487 "yellow"
+				else
+					echo
+					language_strings "${language}" 491 "yellow"
+				fi
+				echo
+			else
+				echo
+				language_strings "${language}" 488 "yellow"
+				echo
+			fi
+		fi
+	else
 		echo
+		language_strings "${language}" 486 "yellow"
+	fi
+
+	if integrate_algorithms_pins; then
 		language_strings "${language}" 389 "yellow"
 	fi
 }
@@ -972,6 +1066,7 @@ function integrate_algorithms_pins() {
 	if [ "${some_calculated_pin_included}" -eq 1 ]; then
 		return 0
 	fi
+
 	return 1
 }
 
