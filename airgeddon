@@ -876,10 +876,13 @@ function wash_json_scan() {
 
 	tmpfiles_toclean=1
 	rm -rf "${tmpdir}wps_json_data.txt" > /dev/null 2>&1
+	rm -rf "${tmpdir}wps_fifo" > /dev/null 2>&1
 
-	timeout -s SIGTERM 240 wash -i "${interface}" -j 2> /dev/null | tee "${tmpdir}wps_json_data.txt" > /dev/null 2>&1 &
+	mkfifo "${tmpdir}wps_fifo"
+	timeout -s SIGTERM 240 wash -i "${interface}" -j 2> /dev/null > "${tmpdir}wps_fifo" &
 	wash_json_pid=$!
-	#TODO pending change this to get the right wash pid. Now is getting tee pid. This is causing broken pipe sometimes
+	#TODO pending remove shellcheck warning
+	cat "${tmpdir}wps_fifo" | tee "${tmpdir}wps_json_data.txt" > /dev/null 2>&1 &
 
 	while true; do
 		sleep 5
@@ -890,11 +893,11 @@ function wash_json_scan() {
 
 		if grep "${1}" "${tmpdir}wps_json_data.txt" > /dev/null; then
 			serial=$(grep "${1}" "${tmpdir}wps_json_data.txt" | awk -F '"wps_serial" : "' '{print $2}' | awk -F '"' '{print $1}' | sed 's/.*\(....\)/\1/' 2> /dev/null)
+			kill "${wash_json_capture_alive}" &> /dev/null
+			wait "${wash_json_capture_alive}" 2>/dev/null
 			break
 		fi
 	done
-
-	kill "$wash_json_capture_alive" &> /dev/null
 }
 
 #Calculate pin based on Zhao Chunsheng algorithm (ComputePIN), step 1
