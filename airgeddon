@@ -2,7 +2,7 @@
 #Title........: airgeddon
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170926
+#Date.........: 20170927
 #Version......: 7.22
 #Usage........: ./airgeddon
 #Bash Version.: 4.2 or later
@@ -881,8 +881,7 @@ function wash_json_scan() {
 	mkfifo "${tmpdir}wps_fifo"
 	timeout -s SIGTERM 240 wash -i "${interface}" -j 2> /dev/null > "${tmpdir}wps_fifo" &
 	wash_json_pid=$!
-	#TODO pending remove shellcheck warning
-	cat "${tmpdir}wps_fifo" | tee "${tmpdir}wps_json_data.txt" > /dev/null 2>&1 &
+	tee "${tmpdir}wps_json_data.txt"< <(cat < "${tmpdir}wps_fifo") > /dev/null 2>&1 &
 
 	while true; do
 		sleep 5
