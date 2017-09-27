@@ -4851,6 +4851,15 @@ function language_strings() {
 	arr["GREEK",491]="${pending_of_translation} Ο αλγόριθμος Arcadyan δεν είναι χρήσιμος για το επιλεγμένο δίκτυο-στόχο, μια έγκυρη τιμή δεν μπορεί να υπολογιστεί"
 	arr["ITALIAN",491]="${pending_of_translation} L'algoritmo Arcadyan non è adatto alla rete target selezionata, non è possibile calcolare un valore valido"
 
+	arr["ENGLISH",492]="The Arcadyan algorithm can't be calculated. Although you chose bully option for the attack, to calculate that PIN you need to use wash (included in reaver package) and you don't have it installed. The script will continue the attack without including it"
+	arr["SPANISH",492]="El algoritmo Arcadyan no puede ser calculado. Aunque elegiste la opción de ataque con bully, para calcular ese PIN se necesita utilizar wash (incluido en el paquete reaver) y tú no lo tienes instalado. El script continuará el ataque sin incluirlo"
+	arr["FRENCH",492]="${pending_of_translation} L'algorithme d'Arcadyan ne peut pas être calculé. Bien que vous ayez choisi l'option d'attaque bully, pour calculer ce PIN, vous devez utiliser wash (inclus dans le paquet reaver) et vous ne l'avez pas installé. Le script continuera l'attaque sans l'inclure"
+	arr["CATALAN",492]="${pending_of_translation} L'algorisme Arcadyan no pot ser calculat. Encara vas triar l'opció d'atac amb bully, per calcular aquest PIN es necessita utilitzar wash (inclòs en el paquet reaver) i tu no el tens instal·lat. El script continuarà l'atac sense incloure"
+	arr["PORTUGUESE",492]="${pending_of_translation} O algoritmo Arcadyan não pode ser calculado. Embora você tenha escolhido a opção de ataque com bully, para calcular esse PIN, você precisa usar wash (incluída no pacote de reaver) e você não instalou. O script continuará o ataque sem incluí-lo"
+	arr["RUSSIAN",492]="${pending_of_translation} Алгоритм Arcadyan не может быть рассчитан. Хотя вы выбрали опцию bully для атаки, для расчета этого PIN-кода вам необходимо использовать wash (включенную в пакет reaver), и вы ее не установили. Скрипт продолжит атаку, не включив ее"
+	arr["GREEK",492]="${pending_of_translation} Ο αλγόριθμος Arcadyan δεν μπορεί να υπολογιστεί. Παρόλο που επιλέξατε την επιλογή bully για την επίθεση, για να υπολογίσετε το PIN που χρειάζεστε για να χρησιμοποιήσετε το wash (περιλαμβάνεται στο πακέτο του reaver) και δεν το έχετε εγκαταστήσει. Το σενάριο θα συνεχίσει την επίθεση χωρίς να το συμπεριλάβει"
+	arr["ITALIAN",492]="${pending_of_translation} L'algoritmo Arcadyan non può essere calcolato. Anche se hai scelto l'opzione di attacco con il bully, per calcolare quel PIN che devi usare il lavaggio (incluso nel pacchetto reaver) e non l'hai installato. Lo script continuerà l'attacco senza includerlo"
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"

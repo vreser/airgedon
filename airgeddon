@@ -1006,37 +1006,52 @@ function check_and_set_common_algorithms() {
 	easybox_pin=$(printf '%08d\n' $((current_calculated_pin + checksum_digit)))
 	calculated_pins+=("${easybox_pin}")
 
-	if check_json_option_on_wash; then
-		ask_yesno 485 "no"
-		if [ "${yesno}" = "y" ]; then
+	able_to_check_json_option_on_wash=0
+	if [ "${wps_attack}" = "pindb_bully" ]; then
+		if hash wash 2> /dev/null; then
+			able_to_check_json_option_on_wash=1
+		else
 			echo
-			language_strings "${language}" 489 "blue"
+			language_strings "${language}" 492 "yellow"
+			echo
+		fi
+	elif [ "${wps_attack}" = "pindb_reaver" ]; then
+		able_to_check_json_option_on_wash=1
+	fi
 
-			serial=""
-			wash_json_scan "${wps_bssid}"
+	if [ "${able_to_check_json_option_on_wash}" -eq 1 ]; then
+		if check_json_option_on_wash; then
+			ask_yesno 485 "no"
+			if [ "${yesno}" = "y" ]; then
+				echo
+				language_strings "${language}" 489 "blue"
 
-			if [ -n "${serial}" ]; then
-				if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
-					calculate_arcadyan_algorithm
-					pin_checksum_rule "${arcadyan_pin}"
-					arcadyan_pin="${arcadyan_pin}${checksum_digit}"
-					calculated_pins+=("${arcadyan_pin}")
+				serial=""
+				wash_json_scan "${wps_bssid}"
+
+				if [ -n "${serial}" ]; then
+					if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
+						calculate_arcadyan_algorithm
+						pin_checksum_rule "${arcadyan_pin}"
+						arcadyan_pin="${arcadyan_pin}${checksum_digit}"
+						calculated_pins+=("${arcadyan_pin}")
+						echo
+						language_strings "${language}" 487 "yellow"
+					else
+						echo
+						language_strings "${language}" 491 "yellow"
+					fi
 					echo
-					language_strings "${language}" 487 "yellow"
 				else
 					echo
-					language_strings "${language}" 491 "yellow"
+					language_strings "${language}" 488 "yellow"
+					echo
 				fi
-				echo
-			else
-				echo
-				language_strings "${language}" 488 "yellow"
-				echo
 			fi
+		else
+			echo
+			language_strings "${language}" 486 "yellow"
 		fi
-	else
-		echo
-		language_strings "${language}" 486 "yellow"
 	fi
 
 	if integrate_algorithms_pins; then
