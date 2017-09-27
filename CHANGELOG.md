@@ -2,7 +2,7 @@
  - Script name changed from airgeddon.sh to airgeddon
  - Fixed error caused by Bettercap. Bug: https://github.com/evilsocket/bettercap/issues/356
  - Arcadyan WPS PIN generation algorithm integrated
- - Tested compatibility with Kali 2017.2
+ - Tested compatibility with Kali 2017.2 and Parrot 3.8
 
 ### 7.21
  - Italian language translation added (Thank you to "salu90")
