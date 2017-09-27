@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170925
+#Date.........: 20170927
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -4797,14 +4797,14 @@ function language_strings() {
 	arr["GREEK",485]="${pending_of_translation} ${blue_color}Έχουν προστεθεί ορισμένοι κωδικοί PIN που υπολογίζονται με αλγόριθμους, αλλά μπορείτε να προσθέσετε ακόμα ένα (Arcadyan). Ο υπολογισμός του απαιτεί ορισμένα δεδομένα και θα πρέπει να πραγματοποιηθεί σάρωση υποβάθρου. Η διαδικασία μπορεί να είναι πολύ αργή. ${green_color}Θέλετε να συνεχίσετε με τον υπολογισμό για να το προσθέσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",485]="${pending_of_translation} ${blue_color}Alcuni PIN sono stati aggiunti calcolati da algoritmi, ma è comunque possibile aggiungere ancora una (Arcadyan). Il calcolo richiede alcuni dati e deve essere eseguita una scansione di sfondo. Il processo può essere molto lento. ${green_color}Vuoi procedere con il calcolo per aggiungerlo? ${normal_color}${visual_choice}"
 
-	arr["ENGLISH",486]="It's not possible to generate PIN with Arcadyan algorithm. To be able to do it, update wash (included in reaver package) to a higher version including the necessary \"-j\" option"
-	arr["SPANISH",486]="No es posible generar el PIN con el algoritmo Arcadyan. Para poder hacerlo actualice wash (incluido en el paquete reaver) a una versión superior que tenga la necesaria opción \"-j\""
-	arr["FRENCH",486]="${pending_of_translation} Il n'est pas possible de générer le code PIN avec l'algorithme Arcadyan. Pour ce faire, mettez à jour le wash (inclus dans le paquet reaver) vers une version supérieure qui a l'option nécessaire \"-j\""
-	arr["CATALAN",486]="${pending_of_translation} No és possible fer el PIN amb l'algoritme Arcadyan. Per poder fer-ho actualitzi wash (inclòs en el paquet reaver) a una versió superior que tingui la necessària opció \"-j\""
-	arr["PORTUGUESE",486]="${pending_of_translation} Não é possível gerar o PIN com o algoritmo Arcadyan. Para isso, atualize a wash (incluída no pacote de reaver) para uma versão superior que tenha a opção necessária \"-j\""
-	arr["RUSSIAN",486]="${pending_of_translation} Невозможно создать PIN с алгоритмом Аркадия. Чтобы это сделать, обновите wash (включенную в пакет reaver) в более высокую версию, включая необходимую опцию \"-j\""
-	arr["GREEK",486]="${pending_of_translation} Δεν είναι δυνατό να δημιουργηθεί PIN με τον αλγόριθμο Arcadyan. Για να το κάνετε, ενημερώστε την wash (περιλαμβάνεται στο πακέτο του reaver) σε μια υψηλότερη έκδοση, συμπεριλαμβανομένης της απαραίτητης επιλογής \"-j\""
-	arr["ITALIAN",486]="${pending_of_translation} Non è possibile generare il PIN con l'algoritmo Arcadyan. Per effettuare questa operazione, aggiornare il wash (incluso nel pacchetto reaver) in una versione più alta che dispone dell'opzione necessaria \"-j\""
+	arr["ENGLISH",486]="It's not possible to generate PIN with Arcadyan algorithm. To be able to do it, update wash (included in reaver package) to a higher version including the necessary \"-j\" option (1.6.2)"
+	arr["SPANISH",486]="No es posible generar el PIN con el algoritmo Arcadyan. Para poder hacerlo actualice wash (incluido en el paquete reaver) a una versión superior que tenga la necesaria opción \"-j\" (1.6.2)"
+	arr["FRENCH",486]="${pending_of_translation} Il n'est pas possible de générer le code PIN avec l'algorithme Arcadyan. Pour ce faire, mettez à jour le wash (inclus dans le paquet reaver) vers une version supérieure qui a l'option nécessaire \"-j\" (1.6.2)"
+	arr["CATALAN",486]="${pending_of_translation} No és possible fer el PIN amb l'algoritme Arcadyan. Per poder fer-ho actualitzi wash (inclòs en el paquet reaver) a una versió superior que tingui la necessària opció \"-j\" (1.6.2)"
+	arr["PORTUGUESE",486]="${pending_of_translation} Não é possível gerar o PIN com o algoritmo Arcadyan. Para isso, atualize a wash (incluída no pacote de reaver) para uma versão superior que tenha a opção necessária \"-j\" (1.6.2)"
+	arr["RUSSIAN",486]="${pending_of_translation} Невозможно создать PIN с алгоритмом Аркадия. Чтобы это сделать, обновите wash (включенную в пакет reaver) в более высокую версию, включая необходимую опцию \"-j\" (1.6.2)"
+	arr["GREEK",486]="${pending_of_translation} Δεν είναι δυνατό να δημιουργηθεί PIN με τον αλγόριθμο Arcadyan. Για να το κάνετε, ενημερώστε την wash (περιλαμβάνεται στο πακέτο του reaver) σε μια υψηλότερη έκδοση, συμπεριλαμβανομένης της απαραίτητης επιλογής \"-j\" (1.6.2)"
+	arr["ITALIAN",486]="${pending_of_translation} Non è possibile generare il PIN con l'algoritmo Arcadyan. Per effettuare questa operazione, aggiornare il wash (incluso nel pacchetto reaver) in una versione più alta che dispone dell'opzione necessaria \"-j\" (1.6.2)"
 
 	arr["ENGLISH",487]="PIN generated using Arcadyan algorithm (${normal_color}${arcadyan_pin}${yellow_color})"
 	arr["SPANISH",487]="Se ha generado el PIN con el algoritmo Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
