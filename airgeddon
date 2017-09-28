@@ -2,7 +2,7 @@
 #Title........: airgeddon
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170927
+#Date.........: 20170928
 #Version......: 7.22
 #Usage........: ./airgeddon
 #Bash Version.: 4.2 or later
@@ -1034,7 +1034,7 @@ function check_and_set_common_algorithms() {
 						calculate_arcadyan_algorithm
 						pin_checksum_rule "${arcadyan_pin}"
 						arcadyan_pin="${arcadyan_pin}${checksum_digit}"
-						calculated_pins+=("${arcadyan_pin}")
+						calculated_pins=("${arcadyan_pin}" "${calculated_pins[@]}")
 						echo
 						language_strings "${language}" 487 "yellow"
 					else
@@ -1075,7 +1075,7 @@ function integrate_algorithms_pins() {
 		done
 
 		if [ ${this_pin_already_included} -eq 0 ]; then
-			pins_found+=(${pin})
+			pins_found=("${pin}" "${pins_found[@]}")
 			counter_pins_found=$((counter_pins_found + 1))
 			some_calculated_pin_included=1
 		fi
