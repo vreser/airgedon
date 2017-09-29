@@ -2,7 +2,7 @@
 #Title........: airgeddon
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170928
+#Date.........: 20170929
 #Version......: 7.22
 #Usage........: ./airgeddon
 #Bash Version.: 4.2 or later
@@ -1065,17 +1065,17 @@ function integrate_algorithms_pins() {
 	debug_print
 
 	some_calculated_pin_included=0
-	for pin in "${calculated_pins[@]}"; do
+	for ((idx=${#calculated_pins[@]}-1; idx>=0; idx--)) ; do
 		this_pin_already_included=0
 		for item in "${pins_found[@]}"; do
-			if [ "${item}" = "${pin}" ]; then
+			if [ "${item}" = "${calculated_pins[idx]}" ]; then
 				this_pin_already_included=1
 				break
 			fi
 		done
 
 		if [ ${this_pin_already_included} -eq 0 ]; then
-			pins_found=("${pin}" "${pins_found[@]}")
+			pins_found=("${calculated_pins[idx]}" "${pins_found[@]}")
 			counter_pins_found=$((counter_pins_found + 1))
 			some_calculated_pin_included=1
 		fi
