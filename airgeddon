@@ -2,7 +2,7 @@
 #Title........: airgeddon
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170929
+#Date.........: 20170930
 #Version......: 7.22
 #Usage........: ./airgeddon
 #Bash Version.: 4.2 or later
@@ -5447,7 +5447,7 @@ function set_wps_attack_script() {
 				attack_cmd1="bully \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} -d -v ${bully_verbosity}"
 			;;
 			"bruteforce")
-				attack_cmd1="bully \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} -L -F -B -v ${bully_verbosity}"
+				attack_cmd1="bully \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} -S -L -F -B -v ${bully_verbosity}"
 			;;
 		esac
 	fi

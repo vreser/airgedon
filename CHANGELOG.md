@@ -3,6 +3,7 @@
  - Fixed error caused by Bettercap. Bug: https://github.com/evilsocket/bettercap/issues/356
  - Arcadyan WPS PIN generation algorithm integrated
  - Tested compatibility with Kali 2017.2 and Parrot 3.8
+ - WPS Bully bruteforce attack modified to use --sequential (-S) argument
 
 ### 7.21
  - Italian language translation added (Thank you to "salu90")
