@@ -4113,8 +4113,8 @@ function offline_pin_generation_menu() {
 						language_strings "${language}" 499 "blue"
 						echo "${wps_data_array["${wps_bssid}",'Database']}"
 						echo
-						language_strings "${language}" 115 "read"
 					fi
+					language_strings "${language}" 115 "read"
 				fi
 			fi
 		;;
