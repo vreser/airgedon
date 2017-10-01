@@ -4923,6 +4923,15 @@ function language_strings() {
 	arr["GREEK",499]="${pending_of_translation} Εμφάνιση αντιστοιχιών στη βάση δεδομένων PIN..."
 	arr["ITALIAN",499]="${pending_of_translation} Visualizzazione delle corrispondenze del database PIN..."
 
+	arr["ENGLISH",500]="Showing PIN calculated using ComputePIN algorithm..."
+	arr["SPANISH",500]="Mostrando PIN calculado con el algoritmo ComputePIN..."
+	arr["FRENCH",500]="${pending_of_translation} Affichage du code PIN calculé à l'aide de l'algorithme ComputePIN..."
+	arr["CATALAN",500]="${pending_of_translation} Ara es mostren PIN calculat amb l'algoritme ComputePIN..."
+	arr["PORTUGUESE",500]="${pending_of_translation} Mostrando PIN calculado usando o algoritmo ComputePIN..."
+	arr["RUSSIAN",500]="${pending_of_translation} Отображение PIN-кода, рассчитанного с использованием алгоритма ComputePIN..."
+	arr["GREEK",500]="${pending_of_translation} Εμφανίζεται το PIN που υπολογίζεται χρησιμοποιώντας τον αλγόριθμο ComputePIN..."
+	arr["ITALIAN",500]="${pending_of_translation} Visualizzazione del PIN calcolato utilizzando l'algoritmo ComputePIN..."
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"

@@ -4063,7 +4063,7 @@ function offline_pin_generation_menu() {
 	language_strings "${language}" 49 wash_scan_dependencies[@]
 	language_strings "${language}" 498 "separator"
 	language_strings "${language}" 496
-	echo -e "${red_color_slim}6.  ComputePIN (${under_constructionvar})${normal_color}"
+	echo "6.  ComputePIN"
 	echo -e "${red_color_slim}7.  EasyBox (${under_constructionvar})${normal_color}"
 	echo -e "${red_color_slim}8.  Arcadyan (${under_constructionvar})${normal_color}"
 	print_simple_separator
@@ -4119,7 +4119,21 @@ function offline_pin_generation_menu() {
 			fi
 		;;
 		6)
-			under_construction_message
+			if wps_attacks_parameters "no_monitor_check"; then
+				if ! check_if_type_exists_in_wps_data_array "${wps_bssid}" "ComputePIN"; then
+					set_wps_mac_parameters
+					calculate_computepin_algorithm_step1
+					pin_checksum_rule "${computepin_pin}"
+					calculate_computepin_algorithm_step2
+					fill_wps_data_array "${wps_bssid}" "ComputePIN" "${computepin_pin}"
+				fi
+
+				echo
+				language_strings "${language}" 500 "blue"
+				echo "${wps_data_array["${wps_bssid}",'ComputePIN']}"
+				echo
+				language_strings "${language}" 115 "read"
+			fi
 		;;
 		7)
 			under_construction_message
