@@ -4,6 +4,7 @@
  - Arcadyan WPS PIN generation algorithm integrated
  - Tested compatibility with Kali 2017.2 and Parrot 3.8
  - WPS Bully bruteforce attack modified to use --sequential (-S) argument
+ - Added WPS offline PIN generation menu option
 
 ### 7.21
  - Italian language translation added (Thank you to "salu90")
