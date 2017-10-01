@@ -3846,6 +3846,8 @@ function wps_attacks_menu() {
 	language_strings "${language}" 348 bully_attacks_dependencies[@]
 	language_strings "${language}" 360 reaver_attacks_dependencies[@]
 	print_simple_separator
+	language_strings "${language}" 494 "under_construction"
+	print_simple_separator
 	language_strings "${language}" 361
 	print_hint ${current_menu}
 
@@ -4014,6 +4016,10 @@ function wps_attacks_menu() {
 			fi
 		;;
 		13)
+			#TODO pending
+			under_construction_message
+		;;
+		14)
 			return
 		;;
 		*)

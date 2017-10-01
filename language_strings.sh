@@ -3672,14 +3672,14 @@ function language_strings() {
 	arr["GREEK",360]="12. (reaver) Επίθεση με χρήση βάσης δεδομένων γνωστών PIN"
 	arr["ITALIAN",360]="12. (reaver) Attacco che utilizza una base dati di PINs conosciuti"
 
-	arr["ENGLISH",361]="13.  Return to main menu"
-	arr["SPANISH",361]="13.  Volver al menú principal"
-	arr["FRENCH",361]="13.  Retourner au menu principal"
-	arr["CATALAN",361]="13.  Tornar al menú principal"
-	arr["PORTUGUESE",361]="13.  Voltar ao menu principal"
-	arr["RUSSIAN",361]="13.  Возврат в главное меню"
-	arr["GREEK",361]="13.  Επιστροφή στο αρχικό μενού"
-	arr["ITALIAN",361]="13. Tornare al menú principale"
+	arr["ENGLISH",361]="14.  Return to main menu"
+	arr["SPANISH",361]="14.  Volver al menú principal"
+	arr["FRENCH",361]="14.  Retourner au menu principal"
+	arr["CATALAN",361]="14.  Tornar al menú principal"
+	arr["PORTUGUESE",361]="14.  Voltar ao menu principal"
+	arr["RUSSIAN",361]="14.  Возврат в главное меню"
+	arr["GREEK",361]="14.  Επιστροφή στο αρχικό μενού"
+	arr["ITALIAN",361]="14. Tornare al menú principale"
 
 	arr["ENGLISH",362]="Custom PIN set to ${normal_color}${custom_pin}"
 	arr["SPANISH",362]="PIN personalizado elegido ${normal_color}${custom_pin}"
@@ -4868,6 +4868,15 @@ function language_strings() {
 	arr["RUSSIAN",493]="${pending_of_translation} Алгоритм алгоритма Arcadyan PIN уже рассчитан для этой цели (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Нет необходимости вычислять его снова"
 	arr["GREEK",493]="${pending_of_translation} Ο αλγόριθμος Arcadyan PIN έχει ήδη υπολογιστεί για αυτόν το στόχο (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Δεν χρειάζεται να το υπολογίζουμε ξανά"
 	arr["ITALIAN",493]="${pending_of_translation} Il PIN di Arcadyan algoritmo era già stato calcolato a tal obiettivo (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Non c'è bisogno di calcolarlo di nuovo"
+
+	arr["ENGLISH",494]="13. Offline PIN generation using algorithms"
+	arr["SPANISH",494]="13. Generación offline de PINs con algoritmos"
+	arr["FRENCH",494]="${pending_of_translation} 13. Génération offline de codes PIN avec algorithmes"
+	arr["CATALAN",494]="${pending_of_translation} 13. Generació offline de PINs amb algoritmes"
+	arr["PORTUGUESE",494]="${pending_of_translation} 13. Geração off-line de PINs com algoritmos"
+	arr["RUSSIAN",494]="${pending_of_translation} 13. Генерация автономного PIN-кода с offline алгоритмов"
+	arr["GREEK",494]="${pending_of_translation} 13. Δημιουργία PIN offline με αλγορίθμους"
+	arr["ITALIAN",494]="${pending_of_translation} 13. Generazione offline di PIN con algoritmi"
 
 	case "${3}" in
 		"yellow")
