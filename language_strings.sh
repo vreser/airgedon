@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20170927
+#Date.........: 20171001
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -4859,6 +4859,15 @@ function language_strings() {
 	arr["RUSSIAN",492]="${pending_of_translation} Алгоритм Arcadyan не может быть рассчитан. Хотя вы выбрали опцию bully для атаки, для расчета этого PIN-кода вам необходимо использовать wash (включенную в пакет reaver), и вы ее не установили. Скрипт продолжит атаку, не включив ее"
 	arr["GREEK",492]="${pending_of_translation} Ο αλγόριθμος Arcadyan δεν μπορεί να υπολογιστεί. Παρόλο που επιλέξατε την επιλογή bully για την επίθεση, για να υπολογίσετε το PIN που χρειάζεστε για να χρησιμοποιήσετε το wash (περιλαμβάνεται στο πακέτο του reaver) και δεν το έχετε εγκαταστήσει. Το σενάριο θα συνεχίσει την επίθεση χωρίς να το συμπεριλάβει"
 	arr["ITALIAN",492]="${pending_of_translation} L'algoritmo Arcadyan non può essere calcolato. Anche se hai scelto l'opzione di attacco con il bully, per calcolare quel PIN che devi usare il lavaggio (incluso nel pacchetto reaver) e non l'hai installato. Lo script continuerà l'attacco senza includerlo"
+
+	arr["ENGLISH",493]="The Arcadyan algorithm PIN was already calculated for this target (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). There is no need to calculate it again"
+	arr["SPANISH",493]="El PIN del algoritmo Arcadyan ya fue calculado para este objetivo (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). No hace falta calcularlo de nuevo"
+	arr["FRENCH",493]="${pending_of_translation} Le code PIN de l'algorithme d'Arcadyan était déjà calculé à cette cible (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Pas besoin de le calculer à nouveau"
+	arr["CATALAN",493]="${pending_of_translation} El PIN de l'algoritme Arcadyan ja va ser calculat per a aquest objectiu (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). No cal calcular-de nou"
+	arr["PORTUGUESE",493]="${pending_of_translation} O PIN do algoritmo Arcadyan já foi calculado para este objetivo (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Não é necessário calculá-lo novamente"
+	arr["RUSSIAN",493]="${pending_of_translation} Алгоритм алгоритма Arcadyan PIN уже рассчитан для этой цели (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Нет необходимости вычислять его снова"
+	arr["GREEK",493]="${pending_of_translation} Ο αλγόριθμος Arcadyan PIN έχει ήδη υπολογιστεί για αυτόν το στόχο (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Δεν χρειάζεται να το υπολογίζουμε ξανά"
+	arr["ITALIAN",493]="${pending_of_translation} Il PIN di Arcadyan algoritmo era già stato calcolato a tal obiettivo (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Non c'è bisogno di calcolarlo di nuovo"
 
 	case "${3}" in
 		"yellow")

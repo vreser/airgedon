@@ -2,7 +2,7 @@
 #Title........: airgeddon
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20170930
+#Date.........: 20171001
 #Version......: 7.22
 #Usage........: ./airgeddon
 #Bash Version.: 4.2 or later
@@ -945,6 +945,7 @@ function calculate_arcadyan_algorithm() {
 
 	debug_print
 
+	local wan=""
 	if [ "${four_wpsbssid_last_digits_clean}" = "0000" ]; then
 		wan="fffe"
 	elif [ "${four_wpsbssid_last_digits_clean}" = "0001" ]; then
@@ -1000,58 +1001,69 @@ function check_and_set_common_algorithms() {
 	pin_checksum_rule "${computepin_pin}"
 	calculate_computepin_algorithm_step2
 	calculated_pins+=("${computepin_pin}")
+	fill_wps_data_array "${wps_bssid}" "ComputePIN" "${computepin_pin}"
 
 	calculate_easybox_algorithm
 	pin_checksum_rule "${easybox_pin}"
 	easybox_pin=$(printf '%08d\n' $((current_calculated_pin + checksum_digit)))
 	calculated_pins+=("${easybox_pin}")
+	fill_wps_data_array "${wps_bssid}" "EasyBox" "${easybox_pin}"
 
-	able_to_check_json_option_on_wash=0
-	if [ "${wps_attack}" = "pindb_bully" ]; then
-		if hash wash 2> /dev/null; then
-			able_to_check_json_option_on_wash=1
-		else
-			echo
-			language_strings "${language}" 492 "yellow"
-			echo
-		fi
-	elif [ "${wps_attack}" = "pindb_reaver" ]; then
-		able_to_check_json_option_on_wash=1
-	fi
+	if ! check_if_type_exists_in_wps_data_array "${wps_bssid}" "Arcadyan"; then
 
-	if [ "${able_to_check_json_option_on_wash}" -eq 1 ]; then
-		if check_json_option_on_wash; then
-			ask_yesno 485 "no"
-			if [ "${yesno}" = "y" ]; then
+		able_to_check_json_option_on_wash=0
+		if [ "${wps_attack}" = "pindb_bully" ]; then
+			if hash wash 2> /dev/null; then
+				able_to_check_json_option_on_wash=1
+			else
 				echo
-				language_strings "${language}" 489 "blue"
+				language_strings "${language}" 492 "yellow"
+				echo
+			fi
+		elif [ "${wps_attack}" = "pindb_reaver" ]; then
+			able_to_check_json_option_on_wash=1
+		fi
 
-				serial=""
-				wash_json_scan "${wps_bssid}"
+		if [ "${able_to_check_json_option_on_wash}" -eq 1 ]; then
+			if check_json_option_on_wash; then
+				ask_yesno 485 "no"
+				if [ "${yesno}" = "y" ]; then
+					echo
+					language_strings "${language}" 489 "blue"
 
-				if [ -n "${serial}" ]; then
-					if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
-						calculate_arcadyan_algorithm
-						pin_checksum_rule "${arcadyan_pin}"
-						arcadyan_pin="${arcadyan_pin}${checksum_digit}"
-						calculated_pins=("${arcadyan_pin}" "${calculated_pins[@]}")
+					serial=""
+					wash_json_scan "${wps_bssid}"
+
+					if [ -n "${serial}" ]; then
+						if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
+							calculate_arcadyan_algorithm
+							pin_checksum_rule "${arcadyan_pin}"
+							arcadyan_pin="${arcadyan_pin}${checksum_digit}"
+							calculated_pins=("${arcadyan_pin}" "${calculated_pins[@]}")
+							fill_wps_data_array "${wps_bssid}" "Arcadyan" "${arcadyan_pin}"
+							echo
+							language_strings "${language}" 487 "yellow"
+						else
+							echo
+							language_strings "${language}" 491 "yellow"
+						fi
 						echo
-						language_strings "${language}" 487 "yellow"
 					else
 						echo
-						language_strings "${language}" 491 "yellow"
+						language_strings "${language}" 488 "yellow"
+						echo
 					fi
-					echo
-				else
-					echo
-					language_strings "${language}" 488 "yellow"
-					echo
 				fi
+			else
+				echo
+				language_strings "${language}" 486 "yellow"
 			fi
-		else
-			echo
-			language_strings "${language}" 486 "yellow"
 		fi
+	else
+		echo
+		calculated_pins=("${wps_data_array["${wps_bssid}",'Arcadyan']}" "${calculated_pins[@]}")
+		language_strings "${language}" 493 "yellow"
+		echo
 	fi
 
 	if integrate_algorithms_pins; then
@@ -1103,6 +1115,7 @@ function search_in_pin_database() {
 			for item2 in "${arrpins[@]}"; do
 				counter_pins_found=$((counter_pins_found+1))
 				pins_found+=(${item2})
+				fill_wps_data_array "${wps_bssid}" "Database" "${item2}"
 			done
 			break
 		fi
@@ -7777,6 +7790,41 @@ function set_wash_parameterization() {
 	wash_ifaces_already_set[${interface}]=${fcs}
 }
 
+#Check if a type exists in the wps data array
+function check_if_type_exists_in_wps_data_array() {
+
+	debug_print
+
+	[[ -n "${wps_data_array["${1}","${2}"]:+not set}" ]]
+}
+
+#Check if a pin exists in the wps data array
+function check_if_pin_exists_in_wps_data_array() {
+
+	debug_print
+
+	[[ "${wps_data_array["${1}","${2}"]}" =~ (^| )"${3}"( |$) ]]
+}
+
+#Fill data into wps data array
+function fill_wps_data_array() {
+
+	debug_print
+
+	if ! check_if_pin_exists_in_wps_data_array "${1}" "${2}" "${3}"; then
+		#TODO test the insertion below
+		if [ "${2}" != "Database" ]; then
+			wps_data_array["${1}","${2}"]="${3}"
+		else
+			if [ "${wps_data_array["${1}","${2}"]}" = "" ]; then
+				wps_data_array["${1}","${2}"]="${3}"
+			else
+				wps_data_array["${1}","${2}"]="${wps_data_array["${1}","${2}"]} ${3}"
+			fi
+		fi
+	fi
+}
+
 #Manage and validate the prerequisites for wps pin database attacks
 function wps_pin_database_prerequisites() {
 
@@ -9319,6 +9367,7 @@ function initialize_script_settings() {
 	http_proxy_set=0
 	hccapx_needed=0
 	xterm_ok=1
+	declare -gA wps_data_array
 }
 
 #Detect if there is a working X window system
