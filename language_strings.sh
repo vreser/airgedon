@@ -4915,13 +4915,13 @@ function language_strings() {
 	arr["ITALIAN",498]="${pending_of_translation} scegliere database o algoritmo"
 
 	arr["ENGLISH",499]="Showing matches in the PIN database..."
-	arr["SPANISH",499]="Mostrando coincidencias en la base de datos de PINs..."
-	arr["FRENCH",499]="${pending_of_translation} Affichage des correspondances dans la base de données PIN..."
-	arr["CATALAN",499]="${pending_of_translation} Ara es mostren coincidències en la base de dades de PINs..."
-	arr["PORTUGUESE",499]="${pending_of_translation} Mostrando correspondências no banco de dados PIN..."
+	arr["SPANISH",499]="Mostrando coincidencias de la base de datos de PINs..."
+	arr["FRENCH",499]="${pending_of_translation} Afficher les résultats de la base de données PIN..."
+	arr["CATALAN",499]="${pending_of_translation} Ara es mostren coincidències de la base de dades de PINs..."
+	arr["PORTUGUESE",499]="${pending_of_translation} Mostrando correspondências de banco de dados de PINs..."
 	arr["RUSSIAN",499]="${pending_of_translation} Отображение совпадений в базе данных PIN-кода..."
 	arr["GREEK",499]="${pending_of_translation} Εμφάνιση αντιστοιχιών στη βάση δεδομένων PIN..."
-	arr["ITALIAN",499]="${pending_of_translation} Visualizzazione delle corrispondenze nel database PIN..."
+	arr["ITALIAN",499]="${pending_of_translation} Visualizzazione delle corrispondenze del database PIN..."
 
 	case "${3}" in
 		"yellow")
