@@ -8690,7 +8690,7 @@ function detect_arm_architecture() {
 
 	distro_already_known=0
 
-	if uname -m | grep -i "arm" > /dev/null && "${distro}" != "Unknown Linux"; then
+	if [[ $(uname -m | grep -i "arm" > /dev/null) ]] && [[ "${distro}" != "Unknown Linux" ]]; then
 
 		for item in "${known_arm_compatible_distros[@]}"; do
 			if [ "${distro}" = "${item}" ]; then
