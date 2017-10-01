@@ -7818,7 +7818,7 @@ function fill_wps_data_array() {
 	debug_print
 
 	if ! check_if_pin_exists_in_wps_data_array "${1}" "${2}" "${3}"; then
-		#TODO test the insertion below
+
 		if [ "${2}" != "Database" ]; then
 			wps_data_array["${1}","${2}"]="${3}"
 		else
