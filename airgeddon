@@ -4119,9 +4119,7 @@ function offline_pin_generation_menu() {
 			fi
 		;;
 		6)
-			if wps_attacks_parameters "no_monitor_check"; then
-
-			fi
+			under_construction_message
 		;;
 		7)
 			under_construction_message
