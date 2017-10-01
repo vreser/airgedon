@@ -4064,7 +4064,7 @@ function offline_pin_generation_menu() {
 	language_strings "${language}" 498 "separator"
 	language_strings "${language}" 496
 	echo "6.  ComputePIN"
-	echo -e "${red_color_slim}7.  EasyBox (${under_constructionvar})${normal_color}"
+	echo "7.  EasyBox"
 	echo -e "${red_color_slim}8.  Arcadyan (${under_constructionvar})${normal_color}"
 	print_simple_separator
 	language_strings "${language}" 497
@@ -4136,7 +4136,21 @@ function offline_pin_generation_menu() {
 			fi
 		;;
 		7)
-			under_construction_message
+			if wps_attacks_parameters "no_monitor_check"; then
+				if ! check_if_type_exists_in_wps_data_array "${wps_bssid}" "EasyBox"; then
+					set_wps_mac_parameters
+					calculate_easybox_algorithm
+					pin_checksum_rule "${easybox_pin}"
+					easybox_pin=$(printf '%08d\n' $((current_calculated_pin + checksum_digit)))
+					fill_wps_data_array "${wps_bssid}" "EasyBox" "${easybox_pin}"
+				fi
+
+				echo
+				language_strings "${language}" 501 "blue"
+				echo "${wps_data_array["${wps_bssid}",'EasyBox']}"
+				echo
+				language_strings "${language}" 115 "read"
+			fi
 		;;
 		8)
 			under_construction_message

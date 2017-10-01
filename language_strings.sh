@@ -4932,6 +4932,15 @@ function language_strings() {
 	arr["GREEK",500]="${pending_of_translation} Εμφανίζεται το PIN που υπολογίζεται χρησιμοποιώντας τον αλγόριθμο ComputePIN..."
 	arr["ITALIAN",500]="${pending_of_translation} Visualizzazione del PIN calcolato utilizzando l'algoritmo ComputePIN..."
 
+	arr["ENGLISH",501]="Showing PIN calculated using EasyBox algorithm..."
+	arr["SPANISH",501]="Mostrando PIN calculado con el algoritmo EasyBox..."
+	arr["FRENCH",501]="${pending_of_translation} Affichage du code PIN calculé à l'aide de l'algorithme EasyBox..."
+	arr["CATALAN",501]="${pending_of_translation} Ara es mostren PIN calculat amb l'algoritme EasyBox..."
+	arr["PORTUGUESE",501]="${pending_of_translation} Mostrando PIN calculado usando o algoritmo EasyBox..."
+	arr["RUSSIAN",501]="${pending_of_translation} Отображение PIN-кода, рассчитанного с использованием алгоритма EasyBox..."
+	arr["GREEK",501]="${pending_of_translation} Εμφανίζεται το PIN που υπολογίζεται χρησιμοποιώντας τον αλγόριθμο EasyBox..."
+	arr["ITALIAN",501]="${pending_of_translation} Visualizzazione del PIN calcolato utilizzando l'algoritmo EasyBox..."
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"
