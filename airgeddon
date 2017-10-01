@@ -2,7 +2,7 @@
 #Title........: airgeddon
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171001
+#Date.........: 20171002
 #Version......: 7.22
 #Usage........: ./airgeddon
 #Bash Version.: 4.2 or later
@@ -3000,18 +3000,20 @@ function wps_attacks_parameters() {
 	fi
 	ask_channel "wps"
 
-	case ${wps_attack} in
-		"custompin_bully"|"custompin_reaver")
-			ask_custom_pin
-			ask_wps_timeout "standard"
-		;;
-		"pixiedust_bully"|"pixiedust_reaver")
-			ask_wps_timeout "pixiedust"
-		;;
-		"pindb_bully"|"pindb_reaver")
-			ask_wps_timeout "standard"
-		;;
-	esac
+	if [ "${1}" != "no_monitor_check" ]; then
+		case ${wps_attack} in
+			"custompin_bully"|"custompin_reaver")
+				ask_custom_pin
+				ask_wps_timeout "standard"
+			;;
+			"pixiedust_bully"|"pixiedust_reaver")
+				ask_wps_timeout "pixiedust"
+			;;
+			"pindb_bully"|"pindb_reaver")
+				ask_wps_timeout "standard"
+			;;
+		esac
+	fi
 
 	return 0
 }
@@ -4117,7 +4119,9 @@ function offline_pin_generation_menu() {
 			fi
 		;;
 		6)
-			under_construction_message
+			if wps_attacks_parameters "no_monitor_check"; then
+
+			fi
 		;;
 		7)
 			under_construction_message
