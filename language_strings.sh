@@ -457,7 +457,7 @@ function language_strings() {
 	arr["PORTUGUESE",3]="Selecione uma rede como objetivo :"
 	arr["RUSSIAN",3]="Выбор целевой сети :"
 	arr["GREEK",3]="Διαλέξτε δίκτυο :"
-	arr["ITALIAN",3]="Scegliere una rete come obbiettivo :"
+	arr["ITALIAN",3]="Scegliere una rete come obiettivo :"
 
 	arr["ENGLISH",4]="Press [Enter] key to start attack..."
 	arr["SPANISH",4]="Pulse la tecla [Enter] para comenzar el ataque..."
