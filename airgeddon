@@ -997,17 +997,25 @@ function check_and_set_common_algorithms() {
 	language_strings "${language}" 388 "blue"
 	declare -g calculated_pins=("${wps_default_generic_pin}")
 
-	calculate_computepin_algorithm_step1
-	pin_checksum_rule "${computepin_pin}"
-	calculate_computepin_algorithm_step2
-	calculated_pins+=("${computepin_pin}")
-	fill_wps_data_array "${wps_bssid}" "ComputePIN" "${computepin_pin}"
+	if ! check_if_type_exists_in_wps_data_array "${wps_bssid}" "ComputePIN"; then
+		calculate_computepin_algorithm_step1
+		pin_checksum_rule "${computepin_pin}"
+		calculate_computepin_algorithm_step2
+		calculated_pins+=("${computepin_pin}")
+		fill_wps_data_array "${wps_bssid}" "ComputePIN" "${computepin_pin}"
+	else
+		calculated_pins+=("${wps_data_array["${wps_bssid}",'ComputePIN']}")
+	fi
 
-	calculate_easybox_algorithm
-	pin_checksum_rule "${easybox_pin}"
-	easybox_pin=$(printf '%08d\n' $((current_calculated_pin + checksum_digit)))
-	calculated_pins+=("${easybox_pin}")
-	fill_wps_data_array "${wps_bssid}" "EasyBox" "${easybox_pin}"
+	if ! check_if_type_exists_in_wps_data_array "${wps_bssid}" "EasyBox"; then
+		calculate_easybox_algorithm
+		pin_checksum_rule "${easybox_pin}"
+		easybox_pin=$(printf '%08d\n' $((current_calculated_pin + checksum_digit)))
+		calculated_pins+=("${easybox_pin}")
+		fill_wps_data_array "${wps_bssid}" "EasyBox" "${easybox_pin}"
+	else
+		calculated_pins+=("${wps_data_array["${wps_bssid}",'EasyBox']}")
+	fi
 
 	if ! check_if_type_exists_in_wps_data_array "${wps_bssid}" "Arcadyan"; then
 
