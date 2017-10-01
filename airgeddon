@@ -2986,12 +2986,14 @@ function wps_attacks_parameters() {
 
 	debug_print
 
-	if ! check_monitor_enabled; then
-		return 1
-	fi
+	if [ "${1}" != "no_monitor_check" ]; then
+		if ! check_monitor_enabled; then
+			return 1
+		fi
 
-	echo
-	language_strings "${language}" 34 "yellow"
+		echo
+		language_strings "${language}" 34 "yellow"
+	fi
 
 	if ! ask_bssid "wps"; then
 		return 1
@@ -4058,7 +4060,7 @@ function offline_pin_generation_menu() {
 	language_strings "${language}" 56
 	language_strings "${language}" 49 wash_scan_dependencies[@]
 	language_strings "${language}" 498 "separator"
-	language_strings "${language}" 496 "under_construction"
+	language_strings "${language}" 496
 	echo -e "${red_color_slim}6.  ComputePIN (${under_constructionvar})${normal_color}"
 	echo -e "${red_color_slim}7.  EasyBox (${under_constructionvar})${normal_color}"
 	echo -e "${red_color_slim}8.  Arcadyan (${under_constructionvar})${normal_color}"
@@ -4085,7 +4087,34 @@ function offline_pin_generation_menu() {
 			fi
 		;;
 		5)
-			under_construction_message
+			db_error=0
+			if [[ ${pin_dbfile_checked} -eq 0 ]] || [[ ! -f "${scriptfolder}${known_pins_dbfile}" ]]; then
+				if check_pins_database_file; then
+					echo
+					language_strings "${language}" 373 "blue"
+				else
+					echo
+					language_strings "${language}" 372 "red"
+					db_error=1
+				fi
+			else
+				echo
+				language_strings "${language}" 379 "blue"
+			fi
+			language_strings "${language}" 115 "read"
+
+			if [ "${db_error}" -eq 0 ]; then
+				if wps_attacks_parameters "no_monitor_check"; then
+					wps_pin_database_prerequisites "no_attack"
+					if [ ${bssid_found_in_db} -eq 1 ]; then
+						echo
+						language_strings "${language}" 499 "blue"
+						echo "${wps_data_array["${wps_bssid}",'Database']}"
+						echo
+						language_strings "${language}" 115 "read"
+					fi
+				fi
+			fi
 		;;
 		6)
 			under_construction_message
@@ -7932,10 +7961,12 @@ function wps_pin_database_prerequisites() {
 		language_strings "${language}" 387 "yellow"
 	fi
 
-	check_and_set_common_algorithms
-	echo
-	language_strings "${language}" 366 "blue"
-	language_strings "${language}" 4 "read"
+	if [ "${1}" != "no_attack" ]; then
+		check_and_set_common_algorithms
+		echo
+		language_strings "${language}" 366 "blue"
+		language_strings "${language}" 4 "read"
+	fi
 }
 
 #Manage and validate the prerequisites for Evil Twin attacks

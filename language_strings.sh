@@ -3771,14 +3771,14 @@ function language_strings() {
 	arr["GREEK",371]="Έχετε εγκατεστημένο το reaver (v${reaver_version}), αλλά όχι την απαιτούμενη έκδοση. Για να κάνετε την επίθεση Pixie Dust με ενσωματωμένο reaver θα πρέπει να έχετε τουλάχιστον την έκδοση v${minimum_reaver_pixiewps_version}"
 	arr["ITALIAN",371]="È stato installato reaver (v${bully_version}), ma non la versione richiesta. Per realizzare l'attacco Pixie Dust integrato con reaver devi avere almeno la versione v${minimum_reaver_pixiewps_version}"
 
-	arr["ENGLISH",372]="This attack can't be performed without known PINs database file"
-	arr["SPANISH",372]="Sin fichero de base de datos de PINs conocidos no se puede realizar este ataque"
-	arr["FRENCH",372]="Sans la base donées PIN cette attaque ne peut pas être exécutée"
-	arr["CATALAN",372]="Sense fitxer de base de dades de PINs coneguts no es pot realitzar aquest atac"
-	arr["PORTUGUESE",372]="Este ataque não pode ser executado sem o arquivo com banco de dados de PINs conhecidos "
-	arr["RUSSIAN",372]="Эта атака не может быть выполнена без файла базы данных известных PIN"
-	arr["GREEK",372]="Η επίθεση αυτή δεν μπορεί να πραγματοποιηθεί χωρίς το αρχείο με την βάση δεδομένων γνωστών PIN"
-	arr["ITALIAN",372]="Senza nessun database dei PIN conosciuti non si puó eseguire questo attacco"
+	arr["ENGLISH",372]="This action can't be performed without known PINs database file"
+	arr["SPANISH",372]="Sin fichero de base de datos de PINs conocidos no se puede realizar esta acción"
+	arr["FRENCH",372]="${pending_of_translation} Sans la base donées PIN cette action ne peut pas être exécutée"
+	arr["CATALAN",372]="${pending_of_translation} Sense fitxer de base de dades de PINs coneguts no es pot realitzar aquest acció"
+	arr["PORTUGUESE",372]="${pending_of_translation} Esta ação não pode ser executado sem o arquivo com banco de dados de PINs conhecidos"
+	arr["RUSSIAN",372]="${pending_of_translation} Эта действие не может быть выполнена без файла базы данных известных PIN"
+	arr["GREEK",372]="${pending_of_translation} Αυτή η ενέργεια δεν μπορεί να εκτελεστεί χωρίς γνωστό αρχείο βάσεων δεδομένων PIN"
+	arr["ITALIAN",372]="${pending_of_translation} Senza nessun database dei PIN conosciuti non si puó eseguire questa azione"
 
 	arr["ENGLISH",373]="The known PINs database file exists. Script can continue..."
 	arr["SPANISH",373]="Existe el fichero de base de datos de PINs conocidos. El script puede continuar..."
@@ -3881,7 +3881,7 @@ function language_strings() {
 
 	arr["ENGLISH",384]="Searching in PINs database. Please be patient..."
 	arr["SPANISH",384]="Buscando en la base de datos de PINs. Por favor ten paciencia..."
-	arr["FRENCH",384]="Recherche dans la base de données PIN. Ayez un peu de patience s'il vous plaît"
+	arr["FRENCH",384]="Recherche dans la base de données PIN. Ayez un peu de patience s'il vous plaît..."
 	arr["CATALAN",384]="Buscant a la base de dades de PINs. Si us plau tingues paciència..."
 	arr["PORTUGUESE",384]="Pesquisando os PINs no banco de dados. Por favor, seja paciente..."
 	arr["RUSSIAN",384]="Поиск в базе данных PIN. Подождите немного..."
@@ -4913,6 +4913,15 @@ function language_strings() {
 	arr["RUSSIAN",498]="${pending_of_translation} выбрать базу данных или алгоритм"
 	arr["GREEK",498]="${pending_of_translation} επιλέξτε βάση δεδομένων ή αλγόριθμο"
 	arr["ITALIAN",498]="${pending_of_translation} scegliere database o algoritmo"
+
+	arr["ENGLISH",499]="Showing matches in the PIN database..."
+	arr["SPANISH",499]="Mostrando coincidencias en la base de datos de PINs..."
+	arr["FRENCH",499]="${pending_of_translation} Affichage des correspondances dans la base de données PIN..."
+	arr["CATALAN",499]="${pending_of_translation} Ara es mostren coincidències en la base de dades de PINs..."
+	arr["PORTUGUESE",499]="${pending_of_translation} Mostrando correspondências no banco de dados PIN..."
+	arr["RUSSIAN",499]="${pending_of_translation} Отображение совпадений в базе данных PIN-кода..."
+	arr["GREEK",499]="${pending_of_translation} Εμφάνιση αντιστοιχιών στη βάση δεδομένων PIN..."
+	arr["ITALIAN",499]="${pending_of_translation} Visualizzazione delle corrispondenze nel database PIN..."
 
 	case "${3}" in
 		"yellow")
