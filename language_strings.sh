@@ -4815,7 +4815,7 @@ function language_strings() {
 	arr["GREEK",487]="${pending_of_translation} Το PIN δημιουργήθηκε με αλγόριθμο Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
 	arr["ITALIAN",487]="${pending_of_translation} Il PIN è stato generato con l'algoritmo Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
 
-	arr["ENGLISH",488]="PIN can't be generated usingh Arcadyan algorithm. Failed to collect a complete \"probe\" response from the access point. Probably because low quality signal"
+	arr["ENGLISH",488]="PIN can't be generated using Arcadyan algorithm. Failed to collect a complete \"probe\" response from the access point. Probably because low quality signal"
 	arr["SPANISH",488]="No se ha podido generar el PIN con el algoritmo Arcadyan. No se ha podido recoger una respuesta \"probe\" completa del punto de acceso. Probablemente porque la señal no es buena"
 	arr["FRENCH",488]="${pending_of_translation} Impossible de générer du code PIN avec l'algorithme Arcadyan. Impossible de collecter une réponse complète de \"probe\" à partir du point d'accès. Probablement parce que le signal n'est pas bon"
 	arr["CATALAN",488]="${pending_of_translation} No s'ha pogut generar el PIN amb l'algoritme Arcadyan. No s'ha pogut recollir una resposta \"probe\" completa del punt d'accés. Probablement perquè el senyal no és bona"
