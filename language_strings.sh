@@ -4941,6 +4941,33 @@ function language_strings() {
 	arr["GREEK",501]="${pending_of_translation} Εμφανίζεται το PIN που υπολογίζεται χρησιμοποιώντας τον αλγόριθμο EasyBox..."
 	arr["ITALIAN",501]="${pending_of_translation} Visualizzazione del PIN calcolato utilizzando l'algoritmo EasyBox..."
 
+	arr["ENGLISH",502]="Showing PIN calculated using Arcadyan algorithm..."
+	arr["SPANISH",502]="Mostrando PIN calculado con el algoritmo Arcadyan..."
+	arr["FRENCH",502]="${pending_of_translation} Affichage du code PIN calculé à l'aide de l'algorithme Arcadyan..."
+	arr["CATALAN",502]="${pending_of_translation} Ara es mostren PIN calculat amb l'algoritme Arcadyan..."
+	arr["PORTUGUESE",502]="${pending_of_translation} Mostrando PIN calculado usando o algoritmo Arcadyan..."
+	arr["RUSSIAN",502]="${pending_of_translation} Отображение PIN-кода, рассчитанного с использованием алгоритма Arcadyan..."
+	arr["GREEK",502]="${pending_of_translation} Εμφανίζεται το PIN που υπολογίζεται χρησιμοποιώντας τον αλγόριθμο Arcadyan..."
+	arr["ITALIAN",502]="${pending_of_translation} Visualizzazione del PIN calcolato utilizzando l'algoritmo Arcadyan..."
+
+	arr["ENGLISH",503]="It's not necessary to perform the scan again to calculate Arcadyan algorithm PIN. Already done before during this session"
+	arr["SPANISH",503]="No es necesario realizar de nuevo el escaneo para calcular el PIN del algoritmo Arcadyan. Ya se realizó anteriormente en esta sesión"
+	arr["FRENCH",503]="${pending_of_translation} Il n'est pas nécessaire d'effectuer de nouveau l'analyse pour calculer le code PIN de l'algorithme Arcadyan. Déjà terminé dans cette session"
+	arr["CATALAN",503]="${pending_of_translation} No cal realitzar de nou l'escaneig per calcular el PIN de l'algoritme Arcadyan. Ja es va realitzar anteriorment en aquesta sessió"
+	arr["PORTUGUESE",503]="${pending_of_translation} Não é necessário executar a verificação novamente para calcular o PIN do algoritmo Arcadyan. Já foi feito anteriormente nesta sessão"
+	arr["RUSSIAN",503]="${pending_of_translation} Нет необходимости снова выполнять сканирование, чтобы вычислить PIN-код алгоритма Arcadyan. Уже сделано до этого в ходе этой сессии"
+	arr["GREEK",503]="${pending_of_translation} Δεν είναι απαραίτητο να εκτελέσετε ξανά τη σάρωση για να υπολογίσετε το PIN αλγόριθμου Arcadyan. Πραγματοποιήσατε ήδη πριν από αυτή τη σύνοδο"
+	arr["ITALIAN",503]="${pending_of_translation} Non è necessario eseguire nuovamente la scansione per calcolare il PIN di Arcadyan algoritmo. Già fatto in precedenza in questa sessione"
+
+	arr["ENGLISH",504]="${blue_color}This PIN calculation process is not purely offline. A complete \"probe\" response is required from the target access point to obtain a necessary data. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
+	arr["SPANISH",504]="${blue_color}Este proceso de cálculo de PIN no es puramente offline. Hace falta una respuesta \"probe\" completa del punto de acceso objetivo para obtener un dato necesario. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
+	arr["FRENCH",504]="${pending_of_translation} ${blue_color}Ce processus de calcul du PIN n'est pas purement offline. Une réponse \"probe\" complète est requise du point d'accès cible pour obtenir les données nécessaires. ${green_color}Voulez-vous continuer? ${normal_color}${visual_choice}"
+	arr["CATALAN",504]="${pending_of_translation} ${blue_color}Aquest procés de càlcul de PIN no és purament offline. Cal una resposta \"probe\" completa del punt d'accés objectiu per obtenir una dada necessari. ${green_color}¿Vols continuar? ${normal_color}${visual_choice}"
+	arr["PORTUGUESE",504]="${pending_of_translation} ${blue_color}Este processo de cálculo do PIN não está puramente offline. É necessária uma resposta completa de \"probe\" a partir do ponto de acesso alvo para obter os dados necessários. ${green_color}Você deseja continuar? ${normal_color}${visual_choice}"
+	arr["RUSSIAN",504]="${pending_of_translation} ${blue_color}Этот процесс расчета PIN-кода не является чисто offline. От целевой точки доступа требуется полный запрос \"probe\" для получения необходимых данных. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
+	arr["GREEK",504]="${pending_of_translation} ${blue_color}Αυτή η διαδικασία υπολογισμού PIN δεν είναι καθαρά offline. Απαιτείται μια ολοκληρωμένη \"probe\" απάντηση από το σημείο πρόσβασης στόχου για να ληφθούν τα απαραίτητα δεδομένα. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
+	arr["ITALIAN",504]="${pending_of_translation} ${blue_color}Questo processo di calcolo PIN non è puramente offline. Una risposta completa \"probe\" è richiesta dal punto di accesso di destinazione per ottenere i dati necessari. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"

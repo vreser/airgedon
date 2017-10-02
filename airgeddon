@@ -4065,7 +4065,7 @@ function offline_pin_generation_menu() {
 	language_strings "${language}" 496
 	echo "6.  ComputePIN"
 	echo "7.  EasyBox"
-	echo -e "${red_color_slim}8.  Arcadyan (${under_constructionvar})${normal_color}"
+	echo "8.  Arcadyan"
 	print_simple_separator
 	language_strings "${language}" 497
 	print_hint ${current_menu}
@@ -4153,7 +4153,67 @@ function offline_pin_generation_menu() {
 			fi
 		;;
 		8)
-			under_construction_message
+			if wps_attacks_parameters "no_monitor_check"; then
+				offline_arcadyan_pin_can_be_shown=0
+				if ! check_if_type_exists_in_wps_data_array "${wps_bssid}" "Arcadyan"; then
+
+					ask_yesno 504 "yes"
+					if [ "${yesno}" = "y" ]; then
+
+						if check_monitor_enabled; then
+							able_to_check_json_option_on_wash=0
+							if hash wash 2> /dev/null; then
+								able_to_check_json_option_on_wash=1
+								if [ "${able_to_check_json_option_on_wash}" -eq 1 ]; then
+									if check_json_option_on_wash; then
+
+										echo
+										language_strings "${language}" 489 "blue"
+
+										serial=""
+										wash_json_scan "${wps_bssid}"
+										if [ -n "${serial}" ]; then
+											if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
+												set_wps_mac_parameters
+												calculate_arcadyan_algorithm
+												pin_checksum_rule "${arcadyan_pin}"
+												arcadyan_pin="${arcadyan_pin}${checksum_digit}"
+												fill_wps_data_array "${wps_bssid}" "Arcadyan" "${arcadyan_pin}"
+												offline_arcadyan_pin_can_be_shown=1
+											else
+												echo
+												language_strings "${language}" 491 "yellow"
+											fi
+											echo
+										else
+											echo
+											language_strings "${language}" 488 "red"
+											language_strings "${language}" 115 "read"
+										fi
+									fi
+								fi
+							else
+								echo
+								language_strings "${language}" 486 "red"
+								language_strings "${language}" 115 "read"
+							fi
+						fi
+					fi
+				else
+					echo
+					language_strings "${language}" 503 "yellow"
+					language_strings "${language}" 115 "read"
+					offline_arcadyan_pin_can_be_shown=1
+				fi
+
+				if [ "${offline_arcadyan_pin_can_be_shown}" -eq 1 ]; then
+					echo
+					language_strings "${language}" 502 "blue"
+					echo "${wps_data_array["${wps_bssid}",'Arcadyan']}"
+					echo
+					language_strings "${language}" 115 "read"
+				fi
+			fi
 		;;
 		9)
 			return
