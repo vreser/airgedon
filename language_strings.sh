@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171002
+#Date.........: 20171005
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -4875,7 +4875,7 @@ function language_strings() {
 	arr["CATALAN",494]="${pending_of_translation} 13. Generació offline de PINs amb algoritmes i base de dades"
 	arr["PORTUGUESE",494]="${pending_of_translation} 13. Geração off-line de PINs com algoritmos e banco de dados"
 	arr["RUSSIAN",494]="${pending_of_translation} 13. Генерация автономного PIN-кода с offline алгоритмов и базы данных"
-	arr["GREEK",494]="13. offline δημιουργία PIN με χρήση δίαφορων αλγορίθμων και έτοιμης βάσης δεδομένων"
+	arr["GREEK",494]="13. Offline δημιουργία PIN με χρήση δίαφορων αλγορίθμων και έτοιμης βάσης δεδομένων"
 	arr["ITALIAN",494]="${pending_of_translation} 13. Generazione offline di PIN con algoritmi e database"
 
 	arr["ENGLISH",495]="Offline PIN generation menu"
@@ -4956,7 +4956,7 @@ function language_strings() {
 	arr["CATALAN",503]="${pending_of_translation} No cal realitzar de nou l'escaneig per calcular el PIN de l'algoritme Arcadyan. Ja es va realitzar anteriorment en aquesta sessió"
 	arr["PORTUGUESE",503]="${pending_of_translation} Não é necessário executar a verificação novamente para calcular o PIN do algoritmo Arcadyan. Já foi feito anteriormente nesta sessão"
 	arr["RUSSIAN",503]="${pending_of_translation} Нет необходимости снова выполнять сканирование, чтобы вычислить PIN-код алгоритма Arcadyan. Уже сделано до этого в ходе этой сессии"
-	arr["GREEK",503]="Δεν είναι απαραίτητο να εκτελέσετε ξανά το scan για να υπολογίσετε το PIN χρησιμοποιώντας τον Arcadyan αλγόριθμο. Έχει ήδη πραγματοποιηθεί σε αυτή την συνεδρία"
+	arr["GREEK",503]="Δεν είναι απαραίτητο να εκτελέσετε ξανά το scan για να υπολογίσετε το PIN χρησιμοποιώντας τον Arcadyan αλγόριθμο. Έχει ήδη πραγματοποιηθεί σε αυτή τη συνεδρία"
 	arr["ITALIAN",503]="${pending_of_translation} Non è necessario eseguire nuovamente la scansione per calcolare il PIN di Arcadyan algoritmo. Già fatto in precedenza in questa sessione"
 
 	arr["ENGLISH",504]="${blue_color}This PIN calculation process is not purely offline. A complete \"probe\" response is required from the target access point to obtain a necessary data. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
