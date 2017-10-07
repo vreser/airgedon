@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171007
+#Date.........: 20171008
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -4873,7 +4873,7 @@ function language_strings() {
 	arr["SPANISH",494]="13. Generación offline de PINs con algoritmos y base de datos"
 	arr["FRENCH",494]="13. Génération offline de PINs avec les algorithmes et la base de données"
 	arr["CATALAN",494]="${pending_of_translation} 13. Generació offline de PINs amb algoritmes i base de dades"
-	arr["PORTUGUESE",494]="13. Gerar PINs off-line com algoritmos e com o banco de dados"
+	arr["PORTUGUESE",494]="13. Gerar PINs offline com algoritmos e com o banco de dados"
 	arr["RUSSIAN",494]="${pending_of_translation} 13. Генерация автономного PIN-кода с offline алгоритмов и базы данных"
 	arr["GREEK",494]="13. Offline δημιουργία PIN με χρήση δίαφορων αλγορίθμων και έτοιμης βάσης δεδομένων"
 	arr["ITALIAN",494]="${pending_of_translation} 13. Generazione offline di PIN con algoritmi e database"
