@@ -3863,7 +3863,7 @@ function language_strings() {
 
 	arr["ENGLISH",382]="Checksums of the local and remote files match. Your PINs database file is up-to-date"
 	arr["SPANISH",382]="Los checksum de los ficheros local y remoto coinciden. Tu fichero de base de datos de PINs está actualizado"
-	arr["FRENCH",382]="${pending_of_translation} Les checksum des fichiers locaux et distants correspondent. Votre fichier de base de données PIN est à jour"
+	arr["FRENCH",382]="Les checksum des fichiers locaux et distants correspondent. Votre base de données des PINs est à jour"
 	arr["CATALAN",382]="Els checksum dels fitxers local i remot coincideixen. El teu fitxer de base de dades de PINs està actualitzat"
 	arr["PORTUGUESE",382]="As checksums locais e remotas correspondem. Seu banco de dados local está atualizado"
 	arr["RUSSIAN",382]="Контрольные суммы локального и удаленного файлов совпадают. Ваш файл базы данных PIN обновляется"
