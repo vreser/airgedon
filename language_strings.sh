@@ -21,6 +21,10 @@ function language_strings() {
 
 	debug_print
 
+	if [[ ! -v "${wps_data_array}" ]]; then
+		declare -gA wps_data_array
+	fi
+
 	declare -A unknown_chipset
 	unknown_chipset["ENGLISH"]="Unknown"
 	unknown_chipset["SPANISH"]="Desconocido"
