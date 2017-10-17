@@ -21,7 +21,7 @@ function language_strings() {
 
 	debug_print
 
-	if [[ ! -v "${wps_data_array}" ]]; then
+	if [[ "$(declare -p wps_data_array 2> /dev/null)" != "declare -A"* ]]; then
 		declare -gA wps_data_array
 	fi
 
