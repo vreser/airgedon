@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171017
+#Date.........: 20171019
 #Version......: 7.23
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -9574,14 +9574,16 @@ function initialize_script_settings() {
 	declare -gA wps_data_array
 }
 
-#Detect if there is a working X window system
+#Detect if there is a working X window system excepting for docker container
 function check_xwindow_system() {
 
 	debug_print
 
 	if hash xset 2> /dev/null; then
 		if ! xset -q > /dev/null 2>&1; then
-			xterm_ok=0
+			if [ "${is_docker}" -eq 0 ]; then
+				xterm_ok=0
+			fi
 		fi
 	fi
 }

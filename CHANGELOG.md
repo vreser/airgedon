@@ -1,3 +1,6 @@
+### 7.23
+ - Fixed error in Docker container on some host O.S.
+
 ### 7.22
  - Fixed error caused by Bettercap. Bug: https://github.com/evilsocket/bettercap/issues/356
  - Arcadyan WPS PIN generation algorithm integrated
