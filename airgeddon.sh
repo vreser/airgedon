@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171019
+#Date.........: 20171020
 #Version......: 7.23
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -4161,40 +4161,41 @@ function offline_pin_generation_menu() {
 					if [ "${yesno}" = "y" ]; then
 
 						if check_monitor_enabled; then
-							able_to_check_json_option_on_wash=0
 							if hash wash 2> /dev/null; then
-								able_to_check_json_option_on_wash=1
-								if [ "${able_to_check_json_option_on_wash}" -eq 1 ]; then
-									if check_json_option_on_wash; then
+								if check_json_option_on_wash; then
 
-										echo
-										language_strings "${language}" 489 "blue"
+									echo
+									language_strings "${language}" 489 "blue"
 
-										serial=""
-										wash_json_scan "${wps_bssid}"
-										if [ -n "${serial}" ]; then
-											if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
-												set_wps_mac_parameters
-												calculate_arcadyan_algorithm
-												pin_checksum_rule "${arcadyan_pin}"
-												arcadyan_pin="${arcadyan_pin}${checksum_digit}"
-												fill_wps_data_array "${wps_bssid}" "Arcadyan" "${arcadyan_pin}"
-												offline_arcadyan_pin_can_be_shown=1
-											else
-												echo
-												language_strings "${language}" 491 "yellow"
-											fi
-											echo
+									serial=""
+									wash_json_scan "${wps_bssid}"
+									if [ -n "${serial}" ]; then
+										if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
+											set_wps_mac_parameters
+											calculate_arcadyan_algorithm
+											pin_checksum_rule "${arcadyan_pin}"
+											arcadyan_pin="${arcadyan_pin}${checksum_digit}"
+											fill_wps_data_array "${wps_bssid}" "Arcadyan" "${arcadyan_pin}"
+											offline_arcadyan_pin_can_be_shown=1
 										else
 											echo
-											language_strings "${language}" 488 "red"
+											language_strings "${language}" 491 "yellow"
 											language_strings "${language}" 115 "read"
 										fi
+										echo
+									else
+										echo
+										language_strings "${language}" 488 "red"
+										language_strings "${language}" 115 "read"
 									fi
+								else
+									echo
+									language_strings "${language}" 486 "red"
+									language_strings "${language}" 115 "read"
 								fi
 							else
 								echo
-								language_strings "${language}" 486 "red"
+								language_strings "${language}" 492 "red"
 								language_strings "${language}" 115 "read"
 							fi
 						fi
