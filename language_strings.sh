@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171021
+#Date.........: 20171022
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -46,7 +46,7 @@ function language_strings() {
 	hintprefix["RUSSIAN"]="Подсказка"
 	hintprefix["GREEK"]="Συμβουλή"
 	hintprefix["ITALIAN"]="Consiglio"
-	hintprefix["POLISH"]="${pending_of_translation} The"
+	hintprefix["POLISH"]="${pending_of_translation} Porady"
 	hintvar="*${hintprefix[${language}]}*"
 	escaped_hintvar="\*${hintprefix[${language}]}\*"
 
