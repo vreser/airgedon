@@ -4177,7 +4177,7 @@ function language_strings() {
 	arr["PORTUGUESE",370]="Você tem o reaver instalado (v${reaver_version}). Você cumpre a exigência de versão para o ataque Pixie Dust com reaver (versão mínima v${minimum_reaver_pixiewps_version}). O script pode continuar..."
 	arr["RUSSIAN",370]="У вас установлен reaver (v${reaver_version}). Версия удовлетворяет требованиям для выполнения интегрированной в reaver атаки Pixie Dust (минимальная версия v${minimum_reaver_pixiewps_version}). Скрипт может продолжить работу..."
 	arr["GREEK",370]="Έχετε εγκατεστημένο το reaver (v${reaver_version}). Έχετε την απαραίτητη έκδοση reaver (ελάχιστη έκδοση v${minimum_reaver_pixiewps_version}), για την επίθεση Pixie Dust με ενσωματωμένο reaver. Το script μπορεί να συνεχίσει..."
-	arr["ITALIAN",370]="È stato installato reaver (v${bully_version}). Soddisfi il requisito della versione per realizzare l'attacco Pixie Dust integrato con reaver (versione minima v${minimum_reaver_pixiewps_version}). Lo script può continuare..."
+	arr["ITALIAN",370]="È stato installato reaver (v${reaver_version}). Soddisfi il requisito della versione per realizzare l'attacco Pixie Dust integrato con reaver (versione minima v${minimum_reaver_pixiewps_version}). Lo script può continuare..."
 	arr["POLISH",370]="${pending_of_translation} Masz zainstalowany reaver (v${reaver_version}). Spełnia się wymagania dotyczące wersji, aby wykonać atak Pixie Dust z użyciem reverera (wersja minimalna v${minimum_reaver_pixiewps_version}). Skrypt może kontynuować..."
 
 	arr["ENGLISH",371]="You have reaver installed (v${reaver_version}), but not required version. To perform Pixie Dust integrated reaver attack you must have at least version v${minimum_reaver_pixiewps_version}"
@@ -4187,7 +4187,7 @@ function language_strings() {
 	arr["PORTUGUESE",371]="Você tem o reaver instalado (v${reaver_version}), mas não a versão necessária. Para fazer o ataque Pixie Dust com reaver integrado você precisa ter pelo menos a versão v${minimum_reaver_pixiewps_version}"
 	arr["RUSSIAN",371]="У вас установлен reaver (v${reaver_version}), но не та версия, которая требуется. Для выполнения интегрированной в reaver атаки Pixie Dust у вас должна быть по крайней мере v${minimum_reaver_pixiewps_version}"
 	arr["GREEK",371]="Έχετε εγκατεστημένο το reaver (v${reaver_version}), αλλά όχι την απαιτούμενη έκδοση. Για να κάνετε την επίθεση Pixie Dust με ενσωματωμένο reaver θα πρέπει να έχετε τουλάχιστον την έκδοση v${minimum_reaver_pixiewps_version}"
-	arr["ITALIAN",371]="È stato installato reaver (v${bully_version}), ma non la versione richiesta. Per realizzare l'attacco Pixie Dust integrato con reaver devi avere almeno la versione v${minimum_reaver_pixiewps_version}"
+	arr["ITALIAN",371]="È stato installato reaver (v${reaver_version}), ma non la versione richiesta. Per realizzare l'attacco Pixie Dust integrato con reaver devi avere almeno la versione v${minimum_reaver_pixiewps_version}"
 	arr["POLISH",371]="${pending_of_translation} Masz zainstalowany reaver (v${reaver_version}), ale nie wymagana wersja. Aby zrealizować atak Pixie Dust zintegrowany z programem reaver musisz mieć co najmniej wersję v${minimum_reaver_pixiewps_version}"
 
 	arr["ENGLISH",372]="This action can't be performed without known PINs database file"
