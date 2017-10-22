@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171021
+#Date.........: 20171022
 #Version......: 7.23
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -1525,7 +1525,7 @@ function language_menu() {
 	language_strings "${language}" 308
 	language_strings "${language}" 320
 	language_strings "${language}" 482
-	language_strings "${language}" 506
+	language_strings "${language}" 58
 	print_simple_separator
 	language_strings "${language}" 446
 	print_hint ${current_menu}
@@ -1610,7 +1610,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="POLISH"
-				language_strings "${language}" 505 "yellow"
+				language_strings "${language}" 57 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
