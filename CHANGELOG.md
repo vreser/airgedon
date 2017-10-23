@@ -1,6 +1,7 @@
 ### 7.23
  - Fixed error in Docker container on some host O.S.
  - Fixed error message on offline Arcadyan PIN algorithm calculation
+ - Polish language translation added (Thank you to "dodg3rmaq")
 
 ### 7.22
  - Fixed error caused by Bettercap. Bug: https://github.com/evilsocket/bettercap/issues/356
