@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171029
+#Date.........: 20171030
 #Version......: 7.23
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -2769,6 +2769,7 @@ function launch_dos_pursuit_mode_attack() {
 	dos_pursuit_mode_attack_pid=$!
 	dos_pursuit_mode_pids+=("${dos_pursuit_mode_attack_pid}")
 
+	sleep 3
 	airodump-ng -w "${tmpdir}dos_pm" "${interface}" > /dev/null 2>&1 &
 	dos_pursuit_mode_scan_pid=$!
 	dos_pursuit_mode_pids+=("${dos_pursuit_mode_scan_pid}")
@@ -3023,11 +3024,10 @@ function aireplay_deauth_option() {
 	fi
 	ask_channel
 
-	#TODO check how to launch this avoiding airodump-ng channel hopping
-	#ask_yesno 505 "yes"
-	#if [ "${yesno}" = "y" ]; then
-	#	dos_pursuit_mode=1
-	#fi
+	ask_yesno 505 "yes"
+	if [ "${yesno}" = "y" ]; then
+		dos_pursuit_mode=1
+	fi
 
 	exec_aireplaydeauth
 }
