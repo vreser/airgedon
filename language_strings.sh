@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171024
+#Date.........: 20171029
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -5519,6 +5519,36 @@ function language_strings() {
 	arr["GREEK",504]="${blue_color}Αυτή η διαδικασία υπολογισμού PIN δεν είναι καθ' αυτοὺ offline. Απαιτείται ένα ολοκληρωμένο \"probe\" response από το σημείο πρόσβασης για να ληφθούν τα απαραίτητα δεδομένα. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",504]="${blue_color}Questo processo di calcolo del PIN non è puramente offline. É richiesta una risposta completa \"probe\" dal punto di accesso obiettivo per ottenere i dati necessari. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",504]="${pending_of_translation} ${blue_color}Ten proces obliczania kodu PIN nie jest wyłącznie offline. Wymagana jest pełna odpowiedź \"probe\" z docelowego punktu dostępu, aby uzyskać niezbędne dane. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+
+	arr["ENGLISH",505]="Do you want to enable \"DoS pursuit mode\"? ${blue_color}This will launch again the attack if target AP change its channel countering \"channel hopping\" ${normal_color}${visual_choice}"
+	arr["SPANISH",505]="¿Deseas activar el \"modo persecución DoS\"? ${blue_color}Esto relanzará el ataque si el AP objetivo cambia de canal contrarrestando el \"channel hopping\" ${normal_color}${visual_choice}"
+	arr["FRENCH",505]="${pending_of_translation} "
+	arr["CATALAN",505]="${pending_of_translation} "
+	arr["PORTUGUESE",505]="${pending_of_translation} "
+	arr["RUSSIAN",505]="${pending_of_translation} "
+	arr["GREEK",505]="${pending_of_translation} "
+	arr["ITALIAN",505]="${pending_of_translation} "
+	arr["POLISH",505]="${pending_of_translation} "
+
+	arr["ENGLISH",506]="DoS attack with the \"DoS pursuit mode\" enabled will start when you press [Enter] on this window. To stop it you must  press [Ctrl+C] or close attack window"
+	arr["SPANISH",506]="El ataque DoS con el \"modo persecución DoS\" activado comenzará cuando pulse [Enter] en esta ventana. Para detenerlo deberá pulsar [Ctrl+C] o cerrar la ventana del ataque"
+	arr["FRENCH",506]="${pending_of_translation} L'attaque DoS avec le mode \"mode de poursuite DoS\" activé démarre lorsque vous appuyez sur [Enter] dans cette fenêtre. Pour l'arrêter, vous devez appuyer sur [Ctrl+C] ou fermer la fenêtre d'attaque"
+	arr["CATALAN",506]="${pending_of_translation} L'atac DoS amb el \"mode persecució DOS\" activat començarà quan premeu [Enter] en aquesta finestra. Per aturar-lo haurà de prémer [Ctrl+C] o tancar la finestra de l'atac"
+	arr["PORTUGUESE",506]="${pending_of_translation} O ataque DoS com o modo \"modo de perseguição do DoS\" ativado será iniciado quando você pressionar [Enter] nesta janela. Para parar, você deve pressionar [Ctrl+C] ou fechar a janela de ataque"
+	arr["RUSSIAN",506]="${pending_of_translation} DoS-атака с включенным \"режим преследования DoS\" включена, когда вы нажмете [Enter] в этом окне. Чтобы остановить его, вы должны нажать [Ctrl+C] или закрыть окно атаки"
+	arr["GREEK",506]="${pending_of_translation} Η επίθεση DoS με την ενεργοποιημένη λειτουργία \"DoS λειτουργία αναζήτησης\" ενεργοποιείται όταν πατήσετε [Enter] σε αυτό το παράθυρο. Για να το σταματήσετε πρέπει να πατήσετε [Ctrl+C] ή να κλείσετε το παράθυρο επίθεσης"
+	arr["ITALIAN",506]="${pending_of_translation} L'attacco DoS con la modalità \"modalità DoS persecuzione\" abilitato verrà avviato quando si preme [Enter] in questa finestra. Per fermarlo bisogna premere [Ctrl+C] o chiudere la finestra di attacco"
+	arr["POLISH",506]="${pending_of_translation} Atak DoS z uruchomionym trybem \"tryb pościgowy DoS\" zostanie uruchomiony po naciśnięciu przycisku [Enter] w tym oknie. Aby go zatrzymać, musisz nacisnąć [Ctrl+C] lub zamknąć okno ataku"
+
+	arr["ENGLISH",507]="Channel change detected. Relaunching again DoS attack on \"DoS pursuit mode\" now on channel ${normal_color}${channel}"
+	arr["SPANISH",507]="Cambio de canal detectado. Relanzando de nuevo ataque DoS en \"modo persecución DoS\" ahora sobre el canal ${normal_color}${channel}"
+	arr["FRENCH",507]="${pending_of_translation} Changement de canal détecté. Redémarrage de DoS attaque à nouveau dans \"mode de poursuite DoS\" maintenant sur le canal ${normal_color}${channel}"
+	arr["CATALAN",507]="${pending_of_translation} Canvi de canal detectat. Rellançant de nou atac DOS en \"mode persecució DOS\" ara sobre el canal ${normal_color}${channel}"
+	arr["PORTUGUESE",507]="${pending_of_translation} Mudança de canal detectada. Relançando DoS atacar novamente em \"modo de perseguição do DoS\" agora pelo canal ${normal_color}${channel}"
+	arr["RUSSIAN",507]="${pending_of_translation} Обнаружено изменение канала. Повторная перезагрузка DoS-атаки в режиме \"режим преследования DoS\" теперь на канале ${normal_color}${channel}"
+	arr["GREEK",507]="${pending_of_translation} Η αλλαγή καναλιού εντοπίστηκε. Επανεκκίνηση και πάλι DoS επίθεση στο \"DoS λειτουργία αναζήτησης\" τώρα στο κανάλι ${normal_color}${channel}"
+	arr["ITALIAN",507]="${pending_of_translation} È stata rilevata la modifica del canale. Riavviare l'attacco DoS nuovamente in modalità \"modalità DoS persecuzione\" ora sul canale ${normal_color}${channel}"
+	arr["POLISH",507]="${pending_of_translation} Wykryto zmianę kanału. Ponowne uruchomienie ataku DoS w trybie \"tryb pościgowy DoS\" na kanale ${normal_color}${channel}"
 
 	case "${3}" in
 		"yellow")
