@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171029
+#Date.........: 20171030
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -3733,7 +3733,7 @@ function language_strings() {
 	arr["ENGLISH",326]="Are you going to use the interface with internet access method? ${pink_color}If the answer is no (\"n\"), you'll need ${optional_tools_names[12]} installed to continue. Both will be checked ${normal_color}${visual_choice}"
 	arr["SPANISH",326]="¿Vas a utilizar el método de la interfaz con acceso a internet? ${pink_color}Si la respuesta es no (\"n\"), necesitarás tener instalado ${optional_tools_names[12]} para continuar. Ambas cosas se comprobarán ${normal_color}${visual_choice}"
 	arr["FRENCH",326]="Allez-vous choisir la méthode qui emploie une interface connectée à internet? ${pink_color}Si la réponse est non (\"n\"), vous m'avez besoin de ${optional_tools_names[12]}. Une vérication se fera à ce niveau avant de lancer l'une ou l'autre méthode${normal_color}${visual_choice}"
-	arr["CATALAN",326]="Vas a utilitzar el mètode de la interfície amb accés a internet? ${pink_color}Si la resposta és no (\"n\"), necessitaràs tenir instal·lat ${optional_tools_names[12]} per continuar. Totes dues coses es comprovaran ${normal_color}${visual_choice}"
+	arr["CATALAN",326]="¿Vas a utilitzar el mètode de la interfície amb accés a internet? ${pink_color}Si la resposta és no (\"n\"), necessitaràs tenir instal·lat ${optional_tools_names[12]} per continuar. Totes dues coses es comprovaran ${normal_color}${visual_choice}"
 	arr["PORTUGUESE",326]="Você gostaria de ultilizar uma interface com acesso à internet para o ataque? ${pink_color}Se a resposta for não (\"n\"), você precisa ter instalado ${optional_tools_names[12]} para continuar. Ambos serão verificados ${normal_color}${visual_choice}"
 	arr["RUSSIAN",326]="Собираетесь ли вы использовать этот метод с Интернет-доступом? ${pink_color}Если ответ нет (\"п\"), то для продолжения вам нужно установить ${optional_tools_names[12]}. Будут выполнены проверки обоих условий ${normal_color}${visual_choice}"
 	arr["GREEK",326]="Σκοπεύετε να χρησιμοποιήσετε την διεπαφή με την μέθοδο πρόσβασης στο διαδίκτυο; ${pink_color}Αν απαντήσετε όχι (\"n\"), θα πρέπει να έχετε το ${optional_tools_names[12]} εγκατεστημένο για να συνεχίσετε. Και τα δύο ελέγχονται ${normal_color}${visual_choice}"
@@ -4683,7 +4683,7 @@ function language_strings() {
 	arr["ENGLISH",421]="Doubts? Visit our Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["SPANISH",421]="¿Dudas? Visita nuestro Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["FRENCH",421]="Des questions? Visitez notre Wiki: ${normal_color}${urlgithub_wiki}"
-	arr["CATALAN",421]="Dubtes? Visita el nostre Wiki: ${normal_color}${urlgithub_wiki}"
+	arr["CATALAN",421]="¿Dubtes? Visita el nostre Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["PORTUGUESE",421]="Dúvidas? Visite a Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["RUSSIAN",421]="Вопросы? Посетите Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["GREEK",421]="Απορίες; Επισκεφθείτε το Wiki μας: ${normal_color}${urlgithub_wiki}"
@@ -4864,7 +4864,7 @@ function language_strings() {
 	arr["SPANISH",439]="${blue_color}Se ha detectado que no tienes seleccionado ningún objetivo, tendrás que introducir los datos manualmente. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
 	arr["FRENCH",439]="${blue_color}Aucun objectif n'a été sélectionnéIl semble que vous avez sélectionné aucun but, vous devez saisir les données manuellement. ${green_color}Voulez-vous continuer? ${normal_color}${visual_choice}"
 	arr["CATALAN",439]="${blue_color}S'ha detectat que no tens seleccionat cap objectiu, hauràs d'introduir les dades manualment. ${green_color}¿Vols continuar? ${normal_color}${visual_choice}"
-	arr["PORTUGUESE",439]="${blue_color}Nenhum alvo foi selecionado, você será direcionado para inserir os dados manualmente. ${green_color}deseja continuar? ${normal_color}${visual_choice}"
+	arr["PORTUGUESE",439]="${blue_color}Nenhum alvo foi selecionado, você será direcionado para inserir os dados manualmente. ${green_color}Deseja continuar? ${normal_color}${visual_choice}"
 	arr["RUSSIAN",439]="${blue_color}Вы не выбрали какую-либо цель, вам будет предложено ввести данные вручную. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",439]="${blue_color}Δεν έχετε επιλέξει κάποιο στόχο, θα σας ζητηθεί να εισάγετε τα δεδομένα χειροκίνητα. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",439]="${blue_color}Abbiamo rilevato che non è stato selezionato alcun obiettivo, è necessario immettere manualmente i dati. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
@@ -5323,7 +5323,7 @@ function language_strings() {
 	arr["ENGLISH",485]="${blue_color}Some PINs have been added calculated using the algorithms (ComputePIN, EasyBox, etc.), however you can add one more (Arcadyan). Calculating it requires certain data and a background scan will have to be performed. The process may be very slow. ${green_color}Do you want to proceed with the calculation to add it? ${normal_color}${visual_choice}"
 	arr["SPANISH",485]="${blue_color}Se han añadido algunos PINs calculados por algoritmos (ComputePIN, EasyBox, etc.), pero aún se puede añadir uno más (Arcadyan). Calcularlo requiere ciertos datos y habrá que realizar un escaneo en segundo plano. Es posible que el proceso sea muy lento. ${green_color}¿Quieres proceder con el cálculo para añadirlo? ${normal_color}${visual_choice}"
 	arr["FRENCH",485]="${blue_color}Certains PINs ajouté ont été calculés par des algorithmes (ComputePIN, EasyBox, etc.), mais vous pouvez encore ajouter un autre (Arcadyan). Le calcul nécessite certaines données et une analyse d'arrière-plan devra être effectuée. Le processus peut être très lent. ${green_color}Voulez-vous procéder au calcul pour l'ajouter? ${normal_color}${visual_choice}"
-	arr["CATALAN",485]="${blue_color}S'han afegit alguns PINs calculats per algoritmes (ComputePIN, EasyBox, etc.), però encara es pot afegir un més (Arcadyan). Calcular-lo requereix certes dades i caldrà realitzar un escaneig en segon pla. És possible que el procés sigui molt lent. ${green_color}Vols procedir amb el càlcul per afegir-ho? ${normal_color}${visual_choice}"
+	arr["CATALAN",485]="${blue_color}S'han afegit alguns PINs calculats per algoritmes (ComputePIN, EasyBox, etc.), però encara es pot afegir un més (Arcadyan). Calcular-lo requereix certes dades i caldrà realitzar un escaneig en segon pla. És possible que el procés sigui molt lent. ${green_color}¿Vols procedir amb el càlcul per afegir-ho? ${normal_color}${visual_choice}"
 	arr["PORTUGUESE",485]="${blue_color}Alguns PINs adicionados foram calculados usando algoritmos (ComputePIN, EasyBox, etc.), mas você ainda pode adicionar mais um (Arcadyan). Calculá-lo requer certos dados e uma verificação em segundo plano terá que ser realizada. O processo pode ser muito lento. ${green_color}Deseja continuar com o cálculo para adicioná-lo? ${normal_color}${visual_choice}"
 	arr["RUSSIAN",485]="${blue_color}Некоторые добавленные PIN были вычислены алгоритмами (ComputePIN, EasyBox, и т.д.), но вы можете добавить ещё один (Arcadyan). Для его вычисления требуются определенные данные, и необходимо выполнить фоновое сканирование. Процесс может быть очень медленным. ${green_color}Вы хотите добавить PIN, вычисленные этим алгоритмом? ${normal_color}${visual_choice}"
 	arr["GREEK",485]="${blue_color}Έχουν προστεθεί ορισμένοι κωδικοί PIN υπολογισμένοι με τους αλγόριθμους (ComputePIN, EasyBox, κτλπ.), μπορείτε όμως να προσθέσετε άλλον έναν κωδικό (Arcadyan). Ο υπολογισμός του απαιτεί ορισμένα δεδομένα και θα πρέπει να πραγματοποιηθεί κάποιο scan στο background. Η διαδικασία αυτή μπορεί να αργοπορήσει. ${green_color}Θέλετε να συνεχίσετε με τον υπολογισμό του και να τον προσθέσετε; ${normal_color}${visual_choice}"
