@@ -2755,6 +2755,9 @@ function launch_dos_pursuit_mode_attack() {
 		"wids / wips / wds confusion attack")
 			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
 		;;
+		"beacon flood attack")
+			xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1 &
+		;;
 	esac
 
 	dos_pursuit_mode_attack_pid=$!
@@ -2892,11 +2895,22 @@ function exec_beaconflood() {
 	language_strings "${language}" 92 "title"
 	language_strings "${language}" 32 "green"
 
+	tmpfiles_toclean=1
+
 	echo
-	language_strings "${language}" 33 "yellow"
-	language_strings "${language}" 4 "read"
-	recalculate_windows_sizes
-	xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "beacon flood attack" -e mdk3 "${interface}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		language_strings "${language}" 506 "yellow"
+		language_strings "${language}" 4 "read"
+
+		dos_pursuit_mode_pids=()
+		launch_dos_pursuit_mode_attack "beacon flood attack" "first_time"
+		pid_control_pursuit_mode "beacon flood attack"
+	else
+		language_strings "${language}" 33 "yellow"
+		language_strings "${language}" 4 "read"
+		recalculate_windows_sizes
+		xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "beacon flood attack" -e mdk3 "${interface}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1
+	fi
 }
 
 #Execute Auth DoS attack
