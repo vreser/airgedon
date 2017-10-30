@@ -5550,6 +5550,16 @@ function language_strings() {
 	arr["ITALIAN",507]="${pending_of_translation} È stata rilevata la modifica del canale. Riavviare l'attacco DoS nuovamente in modalità \"modalità DoS persecuzione\" ora sul canale ${normal_color}${channel}"
 	arr["POLISH",507]="${pending_of_translation} Wykryto zmianę kanału. Ponowne uruchomienie ataku DoS w trybie \"tryb pościgowy DoS\" na kanale ${normal_color}${channel}"
 
+	arr["ENGLISH",508]="\"DoS pursuit mode\" can be unstable for this kind of DoS attack. If you are not obtaining an optimal result just select another kind of attack"
+	arr["SPANISH",508]="El \"modo persecución DoS\" puede ser inestable para este tipo de ataque DoS. Si el resultado no es óptimo selecciona otro tipo de ataque"
+	arr["FRENCH",508]="${pending_of_translation} \"mode de poursuite DoS\" peut être instable pour ce type d'attaque DoS. Si le résultat n'est pas optimal, sélectionnez un autre type d'attaque"
+	arr["CATALAN",508]="${pending_of_translation} \"mode persecució DOS\" pot ser inestable per a aquest tipus d'atac DoS. Si el resultat no és òptim selecciona un altre tipus d'atac"
+	arr["PORTUGUESE",508]="${pending_of_translation} \"modo de perseguição do DoS\" pode ser instável para esse tipo de ataque DoS. Se o resultado não for ótimo selecione outro tipo de ataque"
+	arr["RUSSIAN",508]="${pending_of_translation} \"режим преследования DoS\" может быть нестабильной для такого DoS-атаки. Если вы не получаете оптимальный результат, просто выберите другой тип атаки"
+	arr["GREEK",508]="${pending_of_translation} \"DoS λειτουργία αναζήτησης\" μπορεί να είναι ασταθής για αυτό το είδος DoS επίθεσης. Εάν δεν επιτυγχάνετε το βέλτιστο αποτέλεσμα, επιλέξτε μόνο ένα άλλο είδος επίθεσης"
+	arr["ITALIAN",508]="${pending_of_translation} \"modalità DoS persecuzione\" può essere instabile per questo tipo di attacco DoS. Se il risultato non è ottimale selezionare un altro tipo di attacco"
+	arr["POLISH",508]="${pending_of_translation} \"tryb pościgowy DoS\" może być niestabilny dla tego typu ataków DoS. Jeśli wynik nie jest optymalny, wybierz inny rodzaj ataku"
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"

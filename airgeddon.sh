@@ -3062,6 +3062,9 @@ function wds_confusion_option() {
 	ask_yesno 505 "yes"
 	if [ "${yesno}" = "y" ]; then
 		dos_pursuit_mode=1
+		echo
+		language_strings "${language}" 508 "yellow"
+		language_strings "${language}" 115 "read"
 	fi
 
 	exec_wdsconfusion
@@ -3119,6 +3122,9 @@ function auth_dos_option() {
 	ask_yesno 505 "yes"
 	if [ "${yesno}" = "y" ]; then
 		dos_pursuit_mode=1
+		echo
+		language_strings "${language}" 508 "yellow"
+		language_strings "${language}" 115 "read"
 	fi
 
 	exec_authdos
