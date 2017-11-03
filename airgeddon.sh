@@ -7266,7 +7266,8 @@ function recover_current_channel() {
 
 	debug_print
 
-	local recovered_channel=$(cat "${tmpdir}${channelfile}" 2> /dev/null)
+	local recovered_channel
+	recovered_channel=$(cat "${tmpdir}${channelfile}" 2> /dev/null)
 	if [ -n "${recovered_channel}" ]; then
 		channel="${recovered_channel}"
 	fi
