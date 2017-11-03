@@ -3658,6 +3658,8 @@ function clean_routing_rules() {
 	else
 		clean_iptables
 	fi
+
+	rm -rf "${tmpdir}ag.iptables" > /dev/null 2>&1
 }
 
 #Save iptables rules
