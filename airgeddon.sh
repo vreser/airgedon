@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171030
+#Date.........: 20171103
 #Version......: 7.23
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -225,6 +225,7 @@ attemptsfile="ag.et_attempts.txt"
 currentpassfile="ag.et_currentpass.txt"
 successfile="ag.et_success.txt"
 processesfile="ag.et_processes.txt"
+channelfile="ag.et_channel.txt"
 possible_dhcp_leases_files=(
 								"/var/lib/dhcp/dhcpd.leases"
 								"/var/state/dhcp/dhcpd.leases"
@@ -2736,7 +2737,9 @@ function launch_dos_pursuit_mode_attack() {
 	debug_print
 
 	rm -rf "${tmpdir}dos_pm"* > /dev/null 2>&1
-	rm -rf "${tmpdir}clts"* > /dev/null 2>&1
+	rm -rf "${tmpdir}nws"* > /dev/null 2>&1
+	rm -rf "${tmpdir}clts.csv" > /dev/null 2>&1
+	rm -rf "${tmpdir}wnws.txt" > /dev/null 2>&1
 
 	if [[ -n "${2}" ]] && [[ "${2}" = "relaunch" ]]; then
 		echo
@@ -2746,29 +2749,51 @@ function launch_dos_pursuit_mode_attack() {
 	recalculate_windows_sizes
 	case "${1}" in
 		"mdk3 amok attack")
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
 			dos_delay=1
+			interface_pursuit_mode_scan="${interface}"
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
 		;;
 		"aireplay deauth attack")
 			${airmon} start "${interface}" "${channel}" > /dev/null 2>&1
 			dos_delay=3
+			interface_pursuit_mode_scan="${interface}"
 			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e aireplay-ng --deauth 0 -a "${bssid}" --ignore-negative-one "${interface}" > /dev/null 2>&1 &
 		;;
 		"wids / wips / wds confusion attack")
 			dos_delay=10
+			interface_pursuit_mode_scan="${interface}"
 			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
 		;;
 		"beacon flood attack")
 			dos_delay=1
-			xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1 &
+			interface_pursuit_mode_scan="${interface}"
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1 &
 		;;
 		"auth dos attack")
 			dos_delay=1
-			xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1 &
+			interface_pursuit_mode_scan="${interface}"
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1 &
 		;;
 		"michael shutdown attack")
 			dos_delay=1
-			xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1 &
+			interface_pursuit_mode_scan="${interface}"
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1 &
+		;;
+		"Mdk3")
+			dos_delay=1
+			interface_pursuit_mode_scan="${iface_monitor_et_deauth}"
+			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "mdk3 ${iface_monitor_et_deauth} d -b ${tmpdir}\"bl.txt\" -c ${channel}" > /dev/null 2>&1 &
+		;;
+		"Aireplay")
+			iwconfig "${iface_monitor_et_deauth}" channel "${channel}" > /dev/null 2>&1
+			dos_delay=3
+			interface_pursuit_mode_scan="${iface_monitor_et_deauth}"
+			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "aireplay-ng --deauth 0 -a ${bssid} --ignore-negative-one ${iface_monitor_et_deauth}" > /dev/null 2>&1 &
+		;;
+		"Wds Confusion")
+			dos_delay=10
+			interface_pursuit_mode_scan="${iface_monitor_et_deauth}"
+			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "mdk3 ${iface_monitor_et_deauth} w -e ${essid} -c ${channel}" > /dev/null 2>&1 &
 		;;
 	esac
 
@@ -2776,7 +2801,7 @@ function launch_dos_pursuit_mode_attack() {
 	dos_pursuit_mode_pids+=("${dos_pursuit_mode_attack_pid}")
 
 	sleep ${dos_delay}
-	airodump-ng -w "${tmpdir}dos_pm" "${interface}" > /dev/null 2>&1 &
+	airodump-ng -w "${tmpdir}dos_pm" "${interface_pursuit_mode_scan}" > /dev/null 2>&1 &
 	dos_pursuit_mode_scan_pid=$!
 	dos_pursuit_mode_pids+=("${dos_pursuit_mode_scan_pid}")
 }
@@ -2785,6 +2810,11 @@ function launch_dos_pursuit_mode_attack() {
 pid_control_pursuit_mode() {
 
 	debug_print
+
+	if [[ -n "${2}" ]] && [[ "${2}" = "evil_twin" ]]; then
+		rm -rf "${tmpdir}${channelfile}" > /dev/null 2>&1
+		echo "${channel}" > "${tmpdir}${channelfile}"
+	fi
 
 	while true; do
 		sleep 5
@@ -2797,6 +2827,10 @@ pid_control_pursuit_mode() {
 
 					if [[ "${dos_pm_current_channel}" =~ ^([0-9]+)$ ]] && [[ "${BASH_REMATCH[1]}" -ne 0 ]] && [[ "${BASH_REMATCH[1]}" -ne "${channel}" ]]; then
 						channel="${dos_pm_current_channel}"
+						if [[ -n "${2}" ]] && [[ "${2}" = "evil_twin" ]]; then
+							rm -rf "${tmpdir}${channelfile}" > /dev/null 2>&1
+							echo "${channel}" > "${tmpdir}${channelfile}"
+						fi
 						kill_dos_pursuit_mode_processes
 						dos_pursuit_mode_pids=()
 						launch_dos_pursuit_mode_attack "${1}" "relaunch"
@@ -3536,6 +3570,7 @@ function initialize_menu_and_print_selections() {
 			print_all_target_vars_et
 		;;
 		"et_dos_menu")
+			dos_pursuit_mode=0
 			if [ ${retry_handshake_capture} -eq 1 ]; then
 				retry_handshake_capture=0
 				retrying_handshake_capture=1
@@ -3606,6 +3641,7 @@ function clean_tmpfiles() {
 	rm -rf "${tmpdir}${wep_data}"* > /dev/null 2>&1
 	rm -rf "${tmpdir}${wepdir}" > /dev/null 2>&1
 	rm -rf "${tmpdir}dos_pm"* > /dev/null 2>&1
+	rm -rf "${tmpdir}${channelfile}" > /dev/null 2>&1
 }
 
 #Manage cleaning firewall rules and restore orginal routing state
@@ -5429,6 +5465,9 @@ function exec_et_onlyap_attack() {
 	language_strings "${language}" 115 "read"
 
 	kill_et_windows
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		recover_current_channel
+	fi
 	restore_et_interface
 	clean_tmpfiles
 }
@@ -5453,6 +5492,9 @@ function exec_et_sniffing_attack() {
 	language_strings "${language}" 115 "read"
 
 	kill_et_windows
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		recover_current_channel
+	fi
 	restore_et_interface
 	if [ ${ettercap_log} -eq 1 ]; then
 		parse_ettercap_log
@@ -5481,6 +5523,9 @@ function exec_et_sniffing_sslstrip_attack() {
 	language_strings "${language}" 115 "read"
 
 	kill_et_windows
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		recover_current_channel
+	fi
 	restore_et_interface
 	if [ ${ettercap_log} -eq 1 ]; then
 		parse_ettercap_log
@@ -5518,6 +5563,9 @@ function exec_et_sniffing_sslstrip2_attack() {
 
 	kill_beef
 	kill_et_windows
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		recover_current_channel
+	fi
 	restore_et_interface
 
 	if [ ${bettercap_log} -eq 1 ]; then
@@ -5552,6 +5600,9 @@ function exec_et_captive_portal_attack() {
 	language_strings "${language}" 115 "read"
 
 	kill_et_windows
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		recover_current_channel
+	fi
 	restore_et_interface
 	clean_tmpfiles
 }
@@ -5833,9 +5884,16 @@ function exec_et_deauth() {
 			deauth_scr_window_position=${g4_bottomleft_window}
 		;;
 	esac
-	xterm -hold -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "${deauth_et_cmd}" > /dev/null 2>&1 &
-	et_processes+=($!)
-	sleep 1
+
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		dos_pursuit_mode_pids=()
+		launch_dos_pursuit_mode_attack "${et_dos_attack}" "first_time"
+		pid_control_pursuit_mode "${et_dos_attack}" "evil_twin" &
+	else
+		xterm -hold -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "${deauth_et_cmd}" > /dev/null 2>&1 &
+		et_processes+=($!)
+		sleep 1
+	fi
 }
 
 #Create here-doc bash script used for wps pin attacks
@@ -7171,10 +7229,23 @@ function kill_et_windows() {
 
 	debug_print
 
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		kill_dos_pursuit_mode_processes
+		case ${et_dos_attack} in
+			"Mdk3"|"Wds Confusion")
+				killall mdk3 > /dev/null 2>&1
+			;;
+			"Aireplay")
+				killall aireplay-ng > /dev/null 2>&1
+			;;
+		esac
+	fi
+
 	for item in "${et_processes[@]}"; do
 		kill "${item}" &> /dev/null
 	done
 	kill ${et_process_control_window} &> /dev/null
+	killall hostapd > /dev/null 2>&1
 }
 
 #Kill DoS pursuit mode processes
@@ -7186,6 +7257,17 @@ function kill_dos_pursuit_mode_processes() {
 		kill -9 "${item}" &> /dev/null
 		wait "${item}" 2>/dev/null
 	done
+}
+
+#Set current channel reading it from file
+function recover_current_channel() {
+
+	debug_print
+
+	local recovered_channel=$(cat "${tmpdir}${channelfile}" 2> /dev/null)
+	if [ -n "${recovered_channel}" ]; then
+		channel="${recovered_channel}"
+	fi
 }
 
 #Convert capture file to hashcat format
@@ -8503,6 +8585,12 @@ function et_dos_menu() {
 				forbidden_menu_option
 			else
 				et_dos_attack="Mdk3"
+
+				ask_yesno 505 "yes"
+				if [ "${yesno}" = "y" ]; then
+					dos_pursuit_mode=1
+				fi
+
 				if [ "${et_mode}" = "et_captive_portal" ]; then
 					if [ ${internet_interface_selected} -eq 0 ]; then
 						language_strings "${language}" 330 "blue"
@@ -8546,6 +8634,12 @@ function et_dos_menu() {
 				forbidden_menu_option
 			else
 				et_dos_attack="Aireplay"
+
+				ask_yesno 505 "yes"
+				if [ "${yesno}" = "y" ]; then
+					dos_pursuit_mode=1
+				fi
+
 				if [ "${et_mode}" = "et_captive_portal" ]; then
 					if [ ${internet_interface_selected} -eq 0 ]; then
 						language_strings "${language}" 330 "blue"
@@ -8589,6 +8683,15 @@ function et_dos_menu() {
 				forbidden_menu_option
 			else
 				et_dos_attack="Wds Confusion"
+
+				ask_yesno 505 "yes"
+				if [ "${yesno}" = "y" ]; then
+					dos_pursuit_mode=1
+					echo
+					language_strings "${language}" 508 "yellow"
+					language_strings "${language}" 115 "read"
+				fi
+
 				if [ "${et_mode}" = "et_captive_portal" ]; then
 					if [ ${internet_interface_selected} -eq 0 ]; then
 						language_strings "${language}" 330 "blue"
