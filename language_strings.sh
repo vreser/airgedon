@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171030
+#Date.........: 20171104
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -5530,7 +5530,7 @@ function language_strings() {
 	arr["ITALIAN",505]="${pending_of_translation} Vuoi attivare la modalità \"modalità DoS persecuzione\"? ${blue_color}Questo riprenderà l'attacco se il target AP cambia i canali contrastando la \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["POLISH",505]="${pending_of_translation} Czy chcesz uaktywnić \"tryb pościgowy DoS\"? ${blue_color}To spowoduje ponowne atakowanie, jeśli docelowy punkt dostępu AP zmieni kanały, zmieniając kanały \"channel hopping\" ${normal_color}${visual_choice}"
 
-	arr["ENGLISH",506]="DoS attack with the \"DoS pursuit mode\" enabled will start when you press [Enter] on this window. To stop it you must  press [Ctrl+C] or close attack window"
+	arr["ENGLISH",506]="DoS attack with the \"DoS pursuit mode\" enabled will start when you press [Enter] on this window. To stop it you must press [Ctrl+C] or close attack window"
 	arr["SPANISH",506]="El ataque DoS con el \"modo persecución DoS\" activado comenzará cuando pulse [Enter] en esta ventana. Para detenerlo deberá pulsar [Ctrl+C] o cerrar la ventana del ataque"
 	arr["FRENCH",506]="${pending_of_translation} L'attaque DoS avec le mode \"mode de poursuite DoS\" activé démarre lorsque vous appuyez sur [Enter] dans cette fenêtre. Pour l'arrêter, vous devez appuyer sur [Ctrl+C] ou fermer la fenêtre d'attaque"
 	arr["CATALAN",506]="${pending_of_translation} L'atac DoS amb el \"mode persecució DOS\" activat començarà quan premeu [Enter] en aquesta finestra. Per aturar-lo haurà de prémer [Ctrl+C] o tancar la finestra de l'atac"
@@ -5559,6 +5559,16 @@ function language_strings() {
 	arr["GREEK",508]="${pending_of_translation} \"DoS λειτουργία αναζήτησης\" μπορεί να είναι ασταθής για αυτό το είδος DoS επίθεσης. Εάν δεν επιτυγχάνετε το βέλτιστο αποτέλεσμα, επιλέξτε μόνο ένα άλλο είδος επίθεσης"
 	arr["ITALIAN",508]="${pending_of_translation} \"modalità DoS persecuzione\" può essere instabile per questo tipo di attacco DoS. Se il risultato non è ottimale selezionare un altro tipo di attacco"
 	arr["POLISH",508]="${pending_of_translation} \"tryb pościgowy DoS\" może być niestabilny dla tego typu ataków DoS. Jeśli wynik nie jest optymalny, wybierz inny rodzaj ataku"
+
+	arr["ENGLISH",509]="If you want to integrate \"DoS pursuit mode\" on an Evil Twin attack, it will be needed another wifi interfaz in monitor mode to be able to perform it"
+	arr["SPANISH",509]="Si se quiere integrar el \"modo persecución DoS\" en un ataque Evil Twin, será necesario tener otro interfaz wifi en modo monitor para llevarlo a cabo"
+	arr["FRENCH",509]="${pending_of_translation} Si vous souhaitez intégrer le \"mode de poursuite DoS\" dans une attaque Evil Twin, il sera nécessaire d'avoir une autre interface wifi en mode moniteur pour l'effectuer"
+	arr["CATALAN",509]="${pending_of_translation} Si es vol integrar el \"mode persecució DOS\" en un atac Evil Twin, serà necessari tenir una altra interfície wifi en mode monitor per fer-ho"
+	arr["PORTUGUESE",509]="${pending_of_translation} Se você deseja integrar o \"modo de perseguição do DoS\" em um ataque Evil Twin, será necessário ter outra interface wifi no modo monitor para executá-lo"
+	arr["RUSSIAN",509]="${pending_of_translation} Если вы хотите интегрировать \"режим преследования DoS\" на атаку Evil Twin, понадобится другой интерфаз wifi в режиме монитора, чтобы выполнить его"
+	arr["GREEK",509]="${pending_of_translation} Εάν θέλετε να ενσωματώσετε το \"DoS λειτουργία αναζήτησης\" σε μια επίθεση Evil Twin, θα χρειαστεί ένα άλλο wifi διεπαφή στη λειτουργία παρακολούθησης για να το εκτελέσετε"
+	arr["ITALIAN",509]="${pending_of_translation} Se si desidera integrare la \"modalità DoS persecuzione\" in un attacco Evil Twin, sarà necessario disporre di un'altra interfaccia wifi in modalità monitor"
+	arr["POLISH",509]="${pending_of_translation} Jeśli chcesz zintegrować \"tryb pościgowy DoS\" w ataku Evil Twin, konieczne będzie posiadanie innego interfejsu wifi w trybie monitorowania, aby go przeprowadzić"
 
 	case "${3}" in
 		"yellow")
