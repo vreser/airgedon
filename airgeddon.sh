@@ -714,7 +714,7 @@ function check_to_set_managed() {
 
 	debug_print
 
-	check_interface_mode
+	check_interface_mode "${1}"
 	case "${ifacemode}" in
 		"Managed")
 			echo
@@ -737,7 +737,7 @@ function check_to_set_monitor() {
 
 	debug_print
 
-	check_interface_mode
+	check_interface_mode "${1}"
 	case "${ifacemode}" in
 		"Monitor")
 			echo
@@ -760,7 +760,9 @@ function check_monitor_enabled() {
 
 	debug_print
 
-	mode=$(iwconfig "${interface}" 2> /dev/null | grep Mode: | awk '{print $4}' | cut -d ':' -f 2)
+	mode=$(iwconfig "${1}" 2> /dev/null | grep Mode: | awk '{print $4}' | cut -d ':' -f 2)
+
+	current_iface_on_messages="${1}"
 
 	if [[ ${mode} != "Monitor" ]]; then
 		echo
@@ -776,7 +778,7 @@ function check_interface_wifi() {
 
 	debug_print
 
-	execute_iwconfig_fix
+	execute_iwconfig_fix "${1}"
 	return $?
 }
 
@@ -786,7 +788,8 @@ function execute_iwconfig_fix() {
 	debug_print
 
 	iwconfig_fix
-	iwcmd="iwconfig ${interface} ${iwcmdfix} > /dev/null 2> /dev/null"
+	current_iface_on_messages="${1}"
+	iwcmd="iwconfig ${1} ${iwcmdfix} > /dev/null 2> /dev/null"
 	eval "${iwcmd}"
 
 	return $?
@@ -1170,6 +1173,7 @@ function prepare_et_interface() {
 		if [ "${interface}" != "${new_interface}" ]; then
 			if check_interface_coherence; then
 				interface=${new_interface}
+				current_iface_on_messages="${interface}"
 			fi
 			echo
 			language_strings "${language}" 15 "yellow"
@@ -1210,6 +1214,7 @@ function restore_et_interface() {
 		[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
 		if [ "${interface}" != "${new_interface}" ]; then
 			interface=${new_interface}
+			current_iface_on_messages="${interface}"
 		fi
 	fi
 }
@@ -1229,7 +1234,7 @@ function managed_option() {
 
 	debug_print
 
-	if ! check_to_set_managed; then
+	if ! check_to_set_managed "${interface}"; then
 		return
 	fi
 
@@ -1245,6 +1250,7 @@ function managed_option() {
 	if [ "${interface}" != "${new_interface}" ]; then
 		if check_interface_coherence; then
 			interface=${new_interface}
+			current_iface_on_messages="${interface}"
 		fi
 		echo
 		language_strings "${language}" 15 "yellow"
@@ -1260,7 +1266,7 @@ function monitor_option() {
 
 	debug_print
 
-	if ! check_to_set_monitor; then
+	if ! check_to_set_monitor "${interface}"; then
 		return
 	fi
 
@@ -1300,6 +1306,7 @@ function monitor_option() {
 	if [ "${interface}" != "${new_interface}" ]; then
 		if check_interface_coherence; then
 			interface=${new_interface}
+			current_iface_on_messages="${interface}"
 		fi
 		echo
 		language_strings "${language}" 21 "yellow"
@@ -1315,19 +1322,20 @@ function check_interface_mode() {
 
 	debug_print
 
-	if ! execute_iwconfig_fix; then
+	current_iface_on_messages="${1}"
+	if ! execute_iwconfig_fix "${1}"; then
 		ifacemode="(Non wifi card)"
 		return 0
 	fi
 
-	modemanaged=$(iwconfig "${interface}" 2> /dev/null | grep Mode: | cut -d ':' -f 2 | cut -d ' ' -f 1)
+	modemanaged=$(iwconfig "${1}" 2> /dev/null | grep Mode: | cut -d ':' -f 2 | cut -d ' ' -f 1)
 
 	if [[ ${modemanaged} = "Managed" ]]; then
 		ifacemode="Managed"
 		return 0
 	fi
 
-	modemonitor=$(iwconfig "${interface}" 2> /dev/null | grep Mode: | awk '{print $4}' | cut -d ':' -f 2)
+	modemonitor=$(iwconfig "${1}" 2> /dev/null | grep Mode: | awk '{print $4}' | cut -d ':' -f 2)
 
 	if [[ ${modemonitor} = "Monitor" ]]; then
 		ifacemode="Monitor"
@@ -3127,7 +3135,7 @@ function mdk3_deauth_option() {
 	language_strings "${language}" 95 "title"
 	language_strings "${language}" 35 "green"
 
-	if ! check_monitor_enabled; then
+	if ! check_monitor_enabled "${interface}"; then
 		return
 	fi
 
@@ -3156,7 +3164,7 @@ function aireplay_deauth_option() {
 	language_strings "${language}" 96 "title"
 	language_strings "${language}" 36 "green"
 
-	if ! check_monitor_enabled; then
+	if ! check_monitor_enabled "${interface}"; then
 		return
 	fi
 
@@ -3185,7 +3193,7 @@ function wds_confusion_option() {
 	language_strings "${language}" 97 "title"
 	language_strings "${language}" 37 "green"
 
-	if ! check_monitor_enabled; then
+	if ! check_monitor_enabled "${interface}"; then
 		return
 	fi
 
@@ -3217,7 +3225,7 @@ function beacon_flood_option() {
 	language_strings "${language}" 98 "title"
 	language_strings "${language}" 38 "green"
 
-	if ! check_monitor_enabled; then
+	if ! check_monitor_enabled "${interface}"; then
 		return
 	fi
 
@@ -3246,7 +3254,7 @@ function auth_dos_option() {
 	language_strings "${language}" 99 "title"
 	language_strings "${language}" 39 "green"
 
-	if ! check_monitor_enabled; then
+	if ! check_monitor_enabled "${interface}"; then
 		return
 	fi
 
@@ -3277,7 +3285,7 @@ function michael_shutdown_option() {
 	language_strings "${language}" 100 "title"
 	language_strings "${language}" 40 "green"
 
-	if ! check_monitor_enabled; then
+	if ! check_monitor_enabled "${interface}"; then
 		return
 	fi
 
@@ -3310,7 +3318,7 @@ function wep_option() {
 		fi
 	fi
 
-	if ! check_monitor_enabled; then
+	if ! check_monitor_enabled "${interface}"; then
 		return 1
 	fi
 
@@ -3334,7 +3342,7 @@ function wps_attacks_parameters() {
 	debug_print
 
 	if [ "${1}" != "no_monitor_check" ]; then
-		if ! check_monitor_enabled; then
+		if ! check_monitor_enabled "${interface}"; then
 			return 1
 		fi
 
@@ -3400,7 +3408,7 @@ function print_iface_selected() {
 		language_strings "${language}" 115 "read"
 		select_interface
 	else
-		check_interface_mode
+		check_interface_mode "${interface}"
 		language_strings "${language}" 42 "blue"
 	fi
 }
@@ -4045,7 +4053,7 @@ function evil_twin_attacks_menu() {
 			if contains_element "${et_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
-				if check_interface_wifi; then
+				if check_interface_wifi "${interface}"; then
 					et_mode="et_onlyap"
 					et_dos_menu
 				else
@@ -4059,7 +4067,7 @@ function evil_twin_attacks_menu() {
 			if contains_element "${et_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
-				if check_interface_wifi; then
+				if check_interface_wifi "${interface}"; then
 					et_mode="et_sniffing"
 					et_dos_menu
 				else
@@ -4073,7 +4081,7 @@ function evil_twin_attacks_menu() {
 			if contains_element "${et_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
-				if check_interface_wifi; then
+				if check_interface_wifi "${interface}"; then
 					et_mode="et_sniffing_sslstrip"
 					et_dos_menu
 				else
@@ -4090,7 +4098,7 @@ function evil_twin_attacks_menu() {
 			if contains_element "${et_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
-				if check_interface_wifi; then
+				if check_interface_wifi "${interface}"; then
 					et_mode="et_captive_portal"
 					echo
 					language_strings "${language}" 316 "yellow"
@@ -4159,7 +4167,7 @@ function beef_pre_menu() {
 			if contains_element "${beef_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
-				if check_interface_wifi; then
+				if check_interface_wifi "${interface}"; then
 					et_mode="et_sniffing_sslstrip2"
 					get_bettercap_version
 					et_dos_menu
@@ -4514,7 +4522,7 @@ function offline_pin_generation_menu() {
 					ask_yesno 504 "yes"
 					if [ "${yesno}" = "y" ]; then
 
-						if check_monitor_enabled; then
+						if check_monitor_enabled "${interface}"; then
 							if hash wash 2> /dev/null; then
 								if check_json_option_on_wash; then
 
@@ -7705,7 +7713,7 @@ function capture_handshake() {
 		fi
 	fi
 
-	if ! check_monitor_enabled; then
+	if ! check_monitor_enabled "${interface}"; then
 		return 1
 	fi
 
@@ -8057,7 +8065,7 @@ function explore_for_targets_option() {
 	language_strings "${language}" 103 "title"
 	language_strings "${language}" 65 "green"
 
-	if ! check_monitor_enabled; then
+	if ! check_monitor_enabled "${interface}"; then
 		return 1
 	fi
 
@@ -8132,7 +8140,7 @@ function explore_for_wps_targets_option() {
 	language_strings "${language}" 103 "title"
 	language_strings "${language}" 65 "green"
 
-	if ! check_monitor_enabled; then
+	if ! check_monitor_enabled "${interface}"; then
 		return 1
 	fi
 
