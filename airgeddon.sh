@@ -8521,6 +8521,9 @@ function et_prerequisites() {
 	print_iface_selected
 	print_et_target_vars
 	print_iface_internet_selected
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		language_strings "${language}" 512 "blue"
+	fi
 	print_hint ${current_menu}
 	echo
 
