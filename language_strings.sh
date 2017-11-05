@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171104
+#Date.........: 20171105
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -3267,7 +3267,7 @@ function language_strings() {
 	arr["PORTUGUESE",279]="Selecione outra interface que tem acesso à internet :"
 	arr["RUSSIAN",279]="Выбор другого интерфейса с Интернет доступом :"
 	arr["GREEK",279]="Επιλέξτε άλλη διεπαφή με προσβαση στο διαδίκτυο :"
-	arr["ITALIAN",279]="Selezionare un'altra interfaccia che ha accesso a internet:"
+	arr["ITALIAN",279]="Selezionare un'altra interfaccia che ha accesso a internet :"
 	arr["POLISH",279]="${pending_of_translation} Wybierz inny interfejs, który ma dostęp do internet :"
 
 	arr["ENGLISH",280]="On this screen, it's supposed an additional interface to provide internet access is chosen, but you don't have anyone at this moment"
@@ -5560,15 +5560,35 @@ function language_strings() {
 	arr["ITALIAN",508]="${pending_of_translation} \"modalità DoS persecuzione\" può essere instabile per questo tipo di attacco DoS. Se il risultato non è ottimale selezionare un altro tipo di attacco"
 	arr["POLISH",508]="${pending_of_translation} \"tryb pościgowy DoS\" może być niestabilny dla tego typu ataków DoS. Jeśli wynik nie jest optymalny, wybierz inny rodzaj ataku"
 
-	arr["ENGLISH",509]="If you want to integrate \"DoS pursuit mode\" on an Evil Twin attack, it will be needed another wifi interfaz in monitor mode to be able to perform it"
-	arr["SPANISH",509]="Si se quiere integrar el \"modo persecución DoS\" en un ataque Evil Twin, será necesario tener otro interfaz wifi en modo monitor para llevarlo a cabo"
-	arr["FRENCH",509]="${pending_of_translation} Si vous souhaitez intégrer le \"mode de poursuite DoS\" dans une attaque Evil Twin, il sera nécessaire d'avoir une autre interface wifi en mode moniteur pour l'effectuer"
-	arr["CATALAN",509]="${pending_of_translation} Si es vol integrar el \"mode persecució DOS\" en un atac Evil Twin, serà necessari tenir una altra interfície wifi en mode monitor per fer-ho"
-	arr["PORTUGUESE",509]="${pending_of_translation} Se você deseja integrar o \"modo de perseguição do DoS\" em um ataque Evil Twin, será necessário ter outra interface wifi no modo monitor para executá-lo"
-	arr["RUSSIAN",509]="${pending_of_translation} Если вы хотите интегрировать \"режим преследования DoS\" на атаку Evil Twin, понадобится другой интерфаз wifi в режиме монитора, чтобы выполнить его"
-	arr["GREEK",509]="${pending_of_translation} Εάν θέλετε να ενσωματώσετε το \"DoS λειτουργία αναζήτησης\" σε μια επίθεση Evil Twin, θα χρειαστεί ένα άλλο wifi διεπαφή στη λειτουργία παρακολούθησης για να το εκτελέσετε"
-	arr["ITALIAN",509]="${pending_of_translation} Se si desidera integrare la \"modalità DoS persecuzione\" in un attacco Evil Twin, sarà necessario disporre di un'altra interfaccia wifi in modalità monitor"
-	arr["POLISH",509]="${pending_of_translation} Jeśli chcesz zintegrować \"tryb pościgowy DoS\" w ataku Evil Twin, konieczne będzie posiadanie innego interfejsu wifi w trybie monitorowania, aby go przeprowadzić"
+	arr["ENGLISH",509]="If you want to integrate \"DoS pursuit mode\" on an Evil Twin attack, another additional wifi interface in monitor mode will be needed to be able to perform it"
+	arr["SPANISH",509]="Si se quiere integrar el \"modo persecución DoS\" en un ataque Evil Twin, será necesario tener otro interfaz wifi adicional en modo monitor para llevarlo a cabo"
+	arr["FRENCH",509]="${pending_of_translation} Si vous souhaitez intégrer le \"mode de poursuite DoS\" dans une attaque Evil Twin, il sera nécessaire d'avoir une autre interface wifi supplémentaire en mode moniteur pour l'effectuer"
+	arr["CATALAN",509]="${pending_of_translation} Si es vol integrar el \"mode persecució DOS\" en un atac Evil Twin, serà necessari tenir una altra interfície wifi addicional en mode monitor per fer-ho"
+	arr["PORTUGUESE",509]="${pending_of_translation} Se você deseja integrar o \"modo de perseguição do DoS\" em um ataque Evil Twin, será necessário ter outra interface wifi adicional no modo monitor para executá-lo"
+	arr["RUSSIAN",509]="${pending_of_translation} Если вы хотите интегрировать \"режим преследования DoS\" на атаку Evil Twin, потребуется еще один дополнительный интерфейс wifi в режиме монитора, чтобы выполнить его"
+	arr["GREEK",509]="${pending_of_translation} Εάν θέλετε να ενσωματώσετε το \"DoS λειτουργία αναζήτησης\" σε μια επίθεση Evil Twin, μια άλλη πρόσθετη διεπαφή wifi στη λειτουργία παρακολούθησης θα χρειαστεί για να μπορέσει να την εκτελέσει"
+	arr["ITALIAN",509]="${pending_of_translation} Se si desidera integrare la \"modalità DoS persecuzione\" in un attacco Evil Twin, sarà necessario disporre di un'altra interfaccia wifi aggiuntiva in modalità monitor"
+	arr["POLISH",509]="${pending_of_translation} Jeśli chcesz zintegrować \"tryb pościgowy DoS\" w ataku Evil Twin, konieczne będzie posiadanie innego dodatkowego interfejsu wifi w trybie monitorowania, aby go przeprowadzić"
+
+	arr["ENGLISH",510]="On this screen, it's supposed an additional wifi interface is chosen, but you don't have anyone at this moment"
+	arr["SPANISH",510]="En esta pantalla, se supone que deberías elegir otro interfaz wifi adicional, pero no dispones de ninguno en este momento"
+	arr["FRENCH",510]="${pending_of_translation} Sur cet écran, vous êtes supposé choisir une autre interface wifi supplémentaire, mais vous n'en avez pas en ce moment"
+	arr["CATALAN",510]="${pending_of_translation} En aquesta pantalla, se suposa que hauries de triar un altre interfície wifi addicional, però no disposes de cap en aquest moment"
+	arr["PORTUGUESE",510]="${pending_of_translation} Nesta tela, é suposto escolher outra interface wifi adicional, mas você não possui nenhuma neste momento"
+	arr["RUSSIAN",510]="${pending_of_translation} На этом экране предполагается, что будет выбран дополнительный интерфейс wifi, но в данный момент у вас нет никого"
+	arr["GREEK",510]="${pending_of_translation} Σε αυτήν την οθόνη, υποτίθεται ότι έχει επιλεγεί μια πρόσθετη διεπαφή wifi, αλλά δεν έχετε κανέναν αυτήν τη στιγμή"
+	arr["ITALIAN",510]="${pending_of_translation} In questa schermata, dovresti scegliere un'altra interfaccia wifi aggiuntiva, ma in questo momento non ne hai"
+	arr["POLISH",510]="${pending_of_translation} Na tym ekranie należy wybrać inny dodatkowy interfejs wifi, ale nie masz go w tym momencie"
+
+	arr["ENGLISH",511]="Select another wireless interface :"
+	arr["SPANISH",511]="Selecciona otra interfaz inalámbrica :"
+	arr["FRENCH",511]="${pending_of_translation} Sélectionnez une autre interface sans fil :"
+	arr["CATALAN",511]="${pending_of_translation} Selecciona una altra interfície sense fils :"
+	arr["PORTUGUESE",511]="${pending_of_translation} Selecione outra interface sem fio :"
+	arr["RUSSIAN",511]="${pending_of_translation} Выберите другой беспроводной интерфейс :"
+	arr["GREEK",511]="${pending_of_translation} Επιλέξτε άλλη ασύρματη διεπαφή :"
+	arr["ITALIAN",511]="${pending_of_translation} Seleziona un'altra interfaccia wireless :"
+	arr["POLISH",511]="${pending_of_translation} Wybierz inny interfejs bezprzewodowy :"
 
 	case "${3}" in
 		"yellow")

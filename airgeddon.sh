@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171104
+#Date.........: 20171105
 #Version......: 7.23
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -1675,6 +1675,97 @@ function set_chipset() {
 	fi
 }
 
+#Secondary wifi interface selection menu
+function select_secondary_wifi_interface() {
+
+	debug_print
+
+	if [ "${return_to_et_main_menu}" -eq 1 ]; then
+		return 1
+	fi
+
+	current_menu="evil_twin_attacks_menu"
+	clear
+	case ${et_mode} in
+		"et_onlyap")
+			language_strings "${language}" 270 "title"
+		;;
+		"et_sniffing")
+			language_strings "${language}" 291 "title"
+		;;
+		"et_sniffing_sslstrip")
+			language_strings "${language}" 292 "title"
+		;;
+		"et_sniffing_sslstrip2")
+			language_strings "${language}" 397 "title"
+		;;
+		"et_captive_portal")
+			language_strings "${language}" 293 "title"
+		;;
+	esac
+
+	sec_wifi_ifaces=$(iwconfig 2>&1 | grep "802.11" | grep -v "no wireless extensions" | grep "${interface}" -v | awk '{print $1}')
+
+	option_counter=0
+	for item in ${sec_wifi_ifaces}; do
+
+		if [ ${option_counter} -eq 0 ]; then
+			language_strings "${language}" 511 "green"
+			print_simple_separator
+		fi
+
+		option_counter=$((option_counter + 1))
+		if [ ${#option_counter} -eq 1 ]; then
+			spaceiface="  "
+		else
+			spaceiface=" "
+		fi
+		set_chipset "${item}"
+		echo -ne "${option_counter}.${spaceiface}${item} "
+		if [ -z "${chipset}" ]; then
+			language_strings "${language}" 245 "blue"
+		else
+			echo -e "${blue_color}// ${yellow_color}Chipset:${normal_color} ${chipset}"
+		fi
+	done
+
+	if [ ${option_counter} -eq 0 ]; then
+		return_to_et_main_menu=1
+		return_to_et_main_menu_from_beef=1
+		echo
+		language_strings "${language}" 510 "red"
+		language_strings "${language}" 115 "read"
+		return 1
+	fi
+
+	option_counter_back=$((option_counter + 1))
+	if [ ${option_counter: -1} -eq 9 ]; then
+		spaceiface+=" "
+	fi
+	print_simple_separator
+	language_strings "${language}" 331
+	print_hint ${current_menu}
+
+	read -r secondary_wifi_iface
+	if [[ ! ${secondary_wifi_iface} =~ ^[[:digit:]]+$ ]] || (( secondary_wifi_iface < 1 || secondary_wifi_iface > option_counter_back )); then
+		invalid_secondary_wifi_iface_selected
+	elif [ "${secondary_wifi_iface}" -eq ${option_counter_back} ]; then
+		return_to_et_main_menu=1
+		return_to_et_main_menu_from_beef=1
+		return 1
+	else
+		option_counter2=0
+		for item2 in ${sec_wifi_ifaces}; do
+			option_counter2=$((option_counter2 + 1))
+			if [[ "${secondary_wifi_iface}" = "${option_counter2}" ]]; then
+				secondary_wifi_interface=${item2}
+				break
+			fi
+		done
+		return 0
+	fi
+}
+
 #Internet interface selection menu
 function select_internet_interface() {
 
@@ -1705,6 +1796,10 @@ function select_internet_interface() {
 	esac
 
 	inet_ifaces=$(ip link | grep -E "^[0-9]+" | cut -d ':' -f 2 | awk '{print $1}' | grep lo -v | grep "${interface}" -v)
+
+	if [ -n "${secondary_wifi_interface}" ]; then
+		inet_ifaces=$(echo "${inet_ifaces}" | grep "${secondary_wifi_interface}" -v)
+	fi
 
 	option_counter=0
 	for item in ${inet_ifaces}; do
@@ -2751,49 +2846,58 @@ function launch_dos_pursuit_mode_attack() {
 		"mdk3 amok attack")
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
+			interface_pursuit_mode_deauth="${interface}"
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface_pursuit_mode_deauth}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
 		;;
 		"aireplay deauth attack")
 			${airmon} start "${interface}" "${channel}" > /dev/null 2>&1
 			dos_delay=3
 			interface_pursuit_mode_scan="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e aireplay-ng --deauth 0 -a "${bssid}" --ignore-negative-one "${interface}" > /dev/null 2>&1 &
+			interface_pursuit_mode_deauth="${interface}"
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e aireplay-ng --deauth 0 -a "${bssid}" --ignore-negative-one "${interface_pursuit_mode_deauth}" > /dev/null 2>&1 &
 		;;
 		"wids / wips / wds confusion attack")
 			dos_delay=10
 			interface_pursuit_mode_scan="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
+			interface_pursuit_mode_deauth="${interface}"
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface_pursuit_mode_deauth}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
 		;;
 		"beacon flood attack")
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1 &
+			interface_pursuit_mode_deauth="${interface}"
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface_pursuit_mode_deauth}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1 &
 		;;
 		"auth dos attack")
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1 &
+			interface_pursuit_mode_deauth="${interface}"
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface_pursuit_mode_deauth}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1 &
 		;;
 		"michael shutdown attack")
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1 &
+			interface_pursuit_mode_deauth="${interface}"
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface_pursuit_mode_deauth}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1 &
 		;;
 		"Mdk3")
 			dos_delay=1
-			interface_pursuit_mode_scan="${iface_monitor_et_deauth}"
-			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "mdk3 ${iface_monitor_et_deauth} d -b ${tmpdir}\"bl.txt\" -c ${channel}" > /dev/null 2>&1 &
+			interface_pursuit_mode_scan="${secondary_wifi_interface}"
+			interface_pursuit_mode_deauth="${secondary_wifi_interface}"
+			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "mdk3 ${interface_pursuit_mode_deauth} d -b ${tmpdir}\"bl.txt\" -c ${channel}" > /dev/null 2>&1 &
 		;;
 		"Aireplay")
-			iwconfig "${iface_monitor_et_deauth}" channel "${channel}" > /dev/null 2>&1
+			interface_pursuit_mode_scan="${secondary_wifi_interface}"
+			interface_pursuit_mode_deauth="${secondary_wifi_interface}"
+			iwconfig "${interface_pursuit_mode_deauth}" channel "${channel}" > /dev/null 2>&1
 			dos_delay=3
-			interface_pursuit_mode_scan="${iface_monitor_et_deauth}"
-			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "aireplay-ng --deauth 0 -a ${bssid} --ignore-negative-one ${iface_monitor_et_deauth}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "aireplay-ng --deauth 0 -a ${bssid} --ignore-negative-one ${interface_pursuit_mode_deauth}" > /dev/null 2>&1 &
 		;;
 		"Wds Confusion")
 			dos_delay=10
-			interface_pursuit_mode_scan="${iface_monitor_et_deauth}"
-			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "mdk3 ${iface_monitor_et_deauth} w -e ${essid} -c ${channel}" > /dev/null 2>&1 &
+			interface_pursuit_mode_scan="${secondary_wifi_interface}"
+			interface_pursuit_mode_deauth="${secondary_wifi_interface}"
+			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "mdk3 ${interface_pursuit_mode_deauth} w -e ${essid} -c ${channel}" > /dev/null 2>&1 &
 		;;
 	esac
 
@@ -3566,6 +3670,7 @@ function initialize_menu_and_print_selections() {
 			captive_portal_mode="internet"
 			et_mode=""
 			et_processes=()
+			secondary_wifi_interface=""
 			print_iface_selected
 			print_all_target_vars_et
 		;;
@@ -8597,9 +8702,14 @@ function et_dos_menu() {
 			else
 				et_dos_attack="Mdk3"
 
-				ask_yesno 505 "yes"
+				echo
+				language_strings "${language}" 509 "yellow"
+
+				ask_yesno 505 "no"
 				if [ "${yesno}" = "y" ]; then
 					dos_pursuit_mode=1
+					select_secondary_wifi_interface
+					#TODO monitor mode validation
 				fi
 
 				if [ "${et_mode}" = "et_captive_portal" ]; then
@@ -8646,9 +8756,14 @@ function et_dos_menu() {
 			else
 				et_dos_attack="Aireplay"
 
-				ask_yesno 505 "yes"
+				echo
+				language_strings "${language}" 509 "yellow"
+
+				ask_yesno 505 "no"
 				if [ "${yesno}" = "y" ]; then
 					dos_pursuit_mode=1
+					select_secondary_wifi_interface
+					#TODO monitor mode validation
 				fi
 
 				if [ "${et_mode}" = "et_captive_portal" ]; then
@@ -8695,12 +8810,17 @@ function et_dos_menu() {
 			else
 				et_dos_attack="Wds Confusion"
 
-				ask_yesno 505 "yes"
+				echo
+				language_strings "${language}" 509 "yellow"
+
+				ask_yesno 505 "no"
 				if [ "${yesno}" = "y" ]; then
 					dos_pursuit_mode=1
 					echo
 					language_strings "${language}" 508 "yellow"
 					language_strings "${language}" 115 "read"
+					select_secondary_wifi_interface
+					#TODO monitor mode validation
 				fi
 
 				if [ "${et_mode}" = "et_captive_portal" ]; then
@@ -8878,6 +8998,19 @@ function invalid_internet_iface_selected() {
 	language_strings "${language}" 115 "read"
 	echo
 	select_internet_interface
+}
+
+#Show message for invalid selected secondary wireless interface
+function invalid_secondary_wifi_iface_selected() {
+
+	debug_print
+
+	echo
+	language_strings "${language}" 77 "red"
+	echo
+	language_strings "${language}" 115 "read"
+	echo
+	select_secondary_wifi_interface
 }
 
 #Manage behavior of captured traps
