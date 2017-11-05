@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171105
+#Date.........: 20171106
 #Version......: 7.23
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -1683,8 +1683,8 @@ function set_chipset() {
 	fi
 }
 
-#Secondary wifi interface selection menu
-function select_secondary_wifi_interface() {
+#Secondary interface selection menu for Evil Twin attacks
+function select_secondary_et_interface() {
 
 	debug_print
 
@@ -1712,108 +1712,24 @@ function select_secondary_wifi_interface() {
 		;;
 	esac
 
-	sec_wifi_ifaces=$(iwconfig 2>&1 | grep "802.11" | grep -v "no wireless extensions" | grep "${interface}" -v | awk '{print $1}')
+	if [ "${1}" = "dos_pursuit_mode" ]; then
+		secondary_ifaces=$(iwconfig 2>&1 | grep "802.11" | grep -v "no wireless extensions" | grep "${interface}" -v | awk '{print $1}')
+	elif [ "${1}" = "internet" ]; then
+		secondary_ifaces=$(ip link | grep -E "^[0-9]+" | cut -d ':' -f 2 | awk '{print $1}' | grep lo -v | grep "${interface}" -v)
+		if [ -n "${secondary_wifi_interface}" ]; then
+			secondary_ifaces=$(echo "${secondary_ifaces}" | grep "${secondary_wifi_interface}" -v)
+		fi
+	fi
 
 	option_counter=0
-	for item in ${sec_wifi_ifaces}; do
+	for item in ${secondary_ifaces}; do
 
 		if [ ${option_counter} -eq 0 ]; then
-			language_strings "${language}" 511 "green"
-			print_simple_separator
-		fi
-
-		option_counter=$((option_counter + 1))
-		if [ ${#option_counter} -eq 1 ]; then
-			spaceiface="  "
-		else
-			spaceiface=" "
-		fi
-		set_chipset "${item}"
-		echo -ne "${option_counter}.${spaceiface}${item} "
-		if [ -z "${chipset}" ]; then
-			language_strings "${language}" 245 "blue"
-		else
-			echo -e "${blue_color}// ${yellow_color}Chipset:${normal_color} ${chipset}"
-		fi
-	done
-
-	if [ ${option_counter} -eq 0 ]; then
-		return_to_et_main_menu=1
-		return_to_et_main_menu_from_beef=1
-		echo
-		language_strings "${language}" 510 "red"
-		language_strings "${language}" 115 "read"
-		return 1
-	fi
-
-	option_counter_back=$((option_counter + 1))
-	if [ ${option_counter: -1} -eq 9 ]; then
-		spaceiface+=" "
-	fi
-	print_simple_separator
-	language_strings "${language}" 331
-	print_hint ${current_menu}
-
-	read -r secondary_wifi_iface
-	if [[ ! ${secondary_wifi_iface} =~ ^[[:digit:]]+$ ]] || (( secondary_wifi_iface < 1 || secondary_wifi_iface > option_counter_back )); then
-		invalid_secondary_wifi_iface_selected
-	elif [ "${secondary_wifi_iface}" -eq ${option_counter_back} ]; then
-		return_to_et_main_menu=1
-		return_to_et_main_menu_from_beef=1
-		return 1
-	else
-		option_counter2=0
-		for item2 in ${sec_wifi_ifaces}; do
-			option_counter2=$((option_counter2 + 1))
-			if [[ "${secondary_wifi_iface}" = "${option_counter2}" ]]; then
-				secondary_wifi_interface=${item2}
-				break
+			if [ "${1}" = "dos_pursuit_mode" ]; then
+				language_strings "${language}" 511 "green"
+			elif [ "${1}" = "internet" ]; then
+				language_strings "${language}" 279 "green"
 			fi
-		done
-		return 0
-	fi
-}
-
-#Internet interface selection menu
-function select_internet_interface() {
-
-	debug_print
-
-	if [ "${return_to_et_main_menu}" -eq 1 ]; then
-		return 1
-	fi
-
-	current_menu="evil_twin_attacks_menu"
-	clear
-	case ${et_mode} in
-		"et_onlyap")
-			language_strings "${language}" 270 "title"
-		;;
-		"et_sniffing")
-			language_strings "${language}" 291 "title"
-		;;
-		"et_sniffing_sslstrip")
-			language_strings "${language}" 292 "title"
-		;;
-		"et_sniffing_sslstrip2")
-			language_strings "${language}" 397 "title"
-		;;
-		"et_captive_portal")
-			language_strings "${language}" 293 "title"
-		;;
-	esac
-
-	inet_ifaces=$(ip link | grep -E "^[0-9]+" | cut -d ':' -f 2 | awk '{print $1}' | grep lo -v | grep "${interface}" -v)
-
-	if [ -n "${secondary_wifi_interface}" ]; then
-		inet_ifaces=$(echo "${inet_ifaces}" | grep "${secondary_wifi_interface}" -v)
-	fi
-
-	option_counter=0
-	for item in ${inet_ifaces}; do
-
-		if [ ${option_counter} -eq 0 ]; then
-			language_strings "${language}" 279 "green"
 			print_simple_separator
 		fi
 
@@ -1835,8 +1751,13 @@ function select_internet_interface() {
 	if [ ${option_counter} -eq 0 ]; then
 		return_to_et_main_menu=1
 		return_to_et_main_menu_from_beef=1
+
 		echo
-		language_strings "${language}" 280 "red"
+		if [ "${1}" = "dos_pursuit_mode" ]; then
+			language_strings "${language}" 510 "red"
+		elif [ "${1}" = "internet" ]; then
+			language_strings "${language}" 280 "red"
+		fi
 		language_strings "${language}" 115 "read"
 		return 1
 	fi
@@ -1849,19 +1770,23 @@ function select_internet_interface() {
 	language_strings "${language}" 331
 	print_hint ${current_menu}
 
-	read -r inet_iface
-	if [[ ! ${inet_iface} =~ ^[[:digit:]]+$ ]] || (( inet_iface < 1 || inet_iface > option_counter_back )); then
-		invalid_internet_iface_selected
-	elif [ "${inet_iface}" -eq ${option_counter_back} ]; then
+	read -r secondary_iface
+	if [[ ! ${secondary_iface} =~ ^[[:digit:]]+$ ]] || (( secondary_iface < 1 || secondary_iface > option_counter_back )); then
+		invalid_secondary_iface_selected "dos_pursuit_mode"
+	elif [ "${secondary_iface}" -eq ${option_counter_back} ]; then
 		return_to_et_main_menu=1
 		return_to_et_main_menu_from_beef=1
 		return 1
 	else
 		option_counter2=0
-		for item2 in ${inet_ifaces}; do
+		for item2 in ${secondary_ifaces}; do
 			option_counter2=$((option_counter2 + 1))
-			if [[ "${inet_iface}" = "${option_counter2}" ]]; then
-				internet_interface=${item2}
+			if [[ "${secondary_iface}" = "${option_counter2}" ]]; then
+				if [ "${1}" = "dos_pursuit_mode" ]; then
+					secondary_wifi_interface=${item2}
+				elif [ "${1}" = "internet" ]; then
+					internet_interface=${item2}
+				fi
 				break
 			fi
 		done
@@ -8719,7 +8644,7 @@ function et_dos_menu() {
 				ask_yesno 505 "no"
 				if [ "${yesno}" = "y" ]; then
 					dos_pursuit_mode=1
-					select_secondary_wifi_interface
+					select_secondary_et_interface "dos_pursuit_mode"
 					#TODO monitor mode validation
 				fi
 
@@ -8773,7 +8698,7 @@ function et_dos_menu() {
 				ask_yesno 505 "no"
 				if [ "${yesno}" = "y" ]; then
 					dos_pursuit_mode=1
-					select_secondary_wifi_interface
+					select_secondary_et_interface "dos_pursuit_mode"
 					#TODO monitor mode validation
 				fi
 
@@ -8830,7 +8755,7 @@ function et_dos_menu() {
 					echo
 					language_strings "${language}" 508 "yellow"
 					language_strings "${language}" 115 "read"
-					select_secondary_wifi_interface
+					select_secondary_et_interface "dos_pursuit_mode"
 					#TODO monitor mode validation
 				fi
 
@@ -8898,12 +8823,12 @@ function detect_internet_interface() {
 		language_strings "${language}" 285 "blue"
 		ask_yesno 284 "yes"
 		if [ "${yesno}" = "n" ]; then
-			if ! select_internet_interface; then
+			if ! select_secondary_et_interface "internet"; then
 				return 1
 			fi
 		fi
 	else
-		if ! select_internet_interface; then
+		if ! select_secondary_et_interface "internet"; then
 			return 1
 		fi
 	fi
@@ -8998,8 +8923,8 @@ function invalid_iface_selected() {
 	select_interface
 }
 
-#Show message for invalid selected internet interface
-function invalid_internet_iface_selected() {
+#Show message for invalid selected secondary interface
+function invalid_secondary_iface_selected() {
 
 	debug_print
 
@@ -9008,20 +8933,7 @@ function invalid_internet_iface_selected() {
 	echo
 	language_strings "${language}" 115 "read"
 	echo
-	select_internet_interface
-}
-
-#Show message for invalid selected secondary wireless interface
-function invalid_secondary_wifi_iface_selected() {
-
-	debug_print
-
-	echo
-	language_strings "${language}" 77 "red"
-	echo
-	language_strings "${language}" 115 "read"
-	echo
-	select_secondary_wifi_interface
+	select_secondary_et_interface "${1}"
 }
 
 #Manage behavior of captured traps
