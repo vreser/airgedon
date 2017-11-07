@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171106
+#Date.........: 20171108
 #Version......: 7.23
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -765,9 +765,6 @@ function check_monitor_enabled() {
 	current_iface_on_messages="${1}"
 
 	if [[ ${mode} != "Monitor" ]]; then
-		echo
-		language_strings "${language}" 14 "red"
-		language_strings "${language}" 115 "read"
 		return 1
 	fi
 	return 0
@@ -3061,6 +3058,9 @@ function mdk3_deauth_option() {
 	language_strings "${language}" 35 "green"
 
 	if ! check_monitor_enabled "${interface}"; then
+		echo
+		language_strings "${language}" 14 "red"
+		language_strings "${language}" 115 "read"
 		return
 	fi
 
@@ -3090,6 +3090,9 @@ function aireplay_deauth_option() {
 	language_strings "${language}" 36 "green"
 
 	if ! check_monitor_enabled "${interface}"; then
+		echo
+		language_strings "${language}" 14 "red"
+		language_strings "${language}" 115 "read"
 		return
 	fi
 
@@ -3119,6 +3122,9 @@ function wds_confusion_option() {
 	language_strings "${language}" 37 "green"
 
 	if ! check_monitor_enabled "${interface}"; then
+		echo
+		language_strings "${language}" 14 "red"
+		language_strings "${language}" 115 "read"
 		return
 	fi
 
@@ -3151,6 +3157,9 @@ function beacon_flood_option() {
 	language_strings "${language}" 38 "green"
 
 	if ! check_monitor_enabled "${interface}"; then
+		echo
+		language_strings "${language}" 14 "red"
+		language_strings "${language}" 115 "read"
 		return
 	fi
 
@@ -3180,6 +3189,9 @@ function auth_dos_option() {
 	language_strings "${language}" 39 "green"
 
 	if ! check_monitor_enabled "${interface}"; then
+		echo
+		language_strings "${language}" 14 "red"
+		language_strings "${language}" 115 "read"
 		return
 	fi
 
@@ -3211,6 +3223,9 @@ function michael_shutdown_option() {
 	language_strings "${language}" 40 "green"
 
 	if ! check_monitor_enabled "${interface}"; then
+		echo
+		language_strings "${language}" 14 "red"
+		language_strings "${language}" 115 "read"
 		return
 	fi
 
@@ -3244,6 +3259,9 @@ function wep_option() {
 	fi
 
 	if ! check_monitor_enabled "${interface}"; then
+		echo
+		language_strings "${language}" 14 "red"
+		language_strings "${language}" 115 "read"
 		return 1
 	fi
 
@@ -3268,6 +3286,9 @@ function wps_attacks_parameters() {
 
 	if [ "${1}" != "no_monitor_check" ]; then
 		if ! check_monitor_enabled "${interface}"; then
+			echo
+			language_strings "${language}" 14 "red"
+			language_strings "${language}" 115 "read"
 			return 1
 		fi
 
@@ -4485,6 +4506,10 @@ function offline_pin_generation_menu() {
 								language_strings "${language}" 492 "red"
 								language_strings "${language}" 115 "read"
 							fi
+						else
+							echo
+							language_strings "${language}" 14 "red"
+							language_strings "${language}" 115 "read"
 						fi
 					fi
 				else
@@ -7639,6 +7664,9 @@ function capture_handshake() {
 	fi
 
 	if ! check_monitor_enabled "${interface}"; then
+		echo
+		language_strings "${language}" 14 "red"
+		language_strings "${language}" 115 "read"
 		return 1
 	fi
 
@@ -7991,6 +8019,9 @@ function explore_for_targets_option() {
 	language_strings "${language}" 65 "green"
 
 	if ! check_monitor_enabled "${interface}"; then
+		echo
+		language_strings "${language}" 14 "red"
+		language_strings "${language}" 115 "read"
 		return 1
 	fi
 
@@ -8066,6 +8097,9 @@ function explore_for_wps_targets_option() {
 	language_strings "${language}" 65 "green"
 
 	if ! check_monitor_enabled "${interface}"; then
+		echo
+		language_strings "${language}" 14 "red"
+		language_strings "${language}" 115 "read"
 		return 1
 	fi
 
