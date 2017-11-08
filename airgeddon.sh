@@ -1710,6 +1710,48 @@ function set_chipset() {
 	fi
 }
 
+#Manage and validate the prerequisites for DoS Pursuit mode integrated on Evil Twin attacks
+function dos_pursuit_mode_et_handler() {
+
+	debug_print
+
+	ask_yesno 505 "no"
+	if [ "${yesno}" = "y" ]; then
+		dos_pursuit_mode=1
+
+		if [ "${et_dos_attack}" = "Wds Confusion" ]; then
+			echo
+			language_strings "${language}" 508 "yellow"
+			language_strings "${language}" 115 "read"
+		fi
+
+		if select_secondary_et_interface "dos_pursuit_mode"; then
+			if ! check_monitor_enabled "${secondary_wifi_interface}"; then
+				echo
+				language_strings "${language}" 14 "yellow"
+				echo
+				language_strings "${language}" 513 "blue"
+				language_strings "${language}" 115 "read"
+				echo
+				if ! monitor_option "${secondary_wifi_interface}"; then
+					return_to_et_main_menu=1
+					return
+				else
+					echo
+					language_strings "${language}" 34 "yellow"
+					language_strings "${language}" 115 "read"
+				fi
+			else
+				echo
+				language_strings "${language}" 34 "yellow"
+				language_strings "${language}" 115 "read"
+			fi
+		else
+			return
+		fi
+	fi
+}
+
 #Secondary interface selection menu for Evil Twin attacks
 function select_secondary_et_interface() {
 
@@ -8705,12 +8747,7 @@ function et_dos_menu() {
 				echo
 				language_strings "${language}" 509 "yellow"
 
-				ask_yesno 505 "no"
-				if [ "${yesno}" = "y" ]; then
-					dos_pursuit_mode=1
-					select_secondary_et_interface "dos_pursuit_mode"
-					#TODO monitor mode validation
-				fi
+				dos_pursuit_mode_et_handler
 
 				if [ "${et_mode}" = "et_captive_portal" ]; then
 					if [ ${internet_interface_selected} -eq 0 ]; then
@@ -8759,12 +8796,7 @@ function et_dos_menu() {
 				echo
 				language_strings "${language}" 509 "yellow"
 
-				ask_yesno 505 "no"
-				if [ "${yesno}" = "y" ]; then
-					dos_pursuit_mode=1
-					select_secondary_et_interface "dos_pursuit_mode"
-					#TODO monitor mode validation
-				fi
+				dos_pursuit_mode_et_handler
 
 				if [ "${et_mode}" = "et_captive_portal" ]; then
 					if [ ${internet_interface_selected} -eq 0 ]; then
@@ -8813,15 +8845,7 @@ function et_dos_menu() {
 				echo
 				language_strings "${language}" 509 "yellow"
 
-				ask_yesno 505 "no"
-				if [ "${yesno}" = "y" ]; then
-					dos_pursuit_mode=1
-					echo
-					language_strings "${language}" 508 "yellow"
-					language_strings "${language}" 115 "read"
-					select_secondary_et_interface "dos_pursuit_mode"
-					#TODO monitor mode validation
-				fi
+				dos_pursuit_mode_et_handler
 
 				if [ "${et_mode}" = "et_captive_portal" ]; then
 					if [ ${internet_interface_selected} -eq 0 ]; then

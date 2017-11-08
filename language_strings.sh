@@ -5600,6 +5600,16 @@ function language_strings() {
 	arr["ITALIAN",512]="${pending_of_translation} Interfaccia per \"modalità DoS persecuzione\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["POLISH",512]="${pending_of_translation} Interfejs dla \"tryb pościgowy DoS\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 
+	arr["ENGLISH",513]="Interface will be tried to be changed to monitor mode automatically"
+	arr["SPANISH",513]="Se intentará cambiar la interfaz a modo monitor automáticamente"
+	arr["FRENCH",513]="${pending_of_translation} Il va essayer de changer l'interface pour mode moniteur automatiquement"
+	arr["CATALAN",513]="${pending_of_translation} S'intentarà canviar la interfície a mode monitor automàticament"
+	arr["PORTUGUESE",513]="${pending_of_translation} Ele tentará mudar a interface para monitorar o modo automaticamente"
+	arr["RUSSIAN",513]="${pending_of_translation} Интерфейс будет пытаться автоматически переключиться в режим мониторинга"
+	arr["GREEK",513]="${pending_of_translation} Η διασύνδεση θα δοκιμαστεί να αλλάξει αυτόματα στη λειτουργία παρακολούθησης"
+	arr["ITALIAN",513]="${pending_of_translation} Cercherà di cambiare automaticamente l'interfaccia alla modalità monitor"
+	arr["POLISH",513]="${pending_of_translation} Spowoduje to automatyczną zmianę interfejsu w tryb monitorowania"
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"
