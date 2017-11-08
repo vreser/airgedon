@@ -1231,31 +1231,44 @@ function managed_option() {
 
 	debug_print
 
-	if ! check_to_set_managed "${interface}"; then
-		return
+	if ! check_to_set_managed "${1}"; then
+		return 1
 	fi
 
 	disable_rfkill
 
 	language_strings "${language}" 17 "blue"
-	ifconfig "${interface}" up
+	ifconfig "${1}" up
 
-	new_interface=$(${airmon} stop "${interface}" 2> /dev/null | grep station | head -n 1)
-	ifacemode="Managed"
-	[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
+	if [ "${1}" = "${interface}" ]; then
+		new_interface=$(${airmon} stop "${1}" 2> /dev/null | grep station | head -n 1)
+		ifacemode="Managed"
+		[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
 
-	if [ "${interface}" != "${new_interface}" ]; then
-		if check_interface_coherence; then
-			interface=${new_interface}
-			current_iface_on_messages="${interface}"
+		if [ "${interface}" != "${new_interface}" ]; then
+			if check_interface_coherence; then
+				interface=${new_interface}
+				current_iface_on_messages="${interface}"
+			fi
+			echo
+			language_strings "${language}" 15 "yellow"
 		fi
-		echo
-		language_strings "${language}" 15 "yellow"
+	else
+		new_secondary_interface=$(${airmon} stop "${1}" 2> /dev/null | grep station | head -n 1)
+		[[ ${new_secondary_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_secondary_interface="${BASH_REMATCH[1]}"
+
+		if [ "${1}" != "${new_secondary_interface}" ]; then
+			secondary_wifi_interface=${new_secondary_interface}
+			current_iface_on_messages="${secondary_wifi_interface}"
+			echo
+			language_strings "${language}" 15 "yellow"
+		fi
 	fi
 
 	echo
 	language_strings "${language}" 16 "yellow"
 	language_strings "${language}" 115 "read"
+	return 0
 }
 
 #Put the interface on monitor mode and manage the possible name change
@@ -3933,7 +3946,7 @@ function main_menu() {
 			monitor_option "${interface}"
 		;;
 		3)
-			managed_option
+			managed_option "${interface}"
 		;;
 		4)
 			dos_attacks_menu
@@ -4007,7 +4020,7 @@ function evil_twin_attacks_menu() {
 			monitor_option "${interface}"
 		;;
 		3)
-			managed_option
+			managed_option "${interface}"
 		;;
 		4)
 			explore_for_targets_option
@@ -4201,7 +4214,7 @@ function wps_attacks_menu() {
 			monitor_option "${interface}"
 		;;
 		3)
-			managed_option
+			managed_option "${interface}"
 		;;
 		4)
 			if contains_element "${wps_option}" "${forbidden_options[@]}"; then
@@ -4404,7 +4417,7 @@ function offline_pin_generation_menu() {
 			monitor_option "${interface}"
 		;;
 		3)
-			managed_option
+			managed_option "${interface}"
 		;;
 		4)
 			if contains_element "${wps_option}" "${forbidden_options[@]}"; then
@@ -4587,7 +4600,7 @@ function wep_attacks_menu() {
 			monitor_option "${interface}"
 		;;
 		3)
-			managed_option
+			managed_option "${interface}"
 		;;
 		4)
 			explore_for_targets_option
@@ -7432,7 +7445,7 @@ function handshake_tools_menu() {
 			monitor_option "${interface}"
 		;;
 		3)
-			managed_option
+			managed_option "${interface}"
 		;;
 		4)
 			explore_for_targets_option
@@ -7541,7 +7554,7 @@ function dos_attacks_menu() {
 			monitor_option "${interface}"
 		;;
 		3)
-			managed_option
+			managed_option "${interface}"
 		;;
 		4)
 			explore_for_targets_option
