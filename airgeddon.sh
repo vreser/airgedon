@@ -1263,21 +1263,21 @@ function monitor_option() {
 
 	debug_print
 
-	if ! check_to_set_monitor "${interface}"; then
-		return
+	if ! check_to_set_monitor "${1}"; then
+		return 1
 	fi
 
 	disable_rfkill
 
 	language_strings "${language}" 18 "blue"
 
-	ifconfig "${interface}" up
+	ifconfig "${1}" up
 
-	if ! iwconfig "${interface}" rate 1M > /dev/null 2>&1; then
+	if ! iwconfig "${1}" rate 1M > /dev/null 2>&1; then
 		echo
 		language_strings "${language}" 20 "red"
 		language_strings "${language}" 115 "read"
-		return
+		return 1
 	fi
 
 	if [ "${check_kill_needed}" -eq 1 ]; then
@@ -1286,32 +1286,49 @@ function monitor_option() {
 		nm_processes_killed=1
 	fi
 
-	new_interface=$(${airmon} start "${interface}" 2> /dev/null | grep monitor)
-
 	desired_interface_name=""
-	[[ ${new_interface} =~ ^You[[:space:]]already[[:space:]]have[[:space:]]a[[:space:]]([A-Za-z0-9]+)[[:space:]]device ]] && desired_interface_name="${BASH_REMATCH[1]}"
+	if [ "${1}" = "${interface}" ]; then
+		new_interface=$(${airmon} start "${1}" 2> /dev/null | grep monitor)
+		[[ ${new_interface} =~ ^You[[:space:]]already[[:space:]]have[[:space:]]a[[:space:]]([A-Za-z0-9]+)[[:space:]]device ]] && desired_interface_name="${BASH_REMATCH[1]}"
+	else
+		new_secondary_interface=$(${airmon} start "${1}" 2> /dev/null | grep monitor)
+		[[ ${new_secondary_interface} =~ ^You[[:space:]]already[[:space:]]have[[:space:]]a[[:space:]]([A-Za-z0-9]+)[[:space:]]device ]] && desired_interface_name="${BASH_REMATCH[1]}"
+	fi
+
 	if [ -n "${desired_interface_name}" ]; then
 		echo
 		language_strings "${language}" 435 "red"
 		language_strings "${language}" 115 "read"
-		return
+		return 1
 	fi
 
-	ifacemode="Monitor"
-	[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
+	if [ "${1}" = "${interface}" ]; then
+		ifacemode="Monitor"
+		[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
 
-	if [ "${interface}" != "${new_interface}" ]; then
-		if check_interface_coherence; then
-			interface=${new_interface}
-			current_iface_on_messages="${interface}"
+		if [ "${interface}" != "${new_interface}" ]; then
+			if check_interface_coherence; then
+				interface="${new_interface}"
+				current_iface_on_messages="${interface}"
+			fi
+			echo
+			language_strings "${language}" 21 "yellow"
 		fi
-		echo
-		language_strings "${language}" 21 "yellow"
+	else
+		[[ ${new_secondary_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_secondary_interface="${BASH_REMATCH[1]}"
+
+		if [ "${1}" != "${new_secondary_interface}" ]; then
+			secondary_wifi_interface="${new_secondary_interface}"
+			current_iface_on_messages="${secondary_wifi_interface}"
+			echo
+			language_strings "${language}" 21 "yellow"
+		fi
 	fi
 
 	echo
 	language_strings "${language}" 22 "yellow"
 	language_strings "${language}" 115 "read"
+	return 0
 }
 
 #Check the interface mode
@@ -3913,7 +3930,7 @@ function main_menu() {
 			select_interface
 		;;
 		2)
-			monitor_option
+			monitor_option "${interface}"
 		;;
 		3)
 			managed_option
@@ -3987,7 +4004,7 @@ function evil_twin_attacks_menu() {
 			select_interface
 		;;
 		2)
-			monitor_option
+			monitor_option "${interface}"
 		;;
 		3)
 			managed_option
@@ -4181,7 +4198,7 @@ function wps_attacks_menu() {
 			select_interface
 		;;
 		2)
-			monitor_option
+			monitor_option "${interface}"
 		;;
 		3)
 			managed_option
@@ -4384,7 +4401,7 @@ function offline_pin_generation_menu() {
 			select_interface
 		;;
 		2)
-			monitor_option
+			monitor_option "${interface}"
 		;;
 		3)
 			managed_option
@@ -4567,7 +4584,7 @@ function wep_attacks_menu() {
 			select_interface
 		;;
 		2)
-			monitor_option
+			monitor_option "${interface}"
 		;;
 		3)
 			managed_option
@@ -7412,7 +7429,7 @@ function handshake_tools_menu() {
 			select_interface
 		;;
 		2)
-			monitor_option
+			monitor_option "${interface}"
 		;;
 		3)
 			managed_option
@@ -7521,7 +7538,7 @@ function dos_attacks_menu() {
 			select_interface
 		;;
 		2)
-			monitor_option
+			monitor_option "${interface}"
 		;;
 		3)
 			managed_option
