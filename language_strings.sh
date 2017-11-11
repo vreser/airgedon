@@ -1046,7 +1046,7 @@ function language_strings() {
 	arr["CATALAN",57]="${pending_of_translation} Idioma canviat a Polonès"
 	arr["PORTUGUESE",57]="Idioma alterado para Polonês"
 	arr["RUSSIAN",57]="Язык изменён на польский"
-	arr["GREEK",57]="${pending_of_translation} Η γλώσσα άλλαξε στα Πολωνικά"
+	arr["GREEK",57]="Η γλώσσα άλλαξε στα Πολωνικά"
 	arr["ITALIAN",57]="${pending_of_translation} Lingua cambiata in Polacco"
 	arr["POLISH",57]="${pending_of_translation} Język zmienił się na Polski"
 
@@ -1056,7 +1056,7 @@ function language_strings() {
 	arr["CATALAN",58]="${pending_of_translation} 9.  Polonès"
 	arr["PORTUGUESE",58]="9.  Polonês"
 	arr["RUSSIAN",58]="9.  Польский"
-	arr["GREEK",58]="${pending_of_translation} 9.  Ιταλικά"
+	arr["GREEK",58]="9.  Πολωνικά"
 	arr["ITALIAN",58]="${pending_of_translation} 9.  Polacco"
 	arr["POLISH",58]="${pending_of_translation} 9.  Polski"
 
