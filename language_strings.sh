@@ -1047,7 +1047,7 @@ function language_strings() {
 	arr["PORTUGUESE",57]="Idioma alterado para Polonês"
 	arr["RUSSIAN",57]="Язык изменён на польский"
 	arr["GREEK",57]="Η γλώσσα άλλαξε στα Πολωνικά"
-	arr["ITALIAN",57]="${pending_of_translation} Lingua cambiata in Polacco"
+	arr["ITALIAN",57]="Lingua cambiata a Polacco"
 	arr["POLISH",57]="${pending_of_translation} Język zmienił się na Polski"
 
 	arr["ENGLISH",58]="9.  Polish"
@@ -1057,7 +1057,7 @@ function language_strings() {
 	arr["PORTUGUESE",58]="9.  Polonês"
 	arr["RUSSIAN",58]="9.  Польский"
 	arr["GREEK",58]="9.  Πολωνικά"
-	arr["ITALIAN",58]="${pending_of_translation} 9.  Polacco"
+	arr["ITALIAN",58]="9.  Polacco"
 	arr["POLISH",58]="${pending_of_translation} 9.  Polski"
 
 	arr["ENGLISH",59]="11. Return to main menu"
@@ -5527,7 +5527,7 @@ function language_strings() {
 	arr["PORTUGUESE",505]="Você deseja ativar o \"modo de perseguição\"? ${blue_color}Isso irá iniciar o ataque novamente se o alvo mudar de canal, evitando o \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["RUSSIAN",505]="${pending_of_translation} Вы хотите включить \"режим преследования DoS\"? ${blue_color}Это снова запустит атаку, если целевая AP изменит свой канал, противодействуя \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["GREEK",505]="Θέλετε να ενεργοποιήσετε to \"DoS pursuit mode\"; ${blue_color}Αυτό θα ξεκινήσει πάλι την επίθεση, εάν το σημείο πρόσβασης αλλάξει το κανάλι του \"channel hopping\" ${normal_color}${visual_choice}"
-	arr["ITALIAN",505]="${pending_of_translation} Vuoi attivare la modalità \"modalità DoS persecuzione\"? ${blue_color}Questo riprenderà l'attacco se il target AP cambia i canali contrastando la \"channel hopping\" ${normal_color}${visual_choice}"
+	arr["ITALIAN",505]="Vuoi attivare la modalità \"DoS pursuit mode\"? ${blue_color}Questo riprenderà l'attacco se l'AP obiettivo cambia i canali contrastando il \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["POLISH",505]="${pending_of_translation} Czy chcesz uaktywnić \"tryb pościgowy DoS\"? ${blue_color}To spowoduje ponowne atakowanie, jeśli docelowy punkt dostępu AP zmieni kanały, zmieniając kanały \"channel hopping\" ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",506]="DoS attack with the \"DoS pursuit mode\" enabled will start when you press [Enter] on this window. To stop it you must press [Ctrl+C] or close attack window"
@@ -5537,7 +5537,7 @@ function language_strings() {
 	arr["PORTUGUESE",506]="O ataque DoS com o \"modo de perseguição\" foi ativo e será iniciado quando você pressionar [Enter] nesta janela. Para parar, você deve pressionar [Ctrl+C] ou fechar a janela do ataque"
 	arr["RUSSIAN",506]="DoS-атака с включенным \"режимом DoS преследования\" будет запущена когда вы в этом окне нажмёте [Enter]. Для её остановки нажмите [Ctrl+C] или закройте окно атаки"
 	arr["GREEK",506]="Η επίθεση DoS με το \"DoS pursuit mode\" ενεργοποιημένο θα ξεκινήσει όταν πατήσετε [Enter] σε αυτό το παράθυρο. Για να το σταματήσετε πρέπει να πατήσετε [Ctrl+C] ή να κλείσετε το παράθυρο"
-	arr["ITALIAN",506]="${pending_of_translation} L'attacco DoS con la modalità \"modalità DoS persecuzione\" abilitato verrà avviato quando si preme [Enter] in questa finestra. Per fermarlo bisogna premere [Ctrl+C] o chiudere la finestra di attacco"
+	arr["ITALIAN",506]="L'attacco DoS con la modalità \"DoS pursuit mode\" abilitata inizierá quando si preme [Enter] in questa finestra. Per fermarlo bisogna premere [Ctrl+C] o chiudere la finestra di attacco"
 	arr["POLISH",506]="${pending_of_translation} Atak DoS z uruchomionym trybem \"tryb pościgowy DoS\" zostanie uruchomiony po naciśnięciu przycisku [Enter] w tym oknie. Aby go zatrzymać, musisz nacisnąć [Ctrl+C] lub zamknąć okno ataku"
 
 	arr["ENGLISH",507]="Channel change detected. Relaunching again DoS attack on \"DoS pursuit mode\" now on channel ${normal_color}${channel}"
@@ -5547,7 +5547,7 @@ function language_strings() {
 	arr["PORTUGUESE",507]="Mudança de canal detectada. Iniciando o ataque DoS novamente em \"modo de perseguição\". Agora no canal: ${normal_color}${channel}"
 	arr["RUSSIAN",507]="Обнаружено изменение канала. Перезапуск DoS-атаки в \"режиме DoS преследования\" теперь на канале ${normal_color}${channel}"
 	arr["GREEK",507]="Εντοπίστηκε αλλαγή καναλιού. Γίνεται πάλι επίθεση DoS \"DoS pursuit mode\" στο κανάλι ${normal_color}${channel}"
-	arr["ITALIAN",507]="${pending_of_translation} È stata rilevata la modifica del canale. Riavviare l'attacco DoS nuovamente in modalità \"modalità DoS persecuzione\" ora sul canale ${normal_color}${channel}"
+	arr["ITALIAN",507]="Cambio di canale rilevato. Riavviare nuovamente l'attacco Dos in modalità \"DoS pursuit mode\" sul canale ${normal_color}${channel}"
 	arr["POLISH",507]="${pending_of_translation} Wykryto zmianę kanału. Ponowne uruchomienie ataku DoS w trybie \"tryb pościgowy DoS\" na kanale ${normal_color}${channel}"
 
 	arr["ENGLISH",508]="\"DoS pursuit mode\" can be unstable for this kind of DoS attack. If you are not obtaining an optimal result just select another kind of attack"
@@ -5557,7 +5557,7 @@ function language_strings() {
 	arr["PORTUGUESE",508]="O ataque DoS com o \"modo de perseguição\" pode ser instável. Se o resultado não for bom, selecione outro tipo de ataque"
 	arr["RUSSIAN",508]="\"Режим DoS преследования\" может быть нестабильной для такой DoS-атаки. Если вы не получаете приемлемого результата, просто выберите другой тип атаки"
 	arr["GREEK",508]="Το \"DoS pursuit mode\" μπορεί να είναι ασταθής για αυτό το είδος επίθεσης DoS. Εάν δεν δείτε σωστό αποτέλεσμα, επιλέξτε κάποιο άλλο είδος επίθεσης"
-	arr["ITALIAN",508]="${pending_of_translation} \"modalità DoS persecuzione\" può essere instabile per questo tipo di attacco DoS. Se il risultato non è ottimale selezionare un altro tipo di attacco"
+	arr["ITALIAN",508]="La modalitá \"DoS pursuit mode\" può essere instabile per questo tipo di attacco DoS. Se il risultato non è ottimale selezionare un altro tipo di attacco"
 	arr["POLISH",508]="${pending_of_translation} \"tryb pościgowy DoS\" może być niestabilny dla tego typu ataków DoS. Jeśli wynik nie jest optymalny, wybierz inny rodzaj ataku"
 
 	arr["ENGLISH",509]="If you want to integrate \"DoS pursuit mode\" on an Evil Twin attack, another additional wifi interface in monitor mode will be needed to be able to perform it"
@@ -5567,7 +5567,7 @@ function language_strings() {
 	arr["PORTUGUESE",509]="Se você quiser integrar o ataque DoS com o \"modo de perseguição\" em um ataque Evil Twin, será necessário ter uma interface wifi adicional no modo monitor"
 	arr["RUSSIAN",509]="Если вы хотите интегрировать \"режим DoS преследования\" на атаку Evil Twin, то для выполнения этого потребуется еще один дополнительный интерфейс wifi в режиме монитора"
 	arr["GREEK",509]="Εάν θέλετε να ενσωματώσετε το \"DoS pursuit mode\" σε μια επίθεση Evil Twin, θα χρειαστεί μια επιπλέον διεπαφή wifi σε κατάσταση παρακολούθησης για να εκτελεστεί σωστά"
-	arr["ITALIAN",509]="${pending_of_translation} Se si desidera integrare la \"modalità DoS persecuzione\" in un attacco Evil Twin, sarà necessario disporre di un'altra interfaccia wifi aggiuntiva in modalità monitor"
+	arr["ITALIAN",509]="Se si desidera integrare la modalitá \"DoS pursuit mode\" in un attacco Evil Twin, sarà necessario disporre di un'altra interfaccia wifi aggiuntiva in modalità monitor"
 	arr["POLISH",509]="${pending_of_translation} Jeśli chcesz zintegrować \"tryb pościgowy DoS\" w ataku Evil Twin, konieczne będzie posiadanie innego dodatkowego interfejsu wifi w trybie monitorowania, aby go przeprowadzić"
 
 	arr["ENGLISH",510]="On this screen, it's supposed an additional wifi interface is chosen, but you don't have anyone at this moment"
@@ -5577,7 +5577,7 @@ function language_strings() {
 	arr["PORTUGUESE",510]="Nesta tela você deveria escolher uma interface wifi adicional, mas você não tem nenhuma neste momento"
 	arr["RUSSIAN",510]="На этом экране предполагается, что будет выбран дополнительный интерфейс wifi, но в данный момент у вас нет других беспроводных интерфейсов"
 	arr["GREEK",510]="Σε αυτήν την οθόνη, υποτίθεται ότι έχει επιλεγεί μια πρόσθετη διεπαφή wifi, αλλά δεν έχετε επιλέξει κάποια αυτήν τη στιγμή"
-	arr["ITALIAN",510]="${pending_of_translation} In questa schermata, dovresti scegliere un'altra interfaccia wifi aggiuntiva, ma in questo momento non ne hai"
+	arr["ITALIAN",510]="In questa schermata, dovresti scegliere un'altra interfaccia wifi addizionale, ma in questo momento non ne hai nessuna"
 	arr["POLISH",510]="${pending_of_translation} Na tym ekranie należy wybrać inny dodatkowy interfejs wifi, ale nie masz go w tym momencie"
 
 	arr["ENGLISH",511]="Select another wireless interface :"
@@ -5587,7 +5587,7 @@ function language_strings() {
 	arr["PORTUGUESE",511]="Selecione outra interface sem fio :"
 	arr["RUSSIAN",511]="Выберите дополнительный беспроводной интерфейс :"
 	arr["GREEK",511]="Επιλέξτε άλλη μία ασύρματη διεπαφή :"
-	arr["ITALIAN",511]="${pending_of_translation} Seleziona un'altra interfaccia wireless :"
+	arr["ITALIAN",511]="Seleziona un'altra interfaccia wireless :"
 	arr["POLISH",511]="${pending_of_translation} Wybierz inny interfejs bezprzewodowy :"
 
 	arr["ENGLISH",512]="\"DoS pursuit mode\" interface: ${pink_color}${secondary_wifi_interface}${normal_color}"
@@ -5597,7 +5597,7 @@ function language_strings() {
 	arr["PORTUGUESE",512]="Interface para o ataque DoS em \"modo de perseguição\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["RUSSIAN",512]="Интерфейс для \"режима DoS преследования\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["GREEK",512]="Διεπαφή για \"DoS pursuit mode\": ${pink_color}${secondary_wifi_interface}${normal_color}"
-	arr["ITALIAN",512]="${pending_of_translation} Interfaccia per \"modalità DoS persecuzione\": ${pink_color}${secondary_wifi_interface}${normal_color}"
+	arr["ITALIAN",512]="Interfaccia per la modalitá \"DoS pursuit mode\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["POLISH",512]="${pending_of_translation} Interfejs dla \"tryb pościgowy DoS\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 
 	arr["ENGLISH",513]="Interface will be tried to be changed to monitor mode automatically"
@@ -5607,7 +5607,7 @@ function language_strings() {
 	arr["PORTUGUESE",513]="O script tentará mudar a interface para o modo monitor automaticamente"
 	arr["RUSSIAN",513]="Будет сделана автоматическая попытка перевести интерфейс в режим монитора"
 	arr["GREEK",513]="Γίνεται απόπειρα αλλαγής κατάστασης διεπαφής σε κατάσταση παρακολούθησης"
-	arr["ITALIAN",513]="${pending_of_translation} Cercherà di cambiare automaticamente l'interfaccia alla modalità monitor"
+	arr["ITALIAN",513]="Si cercherà di cambiare automaticamente l'interfaccia alla modalità monitor"
 	arr["POLISH",513]="${pending_of_translation} Spowoduje to automatyczną zmianę interfejsu w tryb monitorowania"
 
 	case "${3}" in
