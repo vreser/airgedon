@@ -1042,7 +1042,7 @@ function language_strings() {
 
 	arr["ENGLISH",57]="Language changed to Polish"
 	arr["SPANISH",57]="Idioma cambiado a Polaco"
-	arr["FRENCH",57]="${pending_of_translation} Le script sera maintenant en Polonais"
+	arr["FRENCH",57]="Le script sera maintenant en Polonais"
 	arr["CATALAN",57]="Idioma canviat a Polonès"
 	arr["PORTUGUESE",57]="Idioma alterado para Polonês"
 	arr["RUSSIAN",57]="Язык изменён на польский"
@@ -1052,7 +1052,7 @@ function language_strings() {
 
 	arr["ENGLISH",58]="9.  Polish"
 	arr["SPANISH",58]="9.  Polaco"
-	arr["FRENCH",58]="${pending_of_translation} 9.  Polonais"
+	arr["FRENCH",58]="9.  Polonais"
 	arr["CATALAN",58]="9.  Polonès"
 	arr["PORTUGUESE",58]="9.  Polonês"
 	arr["RUSSIAN",58]="9.  Польский"
