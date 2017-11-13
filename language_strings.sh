@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171111
+#Date.........: 20171113
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -5547,7 +5547,7 @@ function language_strings() {
 	arr["PORTUGUESE",507]="Mudança de canal detectada. Iniciando o ataque DoS novamente em \"modo de perseguição\". Agora no canal: ${normal_color}${channel}"
 	arr["RUSSIAN",507]="Обнаружено изменение канала. Перезапуск DoS-атаки в \"режиме DoS преследования\" теперь на канале ${normal_color}${channel}"
 	arr["GREEK",507]="Εντοπίστηκε αλλαγή καναλιού. Γίνεται πάλι επίθεση DoS \"DoS pursuit mode\" στο κανάλι ${normal_color}${channel}"
-	arr["ITALIAN",507]="Cambio di canale rilevato. Riavviare nuovamente l'attacco Dos in modalità \"DoS pursuit mode\" sul canale ${normal_color}${channel}"
+	arr["ITALIAN",507]="Cambio di canale rilevato. Riavviare nuovamente l'attacco DoS in modalità \"DoS pursuit mode\" sul canale ${normal_color}${channel}"
 	arr["POLISH",507]="${pending_of_translation} Wykryto zmianę kanału. Ponowne uruchomienie ataku DoS w trybie \"tryb pościgowy DoS\" na kanale ${normal_color}${channel}"
 
 	arr["ENGLISH",508]="\"DoS pursuit mode\" can be unstable for this kind of DoS attack. If you are not obtaining an optimal result just select another kind of attack"
