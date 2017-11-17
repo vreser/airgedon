@@ -828,7 +828,7 @@ function language_strings() {
 	arr["RUSSIAN",35]="Выбрана mdk3 атака Деаутентификации / Разъединения (необходим режим монитора)"
 	arr["GREEK",35]="Deauthentication / Έχει επιλεχθεί επίθεση dissasociation mdk3 (χρειάζεται η κατάσταση παρακολούθησης)"
 	arr["ITALIAN",35]="Attacco Deauth / Disassociation mdk3 scelto (modalità monitor richiesta)"
-	arr["POLISH",35]="${pending_of_translation} Wybrany atak Deauthentication / Disassociation mdk3 (wymagany tryb monitorowania)"
+	arr["POLISH",35]="Wybrano atak Deauthentication / Disassociation mdk3 (wymagany tryb monitorowania)"
 
 	arr["ENGLISH",36]="Deauthentication aireplay attack chosen (monitor mode needed)"
 	arr["SPANISH",36]="Elegido ataque de Desautenticación aireplay (modo monitor requerido)"
@@ -838,7 +838,7 @@ function language_strings() {
 	arr["RUSSIAN",36]="Выбрана aireplay атака Деаутентификации (необходим режим монитора)"
 	arr["GREEK",36]="Έχει επιλεχθεί επίθεση deauthentication aireplay (χρειάζεται η κατάσταση παρακολούθησης)"
 	arr["ITALIAN",36]="Attacco Deauth aireplay scelto (modalità monitor richiesta)"
-	arr["POLISH",36]="${pending_of_translation} Wybrany atak Deauthentication aireplay (wymagany tryb monitora)"
+	arr["POLISH",36]="Wybrano atak Deauthentication aireplay (wymagany tryb monitorowania)"
 
 	arr["ENGLISH",37]="WIDS / WIPS / WDS Confusion attack chosen (monitor mode needed)"
 	arr["SPANISH",37]="Elegido ataque Confusion WIDS / WIPS / WDS (modo monitor requerido)"
@@ -848,7 +848,7 @@ function language_strings() {
 	arr["RUSSIAN",37]="Выбрана атака запутывания WIDS / WIPS / WDS (необходим режим монитора)"
 	arr["GREEK",37]="Έχει επιλεχθεί επίθεση σύγχυσης WIDS / WIPS / WDS (χρειάζεται η κατάσταση παρακολούθησης)"
 	arr["ITALIAN",37]="Attacco Confusion / WIDS / WIPS / WDS scelto (modalità monitor richiesta)"
-	arr["POLISH",37]="${pending_of_translation} Wybrane ataki typu WIDS / WIPS / WDS Confusion (wymagany tryb monitora)"
+	arr["POLISH",37]="Wybrano ataki typu WIDS / WIPS / WDS Confusion (wymagany tryb monitorowania)"
 
 	arr["ENGLISH",38]="Beacon flood attack chosen (monitor mode needed)"
 	arr["SPANISH",38]="Elegido ataque Beacon flood (modo monitor requerido)"
@@ -858,7 +858,7 @@ function language_strings() {
 	arr["RUSSIAN",38]="Выбрана атака флуда маяками (необходим режим монитора)"
 	arr["GREEK",38]="Έχει επιλεχθεί επίθεση πλημμύρας φάρου (χρειάζεται η κατάσταση παρακολούθησης)"
 	arr["ITALIAN",38]="Attacco Beacon flood scelto (modalità monitor richiesta)"
-	arr["POLISH",38]="${pending_of_translation} Wybrany atak Beacon flood (wymagany tryb monitora)"
+	arr["POLISH",38]="Wybrano atak Beacon flood (wymagany tryb monitorowania)"
 
 	arr["ENGLISH",39]="Auth DoS attack chosen (monitor mode needed)"
 	arr["SPANISH",39]="Elegido ataque Auth DoS (modo monitor requerido)"
@@ -868,7 +868,7 @@ function language_strings() {
 	arr["RUSSIAN",39]="Выбрана атака Auth DoS (необходим режим монитора)"
 	arr["GREEK",39]="Έχει επιλεχθεί επίθεση Auth DoS (χρειάζεται η κατάσταση παρακολούθησης)"
 	arr["ITALIAN",39]="Attacco DoS Auth scelto (modalità monitor richiesta)"
-	arr["POLISH",39]="${pending_of_translation} Wybrany atak DoS Auth (wymagany tryb monitora)"
+	arr["POLISH",39]="Wybrano atak DoS Auth (wymagany tryb monitorowania)"
 
 	arr["ENGLISH",40]="Michael Shutdown (TKIP) attack chosen (monitor mode needed)"
 	arr["SPANISH",40]="Elegido ataque Michael Shutdown (TKIP) (modo monitor requerido)"
@@ -878,7 +878,7 @@ function language_strings() {
 	arr["RUSSIAN",40]="Выбрана атака Michael Shutdown (TKIP) (необходим режим монитора)"
 	arr["GREEK",40]="Έχει επιλεχθεί επίθεση Michael Shutdown (TKIP) (χρειάζεται η κατάσταση παρακολούθησης)"
 	arr["ITALIAN",40]="Attacco Michael Shutdown (TKIP) scelto (modalità monitor richiesta)"
-	arr["POLISH",40]="${pending_of_translation} Wybrany Michael Shutdown attack (TKIP) (wymagany tryb monitorowania)"
+	arr["POLISH",40]="Wybrano atak Michael Shutdown (TKIP) (wymagany tryb monitorowania)"
 
 	arr["ENGLISH",41]="No interface selected. You'll be redirected to select one"
 	arr["SPANISH",41]="No hay interfaz seleccionada. Serás redirigido para seleccionar una"
@@ -888,7 +888,7 @@ function language_strings() {
 	arr["RUSSIAN",41]="Интерфейс не выбран. Вы будете перенаправлены на выбор интерфейса"
 	arr["GREEK",41]="Δεν έχει επιλεχθεί κάποια διεπαφή. Θα καθοδηγηθείτε για να επιλέξετε μία"
 	arr["ITALIAN",41]="Nessuna interfaccia selezionata. Sarai reindirizzato per selezionarne una"
-	arr["POLISH",41]="${pending_of_translation} Nie wybrano interfejsu. Zostaniesz przekierowany, aby wybrać a"
+	arr["POLISH",41]="Nie wybrano interfejsu. Zostaniesz przekierowany, aby któryś wybrać"
 
 	arr["ENGLISH",42]="Interface ${pink_color}${current_iface_on_messages}${blue_color} selected. Mode: ${pink_color}${ifacemode}${normal_color}"
 	arr["SPANISH",42]="Interfaz ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Modo: ${pink_color}${ifacemode}${normal_color}"
@@ -898,7 +898,7 @@ function language_strings() {
 	arr["RUSSIAN",42]="Интерфейс ${pink_color}${current_iface_on_messages}${blue_color} выбран. Режим: ${pink_color}${ifacemode}${normal_color}"
 	arr["GREEK",42]="Η διεπαφή ${pink_color}${current_iface_on_messages}${blue_color} έχει επιλεχθεί. Κατάσταση: ${pink_color}${ifacemode}${normal_color}"
 	arr["ITALIAN",42]="Interfaccia ${pink_color}${current_iface_on_messages}${blue_color} selezionata. Modalità: ${pink_color}${ifacemode}${normal_color}"
-	arr["POLISH",42]="${pending_of_translation} Interfejs ${pink_color}${current_iface_on_messages}${blue_color} został wybrany. Tryb: ${pink_color}${ifacemode}${normal_color}"
+	arr["POLISH",42]="Interfejs ${pink_color}${current_iface_on_messages}${blue_color} został wybrany. Tryb: ${pink_color}${ifacemode}${normal_color}"
 
 	arr["ENGLISH",43]="Selected BSSID: ${pink_color}${bssid}${normal_color}"
 	arr["SPANISH",43]="BSSID seleccionado: ${pink_color}${bssid}${normal_color}"
@@ -908,7 +908,7 @@ function language_strings() {
 	arr["RUSSIAN",43]="Выбранный BSSID: ${pink_color}${bssid}${normal_color}"
 	arr["GREEK",43]="Επιλεγμένο BSSID: ${pink_color}${bssid}${normal_color}"
 	arr["ITALIAN",43]="BSSID selezionato: ${pink_color}${bssid}${normal_color}"
-	arr["POLISH",43]="${pending_of_translation} "
+	arr["POLISH",43]="Wybrany BSSID: ${pink_color}${bssid}${normal_color}"
 
 	arr["ENGLISH",44]="Selected channel: ${pink_color}${channel}${normal_color}"
 	arr["SPANISH",44]="Canal seleccionado: ${pink_color}${channel}${normal_color}"
@@ -918,7 +918,7 @@ function language_strings() {
 	arr["RUSSIAN",44]="Выбранный канал: ${pink_color}${channel}${normal_color}"
 	arr["GREEK",44]="Επιλεγμένο κανάλι: ${pink_color}${channel}${normal_color}"
 	arr["ITALIAN",44]="Canale selezionato: ${pink_color}${channel}${normal_color}"
-	arr["POLISH",44]="${pending_of_translation} Wybrano BSSID: ${pink_color}${channel}${normal_color}"
+	arr["POLISH",44]="Wybrany kanał: ${pink_color}${channel}${normal_color}"
 
 	arr["ENGLISH",45]="Selected ESSID: ${pink_color}${essid}${blue_color} <- can't be used"
 	arr["SPANISH",45]="ESSID seleccionado: ${pink_color}${essid}${blue_color} <- no se puede usar"
@@ -928,7 +928,7 @@ function language_strings() {
 	arr["RUSSIAN",45]="Выбранный ESSID: ${pink_color}${essid}${blue_color} <- не может быть использован"
 	arr["GREEK",45]="Επιλεγμένο ESSID: ${pink_color}${essid}${blue_color} <- δεν μπορεί να χρησιμοποιηθεί"
 	arr["ITALIAN",45]="ESSID selezionato: ${pink_color}${essid}${blue_color} <- non può essere utilizzato"
-	arr["POLISH",45]="${pending_of_translation} Wybrano ESSID: ${pink_color}${essid}${blue_color} <- nie można używać"
+	arr["POLISH",45]="Wybrany ESSID: ${pink_color}${essid}${blue_color} <- nie można używać"
 
 	arr["ENGLISH",46]="Selected ESSID: ${pink_color}${essid}${normal_color}"
 	arr["SPANISH",46]="ESSID seleccionado: ${pink_color}${essid}${normal_color}"
@@ -938,7 +938,7 @@ function language_strings() {
 	arr["RUSSIAN",46]="Выбранный ESSID: ${pink_color}${essid}${normal_color}"
 	arr["GREEK",46]="Επιλεγμένο ESSID: ${pink_color}${essid}${normal_color}"
 	arr["ITALIAN",46]="ESSID selezionato: ${pink_color}${essid}${normal_color}"
-	arr["POLISH",46]="${pending_of_translation} Wybrano ESSID: ${pink_color}${essid}${normal_color}"
+	arr["POLISH",46]="Wybrano ESSID: ${pink_color}${essid}${normal_color}"
 
 	arr["ENGLISH",47]="Select an option from menu :"
 	arr["SPANISH",47]="Selecciona una opción del menú :"
@@ -948,7 +948,7 @@ function language_strings() {
 	arr["RUSSIAN",47]="Выбор опции из меню :"
 	arr["GREEK",47]="Επιλέξτε μία επιλογή από το μενού :"
 	arr["ITALIAN",47]="Selezionare un'opzione del menú :"
-	arr["POLISH",47]="${pending_of_translation} Wybierz z menu opcję :"
+	arr["POLISH",47]="Wybierz opcję z menu:"
 
 	arr["ENGLISH",48]="1.  Select another network interface"
 	arr["SPANISH",48]="1.  Selecciona otra interfaz de red"
@@ -958,7 +958,7 @@ function language_strings() {
 	arr["RUSSIAN",48]="1.  Выбрать другой сетевой интерфейс"
 	arr["GREEK",48]="1.  Επιλογή διαφορετικής διεπαφής"
 	arr["ITALIAN",48]="1.  Selezionare un'altra interfaccia di rete"
-	arr["POLISH",48]="${pending_of_translation} 1.  Wybierz inny interfejs sieciowy"
+	arr["POLISH",48]="1.  Wybierz inny interfejs sieciowy"
 
 	arr["ENGLISH",49]="4.  Explore for targets (monitor mode needed)"
 	arr["SPANISH",49]="4.  Explorar para buscar objetivos (modo monitor requerido)"
@@ -968,7 +968,7 @@ function language_strings() {
 	arr["RUSSIAN",49]="4.  Поиск целей (необходим режим монитора)"
 	arr["GREEK",49]="4.  Εξερεύνηση στόχων (χρειάζεται η κατάσταση παρακολούθησης)"
 	arr["ITALIAN",49]="4.  Esplora per cercare obiettivi (modalità monitor richiesta)"
-	arr["POLISH",49]="${pending_of_translation} 4.  Skanowanie, aby znaleźć cele (wymagany tryb monitorowania)"
+	arr["POLISH",49]="4.  Skanowanie możliwych celów (wymagany tryb monitorowania)"
 
 	arr["ENGLISH",50]="monitor mode needed for attacks"
 	arr["SPANISH",50]="modo monitor requerido en ataques"
@@ -978,7 +978,7 @@ function language_strings() {
 	arr["RUSSIAN",50]="для атак необходим режим монитора"
 	arr["GREEK",50]="χρειάζεται η κατάσταση παρακολούθησης για τις επιθέσεις"
 	arr["ITALIAN",50]="Modalità monitor richiesta per gli attacchi"
-	arr["POLISH",50]="${pending_of_translation} wymagany tryb monitorowania"
+	arr["POLISH",50]="Wymagany tryb monitorowania do wykonania ataku"
 
 	arr["ENGLISH",51]="5.  Deauth / disassoc amok mdk3 attack"
 	arr["SPANISH",51]="5.  Ataque Deauth / Disassoc amok mdk3"
@@ -988,7 +988,7 @@ function language_strings() {
 	arr["RUSSIAN",51]="5.  Атака деаутентификации / разъединения amok mdk3"
 	arr["GREEK",51]="5.  Επίθεση Deauth / Disassoc amok mdk3"
 	arr["ITALIAN",51]="5.  Attacco Deauth / Disassoc amok mdk3"
-	arr["POLISH",51]="${pending_of_translation} 5.  Atak Deauth / Disassoc amok mdk3"
+	arr["POLISH",51]="5.  Atak Deauth / Disassoc amok mdk3"
 
 	arr["ENGLISH",52]="6.  Deauth aireplay attack"
 	arr["SPANISH",52]="6.  Ataque Deauth aireplay"
@@ -998,7 +998,7 @@ function language_strings() {
 	arr["RUSSIAN",52]="6.  Атака деаутентификации aireplay"
 	arr["GREEK",52]="6.  Επίθεση Deauth aireplay"
 	arr["ITALIAN",52]="6.  Attacco Deauth aireplay"
-	arr["POLISH",52]="${pending_of_translation} 6.  Atak Deauth aireplay"
+	arr["POLISH",52]="6.  Atak Deauth aireplay"
 
 	arr["ENGLISH",53]="7.  WIDS / WIPS / WDS Confusion attack"
 	arr["SPANISH",53]="7.  Ataque WIDS / WIPS / WDS Confusion"
@@ -1008,7 +1008,7 @@ function language_strings() {
 	arr["RUSSIAN",53]="7.  Атака смешения WIDS / WIPS / WDS"
 	arr["GREEK",53]="7.  Επίθεση σύγχυσης WIDS / WIPS / WDS"
 	arr["ITALIAN",53]="7.  Attacco WIDS / WIPS / WDS Confusion"
-	arr["POLISH",53]="${pending_of_translation} 7.  Ataki WIDS / WIPS / WDS"
+	arr["POLISH",53]="7.  Ataki WIDS / WIPS / WDS"
 
 	arr["ENGLISH",54]="old \"obsolete/non very effective\" attacks"
 	arr["SPANISH",54]="antiguos ataques \"obsoletos/no muy efectivos\""
@@ -1018,7 +1018,7 @@ function language_strings() {
 	arr["RUSSIAN",54]="старые \"абсолютно/не очень эффективные\" атаки"
 	arr["GREEK",54]="παλιές \"απαρχαιωμένες/όχι και τόσο αποδοτικές\" επιθέσεις"
 	arr["ITALIAN",54]="vecchi attacchi \"obsoleti/non molto efficaci\""
-	arr["POLISH",54]="${pending_of_translation} stare ataki \"przestarzałe/niezbyt skuteczne\""
+	arr["POLISH",54]="stare ataki \"przestarzałe/niezbyt skuteczne\""
 
 	arr["ENGLISH",55]="2.  Put interface in monitor mode"
 	arr["SPANISH",55]="2.  Poner la interfaz en modo monitor"
@@ -1028,7 +1028,7 @@ function language_strings() {
 	arr["RUSSIAN",55]="2.  Перевести интерфейс в режим монитора"
 	arr["GREEK",55]="2.  Βάλτε τη διεπαφή σε κατάσταση παρακολούθησης"
 	arr["ITALIAN",55]="2.  Mettere l'interfaccia in modalità monitor"
-	arr["POLISH",55]="${pending_of_translation} 2.  Umieść interfejs w trybie monitora"
+	arr["POLISH",55]="2.  Uruchom interfejs w trybie monitorowania"
 
 	arr["ENGLISH",56]="3.  Put interface in managed mode"
 	arr["SPANISH",56]="3.  Poner la interfaz en modo managed"
@@ -1038,7 +1038,7 @@ function language_strings() {
 	arr["RUSSIAN",56]="3.  Перевести интерфейс в управляемый режим"
 	arr["GREEK",56]="3.  Βάλτε τη διεπαφή σε ετερόκλητη κατάσταση"
 	arr["ITALIAN",56]="3.  Mettere l'interfaccia in modalità managed"
-	arr["POLISH",56]="${pending_of_translation} 3.  Umieść interfejs w trybie zarządzanym"
+	arr["POLISH",56]="3.  Uruchom interfejs w trybie zarządzanym"
 
 	arr["ENGLISH",57]="Language changed to Polish"
 	arr["SPANISH",57]="Idioma cambiado a Polaco"
@@ -1048,7 +1048,7 @@ function language_strings() {
 	arr["RUSSIAN",57]="Язык изменён на польский"
 	arr["GREEK",57]="Η γλώσσα άλλαξε στα Πολωνικά"
 	arr["ITALIAN",57]="Lingua cambiata a Polacco"
-	arr["POLISH",57]="${pending_of_translation} Język zmienił się na Polski"
+	arr["POLISH",57]="Zmieniono język na Polski"
 
 	arr["ENGLISH",58]="9.  Polish"
 	arr["SPANISH",58]="9.  Polaco"
@@ -1068,7 +1068,7 @@ function language_strings() {
 	arr["RUSSIAN",59]="11. Вернуться в главное меню"
 	arr["GREEK",59]="11. Επιστροφή στο αρχικό μενού"
 	arr["ITALIAN",59]="11. Torna al menu principale"
-	arr["POLISH",59]="${pending_of_translation} 11. Wróć do menu głównego"
+	arr["POLISH",59]="11. Wróć do menu głównego"
 
 	arr["ENGLISH",60]="10. About & Credits"
 	arr["SPANISH",60]="10. Acerca de & Créditos"
@@ -1078,7 +1078,7 @@ function language_strings() {
 	arr["RUSSIAN",60]="10. О программе и Благодарности"
 	arr["GREEK",60]="10. Σχετικά με & Εύσημα"
 	arr["ITALIAN",60]="10. Informazioni & Credits"
-	arr["POLISH",60]="${pending_of_translation} 10. O & Kredyty"
+	arr["POLISH",60]="10. O programie & Podziękowania"
 
 	arr["ENGLISH",61]="12. Exit script"
 	arr["SPANISH",61]="12. Salir del script"
@@ -1088,7 +1088,7 @@ function language_strings() {
 	arr["RUSSIAN",61]="12. Выйти из скрипта"
 	arr["GREEK",61]="12. Έξοδος script"
 	arr["ITALIAN",61]="12. Uscire dallo script"
-	arr["POLISH",61]="${pending_of_translation} 12. Zamknij skrypt"
+	arr["POLISH",61]="12. Zamknij skrypt"
 
 	arr["ENGLISH",62]="8.  Beacon flood attack"
 	arr["SPANISH",62]="8.  Ataque Beacon flood"
@@ -1098,7 +1098,7 @@ function language_strings() {
 	arr["RUSSIAN",62]="8.  Атака флудом маяков (beacon)"
 	arr["GREEK",62]="8.  Επίθεση πλημμύρας φάρου (beacon)"
 	arr["ITALIAN",62]="8.  Attacco Beacon flood"
-	arr["POLISH",62]="${pending_of_translation} 8.  Atak Beacon flood"
+	arr["POLISH",62]="8.  Atak Beacon flood"
 
 	arr["ENGLISH",63]="9.  Auth DoS attack"
 	arr["SPANISH",63]="9.  Ataque Auth DoS"
@@ -1108,7 +1108,7 @@ function language_strings() {
 	arr["RUSSIAN",63]="9.  DoS атака деаутентификации"
 	arr["GREEK",63]="9.  Επίθεση Auth DoS"
 	arr["ITALIAN",63]="9.  Attacco Auth DoS"
-	arr["POLISH",63]="${pending_of_translation} 9.  Atak Auth DoS"
+	arr["POLISH",63]="9.  Atak Auth DoS"
 
 	arr["ENGLISH",64]="10. Michael shutdown exploitation (TKIP) attack"
 	arr["SPANISH",64]="10. Ataque Michael shutdown exploitation (TKIP)"
@@ -1118,7 +1118,7 @@ function language_strings() {
 	arr["RUSSIAN",64]="10. Атака отключения эксплуатации от Michael (TKIP)"
 	arr["GREEK",64]="10. Επίθεση Michael shutdown exploitation (TKIP)"
 	arr["ITALIAN",64]="10. Attacco Michael shutdown exploitation (TKIP)"
-	arr["POLISH",64]="${pending_of_translation} 10. Atak Michael shutdown exploitation (TKIP)"
+	arr["POLISH",64]="10. Atak Michael shutdown exploitation (TKIP)"
 
 	arr["ENGLISH",65]="Exploring for targets option chosen (monitor mode needed)"
 	arr["SPANISH",65]="Elegida opción de exploración para buscar objetivos (modo monitor requerido)"
@@ -1128,7 +1128,7 @@ function language_strings() {
 	arr["RUSSIAN",65]="Выбрано сканирование целей (необходим режим монитора)"
 	arr["GREEK",65]="Η επιλογή για εξερεύνηση στόχων έχει επιλεχθεί (χρειάζεται η κατάσταση παρακολούθησης)"
 	arr["ITALIAN",65]="Scelta la opzione di scansione per cercare obiettivi (modalità monitor richiesta)"
-	arr["POLISH",65]="${pending_of_translation} Wybranie opcji skanowania w celu wyszukania celów (wymaga trybu monitorowania)"
+	arr["POLISH",65]="Opcja skanowania w celu wyszukania celów wybrana (wymaga trybu monitorowania)"
 
 	arr["ENGLISH",66]="Selected interface ${current_iface_on_messages} is in monitor mode. Exploration can be performed"
 	arr["SPANISH",66]="La interfaz seleccionada ${current_iface_on_messages} está en modo monitor. La exploración se puede realizar"
@@ -1138,7 +1138,7 @@ function language_strings() {
 	arr["RUSSIAN",66]="Выбранный интерфейс ${current_iface_on_messages} в режиме монитора. Сканирование может быть выполнено"
 	arr["GREEK",66]="Η επιλεγμένη διεπαφή ${current_iface_on_messages} είναι σε κατάσταση παρακολούθησης. Μπορεί να γίνει εξερεύνηση"
 	arr["ITALIAN",66]="L'interfaccia selezionata ${current_iface_on_messages} è in modalità monitor. La scansione può essere eseguita"
-	arr["POLISH",66]="${pending_of_translation} Wybrany interfejs ${current_iface_on_messages} jest w trybie monitorowania. Skanowanie można wykonać"
+	arr["POLISH",66]="Wybrany interfejs ${current_iface_on_messages} jest w trybie monitorowania. Można wykonać skanowanie"
 
 	arr["ENGLISH",67]="When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",67]="Una vez empezado, pulse [Ctrl+C] para pararlo..."
@@ -1148,7 +1148,7 @@ function language_strings() {
 	arr["RUSSIAN",67]="После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",67]="Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
 	arr["ITALIAN",67]="Una volta avviato, premere [Ctrl+C] per fermare..."
-	arr["POLISH",67]="${pending_of_translation} Po rozpoczęciu naciśnij [Ctrl+C], aby go zatrzymać..."
+	arr["POLISH",67]="Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 
 	arr["ENGLISH",68]="No networks found"
 	arr["SPANISH",68]="No se encontraron redes"
@@ -1158,7 +1158,7 @@ function language_strings() {
 	arr["RUSSIAN",68]="Сети не найдены"
 	arr["GREEK",68]="Δεν βρέθηκαν δίκτυα"
 	arr["ITALIAN",68]="Nessuna rete trovata"
-	arr["POLISH",68]="${pending_of_translation} Nie znaleziono sieci"
+	arr["POLISH",68]="Nie znaleziono sieci"
 
 	arr["ENGLISH",69]="  N.         BSSID      CHANNEL  PWR   ENC    ESSID"
 	arr["SPANISH",69]="  N.         BSSID        CANAL  PWR   ENC    ESSID"
@@ -1178,7 +1178,7 @@ function language_strings() {
 	arr["RUSSIAN",70]="Обнаружена только одна цель. Выбрана автоматически"
 	arr["GREEK",70]="Εντοπίστηκε μόνο ένας στόχος. Επιλέχθηκε αυτόματα"
 	arr["ITALIAN",70]="Solo un obiettivo rilevato. É stato selezionato automaticamente"
-	arr["POLISH",70]="${pending_of_translation} Wykryto tylko jeden cel. Automatycznie zaznaczone"
+	arr["POLISH",70]="Wykryto tylko jeden cel. Wybrany automatycznie"
 
 	arr["ENGLISH",71]="(*) Network with clients"
 	arr["SPANISH",71]="(*) Red con clientes"
@@ -1188,7 +1188,7 @@ function language_strings() {
 	arr["RUSSIAN",71]="(*) Сеть с клиентами"
 	arr["GREEK",71]="(*) Δίκτυο με χρήστες"
 	arr["ITALIAN",71]="(*) Rete con clienti"
-	arr["POLISH",71]="${pending_of_translation} (*) Sieć z klientami"
+	arr["POLISH",71]="(*) Sieć z podłączonymi klientami"
 
 	arr["ENGLISH",72]="Invalid target network was chosen"
 	arr["SPANISH",72]="Red objetivo elegida no válida"
@@ -1198,7 +1198,7 @@ function language_strings() {
 	arr["RUSSIAN",72]="Была выбрана неподходящая целевая сеть"
 	arr["GREEK",72]="Επιλέχθηκε άκυρο δίκτυο"
 	arr["ITALIAN",72]="La rete scelta come obiettivo non è valida"
-	arr["POLISH",72]="${pending_of_translation} Wybrano nieprawidłową sieć docelową"
+	arr["POLISH",72]="Wybrano nieprawidłową sieć docelową"
 
 	arr["ENGLISH",73]="airgeddon script v${airgeddon_version} developed by :"
 	arr["SPANISH",73]="airgeddon script v${airgeddon_version} programado por :"
@@ -1208,7 +1208,7 @@ function language_strings() {
 	arr["RUSSIAN",73]="скрипт airgeddon v${airgeddon_version} создал :"
 	arr["GREEK",73]="Το airgeddon script v${airgeddon_version} προγραμματίστηκε από :"
 	arr["ITALIAN",73]="airgeddon script v${airgeddon_version} sviluppato da :"
-	arr["POLISH",73]="${pending_of_translation} skrypt airgeddon v${airgeddon_version} zaplanowany przez :"
+	arr["POLISH",73]="Skrypt airgeddon v${airgeddon_version} napisany przez :"
 
 	arr["ENGLISH",74]="This script is under GPLv3 (or later) License"
 	arr["SPANISH",74]="Este script está bajo Licencia GPLv3 (o posterior)"
@@ -1218,7 +1218,7 @@ function language_strings() {
 	arr["RUSSIAN",74]="Этот скрипт под лицензией GPLv3 (или более поздней)"
 	arr["GREEK",74]="Αυτό το script είναι υπό την άδεια GPLv3 (ή νεότερη)"
 	arr["ITALIAN",74]="Questo script è sotto GPLv3 (o versione successiva)"
-	arr["POLISH",74]="${pending_of_translation} Ten skrypt jest w GPLv3 (lub nowszy)"
+	arr["POLISH",74]="Ten skrypt objęty jest licencją GPLv3 (lub nowszą)"
 
 	arr["ENGLISH",75]="Thanks to the \"Spanish pentesting crew\", to the \"Wifislax Staff\", to the forums people who help me, my collaborators, translators and specially to Kcdtv and xtonousou for beta testing and support received"
 	arr["SPANISH",75]="Gracias al \"Spanish pentesting crew\", al \"Wifislax Staff\", a la gente de los foros que me ayuda, a mis colaboradores, traductores y en especial a Kcdtv y xtonousou por el beta testing y el apoyo recibido"
@@ -1228,7 +1228,7 @@ function language_strings() {
 	arr["RUSSIAN",75]="Спасибо \"Spanish pentesting crew\", за \"Wifislax Staff\", людям с форумов, которые мне помогают, тем, кто принимает участие в проекте, переводчикам и особенно Kcdtv и xtonousou за бета тестирование и полученную поддержку"
 	arr["GREEK",75]="Τις ευχαριστίες μου στην \"Ισπανική ομάδα pentesting\", στο \"Wifislax Staff\", στα άτομα από το forum που με βοηθάνε, στους συνεργάτες μου, στους μεταφραστές και ειδικά στον Kcdtv και στον xtonousou για το beta testing και την υποστήριξη που λάβαμε"
 	arr["ITALIAN",75]="Grazie alla \"Spanish pentesting crew\", a \"Wifislax Staff\", alla gente dei forum per aiutarmi, al mio staff, ai traduttori e soprattutto a Kcdtv e xtonousou per il beta testing e il supporto ricevuto"
-	arr["POLISH",75]="${pending_of_translation} Dzięki \"Spanish pentesting crew\", \"Wifislax Staff\", ludziom forów, którzy mi pomagają, moi współpracownicy, tłumacze, a zwłaszcza Kcdtv i xtonousou na testy beta i wsparcie otrzymane"
+	arr["POLISH",75]="Podziękowania dla \"Spanish pentesting crew\", \"Wifislax Staff\", ludziom z forum którzy mi pomagają, moim współpracownikom, tłumaczom, a zwłaszcza Kcdtv i xtonousou za testy beta i otrzymane wsparcie"
 
 	arr["ENGLISH",76]="Invalid menu option was chosen"
 	arr["SPANISH",76]="Opción del menú no válida"
@@ -1238,7 +1238,7 @@ function language_strings() {
 	arr["RUSSIAN",76]="Выбрана недействительная опция"
 	arr["GREEK",76]="Επιλέχθηκε άκυρη επιλογή μενού"
 	arr["ITALIAN",76]="Opzione del menú non valida"
-	arr["POLISH",76]="${pending_of_translation} Niewłaściwa opcja menu"
+	arr["POLISH",76]="Niewłaściwa opcja"
 
 	arr["ENGLISH",77]="Invalid interface was chosen"
 	arr["SPANISH",77]="Interfaz no válida"
@@ -1248,7 +1248,7 @@ function language_strings() {
 	arr["RUSSIAN",77]="Был выбран недействительный интерфейс"
 	arr["GREEK",77]="Επιλέχθηκε άκυρη διεπαφή"
 	arr["ITALIAN",77]="Interfaccia non valida"
-	arr["POLISH",77]="${pending_of_translation} Nieprawidłowy interfejs"
+	arr["POLISH",77]=Nieprawidłowy interfejs"
 
 	arr["ENGLISH",78]="1.  Change language"
 	arr["SPANISH",78]="1.  Cambiar idioma"
@@ -1258,7 +1258,7 @@ function language_strings() {
 	arr["RUSSIAN",78]="1.  Сменить язык"
 	arr["GREEK",78]="1.  Αλλαγή γλώσσας"
 	arr["ITALIAN",78]="1.  Cambiare la lingua"
-	arr["POLISH",78]="${pending_of_translation} 1.  Zmień język"
+	arr["POLISH",78]="1.  Zmień język"
 
 	arr["ENGLISH",79]="1.  English"
 	arr["SPANISH",79]="1.  Inglés"
@@ -1268,7 +1268,7 @@ function language_strings() {
 	arr["RUSSIAN",79]="1.  Английский"
 	arr["GREEK",79]="1.  Αγγλικά"
 	arr["ITALIAN",79]="1.  Inglese"
-	arr["POLISH",79]="${pending_of_translation} 1.  Angielski"
+	arr["POLISH",79]="$1.  Angielski"
 
 	arr["ENGLISH",80]="2.  Spanish"
 	arr["SPANISH",80]="2.  Español"
@@ -1278,7 +1278,7 @@ function language_strings() {
 	arr["RUSSIAN",80]="2.  Испанский"
 	arr["GREEK",80]="2.  Ισπανικά"
 	arr["ITALIAN",80]="2.  Spagnolo"
-	arr["POLISH",80]="${pending_of_translation} 2.  Hiszpański"
+	arr["POLISH",80]="2.  Hiszpański"
 
 	arr["ENGLISH",81]="Select a language :"
 	arr["SPANISH",81]="Selecciona un idioma :"
@@ -1288,7 +1288,7 @@ function language_strings() {
 	arr["RUSSIAN",81]="Выберите язык :"
 	arr["GREEK",81]="Επιλέξτε μία γλώσσα :"
 	arr["ITALIAN",81]="Scegli una lingua :"
-	arr["POLISH",81]="${pending_of_translation} Wybierz język :"
+	arr["POLISH",81]="Wybierz język :"
 
 	arr["ENGLISH",82]="Invalid language was chosen"
 	arr["SPANISH",82]="Idioma no válido"
@@ -1298,7 +1298,7 @@ function language_strings() {
 	arr["RUSSIAN",82]="Был выбран неверный язык"
 	arr["GREEK",82]="Επιλέχθηκε άκυρη γλώσσα"
 	arr["ITALIAN",82]="Lingua non valida"
-	arr["POLISH",82]="${pending_of_translation} Nieprawidłowy język"
+	arr["POLISH",82]="Nieprawidłowy język"
 
 	arr["ENGLISH",83]="Language changed to English"
 	arr["SPANISH",83]="Idioma cambiado a Inglés"
@@ -1308,7 +1308,7 @@ function language_strings() {
 	arr["RUSSIAN",83]="Язык изменён на английский"
 	arr["GREEK",83]="Η γλώσσα άλλαξε στα Αγγλικά"
 	arr["ITALIAN",83]="Lingua cambiata in Inglese"
-	arr["POLISH",83]="${pending_of_translation} Język zmienił się na Angielski"
+	arr["POLISH",83]="Zmieniono język na Angielski"
 
 	arr["ENGLISH",84]="Language changed to Spanish"
 	arr["SPANISH",84]="Idioma cambiado a Español"
@@ -1318,7 +1318,7 @@ function language_strings() {
 	arr["RUSSIAN",84]="Язык изменён на испанский"
 	arr["GREEK",84]="Η γλώσσα άλλαξε στα Ισπανικά"
 	arr["ITALIAN",84]="Lingua cambiata in Spagnolo"
-	arr["POLISH",84]="${pending_of_translation} Język zmieniono na język Hiszpański"
+	arr["POLISH",84]="Zmieniono język na Hiszpański"
 
 	arr["ENGLISH",85]="Send me bugs or suggestions to ${normal_color}${mail}"
 	arr["SPANISH",85]="Enviadme errores o sugerencias a ${normal_color}${mail}"
@@ -1328,7 +1328,7 @@ function language_strings() {
 	arr["RUSSIAN",85]="Отправляйте ошибки и предложения мне на почту ${normal_color}${mail}"
 	arr["GREEK",85]="Στείλτε μου αναφορές για bugs ή συστάσεις στο ${normal_color}${mail}"
 	arr["ITALIAN",85]="Inviatemi errori o suggerimenti a ${normal_color}${mail}"
-	arr["POLISH",85]="${pending_of_translation} Wyślij mi błędy lub sugestie do ${normal_color}${mail}"
+	arr["POLISH",85]="Wyślij mi błędy lub sugestie na ${normal_color}${mail}"
 
 	arr["ENGLISH",86]="Welcome"
 	arr["SPANISH",86]="Bienvenid@"
@@ -1338,7 +1338,7 @@ function language_strings() {
 	arr["RUSSIAN",86]="Добро пожаловать"
 	arr["GREEK",86]="Καλως ορίσατε"
 	arr["ITALIAN",86]="Benvenuti"
-	arr["POLISH",86]="${pending_of_translation} Witamy"
+	arr["POLISH",86]="Witaj"
 
 	arr["ENGLISH",87]="Change language"
 	arr["SPANISH",87]="Cambiar idioma"
@@ -1348,7 +1348,7 @@ function language_strings() {
 	arr["RUSSIAN",87]="Сменить язык"
 	arr["GREEK",87]="Αλλάξτε γλώσσα"
 	arr["ITALIAN",87]="Cambia la lingua"
-	arr["POLISH",87]="${pending_of_translation} Zmień język"
+	arr["POLISH",87]="Zmień język"
 
 	arr["ENGLISH",88]="Interface selection"
 	arr["SPANISH",88]="Selección de interfaz"
@@ -1358,7 +1358,7 @@ function language_strings() {
 	arr["RUSSIAN",88]="Выбор интерфейса"
 	arr["GREEK",88]="Επιλογή διεπαφής"
 	arr["ITALIAN",88]="Selezione dell'interfaccia"
-	arr["POLISH",88]="${pending_of_translation} Wybór interfejsu"
+	arr["POLISH",88]="Wybór interfejsu"
 
 	arr["ENGLISH",89]="Mdk3 amok action"
 	arr["SPANISH",89]="Acción mdk3 amok"
@@ -1368,7 +1368,7 @@ function language_strings() {
 	arr["RUSSIAN",89]="Mdk3 amok в действии"
 	arr["GREEK",89]="Ενέργεια mdk3 amok"
 	arr["ITALIAN",89]="Azione mdk3 amok"
-	arr["POLISH",89]="${pending_of_translation} Działanie mdk3 amok"
+	arr["POLISH",89]="Akcja mdk3 amok"
 
 	arr["ENGLISH",90]="Aireplay deauth action"
 	arr["SPANISH",90]="Acción aireplay deauth"
@@ -1378,7 +1378,7 @@ function language_strings() {
 	arr["RUSSIAN",90]="Деаутентификация Aireplay в действии"
 	arr["GREEK",90]="Ενέργεια aireplay deauth"
 	arr["ITALIAN",90]="Azione aireplay deauth"
-	arr["POLISH",90]="${pending_of_translation} Działanie aireplay deauth"
+	arr["POLISH",90]="Akcja aireplay deauth"
 
 	arr["ENGLISH",91]="WIDS / WIPS / WDS confusion action"
 	arr["SPANISH",91]="Acción WIDS / WIPS / WDS confusion"
