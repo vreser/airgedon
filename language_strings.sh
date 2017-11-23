@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171113
+#Date.........: 20171123
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -1248,7 +1248,7 @@ function language_strings() {
 	arr["RUSSIAN",77]="Был выбран недействительный интерфейс"
 	arr["GREEK",77]="Επιλέχθηκε άκυρη διεπαφή"
 	arr["ITALIAN",77]="Interfaccia non valida"
-	arr["POLISH",77]=Nieprawidłowy interfejs"
+	arr["POLISH",77]="Nieprawidłowy interfejs"
 
 	arr["ENGLISH",78]="1.  Change language"
 	arr["SPANISH",78]="1.  Cambiar idioma"
@@ -2168,7 +2168,7 @@ function language_strings() {
 	arr["RUSSIAN",169]="6.  Меню офлайн расшифровки WPA/WPA2"
 	arr["GREEK",169]="6.  Μενού offline αποκρυπτογράφησης WPA/WPA2"
 	arr["ITALIAN",169]="6.  Menù per decifrare WPA/WPA2 offline"
-	arr["POLISH",169]=6.  Menu deszyfrowania WPA/WPA2 offline"
+	arr["POLISH",169]="6.  Menu deszyfrowania WPA/WPA2 offline"
 
 	arr["ENGLISH",170]="Offline WPA/WPA2 decrypt menu"
 	arr["SPANISH",170]="Menú de desencriptado WPA/WPA2 offline"
