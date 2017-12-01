@@ -3018,7 +3018,7 @@ function language_strings() {
 	arr["RUSSIAN",254]="Чтобы использовать Злого Двойника точки доступа и атаку сниффинга, вы должны иметь другой интерфейс в дополнение к сетевому интерфейсу wifi. Сетевой интерфейс wifi станет точкой доступа, к которому будут подключаться жертвы. Для того, чтобы у этой точки доступа было Интернет-подключение и используется второй сетевой адаптер. Ему необязательно быть wifi, достаточно ethernet"
 	arr["GREEK",254]="Για να χρησιμοποιήσετε τις επιθέσεις sniffing και Evil Twin με AP, πρέπει να έχετε άλλη μία διεπαφή παράλληλα με την διεπαφή δικτύου wifi που θα γίνει AP, η οποία θα παρέχει πρόσβαση στο διαδίκτυο στους άλλες χρήστες του δικτύου. Δεν χρειάζεται να είναι wifi, μπορεί να έιναι και ethernet"
 	arr["ITALIAN",254]="Per utilizzare gli attacchi Evil Twin con solo AP e con sniffing, è necessario che, oltre all'interfaccia wifi che diventerà l'AP, sia presente un'altra interfaccia di rete con connessione internet per fornire questo servizio agli altri clienti della rete. Questo non ha bisogno di essere wifi, può essere ethernet"
-	arr["POLISH",254]="Aby używać ataków Evil Twin tylko z AP i przechwytywaniem pakietów, musisz oprócz interfejsu wifi, który stanie się AP, posiadać drugi interfejs sieciowy z dostępem do internetu, aby go udzielić innym klientom w sieci. To nie musi być wifi, może to być ethernet"
+	arr["POLISH",254]="Aby używać ataków Evil Twin tylko z AP i sniffingiem pakietów, musisz oprócz interfejsu wifi, który stanie się AP, posiadać drugi interfejs sieciowy z dostępem do internetu, aby go udzielić innym klientom w sieci. To nie musi być wifi, może to być ethernet"
 
 	arr["ENGLISH",255]="without sniffing, just AP"
 	arr["SPANISH",255]="sin sniffing, solo AP"
@@ -3118,7 +3118,7 @@ function language_strings() {
 	arr["RUSSIAN",264]="Атака с перехватывающим порталом заключается в том, что мы ждём когда кто-то из пользователей введёт верный пароль от Wi-Fi на веб-странице, которую мы ему показываем"
 	arr["GREEK",264]="Η επίθεση captive portal κάνει έναν από τους χρήστες του δικτύου να μας παρέχει τον κωδικό πρόσβασης του δικτύου wifi βάζοντάς τον στο portal μας"
 	arr["ITALIAN",264]="L'attacco con il captive portal cercherà di ottenere che uno dei clienti della rete ci dia la password per la rete wireless inserendola sul nostro sito"
-	arr["POLISH",264]="${pending_of_translation} Atak w więzionym portalu spróbuje dostać jednego z klientów sieci, aby dostarczyć nam hasło sieci wifi, wprowadzając ją do naszego portalu"
+	arr["POLISH",264]="Atak w portalu captive spróbuje uzyskać hasło WiFi od jednego z klientów sieci, który wprowadzi je w naszym portalu"
 
 	arr["ENGLISH",265]="Evil Twin deauth"
 	arr["SPANISH",265]="Desautenticación para Evil Twin"
@@ -3128,7 +3128,7 @@ function language_strings() {
 	arr["RUSSIAN",265]="Деаутентификация для Злого Двойника"
 	arr["GREEK",265]="Evil Twin deauth"
 	arr["ITALIAN",265]="Desautenticazione per Evil Twin"
-	arr["POLISH",265]="${pending_of_translation} Deauthenticacji dla Evil Twin"
+	arr["POLISH",265]="Deautentykacja dla Evil Twin"
 
 	arr["ENGLISH",266]="4.  Return to Evil Twin attacks menu"
 	arr["SPANISH",266]="4.  Volver al menú de ataques Evil Twin"
@@ -3138,7 +3138,7 @@ function language_strings() {
 	arr["RUSSIAN",266]="4.  Вернуться в меню атак Злой Двойник"
 	arr["GREEK",266]="4.  Επιστροφή στο μενού επιθέσεων Evil Twin"
 	arr["ITALIAN",266]="4.  Tornare al menu attacchi Evil Twin"
-	arr["POLISH",266]="${pending_of_translation} 4.  Wróć do menu Evil Twin Atak"
+	arr["POLISH",266]="4.  Wróć do menu Evil Twin Atak"
 
 	arr["ENGLISH",267]="If you can't deauth clients from an AP using an attack, choose another one :)"
 	arr["SPANISH",267]="Si no consigues desautenticar a los clientes de un AP con un ataque, elige otro :)"
@@ -3148,7 +3148,7 @@ function language_strings() {
 	arr["RUSSIAN",267]="Если вы не можете деаутентифицировать клиентов от ТД используя эту атаку, выберите другую :)"
 	arr["GREEK",267]="Αν δεν μπορείτε να κάνετε deauth τους χρήστες από ένα AP χρησιμοποιώντας μία επίθεση, διαλέξτε κάποια άλλη :)"
 	arr["ITALIAN",267]="Se non è possibile scollegare i clienti da un AP con un attacco, scegline un altro :)"
-	arr["POLISH",267]="${pending_of_translation} Jeśli nie możesz dezaktywować klientów AP z atakiem, wybierz inny :)"
+	arr["POLISH",267]="Jeśli nie możesz deautentykować klientów AP tym atakiem, wybierz inny :)"
 
 	arr["ENGLISH",268]="With this attack, we'll try to deauth clients from the legitimate AP. Hopefully they'll reconnect to our Evil Twin AP"
 	arr["SPANISH",268]="Con este ataque, intentaremos desautenticar a los clientes del AP legítimo. Con suerte reconectarán pero a nuestro Evil Twin AP"
@@ -3158,7 +3158,7 @@ function language_strings() {
 	arr["RUSSIAN",268]="Этой атакой мы попытаемся деаутентифицировать клиентов от легитимной ТД. В надежде, что они переподключатся к нашему Злому Двойнику ТД"
 	arr["GREEK",268]="Με αυτήν την επίθεση, θα προσπαθήσουμε να κάνουμε deauth τους χρήστες από το αρχικό AP. Ας ελπίσουμε ότι θα επανασυνδεθούν στο Evil Twin AP μας"
 	arr["ITALIAN",268]="Con questo attacco, si cerca di scollegare i clienti dal AP legittimo. Se abbiamo fortuna si riconnetteranno al nostro Evil Twin AP"
-	arr["POLISH",268]="${pending_of_translation} W tym ataku podejmiemy próbę dezaktywacji legalnych klientów AP. Z powodzeniem będą się łączyć, ale z naszym Evil Twin AP"
+	arr["POLISH",268]="W tym ataku podejmiemy próbę deautentykacji legalnych klientów AP. Dzięki temu być może połączą się z naszym Evil Twin AP"
 
 	arr["ENGLISH",269]="To perform an Evil Twin attack you'll need to be very close to the target AP or have a very powerful wifi antenna. Your signal must reach clients equally strong or more than the legitimate AP"
 	arr["SPANISH",269]="Para realizar un ataque Evil Twin necesitarás estar muy cerca del AP objetivo o tener una antena wifi muy potente. Tu señal ha de llegar a los clientes igual de fuerte o más que la del AP legítimo"
@@ -3168,7 +3168,7 @@ function language_strings() {
 	arr["RUSSIAN",269]="Для выполнения атаки Злой Двойник, вы должны быть очень близко к целевой ТД или иметь очень мощную wifi антенну. Ваш сигнал должен достигать клиентов с такой же силой, или даже сильнее, чем легитимная ТД"
 	arr["GREEK",269]="Για να πραγματοποιηθεί μία επίθεση Evil Twin θα πρέπει να είστε αρκετά κοντά στο AP-στόχο ή να έχετε μία πολύ ισχυρή κεραία. Το σήμα πρέπει να φτάνει στους χρήστες το ίδιο ή περισσότερο από το αρχικό AP"
 	arr["ITALIAN",269]="Per un attacco Evil Twin c'è bisogno di essere vicino al punto di accesso obiettivo o di avere un'antenna wifi potente. Il segnale deve raggiungere i clienti come o piú forte che il legittimo AP"
-	arr["POLISH",269]="${pending_of_translation} Aby wykonać atak Evil Twin, musisz być bardzo blisko docelowego punktu dostępowego lub mieć bardzo silną antenę wifi. Twój sygnał musi dotrzeć do klientów tak samo silny, jak i większy od legalnego AP"
+	arr["POLISH",269]="Aby wykonać atak Evil Twin, musisz być bardzo blisko docelowego punktu dostępowego lub mieć bardzo silną antenę wifi. Twój sygnał musi dotrzeć do klientów con najmniej tak samo silny lub silniejszy od legalnego AP"
 
 	arr["ENGLISH",270]="Evil Twin attack just AP"
 	arr["SPANISH",270]="Ataque Evil Twin solo AP"
@@ -3178,7 +3178,7 @@ function language_strings() {
 	arr["RUSSIAN",270]="Атака Злой Двойник, просто ТД"
 	arr["GREEK",270]="Επίθεση Evil Twin μόνο AP"
 	arr["ITALIAN",270]="Attacco Evil Twin solo AP"
-	arr["POLISH",270]="${pending_of_translation} Ataku Evil Twin tylko AP"
+	arr["POLISH",270]="Atak Evil Twin tylko AP"
 
 	arr["ENGLISH",271]="Selected BSSID: ${pink_color}None${normal_color}"
 	arr["SPANISH",271]="BSSID seleccionado: ${pink_color}Ninguno${normal_color}"
@@ -3188,7 +3188,7 @@ function language_strings() {
 	arr["RUSSIAN",271]="Выбранная BSSID: ${pink_color}Нет${normal_color}"
 	arr["GREEK",271]="Επιλεγμένο BSSID: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",271]="BSSID selezionato: ${pink_color}Nessuno${normal_color}"
-	arr["POLISH",271]="${pending_of_translation} BSSID został wybrany: ${pink_color}Brak${normal_color}"
+	arr["POLISH",271]="Wybrany BSSID: ${pink_color}Brak${normal_color}"
 
 	arr["ENGLISH",272]="Deauthentication chosen method: ${pink_color}${et_dos_attack}${normal_color}"
 	arr["SPANISH",272]="Método elegido de desautenticación: ${pink_color}${et_dos_attack}${normal_color}"
@@ -3198,7 +3198,7 @@ function language_strings() {
 	arr["RUSSIAN",272]="Выбор метода деаутентификации: ${pink_color}${et_dos_attack}${normal_color}"
 	arr["GREEK",272]="Επιλεγμένη μέθοδος για deauthentication: ${pink_color}${et_dos_attack}${normal_color}"
 	arr["ITALIAN",272]="Metodo deauth scelto: ${pink_color}${et_dos_attack}${normal_color}"
-	arr["POLISH",272]="${pending_of_translation} Wybrana metoda deauthenticacji: ${pink_color}${et_dos_attack}${normal_color}"
+	arr["POLISH",272]="Wybrana metoda deautentykacji: ${pink_color}${et_dos_attack}${normal_color}"
 
 	arr["ENGLISH",273]="Selected channel: ${pink_color}None${normal_color}"
 	arr["SPANISH",273]="Canal seleccionado: ${pink_color}Ninguno${normal_color}"
@@ -3208,7 +3208,7 @@ function language_strings() {
 	arr["RUSSIAN",273]="Выбранный канал: ${pink_color}Нет${normal_color}"
 	arr["GREEK",273]="Επιλεγμένο κανάλι: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",273]="Canale selezionato: ${pink_color}Nessuno${normal_color}"
-	arr["POLISH",273]="${pending_of_translation} Wybrany kanał: ${pink_color}Brak${normal_color}"
+	arr["POLISH",273]="Wybrany kanał: ${pink_color}Brak${normal_color}"
 
 	arr["ENGLISH",274]="Selected ESSID: ${pink_color}None${normal_color}"
 	arr["SPANISH",274]="ESSID seleccionado: ${pink_color}Ninguno${normal_color}"
@@ -3218,7 +3218,7 @@ function language_strings() {
 	arr["RUSSIAN",274]="Выбранная ESSID: ${pink_color}Нет${normal_color}"
 	arr["GREEK",274]="Επιλεγμένο ESSID: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",274]="ESSID selezionato: ${pink_color}Nessuno${normal_color}"
-	arr["POLISH",274]="${pending_of_translation} Wybrano ESSID: ${pink_color}Brak${normal_color}"
+	arr["POLISH",274]="Wybrany ESSID: ${pink_color}Brak${normal_color}"
 
 	arr["ENGLISH",275]="In addition to the software requirements that already meet if you get here, you need to provide target AP data to carry out the attack"
 	arr["SPANISH",275]="Además de los requisitos de software, que ya cumples si has llegado hasta aquí, es necesario proporcionar los datos del AP objetivo para llevar a cabo el ataque"
@@ -3228,7 +3228,7 @@ function language_strings() {
 	arr["RUSSIAN",275]="В дополнение к требованиям по программному обеспечению, которым вы соответствуете, вам нужно обеспечить Интернет подключение вашей ТД для выполнения атаки"
 	arr["GREEK",275]="Εκτός από τις απαιτήσεις του λογισμικού οι οποίες πληρούνται αν έχετε φτάσει έως εδώ, χρειάζεται να παρέχετε δεδομένα AP-στόχου για να πραγματοποιηθεί η επίθεση"
 	arr["ITALIAN",275]="Oltre ai requisiti software che già soddisfi se sei arrivato qui, è necessario fornire i dati dell'AP obiettivo per effettuare l'attacco"
-	arr["POLISH",275]="${pending_of_translation} Oprócz wymogów dotyczących oprogramowania, które już spełniłeś, jeśli osiągniesz tutaj, konieczne jest dostarczenie docelowych danych AP do przeprowadzenia ataku"
+	arr["POLISH",275]="Oprócz wymogów dotyczących oprogramowania, które już spełniłeś, konieczne jest dostarczenie danych AP docelowego do przeprowadzenia ataku"
 
 	arr["ENGLISH",276]="On top of this screen you can see all that is needed to perform the attack. If any of the parameters has no value, you can enter it manually, or you can go back to select a target and then return here"
 	arr["SPANISH",276]="En la parte superior de esta pantalla puedes ver todo lo que hace falta para realizar el ataque. Si alguno de los parámetros no tiene valor, puedes introducirlo manualmente, o puedes retroceder para seleccionar un objetivo y regresar aquí"
@@ -3238,7 +3238,7 @@ function language_strings() {
 	arr["RUSSIAN",276]="Наверху экрана вы можете увидеть всё, что вам нужно для выполнения этой атаки. Если какие-либо из этих параметров не имеют значения, вы можете ввести их вручную или вы можете вернуться назад для выбора цели, а затем вернуться сюда"
 	arr["GREEK",276]="Πάνω από αυτή την οθόνη μπορείτε να δείτε ό,τι χρειάζεται για να εκτελεστεί η επίθεση. Αν κάποια παραμέτρος δεν έχει τιμή, μπορείτε να την εισάγετε χειροκίνητα, ή μπορείτε να πάτε πίσω για να επιλέξετε εαν στόχο και μετά να επιστρέψετε εδώ"
 	arr["ITALIAN",276]="In cima a questa schermata è possibile vedere tutto ciò che è necessario per eseguire l'attacco. Se uno dei parametri non ha alcun valore, è possibile inserirlo manualmente, oppure si può tornare indietro per selezionare un target e tornare qui"
-	arr["POLISH",276]="${pending_of_translation} U góry tego ekranu można zobaczyć wszystko, co jest potrzebne do przeprowadzenia ataku. Jeśli któryś z parametrów nie ma wartości, możesz go wprowadzić ręcznie lub wrócić do wybranego celu i wrócić tutaj"
+	arr["POLISH",276]="U góry tego ekranu można zobaczyć wszystko, co jest potrzebne do przeprowadzenia ataku. Jeśli któryś z parametrów nie ma wartości, możesz go wprowadzić ręcznie lub wrócić do wybranego celu"
 
 	arr["ENGLISH",277]="Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",277]="¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -3248,7 +3248,7 @@ function language_strings() {
 	arr["RUSSIAN",277]="Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",277]="Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",277]="Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",277]="${pending_of_translation} Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",277]="Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",278]="Deauthentication chosen method: ${pink_color}None${normal_color}"
 	arr["SPANISH",278]="Método elegido de desautenticación: ${pink_color}Ninguno${normal_color}"
@@ -3258,7 +3258,7 @@ function language_strings() {
 	arr["RUSSIAN",278]="Выбор метода деаутентификации: ${pink_color}Нет${normal_color}"
 	arr["GREEK",278]="Επιλεγμένη μέθοδος deauthentication: ${pink_color}Καμία${normal_color}"
 	arr["ITALIAN",278]="Metodo deauth scelto: ${pink_color}Nessuno${normal_color}"
-	arr["POLISH",278]="${pending_of_translation} Wybrana metoda deauthenticacji: ${pink_color}Brak${normal_color}"
+	arr["POLISH",278]="Wybrana metoda deautentykacji: ${pink_color}Brak${normal_color}"
 
 	arr["ENGLISH",279]="Select another interface with internet access :"
 	arr["SPANISH",279]="Selecciona otra interfaz que tenga acceso a internet :"
@@ -3268,7 +3268,7 @@ function language_strings() {
 	arr["RUSSIAN",279]="Выбор другого интерфейса с Интернет доступом :"
 	arr["GREEK",279]="Επιλέξτε άλλη διεπαφή με προσβαση στο διαδίκτυο :"
 	arr["ITALIAN",279]="Selezionare un'altra interfaccia che ha accesso a internet :"
-	arr["POLISH",279]="${pending_of_translation} Wybierz inny interfejs, który ma dostęp do internet :"
+	arr["POLISH",279]="Wybierz inny interfejs, który ma dostęp do internetu :"
 
 	arr["ENGLISH",280]="On this screen, it's supposed an additional interface to provide internet access is chosen, but you don't have anyone at this moment"
 	arr["SPANISH",280]="En esta pantalla, se supone que deberías elegir otro interfaz adicional para proporcionar acceso a internet, pero no dispones de ninguno en este momento"
@@ -3278,7 +3278,7 @@ function language_strings() {
 	arr["RUSSIAN",280]="На этом экране предполагается, что выбран дополнительный интерфейс для предоставления Интернет доступа, но у вас его на текущий момент нет"
 	arr["GREEK",280]="Σε αυτή την οθόνη, υποτίθεται πως επιλέγεται μία επιπρόσθετη διεπαφή που παρέχει πρόσβαση στο διαδίκτυο, αλλά δεν έχετε κανέναν αυτή τη στιγμή"
 	arr["ITALIAN",280]="In questa schermata, si suppone che devi scegliere un'interfaccia aggiuntiva per fornire l'accesso a internet, peró in questo momento non ne hai nessuna"
-	arr["POLISH",280]="${pending_of_translation} Na tym ekranie powinieneś wybrać inny dodatkowy interfejs, aby zapewnić dostęp do internet, ale nie masz w tym momencie żadnego"
+	arr["POLISH",280]="Na tym ekranie powinieneś wybrać inny dodatkowy interfejs, aby zapewnić dostęp do internetu, ale nie masz w tym momencie żadnego"
 
 	arr["ENGLISH",281]="The interface ${current_iface_on_messages} you have already selected is not a wifi card. This attack needs a wifi card selected"
 	arr["SPANISH",281]="El interfaz ${current_iface_on_messages} que tienes seleccionado no es una tarjeta wifi. Este ataque necesita que la interfaz seleccionada sea wifi"
@@ -3288,7 +3288,7 @@ function language_strings() {
 	arr["RUSSIAN",281]="Интерфейс ${current_iface_on_messages}, который вы выбрали не является wifi картой. Эта атака требует выбрать wifi карту"
 	arr["GREEK",281]="Η διεπαφή ${current_iface_on_messages} που έχετε ήδη επιλέξει δεν έιναι κάρτα wifi. Αυτή η επίθεση χρειάζεται μία κάρτα wifi επιλεγμένη"
 	arr["ITALIAN",281]="L'interfaccia ${current_iface_on_messages} che hai scelto non è una scheda wifi. Per questo attacco è necessario che l'interfaccia selezionata sia wifi"
-	arr["POLISH",281]="${pending_of_translation} Interfejs ${current_iface_on_messages}, który wybrałeś, nie jest kartą wifi. Ten atak wymaga wybrania interfejsu wifi"
+	arr["POLISH",281]="Interfejs ${current_iface_on_messages}, który wybrałeś, nie jest kartą wifi. Ten atak wymaga wybrania interfejsu wifi"
 
 	arr["ENGLISH",282]="Selected internet interface: ${pink_color}${internet_interface}${normal_color}"
 	arr["SPANISH",282]="Interfaz con internet seleccionada: ${pink_color}${internet_interface}${normal_color}"
@@ -3298,7 +3298,7 @@ function language_strings() {
 	arr["RUSSIAN",282]="Выбранный Интернет интерфейс: ${pink_color}${internet_interface}${normal_color}"
 	arr["GREEK",282]="Επιλεγμένη διεπαφή με πρόσβαση στο διαδίκτυο: ${pink_color}${internet_interface}${normal_color}"
 	arr["ITALIAN",282]="Interfaccia internet selezionata: ${pink_color}${internet_interface}${normal_color}"
-	arr["POLISH",282]="${pending_of_translation} Interfejs z wybranym internetem: ${pink_color}${internet_interface}${normal_color}"
+	arr["POLISH",282]="Wybrany interfejs z internetem: ${pink_color}${internet_interface}${normal_color}"
 
 	arr["ENGLISH",283]="Selected internet interface: ${pink_color}None${normal_color}"
 	arr["SPANISH",283]="Interfaz con internet seleccionada: ${pink_color}Ninguna${normal_color}"
@@ -3308,7 +3308,7 @@ function language_strings() {
 	arr["RUSSIAN",283]="Выбранный Интернет интерфейс: ${pink_color}Нет${normal_color}"
 	arr["GREEK",283]="Επιλεγμένη διεπαφή με πρόσβαση στο διαδίκτυο: ${pink_color}Καμία${normal_color}"
 	arr["ITALIAN",283]="Interfaccia internet selezionata: ${pink_color}Nessuna${normal_color}"
-	arr["POLISH",283]="${pending_of_translation} Interfejs z wybranym internetem: ${pink_color}Brak${normal_color}"
+	arr["POLISH",283]="Wybrany interfejs z internetem: ${pink_color}Brak${normal_color}"
 
 	arr["ENGLISH",284]="Do you want to use this selected interface? ${normal_color}${visual_choice}"
 	arr["SPANISH",284]="¿Quieres utilizar esta interfaz ya seleccionada? ${normal_color}${visual_choice}"
@@ -3318,7 +3318,7 @@ function language_strings() {
 	arr["RUSSIAN",284]="Вы хотите использовать этот выбранный интерфейс? ${normal_color}${visual_choice}"
 	arr["GREEK",284]="Θέλετε να χρησιμοποιήσετε αυτή την επιλεγμένη διεπαφή; ${normal_color}${visual_choice}"
 	arr["ITALIAN",284]="Vuoi usare questa interfaccia già selezionata? ${normal_color}${visual_choice}"
-	arr["POLISH",284]="${pending_of_translation} Czy chcesz skorzystać z tego interfejsu? ${normal_color}${visual_choice}"
+	arr["POLISH",284]="Czy chcesz skorzystać z tego interfejsu? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",285]="Selected interface with internet access detected during this session [${normal_color}${internet_interface}${blue_color}]"
 	arr["SPANISH",285]="Se ha detectado que ya tiene un interfaz con acceso a internet seleccionada en esta sesión [${normal_color}${internet_interface}${blue_color}]"
@@ -3328,7 +3328,7 @@ function language_strings() {
 	arr["RUSSIAN",285]="Во время этой сессии обнаружен выбранный интерфейс с Интернет подключением [${normal_color}${internet_interface}${blue_color}]"
 	arr["GREEK",285]="Η επιλεγμένη διεπαφή με πρόσβαση στο διαδίκτυο εντοπίστηκε κατά τη διάρκεια της συνεδρίας [${normal_color}${internet_interface}${blue_color}]"
 	arr["ITALIAN",285]="E' stato riscontrato che ha già un'interfaccia con accesso a internet selezionata in questa sessione [${normal_color}${internet_interface}${blue_color}]"
-	arr["POLISH",285]="${pending_of_translation} Wykryto, że masz już interfejs z dostępem do internetu wybranym w tej sesji [${normal_color}${internet_interface}${blue_color}]"
+	arr["POLISH",285]="Wykryto, że w tej sesji masz już wybrany interfejs z dostępem do internetu [${normal_color}${internet_interface}${blue_color}]"
 
 	arr["ENGLISH",286]="If you don't have a captured Handshake file from the target network you can get it now"
 	arr["SPANISH",286]="Si no tienes un fichero de Handshake capturado de la red objetivo puedes obtenerlo ahora"
@@ -3338,7 +3338,7 @@ function language_strings() {
 	arr["RUSSIAN",286]="Если у вас отсутствует файл с рукопожатием целевой сети, вы можете сейчас захватить его"
 	arr["GREEK",286]="Εάν δεν έχετε κάποιο αρχείο Χειραψίας από το δίκτυο-στόχος μπορείτε να το πάρετε τώρα"
 	arr["ITALIAN",286]="Se non hai catturato un file di Handshake dalla rete obiettivo puoi ottenerlo ora"
-	arr["POLISH",286]="${pending_of_translation} Jeśli nie masz pliku Handshake przechwyconego w sieci docelowej, możesz ją teraz pobrać"
+	arr["POLISH",286]="Jeśli nie masz pliku Handshake przechwyconego w sieci docelowej, możesz go teraz zdobyć"
 
 	arr["ENGLISH",287]="The script will check for internet access. Please be patient..."
 	arr["SPANISH",287]="El script va a comprobar si tienes acceso a internet. Por favor ten paciencia..."
@@ -3348,7 +3348,7 @@ function language_strings() {
 	arr["RUSSIAN",287]="Этот скрипт проверит доступ к Интернету. Подождите немного..."
 	arr["GREEK",287]="Το script θα ελέγξει αν έχετε πρόσβαση στο διαδίκτυο. Παρακαλώ έχετε λίγη υπομονή..."
 	arr["ITALIAN",287]="Lo script controllerà se si ha accesso a internet. Si prega di essere pazienti..."
-	arr["POLISH",287]="${pending_of_translation} Skrypt sprawdzi, czy masz dostęp do internetu. Bądźcie cierpliwi..."
+	arr["POLISH",287]="Skrypt sprawdzi, czy masz dostęp do internetu. Bądź cierpliwy..."
 
 	arr["ENGLISH",288]="It seems you have no internet access. This attack needs an interface with internet access"
 	arr["SPANISH",288]="Parece que no tienes conexión a internet. Este ataque necesita una interfaz con acceso a internet"
@@ -3358,7 +3358,7 @@ function language_strings() {
 	arr["RUSSIAN",288]="Судя по всему, у вас нет доступа к Интернету. Эта атака требует интерфейс с Интернет доступом"
 	arr["GREEK",288]="Φαίνεται πως δεν έχετε πρόσβαση στο διαδίκτυο. Αυτή η επίθεση χρειάζεται μία διεπαφή με πρόσβαση στο διαδίκτυο"
 	arr["ITALIAN",288]="Sembra che tu non abbia alcuna connessione a internet. Questo attacco ha bisogno di un'interfaccia con connessione a internet"
-	arr["POLISH",288]="${pending_of_translation} Wygląda na to, że nie masz połączenia internetowego. Ten atak wymaga interfejsu z dostępem do internet"
+	arr["POLISH",288]="Wygląda na to, że nie masz połączenia internetowego. Ten atak wymaga interfejsu z dostępem do internetu"
 
 	arr["ENGLISH",289]="It has been verified successfully you have internet access on selected interface. Script can continue..."
 	arr["SPANISH",289]="Se ha verificado correctamente que tienes acceso a internet en la interfaz seleccionada. El script puede continuar..."
@@ -3368,7 +3368,7 @@ function language_strings() {
 	arr["RUSSIAN",289]="Проверка доступа к Интернету прошла успешно на выбранном интерфейс. Скрипт может продолжать..."
 	arr["GREEK",289]="Επαληθεύτηκε επιτυχώς πως έχετε πρόσβαση στο διαδίκτυο με την επιλεγμένη διεπαφή. Το script μπορεί να συνεχίσει..."
 	arr["ITALIAN",289]="E' stato verificato con successo che si ha accesso a internet sull'interfaccia selezionata. Lo script può continuare ..."
-	arr["POLISH",289]="${pending_of_translation} Udało Ci się sprawdzić, czy masz dostęp do internet w wybranym interfejsie. Skrypt może kontynuować..."
+	arr["POLISH",289]="Udało się potwierdzić, że masz dostęp do internet w wybranym interfejsie. Skrypt może kontynuować..."
 
 	arr["ENGLISH",290]="It seems you have internet access but not in the selected interface acting as interface with internet access"
 	arr["SPANISH",290]="Parece que tienes conexión a internet pero no en la interfaz seleccionada como interfaz con acceso a internet"
@@ -3378,7 +3378,7 @@ function language_strings() {
 	arr["RUSSIAN",290]="Судя по всему у вас есть доступ к Интернету, но не на выбранном для Интернет доступа интерфейсе"
 	arr["GREEK",290]="Φαίνεται πως έχετε πρόσβαση στο διαδίκτυο αλλά όχι στην επιλεγμένη διεπαφή που ενεργεί ως διεπαφή με πρόσβαση στο διαδίκτυο"
 	arr["ITALIAN",290]="Sembra che hai connession a internet ma non nell'interfaccia selezionata come interfaccia con accesso ad internet"
-	arr["POLISH",290]="${pending_of_translation} Wydaje się, że masz połączenie z internet, ale nie w interfejsie wybranym jako interfejs z dostępem do internet"
+	arr["POLISH",290]="Wydaje się, że masz połączenie z internetem ale w innym interfejsie"
 
 	arr["ENGLISH",291]="Evil Twin AP attack with sniffing"
 	arr["SPANISH",291]="Ataque Evil Twin AP con sniffing"
@@ -3388,7 +3388,7 @@ function language_strings() {
 	arr["RUSSIAN",291]="Атака Злой Двойник ТД со сниффингом"
 	arr["GREEK",291]="Επίθεση Evil Twin AP με sniffing"
 	arr["ITALIAN",291]="Attacco Evil Twin AP con sniffing"
-	arr["POLISH",291]="${pending_of_translation} Ataku Evil Twin AP z sniffing"
+	arr["POLISH",291]="Atak Evil Twin AP ze sniffingiem"
 
 	arr["ENGLISH",292]="Evil Twin AP attack with sniffing and sslstrip"
 	arr["SPANISH",292]="Ataque Evil Twin AP con sniffing y sslstrip"
@@ -3398,7 +3398,7 @@ function language_strings() {
 	arr["RUSSIAN",292]="Атака Злой Двойник ТД со сниффингом и sslstrip"
 	arr["GREEK",292]="Επίθεση Evil Twin AP με sniffing και sslstrip"
 	arr["ITALIAN",292]="Attacco Evil Twin AP con sniffing e sslstrip"
-	arr["POLISH",292]="${pending_of_translation} Ataku Evil Twin AP z sniffing i sslstrip"
+	arr["POLISH",292]="Atak Evil Twin AP ze sniffingiem i sslstrip"
 
 	arr["ENGLISH",293]="Evil Twin AP attack with captive portal"
 	arr["SPANISH",293]="Ataque Evil Twin AP con portal cautivo"
@@ -3408,7 +3408,7 @@ function language_strings() {
 	arr["RUSSIAN",293]="Атака Злой Двойник ТД с перехватывающим порталом"
 	arr["GREEK",293]="Επίθεση Evil Twin AP με captive portal"
 	arr["ITALIAN",293]="Attacco Evil Twin AP con captive portal"
-	arr["POLISH",293]="${pending_of_translation} Ataku Evil Twin AP z wmontowanym portalem"
+	arr["POLISH",293]="Atak Evil Twin AP z portalem captive"
 
 	arr["ENGLISH",294]="Detecting resolution... Detected! : ${normal_color}${resolution}"
 	arr["SPANISH",294]="Detectando resolución... Detectada! : ${normal_color}${resolution}"
@@ -3418,7 +3418,7 @@ function language_strings() {
 	arr["RUSSIAN",294]="Определение разрешения... Определено! : ${normal_color}${resolution}"
 	arr["GREEK",294]="Εντοπίζεται η ανάλυση... Εντοπίστηκε! : ${normal_color}${resolution}"
 	arr["ITALIAN",294]="Rilevamento risoluzione... Rilevata! : ${normal_color}${resolution}"
-	arr["POLISH",294]="${pending_of_translation} Wykrywanie rozdzielczości... Wykryte! : ${normal_color}${resolution}"
+	arr["POLISH",294]="Wykrywanie rozdzielczości... Wykryto! : ${normal_color}${resolution}"
 
 	arr["ENGLISH",295]="Detecting resolution... Can't be detected!, using standard : ${normal_color}${resolution}"
 	arr["SPANISH",295]="Detectando resolución... No se ha podido detectar!, usando estándar : ${normal_color}${resolution}"
@@ -3428,7 +3428,7 @@ function language_strings() {
 	arr["RUSSIAN",295]="Определение разрешения... Не получается определить!, используется стандартное : ${normal_color}${resolution}"
 	arr["GREEK",295]="Εντοπίζεται η ανάλυση... Δεν μπορεί να εντοπιστεί!, χρησιμοποιείται η προεπιλεγμένη : ${normal_color}${resolution}"
 	arr["ITALIAN",295]="Rilevamento risoluzione... Non è stato possible rilevarla!, usando quella standard : ${normal_color}${resolution}"
-	arr["POLISH",295]="${pending_of_translation} Wykrywanie rozdzielczości... Nie można wykryć!, używając standardu : ${normal_color}${resolution}"
+	arr["POLISH",295]="Wykrywanie rozdzielczości... Nie można wykryć! użycie standardu : ${normal_color}${resolution}"
 
 	arr["ENGLISH",296]="All parameters and requirements are set. The attack is going to start. Multiple windows will be opened, don't close anyone. When you want to stop the attack press [Enter] on this window and the script will automatically close them all"
 	arr["SPANISH",296]="Todos los parámetros y requerimientos están listos. Va a comenzar el ataque. Se abrirán múltiples ventanas, no cierres ninguna. Cuando quieras parar el ataque pulsa [Enter] en esta ventana y el script cerrará automáticamente todo"
@@ -3438,7 +3438,7 @@ function language_strings() {
 	arr["RUSSIAN",296]="Все параметры и требования готовы. Атака может быть начата. Будет открыто много окон, не закрывайте их. Когда вы захотите остановить атаку, нажмите [Enter] в этом окне и скрипт автоматически их все закроет"
 	arr["GREEK",296]="Όλοι οι παράμετροι και οι απαιτήσεις έχουν τεθεί. Η επίθεση πρόκειται να ξεκινήσει. Θα ανοίξουν πολλαπλά παράθυρα, μην επιχειρήσετε να κλείσετε κάποιο. Όταν θελήσετε να σταματήσετε την επίθεση πατήστε [Enter] σε αυτό το παράθυρο και το script θα τα κλείσει όλα"
 	arr["ITALIAN",296]="Tutti i parametri e i requisiti sono pronti. Si inizierà l'attacco. Si apriranno varie finestre, non chiuderne nessuna. Quando vuoi fermare l'attacco premi [Enter] in questa finestra e lo script chiuderá automaticamente tutto"
-	arr["POLISH",296]="${pending_of_translation} Wszystkie parametry i wymagania są gotowe. Atak ma się rozpocząć. Otwarte zostanie wiele okien, nie zamykaj. Aby zatrzymać atak, wciśnij [Enter] w tym oknie, a skrypt automatycznie zamknie wszystkie"
+	arr["POLISH",296]="Wszystkie parametry i wymagania są gotowe. Atak może się rozpocząć. Otwarte zostanie wiele okien, nie zamykaj żadnego. Aby zatrzymać atak, wciśnij [Enter] w tym oknie, a skrypt automatycznie zamknie wszystkie"
 
 	arr["ENGLISH",297]="Cleaning iptables and routing rules"
 	arr["SPANISH",297]="Limpiando iptables y reglas de routing"
@@ -3448,7 +3448,7 @@ function language_strings() {
 	arr["RUSSIAN",297]="Очистка iptables и правил маршуртизации"
 	arr["GREEK",297]="Γινεται καθαρισμός των iptables και των κανόνων δρομολόγησης"
 	arr["ITALIAN",297]="Pulendo iptables e le regole di routing"
-	arr["POLISH",297]="${pending_of_translation} Usuwanie iptables i reguł routingu"
+	arr["POLISH",297]="Usuwanie iptables i reguł routingu"
 
 	arr["ENGLISH",298]="Evil Twin attack has been started. Press [Enter] key on this window to stop it"
 	arr["SPANISH",298]="El ataque Evil Twin ha comenzado. Pulse la tecla [Enter] en esta ventana para pararlo"
@@ -3458,7 +3458,7 @@ function language_strings() {
 	arr["RUSSIAN",298]="Атака Злой Двойник начата. Для её остановки клавишу [Enter] в этом окне"
 	arr["GREEK",298]="Η επίθεση Evil Twin ξεκίνησε. Πατήστε το κουμπί [Enter] σε αυτό το παράθυρο για να την σταματήσετε"
 	arr["ITALIAN",298]="L'attacco Evil Twin è iniziato. Premere il tasto [Enter] in questa finestra per fermarlo"
-	arr["POLISH",298]="${pending_of_translation} Rozpoczął się atak Evil Twin. Naciśnij klawisz [Enter] w tym oknie, aby go zatrzymać"
+	arr["POLISH",298]="Rozpoczął się atak Evil Twin. Naciśnij klawisz [Enter] w tym oknie, aby go zatrzymać"
 
 	arr["ENGLISH",299]="Restoring interface..."
 	arr["SPANISH",299]="Restaurando interfaz..."
@@ -3468,7 +3468,7 @@ function language_strings() {
 	arr["RUSSIAN",299]="Восстановление интерфейса..."
 	arr["GREEK",299]="Γίνεται επαναφορά διεπαφής..."
 	arr["ITALIAN",299]="Ripristinando interfaccia..."
-	arr["POLISH",299]="${pending_of_translation} Przywracanie interfejsu..."
+	arr["POLISH",299]="Przywracanie interfejsu..."
 
 	arr["ENGLISH",300]="If the xpdyinfo command works, the script will be able to calculate your screen resolution and display the windows in a better way. Depending of the system, the package name containing it could be x11-utils, xdpyinfo, xorg-xdpyinfo, etc."
 	arr["SPANISH",300]="Si haces que funcione en tu sistema el comando xdpyinfo, el script podrá calcular tu resolución de pantalla y mostrarte las ventanas de forma más optimizada. Dependiendo del sistema el paquete que lo contiene puede llamarse x11-utils, xdpyinfo, xorg-xdpyinfo, etc."
@@ -3478,7 +3478,7 @@ function language_strings() {
 	arr["RUSSIAN",300]="Команда xpdyinfo поможет этому скрипту определить разрешение вашего экрана и выбрать наилучшее отображение окон. В зависимости от системы, имя пакета, в котором содержится эта программа, может быть x11-utils, xdpyinfo, xorg-xdpyinfo, и т.д."
 	arr["GREEK",300]="Αν δουλέψει η εντολή xpdyinfo, το script θα μπορέσει να υπολογίσει την ανάλυση της οθόνης και να δείχνει τα παράθυρα καλύτερα. Εξαρτάται από το σύστημα, το όνομα του πακέτου που το περιέχει θα μπορούσε να είναι x11-utils, xdpyinfo, xorg-xdpyinfo, κτλπ."
 	arr["ITALIAN",300]="Se funziona il comando xdpyinfo, lo script calcolerà la risoluzione dello schermo e mostrerá le finestre in modo ottimizzato. A seconda del sistema il pacchetto che lo contiene può chiamarsi x11-utils, xdpyinfo, xorg-xdpyinfo, etc."
-	arr["POLISH",300]="${pending_of_translation} Jeśli polecenie xdpyinfo działa w systemie, skrypt będzie mógł obliczyć rozdzielczość ekranu i lepiej wyświetlać okna. W zależności od systemu pakiet zawierający go może być nazwany x11-utils, xdpyinfo, xorg-xdpyinfo, itd."
+	arr["POLISH",300]="Jeśli polecenie xdpyinfo działa w systemie, skrypt będzie mógł obliczyć rozdzielczość ekranu i lepiej wyświetlać okna. W zależności od systemu pakiet zawierający go może być nazwany x11-utils, xdpyinfo, xorg-xdpyinfo, itd."
 
 	arr["ENGLISH",301]="Despite having all essential tools installed, your system uses airmon-zc instead of airmon-ng. In order to work properly you need to install lspci (pciutils) and you don't have it right now. Please, install it and launch the script again"
 	arr["SPANISH",301]="A pesar de tener todas las herramientas esenciales instaladas, tu sistema usa airmon-zc en lugar de airmon-ng. Para poder funcionar necesitas tener instalado lspci (pciutils) y tú no lo tienes en este momento. Por favor, instálalo y vuelve a lanzar el script"
@@ -3488,7 +3488,7 @@ function language_strings() {
 	arr["RUSSIAN",301]="Не смотря на то, что установлены все необходимые основные инструменты, ваша система использует airmon-zc вместо airmon-ng. Чтобы работа проходила должным образом, вам нужно установить lspci (pciutils), которых в данный момент у вас нет. Пожалуйста, установите их и запустите скрипт снова"
 	arr["GREEK",301]="Παρά του ότι είναι εγκατεστημένα όλα τα απραίτητα εργαλεία, το σύστημά σας χρησιμοποιεί το airmon-zc αντί το airmon-ng. Για να λειτουργήσει σωστά πρέπει να εγκαταστήσετε το lspci (pciutils) το οποίο δεν το έχετε αυτή τη στιγμή. Παρακαλώ, εγκαταστήστε το και ξανανοίξτε το script"
 	arr["ITALIAN",301]="Pur avendo tutti gli strumenti essenziali installati, il sistema utilizza airmon-zc invece di airmon-ng. Per funzionare è necessario installare lspci (pciutils) e tu non lo hai in questo momento. Si prega di installarlo e lanciare nuovamente lo script"
-	arr["POLISH",301]="${pending_of_translation} Mimo że zainstalowano wszystkie niezbędne narzędzia, system zamiast airmon-ng wykorzystuje system airmon-zc. Aby pracować musisz mieć zainstalowane lspci (pciutils) i nie masz go w tej chwili. Zainstaluj go i ponownie uruchom skrypt"
+	arr["POLISH",301]="Mimo, że zainstalowano wszystkie niezbędne narzędzia, system zamiast airmon-ng wykorzystuje airmon-zc. Aby pracować musisz mieć zainstalowany lspci (pciutils), którego w tej chwili nie masz. Zainstaluj go i ponownie uruchom skrypt"
 
 	arr["ENGLISH",302]="Do you want to store in a file the sniffed captured passwords? ${blue_color}If you answer no (\"n\") they will be only shown on screen ${normal_color}${visual_choice}"
 	arr["SPANISH",302]="¿Deseas guardar en un fichero las contraseñas obtenidas del sniffing? ${blue_color}Si respondes que no (\"n\") solo se mostrarán por pantalla ${normal_color}${visual_choice}"
@@ -3498,7 +3498,7 @@ function language_strings() {
 	arr["RUSSIAN",302]="Вы хотите сохранить в файл захваченные сниффингом пароли? ${blue_color}Если ваш ответ нет (\"n\") они будут только показаны на экране ${normal_color}${visual_choice}"
 	arr["GREEK",302]="Θέλετε να αποθηκεύσετε σε ένα αρχείο τους sniffed κωδικούς πρόσβασης; ${blue_color}Αν απαντήσετε όχι (\"n\") απλά θα εμφανιστούν στην οθόνη ${normal_color}${visual_choice}"
 	arr["ITALIAN",302]="Vuoi salvare in un file le password ottenute con sniffing? ${blue_color}Se si risponde no (\"n\") vengono visualizzate solo sullo schermo ${normal_color}${visual_choice}"
-	arr["POLISH",302]="${pending_of_translation} Czy chcesz zapisywać hasła w plikach? ${blue_color}Jeśli powiesz nie (\"n\") tylko ${normal_color}${visual_choice}"
+	arr["POLISH",302]="Czy chcesz zapisywać hasła w plikach? ${blue_color}Jeśli odpowiesz nie (\"n\") zostaną tylko wyświetlone na ekranie ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",303]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${default_ettercap_logpath}]"
 	arr["SPANISH",303]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${default_ettercap_logpath}]"
@@ -3508,7 +3508,7 @@ function language_strings() {
 	arr["RUSSIAN",303]="Напечатайте путь до файла для сохранения или нажмите [Enter] для принятия предложения по умолчанию ${normal_color}[${default_ettercap_logpath}]"
 	arr["GREEK",303]="Πληκτρολογήστε το μονοπάτι για να αποθηκεύσετε το αρχείο ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${default_ettercap_logpath}]"
 	arr["ITALIAN",303]="Digitare il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${default_ettercap_logpath}]"
-	arr["POLISH",303]="${pending_of_translation} Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${default_ettercap_logpath}]"
+	arr["POLISH",303]="Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${default_ettercap_logpath}]"
 
 	arr["ENGLISH",304]="Parsing sniffer log..."
 	arr["SPANISH",304]="Analizando log del sniffer..."
@@ -3518,7 +3518,7 @@ function language_strings() {
 	arr["RUSSIAN",304]="Разбор журнала сниффера..."
 	arr["GREEK",304]="Γίνεται ανάλυση του log του sniffer..."
 	arr["ITALIAN",304]="Analizzando log dello sniffer..."
-	arr["POLISH",304]="${pending_of_translation} Analiza dziennika sniffer..."
+	arr["POLISH",304]="Analiza logu sniffera..."
 
 	arr["ENGLISH",305]="No passwords detected on sniffers's log. File will not be saved"
 	arr["SPANISH",305]="No se ha encontrado ninguna contraseña en el log del sniffer. No se guardará el fichero"
@@ -3528,7 +3528,7 @@ function language_strings() {
 	arr["RUSSIAN",305]="В журнале сниффера паролей не обнаружено. Файл не будет сохранён"
 	arr["GREEK",305]="Δεν εντοπίστηκαν κωδικοί πρόσβασης στο log του sniffer. Το αρχείο δεν θα αποθηκευτεί"
 	arr["ITALIAN",305]="Nessuna password trovata nel log dello sniffer. Il file non viene salvato"
-	arr["POLISH",305]="${pending_of_translation} W dzienniku snifferów nie znaleziono hasła. Plik nie zostanie zapisany"
+	arr["POLISH",305]="W logu sniffera nie znaleziono haseł. Plik nie zostanie zapisany"
 
 	arr["ENGLISH",306]="Passwords captured by sniffer. File saved at ${normal_color}[${ettercap_logpath}]"
 	arr["SPANISH",306]="El sniffer ha capturado contraseñas. Fichero salvado en ${normal_color}[${ettercap_logpath}]"
@@ -3538,7 +3538,7 @@ function language_strings() {
 	arr["RUSSIAN",306]="Сниффер захватил пароли. Файл сохранён в ${normal_color}[${ettercap_logpath}]"
 	arr["GREEK",306]="Καταγράφηκαν κωδικοί πρόσβασης από τον sniffer. Το αρχείο αποθηκεύτηκε στο ${normal_color}[${ettercap_logpath}]"
 	arr["ITALIAN",306]="Lo sniffer ha catturato delle password. File salvato in ${normal_color}[${ettercap_logpath}]"
-	arr["POLISH",306]="${pending_of_translation} Snajper przechwycił hasła. Plik zapisany w ${normal_color}[${ettercap_logpath}]"
+	arr["POLISH",306]="Sniffer przechwycił hasła. Plik zapisany w ${normal_color}[${ettercap_logpath}]"
 
 	arr["ENGLISH",307]="Language changed to Russian"
 	arr["SPANISH",307]="Idioma cambiado a Ruso"
@@ -3548,7 +3548,7 @@ function language_strings() {
 	arr["RUSSIAN",307]="Язык изменён на русский"
 	arr["GREEK",307]="Η γλώσσα άλλαξε στα Ρωσικά"
 	arr["ITALIAN",307]="Lingua cambiata in Russo"
-	arr["POLISH",307]="${pending_of_translation} Język zmieniono na język Rosyjski"
+	arr["POLISH",307]="Zmieniono język na Rosyjski"
 
 	arr["ENGLISH",308]="6.  Russian"
 	arr["SPANISH",308]="6.  Ruso"
@@ -3558,7 +3558,7 @@ function language_strings() {
 	arr["RUSSIAN",308]="6.  Русский"
 	arr["GREEK",308]="6.  Ρωσικά"
 	arr["ITALIAN",308]="6.  Russo"
-	arr["POLISH",308]="${pending_of_translation} 6.  Rosyjski"
+	arr["POLISH",308]="6.  Rosyjski"
 
 	arr["ENGLISH",309]="Sslstrip technique is not infallible. It depends on many factors and not always work. Some browsers such as Mozilla Firefox latest versions are not affected"
 	arr["SPANISH",309]="La tecnica sslstrip no es infalible. Depende de muchos factores y no funciona siempre. Algunos navegadores como las últimas versiones de Mozilla Firefox no se ven afectados"
@@ -3568,7 +3568,7 @@ function language_strings() {
 	arr["RUSSIAN",309]="Техника sslstrip не является надёжной. Эффект программы зависит от многих факторов и иногда она просто не работает. Некоторые браузеры, такие как Mozilla Firefox последних версий, не подвержены атаке"
 	arr["GREEK",309]="Η τεχνική sslstrip δεν είναι αλάνθαστη. Εξαρτάται από πολλούς παράγοντες και δεν δουλεύει πάντα. Κάποιοι περιηγητές ιστού όπως οι τελευταίες εκδόσεις του Mozilla Firefox δεν επηρεάζονται"
 	arr["ITALIAN",309]="La tecnica sslstrip non è infallibile. Dipende da molti fattori e non sempre funziona. Alcuni browser, come le ultime versioni di Mozilla Firefox non sono vulnerabili"
-	arr["POLISH",309]="${pending_of_translation} Technika sslstrip nie jest nieomylna. To zależy od wielu czynników i nie zawsze działa. Nie ma to wpływu na niektóre przeglądarki, takie jak najnowsze wersje Mozilla Firefox"
+	arr["POLISH",309]="Technika sslstrip nie jest nieomylna. Zależy od wielu czynników i nie zawsze działa. Nie ma na przykład wpływu na niektóre przeglądarki, takie jak najnowsze wersje Mozilla Firefox"
 
 	arr["ENGLISH",310]="Handshake file selected: ${pink_color}None${normal_color}"
 	arr["SPANISH",310]="Fichero de Handshake seleccionado: ${pink_color}Ninguno${normal_color}"
@@ -3578,7 +3578,7 @@ function language_strings() {
 	arr["RUSSIAN",310]="Выбранный файл рукопожатия: ${pink_color}Отсутствует${normal_color}"
 	arr["GREEK",310]="Επιλεγμένο αρχείο Χειραψίας: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",310]="File di Handshake selezionato: ${pink_color}Nessuno${normal_color}"
-	arr["POLISH",310]="${pending_of_translation} Wybrany plik Handshake: ${pink_color}Brak${normal_color}"
+	arr["POLISH",310]="Wybrany plik Handshake: ${pink_color}Brak${normal_color}"
 
 	arr["ENGLISH",311]="Handshake file selected: ${pink_color}${et_handshake}${normal_color}"
 	arr["SPANISH",311]="Fichero de Handshake seleccionado: ${pink_color}${et_handshake}${normal_color}"
@@ -3588,7 +3588,7 @@ function language_strings() {
 	arr["RUSSIAN",311]="Выбранный файл рукопожатия: ${pink_color}${et_handshake}${normal_color}"
 	arr["GREEK",311]="Επιλεγμένο αρχείο Χειραψίας: ${pink_color}${et_handshake}${normal_color}"
 	arr["ITALIAN",311]="File di Handshake selezionato: ${pink_color}${et_handshake}${normal_color}"
-	arr["POLISH",311]="${pending_of_translation} Wybrany plik Handshake: ${pink_color}${et_handshake}${normal_color}"
+	arr["POLISH",311]="Wybrany plik Handshake: ${pink_color}${et_handshake}${normal_color}"
 
 	arr["ENGLISH",312]="No selected Handshake file detected during this session..."
 	arr["SPANISH",312]="No se ha detectado ningún fichero de Handshake seleccionado en esta sesión..."
@@ -3598,7 +3598,7 @@ function language_strings() {
 	arr["RUSSIAN",312]="Во время этой сессии выбранный файл рукопожатия не обнаружен..."
 	arr["GREEK",312]="Δεν εντοπίστηκε κανένα αρχείο Χειραψίας κατά τη διάρκεια της συνεδρίας..."
 	arr["ITALIAN",312]="Non è stato rilevato nessun file di Handshake selezionato in questa sessione..."
-	arr["POLISH",312]="${pending_of_translation} Nie wybrano pliku Handshake w tej sesji..."
+	arr["POLISH",312]="Nie wybrano pliku Handshake w tej sesji..."
 
 	arr["ENGLISH",313]="Handshake selected file detected during this session [${normal_color}${et_handshake}${blue_color}]"
 	arr["SPANISH",313]="Se ha detectado un fichero de Handshake seleccionado en esta sesión [${normal_color}${et_handshake}${blue_color}]"
@@ -3608,7 +3608,7 @@ function language_strings() {
 	arr["RUSSIAN",313]="Обнаружен файл рукопожатия, выбранный в этой сессии [${normal_color}${et_handshake}${blue_color}]"
 	arr["GREEK",313]="Εντοπίστηκε επιλεγμένο αρχείο Χειραψίας κατά τη διάρκεια της συνεδρίας [${normal_color}${et_handshake}${blue_color}]"
 	arr["ITALIAN",313]="Trovato un file di Handshake selezionato in questa sessione [${normal_color}${et_handshake}${blue_color}]"
-	arr["POLISH",313]="${pending_of_translation} W tej sesji wykryto wybrany plik Handshake [${normal_color}${et_handshake}${blue_color}]"
+	arr["POLISH",313]="Wkryto wybrany plik Handshake w tej sesji [${normal_color}${et_handshake}${blue_color}]"
 
 	arr["ENGLISH",314]="Handshake file selected: ${pink_color}${enteredpath}${normal_color}"
 	arr["SPANISH",314]="Fichero de Handshake seleccionado: ${pink_color}${enteredpath}${normal_color}"
@@ -3618,7 +3618,7 @@ function language_strings() {
 	arr["RUSSIAN",314]="Выбранный файл рукопожатия: ${pink_color}${enteredpath}${normal_color}"
 	arr["GREEK",314]="Επιλεγμένο αρχείο Χειραψίας: ${pink_color}${enteredpath}${normal_color}"
 	arr["ITALIAN",314]="File di Handshake selezionato: ${pink_color}${enteredpath}${normal_color}"
-	arr["POLISH",314]="${pending_of_translation} Wybrany plik Handshake: ${pink_color}${enteredpath}${normal_color}"
+	arr["POLISH",314]="Wybrany plik Handshake: ${pink_color}${enteredpath}${normal_color}"
 
 	arr["ENGLISH",315]="This attack requires that you have previously a WPA/WPA2 network captured Handshake file"
 	arr["SPANISH",315]="Este ataque requiere que tengas capturado previamente un fichero de Handshake de una red WPA/WPA2"
@@ -3628,7 +3628,7 @@ function language_strings() {
 	arr["RUSSIAN",315]="Эта атака требует предварительного захвата файла рукопожатия для WPA/WPA2 сети"
 	arr["GREEK",315]="Αυτή η επίθεση απαιτεί να έχετε προηγουμένως κατεγράψει ένα αρχείο Χειραψίας από WPA/WPA2 δίκτο"
 	arr["ITALIAN",315]="Questo attacco richiede che tu abbia catturato precedentemente un file di Handshake di una rete WPA/WPA2"
-	arr["POLISH",315]="${pending_of_translation} Ten atak wymaga uprzedniego pobrania pliku Handshake z sieci WPA/WPA2"
+	arr["POLISH",315]="Ten atak wymaga uprzedniego przechwycenia pliku Handshake z sieci WPA/WPA2"
 
 	arr["ENGLISH",316]="An exploration looking for targets is going to be done..."
 	arr["SPANISH",316]="Se va a realizar una exploración en busca de objetivos..."
@@ -3638,7 +3638,7 @@ function language_strings() {
 	arr["RUSSIAN",316]="Выполнение сканирования целей..."
 	arr["GREEK",316]="Πρόκειται να γίνει μία αναζήτηση για έυρεση στόχων..."
 	arr["ITALIAN",316]="Si effettuerà una scansione in cerca di obiettivi..."
-	arr["POLISH",316]="${pending_of_translation} Badanie zostanie przeprowadzone w celu osiągnięcia celów..."
+	arr["POLISH",316]="Zostanie przeprowadzone poszukiwanie celów..."
 
 	arr["ENGLISH",317]="If the password for the wifi network is achieved with the captive portal, you must decide where to save it. ${green_color}Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["SPANISH",317]="Si se consigue la contraseña de la red wifi con el portal cautivo, hay que decidir donde guardarla. ${green_color}Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${default_et_captive_portal_logpath}]"
@@ -3648,7 +3648,7 @@ function language_strings() {
 	arr["RUSSIAN",317]="Вы должны решить, где будет сохранён пароль wifi сети, если он будет получен Перехватывающим порталом. ${green_color}Впишите путь до файла или нажмите [Enter] для принятия значения по умолчанию ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["GREEK",317]="Εάν ο κωδικός πρόσβασης του δικτύου wifi επιτευχθεί με captive portal, θα πρέπει να αποφασίσετε που θα τον αποθηκεύσετε. ${green_color}Πληκτρολογήστε το μονοπάτι για να αποθηκεύσετε το αρχείο ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["ITALIAN",317]="Se si ottiene la passowrd della rete wireless con il captive portal, bisogna decidere dove salvarla. ${green_color}Immettere il percorso dove memorizzare il file o premere [Enter] per accettare quello di default proposto ${normal_color}[${default_et_captive_portal_logpath}]"
-	arr["POLISH",317]="${pending_of_translation} Jeśli hasło sieci wifi zostanie pobrane z portalem, musisz zdecydować, gdzie go zapisać. ${green_color}Wpisz ścieżkę, w której zapisamy plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${default_et_captive_portal_logpath}]"
+	arr["POLISH",317]="Jeśli hasło sieci wifi zostanie uzyskane z portalu captive, musisz zdecydować gdzie je zapisać. ${green_color}Wpisz ścieżkę, w której zapiszemy plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${default_et_captive_portal_logpath}]"
 
 	arr["ENGLISH",318]="Choose the language in which network clients will see the captive portal :"
 	arr["SPANISH",318]="Elige el idioma en el que los clientes de la red verán el portal cautivo :"
@@ -3658,7 +3658,7 @@ function language_strings() {
 	arr["RUSSIAN",318]="Выберите язык, на котором клиенты сети будут видеть перехватывающий портал :"
 	arr["GREEK",318]="Επιλέξτε τη γλώσσα που θα βλέπουν οι χρήστες του δικτύου στο captive portal :"
 	arr["ITALIAN",318]="Scegli la lingua in cui i clienti della rete vedranno il captive portal :"
-	arr["POLISH",318]="${pending_of_translation} Wybierz język, w którym klienci sieci będą mogli zobaczyć portal :"
+	arr["POLISH",318]="Wybierz język, w którym klienci sieci zobaczą portal :"
 
 	arr["ENGLISH",319]="The captive portal language has been established"
 	arr["SPANISH",319]="Se ha establecido el idioma del portal cautivo"
@@ -3668,7 +3668,7 @@ function language_strings() {
 	arr["RUSSIAN",319]="Язык перехватывающего портала установлен"
 	arr["GREEK",319]="Εγκαταστάθηκε η γλώσσα στο captive portal"
 	arr["ITALIAN",319]="La lingua del captive portal è stata stabilita"
-	arr["POLISH",319]="${pending_of_translation} Został utworzony język portalu dla niewoli"
+	arr["POLISH",319]="Został utworzony język portalu captive"
 
 	arr["ENGLISH",320]="7.  Greek"
 	arr["SPANISH",320]="7.  Griego"
@@ -3678,7 +3678,7 @@ function language_strings() {
 	arr["RUSSIAN",320]="7.  Греческий"
 	arr["GREEK",320]="7.  Ελληνικά"
 	arr["ITALIAN",320]="7.  Greco"
-	arr["POLISH",320]="${pending_of_translation} 7.  Grecki"
+	arr["POLISH",320]="7.  Grecki"
 
 	arr["ENGLISH",321]="Do you already have a captured Handshake file? ${blue_color}Answer yes (\"y\") to enter the path or answer no (\"n\") to capture a new one now ${normal_color}${visual_choice}"
 	arr["SPANISH",321]="¿Tienes ya un fichero de Handshake capturado? ${blue_color}Responde sí (\"y\") para introducir la ruta o responde no (\"n\") para capturar uno ahora ${normal_color}${visual_choice}"
@@ -3688,7 +3688,7 @@ function language_strings() {
 	arr["RUSSIAN",321]="У вас уже есть захваченный файл рукопожатия? ${blue_color}Ответьте Да (\"y\"), для ввода пути или ответьте Нет (\"n\"), для захвата нового рукопожатия ${normal_color}${visual_choice}"
 	arr["GREEK",321]="Έχετε ήδη κάποιο αρχείο Χειραψίας; ${blue_color}Απαντήστε ναι (\"y\") για να εισαγάγετε το μονοπάτι ή απαντήστε όχι (\"n\") για να καταγράψετε ένα νέο τώρα ${normal_color}${visual_choice}"
 	arr["ITALIAN",321]="Hai già catturato un file di Handshake? ${blue_color}Rispondi sì (\"y\") per introdurre il percorso o rispondi no (\"n\") per catturarne uno ora ${normal_color}${visual_choice}"
-	arr["POLISH",321]="${pending_of_translation} Czy masz już zarejestrowany plik Handshake? ${blue_color}Odpowiedz tak (\"y\") aby wejść na trasę Podaj ścieżkę lub odpowiedź nie (\"n\"), aby zdobyć jeden teraz ${normal_color}${visual_choice}"
+	arr["POLISH",321]="Czy masz już przechwycony plik Handshake? ${blue_color}Odpowiedz tak (\"y\") aby wprowadzić ścieżkę lub odpowiedz nie (\"n\"), aby spróbować przechwycić go teraz ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",322]="It has been checked that there is a Handshake of the chosen target network while checking the selected capture file. Script can continue..."
 	arr["SPANISH",322]="Se ha comprobado que existe un Handshake de la red elegida como objetivo durante la exploración en el fichero de captura seleccionado. El script puede continuar..."
