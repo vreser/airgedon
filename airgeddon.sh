@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171116
+#Date.........: 20171223
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -835,6 +835,7 @@ function check_interface_coherence() {
 			interface_mac_tmp=${interface_mac:0:15}
 			if [ "${iface_mac_tmp}" = "${interface_mac_tmp}" ]; then
 				interface=${ifaces_and_macs_switched[${iface_mac}]}
+				phy_interface=$(physical_interface_finder "${interface}")
 				interface_auto_change=1
 				break
 			fi
@@ -1140,6 +1141,14 @@ function search_in_pin_database() {
 	done
 }
 
+#Find the physical interface for a card
+function physical_interface_finder() {
+
+	debug_print
+
+	echo $(basename "$(readlink "/sys/class/net/${1}/phy80211")" 2> /dev/null)
+}
+
 #Prepare monitor mode avoiding the use of airmon-ng or airmon-zc generating two interfaces from one
 function prepare_et_monitor() {
 
@@ -1147,11 +1156,10 @@ function prepare_et_monitor() {
 
 	disable_rfkill
 
-	phy_iface=$(basename "$(readlink "/sys/class/net/${interface}/phy80211")")
-	iface_phy_number=${phy_iface:3:1}
+	iface_phy_number=${phy_interface:3:1}
 	iface_monitor_et_deauth="mon${iface_phy_number}"
 
-	iw phy "${phy_iface}" interface add "${iface_monitor_et_deauth}" type monitor 2> /dev/null
+	iw phy "${phy_interface}" interface add "${iface_monitor_et_deauth}" type monitor 2> /dev/null
 	ifconfig "${iface_monitor_et_deauth}" up > /dev/null 2>&1
 	iwconfig "${iface_monitor_et_deauth}" channel "${channel}" > /dev/null 2>&1
 }
@@ -1170,6 +1178,7 @@ function prepare_et_interface() {
 		if [ "${interface}" != "${new_interface}" ]; then
 			if check_interface_coherence; then
 				interface=${new_interface}
+				phy_interface=$(physical_interface_finder "${interface}")
 				current_iface_on_messages="${interface}"
 			fi
 			echo
@@ -1211,6 +1220,7 @@ function restore_et_interface() {
 		[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
 		if [ "${interface}" != "${new_interface}" ]; then
 			interface=${new_interface}
+			phy_interface=$(physical_interface_finder "${interface}")
 			current_iface_on_messages="${interface}"
 		fi
 	fi
@@ -1248,6 +1258,7 @@ function managed_option() {
 		if [ "${interface}" != "${new_interface}" ]; then
 			if check_interface_coherence; then
 				interface=${new_interface}
+				phy_interface=$(physical_interface_finder "${interface}")
 				current_iface_on_messages="${interface}"
 			fi
 			echo
@@ -1322,6 +1333,7 @@ function monitor_option() {
 		if [ "${interface}" != "${new_interface}" ]; then
 			if check_interface_coherence; then
 				interface="${new_interface}"
+				phy_interface=$(physical_interface_finder "${interface}")
 				current_iface_on_messages="${interface}"
 			fi
 			echo
@@ -1901,6 +1913,7 @@ function select_interface() {
 			option_counter2=$((option_counter2 + 1))
 			if [[ "${iface}" = "${option_counter2}" ]]; then
 				interface=${item2}
+				phy_interface=$(physical_interface_finder "${interface}")
 				interface_mac=$(ip link show "${interface}" | awk '/ether/ {print $2}')
 				break
 			fi
