@@ -1147,7 +1147,7 @@ function physical_interface_finder() {
 
 	debug_print
 
-	echo $(basename "$(readlink "/sys/class/net/${1}/phy80211")" 2> /dev/null)
+	echo "$(basename "$(readlink "/sys/class/net/${1}/phy80211")" 2> /dev/null)"
 }
 
 #Check the bands supported by a given physical card
