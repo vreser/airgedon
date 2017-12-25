@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171223
+#Date.........: 20171225
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -836,6 +836,7 @@ function check_interface_coherence() {
 			if [ "${iface_mac_tmp}" = "${interface_mac_tmp}" ]; then
 				interface=${ifaces_and_macs_switched[${iface_mac}]}
 				phy_interface=$(physical_interface_finder "${interface}")
+				check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
 				interface_auto_change=1
 				break
 			fi
@@ -1149,6 +1150,39 @@ function physical_interface_finder() {
 	echo $(basename "$(readlink "/sys/class/net/${1}/phy80211")" 2> /dev/null)
 }
 
+#Check the bands supported by a given physical card
+function check_interface_supported_bands() {
+
+	debug_print
+
+	case "${2}" in
+		"main_wifi_interface")
+			interface_supported_bands="2.4Ghz"
+			if get_band_info_from_phy_interface "${1}"; then
+				interface_supported_bands+=" 5Ghz"
+			fi
+		;;
+		"secondary_wifi_interface")
+			secondary_interface_supported_bands="2.4Ghz"
+			if get_band_info_from_phy_interface "${1}"; then
+				secondary_interface_supported_bands+=" 5Ghz"
+			fi
+		;;
+	esac
+}
+
+#Check band info from a given physical interface
+function get_band_info_from_phy_interface() {
+
+	debug_print
+
+	if iw phy "${1}" info | grep "5200 MHz"; then
+		return 0
+	fi
+
+	return 1
+}
+
 #Prepare monitor mode avoiding the use of airmon-ng or airmon-zc generating two interfaces from one
 function prepare_et_monitor() {
 
@@ -1179,6 +1213,7 @@ function prepare_et_interface() {
 			if check_interface_coherence; then
 				interface=${new_interface}
 				phy_interface=$(physical_interface_finder "${interface}")
+				check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
 				current_iface_on_messages="${interface}"
 			fi
 			echo
@@ -1221,6 +1256,7 @@ function restore_et_interface() {
 		if [ "${interface}" != "${new_interface}" ]; then
 			interface=${new_interface}
 			phy_interface=$(physical_interface_finder "${interface}")
+			check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
 			current_iface_on_messages="${interface}"
 		fi
 	fi
@@ -1259,6 +1295,7 @@ function managed_option() {
 			if check_interface_coherence; then
 				interface=${new_interface}
 				phy_interface=$(physical_interface_finder "${interface}")
+				check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
 				current_iface_on_messages="${interface}"
 			fi
 			echo
@@ -1334,6 +1371,7 @@ function monitor_option() {
 			if check_interface_coherence; then
 				interface="${new_interface}"
 				phy_interface=$(physical_interface_finder "${interface}")
+				check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
 				current_iface_on_messages="${interface}"
 			fi
 			echo
@@ -1914,6 +1952,7 @@ function select_interface() {
 			if [[ "${iface}" = "${option_counter2}" ]]; then
 				interface=${item2}
 				phy_interface=$(physical_interface_finder "${interface}")
+				check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
 				interface_mac=$(ip link show "${interface}" | awk '/ether/ {print $2}')
 				break
 			fi

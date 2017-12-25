@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171223
+#Date.........: 20171225
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -890,15 +890,15 @@ function language_strings() {
 	arr["ITALIAN",41]="Nessuna interfaccia selezionata. Sarai reindirizzato per selezionarne una"
 	arr["POLISH",41]="Nie wybrano interfejsu. Zostaniesz przekierowany, aby któryś wybrać"
 
-	arr["ENGLISH",42]="Interface ${pink_color}${current_iface_on_messages}${blue_color} selected. Mode: ${pink_color}${ifacemode}${normal_color}"
-	arr["SPANISH",42]="Interfaz ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Modo: ${pink_color}${ifacemode}${normal_color}"
-	arr["FRENCH",42]="Interface ${pink_color}${current_iface_on_messages}${blue_color} sélectionnée. Mode: ${pink_color}${ifacemode}${normal_color}"
-	arr["CATALAN",42]="Interfície ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Mode: ${pink_color}${ifacemode}${normal_color}"
-	arr["PORTUGUESE",42]="Interface ${pink_color}${current_iface_on_messages}${blue_color} selecionada. Modo: ${pink_color}${ifacemode}${normal_color}"
-	arr["RUSSIAN",42]="Интерфейс ${pink_color}${current_iface_on_messages}${blue_color} выбран. Режим: ${pink_color}${ifacemode}${normal_color}"
-	arr["GREEK",42]="Η διεπαφή ${pink_color}${current_iface_on_messages}${blue_color} έχει επιλεχθεί. Κατάσταση: ${pink_color}${ifacemode}${normal_color}"
-	arr["ITALIAN",42]="Interfaccia ${pink_color}${current_iface_on_messages}${blue_color} selezionata. Modalità: ${pink_color}${ifacemode}${normal_color}"
-	arr["POLISH",42]="Interfejs ${pink_color}${current_iface_on_messages}${blue_color} został wybrany. Tryb: ${pink_color}${ifacemode}${normal_color}"
+	arr["ENGLISH",42]="Interface ${pink_color}${current_iface_on_messages}${blue_color} selected. Mode: ${pink_color}${ifacemode}${blue_color}. Band/s: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["SPANISH",42]="Interfaz ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Modo: ${pink_color}${ifacemode}${blue_color}. Banda/s: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["FRENCH",42]="${pending_of_translation} Interface ${pink_color}${current_iface_on_messages}${blue_color} sélectionnée. Mode: ${pink_color}${ifacemode}${blue_color}. Bande/s: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["CATALAN",42]="${pending_of_translation} Interfície ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Mode: ${pink_color}${ifacemode}${blue_color}. Bande/s: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["PORTUGUESE",42]="${pending_of_translation} Interface ${pink_color}${current_iface_on_messages}${blue_color} selecionada. Modo: ${pink_color}${ifacemode}${blue_color}. Banda/s: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["RUSSIAN",42]="${pending_of_translation} Интерфейс ${pink_color}${current_iface_on_messages}${blue_color} выбран. Режим: ${pink_color}${ifacemode}${blue_color}. Полосы: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["GREEK",42]="${pending_of_translation} Η διεπαφή ${pink_color}${current_iface_on_messages}${blue_color} έχει επιλεχθεί. Κατάσταση: ${pink_color}${ifacemode}${blue_color}. Μπάντα: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["ITALIAN",42]="${pending_of_translation} Interfaccia ${pink_color}${current_iface_on_messages}${blue_color} selezionata. Modalità: ${pink_color}${ifacemode}${blue_color}. Banda/s: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["POLISH",42]="${pending_of_translation} Interfejs ${pink_color}${current_iface_on_messages}${blue_color} został wybrany. Tryb: ${pink_color}${ifacemode}${blue_color}. Pasmo/a: ${pink_color}${interface_supported_bands}${normal_color}"
 
 	arr["ENGLISH",43]="Selected BSSID: ${pink_color}${bssid}${normal_color}"
 	arr["SPANISH",43]="BSSID seleccionado: ${pink_color}${bssid}${normal_color}"
