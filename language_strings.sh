@@ -4928,7 +4928,7 @@ function language_strings() {
 	arr["RUSSIAN",445]="Если у вас установлен ccze и возникают ошибки отображения или сбои в некоторых окнах, вы должны отключить цветной вывод в пункте Настройки и языковое меню"
 	arr["GREEK",445]="Εάν έχετε εγκαταστήσει το ccze και αντιμετωπίζετε σφάλματα εμφάνισης ή δυσλειτουργίες σε ορισμένα παράθυρα, θα πρέπει να απενεργοποιήσετε τον χρωματισμό στο μενού επιλογών και γλώσσας"
 	arr["ITALIAN",445]="Se hai installato ccze e vedi errori o alcune finestre tremolanti, disattiva la colorazione nel menú opzioni e lingua"
-	arr["POLISH",445]="${pending_of_translation} Jeśli zainstalowano ccze i wystąpiły błędy wizualizacji lub migotania w niektórych oknach, wyłącza on kolorację w menu opcji i języka"
+	arr["POLISH",445]="Jeśli zainstalowano ccze i wystąpiły błędy wizualizacji lub migotania w niektórych oknach, powinieneś wyłączyć kolory w menu opcji i języka"
 
 	arr["ENGLISH",446]="10. Return to options menu"
 	arr["SPANISH",446]="10. Volver al menú de opciones"
@@ -4938,7 +4938,7 @@ function language_strings() {
 	arr["RUSSIAN",446]="10. Возврат в меню опций"
 	arr["GREEK",446]="10. Επιστροφή στο μενού επιλογών"
 	arr["ITALIAN",446]="10. Tornare al menú delle opzioni"
-	arr["POLISH",446]="${pending_of_translation} 10. Wróć do menu opcji"
+	arr["POLISH",446]="10. Wróć do menu opcji"
 
 	arr["ENGLISH",447]="5.  Set permanently airgeddon's language to the current one"
 	arr["SPANISH",447]="5.  Cambiar permanentemente el idioma de airgeddon al actual"
@@ -4948,7 +4948,7 @@ function language_strings() {
 	arr["RUSSIAN",447]="5.  Сделать текущий язык airgeddon постоянным"
 	arr["GREEK",447]="5.  Θέστε μόνιμα την τρέχουσα γλώσσα του airgeddon ως προεπιλεγμένη"
 	arr["ITALIAN",447]="5.  Modificare in modo permanente la lingua di airgeddon a quella attuale"
-	arr["POLISH",447]="${pending_of_translation} 5.  Trwale zmieniaj język tego airgeddon na aktualny"
+	arr["POLISH",447]="5.  Trwale ustaw język airgeddon na aktualny"
 
 	arr["ENGLISH",448]="If you installed airgeddon from a repository, you should not enable automatic updates. airgeddon will be updated when there is a new version in the repository"
 	arr["SPANISH",448]="Si instalaste airgeddon desde un repositorio, no deberías activar la actualización automática. airgeddon se actualizará cuando haya una nueva versión en el repositorio"
@@ -4958,7 +4958,7 @@ function language_strings() {
 	arr["RUSSIAN",448]="Если вы установили airgeddon из репозитория, вам не следует включать автоматические обновления. airgeddon будет обновляться, когда в репозитории будет новая версия"
 	arr["GREEK",448]="Αν εγκαταστήσατε το airgeddon από κάποιο επίσημο αποθετήριο, δεν θα πρέπει να ενεργοποιήσετε τις αυτόματες ενημερώσεις. Το airgeddon θα ενημερωθεί όταν υπάρξει κάποια νέα έκδοση στο επίσημο αποθετήριο"
 	arr["ITALIAN",448]="Se è stato installato airgeddon da un repository, non si dovrebbe attivare l'aggiornamento automatico. airgeddon sará aggiornato quando ci sará una nuova versione nel repository"
-	arr["POLISH",448]="${pending_of_translation} Jeśli zainstalowano airgeddon z repozytorium, nie należy włączać automatycznej aktualizacji. airgeddon zostanie zaktualizowany, gdy w repozytorium znajduje się nowa wersja"
+	arr["POLISH",448]="Jeśli zainstalowano airgeddon z repozytorium, nie należy włączać automatycznej aktualizacji. airgeddon zostanie zaktualizowany, gdy w repozytorium znajduje się nowa wersja"
 
 	arr["ENGLISH",449]="2.  Enable automatic updates permanently"
 	arr["SPANISH",449]="2.  Habilitar permanentemente la actualización automática"
@@ -4968,7 +4968,7 @@ function language_strings() {
 	arr["RUSSIAN",449]="2.  Включение постоянных автоматических обновлений"
 	arr["GREEK",449]="2.  Ενεργοποιήστε μόνιμα τις αυτόματες ενημερώσεις"
 	arr["ITALIAN",449]="2.  Abilitare permanentemente l'aggiornamento automatico"
-	arr["POLISH",449]="${pending_of_translation} 2.  Trwale włączaj automatyczną aktualizację"
+	arr["POLISH",449]="2.  Trwale włącz automatyczną aktualizację"
 
 	arr["ENGLISH",450]="3.  Enable colorization permanently (on some screen's output)"
 	arr["SPANISH",450]="3.  Habilitar permanentemente la colorización (en la salida de algunas pantallas)"
@@ -4978,7 +4978,7 @@ function language_strings() {
 	arr["RUSSIAN",450]="3.  Включение постоянного цветного вывода (в некоторых окнах программы)"
 	arr["GREEK",450]="3.  Ενεργοποιήστε μόνιμα τον χρωματισμό (σε κάποια σημεία)"
 	arr["ITALIAN",450]="3.  Abilitare permanentemente la colorazione (in alcuni schermi)"
-	arr["POLISH",450]="${pending_of_translation} 3.  Trwale włączaj kolorowanie (na wyjściu niektórych ekranów)"
+	arr["POLISH",450]="3.  Trwale włącz kolorowanie (na wyjściu niektórych ekranów)"
 
 	arr["ENGLISH",451]="Automatic updates: ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",451]="Actualizaciones automáticas: ${pink_color}Activadas${normal_color}"
@@ -4988,7 +4988,7 @@ function language_strings() {
 	arr["RUSSIAN",451]="Автоматическое обновление: ${pink_color}Включено${normal_color}"
 	arr["GREEK",451]="Αυτόματη ενημέρωση: ${pink_color}Ενεργοποιημένο${normal_color}"
 	arr["ITALIAN",451]="Aggiornamenti automatici: ${pink_color}Abilitati${normal_color}"
-	arr["POLISH",451]="${pending_of_translation} Aktualizacje automatyczne: ${pink_color}Włączone${normal_color}"
+	arr["POLISH",451]="Aktualizacje automatyczne: ${pink_color}Włączone${normal_color}"
 
 	arr["ENGLISH",452]="Automatic updates: ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",452]="Actualizaciones automáticas: ${pink_color}Desactivadas${normal_color}"
@@ -4998,7 +4998,7 @@ function language_strings() {
 	arr["RUSSIAN",452]="Автоматическое обновление: ${pink_color}Отключено${normal_color}"
 	arr["GREEK",452]="Αυτόματη ενημέρωση: ${pink_color}Απενεργοποιημένο${normal_color}"
 	arr["ITALIAN",452]="Aggiornamenti automatici: ${pink_color}Disabilitati${normal_color}"
-	arr["POLISH",452]="${pending_of_translation} Aktualizacje automatyczne: ${pink_color}Wyłączone${normal_color}"
+	arr["POLISH",452]="Aktualizacje automatyczne: ${pink_color}Wyłączone${normal_color}"
 
 	arr["ENGLISH",453]="Colorization (on some screen's output): ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",453]="Colorización (en la salida de algunas pantallas): ${pink_color}Activada${normal_color}"
@@ -5008,7 +5008,7 @@ function language_strings() {
 	arr["RUSSIAN",453]="Использование цветов (в некоторых окнах программы): ${pink_color}Включено${normal_color}"
 	arr["GREEK",453]="Χρωματισμός (σε κάποια σημεία): ${pink_color}Ενεργοποιημένο${normal_color}"
 	arr["ITALIAN",453]="Colorazione (in alcuni schermi): ${pink_color}Abilitata${normal_color}"
-	arr["POLISH",453]="${pending_of_translation} Kolorystyka (na wyjściu niektórych ekranów) ${pink_color}Włączone${normal_color}"
+	arr["POLISH",453]="Kolorowanie (na wyjściu niektórych ekranów) ${pink_color}Włączone${normal_color}"
 
 	arr["ENGLISH",454]="Colorization (on some screen's output): ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",454]="Colorización (en la salida de algunas pantallas): ${pink_color}Desactivada${normal_color}"
@@ -5018,7 +5018,7 @@ function language_strings() {
 	arr["RUSSIAN",454]="Использование цветов (в некоторых окнах программы): ${pink_color}Отключено${normal_color}"
 	arr["GREEK",454]="Χρωματισμός (σε κάποια σημεία): ${pink_color}Απενεργοποιημένο${normal_color}"
 	arr["ITALIAN",454]="Colorazione (in alcuni schermi): ${pink_color}Disabilitata${normal_color}"
-	arr["POLISH",454]="${pending_of_translation} Kolorystyka (na wyjściu niektórych ekranów) ${pink_color}Wyłączone${normal_color}"
+	arr["POLISH",454]="Kolorowanie (na wyjściu niektórych ekranów) ${pink_color}Wyłączone${normal_color}"
 
 	arr["ENGLISH",455]="2.  Disable automatic updates permanently"
 	arr["SPANISH",455]="2.  Deshabilitar permanentemente la actualización automática"
@@ -5028,7 +5028,7 @@ function language_strings() {
 	arr["RUSSIAN",455]="2.  Отключить постоянные автоматические обновления"
 	arr["GREEK",455]="2.  Απενεργοποιήστε μόνιμα τις αυτόματες ενημερώσεις"
 	arr["ITALIAN",455]="2.  Disattivare permanentemente gli aggiornamenti automatici"
-	arr["POLISH",455]="${pending_of_translation} 2.  Trwale wyłączaj automatyczną aktualizację"
+	arr["POLISH",455]="2.  Trwale wyłącz automatyczną aktualizację"
 
 	arr["ENGLISH",456]="3.  Disable colorization permanently (on some screen's output)"
 	arr["SPANISH",456]="3.  Deshabilitar permanentemente la colorización (en la salida de algunas pantallas)"
@@ -5038,7 +5038,7 @@ function language_strings() {
 	arr["RUSSIAN",456]="3.  Постоянное отключение использования цветов (в некоторых окнах программы)"
 	arr["GREEK",456]="3.  Απενεργοποιήστε μόνιμα τον χρωματισμό (σε κάποια σημεία)"
 	arr["ITALIAN",456]="3.  Disattivare permanentemente la colorazione (in alcuni schermi)"
-	arr["POLISH",456]="${pending_of_translation} 3.  Trwale wyłączać kolorowanie (na wyjściu niektórych ekranów)"
+	arr["POLISH",456]="3.  Trwale wyłącz kolorowanie (na wyjściu niektórych ekranów)"
 
 	arr["ENGLISH",457]="${blue_color}Automatic updates are going to be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",457]="${blue_color}Se van a desactivar las actualizaciones automáticas. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5048,7 +5048,7 @@ function language_strings() {
 	arr["RUSSIAN",457]="${blue_color}Автоматические обновления будут отключены. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",457]="${blue_color}Οι αυτόματες ενημερώσεις πρόκειται να απενεργοποιηθούν. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",457]="${blue_color}Si stano per disattivare gli aggiornamenti automatici. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",457]="${pending_of_translation} ${blue_color}Aktualizacje automatyczne zostaną wyłączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",457]="${blue_color}Aktualizacje automatyczne zostaną wyłączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",458]="${blue_color}Automatic updates are going to be enabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",458]="${blue_color}Se van a activar las actualizaciones automáticas. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5058,7 +5058,7 @@ function language_strings() {
 	arr["RUSSIAN",458]="${blue_color}Автоматические обновления будут включены. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",458]="${blue_color}Οι αυτόματες ενημερώσεις πρόκειται να ενεργοποιηθούν. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",458]="${blue_color}Si stanno per attivare gli aggiornamenti automatici. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",458]="${pending_of_translation} ${blue_color}Automatyczne aktualizacje będą włączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",458]="${blue_color}Automatyczne aktualizacje będą włączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",459]="If you installed airgeddon from a repository you shouldn't enable this option. airgeddon will be updated when the repositories do. If you continue, make sure you know what you are doing, or you could cause problems with update flow"
 	arr["SPANISH",459]="Si instalaste airgeddon desde un repositorio no deberías activar esta opción. airgeddon se actualizará cuando lo hagan los repositorios. Si continuas, asegúrate de saber bien lo que haces o podrías causar problemas con flujo de actualizaciones"
@@ -5068,7 +5068,7 @@ function language_strings() {
 	arr["RUSSIAN",459]="Если вы установили airgeddon из репозитория, вы не должны включать эту опцию. airgeddon будет обновляться вместе с репозиториями. Если вы продолжите, убедитесь, что знаете, что делаете, или ваши действия могут вызвать проблемы для этой программы"
 	arr["GREEK",459]="Εάν εγκαταστήσατε το airgeddon από κάποιο επίσημο αποθετήριο, δεν πρέπει να ενεργοποιήσετε αυτή την επιλογή. Το airgeddon θα ενημερωθεί όταν ενημερωθούν και τα αποθετήρια. Αν συνεχίσετε, βεβαιωθείτε ότι γνωρίζετε τι κάνετε και ότι θα μπορεί να προκαλέσετε προβλήματα με τη ροή ενημέρωσης"
 	arr["ITALIAN",459]="Se airgeddon è stato installato da un repository non si dovrebbe attivare questa opzione. airgeddon sará aggiornato quando lo faranno i repository. Se continui, assicurati di sapere bene quello che fai o potrebbe causare problemi al flusso degli aggiornamenti"
-	arr["POLISH",459]="${pending_of_translation} Jeśli zainstalowano airgeddon z repozytorium, nie należy włączać tej opcji. airgeddon zostanie zaktualizowany, gdy repozytoria zrobi to. Jeśli kontynuujesz, upewnij się, że wiesz, co robisz, lub może powodować problemy z aktualizacją"
+	arr["POLISH",459]="${pending_of_translation} Jeśli zainstalowano airgeddon z repozytorium, nie należy włączać tej opcji. airgeddon zostanie zaktualizowany, gdy w repozytorium pojawi się nowa wersja. Jeśli kontynuujesz, upewnij się, że wiesz co robisz, bo to może spowodować problemy z aktualizacją"
 
 	arr["ENGLISH",460]="Automatic updates have been enabled"
 	arr["SPANISH",460]="Se han activado las actualizaciones automáticas"
@@ -5078,7 +5078,7 @@ function language_strings() {
 	arr["RUSSIAN",460]="Автоматические обновления включены"
 	arr["GREEK",460]="Οι αυτόματες ενημερώσεις έχουν ενεργοποιηθεί"
 	arr["ITALIAN",460]="Sono stati attivati gli aggiornamenti automatici"
-	arr["POLISH",460]="${pending_of_translation} Automatyczne aktualizacje włączone"
+	arr["POLISH",460]="Automatyczne aktualizacje zostały włączone"
 
 	arr["ENGLISH",461]="Automatic updates have been disabled"
 	arr["SPANISH",461]="Se han desactivado las actualizaciones automáticas"
@@ -5088,7 +5088,7 @@ function language_strings() {
 	arr["RUSSIAN",461]="Автоматические обновления отключены"
 	arr["GREEK",461]="Οι αυτόματες ενημερώσεις έχουν απενεργοποιηθεί"
 	arr["ITALIAN",461]="Sono stati disattivati gli aggiornamenti automatici"
-	arr["POLISH",461]="${pending_of_translation} Automatyczne aktualizacje są wyłączone"
+	arr["POLISH",461]="Automatyczne aktualizacje zostały wyłączone"
 
 	arr["ENGLISH",462]="${blue_color}Colorization (on some screen's output) is going to be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",462]="${blue_color}Se va a desactivar la colorización (en la salida de algunas pantallas). ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5098,7 +5098,7 @@ function language_strings() {
 	arr["RUSSIAN",462]="${blue_color}Использование цветов (в некоторых окнах программы) будет отключено. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",462]="${blue_color}Ο χρωματισμός (σε κάποια σημεία) πρόκειται να απενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",462]="${blue_color}La colorazione sará disattivata (in alcuni schermi). ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",462]="${pending_of_translation} ${blue_color}Wyłączysz koloryzację (na wyjściu niektórych ekranów). ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",462]="${blue_color}Koloryzacja zostanie wyłączona (na wyjściu niektórych ekranów). ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",463]="${blue_color}Colorization (on some screen's output) is going to be enabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",463]="${blue_color}Se va a activar la colorización (en la salida de algunas pantallas). ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5108,7 +5108,7 @@ function language_strings() {
 	arr["RUSSIAN",463]="${blue_color}Использование цветов (в некоторых окнах программы) будет включено. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",463]="${blue_color}Ο χρωματισμός (σε κάποια σημεία) πρόκειται να ενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",463]="${blue_color}La colorazione sará attivata (in alcuni schermi). ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",463]="${pending_of_translation} ${blue_color}Uaktywni się koloryzację (na wyjściu niektórych ekranów). ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",463]="${blue_color}Koloryzacja zostanie włączona (na wyjściu niektórych ekranów). ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",464]="You don't have the ccze package installed so any change on this option will have no effect until you install it"
 	arr["SPANISH",464]="No tienes instalado el paquete ccze por lo que cualquier cambio que realices sobre esta opción no tendrá efecto hasta que lo instales"
@@ -5118,7 +5118,7 @@ function language_strings() {
 	arr["RUSSIAN",464]="У вас не установлен пакет ccze, поэтому любое изменение этой опции не будет иметь никакого эффекта, пока вы его не установите"
 	arr["GREEK",464]="Δεν έχετε εγκατεστημένο το πακέτο ccze, οπότε οποιαδήποτε αλλαγή σε αυτήν την επιλογή δεν θα έχει αποτέλεσμα μέχρι να το εγκαταστήσετε"
 	arr["ITALIAN",464]="Non è stato installato il pacchetto ccze per cui tutte le modifiche apportate su questa opzione non avranno alcun effetto finché non si installa"
-	arr["POLISH",464]="${pending_of_translation} Nie masz zainstalowanego pakietu ccze, więc wszelkie zmiany wprowadzone w tej opcji nie będą obowiązywać dopóki nie zostaną zainstalowane"
+	arr["POLISH",464]="Nie masz zainstalowanego pakietu ccze, więc wszelkie zmiany wprowadzone w tej opcji nie będą obowiązywać dopóki nie zostanie zainstalowany"
 
 	arr["ENGLISH",465]="Colorization has been enabled"
 	arr["SPANISH",465]="Se ha activado la colorización"
@@ -5128,7 +5128,7 @@ function language_strings() {
 	arr["RUSSIAN",465]="Использование цветов включено"
 	arr["GREEK",465]="Ο χρωματισμός ενεργοποιήθηκε"
 	arr["ITALIAN",465]="La colorazione è stata abilitata"
-	arr["POLISH",465]="${pending_of_translation} Aktywizacja kolorystyki"
+	arr["POLISH",465]="Koloryzacja została aktywowana"
 
 	arr["ENGLISH",466]="Colorization has been disabled"
 	arr["SPANISH",466]="Se ha desactivado la colorización"
@@ -5138,7 +5138,7 @@ function language_strings() {
 	arr["RUSSIAN",466]="Использование цветов отключено"
 	arr["GREEK",466]="Ο χρωματισμός απενεργοποιήθηκε"
 	arr["ITALIAN",466]="La colorazione è stata disabilitata"
-	arr["POLISH",466]="${pending_of_translation} Kolorystyka wyłączona"
+	arr["POLISH",466]="Koloryzacja została wyłączona"
 
 	arr["ENGLISH",467]="4.  Enable startup language autodetection permanently"
 	arr["SPANISH",467]="4.  Habilitar permanentemente la autodetección de idioma al inicio"
@@ -5148,7 +5148,7 @@ function language_strings() {
 	arr["RUSSIAN",467]="4.  Автоматическое определение языка постоянно отключено"
 	arr["GREEK",467]="4.  Ενεργοποίηση του αυτόματου εντοπισμού γλώσσας κατά την εκκίνηση μόνιμα"
 	arr["ITALIAN",467]="4.  Abilitare permanentemente il rilevamento automatico della lingua all'inizio"
-	arr["POLISH",467]="${pending_of_translation} 4.  Trwale włączaj automatyczne wykrywanie języka podczas uruchamiania"
+	arr["POLISH",467]="4.  Trwale włącz automatyczne wykrywanie języka podczas uruchamiania"
 
 	arr["ENGLISH",468]="4.  Disable startup language autodetection permanently"
 	arr["SPANISH",468]="4.  Deshabilitar permanentemente la autodetección de idioma al inicio"
@@ -5158,7 +5158,7 @@ function language_strings() {
 	arr["RUSSIAN",468]="4.  Постоянное отключение автоматического определения языка"
 	arr["GREEK",468]="4.  Απενεργοποίηση του αυτόματου εντοπισμού γλώσσας κατά την εκκίνηση μόνιμα"
 	arr["ITALIAN",468]="4.  Disattivare permanentemente il rilevamento automatico della lingua all'inizio"
-	arr["POLISH",468]="${pending_of_translation} 4.  Trwale wyłączaj autodetekcję języka podczas uruchamiania"
+	arr["POLISH",468]="4.  Trwale wyłącz autodetekcję języka podczas uruchamiania"
 
 	arr["ENGLISH",469]="${blue_color}Startup language autodetection will be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",469]="${blue_color}Se va a deshabilitar la autodetección de idioma al inicio. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5168,7 +5168,7 @@ function language_strings() {
 	arr["RUSSIAN",469]="${blue_color}Автоопределение языка при запуске будет отключено. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",469]="${blue_color}Ο αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση θα απενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",469]="${blue_color}Si sta per disabilitare il rilevamento automatico della lingua all'inizio ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",469]="${pending_of_translation} ${blue_color}Autodetekcja języka zostanie wyłączona podczas uruchamiania. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",469]="${blue_color}Autodetekcja języka zostanie wyłączona podczas uruchamiania. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",470]="${blue_color}Startup language autodetection will be enabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",470]="${blue_color}Se va a habilitar la autodetección de idioma al inicio. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5178,7 +5178,7 @@ function language_strings() {
 	arr["RUSSIAN",470]="${blue_color} Автоопределение языка при запуске будет включено. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",470]="${blue_color}Ο αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση θα ενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",470]="${blue_color}Si sta per abilitare il rilevamento automatico della lingua all'inizio. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",470]="${pending_of_translation} ${blue_color}Autodetekcja języka zostanie włączona podczas uruchamiania. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",470]="${blue_color}Autodetekcja języka podczas uruchamiania zostanie włączona . ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",471]="Any permanent change of language you have will be lost on the next start if you enable this option!!"
 	arr["SPANISH",471]="Cualquier cambio permanente de idioma que tenga se perderá en el siguiente inicio si activa esta opción!!"
@@ -5188,7 +5188,7 @@ function language_strings() {
 	arr["RUSSIAN",471]="При включении этой опции, сделанный выбор по изменению языка будет потерян при следующем запуске!!"
 	arr["GREEK",471]="Οποιαδήποτε μόνιμη αλλαγή της γλώσσας θα χαθεί κατά την επόμενη εκκίνηση, αν ενεργοποιήσετε αυτή την επιλογή!!"
 	arr["ITALIAN",471]="Qualsiasi cambio permanente di lingua si perderá nel prossimo inizio se si attiva questa opzione!!"
-	arr["POLISH",471]="${pending_of_translation} Każda trwała zmiana języka zostanie utracona podczas następnego startu, jeśli aktywujesz tę opcję!!"
+	arr["POLISH",471]="Każda trwała zmiana języka zostanie utracona podczas następnego startu, jeśli aktywujesz tę opcję!!"
 
 	arr["ENGLISH",472]="Startup language autodetection has been enabled"
 	arr["SPANISH",472]="Se ha activado la autodetección de idioma al inicio"
@@ -5198,7 +5198,7 @@ function language_strings() {
 	arr["RUSSIAN",472]="Автоматическое определение языка было включено"
 	arr["GREEK",472]="Ο αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση έχει ενεργοποιηθεί"
 	arr["ITALIAN",472]="Il rilevamento automatico della lingua all'inizio è abilitato"
-	arr["POLISH",472]="${pending_of_translation} Autodetekcja języka została aktywowana podczas uruchamiania"
+	arr["POLISH",472]="Autodetekcja języka podczas uruchamiania została aktywowana"
 
 	arr["ENGLISH",473]="Startup language autodetection has been disabled"
 	arr["SPANISH",473]="Se ha desactivado la autodetección de idioma al inicio"
@@ -5208,7 +5208,7 @@ function language_strings() {
 	arr["RUSSIAN",473]="Автоматическое определение языка было отключено"
 	arr["GREEK",473]="Ο αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση έχει απενεργοποιηθεί"
 	arr["ITALIAN",473]="È stato disattivato il rilevamento automatico della lingua all'inizio"
-	arr["POLISH",473]="${pending_of_translation} Autodetekcja języka została wyłączona podczas uruchamiania"
+	arr["POLISH",473]="Autodetekcja języka podczas uruchamiania została wyłączona"
 
 	arr["ENGLISH",474]="Startup language autodetection: ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",474]="Autodetección de idioma al inicio: ${pink_color}Activada${normal_color}"
@@ -5218,7 +5218,7 @@ function language_strings() {
 	arr["RUSSIAN",474]="Автоопределение языка при запуске: ${pink_color}Включено${normal_color}"
 	arr["GREEK",474]="Αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση: ${pink_color}Ενεργοποιημένο${normal_color}"
 	arr["ITALIAN",474]="Rilevamento automatico della lingua all'inizio: ${pink_color}Abilitato${normal_color}"
-	arr["POLISH",474]="${pending_of_translation} Automatyczne wykrywanie języka podczas uruchamiania: ${pink_color}Aktywowane${normal_color}"
+	arr["POLISH",474]="Automatyczne wykrywanie języka podczas uruchamiania: ${pink_color}Aktywowane${normal_color}"
 
 	arr["ENGLISH",475]="Startup language autodetection: ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",475]="Autodetección de idioma al inicio: ${pink_color}Desactivada${normal_color}"
@@ -5228,7 +5228,7 @@ function language_strings() {
 	arr["RUSSIAN",475]="Автоопределение языка при запуске: ${pink_color}Отключено${normal_color}"
 	arr["GREEK",475]="Αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση: ${pink_color}Απενεργοποιημένο${normal_color}"
 	arr["ITALIAN",475]="Rilevamento automatico della lingua all'inizio: ${pink_color}Disabilitato${normal_color}"
-	arr["POLISH",475]="${pending_of_translation} Automatyczne wykrywanie języka podczas uruchamiania: ${pink_color}Niepełnosprawnych${normal_color}"
+	arr["POLISH",475]="Automatyczne wykrywanie języka podczas uruchamiania: ${pink_color}Niepełnosprawnych${normal_color}"
 
 	arr["ENGLISH",476]="A graphical X window system has not been detected. If you already have one, check it's working properly. It's essential for airgeddon. The script can't continue"
 	arr["SPANISH",476]="No se ha detectado un sistema gráfico de ventanas X. Si lo tienes, comprueba su que esté funcionando correctamente. Es esencial para airgeddon. El script no puede continuar"
@@ -5238,7 +5238,7 @@ function language_strings() {
 	arr["RUSSIAN",476]="Графическая X система не обнаружена. Если она уже имеется, проверьте её работоспособность. Это важно для airgeddon. Скрипт не может продолжить"
 	arr["GREEK",476]="Δεν έχει εντοπιστεί κάποιο γραφικό σύστημα παραθύρων X. Αν έχετε ήδη ένα, ελέγξτε ότι λειτουργεί σωστά. Είναι απαραίτητο για το airgeddon. Το script δεν μπορεί να συνεχίσει"
 	arr["ITALIAN",476]="Non è stato rilevato un server X grafico, se è presente controllare il corretto funzionamento. È essenziale per airgeddon. Lo script non può continuare"
-	arr["POLISH",476]="${pending_of_translation} Nie wykryto graficznego systemu X Window. Jeśli tak, sprawdź, czy działa poprawnie. Jest istotne dla airgeddon. Skrypt nie może kontynuować"
+	arr["POLISH",476]="Nie wykryto graficznego systemu X Window. Jeśli go masz, sprawdź czy działa poprawnie. Jest niezbędne dla airgeddon. Skrypt nie może kontynuować"
 
 	arr["ENGLISH",477]="The options in this menu containing the word \"permanently\" modify airgeddon to save the settings for the next time that is to be launched. However, you can always return to this menu to change the value of the option again"
 	arr["SPANISH",477]="Las opciones de este menú que contienen la palabra \"permanentemente\", modifican airgeddon para que incluso la siguiente vez que sea iniciado siga guardando la configuración. No obstante, siempre puedes volver a este menú a cambiar de nuevo el valor de la opción"
@@ -5248,7 +5248,7 @@ function language_strings() {
 	arr["RUSSIAN",477]="Опции в этом меню, содержащие слово \"постоянное\", сохраняются в airgeddon при перезапусках программы. Однако вы всегда можете вернуться в это меню, чтобы снова изменить значение параметра"
 	arr["GREEK",477]="Οι επιλογές σε αυτό το μενού που περιέχουν τη λέξη \"μόνιμα\" τροποποιούν το airgeddon ώστε να αποθηκεύει τις ρυθμίσεις για την επόμενη φορά. Ωστόσο, μπορείτε πάντα να επιστρέψετε σε αυτό το μενού για να αλλάξετε ξανά την τιμή της επιλογής"
 	arr["ITALIAN",477]="Le opzioni di questo menú che contengono la parola \"permanentemente\" modificano airgeddon in modo che anche la volta successiva che viene avviato continui con la configurazione salvata. Tuttavia, si può sempre tornare a questo menú per cambiare di nuovo il valore dell'opzione"
-	arr["POLISH",477]="${pending_of_translation} Opcje w tym menu, które zawierają słowo \"trwale\" zmodyfikuj airgeddon tak, że nawet przy następnym uruchomieniu, kontynuuj zapisywanie ustawień. Jednak zawsze możesz wrócić do tego menu, aby ponownie zmienić wartość opcji"
+	arr["POLISH",477]="Opcje w tym menu, które zawierają słowo \"trwale\" zmodyfikują airgeddon tak, że nawet przy następnym uruchomieniu będą zapisane. Jednak zawsze możesz wrócić do tego menu, aby ponownie zmienić ustawienia"
 
 	arr["ENGLISH",478]="${blue_color}Language is going to be set permanently to the current one, so on the next start of airgeddon it will be used directly. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",478]="${blue_color}Se va a cambiar permanentemente el idioma al actual para que al siguiente inicio de airgeddon este sea el idioma en el que arranque directamente. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5258,7 +5258,7 @@ function language_strings() {
 	arr["RUSSIAN",478]="${blue_color}Текущий язык будет установлен как постоянный, поэтому при следующем запуске airgeddon он будет использоваться без определения языка системы. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",478]="${blue_color}Η τρέχουσα γλώσσα πρόκειται να τεθεί μόνιμα ως προεπιλεγμένη, ώστε κατά την επόμενη εκκίνηση του airgeddon θα χρησιμοποιηθεί κατ' ευθείαν αυτή. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",478]="${blue_color}Sarà modificata in modo permanente la lingua corrente in modo che al prossimo avvio di airgeddon questa sia la lingua di avvio. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",478]="${pending_of_translation} ${blue_color}To na stałe zmieni język na aktualny, tak aby na następnym początku airgeddon jest to język, w którym zaczyna się bezpośrednio. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",478]="${blue_color}To na stałe zmieni język na aktualny, tak aby był ustawiony przy następnym uruchomieniu airgeddon. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",479]="This change conflicts with the startup language autodetection which is currently enabled. It will be disabled automatically in order to perform the change"
 	arr["SPANISH",479]="Este cambio entra en conflicto con la autodetección del idioma al inicio que en este momento está activada. Se desactivará automáticamente para poder realizar el cambio"
@@ -5268,7 +5268,7 @@ function language_strings() {
 	arr["RUSSIAN",479]="Это изменение конфликтует с автоопределением языка, которое в данный момент включено. Оно будет автоматически отключено для выполнения изменения"
 	arr["GREEK",479]="Αυτή η αλλαγή έρχεται σε σύγκρουση με τoν αυτόματo εντοπισμό της γλώσσας εκκίνησης, ο οποίος είναι αυτή τη στιγμή ενεργοποιημένος. Θα απενεργοποιηθεί αυτόματα για να πραγματοποιηθεί η αλλαγή αυτή"
 	arr["ITALIAN",479]="Questo cambio è in conflitto con il rilevamento automatico di lingua di inizio che è attualmente attivo. Esso viene disattivato automaticamente per poter fare il cambio"
-	arr["POLISH",479]="${pending_of_translation} Ta zmiana jest sprzeczna z automatyczną detekcją języka na początku, który jest aktualnie aktywny. Zostanie ona automatycznie deaktywowana w celu wprowadzenia zmian"
+	arr["POLISH",479]="Ta zmiana jest sprzeczna z automatyczną detekcją języka na początku, która jest aktualnie aktywna. Zostanie ona automatycznie deazktywowana w celu wprowadzenia zmian"
 
 	arr["ENGLISH",480]="Current language is the same of permanent language already set. No changes will be done"
 	arr["SPANISH",480]="El idioma actual es el mismo que ya está puesto como permanente. No se realizarán cambios"
@@ -5278,7 +5278,7 @@ function language_strings() {
 	arr["RUSSIAN",480]="Текущий язык тот же, что и уже установленный постоянный язык. Никаких изменений не будет сделано"
 	arr["GREEK",480]="Η τρέχουσα γλώσσα είναι ίδια με τη μόνιμη γλώσσα που έχει οριστεί ήδη. Δεν θα γίνει καμία αλλαγή"
 	arr["ITALIAN",480]="La lingua è la stessa che è giá impostata come permanente. Nessuna modifica sará effettuata"
-	arr["POLISH",480]="${pending_of_translation} Obecny język jest taki sam, który został już ustawiony jako stały. Nie zostaną wprowadzone żadne zmiany"
+	arr["POLISH",480]="Obecny język jest taki sam jak ten, który został już ustawiony jako stały. Nie zostaną wprowadzone żadne zmiany"
 
 	arr["ENGLISH",481]="Language set to the current one permanently"
 	arr["SPANISH",481]="Idioma cambiado al actual permanentemente"
@@ -5288,7 +5288,7 @@ function language_strings() {
 	arr["RUSSIAN",481]="Язык изменён на текущий с сохранением после перезапуска"
 	arr["GREEK",481]="Τέθηκε μόνιμα η τρέχουσα γλώσσα"
 	arr["ITALIAN",481]="Lingua cambiata a quella attuale permanentemente"
-	arr["POLISH",481]="${pending_of_translation} Język zmienił się na stałe na trwale"
+	arr["POLISH",481]="Język trwale zmienił się na aktualny"
 
 	arr["ENGLISH",482]="8.  Italian"
 	arr["SPANISH",482]="8.  Italiano"
@@ -5298,7 +5298,7 @@ function language_strings() {
 	arr["RUSSIAN",482]="8.  Итальянский"
 	arr["GREEK",482]="8.  Ιταλικά"
 	arr["ITALIAN",482]="8.  Italiano"
-	arr["POLISH",482]="${pending_of_translation} 8.  Włoski"
+	arr["POLISH",482]="8.  Włoski"
 
 	arr["ENGLISH",483]="Language changed to Italian"
 	arr["SPANISH",483]="Idioma cambiado a Italiano"
@@ -5308,7 +5308,7 @@ function language_strings() {
 	arr["RUSSIAN",483]="Язык изменён на Итальянский"
 	arr["GREEK",483]="Η γλώσσα άλλαξε στα Ιταλικά"
 	arr["ITALIAN",483]="Lingua cambiata in Italiano"
-	arr["POLISH",483]="${pending_of_translation} Język został zmieniony na język Włoski"
+	arr["POLISH",483]="Zmieniono język na Włoski"
 
 	arr["ENGLISH",484]="Root permissions successfully detected"
 	arr["SPANISH",484]="Permisos de root correctamente detectados"
@@ -5318,7 +5318,7 @@ function language_strings() {
 	arr["RUSSIAN",484]="Успешно определены права root"
 	arr["GREEK",484]="Τα δικαιώματα root έχουν παραχωρηθεί επιτυχώς"
 	arr["ITALIAN",484]="I permessi di root sono stati rilevati correttamente"
-	arr["POLISH",484]="${pending_of_translation} Uprawnienia do root zostały prawidłowo wykryte"
+	arr["POLISH",484]="$Uprawnienia root zostały prawidłowo wykryte"
 
 	arr["ENGLISH",485]="${blue_color}Some PINs have been added calculated using the algorithms (ComputePIN, EasyBox, etc.), however you can add one more (Arcadyan). Calculating it requires certain data and a background scan will have to be performed. The process may be very slow. ${green_color}Do you want to proceed with the calculation to add it? ${normal_color}${visual_choice}"
 	arr["SPANISH",485]="${blue_color}Se han añadido algunos PINs calculados por algoritmos (ComputePIN, EasyBox, etc.), pero aún se puede añadir uno más (Arcadyan). Calcularlo requiere ciertos datos y habrá que realizar un escaneo en segundo plano. Es posible que el proceso sea muy lento. ${green_color}¿Quieres proceder con el cálculo para añadirlo? ${normal_color}${visual_choice}"
@@ -5328,7 +5328,7 @@ function language_strings() {
 	arr["RUSSIAN",485]="${blue_color}Некоторые добавленные PIN были вычислены алгоритмами (ComputePIN, EasyBox, и т.д.), но вы можете добавить ещё один (Arcadyan). Для его вычисления требуются определенные данные, и необходимо выполнить фоновое сканирование. Процесс может быть очень медленным. ${green_color}Вы хотите добавить PIN, вычисленные этим алгоритмом? ${normal_color}${visual_choice}"
 	arr["GREEK",485]="${blue_color}Έχουν προστεθεί ορισμένοι κωδικοί PIN υπολογισμένοι με τους αλγόριθμους (ComputePIN, EasyBox, κτλπ.), μπορείτε όμως να προσθέσετε άλλον έναν κωδικό (Arcadyan). Ο υπολογισμός του απαιτεί ορισμένα δεδομένα και θα πρέπει να πραγματοποιηθεί κάποιο scan στο background. Η διαδικασία αυτή μπορεί να αργοπορήσει. ${green_color}Θέλετε να συνεχίσετε με τον υπολογισμό του και να τον προσθέσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",485]="${blue_color}Sono stati aggiunti alcuni PIN calcolati da algoritmi (ComputePIN, EasyBox, etc.), ma è possibile aggiungerne ancora uno (Arcadyan). Il calcolo richiede alcuni dati e deve essere eseguita una scansione in secondo piano. Il processo può essere molto lento. ${green_color}Vuoi procedere con il calcolo per aggiungerlo? ${normal_color}${visual_choice}"
-	arr["POLISH",485]="${pending_of_translation} ${blue_color}Niektóre kody PIN zostały dodane obliczone algorytmami (ComputePIN, EasyBox, itd.), Ale można jeszcze dodać jeden (Arcadyan). Obliczanie go wymaga pewnych danych, a skanowanie tła będzie musiało być wykonane. Proces może być bardzo powolny. ${green_color}Czy chcesz kontynuować obliczenie, aby go dodać? ${normal_color}${visual_choice}"
+	arr["POLISH",485]="${blue_color}Niektóre kody PIN zostały dodane obliczone algorytmami (ComputePIN, EasyBox, itd.) ale można jeszcze dodać jeden (Arcadyan). Obliczanie go wymaga pewnych danych oraz będzie musiało zostać wykonane skanowanie w tle. Proces ten może być bardzo powolny. ${green_color}Czy chcesz kontynuować obliczenie, aby go dodać? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",486]="It's not possible to generate PIN with Arcadyan algorithm. To be able to do it, update wash (included in reaver package) to a newer version including the necessary \"-j\" option (1.6.2)"
 	arr["SPANISH",486]="No es posible generar el PIN con el algoritmo Arcadyan. Para poder hacerlo actualice wash (incluido en el paquete reaver) a una versión superior que tenga la necesaria opción \"-j\" (1.6.2)"
@@ -5338,7 +5338,7 @@ function language_strings() {
 	arr["RUSSIAN",486]="Невозможно создать PIN с алгоритмом Arcadyan. Чтобы это сделать, обновите wash (включена в пакет reaver) на более новую версию, которая имеет необходимую опцию \"-j\" (1.6.2)"
 	arr["GREEK",486]="Δεν είναι δυνατό να δημιουργηθεί PIN με τον αλγόριθμο Arcadyan. Για να το κάνετε αυτό, ενημερώστε το wash (περιλαμβάνεται στο πακέτο του reaver) σε νεότερη έκδοση, συμπεριλαμβανομένης της απαραίτητης επιλογής \"-j\" (1.6.2)"
 	arr["ITALIAN",486]="Non è possibile generare il PIN con l'algoritmo Arcadyan. Per effettuare questa operazione, aggiornare wash (incluso nel pacchetto reaver) a una versione più nuova che disponga dell'opzione necessaria \"-j\" (1.6.2)"
-	arr["POLISH",486]="${pending_of_translation} Nie jest możliwe wygenerowanie kodu PIN za pomocą algorytmu Arcadyan. Aby to zrobić, uaktualnij pranie (zawarte w pakiecie reaver) do wersji wyższej, która ma niezbędną opcję \"-j\" (1.6.2)"
+	arr["POLISH",486]="Nie jest możliwe wygenerowanie kodu PIN za pomocą algorytmu Arcadyan. Aby to zrobić, uaktualnij wash (zawarty w pakiecie reaver) do wyższej wersji, która wspiera opcję \"-j\" (1.6.2)"
 
 	arr["ENGLISH",487]="PIN generated using Arcadyan algorithm (${normal_color}${arcadyan_pin}${yellow_color})"
 	arr["SPANISH",487]="Se ha generado el PIN con el algoritmo Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
@@ -5348,7 +5348,7 @@ function language_strings() {
 	arr["RUSSIAN",487]="PIN-код, созданный с использованием алгоритма Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
 	arr["GREEK",487]="Το PIN δημιουργήθηκε με τον αλγόριθμο Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
 	arr["ITALIAN",487]="Il PIN è stato generato con l'algoritmo Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
-	arr["POLISH",487]="${pending_of_translation} PIN został wygenerowany za pomocą algorytmu Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
+	arr["POLISH",487]="PIN został wygenerowany za pomocą algorytmu Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
 
 	arr["ENGLISH",488]="PIN can't be generated using Arcadyan algorithm. Failed to collect a complete \"probe\" response from the access point. Probably because of low signal quality"
 	arr["SPANISH",488]="No se ha podido generar el PIN con el algoritmo Arcadyan. No se ha podido recoger una respuesta \"probe\" completa del punto de acceso. Probablemente porque la señal no es buena"
@@ -5358,7 +5358,7 @@ function language_strings() {
 	arr["RUSSIAN",488]="PIN-код не может быть сгенерирован с использованием алгоритма Arcadyan. Не удалось получить полный ответ \"probe\" от точки доступа. Возможно, из-за низкого качества сигнала"
 	arr["GREEK",488]="Το PIN δεν μπορεί να δημιουργηθεί χρησιμοποιώντας τον αλγόριθμο Arcadyan. Δεν ήταν δυνατή η συλλογή πλήρους \"probe\" response από το σημείο πρόσβασης. Πιθανόν επειδή το σήμα είναι χαμηλό"
 	arr["ITALIAN",488]="Impossibile generare il PIN con l'algoritmo Arcadyan. Impossibile raccogliere una risposta \"probe\" completa dal punto di accesso. Probabilmente perché il segnale non è buono"
-	arr["POLISH",488]="${pending_of_translation} Nie można wygenerować kodu PIN za pomocą algorytmu Arcadyan. Nie udało się zebrać kompletnej odpowiedzi \"probe\" z punktu dostępu. Prawdopodobnie dlatego, że sygnał nie jest dobry"
+	arr["POLISH",488]="Nie można wygenerować kodu PIN za pomocą algorytmu Arcadyan. Nie udało się zebrać kompletnej odpowiedzi \"probe\" z punktu dostępu. Prawdopodobnie dlatego, że pozion sygnału jest słaby"
 
 	arr["ENGLISH",489]="Attempting to collect a complete \"probe\" response from the target access point. This process can take up to 4 minutes..."
 	arr["SPANISH",489]="Intentando recoger una respuesta \"probe\" completa del punto de acceso objetivo. Este proceso puede durar hasta 4 minutos..."
@@ -5368,7 +5368,7 @@ function language_strings() {
 	arr["RUSSIAN",489]="Попытка собрать полный запрос \"probe\" от целевой точки доступа. Этот процесс может занять до 4 минут..."
 	arr["GREEK",489]="Γίνεται προσπάθεια συλλογής πλήρους \"probe\" response από το σημείο πρόσβασης (στόχος). Αυτή η διαδικασία μπορεί να διαρκέσει έως και 4 λεπτά..."
 	arr["ITALIAN",489]="Cercando di raccogliere una risposta \"probe\" completa dal punto di accesso obiettivo. Questo processo può richiedere fino a 4 minuti..."
-	arr["POLISH",489]="${pending_of_translation} Próba zebrania kompletnej odpowiedzi \"probe\" z docelowego punktu dostępu. Proces ten może potrwać do 4 minut..."
+	arr["POLISH",489]="Próba zebrania kompletnej odpowiedzi \"probe\" z docelowego punktu dostępu. Proces ten może potrwać do 4 minut..."
 
 	arr["ENGLISH",490]="The Arcadyan algorithm needs a very specific data to calculate the PIN (the serial number of the access point). Getting this data can take a lot of time. You can optionally choose to try to generate it. This generated PIN is very useful in networks of type Orange-XXXX"
 	arr["SPANISH",490]="El algoritmo Arcadyan necesita un dato muy concreto para poder calcular el PIN (el número de serie del punto de acceso). Obtener este dato puede llevar bastante tiempo. Podrás elegir opcionalmente intentar generarlo. Este PIN generado es muy útil en redes del tipo Orange-XXXX"
@@ -5378,7 +5378,7 @@ function language_strings() {
 	arr["RUSSIAN",490]="Алгоритм Arcadyan требует очень специфических данных для расчета PIN-кода (серийный номер точки доступа). Получение этих данных может занять много времени. При желании вы можете сгенерировать PIN, используя этот алгоритм. Этот сгенерированный PIN-код очень полезен в сетях типа Orange-XXXX"
 	arr["GREEK",490]="Ο αλγόριθμος Arcadyan χρειάζεται πολύ συγκεκριμένα δεδομένα για τον υπολογισμό του PIN (ο σειριακός αριθμός του σημείου πρόσβασης). Η λήψη αυτών των δεδομένων μπορεί να χρειαστεί αρκετό χρόνο. Μπορείτε να επιλέξετε να προσπαθήσετε να το δημιουργήσετε. Tο PIN που θα δημιουργηθεί είναι πολύ χρήσιμο σε δίκτυα τύπου Orange-XXXX"
 	arr["ITALIAN",490]="L'algoritmo Arcadyan richiede dati molto specifici per calcolare il PIN (il numero di serie del punto di accesso). Ottenere questi dati può richiedere molto tempo. Puoi scegliere opzionalmente di provare a generarlo. Questo PIN generato è molto utile nelle reti di tipo Orange-XXXX"
-	arr["POLISH",490]="${pending_of_translation} Algorytm Arcadyan potrzebuje bardzo specyficznych danych do obliczania numeru PIN (numeru seryjnego punktu dostępu). Uzyskanie tych danych może zająć trochę czasu. Można opcjonalnie zdecydować się na jego wygenerowanie. Ten wygenerowany kod PIN jest bardzo przydatny w sieciach typu Orange-XXXX"
+	arr["POLISH",490]="Algorytm Arcadyan potrzebuje bardzo specyficznych danych do obliczania numeru PIN (numeru seryjny punktu dostępu). Uzyskanie tych danych może zająć trochę czasu. Można opcjonalnie zdecydować się na jego wygenerowanie. Ten wygenerowany kod PIN jest bardzo przydatny w sieciach typu Orange-XXXX"
 
 	arr["ENGLISH",491]="Arcadyan algorithm is not useful for the selected target network, a valid value can't be calculated"
 	arr["SPANISH",491]="El algoritmo Arcadyan no sirve para la red objetivo seleccionada, no se puede calcular un valor válido"
@@ -5388,7 +5388,7 @@ function language_strings() {
 	arr["RUSSIAN",491]="Алгоритм Arcadyan бесполезен для выбранной целевой сети, действительное значение не может быть рассчитано"
 	arr["GREEK",491]="Ο αλγόριθμος Arcadyan δεν είναι χρήσιμος για το επιλεγμένο δίκτυο, δεν μπορεί να υπολογιστεί έγκυρη τιμή"
 	arr["ITALIAN",491]="L'algoritmo Arcadyan non è adatto alla rete selezionata come obiettivo, non è possibile calcolare un valore valido"
-	arr["POLISH",491]="${pending_of_translation} Algorytm Arcadyan nie pasuje do wybranej sieci docelowej, nie można obliczyć prawidłowej wartości"
+	arr["POLISH",491]="Algorytm Arcadyan nie pasuje do wybranej sieci docelowej, nie można obliczyć prawidłowej wartości"
 
 	arr["ENGLISH",492]="The Arcadyan algorithm can't be calculated. Although you chose the bully option for the attack, you need to use wash (included in reaver package) to calculate that PIN and you don't have it installed. The script will continue the attack without including it"
 	arr["SPANISH",492]="El algoritmo Arcadyan no puede ser calculado. Aunque elegiste la opción de ataque con bully, para calcular ese PIN se necesita utilizar wash (incluido en el paquete reaver) y tú no lo tienes instalado. El script continuará el ataque sin incluirlo"
@@ -5398,7 +5398,7 @@ function language_strings() {
 	arr["RUSSIAN",492]="Алгоритм Arcadyan не может быть рассчитан. Вы выбрали опцию bully для атаки, а для расчета этого PIN-кода вам необходимо использовать wash (включенную в пакет reaver), который у вас не установлен. Скрипт продолжит атаку без этого алгоритма"
 	arr["GREEK",492]="Ο αλγόριθμος Arcadyan δεν μπορεί να υπολογιστεί. Παρόλο που επιλέξατε την επιλογή bully για την επίθεση, χρειάζεται να χρησιμοποιήσετε το wash (περιλαμβάνεται στο πακέτο του reaver) για να υπολογίσετε το PIN και δεν το έχετε εγκαταστήσει. Το script θα συνεχίσει την επίθεση χωρίς να το συμπεριλάβει"
 	arr["ITALIAN",492]="L'algoritmo Arcadyan non può essere calcolato. Anche se hai scelto l'opzione di attacco con bully, per calcolare quel PIN che devi usare wash (incluso nel pacchetto reaver) e non l'hai installato. Lo script continuerà l'attacco senza includerlo"
-	arr["POLISH",492]="${pending_of_translation} Nie można obliczyć algorytmu Arcadyan. Chociaż wybrano opcję ataku za pomocą bully, aby obliczyć ten kod PIN, musisz użyć wash (dołączonego do pakietu reaver) i nie masz go zainstalowanego. Skrypt będzie kontynuował atak bez jego włączania"
+	arr["POLISH",492]="Nie można obliczyć algorytmu Arcadyan. Chociaż wybrano opcję ataku za pomocą bully, aby obliczyć ten kod PIN, musisz użyć wash (dołączonego do pakietu reaver) i nie masz go zainstalowanego. Skrypt będzie kontynuował atak bez jego włączania"
 
 	arr["ENGLISH",493]="The Arcadyan algorithm PIN has already been calculated for this target (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). There is no need to calculate it again"
 	arr["SPANISH",493]="El PIN del algoritmo Arcadyan ya fue calculado para este objetivo (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). No hace falta calcularlo de nuevo"
@@ -5408,7 +5408,7 @@ function language_strings() {
 	arr["RUSSIAN",493]="PIN с помощью алгоритма Arcadyan уже рассчитан для этой цели (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Нет необходимости вычислять его снова"
 	arr["GREEK",493]="Ο αλγόριθμος Arcadyan PIN έχει ήδη υπολογιστεί για αυτό το δίκτυο (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Δεν χρειάζεται να υπολογιστεί ξανά"
 	arr["ITALIAN",493]="Il PIN dell'algoritmo Arcadyan è già stato calcolato per questo obiettivo (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Non c'è bisogno di calcolarlo di nuovo"
-	arr["POLISH",493]="${pending_of_translation} PIN algorytm Arcadyan został już obliczony w tym celu (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Nie musisz go ponownie obliczyć"
+	arr["POLISH",493]="PIN algorytm Arcadyan został już obliczony dla tego celu (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Nie musisz go ponownie obliczać"
 
 	arr["ENGLISH",494]="13. Offline PIN generation using algorithms and database"
 	arr["SPANISH",494]="13. Generación offline de PINs con algoritmos y base de datos"
@@ -5418,7 +5418,7 @@ function language_strings() {
 	arr["RUSSIAN",494]="13. Офлайн генерация PIN-кода, используя алгоритмы и базу данных"
 	arr["GREEK",494]="13. Offline δημιουργία PIN με χρήση δίαφορων αλγορίθμων και έτοιμης βάσης δεδομένων"
 	arr["ITALIAN",494]="13. Generazione offline di PIN con algoritmi e database"
-	arr["POLISH",494]="${pending_of_translation} 13. Generowanie offline kodów PIN z algorytmami i bazą danych"
+	arr["POLISH",494]="13. Generowanie offline kodów PIN z algorytmami i bazą danych"
 
 	arr["ENGLISH",495]="Offline PIN generation menu"
 	arr["SPANISH",495]="Menú de generación offline de PINs"
@@ -5428,7 +5428,7 @@ function language_strings() {
 	arr["RUSSIAN",495]="Меню создания PIN-кода"
 	arr["GREEK",495]="Μενού offline δημιουργίας PIN"
 	arr["ITALIAN",495]="Menu di generazione offline dei PIN"
-	arr["POLISH",495]="${pending_of_translation} Menu generowania PIN offline"
+	arr["POLISH",495]="Menu generowania PIN offline"
 
 	arr["ENGLISH",496]="5.  Search in PIN database"
 	arr["SPANISH",496]="5.  Consultar en la base de datos de PINs"
@@ -5438,7 +5438,7 @@ function language_strings() {
 	arr["RUSSIAN",496]="5.  Поиск в базе данных PIN-кода"
 	arr["GREEK",496]="5.  Αναζήτηση στη βάση δεδομένων PIN"
 	arr["ITALIAN",496]="5.  Controllare il database dei PIN"
-	arr["POLISH",496]="${pending_of_translation} 5.  Sprawdź bazę danych PIN"
+	arr["POLISH",496]="5.  Sprawdź bazę danych PIN"
 
 	arr["ENGLISH",497]="9.  Return to WPS attacks menu"
 	arr["SPANISH",497]="9.  Volver al menú de ataques WPS"
@@ -5448,7 +5448,7 @@ function language_strings() {
 	arr["RUSSIAN",497]="9.  Вернуться в меню атак WPS"
 	arr["GREEK",497]="9.  Επιστροφή στο μενού επιθέσεων WPS"
 	arr["ITALIAN",497]="9.  Tornare al menú attacchi WPS"
-	arr["POLISH",497]="${pending_of_translation} 9.  Wróć do menu WPS Attack"
+	arr["POLISH",497]="9.  Wróć do menu Atak WPS"
 
 	arr["ENGLISH",498]="choose database or algorithm"
 	arr["SPANISH",498]="escoge base de datos o algoritmo"
@@ -5458,7 +5458,7 @@ function language_strings() {
 	arr["RUSSIAN",498]="выбрать базу данных или алгоритм"
 	arr["GREEK",498]="επιλέξτε βάση δεδομένων ή αλγόριθμο"
 	arr["ITALIAN",498]="scegliere database o algoritmo"
-	arr["POLISH",498]="${pending_of_translation} wybierz bazę danych lub algorytm"
+	arr["POLISH",498]="wybierz bazę danych lub algorytm"
 
 	arr["ENGLISH",499]="Showing matches in the PIN database..."
 	arr["SPANISH",499]="Mostrando coincidencias de la base de datos de PINs..."
@@ -5468,7 +5468,7 @@ function language_strings() {
 	arr["RUSSIAN",499]="Отображение совпадений в базе данных PIN-кода..."
 	arr["GREEK",499]="Εμφάνιση αντιστοιχιών στη βάση δεδομένων PIN..."
 	arr["ITALIAN",499]="Mostrando le corrispondenze del database dei PIN..."
-	arr["POLISH",499]="${pending_of_translation} Wyświetlanie danych dotyczących bazy danych PIN..."
+	arr["POLISH",499]="Wyświetlanie dopasowań z bazy danych PIN..."
 
 	arr["ENGLISH",500]="Showing calculated PIN using ComputePIN algorithm..."
 	arr["SPANISH",500]="Mostrando PIN calculado con el algoritmo ComputePIN..."
@@ -5478,7 +5478,7 @@ function language_strings() {
 	arr["RUSSIAN",500]="Отображение PIN-кода, рассчитанного с использованием алгоритма ComputePIN..."
 	arr["GREEK",500]="Εμφανίζεται το PIN που έχει υπολογιστεί χρησιμοποιώντας τον αλγόριθμο ComputePIN..."
 	arr["ITALIAN",500]="Mostrando il PIN calcolato utilizzando l'algoritmo ComputePIN..."
-	arr["POLISH",500]="${pending_of_translation} Wyświetlanie kodu PIN obliczonego przy użyciu algorytmu ComputePIN..."
+	arr["POLISH",500]="Wyświetlanie kodu PIN obliczonego przy użyciu algorytmu ComputePIN..."
 
 	arr["ENGLISH",501]="Showing calculated PIN using EasyBox algorithm..."
 	arr["SPANISH",501]="Mostrando PIN calculado con el algoritmo EasyBox..."
@@ -5488,7 +5488,7 @@ function language_strings() {
 	arr["RUSSIAN",501]="Отображение PIN-кода, рассчитанного с использованием алгоритма EasyBox..."
 	arr["GREEK",501]="Εμφανίζεται το PIN που έχει υπολογιστεί χρησιμοποιώντας τον αλγόριθμο EasyBox..."
 	arr["ITALIAN",501]="Mostrando il PIN calcolato utilizzando l'algoritmo EasyBox..."
-	arr["POLISH",501]="${pending_of_translation} Wyświetlanie kodu PIN przy użyciu algorytmu EasyBox..."
+	arr["POLISH",501]="Wyświetlanie kodu PIN przy użyciu algorytmu EasyBox..."
 
 	arr["ENGLISH",502]="Showing calculated PIN using Arcadyan algorithm..."
 	arr["SPANISH",502]="Mostrando PIN calculado con el algoritmo Arcadyan..."
@@ -5498,7 +5498,7 @@ function language_strings() {
 	arr["RUSSIAN",502]="Отображение PIN-кода, рассчитанного с использованием алгоритма Arcadyan..."
 	arr["GREEK",502]="Εμφανίζεται το PIN που έχει υπολογιστεί χρησιμοποιώντας τον αλγόριθμο Arcadyan..."
 	arr["ITALIAN",502]="Mostrando il PIN calcolato utilizzando l'algoritmo Arcadyan..."
-	arr["POLISH",502]="${pending_of_translation} Wyświetlanie kodu PIN obliczonego przy użyciu algorytmu Arcadyan..."
+	arr["POLISH",502]="Wyświetlanie kodu PIN obliczonego przy użyciu algorytmu Arcadyan..."
 
 	arr["ENGLISH",503]="It's not necessary to perform the scan again to calculate the Arcadyan algorithm PIN. This has already been done in this session"
 	arr["SPANISH",503]="No es necesario realizar de nuevo el escaneo para calcular el PIN del algoritmo Arcadyan. Ya se realizó anteriormente en esta sesión"
@@ -5508,7 +5508,7 @@ function language_strings() {
 	arr["RUSSIAN",503]="Нет необходимости снова выполнять сканирование, чтобы вычислить PIN-код алгоритмом Arcadyan. Это уже сделано ранее в ходе этой сессии"
 	arr["GREEK",503]="Δεν είναι απαραίτητο να εκτελέσετε ξανά το scan για να υπολογίσετε το PIN χρησιμοποιώντας τον Arcadyan αλγόριθμο. Έχει ήδη πραγματοποιηθεί σε αυτή τη συνεδρία"
 	arr["ITALIAN",503]="Non è necessario eseguire nuovamente la scansione per calcolare il PIN dell'algoritmo Arcadyan. È già stato fatto in precedenza in questa sessione"
-	arr["POLISH",503]="${pending_of_translation} Aby obliczyć algorytm algorytm Arcadyan, nie jest konieczne przeprowadzanie skanowania. Już zrobiliśmy wcześniej w tej sesji"
+	arr["POLISH",503]="Nie jest konieczne przeprowadzanie skanowania aby obliczyć PIN algorytmem Arcadyan. Już zrobiliśmy je wcześniej w tej sesji"
 
 	arr["ENGLISH",504]="${blue_color}This PIN calculation process is not entirely offline. A complete \"probe\" response is required from the target access point to obtain a necessary data. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",504]="${blue_color}Este proceso de cálculo de PIN no es puramente offline. Hace falta una respuesta \"probe\" completa del punto de acceso objetivo para obtener un dato necesario. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5518,7 +5518,7 @@ function language_strings() {
 	arr["RUSSIAN",504]="${blue_color}Этот процесс расчета PIN-кода не является чисто офлайн. От целевой точки доступа требуется полный запрос \"probe\" для получения необходимых данных. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",504]="${blue_color}Αυτή η διαδικασία υπολογισμού PIN δεν είναι καθ' αυτοὺ offline. Απαιτείται ένα ολοκληρωμένο \"probe\" response από το σημείο πρόσβασης για να ληφθούν τα απαραίτητα δεδομένα. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",504]="${blue_color}Questo processo di calcolo del PIN non è puramente offline. É richiesta una risposta completa \"probe\" dal punto di accesso obiettivo per ottenere i dati necessari. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",504]="${pending_of_translation} ${blue_color}Ten proces obliczania kodu PIN nie jest wyłącznie offline. Wymagana jest pełna odpowiedź \"probe\" z docelowego punktu dostępu, aby uzyskać niezbędne dane. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",504]=" ${blue_color}Ten proces obliczania kodu PIN nie jest wyłącznie offline. Wymagana jest pełna odpowiedź \"probe\" z docelowego punktu dostępu, aby uzyskać niezbędne dane. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",505]="Do you want to enable \"DoS pursuit mode\"? ${blue_color}This will launch again the attack if target AP change its channel countering \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["SPANISH",505]="¿Deseas activar el \"modo persecución DoS\"? ${blue_color}Esto relanzará el ataque si el AP objetivo cambia de canal contrarrestando el \"channel hopping\" ${normal_color}${visual_choice}"
@@ -5528,7 +5528,7 @@ function language_strings() {
 	arr["RUSSIAN",505]="${pending_of_translation} Вы хотите включить \"режим преследования DoS\"? ${blue_color}Это снова запустит атаку, если целевая AP изменит свой канал, противодействуя \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["GREEK",505]="Θέλετε να ενεργοποιήσετε to \"DoS pursuit mode\"; ${blue_color}Αυτό θα ξεκινήσει πάλι την επίθεση, εάν το σημείο πρόσβασης αλλάξει το κανάλι του \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["ITALIAN",505]="Vuoi attivare la modalità \"DoS pursuit mode\"? ${blue_color}Questo riprenderà l'attacco se l'AP obiettivo cambia i canali contrastando il \"channel hopping\" ${normal_color}${visual_choice}"
-	arr["POLISH",505]="${pending_of_translation} Czy chcesz uaktywnić \"tryb pościgowy DoS\"? ${blue_color}To spowoduje ponowne atakowanie, jeśli docelowy punkt dostępu AP zmieni kanały, zmieniając kanały \"channel hopping\" ${normal_color}${visual_choice}"
+	arr["POLISH",505]="Czy chcesz uaktywnić \"tryb DoS pursuit\"? ${blue_color}To spowoduje ponowne uruchomienie ataku, jeśli docelowy punkt dostępu AP zmieni kanały \"channel hopping\" ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",506]="DoS attack with the \"DoS pursuit mode\" enabled will start when you press [Enter] on this window. To stop it you must press [Ctrl+C] or close attack window"
 	arr["SPANISH",506]="El ataque DoS con el \"modo persecución DoS\" activado comenzará cuando pulse [Enter] en esta ventana. Para detenerlo deberá pulsar [Ctrl+C] o cerrar la ventana del ataque"
@@ -5538,7 +5538,7 @@ function language_strings() {
 	arr["RUSSIAN",506]="DoS-атака с включенным \"режимом DoS преследования\" будет запущена когда вы в этом окне нажмёте [Enter]. Для её остановки нажмите [Ctrl+C] или закройте окно атаки"
 	arr["GREEK",506]="Η επίθεση DoS με το \"DoS pursuit mode\" ενεργοποιημένο θα ξεκινήσει όταν πατήσετε [Enter] σε αυτό το παράθυρο. Για να το σταματήσετε πρέπει να πατήσετε [Ctrl+C] ή να κλείσετε το παράθυρο"
 	arr["ITALIAN",506]="L'attacco DoS con la modalità \"DoS pursuit mode\" abilitata inizierá quando si preme [Enter] in questa finestra. Per fermarlo bisogna premere [Ctrl+C] o chiudere la finestra di attacco"
-	arr["POLISH",506]="${pending_of_translation} Atak DoS z uruchomionym trybem \"tryb pościgowy DoS\" zostanie uruchomiony po naciśnięciu przycisku [Enter] w tym oknie. Aby go zatrzymać, musisz nacisnąć [Ctrl+C] lub zamknąć okno ataku"
+	arr["POLISH",506]="Atak DoS z uruchomionym trybem \"DoS pursuit\" zostanie uruchomiony po naciśnięciu przycisku [Enter] w tym oknie. Aby go zatrzymać, musisz nacisnąć [Ctrl+C] lub zamknąć okno ataku"
 
 	arr["ENGLISH",507]="Channel change detected. Relaunching again DoS attack on \"DoS pursuit mode\" now on channel ${normal_color}${channel}"
 	arr["SPANISH",507]="Cambio de canal detectado. Relanzando de nuevo ataque DoS en \"modo persecución DoS\" ahora sobre el canal ${normal_color}${channel}"
@@ -5548,7 +5548,7 @@ function language_strings() {
 	arr["RUSSIAN",507]="Обнаружено изменение канала. Перезапуск DoS-атаки в \"режиме DoS преследования\" теперь на канале ${normal_color}${channel}"
 	arr["GREEK",507]="Εντοπίστηκε αλλαγή καναλιού. Γίνεται πάλι επίθεση DoS \"DoS pursuit mode\" στο κανάλι ${normal_color}${channel}"
 	arr["ITALIAN",507]="Cambio di canale rilevato. Riavviare nuovamente l'attacco DoS in modalità \"DoS pursuit mode\" sul canale ${normal_color}${channel}"
-	arr["POLISH",507]="${pending_of_translation} Wykryto zmianę kanału. Ponowne uruchomienie ataku DoS w trybie \"tryb pościgowy DoS\" na kanale ${normal_color}${channel}"
+	arr["POLISH",507]="Wykryto zmianę kanału. Ponowne uruchomienie ataku DoS w trybie \"DoS pursuit\" na kanale ${normal_color}${channel}"
 
 	arr["ENGLISH",508]="\"DoS pursuit mode\" can be unstable for this kind of DoS attack. If you are not obtaining an optimal result just select another kind of attack"
 	arr["SPANISH",508]="El \"modo persecución DoS\" puede ser inestable para este tipo de ataque DoS. Si el resultado no es óptimo selecciona otro tipo de ataque"
@@ -5558,7 +5558,7 @@ function language_strings() {
 	arr["RUSSIAN",508]="\"Режим DoS преследования\" может быть нестабильной для такой DoS-атаки. Если вы не получаете приемлемого результата, просто выберите другой тип атаки"
 	arr["GREEK",508]="Το \"DoS pursuit mode\" μπορεί να είναι ασταθής για αυτό το είδος επίθεσης DoS. Εάν δεν δείτε σωστό αποτέλεσμα, επιλέξτε κάποιο άλλο είδος επίθεσης"
 	arr["ITALIAN",508]="La modalitá \"DoS pursuit mode\" può essere instabile per questo tipo di attacco DoS. Se il risultato non è ottimale selezionare un altro tipo di attacco"
-	arr["POLISH",508]="${pending_of_translation} \"tryb pościgowy DoS\" może być niestabilny dla tego typu ataków DoS. Jeśli wynik nie jest optymalny, wybierz inny rodzaj ataku"
+	arr["POLISH",508]="\"tryb DoS pursuit\" może być niestabilny dla tego typu ataków DoS. Jeśli wynik nie jest optymalny, wybierz inny rodzaj ataku"
 
 	arr["ENGLISH",509]="If you want to integrate \"DoS pursuit mode\" on an Evil Twin attack, another additional wifi interface in monitor mode will be needed to be able to perform it"
 	arr["SPANISH",509]="Si se quiere integrar el \"modo persecución DoS\" en un ataque Evil Twin, será necesario tener otro interfaz wifi adicional en modo monitor para llevarlo a cabo"
@@ -5568,7 +5568,7 @@ function language_strings() {
 	arr["RUSSIAN",509]="Если вы хотите интегрировать \"режим DoS преследования\" на атаку Evil Twin, то для выполнения этого потребуется еще один дополнительный интерфейс wifi в режиме монитора"
 	arr["GREEK",509]="Εάν θέλετε να ενσωματώσετε το \"DoS pursuit mode\" σε μια επίθεση Evil Twin, θα χρειαστεί μια επιπλέον διεπαφή wifi σε κατάσταση παρακολούθησης για να εκτελεστεί σωστά"
 	arr["ITALIAN",509]="Se si desidera integrare la modalitá \"DoS pursuit mode\" in un attacco Evil Twin, sarà necessario disporre di un'altra interfaccia wifi aggiuntiva in modalità monitor"
-	arr["POLISH",509]="${pending_of_translation} Jeśli chcesz zintegrować \"tryb pościgowy DoS\" w ataku Evil Twin, konieczne będzie posiadanie innego dodatkowego interfejsu wifi w trybie monitorowania, aby go przeprowadzić"
+	arr["POLISH",509]="Jeśli chcesz zintegrować \"tryb DoS pursuit\" w ataku Evil Twin, konieczne będzie posiadanie innego dodatkowego interfejsu wifi w trybie monitorowania"
 
 	arr["ENGLISH",510]="On this screen, it's supposed an additional wifi interface is chosen, but you don't have anyone at this moment"
 	arr["SPANISH",510]="En esta pantalla, se supone que deberías elegir otro interfaz wifi adicional, pero no dispones de ninguno en este momento"
@@ -5578,7 +5578,7 @@ function language_strings() {
 	arr["RUSSIAN",510]="На этом экране предполагается, что будет выбран дополнительный интерфейс wifi, но в данный момент у вас нет других беспроводных интерфейсов"
 	arr["GREEK",510]="Σε αυτήν την οθόνη, υποτίθεται ότι έχει επιλεγεί μια πρόσθετη διεπαφή wifi, αλλά δεν έχετε επιλέξει κάποια αυτήν τη στιγμή"
 	arr["ITALIAN",510]="In questa schermata, dovresti scegliere un'altra interfaccia wifi addizionale, ma in questo momento non ne hai nessuna"
-	arr["POLISH",510]="${pending_of_translation} Na tym ekranie należy wybrać inny dodatkowy interfejs wifi, ale nie masz go w tym momencie"
+	arr["POLISH",510]="Na tym ekranie należy wybrać inny dodatkowy interfejs wifi, ale nie masz go w tym momencie"
 
 	arr["ENGLISH",511]="Select another wireless interface :"
 	arr["SPANISH",511]="Selecciona otra interfaz inalámbrica :"
@@ -5588,7 +5588,7 @@ function language_strings() {
 	arr["RUSSIAN",511]="Выберите дополнительный беспроводной интерфейс :"
 	arr["GREEK",511]="Επιλέξτε άλλη μία ασύρματη διεπαφή :"
 	arr["ITALIAN",511]="Seleziona un'altra interfaccia wireless :"
-	arr["POLISH",511]="${pending_of_translation} Wybierz inny interfejs bezprzewodowy :"
+	arr["POLISH",511]="Wybierz inny interfejs bezprzewodowy :"
 
 	arr["ENGLISH",512]="\"DoS pursuit mode\" interface: ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["SPANISH",512]="Interfaz para \"modo persecución DoS\": ${pink_color}${secondary_wifi_interface}${normal_color}"
@@ -5598,7 +5598,7 @@ function language_strings() {
 	arr["RUSSIAN",512]="Интерфейс для \"режима DoS преследования\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["GREEK",512]="Διεπαφή για \"DoS pursuit mode\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["ITALIAN",512]="Interfaccia per la modalitá \"DoS pursuit mode\": ${pink_color}${secondary_wifi_interface}${normal_color}"
-	arr["POLISH",512]="${pending_of_translation} Interfejs dla \"tryb pościgowy DoS\": ${pink_color}${secondary_wifi_interface}${normal_color}"
+	arr["POLISH",512]="Interfejs dla \"tryb DoS pursuit\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 
 	arr["ENGLISH",513]="Interface will be tried to be changed to monitor mode automatically"
 	arr["SPANISH",513]="Se intentará cambiar la interfaz a modo monitor automáticamente"
@@ -5608,7 +5608,7 @@ function language_strings() {
 	arr["RUSSIAN",513]="Будет сделана автоматическая попытка перевести интерфейс в режим монитора"
 	arr["GREEK",513]="Γίνεται απόπειρα αλλαγής κατάστασης διεπαφής σε κατάσταση παρακολούθησης"
 	arr["ITALIAN",513]="Si cercherà di cambiare automaticamente l'interfaccia alla modalità monitor"
-	arr["POLISH",513]="${pending_of_translation} Spowoduje to automatyczną zmianę interfejsu w tryb monitorowania"
+	arr["POLISH",513]="Spowoduje to automatyczną zmianę interfejsu w tryb monitorowania"
 
 	case "${3}" in
 		"yellow")
