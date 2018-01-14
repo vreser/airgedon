@@ -2960,7 +2960,26 @@ function launch_dos_pursuit_mode_attack() {
 	dos_pursuit_mode_pids+=("${dos_pursuit_mode_attack_pid}")
 
 	sleep ${dos_delay}
-	airodump-ng -w "${tmpdir}dos_pm" "${interface_pursuit_mode_scan}" > /dev/null 2>&1 &
+	if [ "${channel}" -gt 14 ]; then
+		airodump_band_modifier="abg"
+	else
+		if [ "${interface_pursuit_mode_scan}" = "${interface}" ]; then
+			if [ "${interface_supported_bands}" = "${only_24ghz}" ]; then
+				airodump_band_modifier="--band bg"
+			else
+				airodump_band_modifier="--band abg"
+			fi
+		else
+			if [ "${secondary_interface_supported_bands}" = "${only_24ghz}" ]; then
+				airodump_band_modifier="--band bg"
+			else
+				airodump_band_modifier="--band abg"
+			fi
+		fi
+
+	fi
+
+	airodump-ng -w "${tmpdir}dos_pm" "${interface_pursuit_mode_scan}" --band "${airodump_band_modifier}" > /dev/null 2>&1 &
 	dos_pursuit_mode_scan_pid=$!
 	dos_pursuit_mode_pids+=("${dos_pursuit_mode_scan_pid}")
 }
@@ -8163,8 +8182,15 @@ function explore_for_targets_option() {
 	tmpfiles_toclean=1
 	rm -rf "${tmpdir}nws"* > /dev/null 2>&1
 	rm -rf "${tmpdir}clts.csv" > /dev/null 2>&1
+
+	if [ "${interface_supported_bands}" = "${only_24ghz}" ]; then
+		airodump_band_modifier="bg"
+	else
+		airodump_band_modifier="abg"
+	fi
+
 	recalculate_windows_sizes
-	xterm +j -bg black -fg white -geometry "${g1_topright_window}" -T "Exploring for targets" -e airodump-ng -w "${tmpdir}nws" "${interface}" > /dev/null 2>&1
+	xterm +j -bg black -fg white -geometry "${g1_topright_window}" -T "Exploring for targets" -e airodump-ng -w "${tmpdir}nws" "${interface}" --band "${airodump_band_modifier}" > /dev/null 2>&1
 	targetline=$(awk '/(^Station[s]?|^Client[es]?)/{print NR}' < "${tmpdir}nws-01.csv")
 	targetline=$((targetline - 1))
 
