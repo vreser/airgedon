@@ -125,6 +125,7 @@ standard_resolution="1024x768"
 curl_404_error="404: Not Found"
 language_strings_file="language_strings.sh"
 broadcast_mac="FF:FF:FF:FF:FF:FF"
+only_24ghz="2.4Ghz"
 
 #aircrack vars
 aircrack_tmp_simple_name_file="aircrack"
@@ -1157,13 +1158,13 @@ function check_interface_supported_bands() {
 
 	case "${2}" in
 		"main_wifi_interface")
-			interface_supported_bands="2.4Ghz"
+			interface_supported_bands="${only_24ghz}"
 			if get_5hgz_band_info_from_phy_interface "${1}"; then
 				interface_supported_bands+=", 5Ghz"
 			fi
 		;;
 		"secondary_wifi_interface")
-			secondary_interface_supported_bands="2.4Ghz"
+			secondary_interface_supported_bands="${only_24ghz}"
 			if get_5hgz_band_info_from_phy_interface "${1}"; then
 				secondary_interface_supported_bands+=", 5Ghz"
 			fi
@@ -1176,7 +1177,7 @@ function get_5hgz_band_info_from_phy_interface() {
 
 	debug_print
 
-	if iw phy "${1}" info | grep "5200 MHz" > /dev/null; then
+	if $(iw phy "${1}" info 2> /dev/null | grep "5200 MHz" > /dev/null); then
 		return 0
 	fi
 
