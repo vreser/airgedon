@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20171225
+#Date.........: 20180114
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -1158,25 +1158,25 @@ function check_interface_supported_bands() {
 	case "${2}" in
 		"main_wifi_interface")
 			interface_supported_bands="2.4Ghz"
-			if get_band_info_from_phy_interface "${1}"; then
-				interface_supported_bands+=" 5Ghz"
+			if get_5hgz_band_info_from_phy_interface "${1}"; then
+				interface_supported_bands+=", 5Ghz"
 			fi
 		;;
 		"secondary_wifi_interface")
 			secondary_interface_supported_bands="2.4Ghz"
-			if get_band_info_from_phy_interface "${1}"; then
-				secondary_interface_supported_bands+=" 5Ghz"
+			if get_5hgz_band_info_from_phy_interface "${1}"; then
+				secondary_interface_supported_bands+=", 5Ghz"
 			fi
 		;;
 	esac
 }
 
-#Check band info from a given physical interface
-function get_band_info_from_phy_interface() {
+#Check 5ghz band info from a given physical interface
+function get_5hgz_band_info_from_phy_interface() {
 
 	debug_print
 
-	if iw phy "${1}" info | grep "5200 MHz"; then
+	if iw phy "${1}" info | grep "5200 MHz" > /dev/null; then
 		return 0
 	fi
 
@@ -3479,7 +3479,11 @@ function print_iface_selected() {
 		select_interface
 	else
 		check_interface_mode "${interface}"
-		language_strings "${language}" 42 "blue"
+		if [ "${ifacemode}" = "(Non wifi card)" ]; then
+			language_strings "${language}" 42 "blue"
+		else
+			language_strings "${language}" 514 "blue"
+		fi
 	fi
 }
 

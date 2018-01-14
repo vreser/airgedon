@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171225
+#Date.........: 20180114
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -890,15 +890,15 @@ function language_strings() {
 	arr["ITALIAN",41]="Nessuna interfaccia selezionata. Sarai reindirizzato per selezionarne una"
 	arr["POLISH",41]="Nie wybrano interfejsu. Zostaniesz przekierowany, aby któryś wybrać"
 
-	arr["ENGLISH",42]="Interface ${pink_color}${current_iface_on_messages}${blue_color} selected. Mode: ${pink_color}${ifacemode}${blue_color}. Band/s: ${pink_color}${interface_supported_bands}${normal_color}"
-	arr["SPANISH",42]="Interfaz ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Modo: ${pink_color}${ifacemode}${blue_color}. Banda/s: ${pink_color}${interface_supported_bands}${normal_color}"
-	arr["FRENCH",42]="${pending_of_translation} Interface ${pink_color}${current_iface_on_messages}${blue_color} sélectionnée. Mode: ${pink_color}${ifacemode}${blue_color}. Bande/s: ${pink_color}${interface_supported_bands}${normal_color}"
-	arr["CATALAN",42]="${pending_of_translation} Interfície ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Mode: ${pink_color}${ifacemode}${blue_color}. Bande/s: ${pink_color}${interface_supported_bands}${normal_color}"
-	arr["PORTUGUESE",42]="${pending_of_translation} Interface ${pink_color}${current_iface_on_messages}${blue_color} selecionada. Modo: ${pink_color}${ifacemode}${blue_color}. Banda/s: ${pink_color}${interface_supported_bands}${normal_color}"
-	arr["RUSSIAN",42]="${pending_of_translation} Интерфейс ${pink_color}${current_iface_on_messages}${blue_color} выбран. Режим: ${pink_color}${ifacemode}${blue_color}. Полосы: ${pink_color}${interface_supported_bands}${normal_color}"
-	arr["GREEK",42]="${pending_of_translation} Η διεπαφή ${pink_color}${current_iface_on_messages}${blue_color} έχει επιλεχθεί. Κατάσταση: ${pink_color}${ifacemode}${blue_color}. Μπάντα: ${pink_color}${interface_supported_bands}${normal_color}"
-	arr["ITALIAN",42]="${pending_of_translation} Interfaccia ${pink_color}${current_iface_on_messages}${blue_color} selezionata. Modalità: ${pink_color}${ifacemode}${blue_color}. Banda/s: ${pink_color}${interface_supported_bands}${normal_color}"
-	arr["POLISH",42]="${pending_of_translation} Interfejs ${pink_color}${current_iface_on_messages}${blue_color} został wybrany. Tryb: ${pink_color}${ifacemode}${blue_color}. Pasmo/a: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["ENGLISH",42]="Interface ${pink_color}${current_iface_on_messages}${blue_color} selected. Mode: ${pink_color}${ifacemode}${normal_color}"
+	arr["SPANISH",42]="Interfaz ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Modo: ${pink_color}${ifacemode}${normal_color}"
+	arr["FRENCH",42]="Interface ${pink_color}${current_iface_on_messages}${blue_color} sélectionnée. Mode: ${pink_color}${ifacemode}${normal_color}"
+	arr["CATALAN",42]="Interfície ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Mode: ${pink_color}${ifacemode}${normal_color}"
+	arr["PORTUGUESE",42]="Interface ${pink_color}${current_iface_on_messages}${blue_color} selecionada. Modo: ${pink_color}${ifacemode}${normal_color}"
+	arr["RUSSIAN",42]="Интерфейс ${pink_color}${current_iface_on_messages}${blue_color} выбран. Режим: ${pink_color}${ifacemode}${normal_color}"
+	arr["GREEK",42]="Η διεπαφή ${pink_color}${current_iface_on_messages}${blue_color} έχει επιλεχθεί. Κατάσταση: ${pink_color}${ifacemode}${normal_color}"
+	arr["ITALIAN",42]="Interfaccia ${pink_color}${current_iface_on_messages}${blue_color} selezionata. Modalità: ${pink_color}${ifacemode}${normal_color}"
+	arr["POLISH",42]="Interfejs ${pink_color}${current_iface_on_messages}${blue_color} został wybrany. Tryb: ${pink_color}${ifacemode}${normal_color}"
 
 	arr["ENGLISH",43]="Selected BSSID: ${pink_color}${bssid}${normal_color}"
 	arr["SPANISH",43]="BSSID seleccionado: ${pink_color}${bssid}${normal_color}"
@@ -5609,6 +5609,16 @@ function language_strings() {
 	arr["GREEK",513]="Γίνεται απόπειρα αλλαγής κατάστασης διεπαφής σε κατάσταση παρακολούθησης"
 	arr["ITALIAN",513]="Si cercherà di cambiare automaticamente l'interfaccia alla modalità monitor"
 	arr["POLISH",513]="${pending_of_translation} Spowoduje to automatyczną zmianę interfejsu w tryb monitorowania"
+
+	arr["ENGLISH",514]="Interface ${pink_color}${current_iface_on_messages}${blue_color} selected. Mode: ${pink_color}${ifacemode}${blue_color}. Supported bands: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["SPANISH",514]="Interfaz ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Modo: ${pink_color}${ifacemode}${blue_color}. Bandas soportadas: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["FRENCH",514]="${pending_of_translation} Interface ${pink_color}${current_iface_on_messages}${blue_color} sélectionnée. Mode: ${pink_color}${ifacemode}${blue_color}. Bandes supportées: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["CATALAN",514]="${pending_of_translation} Interfície ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Mode: ${pink_color}${ifacemode}${blue_color}. Bandes suportades: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["PORTUGUESE",514]="${pending_of_translation} Interface ${pink_color}${current_iface_on_messages}${blue_color} selecionada. Modo: ${pink_color}${ifacemode}${blue_color}. Bandas suportadas: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["RUSSIAN",514]="${pending_of_translation} Интерфейс ${pink_color}${current_iface_on_messages}${blue_color} выбран. Режим: ${pink_color}${ifacemode}${blue_color}. Поддерживаемые диапазоны: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["GREEK",514]="${pending_of_translation} Η διεπαφή ${pink_color}${current_iface_on_messages}${blue_color} έχει επιλεχθεί. Κατάσταση: ${pink_color}${ifacemode}${blue_color}. Υποστηριζόμενες ζώνες: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["ITALIAN",514]="${pending_of_translation} Interfaccia ${pink_color}${current_iface_on_messages}${blue_color} selezionata. Modalità: ${pink_color}${ifacemode}${blue_color}. Bande supportate: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["POLISH",514]="${pending_of_translation} Interfejs ${pink_color}${current_iface_on_messages}${blue_color} został wybrany. Tryb: ${pink_color}${ifacemode}${blue_color}. Obsługiwane pasma: ${pink_color}${interface_supported_bands}${normal_color}"
 
 	case "${3}" in
 		"yellow")
