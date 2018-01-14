@@ -1,3 +1,7 @@
+### 8.0
+ - Added 5ghz card detection and 5ghz support for attacks
+ - Tested compatibility with Parrot 3.10
+
 ### 7.23
  - Fixed error in Docker container on some host O.S.
  - Fixed error message on offline Arcadyan PIN algorithm calculation
