@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20171125
+#Date.........: 20180114
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -3798,7 +3798,7 @@ function language_strings() {
 	arr["RUSSIAN",332]="Язык изменён на Греческий"
 	arr["GREEK",332]="Η γλώσσα άλλαξε στα Ελληνικά"
 	arr["ITALIAN",332]="Lingua cambiata in Greco"
-	arr["POLISH",332]="${pending_of_translation} Zmieniono język na Grecki"
+	arr["POLISH",332]="Zmieniono język na Grecki"
 
 	arr["ENGLISH",333]="8.  WPS attacks menu"
 	arr["SPANISH",333]="8.  Menú de ataques WPS"
@@ -3818,7 +3818,7 @@ function language_strings() {
 	arr["RUSSIAN",334]="Меню атак на WPS"
 	arr["GREEK",334]="Μενού επιθέσεων WPS"
 	arr["ITALIAN",334]="Menú degli attacchi WPS"
-	arr["POLISH",334]="${pending_of_translation} Menu ataków WPS"
+	arr["POLISH",334]="Menu ataków WPS"
 
 	arr["ENGLISH",335]="Selected WPS BSSID: ${pink_color}${wps_bssid}${normal_color}"
 	arr["SPANISH",335]="BSSID WPS seleccionado: ${pink_color}${wps_bssid}${normal_color}"
@@ -4488,7 +4488,7 @@ function language_strings() {
 	arr["RUSSIAN",401]="Установленный вами пакет beef не является пакетом BeEF (Browser Exploitation Framework). Вы установили Beef (Flexible Brainfuck interpreter). Оба исполнимых файла имеют одинаковое имя и могут вызвать путаницу. Если вы хотите использовать эту функцию, удалите его и установите тот, который требует airgeddon. Инструкция по установке: ${beef_installation_url}"
 	arr["GREEK",401]="Το πακέτο beef που έχετε εγκαταστημένο δεν είναι το BeEF (Browser Exploitation Framework). Έχετε εγκατεστημένο το Beef (Flexible Brainfuck interpreter). Και τα δύο εκτελέσιμα αρχεία έχουν το ίδιο όνομα και μπορεί να γίνει κάποιο μπέρδεμα. Απεγκαταστήστε το και εγκαταστήστε αυτό που χρειάζεται το airgeddon, αν θέλετε να χρησιμοποιήσετε αυτή την επιλογή. Οδηγός εγκατάστασης: ${beef_installation_url}"
 	arr["ITALIAN",401]="Il pacchetto beef che hai installato non è BeEF (Browser Exploitation Framework). È stato installato Beef (Flexible Brainfuck interpreter). Entrambi gli eseguibili hanno lo nome e può essere fonte di confusione. Disinstallarlo e installare quello di cui ha bisogno airgeddon se si desidera utilizzare questa funzione. Guida all'installazione: ${beef_installation_url}"
-	arr["POLISH",401]="${pending_of_translation} Zainstalowany pakiet beef nie jest BeEF (Browser Exploitation Framework). Masz zainstalowaną Beef (Flexible Brainfuck interpreter). Obydwa pliki wykonywalne są nazywane tak samo i mogą prowadzić do zamieszania. Odinstaluj i zainstaluj system airgeddon, jeśli potrzebujesz tej funkcji. Instrukcja instalacji: ${beef_installation_url}"
+	arr["POLISH",401]="Zainstalowany pakiet beef nie jest BeEF (Browser Exploitation Framework). Masz zainstalowaną Beef (Flexible Brainfuck interpreter). Obydwa pliki wykonywalne są nazywane tak samo i mogą prowadzić do zamieszania. Odinstaluj i zainstaluj system airgeddon, jeśli potrzebujesz tej funkcji. Instrukcja instalacji: ${beef_installation_url}"
 
 	arr["ENGLISH",402]="Enter the absolute path of the directory where BeEF is installed :"
 	arr["SPANISH",402]="Introduce la ruta absoluta del directorio donde está instalado BeEF :"
@@ -4638,7 +4638,7 @@ function language_strings() {
 	arr["RUSSIAN",416]="    Вы можете запустить BeEF, но лучше, если вы сначала запустите вторую опцию"
 	arr["GREEK",416]="    Μπορείτε να εκτελέσετε το BeEF, αλλά είναι καλύτερα να διαλέξετε τη δεύτερη επιλογή από πρίν"
 	arr["ITALIAN",416]="    Puoi eseguire BeEF, peró si consiglia di eseguire prima la seconda opzione"
-	arr["POLISH",416]="     Możesz uruchomić BeEF, ale zaleca się uruchomienie drugiej opcji najpierw"
+	arr["POLISH",416]="    Możesz uruchomić BeEF, ale zaleca się uruchomienie drugiej opcji najpierw"
 
 	arr["ENGLISH",417]="An unexpected error occurred, redirecting to the menu"
 	arr["SPANISH",417]="Ocurrió un error inesperado. Volviendo al menú"
@@ -4848,7 +4848,7 @@ function language_strings() {
 	arr["RUSSIAN",437]="Если вам понравилась эта программа и она оказался для вас полезной, вы можете поддержать проект, сделав пожертвование. Через PayPal (${normal_color}${mail}${pink_color}) или отправив часть биткойна на (${normal_color}${bitcoin}${pink_color}). Приветствуется любая сумма, даже небольшая (1, 2, 5 $/€). Более подробную информацию и прямые ссылки можно получить по адресу: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["GREEK",437]="Εαν ευχαριστηθήκατε το script και το βρήκατε χρήσιμο, μπορείτε να υποστηρίξετε το project κάνοντας κάποια δωρεά. Μέσω του Paypal (${normal_color}${mail}${pink_color}) ή στέλνοντας κάποιο ποσοστό bitcoin (${normal_color}${bitcoin}${pink_color}). Είναι καλοδεχούμενο οποιοδήποτε ποσό (1, 2, 5 $/€), δεν έχει σημασία το πόσο λίγο μπορεί να είναι. Δίνονται περισσότερες πληροφορίες και links για να κάνετε δωρεά στη διεύθυνση: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["ITALIAN",437]="Se ti è piaciuto lo script e l'hai trovato utile, puoi sostenere il progetto con una donazione. Attraverso PayPal (${normal_color}${mail}${pink_color}) o inviando una frazione di bitcoin (${normal_color}${bitcoin}${pink_color}). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Piú informazioni e collegamenti diretti per realizzarla in: ${normal_color}${urlgithub_wiki}/Contributing"
-	arr["POLISH",437]="Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi Paypal (${mail}) lub wysyłając ułamek bitcoin (${bitcoin}). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${urlgithub_wiki}/Contributing"
+	arr["POLISH",437]="Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi Paypal (${normal_color}${mail}${pink_color}) lub wysyłając ułamek bitcoin (${normal_color}${bitcoin}${pink_color}). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${urlgithub_wiki}/Contributing"
 
 	arr["ENGLISH",438]="We are looking for translators to other languages. If you want to see airgeddon in your native language and you also know english, contact us. More information at: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["SPANISH",438]="Buscamos traductores para otros idiomas. Si quieres ver airgeddon en tu lengua materna y además sabes inglés, contáctanos. Más información en: ${normal_color}${urlgithub_wiki}/Contributing"
@@ -4868,7 +4868,7 @@ function language_strings() {
 	arr["RUSSIAN",439]="${blue_color}Вы не выбрали какую-либо цель, вам будет предложено ввести данные вручную. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",439]="${blue_color}Δεν έχετε επιλέξει κάποιο στόχο, θα σας ζητηθεί να εισάγετε τα δεδομένα χειροκίνητα. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",439]="${blue_color}Abbiamo rilevato che non è stato selezionato alcun obiettivo, è necessario immettere manualmente i dati. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",439]="Wykryto, że nie wybrano żadnych celów, konieczne będzie ręczne wprowadzanie danych. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",439]="${blue_color}Wykryto, że nie wybrano żadnych celów, konieczne będzie ręczne wprowadzanie danych. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",440]="Aircrack trophy file generated successfully at [${normal_color}${aircrackpotenteredpath}${blue_color}]"
 	arr["SPANISH",440]="Fichero de trofeo aircrack generado con éxito en [${normal_color}${aircrackpotenteredpath}${blue_color}]"
@@ -5068,7 +5068,7 @@ function language_strings() {
 	arr["RUSSIAN",459]="Если вы установили airgeddon из репозитория, вы не должны включать эту опцию. airgeddon будет обновляться вместе с репозиториями. Если вы продолжите, убедитесь, что знаете, что делаете, или ваши действия могут вызвать проблемы для этой программы"
 	arr["GREEK",459]="Εάν εγκαταστήσατε το airgeddon από κάποιο επίσημο αποθετήριο, δεν πρέπει να ενεργοποιήσετε αυτή την επιλογή. Το airgeddon θα ενημερωθεί όταν ενημερωθούν και τα αποθετήρια. Αν συνεχίσετε, βεβαιωθείτε ότι γνωρίζετε τι κάνετε και ότι θα μπορεί να προκαλέσετε προβλήματα με τη ροή ενημέρωσης"
 	arr["ITALIAN",459]="Se airgeddon è stato installato da un repository non si dovrebbe attivare questa opzione. airgeddon sará aggiornato quando lo faranno i repository. Se continui, assicurati di sapere bene quello che fai o potrebbe causare problemi al flusso degli aggiornamenti"
-	arr["POLISH",459]="${pending_of_translation} Jeśli zainstalowano airgeddon z repozytorium, nie należy włączać tej opcji. airgeddon zostanie zaktualizowany, gdy w repozytorium pojawi się nowa wersja. Jeśli kontynuujesz, upewnij się, że wiesz co robisz, bo to może spowodować problemy z aktualizacją"
+	arr["POLISH",459]="Jeśli zainstalowano airgeddon z repozytorium, nie należy włączać tej opcji. airgeddon zostanie zaktualizowany, gdy w repozytorium pojawi się nowa wersja. Jeśli kontynuujesz, upewnij się, że wiesz co robisz, bo to może spowodować problemy z aktualizacją"
 
 	arr["ENGLISH",460]="Automatic updates have been enabled"
 	arr["SPANISH",460]="Se han activado las actualizaciones automáticas"
@@ -5178,7 +5178,7 @@ function language_strings() {
 	arr["RUSSIAN",470]="${blue_color} Автоопределение языка при запуске будет включено. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",470]="${blue_color}Ο αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση θα ενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",470]="${blue_color}Si sta per abilitare il rilevamento automatico della lingua all'inizio. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",470]="${blue_color}Autodetekcja języka podczas uruchamiania zostanie włączona . ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",470]="${blue_color}Autodetekcja języka podczas uruchamiania zostanie włączona. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",471]="Any permanent change of language you have will be lost on the next start if you enable this option!!"
 	arr["SPANISH",471]="Cualquier cambio permanente de idioma que tenga se perderá en el siguiente inicio si activa esta opción!!"
@@ -5318,7 +5318,7 @@ function language_strings() {
 	arr["RUSSIAN",484]="Успешно определены права root"
 	arr["GREEK",484]="Τα δικαιώματα root έχουν παραχωρηθεί επιτυχώς"
 	arr["ITALIAN",484]="I permessi di root sono stati rilevati correttamente"
-	arr["POLISH",484]="$Uprawnienia root zostały prawidłowo wykryte"
+	arr["POLISH",484]="Uprawnienia root zostały prawidłowo wykryte"
 
 	arr["ENGLISH",485]="${blue_color}Some PINs have been added calculated using the algorithms (ComputePIN, EasyBox, etc.), however you can add one more (Arcadyan). Calculating it requires certain data and a background scan will have to be performed. The process may be very slow. ${green_color}Do you want to proceed with the calculation to add it? ${normal_color}${visual_choice}"
 	arr["SPANISH",485]="${blue_color}Se han añadido algunos PINs calculados por algoritmos (ComputePIN, EasyBox, etc.), pero aún se puede añadir uno más (Arcadyan). Calcularlo requiere ciertos datos y habrá que realizar un escaneo en segundo plano. Es posible que el proceso sea muy lento. ${green_color}¿Quieres proceder con el cálculo para añadirlo? ${normal_color}${visual_choice}"
