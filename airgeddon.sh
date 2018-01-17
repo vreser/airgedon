@@ -892,7 +892,13 @@ function wash_json_scan() {
 	rm -rf "${tmpdir}wps_fifo" > /dev/null 2>&1
 
 	mkfifo "${tmpdir}wps_fifo"
-	timeout -s SIGTERM 240 wash -i "${interface}" --scan -n 100 -j 2> /dev/null > "${tmpdir}wps_fifo" &
+
+	wash_band_modifier=""
+	if [ "${wps_channel}" -gt 14 ]; then
+		wash_band_modifier="-5"
+	fi
+
+	timeout -s SIGTERM 240 wash -i "${interface}" --scan -n 100 -j "${wash_band_modifier}" 2> /dev/null > "${tmpdir}wps_fifo" &
 	wash_json_pid=$!
 	tee "${tmpdir}wps_json_data.txt"< <(cat < "${tmpdir}wps_fifo") > /dev/null 2>&1 &
 
@@ -8223,6 +8229,7 @@ function explore_for_targets_option() {
 
 			exp_power=$(echo "${exp_power}" | awk '{gsub(/ /,""); print}')
 			exp_essid=${exp_essid:1:${exp_idlength}}
+			# TODO check this for 5ghz
 			if [[ "${exp_channel}" -gt 14 ]] || [[ "${exp_channel}" -lt 1 ]]; then
 				exp_channel=0
 			else
@@ -8274,8 +8281,14 @@ function explore_for_wps_targets_option() {
 
 	tmpfiles_toclean=1
 	rm -rf "${tmpdir}wps"* > /dev/null 2>&1
+
+	wash_band_modifier=""
+	if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
+			wash_band_modifier="-5"
+	fi
+
 	recalculate_windows_sizes
-	xterm +j -bg black -fg white -geometry "${g1_topright_window}" -T "Exploring for WPS targets" -e "wash -i \"${interface}\" ${wash_ifaces_already_set[${interface}]} | tee \"${tmpdir}wps.txt\"" > /dev/null 2>&1
+	xterm +j -bg black -fg white -geometry "${g1_topright_window}" -T "Exploring for WPS targets" -e "wash -i \"${interface}\" ${wash_ifaces_already_set[${interface}]} ${wash_band_modifier} | tee \"${tmpdir}wps.txt\"" > /dev/null 2>&1
 
 	readarray -t WASH_PREVIEW < <(cat < "${tmpdir}wps.txt" 2> /dev/null)
 
