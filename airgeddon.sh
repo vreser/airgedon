@@ -8318,7 +8318,7 @@ function explore_for_wps_targets_option() {
 
 	wash_band_modifier=""
 	if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
-			wash_band_modifier="-5"
+		wash_band_modifier="-5"
 	fi
 
 	recalculate_windows_sizes
