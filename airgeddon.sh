@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180114
+#Date.........: 20180118
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -895,7 +895,14 @@ function wash_json_scan() {
 
 	wash_band_modifier=""
 	if [ "${wps_channel}" -gt 14 ]; then
-		wash_band_modifier="-5"
+		if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
+			wash_band_modifier="-5"
+		else
+			echo
+			language_strings "${language}" 515 "red"
+			language_strings "${language}" 115 "read"
+			return 1
+		fi
 	fi
 
 	timeout -s SIGTERM 240 wash -i "${interface}" --scan -n 100 -j "${wash_band_modifier}" 2> /dev/null > "${tmpdir}wps_fifo" &
@@ -916,6 +923,8 @@ function wash_json_scan() {
 			break
 		fi
 	done
+
+	return 0
 }
 
 #Calculate pin based on Zhao Chunsheng algorithm (ComputePIN), step 1
@@ -1059,26 +1068,26 @@ function check_and_set_common_algorithms() {
 					language_strings "${language}" 489 "blue"
 
 					serial=""
-					wash_json_scan "${wps_bssid}"
-
-					if [ -n "${serial}" ]; then
-						if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
-							calculate_arcadyan_algorithm
-							pin_checksum_rule "${arcadyan_pin}"
-							arcadyan_pin="${arcadyan_pin}${checksum_digit}"
-							calculated_pins=("${arcadyan_pin}" "${calculated_pins[@]}")
-							fill_wps_data_array "${wps_bssid}" "Arcadyan" "${arcadyan_pin}"
+					if wash_json_scan "${wps_bssid}"; then
+						if [ -n "${serial}" ]; then
+							if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
+								calculate_arcadyan_algorithm
+								pin_checksum_rule "${arcadyan_pin}"
+								arcadyan_pin="${arcadyan_pin}${checksum_digit}"
+								calculated_pins=("${arcadyan_pin}" "${calculated_pins[@]}")
+								fill_wps_data_array "${wps_bssid}" "Arcadyan" "${arcadyan_pin}"
+								echo
+								language_strings "${language}" 487 "yellow"
+							else
+								echo
+								language_strings "${language}" 491 "yellow"
+							fi
 							echo
-							language_strings "${language}" 487 "yellow"
 						else
 							echo
-							language_strings "${language}" 491 "yellow"
+							language_strings "${language}" 488 "yellow"
+							echo
 						fi
-						echo
-					else
-						echo
-						language_strings "${language}" 488 "yellow"
-						echo
 					fi
 				fi
 			else
@@ -2965,26 +2974,45 @@ function launch_dos_pursuit_mode_attack() {
 	dos_pursuit_mode_attack_pid=$!
 	dos_pursuit_mode_pids+=("${dos_pursuit_mode_attack_pid}")
 
-	sleep ${dos_delay}
 	if [ "${channel}" -gt 14 ]; then
-		airodump_band_modifier="abg"
-	else
 		if [ "${interface_pursuit_mode_scan}" = "${interface}" ]; then
-			if [ "${interface_supported_bands}" = "${only_24ghz}" ]; then
-				airodump_band_modifier="--band bg"
+			if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
+				airodump_band_modifier="abg"
 			else
-				airodump_band_modifier="--band abg"
+				echo
+				language_strings "${language}" 515 "red"
+				kill_dos_pursuit_mode_processes
+				language_strings "${language}" 115 "read"
+				return 1
 			fi
 		else
 			if [ "${secondary_interface_supported_bands}" = "${only_24ghz}" ]; then
-				airodump_band_modifier="--band bg"
+				echo
+				language_strings "${language}" 515 "red"
+				kill_dos_pursuit_mode_processes
+				language_strings "${language}" 115 "read"
+				return 1
 			else
-				airodump_band_modifier="--band abg"
+				airodump_band_modifier="abg"
 			fi
 		fi
-
+	else
+		if [ "${interface_pursuit_mode_scan}" = "${interface}" ]; then
+			if [ "${interface_supported_bands}" = "${only_24ghz}" ]; then
+				airodump_band_modifier="bg"
+			else
+				airodump_band_modifier="abg"
+			fi
+		else
+			if [ "${secondary_interface_supported_bands}" = "${only_24ghz}" ]; then
+				airodump_band_modifier="bg"
+			else
+				airodump_band_modifier="abg"
+			fi
+		fi
 	fi
 
+	sleep ${dos_delay}
 	airodump-ng -w "${tmpdir}dos_pm" "${interface_pursuit_mode_scan}" --band "${airodump_band_modifier}" > /dev/null 2>&1 &
 	dos_pursuit_mode_scan_pid=$!
 	dos_pursuit_mode_pids+=("${dos_pursuit_mode_scan_pid}")
@@ -4630,25 +4658,26 @@ function offline_pin_generation_menu() {
 									language_strings "${language}" 489 "blue"
 
 									serial=""
-									wash_json_scan "${wps_bssid}"
-									if [ -n "${serial}" ]; then
-										if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
-											set_wps_mac_parameters
-											calculate_arcadyan_algorithm
-											pin_checksum_rule "${arcadyan_pin}"
-											arcadyan_pin="${arcadyan_pin}${checksum_digit}"
-											fill_wps_data_array "${wps_bssid}" "Arcadyan" "${arcadyan_pin}"
-											offline_arcadyan_pin_can_be_shown=1
+									if wash_json_scan "${wps_bssid}"; then
+										if [ -n "${serial}" ]; then
+											if [[ "${serial}" =~ ^[0-9]{4}$ ]]; then
+												set_wps_mac_parameters
+												calculate_arcadyan_algorithm
+												pin_checksum_rule "${arcadyan_pin}"
+												arcadyan_pin="${arcadyan_pin}${checksum_digit}"
+												fill_wps_data_array "${wps_bssid}" "Arcadyan" "${arcadyan_pin}"
+												offline_arcadyan_pin_can_be_shown=1
+											else
+												echo
+												language_strings "${language}" 491 "yellow"
+												language_strings "${language}" 115 "read"
+											fi
+											echo
 										else
 											echo
-											language_strings "${language}" 491 "yellow"
+											language_strings "${language}" 488 "red"
 											language_strings "${language}" 115 "read"
 										fi
-										echo
-									else
-										echo
-										language_strings "${language}" 488 "red"
-										language_strings "${language}" 115 "read"
 									fi
 								else
 									echo
@@ -8229,7 +8258,7 @@ function explore_for_targets_option() {
 
 			exp_power=$(echo "${exp_power}" | awk '{gsub(/ /,""); print}')
 			exp_essid=${exp_essid:1:${exp_idlength}}
-			# TODO check this for 5ghz
+			#TODO check this for 5ghz
 			if [[ "${exp_channel}" -gt 14 ]] || [[ "${exp_channel}" -lt 1 ]]; then
 				exp_channel=0
 			else

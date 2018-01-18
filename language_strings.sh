@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180114
+#Date.........: 20180118
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -5619,6 +5619,16 @@ function language_strings() {
 	arr["GREEK",514]="${pending_of_translation} Η διεπαφή ${pink_color}${current_iface_on_messages}${blue_color} έχει επιλεχθεί. Κατάσταση: ${pink_color}${ifacemode}${blue_color}. Υποστηριζόμενες ζώνες: ${pink_color}${interface_supported_bands}${normal_color}"
 	arr["ITALIAN",514]="${pending_of_translation} Interfaccia ${pink_color}${current_iface_on_messages}${blue_color} selezionata. Modalità: ${pink_color}${ifacemode}${blue_color}. Bande supportate: ${pink_color}${interface_supported_bands}${normal_color}"
 	arr["POLISH",514]="${pending_of_translation} Interfejs ${pink_color}${current_iface_on_messages}${blue_color} został wybrany. Tryb: ${pink_color}${ifacemode}${blue_color}. Obsługiwane pasma: ${pink_color}${interface_supported_bands}${normal_color}"
+
+	arr["ENGLISH",515]="You have selected a 5ghz band channel but your wifi card doesn't support 5ghz. The operation can't be performed"
+	arr["SPANISH",515]="Tienes un canal de la banda de 5ghz seleccionado pero tu tarjeta wifi no soporta 5ghz. La operación no se puede llevar a cabo"
+	arr["FRENCH",515]="${pending_of_translation} Vous avez sélectionné un canal 5ghz mais votre carte wifi ne prend pas en charge 5ghz. L'opération ne peut pas être effectuée"
+	arr["CATALAN",515]="${pending_of_translation} Tens un canal de la banda de 5ghz seleccionat però la teva targeta wifi no suporta 5ghz. L'operació no es pot dur a terme"
+	arr["PORTUGUESE",515]="${pending_of_translation} Você tem um canal da banda 5ghz selecionado, mas seu cartão wifi não suporta 5ghz. A operação não pode ser realizada"
+	arr["RUSSIAN",515]="${pending_of_translation} У вас есть канал из группы 5ghz, но ваша wifi карта не поддерживает 5ghz. Операция не может быть выполнена"
+	arr["GREEK",515]="${pending_of_translation} Έχετε επιλέξει ένα κανάλι της ζώνης 5ghz, αλλά η κάρτα wifi δεν υποστηρίζει 5ghz. Η λειτουργία δεν μπορεί να πραγματοποιηθεί"
+	arr["ITALIAN",515]="${pending_of_translation} Hai un canale della banda 5ghz selezionato ma la tua scheda wifi non supporta 5ghz. L'operazione non può essere eseguita"
+	arr["POLISH",515]="${pending_of_translation} Masz wybrany kanał 5ghz, ale Twoja karta wifi nie obsługuje 5ghz. Operacja nie może być wykonana"
 
 	case "${3}" in
 		"yellow")
