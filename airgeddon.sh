@@ -125,7 +125,10 @@ standard_resolution="1024x768"
 curl_404_error="404: Not Found"
 language_strings_file="language_strings.sh"
 broadcast_mac="FF:FF:FF:FF:FF:FF"
+
+#5ghz vars
 only_24ghz="2.4Ghz"
+valid_channels_regexp="[1-9]|1[0-4]|3[68]|4[0468]|5[246]|6[024]|10[0248]|11[02]"
 
 #aircrack vars
 aircrack_tmp_simple_name_file="aircrack"
@@ -8258,11 +8261,11 @@ function explore_for_targets_option() {
 
 			exp_power=$(echo "${exp_power}" | awk '{gsub(/ /,""); print}')
 			exp_essid=${exp_essid:1:${exp_idlength}}
-			#TODO check this for 5ghz
-			if [[ "${exp_channel}" -gt 14 ]] || [[ "${exp_channel}" -lt 1 ]]; then
-				exp_channel=0
-			else
+
+			if [[ ${exp_channel} =~ ${valid_channels_regexp} ]]; then
 				exp_channel=$(echo "${exp_channel}" | awk '{gsub(/ /,""); print}')
+			else
+				exp_channel=0
 			fi
 
 			if [[ "${exp_essid}" = "" ]] || [[ "${exp_channel}" = "-1" ]]; then
@@ -8487,6 +8490,7 @@ function select_target() {
 			sp1=""
 		fi
 
+		#TODO beautify for 5ghz channels
 		if [[ ${exp_channel} -le 9 ]]; then
 			sp2=" "
 			if [[ ${exp_channel} -eq 0 ]]; then
