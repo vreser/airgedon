@@ -1166,7 +1166,9 @@ function physical_interface_finder() {
 
 	debug_print
 
-	echo "$(basename "$(readlink "/sys/class/net/${1}/phy80211")" 2> /dev/null)"
+	local phy_iface
+	phy_iface=$(basename "$(readlink "/sys/class/net/${1}/phy80211")" 2> /dev/null)
+	echo "${phy_iface}"
 }
 
 #Check the bands supported by a given physical card
@@ -1195,7 +1197,7 @@ function get_5hgz_band_info_from_phy_interface() {
 
 	debug_print
 
-	if $(iw phy "${1}" info 2> /dev/null | grep "5200 MHz" > /dev/null); then
+	if iw phy "${1}" info 2> /dev/null | grep "5200 MHz" > /dev/null; then
 		return 0
 	fi
 
