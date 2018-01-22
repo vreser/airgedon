@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180118
+#Date.........: 20180122
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -4338,7 +4338,7 @@ function language_strings() {
 	arr["RUSSIAN",386]="${counter_pins_found} соответствующих ПИНа были найдены в базе данных PIN"
 	arr["GREEK",386]="${counter_pins_found} αντίστοιχα PINs βρέθηκαν στην βάση δεδομένων"
 	arr["ITALIAN",386]="Trovati ${counter_pins_found} PINs coincidenti nella base dati dei PINs"
-	arr["POLISH",386]="Znaleziono ${counter_pins_found} pasujących kodów PIN w bazie danych  "
+	arr["POLISH",386]="Znaleziono ${counter_pins_found} pasujących kodów PIN w bazie danych"
 
 	arr["ENGLISH",387]="No matches found in the PINs database"
 	arr["SPANISH",387]="No se ha encontrado ninguna coincidencia en la base de datos de PINs"
