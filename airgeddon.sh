@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180118
+#Date.........: 20180122
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -8492,12 +8492,13 @@ function select_target() {
 			sp1=""
 		fi
 
-		#TODO beautify for 5ghz channels
 		if [[ ${exp_channel} -le 9 ]]; then
-			sp2=" "
+			sp2="  "
 			if [[ ${exp_channel} -eq 0 ]]; then
 				exp_channel="-"
 			fi
+		elif [[ ${exp_channel} -ge 10 ]] && [[ ${exp_channel} -lt 99 ]]; then
+			sp2=" "
 		else
 			sp2=""
 		fi
@@ -8535,7 +8536,7 @@ function select_target() {
 		channels[$i]=${exp_channel}
 		macs[$i]=${exp_mac}
 		encs[$i]=${exp_enc}
-		echo -e "${airodump_color} ${sp1}${i})${client}  ${sp5}${exp_mac}   ${sp2}${exp_channel}    ${sp4}${exp_power}%   ${exp_enc}${sp6}   ${exp_essid}"
+		echo -e "${airodump_color} ${sp1}${i})${client}  ${sp5}${exp_mac}  ${sp2}${exp_channel}    ${sp4}${exp_power}%   ${exp_enc}${sp6}   ${exp_essid}"
 	done < "${tmpdir}wnws.txt"
 
 	echo
