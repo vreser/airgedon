@@ -8385,10 +8385,12 @@ function explore_for_wps_targets_option() {
 			expwps_essid=$(echo "${expwps_line}" | awk '{$1=$2=$3=$4=$5=""; print $0}' | sed -e 's/^[ \t]*//')
 
 			if [[ ${expwps_channel} -le 9 ]]; then
-				wpssp2=" "
+				wpssp2="  "
 				if [[ ${expwps_channel} -eq 0 ]]; then
 					expwps_channel="-"
 				fi
+			elif [[ ${expwps_channel} -ge 10 ]] && [[ ${expwps_channel} -lt 99 ]]; then
+				wpssp2=" "
 			else
 				wpssp2=""
 			fi
@@ -8427,7 +8429,7 @@ function explore_for_wps_targets_option() {
 			wps_channels[$wash_counter]=${expwps_channel}
 			wps_macs[$wash_counter]=${expwps_bssid}
 			wps_lockeds[$wash_counter]=${expwps_locked}
-			echo -e "${wash_color} ${wpssp1}${wash_counter})   ${expwps_bssid}   ${wpssp2}${expwps_channel}    ${wpssp4}${expwps_power}%     ${expwps_locked}${wpssp3}   ${expwps_essid}"
+			echo -e "${wash_color} ${wpssp1}${wash_counter})   ${expwps_bssid}  ${wpssp2}${expwps_channel}    ${wpssp4}${expwps_power}%     ${expwps_locked}${wpssp3}   ${expwps_essid}"
 		fi
 	done < "${tmpdir}wps.txt"
 
