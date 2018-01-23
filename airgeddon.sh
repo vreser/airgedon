@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180122
+#Date.........: 20180124
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -128,7 +128,8 @@ broadcast_mac="FF:FF:FF:FF:FF:FF"
 
 #5ghz vars
 only_24ghz="2.4Ghz"
-valid_channels_regexp="[1-9]|1[0-4]|3[68]|4[0468]|5[246]|6[024]|10[0248]|11[02]"
+valid_channels_24_ghz_regexp="^([1-9]|1[0-4])$"
+valid_channels_24_and_5_ghz_regexp="^([1-9]|1[0-4]|3[68]|4[0468]|5[246]|6[024]|10[0248]|11[02])$"
 
 #aircrack vars
 aircrack_tmp_simple_name_file="aircrack"
@@ -2035,7 +2036,12 @@ function read_channel() {
 	debug_print
 
 	echo
-	language_strings "${language}" 25 "green"
+	if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
+		language_strings "${language}" 517 "green"
+	else
+		language_strings "${language}" 25 "green"
+	fi
+
 	if [ "${1}" = "wps" ]; then
 		read -r wps_channel
 	else
@@ -2048,7 +2054,12 @@ function ask_channel() {
 
 	debug_print
 
-	local regexp="^([1-9]|1[0-4])$"
+	local regexp
+	if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
+		regexp="${valid_channels_24_and_5_ghz_regexp}"
+	else
+		regexp="${valid_channels_24_ghz_regexp}"
+	fi
 
 	if [ "${1}" = "wps" ]; then
 		while [[ ! ${wps_channel} =~ ${regexp} ]]; do
@@ -8264,7 +8275,7 @@ function explore_for_targets_option() {
 			exp_power=$(echo "${exp_power}" | awk '{gsub(/ /,""); print}')
 			exp_essid=${exp_essid:1:${exp_idlength}}
 
-			if [[ ${exp_channel} =~ ${valid_channels_regexp} ]]; then
+			if [[ ${exp_channel} =~ ${valid_channels_24_and_5_ghz_regexp} ]]; then
 				exp_channel=$(echo "${exp_channel}" | awk '{gsub(/ /,""); print}')
 			else
 				exp_channel=0

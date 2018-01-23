@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180122
+#Date.........: 20180124
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -5639,6 +5639,16 @@ function language_strings() {
 	arr["GREEK",516]="${pending_of_translation} Είναι γνωστό ότι το λογισμικό που χρησιμοποιείται στη ζώνη 5ghz εξακολουθεί να παρουσιάζει κάποια προβλήματα κατά καιρούς. Όπως για παράδειγμα το airodump, όταν κατά τη σάρωση των δικτύων μπορεί να εμφανιστεί μια τιμή \"-1\" στο κανάλι, ανάλογα με το chipset της κάρτας σας και του προγράμματος οδήγησης. Είναι επίσης γνωστό ότι τα chipsets Ralink δίνουν μερικές φορές αποτυχίες στα υψηλά κανάλια \">= 60\""
 	arr["ITALIAN",516]="${pending_of_translation} È noto che il software utilizzato nella banda 5ghz presenta ancora alcuni problemi a volte. Come per esempio airodump, che durante la scansione delle reti può mostrare un valore \"-1\" nel canale a seconda del chipset della carta e del driver. È anche noto che i chipset Ralink a volte danno dei guasti nei canali alti \">=60\""
 	arr["POLISH",516]="${pending_of_translation} Wiadomo, że oprogramowanie używane w paśmie 5 GHz wciąż stwarza pewne problemy. Jak na przykład airodump, które podczas skanowania sieci mogą pokazywać wartość \"-1\" w kanale w zależności od chipsetu karty i sterownika. Wiadomo również, że chipsety Ralink czasami dają awarie w wysokich kanałach \">=60\""
+
+	arr["ENGLISH",517]="Set channel (2.4ghz 1-14) or (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["SPANISH",517]="Selecciona un canal (2.4ghz 1-14) o (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["FRENCH",517]="${pending_of_translation} Sélectionnez un canal (2.4ghz 1-14) ou (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["CATALAN",517]="${pending_of_translation} Seleccioni un canal (2.4ghz 1-14) o (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["PORTUGUESE",517]="${pending_of_translation} Escolha um canal (2.4ghz 1-14) ou (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["RUSSIAN",517]="${pending_of_translation} Установите канал (2.4ghz 1-14) или (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["GREEK",517]="${pending_of_translation} Θέστε κανάλι (2.4ghz 1-14) ή (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["ITALIAN",517]="${pending_of_translation} Seleziona un canale (2.4ghz 1-14) o (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["POLISH",517]="${pending_of_translation} Wybierz kanał (2.4ghz 1-14) lub (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
 
 	case "${3}" in
 		"yellow")
