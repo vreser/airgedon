@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180124
+#Date.........: 20180125
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -128,8 +128,8 @@ broadcast_mac="FF:FF:FF:FF:FF:FF"
 
 #5ghz vars
 only_24ghz="2.4Ghz"
-valid_channels_24_ghz_regexp="^([1-9]|1[0-4])$"
-valid_channels_24_and_5_ghz_regexp="^([1-9]|1[0-4]|3[68]|4[0468]|5[246]|6[024]|10[0248]|11[02])$"
+valid_channels_24_ghz_regexp="([1-9]|1[0-4])"
+valid_channels_24_and_5_ghz_regexp="([1-9]|1[0-4]|3[68]|4[0468]|5[246]|6[024]|10[0248]|11[02])"
 
 #aircrack vars
 aircrack_tmp_simple_name_file="aircrack"
@@ -899,13 +899,13 @@ function wash_json_scan() {
 
 	wash_band_modifier=""
 	if [ "${wps_channel}" -gt 14 ]; then
-		if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
-			wash_band_modifier="-5"
-		else
+		if [ "${interface_supported_bands}" = "${only_24ghz}" ]; then
 			echo
 			language_strings "${language}" 515 "red"
 			language_strings "${language}" 115 "read"
 			return 1
+		else
+			wash_band_modifier="-5"
 		fi
 	fi
 
@@ -2036,10 +2036,10 @@ function read_channel() {
 	debug_print
 
 	echo
-	if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
-		language_strings "${language}" 517 "green"
-	else
+	if [ "${interface_supported_bands}" = "${only_24ghz}" ]; then
 		language_strings "${language}" 25 "green"
+	else
+		language_strings "${language}" 517 "green"
 	fi
 
 	if [ "${1}" = "wps" ]; then
@@ -2055,10 +2055,10 @@ function ask_channel() {
 	debug_print
 
 	local regexp
-	if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
-		regexp="${valid_channels_24_and_5_ghz_regexp}"
+	if [ "${interface_supported_bands}" = "${only_24ghz}" ]; then
+		regexp="^${valid_channels_24_ghz_regexp}$"
 	else
-		regexp="${valid_channels_24_ghz_regexp}"
+		regexp="^${valid_channels_24_and_5_ghz_regexp}$"
 	fi
 
 	if [ "${1}" = "wps" ]; then
@@ -2992,14 +2992,14 @@ function launch_dos_pursuit_mode_attack() {
 
 	if [ "${channel}" -gt 14 ]; then
 		if [ "${interface_pursuit_mode_scan}" = "${interface}" ]; then
-			if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
-				airodump_band_modifier="abg"
-			else
+			if [ "${interface_supported_bands}" = "${only_24ghz}" ]; then
 				echo
 				language_strings "${language}" 515 "red"
 				kill_dos_pursuit_mode_processes
 				language_strings "${language}" 115 "read"
 				return 1
+			else
+				airodump_band_modifier="abg"
 			fi
 		else
 			if [ "${secondary_interface_supported_bands}" = "${only_24ghz}" ]; then
@@ -8327,6 +8327,7 @@ function explore_for_wps_targets_option() {
 	tmpfiles_toclean=1
 	rm -rf "${tmpdir}wps"* > /dev/null 2>&1
 
+	#TODO add dual band scan in two steps
 	wash_band_modifier=""
 	if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
 		wash_band_modifier="-5"
