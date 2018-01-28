@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180125
+#Date.........: 20180128
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -126,7 +126,7 @@ curl_404_error="404: Not Found"
 language_strings_file="language_strings.sh"
 broadcast_mac="FF:FF:FF:FF:FF:FF"
 
-#5ghz vars
+#5Ghz vars
 only_24ghz="2.4Ghz"
 valid_channels_24_ghz_regexp="([1-9]|1[0-4])"
 valid_channels_24_and_5_ghz_regexp="([1-9]|1[0-4]|3[68]|4[0468]|5[246]|6[024]|10[0248]|11[02])"
@@ -1193,7 +1193,7 @@ function check_interface_supported_bands() {
 	esac
 }
 
-#Check 5ghz band info from a given physical interface
+#Check 5Ghz band info from a given physical interface
 function get_5hgz_band_info_from_phy_interface() {
 
 	debug_print
@@ -8320,18 +8320,21 @@ function explore_for_wps_targets_option() {
 	else
 		language_strings "${language}" 355 "blue"
 	fi
+
+	wash_band_modifier=""
+	if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
+		ask_yesno 518 "no"
+		if [ "${yesno}" = "y" ]; then
+			wash_band_modifier="-5"
+		fi
+	fi
+
 	echo
 	language_strings "${language}" 67 "yellow"
 	language_strings "${language}" 115 "read"
 
 	tmpfiles_toclean=1
 	rm -rf "${tmpdir}wps"* > /dev/null 2>&1
-
-	#TODO add dual band scan in two steps
-	wash_band_modifier=""
-	if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
-		wash_band_modifier="-5"
-	fi
 
 	recalculate_windows_sizes
 	xterm +j -bg black -fg white -geometry "${g1_topright_window}" -T "Exploring for WPS targets" -e "wash -i \"${interface}\" ${wash_ifaces_already_set[${interface}]} ${wash_band_modifier} | tee \"${tmpdir}wps.txt\"" > /dev/null 2>&1
