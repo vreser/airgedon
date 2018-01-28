@@ -1,6 +1,7 @@
 ### 8.0
  - Added 5Ghz card detection and 5Ghz support for attacks
  - Tested compatibility with Parrot 3.10
+ - Fixed error setting ESSID on some wash versions while scanning
 
 ### 7.23
  - Fixed error in Docker container on some host O.S.
