@@ -1,5 +1,5 @@
 ### 8.0
- - Added 5ghz card detection and 5ghz support for attacks
+ - Added 5Ghz card detection and 5Ghz support for attacks
  - Tested compatibility with Parrot 3.10
 
 ### 7.23

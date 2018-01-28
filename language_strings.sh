@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180124
+#Date.........: 20180128
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -5620,35 +5620,35 @@ function language_strings() {
 	arr["ITALIAN",514]="${pending_of_translation} Interfaccia ${pink_color}${current_iface_on_messages}${blue_color} selezionata. Modalità: ${pink_color}${ifacemode}${blue_color}. Bande supportate: ${pink_color}${interface_supported_bands}${normal_color}"
 	arr["POLISH",514]="${pending_of_translation} Interfejs ${pink_color}${current_iface_on_messages}${blue_color} został wybrany. Tryb: ${pink_color}${ifacemode}${blue_color}. Obsługiwane pasma: ${pink_color}${interface_supported_bands}${normal_color}"
 
-	arr["ENGLISH",515]="You have selected a 5ghz band channel but your wifi card doesn't support 5ghz. The operation can't be performed"
-	arr["SPANISH",515]="Tienes un canal de la banda de 5ghz seleccionado pero tu tarjeta wifi no soporta 5ghz. La operación no se puede llevar a cabo"
-	arr["FRENCH",515]="${pending_of_translation} Vous avez sélectionné un canal 5ghz mais votre carte wifi ne prend pas en charge 5ghz. L'opération ne peut pas être effectuée"
-	arr["CATALAN",515]="${pending_of_translation} Tens un canal de la banda de 5ghz seleccionat però la teva targeta wifi no suporta 5ghz. L'operació no es pot dur a terme"
-	arr["PORTUGUESE",515]="${pending_of_translation} Você tem um canal da banda 5ghz selecionado, mas seu cartão wifi não suporta 5ghz. A operação não pode ser realizada"
-	arr["RUSSIAN",515]="${pending_of_translation} У вас есть канал из группы 5ghz, но ваша wifi карта не поддерживает 5ghz. Операция не может быть выполнена"
-	arr["GREEK",515]="${pending_of_translation} Έχετε επιλέξει ένα κανάλι της ζώνης 5ghz, αλλά η κάρτα wifi δεν υποστηρίζει 5ghz. Η λειτουργία δεν μπορεί να πραγματοποιηθεί"
-	arr["ITALIAN",515]="${pending_of_translation} Hai un canale della banda 5ghz selezionato ma la tua scheda wifi non supporta 5ghz. L'operazione non può essere eseguita"
-	arr["POLISH",515]="${pending_of_translation} Masz wybrany kanał 5ghz, ale Twoja karta wifi nie obsługuje 5ghz. Operacja nie może być wykonana"
+	arr["ENGLISH",515]="You have selected a 5Ghz band channel but your wifi card doesn't support 5Ghz. The operation can't be performed"
+	arr["SPANISH",515]="Tienes un canal de la banda de 5Ghz seleccionado pero tu tarjeta wifi no soporta 5Ghz. La operación no se puede llevar a cabo"
+	arr["FRENCH",515]="${pending_of_translation} Vous avez sélectionné un canal 5Ghz mais votre carte wifi ne prend pas en charge 5Ghz. L'opération ne peut pas être effectuée"
+	arr["CATALAN",515]="${pending_of_translation} Tens un canal de la banda de 5Ghz seleccionat però la teva targeta wifi no suporta 5Ghz. L'operació no es pot dur a terme"
+	arr["PORTUGUESE",515]="${pending_of_translation} Você tem um canal da banda 5Ghz selecionado, mas seu cartão wifi não suporta 5Ghz. A operação não pode ser realizada"
+	arr["RUSSIAN",515]="${pending_of_translation} У вас есть канал из группы 5Ghz, но ваша wifi карта не поддерживает 5Ghz. Операция не может быть выполнена"
+	arr["GREEK",515]="${pending_of_translation} Έχετε επιλέξει ένα κανάλι της ζώνης 5Ghz, αλλά η κάρτα wifi δεν υποστηρίζει 5Ghz. Η λειτουργία δεν μπορεί να πραγματοποιηθεί"
+	arr["ITALIAN",515]="${pending_of_translation} Hai un canale della banda 5Ghz selezionato ma la tua scheda wifi non supporta 5Ghz. L'operazione non può essere eseguita"
+	arr["POLISH",515]="${pending_of_translation} Masz wybrany kanał 5Ghz, ale Twoja karta wifi nie obsługuje 5Ghz. Operacja nie może być wykonana"
 
-	arr["ENGLISH",516]="It is known that the software used in the 5ghz band still presents some problems sometimes. For example airodump, that when scanning networks can show a value \"-1\" on channel depending of the card chipset and the driver. It is also known that Ralink chipsets sometimes are getting errors on high channels \">=60\""
-	arr["SPANISH",516]="Es conocido que el software utilizado en la banda de 5ghz aún presenta algunos problemas a veces. Como por ejemplo airodump, que al escanear redes puede mostrar un valor \"-1\" en el canal dependiendo del chipset de tu tarjeta y del driver. También es conocido que los chipsets Ralink a veces dan fallos en los canales altos \">=60\""
-	arr["FRENCH",516]="${pending_of_translation} Il est connu que le logiciel utilisé dans la bande 5ghz présente toujours quelques problèmes. Comme par exemple airodump, que lors de la numérisation des réseaux peut montrer une valeur \"-1\" dans le canal en fonction du chipset de votre carte et le pilote. Il est également connu que les chipsets Ralink donnent parfois des échecs dans les canaux élevés \">=60\""
-	arr["CATALAN",516]="${pending_of_translation} És conegut que el programari utilitzat en la banda de 5GHz encara presenta alguns problemes de vegades. Com per exemple airodump, que al escanejar xarxes pot mostrar un valor \"-1\" al canal depenent del chipset de la targeta i del driver. També és conegut que els chipsets Ralink de vegades donen fallades en els canals alts \">=60\""
-	arr["PORTUGUESE",516]="${pending_of_translation} Sabe-se que o software usado na banda 5ghz ainda apresenta alguns problemas às vezes. Como por exemplo, airodump, que ao escanear redes pode mostrar um valor \"-1\" no canal dependendo do chipset do seu cartão e do driver. Também se sabe que os chipsets Ralink às vezes dão falhas em canais altos \">=60\""
-	arr["RUSSIAN",516]="${pending_of_translation} Известно, что программное обеспечение, используемое в группе 5ghz, все еще иногда вызывает некоторые проблемы. Например, airodump, что при сканировании сетей может отображаться значение \"-1\" в канале в зависимости от набора микросхем вашей карты и драйвера. Известно также, что чипсеты Ralink иногда дают сбои в высоких каналах \">=60\""
-	arr["GREEK",516]="${pending_of_translation} Είναι γνωστό ότι το λογισμικό που χρησιμοποιείται στη ζώνη 5ghz εξακολουθεί να παρουσιάζει κάποια προβλήματα κατά καιρούς. Όπως για παράδειγμα το airodump, όταν κατά τη σάρωση των δικτύων μπορεί να εμφανιστεί μια τιμή \"-1\" στο κανάλι, ανάλογα με το chipset της κάρτας σας και του προγράμματος οδήγησης. Είναι επίσης γνωστό ότι τα chipsets Ralink δίνουν μερικές φορές αποτυχίες στα υψηλά κανάλια \">= 60\""
-	arr["ITALIAN",516]="${pending_of_translation} È noto che il software utilizzato nella banda 5ghz presenta ancora alcuni problemi a volte. Come per esempio airodump, che durante la scansione delle reti può mostrare un valore \"-1\" nel canale a seconda del chipset della carta e del driver. È anche noto che i chipset Ralink a volte danno dei guasti nei canali alti \">=60\""
-	arr["POLISH",516]="${pending_of_translation} Wiadomo, że oprogramowanie używane w paśmie 5 GHz wciąż stwarza pewne problemy. Jak na przykład airodump, które podczas skanowania sieci mogą pokazywać wartość \"-1\" w kanale w zależności od chipsetu karty i sterownika. Wiadomo również, że chipsety Ralink czasami dają awarie w wysokich kanałach \">=60\""
+	arr["ENGLISH",516]="It is known that the software used in the 5Ghz band still presents some problems sometimes. For example airodump, that when scanning networks can show a value \"-1\" on channel depending of the card chipset and the driver. It is also known that Ralink chipsets sometimes are getting errors on high channels \">=60\""
+	arr["SPANISH",516]="Es conocido que el software utilizado en la banda de 5Ghz aún presenta algunos problemas a veces. Como por ejemplo airodump, que al escanear redes puede mostrar un valor \"-1\" en el canal dependiendo del chipset de tu tarjeta y del driver. También es conocido que los chipsets Ralink a veces dan fallos en los canales altos \">=60\""
+	arr["FRENCH",516]="${pending_of_translation} Il est connu que le logiciel utilisé dans la bande 5Ghz présente toujours quelques problèmes. Comme par exemple airodump, que lors de la numérisation des réseaux peut montrer une valeur \"-1\" dans le canal en fonction du chipset de votre carte et le pilote. Il est également connu que les chipsets Ralink donnent parfois des échecs dans les canaux élevés \">=60\""
+	arr["CATALAN",516]="${pending_of_translation} És conegut que el programari utilitzat en la banda de 5Ghz encara presenta alguns problemes de vegades. Com per exemple airodump, que al escanejar xarxes pot mostrar un valor \"-1\" al canal depenent del chipset de la targeta i del driver. També és conegut que els chipsets Ralink de vegades donen fallades en els canals alts \">=60\""
+	arr["PORTUGUESE",516]="${pending_of_translation} Sabe-se que o software usado na banda 5Ghz ainda apresenta alguns problemas às vezes. Como por exemplo, airodump, que ao escanear redes pode mostrar um valor \"-1\" no canal dependendo do chipset do seu cartão e do driver. Também se sabe que os chipsets Ralink às vezes dão falhas em canais altos \">=60\""
+	arr["RUSSIAN",516]="${pending_of_translation} Известно, что программное обеспечение, используемое в группе 5Ghz, все еще иногда вызывает некоторые проблемы. Например, airodump, что при сканировании сетей может отображаться значение \"-1\" в канале в зависимости от набора микросхем вашей карты и драйвера. Известно также, что чипсеты Ralink иногда дают сбои в высоких каналах \">=60\""
+	arr["GREEK",516]="${pending_of_translation} Είναι γνωστό ότι το λογισμικό που χρησιμοποιείται στη ζώνη 5Ghz εξακολουθεί να παρουσιάζει κάποια προβλήματα κατά καιρούς. Όπως για παράδειγμα το airodump, όταν κατά τη σάρωση των δικτύων μπορεί να εμφανιστεί μια τιμή \"-1\" στο κανάλι, ανάλογα με το chipset της κάρτας σας και του προγράμματος οδήγησης. Είναι επίσης γνωστό ότι τα chipsets Ralink δίνουν μερικές φορές αποτυχίες στα υψηλά κανάλια \">= 60\""
+	arr["ITALIAN",516]="${pending_of_translation} È noto che il software utilizzato nella banda 5Ghz presenta ancora alcuni problemi a volte. Come per esempio airodump, che durante la scansione delle reti può mostrare un valore \"-1\" nel canale a seconda del chipset della carta e del driver. È anche noto che i chipset Ralink a volte danno dei guasti nei canali alti \">=60\""
+	arr["POLISH",516]="${pending_of_translation} Wiadomo, że oprogramowanie używane w paśmie 5Ghz wciąż stwarza pewne problemy. Jak na przykład airodump, które podczas skanowania sieci mogą pokazywać wartość \"-1\" w kanale w zależności od chipsetu karty i sterownika. Wiadomo również, że chipsety Ralink czasami dają awarie w wysokich kanałach \">=60\""
 
-	arr["ENGLISH",517]="Set channel (2.4ghz 1-14) or (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
-	arr["SPANISH",517]="Selecciona un canal (2.4ghz 1-14) o (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
-	arr["FRENCH",517]="${pending_of_translation} Sélectionnez un canal (2.4ghz 1-14) ou (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
-	arr["CATALAN",517]="${pending_of_translation} Seleccioni un canal (2.4ghz 1-14) o (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
-	arr["PORTUGUESE",517]="${pending_of_translation} Escolha um canal (2.4ghz 1-14) ou (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
-	arr["RUSSIAN",517]="${pending_of_translation} Установите канал (2.4ghz 1-14) или (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
-	arr["GREEK",517]="${pending_of_translation} Θέστε κανάλι (2.4ghz 1-14) ή (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
-	arr["ITALIAN",517]="${pending_of_translation} Seleziona un canale (2.4ghz 1-14) o (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
-	arr["POLISH",517]="${pending_of_translation} Wybierz kanał (2.4ghz 1-14) lub (5ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["ENGLISH",517]="Set channel (2.4Ghz 1-14) or (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["SPANISH",517]="Selecciona un canal (2.4Ghz 1-14) o (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["FRENCH",517]="${pending_of_translation} Sélectionnez un canal (2.4Ghz 1-14) ou (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["CATALAN",517]="${pending_of_translation} Seleccioni un canal (2.4Ghz 1-14) o (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["PORTUGUESE",517]="${pending_of_translation} Escolha um canal (2.4Ghz 1-14) ou (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["RUSSIAN",517]="${pending_of_translation} Установите канал (2.4Ghz 1-14) или (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["GREEK",517]="${pending_of_translation} Θέστε κανάλι (2.4Ghz 1-14) ή (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["ITALIAN",517]="${pending_of_translation} Seleziona un canale (2.4Ghz 1-14) o (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
+	arr["POLISH",517]="${pending_of_translation} Wybierz kanał (2.4Ghz 1-14) lub (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
 
 	case "${3}" in
 		"yellow")
