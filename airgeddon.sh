@@ -2062,18 +2062,38 @@ function ask_channel() {
 	fi
 
 	if [ "${1}" = "wps" ]; then
+		if [[ -n "${wps_channel}" ]] && [[ "${wps_channel}" -gt 14 ]]; then
+			if [ "${interface_supported_bands}" = "${only_24ghz}" ]; then
+				echo
+				language_strings "${language}" 515 "red"
+				language_strings "${language}" 115 "read"
+				return 1
+			fi
+		fi
+
 		while [[ ! ${wps_channel} =~ ${regexp} ]]; do
 			read_channel "wps"
 		done
 		echo
 		language_strings "${language}" 365 "blue"
 	else
+		if [[ -n "${channel}" ]] && [[ "${channel}" -gt 14 ]]; then
+			if [ "${interface_supported_bands}" = "${only_24ghz}" ]; then
+				echo
+				language_strings "${language}" 515 "red"
+				language_strings "${language}" 115 "read"
+				return 1
+			fi
+		fi
+
 		while [[ ! ${channel} =~ ${regexp} ]]; do
 			read_channel
 		done
 		echo
 		language_strings "${language}" 26 "blue"
 	fi
+
+	return 0
 }
 
 #Read the user input on bssid questions
@@ -3264,7 +3284,10 @@ function mdk3_deauth_option() {
 	if ! ask_bssid; then
 		return
 	fi
-	ask_channel
+
+	if ! ask_channel; then
+		return
+	fi
 
 	ask_yesno 505 "yes"
 	if [ "${yesno}" = "y" ]; then
@@ -3296,7 +3319,10 @@ function aireplay_deauth_option() {
 	if ! ask_bssid; then
 		return
 	fi
-	ask_channel
+
+	if ! ask_channel; then
+		return
+	fi
 
 	ask_yesno 505 "yes"
 	if [ "${yesno}" = "y" ]; then
@@ -3328,7 +3354,10 @@ function wds_confusion_option() {
 	if ! ask_essid "verify"; then
 		return
 	fi
-	ask_channel
+
+	if ! ask_channel; then
+		return
+	fi
 
 	ask_yesno 505 "yes"
 	if [ "${yesno}" = "y" ]; then
@@ -3363,7 +3392,10 @@ function beacon_flood_option() {
 	if ! ask_essid "verify"; then
 		return
 	fi
-	ask_channel
+
+	if ! ask_channel; then
+		return
+	fi
 
 	ask_yesno 505 "yes"
 	if [ "${yesno}" = "y" ]; then
@@ -3493,7 +3525,10 @@ function wps_attacks_parameters() {
 	if ! ask_bssid "wps"; then
 		return 1
 	fi
-	ask_channel "wps"
+
+	if ! ask_channel "wps"; then
+		return 1
+	fi
 
 	if [ "${1}" != "no_monitor_check" ]; then
 		case ${wps_attack} in
@@ -6177,6 +6212,11 @@ function set_wps_attack_script() {
 	rm -rf "${tmpdir}${wps_attack_script_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${wps_out_file}" > /dev/null 2>&1
 
+	bully_reaver_band_modifier=""
+	if [[ "${wps_channel}" -gt 14 ]] && [[ "${interface_supported_bands}" != "${only_24ghz}" ]]; then
+		bully_reaver_band_modifier="-5"
+	fi
+
 	exec 7>"${tmpdir}${wps_attack_script_file}"
 
 	wps_attack_tool="${1}"
@@ -6185,26 +6225,26 @@ function set_wps_attack_script() {
 		unbuffer=""
 		case ${wps_attack_mode} in
 			"pindb"|"custompin")
-				attack_cmd1="reaver -i \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} -L -f -N -g 1 -d 2 -vvv -p "
+				attack_cmd1="reaver -i \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} \${script_bully_reaver_band_modifier} -L -f -N -g 1 -d 2 -vvv -p "
 			;;
 			"pixiedust")
-				attack_cmd1="reaver -i \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} -K 1 -N -vvv"
+				attack_cmd1="reaver -i \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} \${script_bully_reaver_band_modifier} -K 1 -N -vvv"
 			;;
 			"bruteforce")
-				attack_cmd1="reaver -i \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} -L -f -N -d 2 -vvv"
+				attack_cmd1="reaver -i \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} \${script_bully_reaver_band_modifier} -L -f -N -d 2 -vvv"
 			;;
 		esac
 	else
 		unbuffer="unbuffer "
 		case ${wps_attack_mode} in
 			"pindb"|"custompin")
-				attack_cmd1="bully \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} -L -F -B -v ${bully_verbosity} -p "
+				attack_cmd1="bully \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} \${script_bully_reaver_band_modifier} -L -F -B -v ${bully_verbosity} -p "
 			;;
 			"pixiedust")
-				attack_cmd1="bully \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} -d -v ${bully_verbosity}"
+				attack_cmd1="bully \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} \${script_bully_reaver_band_modifier} -d -v ${bully_verbosity}"
 			;;
 			"bruteforce")
-				attack_cmd1="bully \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} -S -L -F -B -v ${bully_verbosity}"
+				attack_cmd1="bully \${script_interface} -b \${script_wps_bssid} -c \${script_wps_channel} \${script_bully_reaver_band_modifier} -S -L -F -B -v ${bully_verbosity}"
 			;;
 		esac
 	fi
@@ -6219,6 +6259,7 @@ function set_wps_attack_script() {
 		script_interface="${interface}"
 		script_wps_bssid="${wps_bssid}"
 		script_wps_channel="${wps_channel}"
+		script_bully_reaver_band_modifier="${bully_reaver_band_modifier}"
 		colorize="${colorize}"
 	EOF
 
@@ -8772,7 +8813,11 @@ function et_prerequisites() {
 			return_to_et_main_menu=1
 			return
 		fi
-		ask_channel
+
+		if ! ask_channel; then
+			return_to_et_main_menu=1
+			return
+		fi
 		ask_essid "noverify"
 	fi
 
