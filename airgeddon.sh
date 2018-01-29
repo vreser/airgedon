@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180128
+#Date.........: 20180129
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -130,6 +130,7 @@ broadcast_mac="FF:FF:FF:FF:FF:FF"
 only_24ghz="2.4Ghz"
 valid_channels_24_ghz_regexp="([1-9]|1[0-4])"
 valid_channels_24_and_5_ghz_regexp="([1-9]|1[0-4]|3[68]|4[0468]|5[246]|6[024]|10[0248]|11[02])"
+minimum_wash_dualscan_version="1.6.5"
 
 #aircrack vars
 aircrack_tmp_simple_name_file="aircrack"
@@ -4423,6 +4424,7 @@ function wps_attacks_menu() {
 			if contains_element "${wps_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
+				get_reaver_version
 				explore_for_wps_targets_option
 			fi
 		;;
@@ -4626,6 +4628,7 @@ function offline_pin_generation_menu() {
 			if contains_element "${wps_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
+				get_reaver_version
 				explore_for_wps_targets_option
 			fi
 		;;
@@ -8364,9 +8367,13 @@ function explore_for_wps_targets_option() {
 
 	wash_band_modifier=""
 	if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
-		ask_yesno 518 "no"
-		if [ "${yesno}" = "y" ]; then
-			wash_band_modifier="-5"
+		if validate_wash_dualscan_version; then
+			wash_band_modifier="-2 -5"
+		else
+			ask_yesno 518 "no"
+			if [ "${yesno}" = "y" ]; then
+				wash_band_modifier="-5"
+			fi
 		fi
 	fi
 
@@ -9481,6 +9488,17 @@ function validate_reaver_pixiewps_version() {
 	debug_print
 
 	if compare_floats_greater_or_equal "${reaver_version}" "${minimum_reaver_pixiewps_version}"; then
+		return 0
+	fi
+	return 1
+}
+
+#Validate if wash version is able to perform 5Ghz dual scan
+function validate_wash_dualscan_version() {
+
+	debug_print
+
+	if compare_floats_greater_or_equal "${reaver_version}" "${minimum_wash_dualscan_version}"; then
 		return 0
 	fi
 	return 1
