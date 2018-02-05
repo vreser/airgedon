@@ -1181,13 +1181,13 @@ function check_interface_supported_bands() {
 	case "${2}" in
 		"main_wifi_interface")
 			interface_supported_bands="${only_24ghz}"
-			if get_5hgz_band_info_from_phy_interface "${1}"; then
+			if get_5ghz_band_info_from_phy_interface "${1}"; then
 				interface_supported_bands+=", 5Ghz"
 			fi
 		;;
 		"secondary_wifi_interface")
 			secondary_interface_supported_bands="${only_24ghz}"
-			if get_5hgz_band_info_from_phy_interface "${1}"; then
+			if get_5ghz_band_info_from_phy_interface "${1}"; then
 				secondary_interface_supported_bands+=", 5Ghz"
 			fi
 		;;
@@ -1195,7 +1195,7 @@ function check_interface_supported_bands() {
 }
 
 #Check 5Ghz band info from a given physical interface
-function get_5hgz_band_info_from_phy_interface() {
+function get_5ghz_band_info_from_phy_interface() {
 
 	debug_print
 
