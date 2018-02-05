@@ -8830,6 +8830,14 @@ function et_prerequisites() {
 		if ! ask_channel; then
 			return_to_et_main_menu=1
 			return
+		else
+			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ "${channel}" -gt 14 ]] && [[ "${secondary_interface_supported_bands}" = "${only_24ghz}" ]]; then
+				echo
+				language_strings "${language}" 519 "red"
+				language_strings "${language}" 115 "read"
+				return_to_et_main_menu=1
+				return
+			fi
 		fi
 		ask_essid "noverify"
 	fi

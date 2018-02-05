@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180129
+#Date.........: 20180205
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -5659,6 +5659,16 @@ function language_strings() {
 	arr["GREEK",518]="${pending_of_translation} ${blue_color}Η κάρτα wifi υποστηρίζει τη ζώνη 5Ghz, αλλά η έκδοση του \"wash\" που περιλαμβάνεται στο πακέτο του reaver (v${reaver_version}) δεν είναι σε θέση να ανιχνεύσει ταυτόχρονα και τις δύο ζώνες. Για να χρησιμοποιήσετε τη διπλή σάρωση, πρέπει να έχετε τουλάχιστον την έκδοση v${minimum_wash_dualscan_version} έτσι πρέπει να επιλέξετε. ${green_color}Θέλετε να σαρώσετε στη ζώνη 5Ghz; ${pink_color}(Εάν απαντήσετε όχι (\"n\"), η ζώνη 2.4Ghz θα σαρωθεί) ${normal_color}${visual_choice}"
 	arr["ITALIAN",518]="${pending_of_translation} ${blue_color}La tua scheda wifi supporta la banda 5Ghz ma la tua versione di \"wash\" inclusa nel pacchetto reaver (v${reaver_version}) non è in grado di scansionare entrambe le bande contemporaneamente. Per usare la doppia scansione devi avere almeno la versione v${minimum_wash_dualscan_version} quindi devi scegliere. ${green_color}Vuoi eseguire la scansione nella banda 5Ghz? ${pink_color}(Se rispondi no (\"n\"), la banda 2.4Ghz verrà scansionata) ${normal_color}${visual_choice}"
 	arr["POLISH",518]="${pending_of_translation} ${blue_color}Twoja karta wifi obsługuje pasmo 5Ghz, ale twoja wersja \"wash\" zawarta w pakiecie reaver (v${reaver_version}) nie jest w stanie skanować obu pasm w tym samym czasie. Aby użyć podwójnego skanowania, musisz mieć przynajmniej wersję v${minimum_wash_dualscan_version}, więc musisz wybrać. ${green_color}Czy chcesz skanować w paśmie 5Ghz? ${pink_color}(Jeśli odpowiesz nie (\"n\"), zostanie zeskanowane pasmo 2.4Ghz) ${normal_color}${visual_choice}"
+
+	arr["ENGLISH",519]="You have selected a 5Ghz target network and the \"DoS pursuit mode\", but the second interface needed to perform the attack doesn't support the 5Ghz band so the attack can't be performed"
+	arr["SPANISH",519]="Has seleccionado una red objetivo de 5Ghz y el \"modo persecución DoS\", pero el segundo interfaz necesario para llevar a cabo el ataque no soporta la banda de los 5Ghz por lo que este no se puede realizar"
+	arr["FRENCH",519]="${pending_of_translation} Vous avez sélectionné un réseau cible de 5Ghz et le \"le mode poursuite DoS\", mais la deuxième interface nécessaire pour effectuer l'attaque ne supporte pas la bande 5Ghz donc elle ne peut pas être effectuée"
+	arr["CATALAN",519]="${pending_of_translation} Has seleccionat una xarxa objectiu de 5Ghz i el \"mode persecució DoS\", però el segon interfície necessari per dur a terme l'atac no suporta la banda dels 5Ghz pel que aquest no es pot realitzar"
+	arr["PORTUGUESE",519]="${pending_of_translation} Você selecionou uma rede de destino de 5Ghz e DoS com o \"modo de perseguição\", mas a segunda interface necessária para realizar o ataque não suporta a banda de 5Ghz para que não possa ser realizada"
+	arr["RUSSIAN",519]="${pending_of_translation} Вы выбрали целевую сеть 5Ghz и \"режим преследования DoS\", но второй интерфейс, необходимый для выполнения атаки, не поддерживает полосу 5Ghz, поэтому атака не может быть выполнена"
+	arr["GREEK",519]="${pending_of_translation} Έχετε επιλέξει ένα δίκτυο στόχου 5Ghz και το \"DoS pursuit mode\", αλλά η δεύτερη διεπαφή που απαιτείται για να εκτελέσετε την επίθεση δεν υποστηρίζει τη ζώνη 5Ghz, έτσι ώστε η επίθεση να μην μπορεί να εκτελεστεί"
+	arr["ITALIAN",519]="${pending_of_translation} Hai selezionato una rete target di 5Ghz e la \"DoS pursuit mode\", ma la seconda interfaccia necessaria per eseguire l'attacco non supporta la banda 5Ghz in modo che non possa essere eseguita"
+	arr["POLISH",519]="${pending_of_translation} Wybrałeś docelową sieć 5Ghz i \"tryb DoS pursuit\", ale drugi interfejs potrzebny do przeprowadzenia ataku nie obsługuje pasma 5Ghz, więc nie można go wykonać"
 
 	case "${3}" in
 		"yellow")
