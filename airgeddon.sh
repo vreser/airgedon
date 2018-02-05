@@ -1926,6 +1926,8 @@ function select_secondary_et_interface() {
 			if [[ "${secondary_iface}" = "${option_counter2}" ]]; then
 				if [ "${1}" = "dos_pursuit_mode" ]; then
 					secondary_wifi_interface=${item2}
+					secondary_phy_interface=$(physical_interface_finder "${secondary_wifi_interface}")
+					check_interface_supported_bands "${secondary_phy_interface}" "secondary_wifi_interface"
 				elif [ "${1}" = "internet" ]; then
 					internet_interface=${item2}
 				fi
