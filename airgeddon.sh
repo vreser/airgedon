@@ -1914,7 +1914,11 @@ function select_secondary_et_interface() {
 
 	read -r secondary_iface
 	if [[ ! ${secondary_iface} =~ ^[[:digit:]]+$ ]] || (( secondary_iface < 1 || secondary_iface > option_counter_back )); then
-		invalid_secondary_iface_selected "dos_pursuit_mode"
+		if [ "${1}" = "dos_pursuit_mode" ]; then
+			invalid_secondary_iface_selected "dos_pursuit_mode"
+		else
+			invalid_secondary_iface_selected "internet"
+		fi
 	elif [ "${secondary_iface}" -eq ${option_counter_back} ]; then
 		return_to_et_main_menu=1
 		return_to_et_main_menu_from_beef=1
