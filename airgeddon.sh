@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180129
+#Date.........: 20180205
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -5935,6 +5935,12 @@ function set_hostapd_config() {
 	echo -e "channel=${channel}"
 	echo -e "bssid=${et_bssid}"
 	} >> "${tmpdir}${hostapd_file}"
+
+	if [[ "${channel}" -gt 14 ]] && [[ "${interface_supported_bands}" != "${only_24ghz}" ]]; then
+		{
+		echo -e "hw_mode=a"
+		} >> "${tmpdir}${hostapd_file}"
+	fi
 }
 
 #Launch hostapd fake Access Point
