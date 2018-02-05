@@ -6,7 +6,7 @@ When contributing to this repository, please first discuss the change you wish t
 email, or any other method with the owners of this repository before making a change.
 If an issue is opened and more info is needed, `airgeddon` staff will request it. If there is no answer in 7 days, the issue will be closed.
 
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+Please note we have a [Code of Conduct], please follow it in all your interactions with the project.
 
 ---
 
@@ -79,6 +79,7 @@ Bitcoin QR code:
 <!-- MDs -->
 [Readme]: README.md
 [Changelog]: CHANGELOG.md
+[Code of Conduct]: CODE_OF_CONDUCT.md
 
 <!-- Github -->
 [Shellcheck]: https://github.com/koalaman/shellcheck "shellcheck.hs"
