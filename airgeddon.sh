@@ -606,6 +606,7 @@ function debug_print() {
 								"interrupt_checkpoint"
 								"language_strings"
 								"last_echo"
+								"physical_interface_finder"
 								"print_hint"
 								"print_large_separator"
 								"print_simple_separator"
@@ -621,8 +622,9 @@ function debug_print() {
 		fi
 
 		echo "Line:${BASH_LINENO[1]}" "${FUNCNAME[1]}"
-		return 0
 	fi
+
+	return 0
 }
 
 #Set the message to show again after an interrupt ([Ctrl+C] or [Ctrl+Z]) without exiting
