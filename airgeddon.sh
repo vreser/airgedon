@@ -1799,6 +1799,15 @@ function dos_pursuit_mode_et_handler() {
 		fi
 
 		if select_secondary_et_interface "dos_pursuit_mode"; then
+
+			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ -n "${channel}" ]] && [[ "${channel}" -gt 14 ]] && [[ "${secondary_interface_supported_bands}" = "${only_24ghz}" ]]; then
+				echo
+				language_strings "${language}" 519 "red"
+				language_strings "${language}" 115 "read"
+				return_to_et_main_menu=1
+				return 1
+			fi
+
 			if ! check_monitor_enabled "${secondary_wifi_interface}"; then
 				echo
 				language_strings "${language}" 14 "yellow"
@@ -1808,7 +1817,7 @@ function dos_pursuit_mode_et_handler() {
 				echo
 				if ! monitor_option "${secondary_wifi_interface}"; then
 					return_to_et_main_menu=1
-					return
+					return 1
 				else
 					echo
 					language_strings "${language}" 34 "yellow"
@@ -1820,9 +1829,11 @@ function dos_pursuit_mode_et_handler() {
 				language_strings "${language}" 115 "read"
 			fi
 		else
-			return
+			return 1
 		fi
 	fi
+
+	return 0
 }
 
 #Secondary interface selection menu for Evil Twin attacks
@@ -8968,7 +8979,9 @@ function et_dos_menu() {
 				echo
 				language_strings "${language}" 509 "yellow"
 
-				dos_pursuit_mode_et_handler
+				if ! dos_pursuit_mode_et_handler; then
+					return
+				fi
 
 				if [ "${et_mode}" = "et_captive_portal" ]; then
 					if [ ${internet_interface_selected} -eq 0 ]; then
@@ -9017,7 +9030,9 @@ function et_dos_menu() {
 				echo
 				language_strings "${language}" 509 "yellow"
 
-				dos_pursuit_mode_et_handler
+				if ! dos_pursuit_mode_et_handler; then
+					return
+				fi
 
 				if [ "${et_mode}" = "et_captive_portal" ]; then
 					if [ ${internet_interface_selected} -eq 0 ]; then
@@ -9066,7 +9081,9 @@ function et_dos_menu() {
 				echo
 				language_strings "${language}" 509 "yellow"
 
-				dos_pursuit_mode_et_handler
+				if ! dos_pursuit_mode_et_handler; then
+					return
+				fi
 
 				if [ "${et_mode}" = "et_captive_portal" ]; then
 					if [ ${internet_interface_selected} -eq 0 ]; then
