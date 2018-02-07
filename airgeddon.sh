@@ -419,7 +419,7 @@ function language_strings_handling_messages() {
 	language_strings_no_file["GREEK"]="Σφάλμα. Το αρχείο γλωσσών δεν βρέθηκε"
 	language_strings_no_file["ITALIAN"]="Errore. Non si trova il file delle traduzioni"
 	language_strings_no_file["POLISH"]="Błąd. Nie znaleziono pliku tłumaczenia"
-	language_strings_no_file["GERMAN"]="Fehler. Die Übersetzungsdatei wurde nicht gefunden"
+	language_strings_no_file["GERMAN"]="${pending_of_translation} Fehler. Die Übersetzungsdatei wurde nicht gefunden"
 
 	declare -gA language_strings_file_mismatch
 	language_strings_file_mismatch["ENGLISH"]="Error. The language strings file found mismatches expected version"
