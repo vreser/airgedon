@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180206
+#Date.........: 20180207
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -6740,7 +6740,12 @@ function set_control_script() {
 	esac
 
 	cat >&7 <<-EOF
-			echo -e "\t${yellow_color}${et_misc_texts[${language},0]} ${white_color}// ${blue_color}BSSID: ${normal_color}${bssid} ${yellow_color}// ${blue_color}${et_misc_texts[${language},1]}: ${normal_color}${channel} ${yellow_color}// ${blue_color}ESSID: ${normal_color}${essid}"
+			if [ "${channel}" != "${et_channel}" ]; then
+				et_control_window_channel="${et_channel} (5Ghz: ${channel})"
+			else
+				et_control_window_channel="${channel}"
+			fi
+			echo -e "\t${yellow_color}${et_misc_texts[${language},0]} ${white_color}// ${blue_color}BSSID: ${normal_color}${bssid} ${yellow_color}// ${blue_color}${et_misc_texts[${language},1]}: ${normal_color}\${et_control_window_channel} ${yellow_color}// ${blue_color}ESSID: ${normal_color}${essid}"
 			echo
 			echo -e "\t${green_color}${et_misc_texts[${language},2]}${normal_color}"
 	EOF
@@ -8882,6 +8887,11 @@ function et_prerequisites() {
 		echo
 		language_strings "${language}" 420 "pink"
 		language_strings "${language}" 115 "read"
+	fi
+
+	if [[ "${channel}" -gt 14 ]]; then
+		echo
+		language_strings "${language}" 520 "blue"
 	fi
 
 	echo
