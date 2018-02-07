@@ -5539,6 +5539,7 @@ function set_captive_portal_language() {
 	language_strings "${language}" 320
 	language_strings "${language}" 482
 	language_strings "${language}" 58
+	language_strings "${language}" 521
 	print_hint ${current_menu}
 
 	read -r captive_portal_language_selected
@@ -5570,6 +5571,9 @@ function set_captive_portal_language() {
 		;;
 		9)
 			captive_portal_language="POLISH"
+		;;
+		10)
+			captive_portal_language="GERMAN"
 		;;
 		*)
 			invalid_captive_portal_language_selected
