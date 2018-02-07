@@ -1645,6 +1645,7 @@ function language_menu() {
 	language_strings "${language}" 320
 	language_strings "${language}" 482
 	language_strings "${language}" 58
+	language_strings "${language}" 521
 	print_simple_separator
 	language_strings "${language}" 446
 	print_hint ${current_menu}
@@ -1734,6 +1735,15 @@ function language_menu() {
 			language_strings "${language}" 115 "read"
 		;;
 		10)
+			if [ "${language}" = "GERMAN" ]; then
+				language_strings "${language}" 251 "red"
+			else
+				language="GERMAN"
+				language_strings "${language}" 522 "yellow"
+			fi
+			language_strings "${language}" 115 "read"
+		;;
+		11)
 			return
 		;;
 		*)
