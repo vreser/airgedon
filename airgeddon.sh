@@ -886,7 +886,7 @@ function check_json_option_on_wash() {
 
 	debug_print
 
-	wash 2>&1 | grep "\-j" > /dev/null
+	wash -h 2>&1 | grep "\-j" > /dev/null
 	return $?
 }
 
