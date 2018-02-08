@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180207
+#Date.........: 20180208
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -163,6 +163,7 @@ docker_io_dir="/io"
 minimum_reaver_pixiewps_version="1.5.2"
 minimum_bully_pixiewps_version="1.1"
 minimum_bully_verbosity4_version="1.1"
+minimum_wash_json_version="1.6.2"
 known_pins_dbfile="known_pins.db"
 pins_dbfile_checksum="pindb_checksum.txt"
 wps_default_generic_pin="12345670"
@@ -2432,7 +2433,7 @@ function set_wep_key_script() {
 
 	cat >&8 <<-EOF
 				} >> "${weppotenteredpath}"
-				
+
 				{
 				echo ""
 				echo "---------------"
@@ -6700,7 +6701,7 @@ function set_control_script() {
 						"${et_captive_portal_logpath}"
 					done
 				fi
-				
+
 				{
 				echo ""
 				echo "---------------"
@@ -7854,7 +7855,7 @@ function dos_attacks_menu() {
 			invalid_menu_option
 		;;
 	esac
-	
+
 	dos_attacks_menu
 }
 
