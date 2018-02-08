@@ -890,6 +890,15 @@ function check_json_option_on_wash() {
 	return $?
 }
 
+#Check if wash has dual scan option
+function check_dual_scan_on_wash() {
+
+	debug_print
+
+	wash -h 2>&1 | grep "2ghz" > /dev/null
+	return $?
+}
+
 #Perform wash scan using -j (json) option to gather needed data
 function wash_json_scan() {
 
@@ -8401,7 +8410,7 @@ function explore_for_wps_targets_option() {
 
 	wash_band_modifier=""
 	if [ "${interface_supported_bands}" != "${only_24ghz}" ]; then
-		if validate_wash_dualscan_version; then
+		if check_dual_scan_on_wash; then
 			wash_band_modifier="-2 -5"
 		else
 			ask_yesno 518 "no"
