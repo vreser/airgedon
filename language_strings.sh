@@ -35,7 +35,7 @@ function language_strings() {
 	unknown_chipset["GREEK"]="Άγνωστο"
 	unknown_chipset["ITALIAN"]="Sconosciuto"
 	unknown_chipset["POLISH"]="Nieznany"
-	unknown_chipset["GERMAN"]="${pending_of_translation} "
+	unknown_chipset["GERMAN"]="Unbekannt"
 	unknown_chipsetvar="${unknown_chipset[${language}]}"
 
 	declare -A hintprefix
@@ -48,7 +48,7 @@ function language_strings() {
 	hintprefix["GREEK"]="Συμβουλή"
 	hintprefix["ITALIAN"]="Consiglio"
 	hintprefix["POLISH"]="Wskazówka"
-	hintprefix["GERMAN"]="${pending_of_translation} "
+	hintprefix["GERMAN"]="Rat"
 	hintvar="*${hintprefix[${language}]}*"
 	escaped_hintvar="\*${hintprefix[${language}]}\*"
 
@@ -62,7 +62,7 @@ function language_strings() {
 	optionaltool_needed["GREEK"]="Κλειδωμένη επιλογή, χρειάζεται: "
 	optionaltool_needed["ITALIAN"]="Opzione bloccata, richiede: "
 	optionaltool_needed["POLISH"]="Opcja zablokowana, wymaga: "
-	optionaltool_needed["GERMAN"]="${pending_of_translation} "
+	optionaltool_needed["GERMAN"]="Option gesperrt, folgendes ist erfordert: "
 
 	declare -A under_construction
 	under_construction["ENGLISH"]="under construction"
@@ -74,7 +74,7 @@ function language_strings() {
 	under_construction["GREEK"]="υπό κατασκευή"
 	under_construction["ITALIAN"]="in costruzione"
 	under_construction["POLISH"]="w budowie"
-	under_construction["GERMAN"]="${pending_of_translation} "
+	under_construction["GERMAN"]="im Bau"
 	under_constructionvar="${under_construction[${language}]}"
 
 	declare -gA possible_package_names_text
@@ -87,7 +87,7 @@ function language_strings() {
 	possible_package_names_text["GREEK"]="Πιθανό όνομα πακέτου"
 	possible_package_names_text["ITALIAN"]="Possibile nome del pacchetto"
 	possible_package_names_text["POLISH"]="Możliwa nazwa pakietu"
-	possible_package_names_text["GERMAN"]="${pending_of_translation} "
+	possible_package_names_text["GERMAN"]="Möglicher Paketname"
 
 	declare -gA et_misc_texts
 	et_misc_texts["ENGLISH",0]="Evil Twin AP Info"
@@ -99,7 +99,7 @@ function language_strings() {
 	et_misc_texts["GREEK",0]="Πληροφορίες Evil Twin AP"
 	et_misc_texts["ITALIAN",0]="Info Evil Twin AP"
 	et_misc_texts["POLISH",0]="Informacja Evil Twin AP"
-	et_misc_texts["GERMAN",0]="${pending_of_translation} "
+	et_misc_texts["GERMAN",0]="Information über Evil Twin AP"
 
 	et_misc_texts["ENGLISH",1]="Channel"
 	et_misc_texts["SPANISH",1]="Canal"
@@ -110,7 +110,7 @@ function language_strings() {
 	et_misc_texts["GREEK",1]="Κανάλι"
 	et_misc_texts["ITALIAN",1]="Canale"
 	et_misc_texts["POLISH",1]="Kanał"
-	et_misc_texts["GERMAN",1]="${pending_of_translation} "
+	et_misc_texts["GERMAN",1]="Kanal"
 
 	et_misc_texts["ENGLISH",2]="Online time"
 	et_misc_texts["SPANISH",2]="Tiempo online"
@@ -121,7 +121,7 @@ function language_strings() {
 	et_misc_texts["GREEK",2]="Χρόνος σε σύνδεση"
 	et_misc_texts["ITALIAN",2]="Tempo online"
 	et_misc_texts["POLISH",2]="Czas online"
-	et_misc_texts["GERMAN",2]="${pending_of_translation} "
+	et_misc_texts["GERMAN",2]="Zeit online"
 
 	et_misc_texts["ENGLISH",3]="DHCP ips given to possible connected clients"
 	et_misc_texts["SPANISH",3]="Ips entregadas por DHCP a posibles clientes conectados"
@@ -143,7 +143,7 @@ function language_strings() {
 	et_misc_texts["GREEK",4]="Με αυτή την επίθεση θα πρέπει να χρησιμοποιήσετε έναν εξωτερικό sniffer για να μπορέσετε να υποκλέψετε κωδικούς πρόσβασης από τους χρήστες που είναι συνδεδεμένοι στο δίκτυο"
 	et_misc_texts["ITALIAN",4]="Con questo attacco è necessario utilizzare uno sniffer esterno per cercare di ottenere le password dei clienti connessi alla rete"
 	et_misc_texts["POLISH",4]="W tym ataku musisz użyć zewnętrznego sniffera, aby spróbować uzyskać hasła od klientów podłączonych do sieci"
-	et_misc_texts["GERMAN",4]="${pending_of_translation} "
+	et_misc_texts["GERMAN",4]="Mit diesem Angriff ist ein externer Sniffer erforderlich um Passwörter von am Netzwerk verbundene clients zu stehlen"
 
 	et_misc_texts["ENGLISH",5]="With this attack, watch the sniffer's screen to see if a password appears"
 	et_misc_texts["SPANISH",5]="Con este ataque, estate atento a la pantalla del sniffer para ver si aparece alguna contraseña"
@@ -154,7 +154,7 @@ function language_strings() {
 	et_misc_texts["GREEK",5]="Με αυτή την επίθεση, παρακολουθήστε την οθόνη του sniffer για να δείτε αν εχει εμφανιστεί κάποιος κωδικός πρόσβασης"
 	et_misc_texts["ITALIAN",5]="Con questo attacco, presta attenzione alla schermata dello sniffer per vedere se compare una password"
 	et_misc_texts["POLISH",5]="Podczas tego ataku obserwuj ekran sniffera, aby zobaczyć, czy pojawia się hasło"
-	et_misc_texts["GERMAN",5]="${pending_of_translation} "
+	et_misc_texts["GERMAN",5]="Schau mit diesem Angriff ans Bildschirm ob ein Passwort erscheint"
 
 	et_misc_texts["ENGLISH",6]="With this attack, we'll wait for a network client to provide us with the password for the wifi network in our captive portal"
 	et_misc_texts["SPANISH",6]="Con este ataque, esperaremos a que un cliente de la red nos provea de la contraseña de la red wifi en nuestro portal cautivo"
@@ -165,7 +165,7 @@ function language_strings() {
 	et_misc_texts["GREEK",6]="Με αυτή την επίθεση, θα περιμένουμε για έναν χρήστη του δικτύου να μας παρέχει με τον κωδικό πρόσβασης του wifi στο captive portal μας"
 	et_misc_texts["ITALIAN",6]="Con questo attacco, aspettaremo che un cliente della rete ci fornisca la password per la rete wireless attraverso il nostro captive portal"
 	et_misc_texts["POLISH",6]="W tym ataku poczekamy na klienta sieci aż poda nam hasło do sieci wifi na naszej stronie captive portal"
-	et_misc_texts["GERMAN",6]="${pending_of_translation} "
+	et_misc_texts["GERMAN",6]="Mit diesem Angriff warten wir bis ein client im Netzwerk uns das Passwort des WLANs in unserer Vorschaltseite übergibt"
 
 	et_misc_texts["ENGLISH",7]="No clients connected yet"
 	et_misc_texts["SPANISH",7]="No hay clientes conectados aún"
@@ -176,7 +176,7 @@ function language_strings() {
 	et_misc_texts["GREEK",7]="Ακόμα κανένας συνδεδεμένος χρήστης"
 	et_misc_texts["ITALIAN",7]="Non ci sono ancora clienti collegati"
 	et_misc_texts["POLISH",7]="Nie ma jeszcze żadnych podłączonych klientów"
-	et_misc_texts["GERMAN",7]="${pending_of_translation} "
+	et_misc_texts["GERMAN",7]="Keine clients bisher verbunden"
 
 	et_misc_texts["ENGLISH",8]="airgeddon. Evil Twin attack captured passwords"
 	et_misc_texts["SPANISH",8]="airgeddon. Contraseñas capturadas en ataque Evil Twin"
@@ -187,7 +187,7 @@ function language_strings() {
 	et_misc_texts["GREEK",8]="airgeddon. Η επίθεση Evil Twin κατέγραψε κωδικούς πρόσβασης"
 	et_misc_texts["ITALIAN",8]="airgeddon. Password catturate con l'attacco Evil Twin"
 	et_misc_texts["POLISH",8]="airgeddon. Hasła przechwycone podczas ataku Evil Twin"
-	et_misc_texts["GERMAN",8]="${pending_of_translation} "
+	et_misc_texts["GERMAN",8]="airgeddon. Passwörter im Evil Twin angriff erfassen"
 
 	et_misc_texts["ENGLISH",9]="Wireless network, ESSID:"
 	et_misc_texts["SPANISH",9]="Red inalámbrica, ESSID:"
@@ -198,7 +198,7 @@ function language_strings() {
 	et_misc_texts["GREEK",9]="Ασύρματο Δίκτυο, ESSID:"
 	et_misc_texts["ITALIAN",9]="Rete wireless, ESSID:"
 	et_misc_texts["POLISH",9]="Sieć bezprzewodowa, ESSID:"
-	et_misc_texts["GERMAN",9]="${pending_of_translation} "
+	et_misc_texts["GERMAN",9]="WLAN, ESSID:"
 
 	et_misc_texts["ENGLISH",10]="Enter your wireless network password to get internet access"
 	et_misc_texts["SPANISH",10]="Introduzca su contraseña de acceso a la red inalámbrica para poder acceder a internet"
@@ -209,7 +209,7 @@ function language_strings() {
 	et_misc_texts["GREEK",10]="Εισάγετε τον κωδικό πρόσβασης του wifi δικτύου σας για να υπάρξει σύνδεση στο διαδίκτυο"
 	et_misc_texts["ITALIAN",10]="Introdurre la password della rete wireless per poter accedere a internet"
 	et_misc_texts["POLISH",10]="Wprowadź hasło do sieci bezprzewodowej, aby uzyskać dostęp do internetu"
-	et_misc_texts["GERMAN",10]="${pending_of_translation} "
+	et_misc_texts["GERMAN",10]="Schreiben Sie ihr WLAN-Passwort für Internetzugang"
 
 	et_misc_texts["ENGLISH",11]="Password"
 	et_misc_texts["SPANISH",11]="Contraseña"
@@ -220,7 +220,7 @@ function language_strings() {
 	et_misc_texts["GREEK",11]="Κωδικός πρόσβασης"
 	et_misc_texts["ITALIAN",11]="Password"
 	et_misc_texts["POLISH",11]="Hasło"
-	et_misc_texts["GERMAN",11]="${pending_of_translation} "
+	et_misc_texts["GERMAN",11]="Passwort"
 
 	et_misc_texts["ENGLISH",12]="Show password"
 	et_misc_texts["SPANISH",12]="Mostrar contraseña"
@@ -231,7 +231,7 @@ function language_strings() {
 	et_misc_texts["GREEK",12]="Εμφάνιση κωδικού πρόσβασης"
 	et_misc_texts["ITALIAN",12]="Mostrare password"
 	et_misc_texts["POLISH",12]="Pokaż hasło"
-	et_misc_texts["GERMAN",12]="${pending_of_translation} "
+	et_misc_texts["GERMAN",12]="Passwort zeigen"
 
 	et_misc_texts["ENGLISH",13]="Submit"
 	et_misc_texts["SPANISH",13]="Enviar"
@@ -242,7 +242,7 @@ function language_strings() {
 	et_misc_texts["GREEK",13]="Υποβολή"
 	et_misc_texts["ITALIAN",13]="Inviare"
 	et_misc_texts["POLISH",13]="Wyślij"
-	et_misc_texts["GERMAN",13]="${pending_of_translation} "
+	et_misc_texts["GERMAN",13]="Schicken"
 
 	et_misc_texts["ENGLISH",14]="An unexpected error occurred, redirecting to the main screen"
 	et_misc_texts["SPANISH",14]="Ha ocurrido un error inesperado, redirigiendo a la pantalla principal"
@@ -253,7 +253,7 @@ function language_strings() {
 	et_misc_texts["GREEK",14]="Παρουσιάστηκε μη αναμενόμενο σφάλμα, Θα καθοδηγηθείτε στην κύρια οθόνη"
 	et_misc_texts["ITALIAN",14]="Si è verificato un errore imprevisto, reindirizzando alla schermata principale"
 	et_misc_texts["POLISH",14]="Wystąpił nieoczekiwany błąd, zostaniesz przekierowany do ekranu głównego"
-	et_misc_texts["GERMAN",14]="${pending_of_translation} "
+	et_misc_texts["GERMAN",14]="Ein Fehler ist aufgetreten, zur Homepage weitergeleitet"
 
 	et_misc_texts["ENGLISH",15]="Internet Portal"
 	et_misc_texts["SPANISH",15]="Portal de Internet"
@@ -264,7 +264,7 @@ function language_strings() {
 	et_misc_texts["GREEK",15]="Internet Portal"
 	et_misc_texts["ITALIAN",15]="Portale Internet"
 	et_misc_texts["POLISH",15]="Portal internetowy"
-	et_misc_texts["GERMAN",15]="${pending_of_translation} "
+	et_misc_texts["GERMAN",15]="Internet Portal"
 
 	et_misc_texts["ENGLISH",16]="The password must be at least 8 characters"
 	et_misc_texts["SPANISH",16]="La contraseña debe tener al menos 8 caracteres"
@@ -275,7 +275,7 @@ function language_strings() {
 	et_misc_texts["GREEK",16]="Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 8 χαρακτήρες"
 	et_misc_texts["ITALIAN",16]="La password deve essere di almeno 8 caratteri"
 	et_misc_texts["POLISH",16]="Hasło musi mieć długość co najmniej 8 znaków"
-	et_misc_texts["GERMAN",16]="${pending_of_translation} "
+	et_misc_texts["GERMAN",16]="Das Passwort muss mindestens 8 Zeichen lang sein"
 
 	et_misc_texts["ENGLISH",17]="The password is incorrect, redirecting to the main screen"
 	et_misc_texts["SPANISH",17]="La contraseña introducida es incorrecta, redirigiendo a la pantalla principal"
@@ -286,7 +286,7 @@ function language_strings() {
 	et_misc_texts["GREEK",17]="Ο κωδικός πρόσβασης είναι λανθασμένος, Θα καθοδηγηθείτε στην κύρια οθόνη"
 	et_misc_texts["ITALIAN",17]="La password non è corretta, reindirizzando alla schermata principale"
 	et_misc_texts["POLISH",17]="Wprowadzone hasło jest niepoprawne, zostaniesz przekierowany do ekranu głównego"
-	et_misc_texts["GERMAN",17]="${pending_of_translation} "
+	et_misc_texts["GERMAN",17]="Das eingegebene Passwort ist falsch, zur Homepage weitergeleitet"
 
 	et_misc_texts["ENGLISH",18]="The password is correct, the connection will be restablished in a few moments"
 	et_misc_texts["SPANISH",18]="La contraseña es correcta, la conexión se restablecerá en unos momentos"
@@ -297,7 +297,7 @@ function language_strings() {
 	et_misc_texts["GREEK",18]="Ο κωδικός πρόσβασης είναι σωστός, η σύνδεση θα αποκατασταθεί σε λίγα λεπτά"
 	et_misc_texts["ITALIAN",18]="La password è corretta, la connessione sará ripristinata in un momento"
 	et_misc_texts["POLISH",18]="Hasło jest prawidłowe, połączenie zostanie przywrócone za chwilę"
-	et_misc_texts["GERMAN",18]="${pending_of_translation} "
+	et_misc_texts["GERMAN",18]="Das Passwort ist richtig, die Verbindung wird in kurzer Zeit wiederhergestellt"
 
 	et_misc_texts["ENGLISH",19]="airgeddon. Captive portal Evil Twin attack captured password"
 	et_misc_texts["SPANISH",19]="airgeddon. Contraseña capturada en el portal cautivo del ataque Evil Twin"
@@ -308,7 +308,7 @@ function language_strings() {
 	et_misc_texts["GREEK",19]="airgeddon. Η επίθεση Evil Twin με captive portal κατέγραψε τον κωδικό πρόσβασης"
 	et_misc_texts["ITALIAN",19]="airgeddon. Password catturata nel captive portal dell'attacco Evil Twin"
 	et_misc_texts["POLISH",19]="airgeddon. Hasło przechwycone podczas ataku captive portal Evil Twin"
-	et_misc_texts["GERMAN",19]="${pending_of_translation} "
+	et_misc_texts["GERMAN",19]="airgeddon. Passwort im Evil Twin Captive Portal gefangen"
 
 	et_misc_texts["ENGLISH",20]="Attempts"
 	et_misc_texts["SPANISH",20]="Intentos"
@@ -319,7 +319,7 @@ function language_strings() {
 	et_misc_texts["GREEK",20]="Προσπάθειες"
 	et_misc_texts["ITALIAN",20]="Tentativi"
 	et_misc_texts["POLISH",20]="Próby"
-	et_misc_texts["GERMAN",20]="${pending_of_translation} "
+	et_misc_texts["GERMAN",20]="Versuche"
 
 	et_misc_texts["ENGLISH",21]="last password:"
 	et_misc_texts["SPANISH",21]="última contraseña:"
@@ -330,7 +330,7 @@ function language_strings() {
 	et_misc_texts["GREEK",21]="τελευταίος κωδικός πρόσβασης:"
 	et_misc_texts["ITALIAN",21]="ultima password:"
 	et_misc_texts["POLISH",21]="ostatnie hasło:"
-	et_misc_texts["GERMAN",21]="${pending_of_translation} "
+	et_misc_texts["GERMAN",21]="$Letzte Passwort:"
 
 	et_misc_texts["ENGLISH",22]="Captured passwords on failed attemps"
 	et_misc_texts["SPANISH",22]="Contraseñas capturadas en intentos fallidos"
@@ -341,7 +341,7 @@ function language_strings() {
 	et_misc_texts["GREEK",22]="Καταγεγραμμένοι κωδικοί πρόσβασης σε αποτυχημένες προσπάθειες"
 	et_misc_texts["ITALIAN",22]="Password catturate in tentativi falliti"
 	et_misc_texts["POLISH",22]="Hasła przechwycone podczas nieudanych prób"
-	et_misc_texts["GERMAN",22]="${pending_of_translation} "
+	et_misc_texts["GERMAN",22]="Gefangene Passwörter in Fehlversuche"
 
 	et_misc_texts["ENGLISH",23]="Password captured successfully"
 	et_misc_texts["SPANISH",23]="Contraseña capturada con éxito"
@@ -352,7 +352,7 @@ function language_strings() {
 	et_misc_texts["GREEK",23]="Ο κωδικός πρόσβασης καταγράφτηκε επιτυχώς"
 	et_misc_texts["ITALIAN",23]="Password catturata con successo"
 	et_misc_texts["POLISH",23]="Hasło zostało pomyślnie przechwycone"
-	et_misc_texts["GERMAN",23]="${pending_of_translation} "
+	et_misc_texts["GERMAN",23]="Passwörter erfolgreich gefangen"
 
 	et_misc_texts["ENGLISH",24]="The password was saved on file"
 	et_misc_texts["SPANISH",24]="La contraseña se ha guardado en el fichero"
@@ -363,7 +363,7 @@ function language_strings() {
 	et_misc_texts["GREEK",24]="Ο κωδικός πρόσβασης αποθηκεύτηκε σε αρχείο"
 	et_misc_texts["ITALIAN",24]="La password è stata salvata nel file"
 	et_misc_texts["POLISH",24]="Hasło zostało zapisane do pliku"
-	et_misc_texts["GERMAN",24]="${pending_of_translation} "
+	et_misc_texts["GERMAN",24]="Das Passwort wurde in der Datei gespeichert"
 
 	et_misc_texts["ENGLISH",25]="Press [Enter] on the main script window to continue, this window will be closed"
 	et_misc_texts["SPANISH",25]="Pulsa [Enter] en la ventana principal del script para continuar, esta ventana se cerrará"
@@ -374,7 +374,7 @@ function language_strings() {
 	et_misc_texts["GREEK",25]="Πατήστε [Enter] στο κύριο παράθυρο του script για να συνεχίσετε, το παράθυρο αυτό θα κλείσει"
 	et_misc_texts["ITALIAN",25]="Premere il tasto [Enter] nella finestra principale dello script per continuare, questa finestra si chiuderà"
 	et_misc_texts["POLISH",25]="Wciśnij [Enter] w oknie głównym skryptu aby kontynuować, to okno zostanie zamknięte"
-	et_misc_texts["GERMAN",25]="${pending_of_translation} "
+	et_misc_texts["GERMAN",25]="Drücken Sie [Enter] im Hauptfenster um fortzufahren, dieses Fenster wird geschlossen"
 
 	et_misc_texts["ENGLISH",26]="Error. The password must be at least 8 characters. Redirecting to the main screen"
 	et_misc_texts["SPANISH",26]="Error. La contraseña debe tener al menos 8 caracteres. Redirigiendo a la pantalla principal"
@@ -385,7 +385,7 @@ function language_strings() {
 	et_misc_texts["GREEK",26]="Σφάλμα. Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 8 χαρακτήρες. Θα καθοδηγηθείτε στην κύρια οθόνη"
 	et_misc_texts["ITALIAN",26]="Errore. La password deve essere di almeno 8 caratteri. Reindirizzando alla schermata principale"
 	et_misc_texts["POLISH",26]="Błąd. Hasło musi mieć co najmniej 8 znaków. Przekierowywanie do ekranu głównego"
-	et_misc_texts["GERMAN",26]="${pending_of_translation} "
+	et_misc_texts["GERMAN",26]="Fehler. Das Passwort muss mindestens 8 Zeichen lang sein. Zur Homepage weitergeleitet"
 
 	et_misc_texts["ENGLISH",27]="This attack has two parts. Watch the sniffer's screen to see if a password appears. You can also open BeEF control panel at ${white_color}${beef_control_panel_url}${pink_color} , log in (user: ${white_color}beef${pink_color} / pass: ${white_color}${beef_pass}${pink_color}) and try to control the clients browser"
 	et_misc_texts["SPANISH",27]="Este ataque tiene dos partes. Estate atento a la pantalla del sniffer para ver si aparece alguna contraseña. También puedes abrir el panel de control de BeEF en ${white_color}${beef_control_panel_url}${pink_color} , hacer login (user: ${white_color}beef${pink_color} / pass: ${white_color}${beef_pass}${pink_color}) e intentar controlar el navegador de los clientes"
