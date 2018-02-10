@@ -1,4 +1,4 @@
-# EditorConfig is awesome: http://EditorConfig.org
+#EditorConfig: http://editorconfig.org
 
 root = true
 
@@ -12,8 +12,8 @@ trim_trailing_whitespace = true
 
 [*.{sh,db}]
 indent_style = tab
-indent_size = 2
+indent_size = 4
 
 [Dockerfile]
 indent_style = tab
-indent_size = 2
+indent_size = 4
