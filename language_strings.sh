@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180207
+#Date.........: 20180212
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -330,7 +330,7 @@ function language_strings() {
 	et_misc_texts["GREEK",21]="τελευταίος κωδικός πρόσβασης:"
 	et_misc_texts["ITALIAN",21]="ultima password:"
 	et_misc_texts["POLISH",21]="ostatnie hasło:"
-	et_misc_texts["GERMAN",21]="$Letzte Passwort:"
+	et_misc_texts["GERMAN",21]="letzte Passwort:"
 
 	et_misc_texts["ENGLISH",22]="Captured passwords on failed attemps"
 	et_misc_texts["SPANISH",22]="Contraseñas capturadas en intentos fallidos"
