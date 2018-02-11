@@ -522,7 +522,7 @@ function language_strings() {
 	arr["GREEK",0]="Αυτή η διεπαφή ${current_iface_on_messages} είναι ήδη σε ετερόκλητη κατάσταση"
 	arr["ITALIAN",0]="Questa interfaccia ${current_iface_on_messages} è già in modalità managed"
 	arr["POLISH",0]="Ten interfejs ${current_iface_on_messages} jest już w trybie managed"
-	arr["GERMAN",0]="${pending_of_translation} "
+	arr["GERMAN",0]="${pending_of_translation} Diese ${current_iface_on_messages}-Schnittstelle befindet sich bereits im managed Modus"
 
 	arr["ENGLISH",1]="This interface ${current_iface_on_messages} is not a wifi card. It doesn't support managed mode"
 	arr["SPANISH",1]="Esta interfaz ${current_iface_on_messages} no es una tarjeta wifi. No soporta modo managed"
@@ -533,7 +533,7 @@ function language_strings() {
 	arr["GREEK",1]="Αυτή η διεπαφή ${current_iface_on_messages} δεν είναι κάρτα wifi. Δεν υποστηρίζει ετερόκλητη κατάσταση."
 	arr["ITALIAN",1]="Questa interfaccia ${current_iface_on_messages} non è una scheda wifi. Non supporta la modalità managed"
 	arr["POLISH",1]="Interfejs ${current_iface_on_messages} nie jest kartą wifi. Nie obsługuje trybu zarządzania"
-	arr["GERMAN",1]="${pending_of_translation} "
+	arr["GERMAN",1]="${pending_of_translation} Diese $ {current_iface_on_messages} -Schnittstelle ist keine Wi-Fi-Karte. Unterstützt den managed Modus nicht"
 
 	arr["ENGLISH",2]="English O.S. language detected. Supported by script. Automatically changed"
 	arr["SPANISH",2]="Idioma Español del S.O. detectado. Soportado por el script. Se cambió automáticamente"
@@ -544,7 +544,7 @@ function language_strings() {
 	arr["GREEK",2]="Εντοπίστηκε Ελληνική γλώσσα συστήματος. Υποστηρίξιμη από το script. Άλλαξε αυτόματα"
 	arr["ITALIAN",2]="Lingua Italiana del S.O. rilevata. Supportata dallo script. Viene cambiata automaticamente"
 	arr["POLISH",2]="Wykryto system operacyjny w języku Polskim. Obsługiwany przez skrypt. Zmieniono automatycznie"
-	arr["GERMAN",2]="${pending_of_translation} "
+	arr["GERMAN",2]="${pending_of_translation} Deutsche Sprache des S.O. erkannt. Unterstützt vom Skript. Es wurde automatisch geändert"
 
 	arr["ENGLISH",3]="Select target network:"
 	arr["SPANISH",3]="Selecciona la red objetivo:"
@@ -555,7 +555,7 @@ function language_strings() {
 	arr["GREEK",3]="Διαλέξτε δίκτυο:"
 	arr["ITALIAN",3]="Scegliere una rete come obiettivo:"
 	arr["POLISH",3]="Wybierz sieć docelową:"
-	arr["GERMAN",3]="${pending_of_translation} "
+	arr["GERMAN",3]="${pending_of_translation} Wählen Sie das Zielnetzwerk aus:"
 
 	arr["ENGLISH",4]="Press [Enter] key to start attack..."
 	arr["SPANISH",4]="Pulse la tecla [Enter] para comenzar el ataque..."
@@ -566,7 +566,7 @@ function language_strings() {
 	arr["GREEK",4]="Πατήστε [Enter] για να ξεκινήσει η επίθεση..."
 	arr["ITALIAN",4]="Premere il tasto [Enter] per iniziare l'attacco..."
 	arr["POLISH",4]="Naciśnij klawisz [Enter], aby rozpocząć atak..."
-	arr["GERMAN",4]="${pending_of_translation} "
+	arr["GERMAN",4]="${pending_of_translation} Drücken Sie die [Enter]-Taste, um den Angriff zu starten..."
 
 	arr["ENGLISH",5]="It looks like your internet connection is unstable. The script can't connect to repository. It will continue without updating..."
 	arr["SPANISH",5]="Parece que tu conexión a internet no es estable. El script no puede conectar al repositorio. Continuará sin actualizarse..."
@@ -577,7 +577,7 @@ function language_strings() {
 	arr["GREEK",5]="Φαίνεται πως η σύνδεση με το διαδίκτυο δεν είναι σταθερή. Το script δεν μπορεί να συνδεθεί στο αποθετήριο. Θα συνεχίσει χωρίς να έχει ενημερωθεί..."
 	arr["ITALIAN",5]="Sembra che la connessione a internet non sia stabile. Lo script non riesce a connettersi al repository. Continuerà senza aggiornarsi..."
 	arr["POLISH",5]="Wygląda na to, że połączenie internetowe nie jest stabilne. Skrypt nie może połączyć się z repozytorium. Będzie kontynuowany bez aktualizacji..."
-	arr["GERMAN",5]="${pending_of_translation} "
+	arr["GERMAN",5]="${pending_of_translation} Es scheint, dass Ihre Internetverbindung nicht stabil ist. Das Skript kann keine Verbindung zum Repository herstellen. Es wird ohne Aktualisierung fortgesetzt..."
 
 	arr["ENGLISH",6]="Welcome to airgeddon script v${airgeddon_version}"
 	arr["SPANISH",6]="Bienvenid@ a airgeddon script v${airgeddon_version}"
@@ -588,7 +588,7 @@ function language_strings() {
 	arr["GREEK",6]="Καλωσήρθατε στο airgeddon v${airgeddon_version}"
 	arr["ITALIAN",6]="Benvenuti a airgeddon script v${airgeddon_version}"
 	arr["POLISH",6]="Witaj w skrypcie airgeddon v${airgeddon_version}"
-	arr["GERMAN",6]="${pending_of_translation} "
+	arr["GERMAN",6]="${pending_of_translation} Willkommen bei airgeddon Skript v${airgeddon_version}"
 
 	arr["ENGLISH",7]="This script is only for educational purposes. Be good boyz&girlz!"
 	arr["SPANISH",7]="Este script se ha hecho sólo con fines educativos. Sed buen@s chic@s!"
@@ -599,7 +599,7 @@ function language_strings() {
 	arr["GREEK",7]="Αυτό το script είναι για διδακτικούς σκοπούς. Να είστε φρόνιμοι!"
 	arr["ITALIAN",7]="Questo script è stato fatto solo per scopi didattici. Fate i bravi!"
 	arr["POLISH",7]="Ten skrypt został napisany tylko do celów edukacyjnych. Bądź grzeczny!"
-	arr["GERMAN",7]="${pending_of_translation} "
+	arr["GERMAN",7]="${pending_of_translation} Dieses Skript wurde nur für Bildungszwecke erstellt. Sei gut, Jungs!"
 
 	arr["ENGLISH",8]="Known compatible distros with this script:"
 	arr["SPANISH",8]="Distros conocidas compatibles con este script:"
@@ -610,7 +610,7 @@ function language_strings() {
 	arr["GREEK",8]="Γνώστες εκδόσεις που υποστηρίζουν αυτό το script:"
 	arr["ITALIAN",8]="Distribuzioni note compatibili con questo script:"
 	arr["POLISH",8]="Znane dystrybucje kompatybilne z tym skryptem:"
-	arr["GERMAN",8]="${pending_of_translation} "
+	arr["GERMAN",8]="${pending_of_translation} Bekannte Distributionen, die mit diesem Skript kompatibel sind:"
 
 	arr["ENGLISH",9]="Detecting system..."
 	arr["SPANISH",9]="Detectando sistema..."
@@ -621,7 +621,7 @@ function language_strings() {
 	arr["GREEK",9]="Το σύστημα εντοπίζεται..."
 	arr["ITALIAN",9]="Rilevando sistema..."
 	arr["POLISH",9]="Wykrywanie systemu..."
-	arr["GERMAN",9]="${pending_of_translation} "
+	arr["GERMAN",9]="${pending_of_translation} Erkennungssystem..."
 
 	arr["ENGLISH",10]="This interface ${current_iface_on_messages} is already in monitor mode"
 	arr["SPANISH",10]="Esta interfaz ${current_iface_on_messages} ya está en modo monitor"
@@ -632,7 +632,7 @@ function language_strings() {
 	arr["GREEK",10]="Αυτή η διεπαφή ${current_iface_on_messages} είναι ήδη σε κατάσταση παρακολούθησης"
 	arr["ITALIAN",10]="Questa interfaccia ${current_iface_on_messages} è già in modalità monitor"
 	arr["POLISH",10]="Ten interfejs ${current_iface_on_messages} jest już w trybie monitorowania"
-	arr["GERMAN",10]="${pending_of_translation} "
+	arr["GERMAN",10]="${pending_of_translation} Diese ${current_iface_on_messages}-Schnittstelle befindet sich bereits im monitor Modus"
 
 	arr["ENGLISH",11]="Exiting airgeddon script v${airgeddon_version} - See you soon! :)"
 	arr["SPANISH",11]="Saliendo de airgeddon script v${airgeddon_version} - Nos vemos pronto! :)"
@@ -643,7 +643,7 @@ function language_strings() {
 	arr["GREEK",11]="Κλείσιμο του airgeddon v${airgeddon_version} - Αντίο! :)"
 	arr["ITALIAN",11]="Abbandonando airgeddon script v${airgeddon_version} - A presto! :)"
 	arr["POLISH",11]="Wyjście z skryptu airgeddon v${airgeddon_version} - Do zobaczenia wkrótce! :)"
-	arr["GERMAN",11]="${pending_of_translation} "
+	arr["GERMAN",11]="${pending_of_translation} Verlassen airgeddon Skript v${airgeddon_version} - Bis bald! :)"
 
 	arr["ENGLISH",12]="${blue_color}Interruption detected. ${green_color}Do you really want to exit? ${normal_color}${visual_choice}"
 	arr["SPANISH",12]="${blue_color}Detectada interrupción. ${green_color}¿Quieres realmente salir del script? ${normal_color}${visual_choice}"
@@ -654,7 +654,7 @@ function language_strings() {
 	arr["GREEK",12]="${blue_color}Εντοπίστηκε διακοπή. ${green_color}Είστε σίγουροι ότι θέλετε να τερματίσετε το script; ${normal_color}${visual_choice}"
 	arr["ITALIAN",12]="${blue_color}Rilevata interruzione. ${green_color}Vuoi davvero uscire dallo script? ${normal_color}${visual_choice}"
 	arr["POLISH",12]="${blue_color}Wykryto przerwanie. ${green_color}Czy naprawdę chcesz wyjść ze skryptu? ${normal_color}${visual_choice}"
-	arr["GERMAN",12]="${pending_of_translation} "
+	arr["GERMAN",12]="${pending_of_translation} ${blue_color}Unterbrechung wurde erkannt. ${green_color}Willst du wirklich aus dem Skript raus? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",13]="This interface ${current_iface_on_messages} is not a wifi card. It doesn't support monitor mode"
 	arr["SPANISH",13]="Esta interfaz ${current_iface_on_messages} no es una tarjeta wifi. No soporta modo monitor"
@@ -665,7 +665,7 @@ function language_strings() {
 	arr["GREEK",13]="Αυτή η διεπαφή ${current_iface_on_messages} δεν έιναι κάρτα wifi. Δεν υποστηρίζει κατάσταση παρακολούθησης"
 	arr["ITALIAN",13]="Questa interfaccia ${current_iface_on_messages} non è una scheda wifi. Non supporta la modalità del monitor"
 	arr["POLISH",13]="Interfejs ${current_iface_on_messages} nie jest kartą wifi. Nie obsługuje trybu monitorowania"
-	arr["GERMAN",13]="${pending_of_translation} "
+	arr["GERMAN",13]="${pending_of_translation} Diese ${current_iface_on_messages}-Schnittstelle ist keine wifi-Karte. Unterstützt den monitor Modus nicht"
 
 	arr["ENGLISH",14]="This interface ${current_iface_on_messages} is not in monitor mode"
 	arr["SPANISH",14]="Esta interfaz ${current_iface_on_messages} no está en modo monitor"
@@ -676,7 +676,7 @@ function language_strings() {
 	arr["GREEK",14]="Αυτή η διεπαφή ${current_iface_on_messages} δεν είναι σε κατάσταση παρακολούθησης"
 	arr["ITALIAN",14]="Questa interfaccia ${current_iface_on_messages} non è in modalità monitor"
 	arr["POLISH",14]="Ten interfejs ${current_iface_on_messages} nie jest w trybie monitorowania"
-	arr["GERMAN",14]="${pending_of_translation} "
+	arr["GERMAN",14]="${pending_of_translation} Diese ${current_iface_on_messages}-Schnittstelle befindet sich nicht im monitor Modus"
 
 	arr["ENGLISH",15]="The interface changed its name while putting in managed mode. Autoselected"
 	arr["SPANISH",15]="Esta interfaz ha cambiado su nombre al ponerse en modo managed. Se ha seleccionado automáticamente"
@@ -687,7 +687,7 @@ function language_strings() {
 	arr["GREEK",15]="Η διεπάφη άλλαξε όνομα καθώς ήταν σε ετερόκλητη κατάσταση. Επιλέχθηκε αυτόματα"
 	arr["ITALIAN",15]="Questa interfaccia ha cambiato il suo nome passando in modalità managed. È stata selezionata automaticamente"
 	arr["POLISH",15]="Ten interfejs zmienił nazwę w trakcie uruchamiania trybu zarządzania. Wybrany automatycznie"
-	arr["GERMAN",15]="${pending_of_translation} "
+	arr["GERMAN",15]="${pending_of_translation} Diese Schnittstelle hat im verwalteten Modus ihren Namen geändert. Es wurde automatisch ausgewählt"
 
 	arr["ENGLISH",16]="Managed mode now is set on ${current_iface_on_messages}"
 	arr["SPANISH",16]="Se ha puesto el modo managed en ${current_iface_on_messages}"
