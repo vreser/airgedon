@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
@@ -74,7 +75,7 @@ function language_strings() {
 	under_construction["GREEK"]="υπό κατασκευή"
 	under_construction["ITALIAN"]="in costruzione"
 	under_construction["POLISH"]="w budowie"
-	under_construction["GERMAN"]="im Bau"
+	under_construction["GERMAN"]="im Aufbau"
 	under_constructionvar="${under_construction[${language}]}"
 
 	declare -gA possible_package_names_text
@@ -132,7 +133,7 @@ function language_strings() {
 	et_misc_texts["GREEK",3]="DHCP IP διευθύνσεις που έχουν δωθεί σε πιθανούς συνδεδεμένους χρήστες"
 	et_misc_texts["ITALIAN",3]="Ips forniti dal DHCP a possibili clienti collegati"
 	et_misc_texts["POLISH",3]="Adresy IP przydzielane przez DHCP do połączonych potencjalnych klientów"
-	et_misc_texts["GERMAN",3]="${pending_of_translation} Ips wird von DHCP an mögliche verbundene Clients geliefert"
+	et_misc_texts["GERMAN",3]="Ips durch DHCP an mögliche verbundene Clients geliefert"
 
 	et_misc_texts["ENGLISH",4]="With this attack you have to use an external sniffer to try to obtain client passwords connected to the network"
 	et_misc_texts["SPANISH",4]="Con este ataque has de usar un sniffer externo para intentar obtener contraseñas de los clientes conectados a la red"
@@ -187,7 +188,7 @@ function language_strings() {
 	et_misc_texts["GREEK",8]="airgeddon. Η επίθεση Evil Twin κατέγραψε κωδικούς πρόσβασης"
 	et_misc_texts["ITALIAN",8]="airgeddon. Password catturate con l'attacco Evil Twin"
 	et_misc_texts["POLISH",8]="airgeddon. Hasła przechwycone podczas ataku Evil Twin"
-	et_misc_texts["GERMAN",8]="airgeddon. Passwörter im Evil Twin angriff erfassen"
+	et_misc_texts["GERMAN",8]="airgeddon. Passwörter im Evil Twin-Angriff erfassen"
 
 	et_misc_texts["ENGLISH",9]="Wireless network, ESSID:"
 	et_misc_texts["SPANISH",9]="Red inalámbrica, ESSID:"
@@ -253,7 +254,7 @@ function language_strings() {
 	et_misc_texts["GREEK",14]="Παρουσιάστηκε μη αναμενόμενο σφάλμα, Θα καθοδηγηθείτε στην κύρια οθόνη"
 	et_misc_texts["ITALIAN",14]="Si è verificato un errore imprevisto, reindirizzando alla schermata principale"
 	et_misc_texts["POLISH",14]="Wystąpił nieoczekiwany błąd, zostaniesz przekierowany do ekranu głównego"
-	et_misc_texts["GERMAN",14]="Ein Fehler ist aufgetreten, zur Homepage weitergeleitet"
+	et_misc_texts["GERMAN",14]="Ein Fehler ist aufgetreten, Sie werden zur Homepage weitergeleitet"
 
 	et_misc_texts["ENGLISH",15]="Internet Portal"
 	et_misc_texts["SPANISH",15]="Portal de Internet"
@@ -286,7 +287,7 @@ function language_strings() {
 	et_misc_texts["GREEK",17]="Ο κωδικός πρόσβασης είναι λανθασμένος, Θα καθοδηγηθείτε στην κύρια οθόνη"
 	et_misc_texts["ITALIAN",17]="La password non è corretta, reindirizzando alla schermata principale"
 	et_misc_texts["POLISH",17]="Wprowadzone hasło jest niepoprawne, zostaniesz przekierowany do ekranu głównego"
-	et_misc_texts["GERMAN",17]="Das eingegebene Passwort ist falsch, zur Homepage weitergeleitet"
+	et_misc_texts["GERMAN",17]="Das eingegebene Passwort ist falsch, Sie werden zur Homepage weitergeleitet"
 
 	et_misc_texts["ENGLISH",18]="The password is correct, the connection will be restablished in a few moments"
 	et_misc_texts["SPANISH",18]="La contraseña es correcta, la conexión se restablecerá en unos momentos"
@@ -396,7 +397,7 @@ function language_strings() {
 	et_misc_texts["GREEK",27]="Αυτή η επίθεση έχει δύο μέρη. Παρακολουθήστε την οθόνη του sniffer για να δείτε εαν εμφανιστεί κάποιος κωδικός. Μπορείτε επίσης να ανοίξετε τον πίνακα ελέγχου του BeEF στο ${white_color}${beef_control_panel_url}${pink_color} , συνδεθείτε (user: ${white_color}beef${pink_color} / pass: ${white_color}${beef_pass}${pink_color}) και προσπαθείστε να ελέγξετε τον browser του χρήστη-πελάτη"
 	et_misc_texts["ITALIAN",27]="Questo attacco è composto da due parti. Presta attenzione alla schermata dello sniffer per vedere se compare una password. È inoltre possibile aprire il pannello di controllo di BeEF in ${white_color}${beef_control_panel_url}${pink_color} , effettuare il login (utente: ${white_color}beef${pink_color} / pass: ${white_color}${beef_pass}${pink_color}) e cercare di controllare il navigatore degli utenti"
 	et_misc_texts["POLISH",27]="Ten atak ma dwie części. Obserwuj ekran sniffera aby sprawdzić, czy pojawia się hasło. Możesz także otworzyć panel sterowania BeEF w ${white_color}${beef_control_panel_url}${pink_color} , zaloguj się (użytkownik: ${white_color}beef${pink_color} / hasło: ${white_color}${beef_pass}${pink_color}) i spróbuj kontrolować przeglądarkę klientów"
-	et_misc_texts["GERMAN",27]="${pending_of_translation} Dieser Angriff besteht aus zwei Teilen. Bleiben Sie auf dem Sniffer-Bildschirm, um zu sehen, ob ein Passwort erscheint. Sie können das BeEF-Kontrollfeld auch in ${white_color}${beef_control_panel_url}${pink_color}, login (Benutzer: ${white_color}beef${pink_color} / pass: ${white_color}${beef_pass}${pink_color}) und versuche den Browser des Clients zu kontrollieren"
+	et_misc_texts["GERMAN",27]="Dieser Angriff besteht aus zwei Teilen. Bleiben Sie auf dem Sniffer-Bildschirm, um zu sehen, ob ein Passwort erscheint. Sie können auch das BeEF-Kontrollfeld in ${white_color}${beef_control_panel_url}${pink_color} öffnen, login (Benutzer: ${white_color}beef${pink_color} / pass: ${white_color}${beef_pass}${pink_color}) und versuchen den Browser des Clients zu kontrollieren"
 
 	declare -gA wep_texts
 	wep_texts["ENGLISH",1]="airgeddon. Captured password during WEP attack"
@@ -408,7 +409,7 @@ function language_strings() {
 	wep_texts["GREEK",1]="airgeddon. Ο κωδικός πρόσβασης κατά την διάρκεια της επίθεσης WEP"
 	wep_texts["ITALIAN",1]="airgeddon. Password catturata con l'attacco WEP"
 	wep_texts["POLISH",1]="airgeddon. Hasło przechwycone podczas ataku WEP"
-	wep_texts["GERMAN",1]="${pending_of_translation} airgeddon Passwort bei WEP-Angriff erfasst"
+	wep_texts["GERMAN",1]="airgeddon. Passwort bei WEP-Angriff erfasst"
 
 	wep_texts["ENGLISH",2]="Channel"
 	wep_texts["SPANISH",2]="Canal"
@@ -419,7 +420,7 @@ function language_strings() {
 	wep_texts["GREEK",2]="Κανάλι"
 	wep_texts["ITALIAN",2]="Canale"
 	wep_texts["POLISH",2]="Kanał"
-	wep_texts["GERMAN",2]="${pending_of_translation} Kanal"
+	wep_texts["GERMAN",2]="Kanal"
 
 	wep_texts["ENGLISH",3]="Hexadecimal"
 	wep_texts["SPANISH",3]="Hexadecimal"
@@ -430,7 +431,7 @@ function language_strings() {
 	wep_texts["GREEK",3]="Δεκαεξαδικό"
 	wep_texts["ITALIAN",3]="Esadecimale"
 	wep_texts["POLISH",3]="Hexadecymalny"
-	wep_texts["GERMAN",3]="${pending_of_translation} Hexadezimal"
+	wep_texts["GERMAN",3]="Hexadezimal"
 
 	wep_texts["ENGLISH",4]="WEP key decrypted successfully:"
 	wep_texts["SPANISH",4]="Clave WEP desencriptada con éxito:"
@@ -441,7 +442,7 @@ function language_strings() {
 	wep_texts["GREEK",4]="Το κλειδί WEP αποκρυπτογραφήθηκε με επιτυχία:"
 	wep_texts["ITALIAN",4]="Chiave WEP decifrata con successo:"
 	wep_texts["POLISH",4]="Klucz WEP odszyfrowywany prawidłowo:"
-	wep_texts["GERMAN",4]="${pending_of_translation} Erfolgreich entschlüsselter WEP-Schlüssel:"
+	wep_texts["GERMAN",4]="WEP-Schlüssel erfolgreich entschlüsselt:"
 
 	wep_texts["ENGLISH",5]="WEP AP Info"
 	wep_texts["SPANISH",5]="Info WEP AP"
@@ -452,7 +453,7 @@ function language_strings() {
 	wep_texts["GREEK",5]="Πληροφορίες WEP AP"
 	wep_texts["ITALIAN",5]="Info WEP AP"
 	wep_texts["POLISH",5]="Informacja o AP WEP"
-	wep_texts["GERMAN",5]="${pending_of_translation} Info WEP AP"
+	wep_texts["GERMAN",5]="Info über WEP AP"
 
 	wep_texts["ENGLISH",6]="The password was saved on file"
 	wep_texts["SPANISH",6]="La contraseña se ha guardado en el fichero"
@@ -463,7 +464,7 @@ function language_strings() {
 	wep_texts["GREEK",6]="Ο κωδικός πρόσβασης αποθηκεύτηκε σε αρχείο"
 	wep_texts["ITALIAN",6]="La password è stata salvata nel file"
 	wep_texts["POLISH",6]="Hasło zostało zapisane do pliku"
-	wep_texts["GERMAN",6]="${pending_of_translation} Das Passwort wurde in der Datei gespeichert"
+	wep_texts["GERMAN",6]="Das Passwort wurde in der Datei gespeichert"
 
 	wep_texts["ENGLISH",7]="Press [Enter] on the main script window to continue, this window will be closed"
 	wep_texts["SPANISH",7]="Pulsa [Enter] en la ventana principal del script para continuar, esta ventana se cerrará"
@@ -474,7 +475,7 @@ function language_strings() {
 	wep_texts["GREEK",7]="Πατήστε [Enter] στο κύριο παράθυρο του script για να συνεχίσετε, το παράθυρο αυτό θα κλείσει"
 	wep_texts["ITALIAN",7]="Premere il tasto [Enter] nella finestra principale dello script per continuare, questa finestra si chiuderà"
 	wep_texts["POLISH",7]="Wciśnij [Enter] w oknie głównym skryptu aby kontynuować, to okno zostanie zamknięte"
-	wep_texts["GERMAN",7]="${pending_of_translation} Drücken Sie [Enter] im Hauptfenster des Skripts, um fortzufahren. Dieses Fenster wird geschlossen"
+	wep_texts["GERMAN",7]="Drücken Sie [Enter] im Hauptfenster des Skripts um fortzufahren. Dieses Fenster wird geschlossen"
 
 	declare -gA hashcat_texts
 	hashcat_texts["ENGLISH",1]="airgeddon. Decrypted password using hashcat"
@@ -486,7 +487,7 @@ function language_strings() {
 	hashcat_texts["GREEK",1]="airgeddon. Αποκρυπτογραφημένος κωδικός πρόσβασης με χρήση hashcat"
 	hashcat_texts["ITALIAN",1]="airgeddon. Password decifrata con hashcat"
 	hashcat_texts["POLISH",1]="airgeddon. Hasło odszyfrowane z użyciem hashcat"
-	hashcat_texts["GERMAN",1]="${pending_of_translation} airgeddon Passwort entschlüsselt mit hashcat"
+	hashcat_texts["GERMAN",1]="airgeddon. Passwort mit hashcat entschlüsselt"
 
 	declare -gA aircrack_texts
 	aircrack_texts["ENGLISH",1]="airgeddon. Decrypted password using aircrack"
@@ -498,7 +499,7 @@ function language_strings() {
 	aircrack_texts["GREEK",1]="airgeddon. Αποκρυπτογραφημένος κωδικός πρόσβασης με χρήση aircrack"
 	aircrack_texts["ITALIAN",1]="airgeddon. Password decifrata con aircrack"
 	aircrack_texts["POLISH",1]="airgeddon. Hasło odszyfrowane z użyciem aircrack"
-	aircrack_texts["GERMAN",1]="${pending_of_translation} airgeddon Passwort entschlüsselt mit aircrack"
+	aircrack_texts["GERMAN",1]="airgeddon. Passwort mit aircrack entschlüsselt"
 
 	declare -gA footer_texts
 	footer_texts["ENGLISH",1]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through Paypal (${mail}) or sending a fraction of a bitcoin (${bitcoin}). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${urlgithub_wiki}/Contributing"
@@ -510,7 +511,7 @@ function language_strings() {
 	footer_texts["GREEK",1]="Εαν ευχαριστηθήκατε το script και το βρήκατε χρήσιμο, μπορείτε να υποστηρίξετε το project κάνοντας κάποια δωρεά. Μέσω του Paypal (${mail}) ή στέλνοντας κάποιο ποσοστό bitcoin (${bitcoin}). Είναι καλοδεχούμενο οποιοδήποτε ποσό (1, 2, 5 $/€), δεν έχει σημασία το πόσο λίγο μπορεί να είναι. Δίνονται περισσότερες πληροφορίες και links για να κάνετε δωρεά στη διεύθυνση: ${urlgithub_wiki}/Contributing"
 	footer_texts["ITALIAN",1]="Se ti è piaciuto lo script e l'hai trovato utile, è possibile sostenere il progetto con una donazione. Attraverso PayPal (${mail}) o inviando una frazione di bitcoin (${bitcoin}). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Ulteriori informazioni e collegamenti diretti per effettuare la donazione in: ${urlgithub_wiki}/Contributing"
 	footer_texts["POLISH",1]="Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi Paypal (${mail}) lub wysyłając ułamek bitcoin (${bitcoin}). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${urlgithub_wiki}/Contributing"
-	footer_texts["GERMAN",1]="${pending_of_translation} Wenn Ihnen das Skript gefallen hat und Sie es nützlich fanden, können Sie das Projekt mit einer Spende unterstützen. Durch Paypal (${mail}) oder durch Senden eines Bruchteils von bitcoin (${bitcoin}). Jeder noch so kleine Betrag (1, 2, 5 $/€) wird gut angenommen. Weitere Informationen und direkte Links dazu finden Sie unter: ${urlgithub_wiki}/Contributing"
+	footer_texts["GERMAN",1]="Wenn Ihnen das Skript gefallen hat und Sie es nützlich fanden, können Sie das Projekt mit einer Spende unterstützen. Durch Paypal (${mail}) oder durch Senden eines Bruchteils von Bitcoin (${bitcoin}). Jeder noch so kleine Betrag (1, 2, 5 $/€) wird gut angenommen. Weitere Informationen und direkte Links dazu finden Sie unter: ${urlgithub_wiki}/Contributing"
 
 	declare -A arr
 	arr["ENGLISH",0]="This interface ${current_iface_on_messages} is already in managed mode"
@@ -522,7 +523,7 @@ function language_strings() {
 	arr["GREEK",0]="Αυτή η διεπαφή ${current_iface_on_messages} είναι ήδη σε ετερόκλητη κατάσταση"
 	arr["ITALIAN",0]="Questa interfaccia ${current_iface_on_messages} è già in modalità managed"
 	arr["POLISH",0]="Ten interfejs ${current_iface_on_messages} jest już w trybie managed"
-	arr["GERMAN",0]="${pending_of_translation} Diese ${current_iface_on_messages}-Schnittstelle befindet sich bereits im managed Modus"
+	arr["GERMAN",0]="Diese ${current_iface_on_messages}-Schnittstelle befindet sich bereits im managed Modus"
 
 	arr["ENGLISH",1]="This interface ${current_iface_on_messages} is not a wifi card. It doesn't support managed mode"
 	arr["SPANISH",1]="Esta interfaz ${current_iface_on_messages} no es una tarjeta wifi. No soporta modo managed"
@@ -533,7 +534,7 @@ function language_strings() {
 	arr["GREEK",1]="Αυτή η διεπαφή ${current_iface_on_messages} δεν είναι κάρτα wifi. Δεν υποστηρίζει ετερόκλητη κατάσταση."
 	arr["ITALIAN",1]="Questa interfaccia ${current_iface_on_messages} non è una scheda wifi. Non supporta la modalità managed"
 	arr["POLISH",1]="Interfejs ${current_iface_on_messages} nie jest kartą wifi. Nie obsługuje trybu zarządzania"
-	arr["GERMAN",1]="${pending_of_translation} Diese $ {current_iface_on_messages} -Schnittstelle ist keine Wi-Fi-Karte. Unterstützt den managed Modus nicht"
+	arr["GERMAN",1]="Diese ${current_iface_on_messages}-Schnittstelle ist keine Wi-Fi-Karte. Managed modus ist nicht unterstützt"
 
 	arr["ENGLISH",2]="English O.S. language detected. Supported by script. Automatically changed"
 	arr["SPANISH",2]="Idioma Español del S.O. detectado. Soportado por el script. Se cambió automáticamente"
