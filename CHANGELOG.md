@@ -1,6 +1,6 @@
 ### 8.0
  - Added 5Ghz card detection and 5Ghz support for attacks
- - Tested compatibility with Parrot 3.10
+ - Tested compatibility with Kali 2018.1 and Parrot 3.10
  - Fixed error setting ESSID on some wash versions while scanning
  - Fixed error on secondary interface selection menu for DoS pursuit mode
 
