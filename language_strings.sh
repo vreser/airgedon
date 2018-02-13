@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180210
+#Date.........: 20180213
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -5522,7 +5522,7 @@ function language_strings() {
 
 	arr["ENGLISH",505]="Do you want to enable \"DoS pursuit mode\"? ${blue_color}This will launch again the attack if target AP change its channel countering \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["SPANISH",505]="¿Deseas activar el \"modo persecución DoS\"? ${blue_color}Esto relanzará el ataque si el AP objetivo cambia de canal contrarrestando el \"channel hopping\" ${normal_color}${visual_choice}"
-	arr["FRENCH",505]="Voulez-vous activer \"le mode poursuite DoS\"? ${blue_color}Cela relancera l'attaque si le AP cible change de canal en contrecarrant le \"channel hopping\" ${normal_color}${visual_choice}"
+	arr["FRENCH",505]="Voulez-vous activer le \"mode de poursuite DoS\"? ${blue_color}Cela relancera l'attaque si le AP cible change de canal en contrecarrant le \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["CATALAN",505]="¿Vols activar el \"mode persecució DoS\"? ${blue_color}Això rellançarà l'atac si l'AP objectiu canvia de canal contrarestant el \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["PORTUGUESE",505]="Você deseja ativar o \"modo de perseguição\"? ${blue_color}Isso irá iniciar o ataque novamente se o alvo mudar de canal, evitando o \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["RUSSIAN",505]="Вы хотите включить \"режим преследования DoS\"? ${blue_color}Это мера противодействия \"channel hopping\" (автоматической смены канала ТД); атака будет перезапущена, если ТД изменит свой канал ${normal_color}${visual_choice}"
@@ -5532,7 +5532,7 @@ function language_strings() {
 
 	arr["ENGLISH",506]="DoS attack with the \"DoS pursuit mode\" enabled will start when you press [Enter] on this window. To stop it you must press [Ctrl+C] or close attack window"
 	arr["SPANISH",506]="El ataque DoS con el \"modo persecución DoS\" activado comenzará cuando pulse [Enter] en esta ventana. Para detenerlo deberá pulsar [Ctrl+C] o cerrar la ventana del ataque"
-	arr["FRENCH",506]="L'attaque DoS avec le \"mode poursuite DoS\" activation démarrera lorsque vous appuyez sur [Enter] dans cette fenêtre. Pour l'arrêter, vous devez appuyer sur [Ctrl+C] ou fermer la fenêtre d'attaque"
+	arr["FRENCH",506]="L'attaque DoS avec le \"mode de poursuite DoS\" activation démarrera lorsque vous appuyez sur [Enter] dans cette fenêtre. Pour l'arrêter, vous devez appuyer sur [Ctrl+C] ou fermer la fenêtre d'attaque"
 	arr["CATALAN",506]="L'atac DoS amb el \"mode persecució DoS\" activat començarà quan premeu [Enter] en aquesta finestra. Per aturar-lo haurà de prémer [Ctrl+C] o tancar la finestra de l'atac"
 	arr["PORTUGUESE",506]="O ataque DoS com o \"modo de perseguição\" foi ativo e será iniciado quando você pressionar [Enter] nesta janela. Para parar, você deve pressionar [Ctrl+C] ou fechar a janela do ataque"
 	arr["RUSSIAN",506]="DoS-атака с включенным \"режимом DoS преследования\" будет запущена когда вы в этом окне нажмёте [Enter]. Для её остановки нажмите [Ctrl+C] или закройте окно атаки"
@@ -5612,7 +5612,7 @@ function language_strings() {
 
 	arr["ENGLISH",514]="Interface ${pink_color}${current_iface_on_messages}${blue_color} selected. Mode: ${pink_color}${ifacemode}${blue_color}. Supported bands: ${pink_color}${interface_supported_bands}${normal_color}"
 	arr["SPANISH",514]="Interfaz ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Modo: ${pink_color}${ifacemode}${blue_color}. Bandas soportadas: ${pink_color}${interface_supported_bands}${normal_color}"
-	arr["FRENCH",514]="l'interface ${pink_color}${current_iface_on_messages}${blue_color} sélectionnée. Mode: ${pink_color}${ifacemode}${blue_color}. Bandes supportées: ${pink_color}${interface_supported_bands}${normal_color}"
+	arr["FRENCH",514]="L'interface ${pink_color}${current_iface_on_messages}${blue_color} sélectionnée. Mode: ${pink_color}${ifacemode}${blue_color}. Bandes supportées: ${pink_color}${interface_supported_bands}${normal_color}"
 	arr["CATALAN",514]="Interfície ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Mode: ${pink_color}${ifacemode}${blue_color}. Bandes suportades: ${pink_color}${interface_supported_bands}${normal_color}"
 	arr["PORTUGUESE",514]="Interface ${pink_color}${current_iface_on_messages}${blue_color} selecionada. Modo: ${pink_color}${ifacemode}${blue_color}. Banda(s) suportada(s): ${pink_color}${interface_supported_bands}${normal_color}"
 	arr["RUSSIAN",514]="Выбран интерфейс ${pink_color}${current_iface_on_messages}${blue_color}. Режим: ${pink_color}${ifacemode}${blue_color}. Поддерживаемые диапазоны: ${pink_color}${interface_supported_bands}${normal_color}"
@@ -5662,7 +5662,7 @@ function language_strings() {
 
 	arr["ENGLISH",519]="You have selected a 5Ghz target network and the \"DoS pursuit mode\", but the second interface needed to perform the attack doesn't support the 5Ghz band so the attack can't be performed"
 	arr["SPANISH",519]="Has seleccionado una red objetivo de 5Ghz y el \"modo persecución DoS\", pero el segundo interfaz necesario para llevar a cabo el ataque no soporta la banda de los 5Ghz por lo que este no se puede realizar"
-	arr["FRENCH",519]="Vous avez sélectionné un réseau cible de 5Ghz et le \"le mode poursuite DoS\", mais la deuxième interface nécessaire pour effectuer l'attaque ne supporte pas la bande 5Ghz donc elle ne peut pas être effectuée"
+	arr["FRENCH",519]="Vous avez sélectionné un réseau cible de 5Ghz et le \"mode de poursuite DoS\", mais la deuxième interface nécessaire pour effectuer l'attaque ne supporte pas la bande 5Ghz donc elle ne peut pas être effectuée"
 	arr["CATALAN",519]="Has seleccionat una xarxa objectiu de 5Ghz i el \"mode persecució DoS\", però el segon interfície necessari per dur a terme l'atac no suporta la banda dels 5Ghz pel que aquest no es pot realitzar"
 	arr["PORTUGUESE",519]="Você selecionou uma rede de 5Ghz e DoS com o \"modo de perseguição\", mas a segunda interface necessária para realizar o ataque não suporta a banda de 5Ghz. O ataque não pode ser realizado"
 	arr["RUSSIAN",519]="Вы выбрали целевую сеть на 5Ghz и \"режим преследования DoS\", но второй интерфейс, необходимый для выполнения атаки, не поддерживает полосу 5Ghz, поэтому атака не может быть выполнена"
