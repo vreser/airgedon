@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180208
+#Date.........: 20180213
 #Version......: 8.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -7616,6 +7616,11 @@ function kill_dos_pursuit_mode_processes() {
 		kill -9 "${item}" &> /dev/null
 		wait "${item}" 2>/dev/null
 	done
+
+	if ! stty sane > /dev/null 2>&1; then
+		reset > /dev/null 2>&1
+	fi
+	sleep 1
 }
 
 #Set current channel reading it from file
