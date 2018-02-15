@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180213
+#Date.........: 20180215
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -700,7 +700,7 @@ function language_strings() {
 	arr["ITALIAN",22]="È stato impostato il modo monitor in ${current_iface_on_messages}"
 	arr["POLISH",22]="Tryb monitorowania został ustawiony na ${current_iface_on_messages}"
 
-	arr["ENGLISH",23]="There is a problem with the interface selected. Redirecting you to script exit"
+	arr["ENGLISH",23]="There is a problem with the selected interface. Redirecting you to script exit"
 	arr["SPANISH",23]="Hay un problema con la interfaz seleccionada. Redirigiendo a la salida del script"
 	arr["FRENCH",23]="Il y a un problème avec l'interface choisie. Vous allez être dirigés vers la sortie du script"
 	arr["CATALAN",23]="Hi ha un problema amb la interfície seleccionada. Redirigint cap a la sortida del script"
