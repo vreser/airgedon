@@ -3,7 +3,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180212
+#Date.........: 20180218
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -1359,7 +1359,7 @@ function language_strings() {
 	arr["GREEK",76]="Επιλέχθηκε άκυρη επιλογή μενού"
 	arr["ITALIAN",76]="Opzione del menú non valida"
 	arr["POLISH",76]="Niewłaściwa opcja"
-	arr["GERMAN",76]="${pending_of_translation} "
+	arr["GERMAN",76]="${pending_of_translation} Ungültige Menüoption"
 
 	arr["ENGLISH",77]="Invalid interface was chosen"
 	arr["SPANISH",77]="Interfaz no válida"
@@ -1370,7 +1370,7 @@ function language_strings() {
 	arr["GREEK",77]="Επιλέχθηκε άκυρη διεπαφή"
 	arr["ITALIAN",77]="Interfaccia non valida"
 	arr["POLISH",77]="Nieprawidłowy interfejs"
-	arr["GERMAN",77]="${pending_of_translation} "
+	arr["GERMAN",77]="${pending_of_translation} Ungültige Schnittstelle"
 
 	arr["ENGLISH",78]="1.  Change language"
 	arr["SPANISH",78]="1.  Cambiar idioma"
@@ -1381,7 +1381,7 @@ function language_strings() {
 	arr["GREEK",78]="1.  Αλλαγή γλώσσας"
 	arr["ITALIAN",78]="1.  Cambiare la lingua"
 	arr["POLISH",78]="1.  Zmień język"
-	arr["GERMAN",78]="${pending_of_translation} "
+	arr["GERMAN",78]="${pending_of_translation} 1.  Sprache ändern"
 
 	arr["ENGLISH",79]="1.  English"
 	arr["SPANISH",79]="1.  Inglés"
@@ -1392,7 +1392,7 @@ function language_strings() {
 	arr["GREEK",79]="1.  Αγγλικά"
 	arr["ITALIAN",79]="1.  Inglese"
 	arr["POLISH",79]="1.  Angielski"
-	arr["GERMAN",79]="${pending_of_translation} "
+	arr["GERMAN",79]="${pending_of_translation} 1.  Englisch"
 
 	arr["ENGLISH",80]="2.  Spanish"
 	arr["SPANISH",80]="2.  Español"
@@ -1403,7 +1403,7 @@ function language_strings() {
 	arr["GREEK",80]="2.  Ισπανικά"
 	arr["ITALIAN",80]="2.  Spagnolo"
 	arr["POLISH",80]="2.  Hiszpański"
-	arr["GERMAN",80]="${pending_of_translation} "
+	arr["GERMAN",80]="${pending_of_translation} 2.  Spanisch"
 
 	arr["ENGLISH",81]="Select a language:"
 	arr["SPANISH",81]="Selecciona un idioma:"
@@ -1414,7 +1414,7 @@ function language_strings() {
 	arr["GREEK",81]="Επιλέξτε μία γλώσσα:"
 	arr["ITALIAN",81]="Scegli una lingua:"
 	arr["POLISH",81]="Wybierz język:"
-	arr["GERMAN",81]="${pending_of_translation} "
+	arr["GERMAN",81]="${pending_of_translation} Wählen Sie eine Sprache:"
 
 	arr["ENGLISH",82]="Invalid language was chosen"
 	arr["SPANISH",82]="Idioma no válido"
@@ -1425,7 +1425,7 @@ function language_strings() {
 	arr["GREEK",82]="Επιλέχθηκε άκυρη γλώσσα"
 	arr["ITALIAN",82]="Lingua non valida"
 	arr["POLISH",82]="Nieprawidłowy język"
-	arr["GERMAN",82]="${pending_of_translation} "
+	arr["GERMAN",82]="${pending_of_translation} Ungültige Sprache"
 
 	arr["ENGLISH",83]="Language changed to English"
 	arr["SPANISH",83]="Idioma cambiado a Inglés"
@@ -1436,7 +1436,7 @@ function language_strings() {
 	arr["GREEK",83]="Η γλώσσα άλλαξε στα Αγγλικά"
 	arr["ITALIAN",83]="Lingua cambiata in Inglese"
 	arr["POLISH",83]="Zmieniono język na Angielski"
-	arr["GERMAN",83]="${pending_of_translation} "
+	arr["GERMAN",83]="${pending_of_translation} Die Sprache wurde auf Englisch geändert"
 
 	arr["ENGLISH",84]="Language changed to Spanish"
 	arr["SPANISH",84]="Idioma cambiado a Español"
@@ -1447,7 +1447,7 @@ function language_strings() {
 	arr["GREEK",84]="Η γλώσσα άλλαξε στα Ισπανικά"
 	arr["ITALIAN",84]="Lingua cambiata in Spagnolo"
 	arr["POLISH",84]="Zmieniono język na Hiszpański"
-	arr["GERMAN",84]="${pending_of_translation} "
+	arr["GERMAN",84]="${pending_of_translation} Die Sprache wurde in Spanisch geändert"
 
 	arr["ENGLISH",85]="Send me bugs or suggestions to ${normal_color}${mail}"
 	arr["SPANISH",85]="Enviadme errores o sugerencias a ${normal_color}${mail}"
@@ -1458,7 +1458,7 @@ function language_strings() {
 	arr["GREEK",85]="Στείλτε μου αναφορές για bugs ή συστάσεις στο ${normal_color}${mail}"
 	arr["ITALIAN",85]="Inviatemi errori o suggerimenti a ${normal_color}${mail}"
 	arr["POLISH",85]="Wyślij mi błędy lub sugestie na ${normal_color}${mail}"
-	arr["GERMAN",85]="${pending_of_translation} "
+	arr["GERMAN",85]="${pending_of_translation} Senden Sie mir Fehler oder Vorschläge zu ${normal_color}${mail}"
 
 	arr["ENGLISH",86]="Welcome"
 	arr["SPANISH",86]="Bienvenid@"
@@ -1469,7 +1469,7 @@ function language_strings() {
 	arr["GREEK",86]="Καλως ορίσατε"
 	arr["ITALIAN",86]="Benvenuti"
 	arr["POLISH",86]="Witaj"
-	arr["GERMAN",86]="${pending_of_translation} "
+	arr["GERMAN",86]="${pending_of_translation} Willkommen"
 
 	arr["ENGLISH",87]="Change language"
 	arr["SPANISH",87]="Cambiar idioma"
@@ -1480,7 +1480,7 @@ function language_strings() {
 	arr["GREEK",87]="Αλλάξτε γλώσσα"
 	arr["ITALIAN",87]="Cambia la lingua"
 	arr["POLISH",87]="Zmień język"
-	arr["GERMAN",87]="${pending_of_translation} "
+	arr["GERMAN",87]="${pending_of_translation} Sprache ändern"
 
 	arr["ENGLISH",88]="Interface selection"
 	arr["SPANISH",88]="Selección de interfaz"
@@ -1491,7 +1491,7 @@ function language_strings() {
 	arr["GREEK",88]="Επιλογή διεπαφής"
 	arr["ITALIAN",88]="Selezione dell'interfaccia"
 	arr["POLISH",88]="Wybór interfejsu"
-	arr["GERMAN",88]="${pending_of_translation} "
+	arr["GERMAN",88]="${pending_of_translation} Schnittstellenauswahl"
 
 	arr["ENGLISH",89]="Mdk3 amok action"
 	arr["SPANISH",89]="Acción mdk3 amok"
@@ -1502,7 +1502,7 @@ function language_strings() {
 	arr["GREEK",89]="Ενέργεια mdk3 amok"
 	arr["ITALIAN",89]="Azione mdk3 amok"
 	arr["POLISH",89]="Akcja mdk3 amok"
-	arr["GERMAN",89]="${pending_of_translation} "
+	arr["GERMAN",89]="${pending_of_translation} Aktion mdk3 amok"
 
 	arr["ENGLISH",90]="Aireplay deauth action"
 	arr["SPANISH",90]="Acción aireplay deauth"
@@ -1513,7 +1513,7 @@ function language_strings() {
 	arr["GREEK",90]="Ενέργεια aireplay deauth"
 	arr["ITALIAN",90]="Azione aireplay deauth"
 	arr["POLISH",90]="Akcja aireplay deauth"
-	arr["GERMAN",90]="${pending_of_translation} "
+	arr["GERMAN",90]="${pending_of_translation} Aktion aireplay deauth"
 
 	arr["ENGLISH",91]="WIDS / WIPS / WDS confusion action"
 	arr["SPANISH",91]="Acción WIDS / WIPS / WDS confusion"
@@ -1524,7 +1524,7 @@ function language_strings() {
 	arr["GREEK",91]="Ενέργεια σύγχυσης WIDS / WIPS / WDS"
 	arr["ITALIAN",91]="Azione WIDS / WIPS / WDS confusion"
 	arr["POLISH",91]="Akcja WIDS / WIPS / WDS confusion"
-	arr["GERMAN",91]="${pending_of_translation} "
+	arr["GERMAN",91]="${pending_of_translation} Aktion WIDS / WIPS / WDS confusion"
 
 	arr["ENGLISH",92]="Beacon flood action"
 	arr["SPANISH",92]="Acción Beacon flood"
@@ -1535,7 +1535,7 @@ function language_strings() {
 	arr["GREEK",92]="Ενέργεια πλημμυρίσματος φάρου"
 	arr["ITALIAN",92]="Azione Beacon flood"
 	arr["POLISH",92]="Akcja Beacon flood"
-	arr["GERMAN",92]="${pending_of_translation} "
+	arr["GERMAN",92]="${pending_of_translation} Aktion Beacon flood"
 
 	arr["ENGLISH",93]="Auth DoS action"
 	arr["SPANISH",93]="Acción Auth DoS"
@@ -1546,7 +1546,7 @@ function language_strings() {
 	arr["GREEK",93]="Ενέργεια Auth DoS"
 	arr["ITALIAN",93]="Azione Auth DoS"
 	arr["POLISH",93]="Akcja Auth DoS"
-	arr["GERMAN",93]="${pending_of_translation} "
+	arr["GERMAN",93]="${pending_of_translation} Aktion Auth DoS"
 
 	arr["ENGLISH",94]="Michael Shutdown action"
 	arr["SPANISH",94]="Acción Michael Shutdown"
@@ -1557,7 +1557,7 @@ function language_strings() {
 	arr["GREEK",94]="Ενέργεια Michael Shutdown"
 	arr["ITALIAN",94]="Azione Michael Shutdown"
 	arr["POLISH",94]="Akcja Michael Shutdown"
-	arr["GERMAN",94]="${pending_of_translation} "
+	arr["GERMAN",94]="${pending_of_translation} Aktion Michael Shutdown"
 
 	arr["ENGLISH",95]="Mdk3 amok parameters"
 	arr["SPANISH",95]="Parámetros Mdk3 amok"
@@ -1568,7 +1568,7 @@ function language_strings() {
 	arr["GREEK",95]="Παράμετροι Mdk3 amok"
 	arr["ITALIAN",95]="Parametri Mdk3 amok"
 	arr["POLISH",95]="Parametry Mdk3 amok"
-	arr["GERMAN",95]="${pending_of_translation} "
+	arr["GERMAN",95]="${pending_of_translation} Parameter Mdk3 amok"
 
 	arr["ENGLISH",96]="Aireplay deauth parameters"
 	arr["SPANISH",96]="Parámetros Aireplay deauth"
@@ -1579,7 +1579,7 @@ function language_strings() {
 	arr["GREEK",96]="Παράμετροι Aireplay deauth"
 	arr["ITALIAN",96]="Parametri Aireplay deauth"
 	arr["POLISH",96]="Parametry Aireplay deauth"
-	arr["GERMAN",96]="${pending_of_translation} "
+	arr["GERMAN",96]="${pending_of_translation} Parameter Aireplay deauth"
 
 	arr["ENGLISH",97]="WIDS / WIPS / WDS parameters"
 	arr["SPANISH",97]="Parámetros WIDS / WIPS / WDS"
@@ -1590,7 +1590,7 @@ function language_strings() {
 	arr["GREEK",97]="Παράμετροι WIDS / WIPS / WDS"
 	arr["ITALIAN",97]="Parametri WIDS / WIPS / WDS"
 	arr["POLISH",97]="Parametry WIDS / WIPS / WDS"
-	arr["GERMAN",97]="${pending_of_translation} "
+	arr["GERMAN",97]="${pending_of_translation} Parameter WIDS / WIPS / WDS"
 
 	arr["ENGLISH",98]="Beacon flood parameters"
 	arr["SPANISH",98]="Parámetros Beacon flood"
@@ -1601,7 +1601,7 @@ function language_strings() {
 	arr["GREEK",98]="Παράμετροι πλημμυρίσματος φάρου"
 	arr["ITALIAN",98]="Parametri Beacon flood"
 	arr["POLISH",98]="Parametry Beacon flood"
-	arr["GERMAN",98]="${pending_of_translation} "
+	arr["GERMAN",98]="${pending_of_translation} Parameter Beacon flood"
 
 	arr["ENGLISH",99]="Auth DoS parameters"
 	arr["SPANISH",99]="Parámetros Auth DoS"
@@ -1612,7 +1612,7 @@ function language_strings() {
 	arr["GREEK",99]="Παράμετροι Auth DoS"
 	arr["ITALIAN",99]="Parametri Auth DoS"
 	arr["POLISH",99]="Parametry Auth DoS"
-	arr["GERMAN",99]="${pending_of_translation} "
+	arr["GERMAN",99]="${pending_of_translation} Parameter Auth DoS"
 
 	arr["ENGLISH",100]="Michael Shutdown parameters"
 	arr["SPANISH",100]="Parámetros Michael Shutdown"
@@ -1623,7 +1623,7 @@ function language_strings() {
 	arr["GREEK",100]="Παράμετροι Michael Shutdown"
 	arr["ITALIAN",100]="Parametri Michael Shutdown"
 	arr["POLISH",100]="Parametry Michael Shutdown"
-	arr["GERMAN",100]="${pending_of_translation} "
+	arr["GERMAN",100]="${pending_of_translation} Parameter Michael Shutdown"
 
 	arr["ENGLISH",101]="airgeddon main menu"
 	arr["SPANISH",101]="Menú principal airgeddon"
@@ -1634,7 +1634,7 @@ function language_strings() {
 	arr["GREEK",101]="Αρχικό μενού airgeddon"
 	arr["ITALIAN",101]="Menú principale airgeddon"
 	arr["POLISH",101]="Menu główne airgeddon"
-	arr["GERMAN",101]="${pending_of_translation} "
+	arr["GERMAN",101]="${pending_of_translation} Hauptmenü airgeddon"
 
 	arr["ENGLISH",102]="DoS attacks menu"
 	arr["SPANISH",102]="Menú ataques DoS"
@@ -1645,7 +1645,7 @@ function language_strings() {
 	arr["GREEK",102]="Μενού επιθέσεων DoS"
 	arr["ITALIAN",102]="Menú attacchi DoS"
 	arr["POLISH",102]="Menu ataków DoS"
-	arr["GERMAN",102]="${pending_of_translation} "
+	arr["GERMAN",102]="${pending_of_translation} DoS-Angriffsmenü"
 
 	arr["ENGLISH",103]="Exploring for targets"
 	arr["SPANISH",103]="Explorar para buscar objetivos"
@@ -1656,7 +1656,7 @@ function language_strings() {
 	arr["GREEK",103]="Εξερεύνηση στόχων"
 	arr["ITALIAN",103]="Scansionare per cercare obiettivi"
 	arr["POLISH",103]="Skanowanie w poszukiwaniu celów"
-	arr["GERMAN",103]="${pending_of_translation} "
+	arr["GERMAN",103]="${pending_of_translation} Erkunde, um Ziele zu finden"
 
 	arr["ENGLISH",104]="Select target"
 	arr["SPANISH",104]="Seleccionar objetivo"
@@ -1667,7 +1667,7 @@ function language_strings() {
 	arr["GREEK",104]="Επιλέξτε στόχο"
 	arr["ITALIAN",104]="Selezionare obiettivo"
 	arr["POLISH",104]="Wybierz cel"
-	arr["GERMAN",104]="${pending_of_translation} "
+	arr["GERMAN",104]="${pending_of_translation} Wähle das Ziel aus"
 
 	arr["ENGLISH",105]="About & Credits"
 	arr["SPANISH",105]="Acerca de & Créditos"
@@ -1678,7 +1678,7 @@ function language_strings() {
 	arr["GREEK",105]="Σχετικά με & Εύσυμα"
 	arr["ITALIAN",105]="Informazioni & Crediti"
 	arr["POLISH",105]="Informacje & Podziękowania"
-	arr["GERMAN",105]="${pending_of_translation} "
+	arr["GERMAN",105]="${pending_of_translation} Über & Credits"
 
 	arr["ENGLISH",106]="Exiting"
 	arr["SPANISH",106]="Saliendo"
@@ -1689,7 +1689,7 @@ function language_strings() {
 	arr["GREEK",106]="Γίνεται έξοδος"
 	arr["ITALIAN",106]="Uscendo"
 	arr["POLISH",106]="Wychodzenie"
-	arr["GERMAN",106]="${pending_of_translation} "
+	arr["GERMAN",106]="${pending_of_translation} Verlassen"
 
 	arr["ENGLISH",107]="Join the project at ${normal_color}${urlgithub}"
 	arr["SPANISH",107]="Únete al proyecto en ${normal_color}${urlgithub}"
@@ -1700,7 +1700,7 @@ function language_strings() {
 	arr["GREEK",107]="Συμμετέχετε στο project ${normal_color}${urlgithub}"
 	arr["ITALIAN",107]="Unisciti al progetto in ${normal_color}${urlgithub}"
 	arr["POLISH",107]="Dołącz do projektu w ${normal_color}${urlgithub}"
-	arr["GERMAN",107]="${pending_of_translation} "
+	arr["GERMAN",107]="${pending_of_translation} Treten Sie dem Projekt in ${normal_color}${urlgithub} bei"
 
 	arr["ENGLISH",108]="Let's check if you have installed what script needs"
 	arr["SPANISH",108]="Vamos a chequear si tienes instalado lo que el script requiere"
@@ -1711,7 +1711,7 @@ function language_strings() {
 	arr["GREEK",108]="Ας ελέγξουμε αν έχετε εγκαταστήσει ό,τι χρειάζεται το script"
 	arr["ITALIAN",108]="Andiamo a verificare se è stato installato quello che richiede lo script"
 	arr["POLISH",108]="Sprawdźmy czy jest zainstalowane to, czego wymaga skrypt"
-	arr["GERMAN",108]="${pending_of_translation} "
+	arr["GERMAN",108]="${pending_of_translation} Lassen Sie uns überprüfen, ob Sie installiert haben, was das Skript benötigt"
 
 	arr["ENGLISH",109]="Essential tools: checking..."
 	arr["SPANISH",109]="Herramientas esenciales: comprobando..."
@@ -1722,7 +1722,7 @@ function language_strings() {
 	arr["GREEK",109]="Απαραίτητα εργαλεία: γίνεται έλεγχος..."
 	arr["ITALIAN",109]="Strumenti essenziali: controllando..."
 	arr["POLISH",109]="Podstawowe narzędzia: sprawdzanie..."
-	arr["GERMAN",109]="${pending_of_translation} "
+	arr["GERMAN",109]="${pending_of_translation} Wesentliche Werkzeuge: Überprüfung..."
 
 	arr["ENGLISH",110]="Your distro has all necessary essential tools. Script can continue..."
 	arr["SPANISH",110]="Tu distro tiene todas las herramientas esenciales necesarias. El script puede continuar..."
@@ -1733,7 +1733,7 @@ function language_strings() {
 	arr["GREEK",110]="Η διανομή σας έχει όλα τα απαραίτητα εργαλεία. Το script μπορεί να συνεχίσει..."
 	arr["ITALIAN",110]="La tua distro ha tutti gli strumenti essenziali necessari. Lo script può continuare..."
 	arr["POLISH",110]="Twój distro posiada wszystkie niezbędne niezbędne narzędzia. Skrypt może kontynuować..."
-	arr["GERMAN",110]="${pending_of_translation} "
+	arr["GERMAN",110]="${pending_of_translation} Ihre Distribution verfügt über alle notwendigen Werkzeuge. Das Skript kann fortfahren..."
 
 	arr["ENGLISH",111]="You need to install some essential tools before running this script"
 	arr["SPANISH",111]="Necesitas instalar algunas herramientas esenciales antes de lanzar este script"
@@ -1744,7 +1744,7 @@ function language_strings() {
 	arr["GREEK",111]="Χρειάζεται να εγκαταστήσετε κάποια απαραίτητα εργαλεία πριν τρέξετε το script"
 	arr["ITALIAN",111]="È necessario installare alcuni strumenti essenziali prima di lanciare questo script"
 	arr["POLISH",111]="Przed uruchomieniem tego skryptu musisz zainstalować kilka niezbędnych narzędzi"
-	arr["GERMAN",111]="${pending_of_translation} "
+	arr["GERMAN",111]="${pending_of_translation} Sie müssen einige wichtige Tools installieren, bevor Sie dieses Skript starten"
 
 	arr["ENGLISH",112]="Language changed to French"
 	arr["SPANISH",112]="Idioma cambiado a Francés"
@@ -1755,7 +1755,7 @@ function language_strings() {
 	arr["GREEK",112]="Η γλώσσα άλλαξε στα Γαλλικά"
 	arr["ITALIAN",112]="Lingua cambiata in Francese"
 	arr["POLISH",112]="Zmieniono język na Francuski"
-	arr["GERMAN",112]="${pending_of_translation} "
+	arr["GERMAN",112]="${pending_of_translation} Sprache wurde auf Französisch geändert"
 
 	arr["ENGLISH",113]="3.  French"
 	arr["SPANISH",113]="3.  Francés"
@@ -1766,7 +1766,7 @@ function language_strings() {
 	arr["GREEK",113]="3.  Γαλλικά"
 	arr["ITALIAN",113]="3.  Francese"
 	arr["POLISH",113]="3.  Francuski"
-	arr["GERMAN",113]="${pending_of_translation} "
+	arr["GERMAN",113]="${pending_of_translation} 3.  Französisch"
 
 	arr["ENGLISH",114]="Use it only on your own networks!!"
 	arr["SPANISH",114]="Utilízalo solo en tus propias redes!!"
@@ -1777,7 +1777,7 @@ function language_strings() {
 	arr["GREEK",114]="Χρησιμοποιήστε το μόνο σε δικά σας δίκτυα!!"
 	arr["ITALIAN",114]="Usalo solo nelle tue reti!!"
 	arr["POLISH",114]="Używaj tylko we własnych sieciach!!"
-	arr["GERMAN",114]="${pending_of_translation} "
+	arr["GERMAN",114]="${pending_of_translation} Verwenden Sie es nur in Ihren eigenen Netzwerken!!"
 
 	arr["ENGLISH",115]="Press [Enter] key to continue..."
 	arr["SPANISH",115]="Pulsa la tecla [Enter] para continuar..."
@@ -1788,7 +1788,7 @@ function language_strings() {
 	arr["GREEK",115]="Πατήστε το κουμπί [Enter] για να συνεχίσετε..."
 	arr["ITALIAN",115]="Premere il tasto [Enter] per continuare..."
 	arr["POLISH",115]="Naciśnij klawisz [Enter], aby kontynuować..."
-	arr["GERMAN",115]="${pending_of_translation} "
+	arr["GERMAN",115]="${pending_of_translation} Drücken Sie die [Enter]-Taste, um fortzufahren..."
 
 	arr["ENGLISH",116]="4.  Catalan"
 	arr["SPANISH",116]="4.  Catalán"
@@ -1799,7 +1799,7 @@ function language_strings() {
 	arr["GREEK",116]="4.  Καταλανικά"
 	arr["ITALIAN",116]="4.  Catalano"
 	arr["POLISH",116]="4.  Kataloński"
-	arr["GERMAN",116]="${pending_of_translation} "
+	arr["GERMAN",116]="${pending_of_translation} 4.  Katalanisch"
 
 	arr["ENGLISH",117]="Language changed to Catalan"
 	arr["SPANISH",117]="Idioma cambiado a Catalán"
@@ -1810,7 +1810,7 @@ function language_strings() {
 	arr["GREEK",117]="Η γλώσσα άλλαξε στα Καταλανικά"
 	arr["ITALIAN",117]="Lingua cambiata in Catalano"
 	arr["POLISH",117]="Zmieniono język na Kataloński"
-	arr["GERMAN",117]="${pending_of_translation} "
+	arr["GERMAN",117]="${pending_of_translation} Die Sprache wurde auf Katalanisch geändert"
 
 	arr["ENGLISH",118]="4.  DoS attacks menu"
 	arr["SPANISH",118]="4.  Menú de ataques DoS"
@@ -1821,7 +1821,7 @@ function language_strings() {
 	arr["GREEK",118]="4.  Μενού επιθέσεων DoS"
 	arr["ITALIAN",118]="4.  Menù attacchi DoS"
 	arr["POLISH",118]="4.  Menu ataków DoS"
-	arr["GERMAN",118]="${pending_of_translation} "
+	arr["GERMAN",118]="${pending_of_translation} 4.  DoS-Angriffsmenü"
 
 	arr["ENGLISH",119]="5.  Handshake tools menu"
 	arr["SPANISH",119]="5.  Menú de herramientas Handshake"
@@ -1832,7 +1832,7 @@ function language_strings() {
 	arr["GREEK",119]="5.  Μενού εργαλειών Χειραψίας"
 	arr["ITALIAN",119]="5.  Menù degli strumenti Handshake"
 	arr["POLISH",119]="5.  Menu narzędzi Handshake"
-	arr["GERMAN",119]="${pending_of_translation} "
+	arr["GERMAN",119]="${pending_of_translation} 5.  Handshake-Tools-Menü"
 
 	arr["ENGLISH",120]="Handshake tools menu"
 	arr["SPANISH",120]="Menú de herramientas Handshake"
@@ -1843,7 +1843,7 @@ function language_strings() {
 	arr["GREEK",120]="Μενού εργαλειών Χειραψίας"
 	arr["ITALIAN",120]="Menù degli strumenti Handshake"
 	arr["POLISH",120]="Menu narzędzi Handshake"
-	arr["GERMAN",120]="${pending_of_translation} "
+	arr["GERMAN",120]="${pending_of_translation} Handshake-Tools-Menü"
 
 	arr["ENGLISH",121]="5.  Capture Handshake"
 	arr["SPANISH",121]="5.  Capturar Handshake"
@@ -1854,7 +1854,7 @@ function language_strings() {
 	arr["GREEK",121]="5.  Καταγράψτε την Χειραψία"
 	arr["ITALIAN",121]="5.  Catturare Handshake"
 	arr["POLISH",121]="5.  Przechwyć Handshake"
-	arr["GERMAN",121]="${pending_of_translation} "
+	arr["GERMAN",121]="${pending_of_translation} 5.  Capture Handshake"
 
 	arr["ENGLISH",122]="6.  Clean/optimize Handshake file"
 	arr["SPANISH",122]="6.  Limpiar/optimizar fichero de Handshake"
@@ -1865,7 +1865,7 @@ function language_strings() {
 	arr["GREEK",122]="6.  Καθαρισμός/βελτιστοποίηση του αρχείου Χειραψίας"
 	arr["ITALIAN",122]="6.  Pulire/ottimizzare file Handshake"
 	arr["POLISH",122]="6.  Oczyść/zoptymalizuj plik Handshake"
-	arr["GERMAN",122]="${pending_of_translation} "
+	arr["GERMAN",122]="${pending_of_translation} 6.  Bereinigen/optimieren Sie die Handshake-Datei"
 
 	arr["ENGLISH",123]="7.  Return to main menu"
 	arr["SPANISH",123]="7.  Volver al menú principal"
@@ -1876,7 +1876,7 @@ function language_strings() {
 	arr["GREEK",123]="7.  Επιστροφή στο αρχικό μενού"
 	arr["ITALIAN",123]="7.  Tornare al menu principale"
 	arr["POLISH",123]="7.  Wróć do menu głównego"
-	arr["GERMAN",123]="${pending_of_translation} "
+	arr["GERMAN",123]="${pending_of_translation} 7.  Kehre zum Hauptmenü zurück"
 
 	arr["ENGLISH",124]="monitor mode needed for capturing"
 	arr["SPANISH",124]="modo monitor requerido en captura"
@@ -1887,7 +1887,7 @@ function language_strings() {
 	arr["GREEK",124]="χρειάζεται η κατάσταση παρακολούθησης για την καταγραφή"
 	arr["ITALIAN",124]="modo monitor richesto per la cattura"
 	arr["POLISH",124]="aby przechwytywać wymagany jest tryb monitorowania"
-	arr["GERMAN",124]="${pending_of_translation} "
+	arr["GERMAN",124]="${pending_of_translation} Monitor-Modus für die Erfassung erforderlich"
 
 	arr["ENGLISH",125]="There is no valid target network selected. You'll be redirected to select one"
 	arr["SPANISH",125]="No hay una red objetivo válida seleccionada. Serás redirigido para seleccionar una"
@@ -1898,7 +1898,7 @@ function language_strings() {
 	arr["GREEK",125]="Δεν έχει επιλεχθεί κάποιο έγκυρο δίκτυο-στόχος. Θα καθοδηγηθείτε ώστε να επιλέξετε ένα"
 	arr["ITALIAN",125]="Nessuna rete valida selezionata come obiettivo. Sarai reindirizzato per selezionarne una"
 	arr["POLISH",125]="Nie wybrano prawidłowej sieci docelowej. Zostaniesz przekierowany, aby ją wybrać"
-	arr["GERMAN",125]="${pending_of_translation} "
+	arr["GERMAN",125]="${pending_of_translation} Es ist kein gültiges objektives Netzwerk ausgewählt. Sie werden weitergeleitet, um a auszuwählen"
 
 	arr["ENGLISH",126]="You have a valid WPA/WPA2 target network selected. Script can continue..."
 	arr["SPANISH",126]="Tienes una red objetivo WPA/WPA2 válida seleccionada. El script puede continuar..."
