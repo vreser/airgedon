@@ -130,6 +130,7 @@ RUN rm -rf /opt/airgeddon/imgs > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/.github > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/.editorconfig > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/CONTRIBUTING.md > /dev/null 2>&1 && \
+	rm -rf /opt/airgeddon/CODE_OF_CONDUCT.md > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/pindb_checksum.txt > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/Dockerfile > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/binaries > /dev/null 2>&1 && \
