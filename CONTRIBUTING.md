@@ -21,7 +21,7 @@ Please note we have a [Code of Conduct], please follow it in all your interactio
 ## Collaborating Developers
 
 1. Tweak *"debug_mode"* variable to "1" for faster development skipping intro and initial checks or to "2" for verbosity and the skips mentioned before.
-2. Respect the **2 width tab indentation**, code style and the **UTF-8 encoding**.
+2. Respect the **4 width tab indentation**, code style and the **UTF-8 encoding**.
 3. Use **LF** (Unix) line break type (not CR or CRLF).
 4. Use [Shellcheck] to search for errors and warnings on code. (Thanks [xtonousou] for the tip :wink:). To avoid false positive warnings you must launch shellcheck using `-x` argument to follow source files and from the directory where `airgeddon.sh` is. For example: `cd /path/to/airgeddon && shellcheck -x airgeddon.sh`
 5. Increase the version numbers in `airgeddon.sh`, in [Readme] and in [Changelog] to the new version that the script represents. The versioning scheme we use is *X.YZ*. Where:
