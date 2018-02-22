@@ -1,3 +1,6 @@
+### 8.01
+ - Filters enabled on scannings based on menu or kind of attack
+
 ### 8.0
  - Added 5Ghz full support (scans, attacks, card detection, etc.)
  - Tested compatibility with Kali 2018.1, BlackArch 2017.12.11, Fedora 27, Gentoo 20180206, OpenSUSE 42.3 and Parrot 3.10

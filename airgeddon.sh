@@ -2723,7 +2723,7 @@ function set_wep_script() {
 		}
 
 		wep_script_processes=()
-		xterm -bg black -fg white -geometry "${g5_topright_window}" -T "Capturing WEP Data" -e "airodump-ng -d ${bssid} -c ${channel} -w \"${tmpdir}${wep_data}\" ${interface}" > /dev/null 2>&1 &
+		xterm -bg black -fg white -geometry "${g5_topright_window}" -T "Capturing WEP Data" -e "airodump-ng -d ${bssid} -c ${channel} --encrypt WEP -w \"${tmpdir}${wep_data}\" ${interface}" > /dev/null 2>&1 &
 	EOF
 
 	cat >&6 <<-'EOF'
@@ -3521,7 +3521,7 @@ function wep_option() {
 		echo
 		language_strings "${language}" 125 "yellow"
 		language_strings "${language}" 115 "read"
-		if ! explore_for_targets_option; then
+		if ! explore_for_targets_option "WEP"; then
 			return 1
 		fi
 	fi
@@ -4329,7 +4329,7 @@ function evil_twin_attacks_menu() {
 					language_strings "${language}" 316 "yellow"
 					language_strings "${language}" 115 "read"
 
-					if explore_for_targets_option; then
+					if explore_for_targets_option "WPA"; then
 						et_dos_menu
 					fi
 				else
@@ -4856,7 +4856,7 @@ function wep_attacks_menu() {
 			managed_option "${interface}"
 		;;
 		4)
-			explore_for_targets_option
+			explore_for_targets_option "WEP"
 		;;
 		5)
 			if contains_element "${wep_option}" "${forbidden_options[@]}"; then
@@ -7726,7 +7726,7 @@ function handshake_tools_menu() {
 			managed_option "${interface}"
 		;;
 		4)
-			explore_for_targets_option
+			explore_for_targets_option "WPA"
 		;;
 		5)
 			capture_handshake
@@ -7966,7 +7966,7 @@ function capture_handshake() {
 		echo
 		language_strings "${language}" 125 "yellow"
 		language_strings "${language}" 115 "read"
-		if ! explore_for_targets_option; then
+		if ! explore_for_targets_option "WPA"; then
 			return 1
 		fi
 	fi
@@ -8336,7 +8336,22 @@ function explore_for_targets_option() {
 	echo
 	language_strings "${language}" 66 "yellow"
 	echo
-	language_strings "${language}" 67 "yellow"
+
+	local cypher_filter
+	if [ -n "${1}" ]; then
+		cypher_filter="${1}"
+		case ${cypher_filter} in
+			"WEP")
+				language_strings "${language}" 67 "yellow"
+			;;
+			"WPA")
+				language_strings "${language}" 523 "yellow"
+			;;
+		esac
+	else
+		cypher_filter=""
+		language_strings "${language}" 522 "yellow"
+	fi
 	language_strings "${language}" 115 "read"
 
 	tmpfiles_toclean=1
@@ -8350,7 +8365,7 @@ function explore_for_targets_option() {
 	fi
 
 	recalculate_windows_sizes
-	xterm +j -bg black -fg white -geometry "${g1_topright_window}" -T "Exploring for targets" -e airodump-ng -w "${tmpdir}nws" "${interface}" --band "${airodump_band_modifier}" > /dev/null 2>&1
+	xterm +j -bg black -fg white -geometry "${g1_topright_window}" -T "Exploring for targets" -e airodump-ng -w "${tmpdir}nws" --encrypt "${cypher_filter}" "${interface}" --band "${airodump_band_modifier}" > /dev/null 2>&1
 	targetline=$(awk '/(^Station[s]?|^Client[es]?)/{print NR}' < "${tmpdir}nws-01.csv")
 	targetline=$((targetline - 1))
 
@@ -8443,7 +8458,7 @@ function explore_for_wps_targets_option() {
 	fi
 
 	echo
-	language_strings "${language}" 67 "yellow"
+	language_strings "${language}" 521 "yellow"
 	language_strings "${language}" 115 "read"
 
 	tmpfiles_toclean=1
