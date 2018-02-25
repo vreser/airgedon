@@ -90,7 +90,7 @@
  - Spoofed MAC addresses restored on exit
 
 ### 6.1
- - Network selection menues now colorized
+ - Network selection menus now colorized
  - Language strings now in a separated file for easy handling and translating
  - Validation and self-downloading system for new language strings file
 
