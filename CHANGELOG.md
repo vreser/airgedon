@@ -1,6 +1,7 @@
 ### 8.01
  - Filters enabled on scannings based on menu or kind of attack
  - WPS PIN database now updates on startup updates too
+ - Return option now always at position 0 on all menus
 
 ### 8.0
  - Added 5Ghz full support (scans, attacks, card detection, etc.)

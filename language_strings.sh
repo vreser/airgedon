@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180222
+#Date.........: 20180225
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -24,6 +24,8 @@ function language_strings() {
 	if [[ "$(declare -p wps_data_array 2> /dev/null)" != "declare -A"* ]]; then
 		declare -gA wps_data_array
 	fi
+
+	#TODO clean or reuse strings 123, 174, 260, 331, 361, 411
 
 	declare -A unknown_chipset
 	unknown_chipset["ENGLISH"]="Unknown"
@@ -1060,15 +1062,15 @@ function language_strings() {
 	arr["ITALIAN",58]="9.  Polacco"
 	arr["POLISH",58]="9.  Polski"
 
-	arr["ENGLISH",59]="11. Return to main menu"
-	arr["SPANISH",59]="11. Volver al menú principal"
-	arr["FRENCH",59]="11. Retourner au menu principal"
-	arr["CATALAN",59]="11. Tornar al menú principal"
-	arr["PORTUGUESE",59]="11. Voltar ao menu principal"
-	arr["RUSSIAN",59]="11. Вернуться в главное меню"
-	arr["GREEK",59]="11. Επιστροφή στο αρχικό μενού"
-	arr["ITALIAN",59]="11. Torna al menu principale"
-	arr["POLISH",59]="11. Wróć do menu głównego"
+	arr["ENGLISH",59]="0.  Return to main menu"
+	arr["SPANISH",59]="0.  Volver al menú principal"
+	arr["FRENCH",59]="0.  Retourner au menu principal"
+	arr["CATALAN",59]="0.  Tornar al menú principal"
+	arr["PORTUGUESE",59]="0.  Voltar ao menu principal"
+	arr["RUSSIAN",59]="0.  Вернуться в главное меню"
+	arr["GREEK",59]="0.  Επιστροφή στο αρχικό μενού"
+	arr["ITALIAN",59]="0.  Torna al menu principale"
+	arr["POLISH",59]="0.  Wróć do menu głównego"
 
 	arr["ENGLISH",60]="10. About & Credits"
 	arr["SPANISH",60]="10. Acerca de & Créditos"
@@ -1080,15 +1082,15 @@ function language_strings() {
 	arr["ITALIAN",60]="10. Informazioni & Credits"
 	arr["POLISH",60]="10. O programie & Podziękowania"
 
-	arr["ENGLISH",61]="12. Exit script"
-	arr["SPANISH",61]="12. Salir del script"
-	arr["FRENCH",61]="12. Sortir du script"
-	arr["CATALAN",61]="12. Sortir del script"
-	arr["PORTUGUESE",61]="12. Sair do script"
-	arr["RUSSIAN",61]="12. Выйти из скрипта"
-	arr["GREEK",61]="12. Έξοδος script"
-	arr["ITALIAN",61]="12. Uscire dallo script"
-	arr["POLISH",61]="12. Zamknij skrypt"
+	arr["ENGLISH",61]="0.  Exit script"
+	arr["SPANISH",61]="0.  Salir del script"
+	arr["FRENCH",61]="0.  Sortir du script"
+	arr["CATALAN",61]="0.  Sortir del script"
+	arr["PORTUGUESE",61]="0.  Sair do script"
+	arr["RUSSIAN",61]="0.  Выйти из скрипта"
+	arr["GREEK",61]="0.  Έξοδος script"
+	arr["ITALIAN",61]="0.  Uscire dallo script"
+	arr["POLISH",61]="0.  Zamknij skrypt"
 
 	arr["ENGLISH",62]="8.  Beacon flood attack"
 	arr["SPANISH",62]="8.  Ataque Beacon flood"
@@ -1940,15 +1942,15 @@ function language_strings() {
 	arr["ITALIAN",146]="Sembra che abbiamo fallito... riprovare o scegliere un altro attacco"
 	arr["POLISH",146]="Wygląda na to, że się nie udało... spróbuj ponownie lub wybierz inny atak"
 
-	arr["ENGLISH",147]="4.  Return to Handshake tools menu"
-	arr["SPANISH",147]="4.  Volver al menú de herramientas Handshake"
-	arr["FRENCH",147]="4.  Retourner au menu des outils pour la capture du Handshake"
-	arr["CATALAN",147]="4.  Tornar al menú d'eines Handshake"
-	arr["PORTUGUESE",147]="4.  Voltar para o menu de ferramentas Handshake"
-	arr["RUSSIAN",147]="4.  Возврат в меню инструментов для работы с рукопожатием"
-	arr["GREEK",147]="4.  Επιστροφή στο μενού με τα εργαλεία Χειραψίας"
-	arr["ITALIAN",147]="4.  Torna al menu degli strumenti dell'Handshake"
-	arr["POLISH",147]="4.  Wróć do menu narzędzi Handshake"
+	arr["ENGLISH",147]="0.  Return to Handshake tools menu"
+	arr["SPANISH",147]="0.  Volver al menú de herramientas Handshake"
+	arr["FRENCH",147]="0.  Retourner au menu des outils pour la capture du Handshake"
+	arr["CATALAN",147]="0.  Tornar al menú d'eines Handshake"
+	arr["PORTUGUESE",147]="0.  Voltar para o menu de ferramentas Handshake"
+	arr["RUSSIAN",147]="0.  Возврат в меню инструментов для работы с рукопожатием"
+	arr["GREEK",147]="0.  Επιστροφή στο μενού με τα εργαλεία Χειραψίας"
+	arr["ITALIAN",147]="0.  Torna al menu degli strumenti dell'Handshake"
+	arr["POLISH",147]="0.  Wróć do menu narzędzi Handshake"
 
 	arr["ENGLISH",148]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${handshakepath}]"
 	arr["SPANISH",148]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${handshakepath}]"
@@ -3130,15 +3132,15 @@ function language_strings() {
 	arr["ITALIAN",265]="Desautenticazione per Evil Twin"
 	arr["POLISH",265]="Deautentykacja dla Evil Twin"
 
-	arr["ENGLISH",266]="4.  Return to Evil Twin attacks menu"
-	arr["SPANISH",266]="4.  Volver al menú de ataques Evil Twin"
-	arr["FRENCH",266]="4.  Retour au menu d'attaques Evil Twin"
-	arr["CATALAN",266]="4.  Tornar al menú d'atacs Evil Twin"
-	arr["PORTUGUESE",266]="4.  Voltar ao menu de ataques Evil Twin"
-	arr["RUSSIAN",266]="4.  Вернуться в меню атак Злой Двойник"
-	arr["GREEK",266]="4.  Επιστροφή στο μενού επιθέσεων Evil Twin"
-	arr["ITALIAN",266]="4.  Tornare al menu attacchi Evil Twin"
-	arr["POLISH",266]="4.  Wróć do menu Evil Twin Atak"
+	arr["ENGLISH",266]="0.  Return to Evil Twin attacks menu"
+	arr["SPANISH",266]="0.  Volver al menú de ataques Evil Twin"
+	arr["FRENCH",266]="0.  Retour au menu d'attaques Evil Twin"
+	arr["CATALAN",266]="0.  Tornar al menú d'atacs Evil Twin"
+	arr["PORTUGUESE",266]="0.  Voltar ao menu de ataques Evil Twin"
+	arr["RUSSIAN",266]="0.  Вернуться в меню атак Злой Двойник"
+	arr["GREEK",266]="0.  Επιστροφή στο μενού επιθέσεων Evil Twin"
+	arr["ITALIAN",266]="0.  Tornare al menu attacchi Evil Twin"
+	arr["POLISH",266]="0.  Wróć do menu Evil Twin Atak"
 
 	arr["ENGLISH",267]="If you can't deauth clients from an AP using an attack, choose another one :)"
 	arr["SPANISH",267]="Si no consigues desautenticar a los clientes de un AP con un ataque, elige otro :)"
@@ -4930,15 +4932,15 @@ function language_strings() {
 	arr["ITALIAN",445]="Se hai installato ccze e vedi errori o alcune finestre tremolanti, disattiva la colorazione nel menú opzioni e lingua"
 	arr["POLISH",445]="Jeśli zainstalowano ccze i wystąpiły błędy wizualizacji lub migotania w niektórych oknach, powinieneś wyłączyć kolory w menu opcji i języka"
 
-	arr["ENGLISH",446]="10. Return to options menu"
-	arr["SPANISH",446]="10. Volver al menú de opciones"
-	arr["FRENCH",446]="10. Retourner au menu options"
-	arr["CATALAN",446]="10. Tornar al menú d'opcions"
-	arr["PORTUGUESE",446]="10. Voltar ao menu de opções"
-	arr["RUSSIAN",446]="10. Возврат в меню опций"
-	arr["GREEK",446]="10. Επιστροφή στο μενού επιλογών"
-	arr["ITALIAN",446]="10. Tornare al menú delle opzioni"
-	arr["POLISH",446]="10. Wróć do menu opcji"
+	arr["ENGLISH",446]="0.  Return to options menu"
+	arr["SPANISH",446]="0.  Volver al menú de opciones"
+	arr["FRENCH",446]="0.  Retourner au menu options"
+	arr["CATALAN",446]="0.  Tornar al menú d'opcions"
+	arr["PORTUGUESE",446]="0.  Voltar ao menu de opções"
+	arr["RUSSIAN",446]="0.  Возврат в меню опций"
+	arr["GREEK",446]="0.  Επιστροφή στο μενού επιλογών"
+	arr["ITALIAN",446]="0.  Tornare al menú delle opzioni"
+	arr["POLISH",446]="0.  Wróć do menu opcji"
 
 	arr["ENGLISH",447]="5.  Set permanently airgeddon's language to the current one"
 	arr["SPANISH",447]="5.  Cambiar permanentemente el idioma de airgeddon al actual"
@@ -5440,15 +5442,15 @@ function language_strings() {
 	arr["ITALIAN",496]="5.  Controllare il database dei PIN"
 	arr["POLISH",496]="5.  Sprawdź bazę danych PIN"
 
-	arr["ENGLISH",497]="9.  Return to WPS attacks menu"
-	arr["SPANISH",497]="9.  Volver al menú de ataques WPS"
-	arr["FRENCH",497]="9.  Retour au menu d'attaques WPS"
-	arr["CATALAN",497]="9.  Tornar al menú d'atacs WPS"
-	arr["PORTUGUESE",497]="9.  Voltar ao menu de ataques WPS"
-	arr["RUSSIAN",497]="9.  Вернуться в меню атак WPS"
-	arr["GREEK",497]="9.  Επιστροφή στο μενού επιθέσεων WPS"
-	arr["ITALIAN",497]="9.  Tornare al menú attacchi WPS"
-	arr["POLISH",497]="9.  Wróć do menu Atak WPS"
+	arr["ENGLISH",497]="0.  Return to WPS attacks menu"
+	arr["SPANISH",497]="0.  Volver al menú de ataques WPS"
+	arr["FRENCH",497]="0.  Retour au menu d'attaques WPS"
+	arr["CATALAN",497]="0.  Tornar al menú d'atacs WPS"
+	arr["PORTUGUESE",497]="0.  Voltar ao menu de ataques WPS"
+	arr["RUSSIAN",497]="0.  Вернуться в меню атак WPS"
+	arr["GREEK",497]="0.  Επιστροφή στο μενού επιθέσεων WPS"
+	arr["ITALIAN",497]="0.  Tornare al menú attacchi WPS"
+	arr["POLISH",497]="0.  Wróć do menu Atak WPS"
 
 	arr["ENGLISH",498]="choose database or algorithm"
 	arr["SPANISH",498]="escoge base de datos o algoritmo"
