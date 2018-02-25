@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180207
+#Date.........: 20180225
 #Version......: 8.01
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -1482,6 +1482,8 @@ function option_menu() {
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
+	language_strings "${language}" 59
+	print_simple_separator
 	language_strings "${language}" 78
 	print_simple_separator
 	if [ "${auto_update}" -eq 1 ]; then
@@ -1500,12 +1502,13 @@ function option_menu() {
 		language_strings "${language}" 467
 	fi
 	language_strings "${language}" 447
-	print_simple_separator
-	language_strings "${language}" 174
 	print_hint ${current_menu}
 
 	read -r option_selected
 	case ${option_selected} in
+		0)
+			return
+		;;
 		1)
 			language_menu
 		;;
@@ -1625,9 +1628,6 @@ function option_menu() {
 				language_strings "${language}" 115 "read"
 			fi
 		;;
-		6)
-			return
-		;;
 		*)
 			invalid_menu_option
 		;;
@@ -1648,6 +1648,8 @@ function language_menu() {
 	echo
 	language_strings "${language}" 81 "green"
 	print_simple_separator
+	language_strings "${language}" 446
+	print_simple_separator
 	language_strings "${language}" 79
 	language_strings "${language}" 80
 	language_strings "${language}" 113
@@ -1658,13 +1660,14 @@ function language_menu() {
 	language_strings "${language}" 482
 	language_strings "${language}" 58
 	language_strings "${language}" 521
-	print_simple_separator
-	language_strings "${language}" 446
 	print_hint ${current_menu}
 
 	read -r language_selected
 	echo
 	case ${language_selected} in
+		0)
+			return
+		;;
 		1)
 			if [ "${language}" = "ENGLISH" ]; then
 				language_strings "${language}" 251 "red"
@@ -1754,9 +1757,6 @@ function language_menu() {
 				language_strings "${language}" 522 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
-		;;
-		11)
-			return
 		;;
 		*)
 			invalid_language_selected
@@ -1916,6 +1916,8 @@ function select_secondary_et_interface() {
 				language_strings "${language}" 279 "green"
 			fi
 			print_simple_separator
+			language_strings "${language}" 266
+			print_simple_separator
 		fi
 
 		option_counter=$((option_counter + 1))
@@ -1947,25 +1949,22 @@ function select_secondary_et_interface() {
 		return 1
 	fi
 
-	option_counter_back=$((option_counter + 1))
 	if [ ${option_counter: -1} -eq 9 ]; then
 		spaceiface+=" "
 	fi
-	print_simple_separator
-	language_strings "${language}" 331
 	print_hint ${current_menu}
 
 	read -r secondary_iface
-	if [[ ! ${secondary_iface} =~ ^[[:digit:]]+$ ]] || (( secondary_iface < 1 || secondary_iface > option_counter_back )); then
+	if [ "${secondary_iface}" -eq 0 ]; then
+		return_to_et_main_menu=1
+		return_to_et_main_menu_from_beef=1
+		return 1
+	elif [[ ! ${secondary_iface} =~ ^[[:digit:]]+$ ]] || (( secondary_iface < 1 || secondary_iface > option_counter )); then
 		if [ "${1}" = "dos_pursuit_mode" ]; then
 			invalid_secondary_iface_selected "dos_pursuit_mode"
 		else
 			invalid_secondary_iface_selected "internet"
 		fi
-	elif [ "${secondary_iface}" -eq ${option_counter_back} ]; then
-		return_to_et_main_menu=1
-		return_to_et_main_menu_from_beef=1
-		return 1
 	else
 		option_counter2=0
 		for item2 in ${secondary_ifaces}; do
@@ -2742,7 +2741,7 @@ function set_wep_script() {
 		}
 
 		wep_script_processes=()
-		xterm -bg black -fg white -geometry "${g5_topright_window}" -T "Capturing WEP Data" -e "airodump-ng -d ${bssid} -c ${channel} -w \"${tmpdir}${wep_data}\" ${interface}" > /dev/null 2>&1 &
+		xterm -bg black -fg white -geometry "${g5_topright_window}" -T "Capturing WEP Data" -e "airodump-ng -d ${bssid} -c ${channel} --encrypt WEP -w \"${tmpdir}${wep_data}\" ${interface}" > /dev/null 2>&1 &
 	EOF
 
 	cat >&6 <<-'EOF'
@@ -3540,7 +3539,7 @@ function wep_option() {
 		echo
 		language_strings "${language}" 125 "yellow"
 		language_strings "${language}" 115 "read"
-		if ! explore_for_targets_option; then
+		if ! explore_for_targets_option "WEP"; then
 			return 1
 		fi
 	fi
@@ -4185,6 +4184,7 @@ function main_menu() {
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
+	language_strings "${language}" 61
 	language_strings "${language}" 48
 	language_strings "${language}" 55
 	language_strings "${language}" 56
@@ -4198,11 +4198,13 @@ function main_menu() {
 	print_simple_separator
 	language_strings "${language}" 60
 	language_strings "${language}" 444
-	language_strings "${language}" 61
 	print_hint ${current_menu}
 
 	read -r main_option
 	case ${main_option} in
+		0)
+			exit_script_option
+		;;
 		1)
 			select_interface
 		;;
@@ -4236,9 +4238,6 @@ function main_menu() {
 		11)
 			option_menu
 		;;
-		12)
-			exit_script_option
-		;;
 		*)
 			invalid_menu_option
 		;;
@@ -4259,6 +4258,7 @@ function evil_twin_attacks_menu() {
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
+	language_strings "${language}" 59
 	language_strings "${language}" 48
 	language_strings "${language}" 55
 	language_strings "${language}" 56
@@ -4271,12 +4271,13 @@ function evil_twin_attacks_menu() {
 	language_strings "${language}" 396
 	language_strings "${language}" 262 "separator"
 	language_strings "${language}" 263 et_captive_portal_dependencies[@]
-	print_simple_separator
-	language_strings "${language}" 260
 	print_hint ${current_menu}
 
 	read -r et_option
 	case ${et_option} in
+		0)
+			return
+		;;
 		1)
 			select_interface
 		;;
@@ -4348,7 +4349,7 @@ function evil_twin_attacks_menu() {
 					language_strings "${language}" 316 "yellow"
 					language_strings "${language}" 115 "read"
 
-					if explore_for_targets_option; then
+					if explore_for_targets_option "WPA"; then
 						et_dos_menu
 					fi
 				else
@@ -4357,9 +4358,6 @@ function evil_twin_attacks_menu() {
 					language_strings "${language}" 115 "read"
 				fi
 			fi
-		;;
-		10)
-			return
 		;;
 		*)
 			invalid_menu_option
@@ -4387,6 +4385,8 @@ function beef_pre_menu() {
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
+	language_strings "${language}" 266
+	print_simple_separator
 
 	if [[ "${beef_found}" -eq 0 ]] && [[ ${optional_tools[${optional_tools_names[19]}]} -eq 1 ]]; then
 		if [[ ${optional_tools[${optional_tools_names[5]}]} -eq 1 ]] && [[ ${optional_tools[${optional_tools_names[6]}]} -eq 1 ]] && [[ ${optional_tools[${optional_tools_names[7]}]} -eq 1 ]] && [[ ${optional_tools[${optional_tools_names[18]}]} -eq 1 ]]; then
@@ -4401,12 +4401,13 @@ function beef_pre_menu() {
 
 	print_simple_separator
 	language_strings "${language}" 410
-	print_simple_separator
-	language_strings "${language}" 411
 	print_hint ${current_menu}
 
 	read -r beef_option
 	case ${beef_option} in
+		0)
+			return
+		;;
 		1)
 			if contains_element "${beef_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
@@ -4432,9 +4433,6 @@ function beef_pre_menu() {
 				prepare_beef_start
 			fi
 		;;
-		3)
-			return
-		;;
 		*)
 			invalid_menu_option
 		;;
@@ -4455,6 +4453,7 @@ function wps_attacks_menu() {
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
+	language_strings "${language}" 59
 	language_strings "${language}" 48
 	language_strings "${language}" 55
 	language_strings "${language}" 56
@@ -4470,12 +4469,13 @@ function wps_attacks_menu() {
 	language_strings "${language}" 360 reaver_attacks_dependencies[@]
 	print_simple_separator
 	language_strings "${language}" 494
-	print_simple_separator
-	language_strings "${language}" 361
 	print_hint ${current_menu}
 
 	read -r wps_option
 	case ${wps_option} in
+		0)
+			return
+		;;
 		1)
 			select_interface
 		;;
@@ -4642,9 +4642,6 @@ function wps_attacks_menu() {
 		13)
 			offline_pin_generation_menu
 		;;
-		14)
-			return
-		;;
 		*)
 			invalid_menu_option
 		;;
@@ -4665,6 +4662,7 @@ function offline_pin_generation_menu() {
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
+	language_strings "${language}" 497
 	language_strings "${language}" 48
 	language_strings "${language}" 55
 	language_strings "${language}" 56
@@ -4674,12 +4672,13 @@ function offline_pin_generation_menu() {
 	echo "6.  ComputePIN"
 	echo "7.  EasyBox"
 	echo "8.  Arcadyan"
-	print_simple_separator
-	language_strings "${language}" 497
 	print_hint ${current_menu}
 
 	read -r offline_pin_generation_option
 	case ${offline_pin_generation_option} in
+		0)
+			return
+		;;
 		1)
 			select_interface
 		;;
@@ -4830,9 +4829,6 @@ function offline_pin_generation_menu() {
 				fi
 			fi
 		;;
-		9)
-			return
-		;;
 		*)
 			invalid_menu_option
 		;;
@@ -4853,18 +4849,20 @@ function wep_attacks_menu() {
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
+	language_strings "${language}" 59
 	language_strings "${language}" 48
 	language_strings "${language}" 55
 	language_strings "${language}" 56
 	language_strings "${language}" 49
 	language_strings "${language}" 50 "separator"
 	language_strings "${language}" 423 wep_attack_dependencies[@]
-	print_simple_separator
-	language_strings "${language}" 174
 	print_hint ${current_menu}
 
 	read -r wep_option
 	case ${wep_option} in
+		0)
+			return
+		;;
 		1)
 			select_interface
 		;;
@@ -4875,7 +4873,7 @@ function wep_attacks_menu() {
 			managed_option "${interface}"
 		;;
 		4)
-			explore_for_targets_option
+			explore_for_targets_option "WEP"
 		;;
 		5)
 			if contains_element "${wep_option}" "${forbidden_options[@]}"; then
@@ -4883,9 +4881,6 @@ function wep_attacks_menu() {
 			else
 				wep_option
 			fi
-		;;
-		6)
-			return
 		;;
 		*)
 			invalid_menu_option
@@ -4906,6 +4901,8 @@ function decrypt_menu() {
 	initialize_menu_and_print_selections
 	echo
 	language_strings "${language}" 47 "green"
+	print_simple_separator
+	language_strings "${language}" 59
 	language_strings "${language}" 176 "separator"
 	language_strings "${language}" 172
 	language_strings "${language}" 175 aircrack_attacks_dependencies[@]
@@ -4913,12 +4910,13 @@ function decrypt_menu() {
 	language_strings "${language}" 230 hashcat_attacks_dependencies[@]
 	language_strings "${language}" 231 hashcat_attacks_dependencies[@]
 	language_strings "${language}" 232 hashcat_attacks_dependencies[@]
-	print_simple_separator
-	language_strings "${language}" 174
 	print_hint ${current_menu}
 
 	read -r decrypt_option
 	case ${decrypt_option} in
+		0)
+			return
+		;;
 		1)
 			if contains_element "${decrypt_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
@@ -4959,9 +4957,6 @@ function decrypt_menu() {
 				set_hashcat_parameters
 				hashcat_rulebased_attack_option
 			fi
-		;;
-		6)
-			return
 		;;
 		*)
 			invalid_menu_option
@@ -5558,6 +5553,8 @@ function set_captive_portal_language() {
 	echo
 	language_strings "${language}" 318 "green"
 	print_simple_separator
+	language_strings "${language}" 266
+	print_simple_separator
 	language_strings "${language}" 79
 	language_strings "${language}" 80
 	language_strings "${language}" 113
@@ -5573,6 +5570,10 @@ function set_captive_portal_language() {
 	read -r captive_portal_language_selected
 	echo
 	case ${captive_portal_language_selected} in
+		0)
+			return_to_et_main_menu=1
+			return 1
+		;;
 		1)
 			captive_portal_language="ENGLISH"
 		;;
@@ -5607,6 +5608,8 @@ function set_captive_portal_language() {
 			invalid_captive_portal_language_selected
 		;;
 	esac
+
+	return 0
 }
 
 #Read and validate the minlength var
@@ -7725,6 +7728,7 @@ function handshake_tools_menu() {
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
+	language_strings "${language}" 59
 	language_strings "${language}" 48
 	language_strings "${language}" 55
 	language_strings "${language}" 56
@@ -7733,12 +7737,13 @@ function handshake_tools_menu() {
 	language_strings "${language}" 121
 	print_simple_separator
 	language_strings "${language}" 122 clean_handshake_dependencies[@]
-	print_simple_separator
-	language_strings "${language}" 123
 	print_hint ${current_menu}
 
 	read -r handshake_option
 	case ${handshake_option} in
+		0)
+			return
+		;;
 		1)
 			select_interface
 		;;
@@ -7749,7 +7754,7 @@ function handshake_tools_menu() {
 			managed_option "${interface}"
 		;;
 		4)
-			explore_for_targets_option
+			explore_for_targets_option "WPA"
 		;;
 		5)
 			capture_handshake
@@ -7760,9 +7765,6 @@ function handshake_tools_menu() {
 			else
 				clean_handshake_file_option
 			fi
-		;;
-		7)
-			return
 		;;
 		*)
 			invalid_menu_option
@@ -7830,6 +7832,7 @@ function dos_attacks_menu() {
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
+	language_strings "${language}" 59
 	language_strings "${language}" 48
 	language_strings "${language}" 55
 	language_strings "${language}" 56
@@ -7842,12 +7845,13 @@ function dos_attacks_menu() {
 	language_strings "${language}" 62 mdk3_attack_dependencies[@]
 	language_strings "${language}" 63 mdk3_attack_dependencies[@]
 	language_strings "${language}" 64 mdk3_attack_dependencies[@]
-	print_simple_separator
-	language_strings "${language}" 59
 	print_hint ${current_menu}
 
 	read -r dos_option
 	case ${dos_option} in
+		0)
+			return
+		;;
 		1)
 			select_interface
 		;;
@@ -7901,9 +7905,6 @@ function dos_attacks_menu() {
 			else
 				michael_shutdown_option
 			fi
-		;;
-		11)
-			return
 		;;
 		*)
 			invalid_menu_option
@@ -7989,7 +7990,7 @@ function capture_handshake() {
 		echo
 		language_strings "${language}" 125 "yellow"
 		language_strings "${language}" 115 "read"
-		if ! explore_for_targets_option; then
+		if ! explore_for_targets_option "WPA"; then
 			return 1
 		fi
 	fi
@@ -8262,15 +8263,18 @@ function attack_handshake_menu() {
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
+	language_strings "${language}" 147
+	print_simple_separator
 	language_strings "${language}" 139 mdk3_attack_dependencies[@]
 	language_strings "${language}" 140 aireplay_attack_dependencies[@]
 	language_strings "${language}" 141 mdk3_attack_dependencies[@]
-	print_simple_separator
-	language_strings "${language}" 147
 	print_hint ${current_menu}
 
 	read -r attack_handshake_option
 	case ${attack_handshake_option} in
+		0)
+			return
+		;;
 		1)
 			if contains_element "${attack_handshake_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
@@ -8306,9 +8310,6 @@ function attack_handshake_menu() {
 				xterm +j -bg black -fg red -geometry "${g1_bottomleft_window}" -T "wids / wips / wds confusion attack" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
 				sleeptimeattack=16
 			fi
-		;;
-		4)
-			return
 		;;
 		*)
 			invalid_menu_option
@@ -8359,7 +8360,22 @@ function explore_for_targets_option() {
 	echo
 	language_strings "${language}" 66 "yellow"
 	echo
-	language_strings "${language}" 67 "yellow"
+
+	local cypher_filter
+	if [ -n "${1}" ]; then
+		cypher_filter="${1}"
+		case ${cypher_filter} in
+			"WEP")
+				language_strings "${language}" 67 "yellow"
+			;;
+			"WPA")
+				language_strings "${language}" 523 "yellow"
+			;;
+		esac
+	else
+		cypher_filter=""
+		language_strings "${language}" 522 "yellow"
+	fi
 	language_strings "${language}" 115 "read"
 
 	tmpfiles_toclean=1
@@ -8373,7 +8389,7 @@ function explore_for_targets_option() {
 	fi
 
 	recalculate_windows_sizes
-	xterm +j -bg black -fg white -geometry "${g1_topright_window}" -T "Exploring for targets" -e airodump-ng -w "${tmpdir}nws" "${interface}" --band "${airodump_band_modifier}" > /dev/null 2>&1
+	xterm +j -bg black -fg white -geometry "${g1_topright_window}" -T "Exploring for targets" -e airodump-ng -w "${tmpdir}nws" --encrypt "${cypher_filter}" "${interface}" --band "${airodump_band_modifier}" > /dev/null 2>&1
 	targetline=$(awk '/(^Station[s]?|^Client[es]?)/{print NR}' < "${tmpdir}nws-01.csv")
 	targetline=$((targetline - 1))
 
@@ -8466,7 +8482,7 @@ function explore_for_wps_targets_option() {
 	fi
 
 	echo
-	language_strings "${language}" 67 "yellow"
+	language_strings "${language}" 521 "yellow"
 	language_strings "${language}" 115 "read"
 
 	tmpfiles_toclean=1
@@ -8931,8 +8947,11 @@ function et_prerequisites() {
 	elif [ "${et_mode}" = "et_captive_portal" ]; then
 		manage_captive_portal_log
 		language_strings "${language}" 115 "read"
-		set_captive_portal_language
-		language_strings "${language}" 319 "blue"
+		if set_captive_portal_language; then
+			language_strings "${language}" 319 "blue"
+		else
+			return
+		fi
 	fi
 
 	return_to_et_main_menu=1
@@ -9030,15 +9049,19 @@ function et_dos_menu() {
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
+	language_strings "${language}" 266
+	print_simple_separator
 	language_strings "${language}" 139 mdk3_attack_dependencies[@]
 	language_strings "${language}" 140 aireplay_attack_dependencies[@]
 	language_strings "${language}" 141 mdk3_attack_dependencies[@]
-	print_simple_separator
-	language_strings "${language}" 266
 	print_hint ${current_menu}
 
 	read -r et_dos_option
 	case ${et_dos_option} in
+		0)
+			return_to_et_main_menu_from_beef=1
+			return
+		;;
 		1)
 
 			if contains_element "${et_dos_option}" "${forbidden_options[@]}"; then
@@ -9192,10 +9215,6 @@ function et_dos_menu() {
 					fi
 				fi
 			fi
-		;;
-		4)
-			return_to_et_main_menu_from_beef=1
-			return
 		;;
 		*)
 			invalid_menu_option
@@ -9727,6 +9746,7 @@ function download_pins_database_file() {
 	fi
 
 	if [ "${pindb_file_downloaded}" -eq 1 ]; then
+		rm -rf "${scriptfolder}${known_pins_dbfile}" 2> /dev/null
 		echo "${remote_pindb_file}" > "${scriptfolder}${known_pins_dbfile}"
 		return 0
 	else
@@ -10687,6 +10707,9 @@ function download_last_version() {
 	fi
 
 	if [ "${script_file_downloaded}" -eq 1 ]; then
+
+		download_pins_database_file
+
 		echo
 		language_strings "${language}" 214 "yellow"
 

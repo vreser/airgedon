@@ -1,5 +1,8 @@
 ### 8.01
-- German language translation added (Thank you to "hamperfait")
+ - German language translation added (Thank you to "hamperfait")
+ - Filters enabled on scannings based on menu or kind of attack
+ - WPS PIN database now updates on startup updates too
+ - Return option now always at position 0 on all menus
 
 ### 8.0
  - Added 5Ghz full support (scans, attacks, card detection, etc.)
@@ -88,7 +91,7 @@
  - Spoofed MAC addresses restored on exit
 
 ### 6.1
- - Network selection menues now colorized
+ - Network selection menus now colorized
  - Language strings now in a separated file for easy handling and translating
  - Validation and self-downloading system for new language strings file
 
