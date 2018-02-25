@@ -9719,6 +9719,7 @@ function download_pins_database_file() {
 	fi
 
 	if [ "${pindb_file_downloaded}" -eq 1 ]; then
+		rm -rf "${scriptfolder}${known_pins_dbfile}" 2> /dev/null
 		echo "${remote_pindb_file}" > "${scriptfolder}${known_pins_dbfile}"
 		return 0
 	else
@@ -10679,6 +10680,9 @@ function download_last_version() {
 	fi
 
 	if [ "${script_file_downloaded}" -eq 1 ]; then
+
+		download_pins_database_file
+
 		echo
 		language_strings "${language}" 214 "yellow"
 
