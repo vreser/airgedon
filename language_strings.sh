@@ -1261,7 +1261,7 @@ function language_strings() {
 	arr["GREEK",67]="${pending_of_translation} Το φίλτρο WEP ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
 	arr["ITALIAN",67]="${pending_of_translation} Filtro WEP attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",67]="${pending_of_translation} Filtr WEP aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
-	arr["GERMAN",67]="${pending_of_translation} Einmal gestartet, drücken Sie [Ctrl+C], um es zu stoppen..."
+	arr["GERMAN",67]="${pending_of_translation} WEP-Filter beim Scannen aktiviert. Einmal gestartet, drücken Sie [Ctrl+C], um es zu stoppen..."
 
 	arr["ENGLISH",68]="No networks found"
 	arr["SPANISH",68]="No se encontraron redes"
@@ -6246,28 +6246,6 @@ function language_strings() {
 	arr["POLISH",520]="W paśmie 5Ghz istnieje wiele kanałów, które nie mogą działać z powodu konfiguracji kraju. Istnieją również inne kanały, w których nie można zainicjować komunikacji, a tylko komunikować się z istniejącą siecią. To sprawia, że uruchomienie punktu dostępu na kanale 5Ghz może się nie udać, jeśli nie pasuje do dozwolonego kanału. Dlatego atak Evil Twin rozpocznie się na kanale w paśmie 2.4GHz (1-11). Ale nie martw się, będzie to dla użytkowników niewidoczne, ponieważ atak DoS nadal działa przeciwko celowi na prawdziwym kanale 5Ghz"
 	arr["GERMAN",520]="${pending_of_translation} "
 
-	arr["ENGLISH",521]="10. German"
-	arr["SPANISH",521]="10. Alemán"
-	arr["FRENCH",521]="10. Allemand"
-	arr["CATALAN",521]="10. Alemany"
-	arr["PORTUGUESE",521]="10. Alemão"
-	arr["RUSSIAN",521]="10. Немецкий"
-	arr["GREEK",521]="10. Γερμανικά"
-	arr["ITALIAN",521]="10. Tedesco"
-	arr["POLISH",521]="10. Niemiecki"
-	arr["GERMAN",521]="${pending_of_translation} 10. Deutsch"
-
-	arr["ENGLISH",522]="Language changed to German"
-	arr["SPANISH",522]="Idioma cambiado a Alemán"
-	arr["FRENCH",522]="Le script sera maintenant en Allemand"
-	arr["CATALAN",522]="Idioma canviat a Alemany"
-	arr["PORTUGUESE",522]="Idioma alterado para Alemão"
-	arr["RUSSIAN",522]="Язык изменён на Немецкий"
-	arr["GREEK",522]="Η γλώσσα άλλαξε στα Γερμανικά"
-	arr["ITALIAN",522]="Lingua cambiata a Tedesco"
-	arr["POLISH",522]="Zmieniono język na Niemiecki"
-	arr["GERMAN",522]="${pending_of_translation} Sprache wurde auf Deutsch geändert"
-
 	arr["ENGLISH",521]="WPS filter enabled in scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",521]="Filtro WPS activado en escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
 	arr["FRENCH",521]="${pending_of_translation} Le filtre WPS est activé dans la numérisation. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
@@ -6277,6 +6255,7 @@ function language_strings() {
 	arr["GREEK",521]="${pending_of_translation} Το φίλτρο WPS ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
 	arr["ITALIAN",521]="${pending_of_translation} Filtro WPS attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",521]="${pending_of_translation} Filtr WPS aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
+	arr["GERMAN",521]="${pending_of_translation} "
 
 	arr["ENGLISH",522]="No filters enabled on scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",522]="No hay filtros activados en el escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
@@ -6287,6 +6266,7 @@ function language_strings() {
 	arr["GREEK",522]="${pending_of_translation} Δεν έχουν ενεργοποιηθεί φίλτρα στη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
 	arr["ITALIAN",522]="${pending_of_translation} Nessun filtro attivato nella scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",522]="${pending_of_translation} W skanie nie zostały włączone żadne filtry. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
+	arr["GERMAN",522]="${pending_of_translation} "
 
 	arr["ENGLISH",523]="WPA/WPA2 filter enabled in scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",523]="Filtro WPA/WPA2 activado en escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
@@ -6297,6 +6277,29 @@ function language_strings() {
 	arr["GREEK",523]="${pending_of_translation} Το φίλτρο WPA/WPA2 ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
 	arr["ITALIAN",523]="${pending_of_translation} Filtro WPA/WPA2 attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",523]="${pending_of_translation} Filtr WPA/WPA2 aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
+	arr["GERMAN",523]="${pending_of_translation} "
+
+	arr["ENGLISH",524]="10. German"
+	arr["SPANISH",524]="10. Alemán"
+	arr["FRENCH",524]="10. Allemand"
+	arr["CATALAN",524]="10. Alemany"
+	arr["PORTUGUESE",524]="10. Alemão"
+	arr["RUSSIAN",524]="10. Немецкий"
+	arr["GREEK",524]="10. Γερμανικά"
+	arr["ITALIAN",524]="10. Tedesco"
+	arr["POLISH",524]="10. Niemiecki"
+	arr["GERMAN",524]="${pending_of_translation} 10. Deutsch"
+
+	arr["ENGLISH",525]="Language changed to German"
+	arr["SPANISH",525]="Idioma cambiado a Alemán"
+	arr["FRENCH",525]="Le script sera maintenant en Allemand"
+	arr["CATALAN",525]="Idioma canviat a Alemany"
+	arr["PORTUGUESE",525]="Idioma alterado para Alemão"
+	arr["RUSSIAN",525]="Язык изменён на Немецкий"
+	arr["GREEK",525]="Η γλώσσα άλλαξε στα Γερμανικά"
+	arr["ITALIAN",525]="Lingua cambiata a Tedesco"
+	arr["POLISH",525]="Zmieniono język na Niemiecki"
+	arr["GERMAN",525]="${pending_of_translation} Sprache wurde auf Deutsch geändert"
 
 	case "${3}" in
 		"yellow")

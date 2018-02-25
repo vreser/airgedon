@@ -1659,7 +1659,7 @@ function language_menu() {
 	language_strings "${language}" 320
 	language_strings "${language}" 482
 	language_strings "${language}" 58
-	language_strings "${language}" 521
+	language_strings "${language}" 524
 	print_hint ${current_menu}
 
 	read -r language_selected
@@ -1754,7 +1754,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="GERMAN"
-				language_strings "${language}" 522 "yellow"
+				language_strings "${language}" 525 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -5564,7 +5564,7 @@ function set_captive_portal_language() {
 	language_strings "${language}" 320
 	language_strings "${language}" 482
 	language_strings "${language}" 58
-	language_strings "${language}" 521
+	language_strings "${language}" 524
 	print_hint ${current_menu}
 
 	read -r captive_portal_language_selected
