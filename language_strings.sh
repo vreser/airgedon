@@ -1943,7 +1943,7 @@ function language_strings() {
 	arr["GREEK",129]="Η διαδικασία για να προχωρήσετε σε αυτό το μενού είναι συνήθως: 1-Επιλέξτε κάρτα wifi 2-Βάλτε την σε κατάσταση παρακολούθησης 3-Επιλέξτε δίκτυο-στόχος 4-Ξεκινήστε την επίθεση"
 	arr["ITALIAN",129]="L'ordine naturale per procedere in questo menú di solito è: 1-Seleziona la scheda wifi 2-Mettila in modalità monitor 3-Seleziona rete obiettivo 4-Inizia l'attacco"
 	arr["POLISH",129]="Naturalnym sposobem działania w tym menu jest zazwyczaj: 1-Wybierz kartę wifi 2-Włącz tryb monitorowania 3-Wybierz sieć docelową 4-Rozpocznij ataku"
-	arr["GERMAN",129]="${pending_of_translation} Die natürliche Reihenfolge, um in diesem Menü fortzufahren, ist normalerweise: 1-Wählen Sie die WLAN-Karte 2-Stellen Sie sie im Überwachungsmodus ein 3-Wählen Sie das Zielnetzwerk 4-Starten Sie den Angriff"
+	arr["GERMAN",129]="Um in diesem Menü fortzufahren folgendes zu machen: 1-Wählen Sie die WLAN-Karte 2-Stellen Sie sie im Monitur-modus ein 3-Wählen Sie das Zielnetzwerk 4-Starten Sie den Angriff"
 
 	arr["ENGLISH",130]="Remember to select a target network with clients to capture Handshake"
 	arr["SPANISH",130]="Recuerda seleccionar una red objetivo con clientes para capturar el Handshake"
@@ -1954,7 +1954,7 @@ function language_strings() {
 	arr["GREEK",130]="Θυμηθείτε να επιλέξετε ένα δίκτυο-στόχος με έναν ή παραπάνω χρήστες για να καταγράψετε μία Χειραψία"
 	arr["ITALIAN",130]="Ricorda di selezionare una rete di destinazione con clienti per poter catturare l'Handshake"
 	arr["POLISH",130]="W celu przechwycenia Handshake, pamiętaj aby wybrać sieć docelową z klientami"
-	arr["GERMAN",130]="${pending_of_translation} Denken Sie daran, ein Zielnetzwerk mit Clients auszuwählen, um den Handshake zu erfassen"
+	arr["GERMAN",130]="Denken Sie daran, ein Zielnetzwerk mit Clients auszuwählen, um den Handshake zu erfassen"
 
 	arr["ENGLISH",131]="Not all attacks affect all access points. If an attack is not working against an access point, choose another one :)"
 	arr["SPANISH",131]="No todos los ataques afectan a todos los puntos de acceso. Si un ataque no funciona contra un punto de acceso, elige otro :)"
@@ -1965,7 +1965,7 @@ function language_strings() {
 	arr["GREEK",131]="Δεν είναι όλες οι επιθέσεις αποτελεσματικές σε όλα τα σημεία πρόσβασης. Αν μια επίθεση δεν δουλεύει ενάντια σε ένα σημείο πρόσβασης, διαλέξτε κάποια άλλη :)"
 	arr["ITALIAN",131]="Non tutti gli attacchi funzionano su tutti gli access point. Se un attacco non funziona contro un access point, selezionane un altro :)"
 	arr["POLISH",131]="Nie wszystkie ataki działają na wszystkie punkty dostępu. Jeśli atak nie działa przeciwko któremuś punktowi dostępowemu, wybierz inny :)"
-	arr["GERMAN",131]="${pending_of_translation} Nicht alle Angriffe betreffen alle Zugriffspunkte. Wenn ein Angriff gegen einen Zugangspunkt nicht funktioniert, wähle einen anderen :)"
+	arr["GERMAN",131]="Nicht alle Angriffe betreffen alle Access Points. Wenn ein Angriff gegen einen Access Point nicht funktioniert, wählen Sie einen anderen :)"
 
 	arr["ENGLISH",132]="Cleaning a Handshake file is recommended only for big size files. It's better to have a backup, sometimes file can be corrupted while cleaning it"
 	arr["SPANISH",132]="Limpiar un fichero de Handshake se recomienda solo para ficheros grandes. Es mejor hacer una copia de seguridad antes, a veces el fichero se puede corromper al limpiarlo"
@@ -1976,7 +1976,7 @@ function language_strings() {
 	arr["GREEK",132]="Ο καθαρισμός ενός αρχείου Χειραψίας συνιστάται μόνο για μεγάλου μεγέθους αρχεία. Καλύτερα κρατήστε ένα backup, μερικές φορές το αρχείο μπορεί να καταστραφεί κατά τη διάρκεια του καθαρισμού"
 	arr["ITALIAN",132]="Pulire un file di Handshake è consigliato solo per file di grandi dimensioni. Meglio fare un backup prima, a volte il file si può corrompere con la pulizia"
 	arr["POLISH",132]="Usunięcie pliku Handshake jest zalecane tylko w przypadku dużych plików. Lepiej jest zachować kopie zapasowe, czasami plik może być uszkodzony podczas czyszczenia"
-	arr["GERMAN",132]="${pending_of_translation} Das Bereinigen einer Handshake-Datei wird nur für große Dateien empfohlen. Es ist besser, vorher ein Backup zu erstellen, manchmal kann die Datei beim Säubern beschädigt werden"
+	arr["GERMAN",132]="Das Bereinigen einer Handshake-Datei wird nur für große Dateien empfohlen. Es ist besser, vorher ein Backup zu erstellen, manchmal kann die Datei beim Säubern beschädigt werden"
 
 	arr["ENGLISH",133]="If you select a target network with hidden ESSID, you can't use it, but you can perform BSSID based attacks to that network"
 	arr["SPANISH",133]="Si seleccionas una red objetivo con el ESSID oculto, no podrás usarlo, pero puedes hacer ataques basados en BSSID sobre esa red"
@@ -1987,7 +1987,7 @@ function language_strings() {
 	arr["GREEK",133]="Αν επιλέξετε ένα δίκτυο-στόχος με κρυφό ESSID, δεν μπορείτε να το χρησιμοποιήσετε, αλλά μπορείτε να εκτελέσετε επιθέσεις BSSID σε αυτό το δίκτυο"
 	arr["ITALIAN",133]="Se si seleziona una rete obiettivo con ESSID nascosto, non potrai utilizzarla, peró puoi fare attacchi a questa rete basati sul BSSID"
 	arr["POLISH",133]="Jeśli wybierzesz sieć docelową z ukrytym identyfikatorem ESSID, nie będziesz w stanie jej używać, ale możesz atakować tą sieć w oparciu o BSSID"
-	arr["GERMAN",133]="${pending_of_translation} Wenn Sie ein Zielnetzwerk mit ausgeblendeter ESSID auswählen, können Sie es nicht verwenden, Sie können jedoch BSSID-basierte Angriffe auf dieses Netzwerk durchführen"
+	arr["GERMAN",133]="Wenn Sie ein Zielnetzwerk mit ausgeblendeter ESSID auswählen, können Sie es nicht verwenden, Sie können jedoch BSSID-basierte Angriffe auf dieses Netzwerk durchführen"
 
 	arr["ENGLISH",134]="If your Linux is a virtual machine, it is possible that integrated wifi cards are detected as ethernet. Use an external usb wifi card"
 	arr["SPANISH",134]="Si tu Linux es una máquina virtual, es posible que las tarjetas wifi integradas sean detectadas como ethernet. Utiliza una tarjeta wifi externa usb"
@@ -1998,7 +1998,7 @@ function language_strings() {
 	arr["GREEK",134]="Αν το Linux σας είναι εικονική μηχανή, είναι πιθανόν οι ενσωματωμένες κάρτες wifi να εντοπιστούν σαν ethernet. Χρησιμοποιήστε μία εξωτερική usb κάρτα wifi"
 	arr["ITALIAN",134]="Se il tuo Linux è una macchina virtuale, è possibile che le schede wireless integrate vengono rilevate come ethernet. Utilizza una scheda usb WiFi esterna"
 	arr["POLISH",134]="Jeśli twój Linux jest maszyną wirtualną, możliwe jest, że zintegrowane karty wifi są wykrywane jako ethernet. Użyj zewnętrznej karty usb"
-	arr["GERMAN",134]="${pending_of_translation} Wenn Ihr Linux eine virtuelle Maschine ist, können integrierte WLAN-Karten als Ethernet erkannt werden. Verwendet eine externe usb-WLAN-Karte"
+	arr["GERMAN",134]="Wenn Ihr Linux eine virtuelle Maschine ist, können integrierte WLAN-Karten als Ethernet erkannt werden. Verwendet eine externe usb-WLAN-Karte"
 
 	arr["ENGLISH",135]="Type of encryption: ${pink_color}${enc}${normal_color}"
 	arr["SPANISH",135]="Tipo de encriptado: ${pink_color}${enc}${normal_color}"
@@ -2009,7 +2009,7 @@ function language_strings() {
 	arr["GREEK",135]="Τύπος κρυπτογράφησης: ${pink_color}${enc}${normal_color}"
 	arr["ITALIAN",135]="Tipo di crittografia: ${pink_color}${enc}${normal_color}"
 	arr["POLISH",135]="Typ szyfrowania: ${pink_color}${enc}${normal_color}"
-	arr["GERMAN",135]="${pending_of_translation} Art der Verschlüsselung: ${pink_color}${enc}${normal_color}"
+	arr["GERMAN",135]="Verschlüsselungsart: ${pink_color}${enc}${normal_color}"
 
 	arr["ENGLISH",136]="Obtaining a Handshake is only for networks with encryption WPA or WPA2"
 	arr["SPANISH",136]="La obtención de un Handshake es solo para redes con encriptación WPA o WPA2"
@@ -2020,7 +2020,7 @@ function language_strings() {
 	arr["GREEK",136]="Η απόκτηση μιας Χειραψίας ισχύει μόνο σε δίκτυα με κρυπτογράφηση WPA ή WPA2"
 	arr["ITALIAN",136]="Ottenere un Handshake è possibile solo per le reti con crittografia WPA o WPA2"
 	arr["POLISH",136]="Przechwytywanie Handshake dotyczy tylko sieci z szyfrowaniem WPA lub WPA2"
-	arr["GERMAN",136]="${pending_of_translation} Das Erhalten eines Handshakes ist nur für Netzwerke mit WPA oder WPA2-Verschlüsselung möglich"
+	arr["GERMAN",136]="Das Erhalten eines Handshakes ist nur für Netzwerke mit WPA oder WPA2-Verschlüsselung möglich"
 
 	arr["ENGLISH",137]="The selected network is invalid. To get a Handshake, encryption type of target network should be WPA or WPA2"
 	arr["SPANISH",137]="La red seleccionada no es válida. Para obtener un Handshake, el tipo de encriptación de la red objetivo debe ser WPA o WPA2"
@@ -2031,7 +2031,7 @@ function language_strings() {
 	arr["GREEK",137]="Το επιλεγμένο δίκτυο είναι άκυρο. Για να αποκτήσετε μία Χειραψία, ο τύπος κρυπτογράφησης του δικτύου-στόχου πρέπει να έιναι WPA ή WPA2"
 	arr["ITALIAN",137]="La rete selezionata non è valida. Per ottenere un Handshake, il tipo di crittografia della rete obiettivo deve essere WPA o WPA2"
 	arr["POLISH",137]="Wybrana sieć jest nieprawidłowa. Aby przechwycić Handshake, typem szyfrowania sieci docelowej musi być WPA lub WPA2"
-	arr["GERMAN",137]="${pending_of_translation} Das ausgewählte Netzwerk ist nicht gültig. Um einen Handshake zu erhalten, muss die Art der Verschlüsselung des Zielnetzwerks WPA oder WPA2 sein"
+	arr["GERMAN",137]="Das ausgewählte Netzwerk ist nicht gültig. Um einen Handshake zu erhalten, muss die Verschlüsselungsart des Zielnetzwerks WPA oder WPA2 sein"
 
 	arr["ENGLISH",138]="Attack for Handshake"
 	arr["SPANISH",138]="Ataque para Handshake"
@@ -2042,7 +2042,7 @@ function language_strings() {
 	arr["GREEK",138]="Επίθεση για Χειραψία"
 	arr["ITALIAN",138]="Attacco per Handshake"
 	arr["POLISH",138]="Atak na Handshake"
-	arr["GERMAN",138]="${pending_of_translation} Angriff für Handshake"
+	arr["GERMAN",138]="Handshake-Angriff"
 
 	arr["ENGLISH",139]="1.  Deauth / disassoc amok mdk3 attack"
 	arr["SPANISH",139]="1.  Ataque Deauth / Disassoc amok mdk3"
@@ -2053,7 +2053,7 @@ function language_strings() {
 	arr["GREEK",139]="1.  Επίθεση Deauth / disassoc amok mdk3"
 	arr["ITALIAN",139]="1.  Attacco Deauth / Disassoc amok mdk3"
 	arr["POLISH",139]="1.  Atak Deauth / Disassoc amok mdk3"
-	arr["GERMAN",139]="${pending_of_translation} 1.  Angriff Deauth / Disassoc Amok mdk3"
+	arr["GERMAN",139]="1.  Deauth  / Disassoc Amok mdk3 Angriff"
 
 	arr["ENGLISH",140]="2.  Deauth aireplay attack"
 	arr["SPANISH",140]="2.  Ataque Deauth aireplay"
@@ -2064,7 +2064,7 @@ function language_strings() {
 	arr["GREEK",140]="2.  Επίθεση Deauth aireplay"
 	arr["ITALIAN",140]="2.  Attacco Deauth aireplay"
 	arr["POLISH",140]="2.  Atak Deauth aireplay"
-	arr["GERMAN",140]="${pending_of_translation} 2.  Angriff Deauth aireplay"
+	arr["GERMAN",140]="2.  Angriff Deauth aireplay Angriff"
 
 	arr["ENGLISH",141]="3.  WIDS / WIPS / WDS Confusion attack"
 	arr["SPANISH",141]="3.  Ataque WIDS / WIPS / WDS Confusion"
@@ -2075,7 +2075,7 @@ function language_strings() {
 	arr["GREEK",141]="3.  Επίθεση σύγχυσης WIDS / WIPS / WDS"
 	arr["ITALIAN",141]="3.  Attacco WIDS / WIPS / WDS Confusion"
 	arr["POLISH",141]="3.  Atak WIDS / WIPS / WDS Confusion"
-	arr["GERMAN",141]="${pending_of_translation} 3.  Angriff WIDS / WIPS / WDS Confusion"
+	arr["GERMAN",141]="3.  WIDS / WIPS / WDS Confusion Angriff"
 
 	arr["ENGLISH",142]="If the Handshake doesn't appear after an attack, try again or change the type of attack"
 	arr["SPANISH",142]="Si tras un ataque el Handshake no aparece, vuelve a intentarlo o cambia de ataque hasta conseguirlo"
@@ -2086,7 +2086,7 @@ function language_strings() {
 	arr["GREEK",142]="Αν η Χειραψία δεν εμφανιστεί μετά από την επίθεση, προσπαθήστε ξανά ή αλλάξτε τύπο επίθεσης"
 	arr["ITALIAN",142]=" Se dopo un attacco non compare l'Handshake, prova di nuovo o cambia attacco fino ad ottenerlo"
 	arr["POLISH",142]="Jeśli po ataku nie pojawi się Handshake, spróbuj ponownie lub zmień atak"
-	arr["GERMAN",142]="${pending_of_translation} Wenn nach einem Angriff der Handshake nicht erscheint, versuchen Sie es erneut oder ändern Sie den Angriff, bis Sie ihn erhalten"
+	arr["GERMAN",142]="Wenn nach einem Angriff der Handshake nicht erscheint, versuchen Sie es erneut oder ändern Sie den Angriff, bis Sie ihn erhalten"
 
 	arr["ENGLISH",143]="Two windows will be opened. One with the Handshake capturer and other with the attack to force clients to reconnect"
 	arr["SPANISH",143]="Se abrirán dos ventanas. Una con el capturador del Handshake y otra con el ataque para expulsar a los clientes y forzarles a reconectar"
@@ -2097,7 +2097,7 @@ function language_strings() {
 	arr["GREEK",143]="Θα ανοίξουν δύο παράθυρα. Ένα με τον καταγραφέα Χειραψίας, και ένα με την επίθεση εξαναγκασμένης επανασύνδεσης των χρηστών"
 	arr["ITALIAN",143]="Si apriranno due finestre. Una con il catturatore dell'Handshake, l'altra con l'attacco per cacciare i clienti e costringerli a riconnettersi"
 	arr["POLISH",143]="Otworzą się dwa okna. Jedna z przechwytywaczem Handshake, a druga z atakiem, zmuszającym klientów ich do ponownego połączenia"
-	arr["GERMAN",143]="${pending_of_translation} Zwei Fenster öffnen sich. Eine mit dem Handshake-Grabber und eine mit dem Angriff, um die Kunden zu vertreiben und sie zu zwingen, sich wieder zu verbinden"
+	arr["GERMAN",143]="Zwei Fenster werden sich öffnen. Eine mit dem Handshake-Grabber und eine mit dem Angriff, der die Kunden zwingt, sich wieder zu verbinden"
 
 	arr["ENGLISH",144]="Don't close any window manually, script will do when needed. In about 20 seconds maximum you'll know if you've got the Handshake"
 	arr["SPANISH",144]="No cierres manualmente ninguna ventana, el script lo hará cuando proceda. En unos 20 segundos como máximo sabrás si conseguiste el Handshake"
@@ -2108,7 +2108,7 @@ function language_strings() {
 	arr["GREEK",144]="Μην επιχειρήσετε το κλείσιμο κάποιου παραθύρου χειροκίνητα, εάν χρειαστεί το script θα το κάνει μόνο του. Σε περίπου 20 δευτερόλεπτα το μέγιστο θα μάθετε αν αποκτήσατε την Χειραψία"
 	arr["ITALIAN",144]="Non chiudere nessuna finestra manualmente, lo script lo fará cuando necessario. In 20 secondi al massimo scoprirai se hai catturato l'Handshake"
 	arr["POLISH",144]="Nie należy ręcznie zamykać okien, skrypt to zrobi w razie potrzeby. W ciągu co najwyżej 20 sekund dowiesz się, czy masz Handshake"
-	arr["GERMAN",144]="${pending_of_translation} Schließen Sie kein Fenster manuell, das Skript wird dies bei Bedarf tun. In ungefähr 20 Sekunden werden Sie wissen, ob Sie den Handschlag bekommen haben"
+	arr["GERMAN",144]="Schließen Sie kein Fenster manuell, das Skript wird dies bei Bedarf tun. In ungefähr 20 Sekunden werden Sie wissen, ob Sie den Handshake bekommen haben"
 
 	arr["ENGLISH",145]="Did you get the Handshake? ${pink_color}(Look at the top right corner of the capture window) ${normal_color}${visual_choice}"
 	arr["SPANISH",145]="¿Conseguiste el Handshake? ${pink_color}(Mira en la parte superior derecha de la ventana de captura) ${normal_color}${visual_choice}"
@@ -2119,7 +2119,7 @@ function language_strings() {
 	arr["GREEK",145]="Πήρατε την Χειραψία; ${pink_color}(Κοιτάξτε στη πάνω δεξιά γωνία του παραθύρου) ${normal_color}${visual_choice}"
 	arr["ITALIAN",145]="Hai catturato l'Handshake? ${pink_color}(Guarda nell'angolo in alto a destra della finestra di cattura) ${normal_color}${visual_choice}"
 	arr["POLISH",145]="Czy dostałeś Handshake? ${pink_color}(Spójrz w prawym górnym rogu okna przechwytywania) ${normal_color}${visual_choice}"
-	arr["GERMAN",145]="${pending_of_translation} Hast du den Händedruck bekommen? ${pink_color}(Schaue oben rechts im Aufnahmefenster nach) ${normal_color}${visual_choice}"
+	arr["GERMAN",145]="Haben Sie den Handshake bekommen? ${pink_color}(Schauen Sie oben rechts im Aufnahmefenster nach) ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",146]="It seems we failed... try it again or choose another attack"
 	arr["SPANISH",146]="Parece que no lo hemos conseguido... inténtalo de nuevo o elige otro ataque"
@@ -2130,7 +2130,7 @@ function language_strings() {
 	arr["GREEK",146]="Φαίνεται πως αποτύχαμε... προσπαθήστε ξανά ή επιλέξτε άλλη επίθεση"
 	arr["ITALIAN",146]="Sembra che abbiamo fallito... riprovare o scegliere un altro attacco"
 	arr["POLISH",146]="Wygląda na to, że się nie udało... spróbuj ponownie lub wybierz inny atak"
-	arr["GERMAN",146]="${pending_of_translation} Es scheint, dass wir es nicht geschafft haben... versuchen Sie es erneut oder wählen Sie einen anderen Angriff"
+	arr["GERMAN",146]="Es scheint, dass wir es nicht geschafft haben... versuchen Sie es erneut oder wählen Sie einen anderen Angriff"
 
 	arr["ENGLISH",147]="0.  Return to Handshake tools menu"
 	arr["SPANISH",147]="0.  Volver al menú de herramientas Handshake"
@@ -2141,7 +2141,7 @@ function language_strings() {
 	arr["GREEK",147]="0.  Επιστροφή στο μενού με τα εργαλεία Χειραψίας"
 	arr["ITALIAN",147]="0.  Torna al menu degli strumenti dell'Handshake"
 	arr["POLISH",147]="0.  Wróć do menu narzędzi Handshake"
-	arr["GERMAN",147]="${pending_of_translation} 0.  Zurück zum Werkzeugmenü Handshake"
+	arr["GERMAN",147]="0.  Zurück zum Handshake Werkzeugmenü"
 
 	arr["ENGLISH",148]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${handshakepath}]"
 	arr["SPANISH",148]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${handshakepath}]"
@@ -2152,7 +2152,7 @@ function language_strings() {
 	arr["GREEK",148]="Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${handshakepath}]"
 	arr["ITALIAN",148]="Scrivere il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${handshakepath}]"
 	arr["POLISH",148]="Wpisz ścieżkę do zapisywania plików lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${handshakepath}]"
-	arr["GERMAN",148]="${pending_of_translation} Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter], um den Standardvorschlag ${normal_color}[${handshakepath}] ${green_color}zu akzeptieren."
+	arr["GERMAN",148]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${handshakepath}] ${green_color}zu benutzen."
 
 	arr["ENGLISH",149]="Handshake file generated successfully at [${normal_color}${enteredpath}${blue_color}]"
 	arr["SPANISH",149]="Fichero de Handshake generado con éxito en [${normal_color}${enteredpath}${blue_color}]"
@@ -2163,7 +2163,7 @@ function language_strings() {
 	arr["GREEK",149]="Το αρχείο Χειραψίας δημιουργήθηκε επιτυχώς στο [${normal_color}${enteredpath}${blue_color}]"
 	arr["ITALIAN",149]="Handshake del file generato con successo in [${normal_color}${enteredpath}${blue_color}]"
 	arr["POLISH",149]="Plik Handshake został pomyślnie wygenerowany w [${normal_color}${enteredpath}${blue_color}]"
-	arr["GERMAN",149]="${pending_of_translation} Handshake-Datei erfolgreich erstellt in [${normal_color}${enteredpath}${blue_color}]"
+	arr["GERMAN",149]="Handshake-Datei erfolgreich in [${normal_color}${enteredpath}${blue_color}] erstellt"
 
 	arr["ENGLISH",150]="No captured Handshake file detected during this session..."
 	arr["SPANISH",150]="No se ha detectado ningún fichero de Handshake capturado en esta sesión..."
@@ -2174,7 +2174,7 @@ function language_strings() {
 	arr["GREEK",150]="Δεν εντοπίστηκε κάποιο αρχείο καταγραφής Χειραψίας κατά τη διάρκεια της συνεδρίας..."
 	arr["ITALIAN",150]="Non è stato trovato nessun file di Handshake catturato in questa sessione..."
 	arr["POLISH",150]="Nie wykryto pliku Handshake przechwyconego w tej sesji..."
-	arr["GERMAN",150]="${pending_of_translation} Keine in dieser Sitzung erfasste Handshake-Datei wurde erkannt..."
+	arr["GERMAN",150]="Keine erfasste Handshake-Datei wurde in dieser Sitzung erkannt..."
 
 	arr["ENGLISH",151]="Handshake captured file detected during this session [${normal_color}${enteredpath}${blue_color}]"
 	arr["SPANISH",151]="Se ha detectado un fichero de Handshake capturado en esta sesión [${normal_color}${enteredpath}${blue_color}]"
@@ -2185,7 +2185,7 @@ function language_strings() {
 	arr["GREEK",151]="Εντοπίστηκε αρχείο καταγραφής Χειραψίας κατά τη διάρκεια της συνεδρίας [${normal_color}${enteredpath}${blue_color}]"
 	arr["ITALIAN",151]="Trovato un file di Handshake catturato in questa sessione [${normal_color}${enteredpath}${blue_color}]"
 	arr["POLISH",151]="Plik Handshake został przechwycony w tej sesji został [${normal_color}${enteredpath}${blue_color}]"
-	arr["GERMAN",151]="${pending_of_translation} Eine in dieser Sitzung erfasste Handshake-Datei wurde erkannt [${normal_color}${enteredpath}${blue_color}]"
+	arr["GERMAN",151]="Eine erfasste Handshake-Datei wurde erkannt [${normal_color}${enteredpath}${blue_color}]"
 
 	arr["ENGLISH",152]="Do you want to clean/optimize the Handshake captured file during this session? ${normal_color}${visual_choice}"
 	arr["SPANISH",152]="¿Quieres limpiar/optimizar el fichero de Handshake capturado en esta sesión? ${normal_color}${visual_choice}"
@@ -2196,7 +2196,7 @@ function language_strings() {
 	arr["GREEK",152]="Θέλετε να καθαρίσετε/βελτιστοποιήσετε το αρχείο καταγραφής Χειραψίας της συνεδρίας; ${normal_color}${visual_choice}"
 	arr["ITALIAN",152]="Vuoi pulire/ottimizzare il file di Handshake catturato in questa sessione? ${normal_color}${visual_choice}"
 	arr["POLISH",152]="Czy chcesz wyczyścić/zoptymalizować plik Handshake przechwycony w tej sesji? ${normal_color}${visual_choice}"
-	arr["GERMAN",152]="${pending_of_translation} Möchten Sie die in dieser Sitzung erfasste Handshake-Datei bereinigen/optimieren? ${normal_color}${visual_choice}"
+	arr["GERMAN",152]="Möchten Sie die Handshake-Datei bereinigen/optimieren? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",153]="File cleaned/optimized successfully"
 	arr["SPANISH",153]="Fichero limpiado/optimizado con éxito"
@@ -2207,7 +2207,7 @@ function language_strings() {
 	arr["GREEK",153]="Το αρχείο καθαρίστηκε/βελτιστοποιήθηκε επιτυχώς"
 	arr["ITALIAN",153]="File pulito/ottimizzato con successo"
 	arr["POLISH",153]="Plik pomyślnie wyczyszczony/zoptymalizowany"
-	arr["GERMAN",153]="${pending_of_translation} Datei bereinigt/optimiert erfolgreich"
+	arr["GERMAN",153]="Datei erfolgreich bereinigt/optimiert"
 
 	arr["ENGLISH",154]="Set path to file:"
 	arr["SPANISH",154]="Introduce la ruta al fichero:"
@@ -2218,7 +2218,7 @@ function language_strings() {
 	arr["GREEK",154]="Θέστε μονοπάτι για το αρχείο:"
 	arr["ITALIAN",154]="Introdurre il percorso del file:"
 	arr["POLISH",154]="Wprowadź ścieżkę do pliku:"
-	arr["GERMAN",154]="${pending_of_translation} Geben Sie den Pfad zu der Datei ein:"
+	arr["GERMAN",154]="Geben Sie den Pfad zur Datei ein:"
 
 	arr["ENGLISH",155]="The directory exists but you didn't specify filename. It will be autogenerated [${normal_color}${suggested_filename}${yellow_color}]"
 	arr["SPANISH",155]="El directorio existe pero no se especificó nombre de fichero. Se autogenerará [${normal_color}${suggested_filename}${yellow_color}]"
@@ -2229,7 +2229,7 @@ function language_strings() {
 	arr["GREEK",155]="Ο κατάλογος υπάρχει αλλά δεν έχετε προσδιορίσει το όνομα του αρχείου [${normal_color}${suggested_filename}${yellow_color}]"
 	arr["ITALIAN",155]="La directory esiste, peró non è stato specificato il nome del file. Sarà generato automaticamente [${normal_color}${suggested_filename}${yellow_color}]"
 	arr["POLISH",155]="Katalog istnieje, ale nie określono nazwy pliku. Zostanie ona wygenerowana automatycznie [${normal_color}${suggested_filename}${yellow_color}]"
-	arr["GERMAN",155]="${pending_of_translation} Das Verzeichnis existiert, aber es wurde kein Dateiname angegeben. Es wird sich selbst erzeugen [${normal_color}${suggested_filename}${yellow_color}]"
+	arr["GERMAN",155]="Das Verzeichnis existiert, aber es wurde kein Dateiname angegeben. Es wird sich selbst erzeugen [${normal_color}${suggested_filename}${yellow_color}]"
 
 	arr["ENGLISH",156]="Directory not exists"
 	arr["SPANISH",156]="El directorio no existe"
@@ -2240,7 +2240,7 @@ function language_strings() {
 	arr["GREEK",156]="Ο κατάλογος δεν υπάρχει"
 	arr["ITALIAN",156]="La directory non esiste"
 	arr["POLISH",156]="Katalog nie istnieje"
-	arr["GERMAN",156]="${pending_of_translation} Das Verzeichnis existiert nicht"
+	arr["GERMAN",156]="Das Verzeichnis existiert nicht"
 
 	arr["ENGLISH",157]="The path exists but you don't have write permissions"
 	arr["SPANISH",157]="La ruta existe pero no tienes permisos de escritura"
@@ -2251,7 +2251,7 @@ function language_strings() {
 	arr["GREEK",157]="Το μονοπάτι υπάρχει, αλλά δεν έχετε δικαιώματα εγγραφής"
 	arr["ITALIAN",157]="Il percorso esiste, ma non si dispone dei permessi di scrittura"
 	arr["POLISH",157]="Ścieżka istnieje, ale nie masz uprawnień do zapisu"
-	arr["GERMAN",157]="${pending_of_translation} Die Route existiert, Sie haben jedoch keine Schreibberechtigung"
+	arr["GERMAN",157]="Die Route existiert, Sie haben jedoch keine Schreibberechtigung"
 
 	arr["ENGLISH",158]="The path is valid and you have write permissions. Script can continue..."
 	arr["SPANISH",158]="La ruta es válida y tienes permisos de escritura. El script puede continuar..."
@@ -2262,7 +2262,7 @@ function language_strings() {
 	arr["GREEK",158]="Το μονοπάτι είναι έγκυρο και έχετε δικαιώματα εγγραφής. Το script μπορεί να συνεχίσει..."
 	arr["ITALIAN",158]="Il percorso è valido e si dispone di permessi di scrittura. Lo script può continuare..."
 	arr["POLISH",158]="Ścieżka jest poprawna i masz uprawnienia do zapisu. Skrypt może kontynuować..."
-	arr["GERMAN",158]="${pending_of_translation} Die Route ist gültig und Sie haben Schreibberechtigung. Das Skript kann fortfahren..."
+	arr["GERMAN",158]="Die Route ist gültig und Sie haben Schreibberechtigung. Das Skript kann fortfahren..."
 
 	arr["ENGLISH",159]="The file doesn't need to be cleaned/optimized"
 	arr["SPANISH",159]="El fichero no necesita ser limpiado/optimizado"
@@ -2273,7 +2273,7 @@ function language_strings() {
 	arr["GREEK",159]="Το αρχείο δεν χρειάζεται να καθαριστεί/βελτιστοποιηθεί"
 	arr["ITALIAN",159]="Il file non ha bisogno di essere pulito/ottimizzato"
 	arr["POLISH",159]="Nie ma potrzeby wyczyszczenia/zoptymalizowania tego pliku"
-	arr["GERMAN",159]="${pending_of_translation} Die Datei muss nicht gereinigt/optimiert werden"
+	arr["GERMAN",159]="Die Datei braucht nicht gereinigt/optimiert werden"
 
 	arr["ENGLISH",160]="No tasks to perform on exit"
 	arr["SPANISH",160]="No hay que realizar ninguna tarea a la salida"
@@ -2284,7 +2284,7 @@ function language_strings() {
 	arr["GREEK",160]="Δεν απομένει κάποιο task για να εκτελεστεί στην έξοδο"
 	arr["ITALIAN",160]="Non bisogna fare niente dopo l'uscita dello script"
 	arr["POLISH",160]="Plik nie musi być wczyszczony/zoptymalizowany"
-	arr["GERMAN",160]="${pending_of_translation} Es gibt keine Aufgabe beim Verlassen"
+	arr["GERMAN",160]="Es gibt keine Aufgabe beim Verlassen"
 
 	arr["ENGLISH",161]="File not exists"
 	arr["SPANISH",161]="El fichero no existe"
@@ -2295,7 +2295,7 @@ function language_strings() {
 	arr["GREEK",161]="Το αρχείο δεν υπάρχει"
 	arr["ITALIAN",161]="Il file non esiste"
 	arr["POLISH",161]="Plik nie istnieje"
-	arr["GERMAN",161]="${pending_of_translation} Die Datei existiert nicht"
+	arr["GERMAN",161]="Die Datei existiert nicht"
 
 	arr["ENGLISH",162]="Congratulations!!"
 	arr["SPANISH",162]="Enhorabuena!!"
@@ -2306,7 +2306,7 @@ function language_strings() {
 	arr["GREEK",162]="Συγχαρητήρια!!"
 	arr["ITALIAN",162]="Congratulazioni!!"
 	arr["POLISH",162]="Gratulacje!!"
-	arr["GERMAN",162]="${pending_of_translation} Herzlichen Glückwunsch!!"
+	arr["GERMAN",162]="Herzlichen Glückwunsch!!"
 
 	arr["ENGLISH",163]="When airgeddon requests you to enter a path to a file either to use a dictionary, a Handshake or anything else, did you know that you can drag and drop the file over the airgeddon window? In this way you don't have to type the path manually"
 	arr["SPANISH",163]="Cuando airgeddon solicita que introduzcas una ruta a un fichero ya sea para utilizar un diccionario, un Handshake o cualquier otra cosa, ¿sabías que puedes arrastrar y soltar el fichero sobre la ventana de airgeddon? Así no tendrás que escribir la ruta manualmente"
@@ -2317,7 +2317,7 @@ function language_strings() {
 	arr["GREEK",163]="Γνωρίζατε ότι μπορείτε να εισάγετε μονοπάτι για κάποιο αρχείο είτε για να χρησιμοποιήσετε λεξικό, αρχείο Χειραψίας ή οτιδήποτε άλλο, κάνοντας Drag & Drop το αρχείο αυτό στο παράθυρο του airgeddon; Με αυτόν τον τρόπο δεν χρειάζεται να πλεικτρολογείτε το μονοπάτι χειροκίνητα"
 	arr["ITALIAN",163]="Quando airgeddon chiede di introdurre il percorso di un file per utilizzare un dizionario, un Handshake o qualsiasi altra cosa, sapevi che puoi trascinare e rilasciare il file sulla finestra di airgeddon? Cosí non dovrai digitare manualmente il percorso"
 	arr["POLISH",163]="Wiesz, że kiedy airgeddon poprosi Cię o podanie ścieżki do pliku aby użyć słownika, pliku Handshake lub cokolwiek innego, możesz przeciągnąć i upuścić plik przez okno airgeddon? Nie musisz wpisywać scieżki ręcznie"
-	arr["GERMAN",163]="${pending_of_translation} Wenn airgeddon Sie auffordert, einen Dateipfad einzugeben, um ein Wörterbuch, einen Handshake oder etwas anderes zu verwenden, wussten Sie, dass Sie die Datei per Drag & Drop auf das airgeddon-Fenster ziehen können? Sie müssen die Route nicht manuell schreiben"
+	arr["GERMAN",163]="Wenn airgeddon Sie auffordert, einen Dateipfad einzugeben, um ein Wörterbuch, einen Handshake oder etwas anderes zu verwenden, wussten Sie, dass Sie die Datei per Drag & Drop auf das airgeddon-Fenster ziehen können? Sie müssen die Route nicht manuell schreiben"
 
 	arr["ENGLISH",164]="Cleaning temp files"
 	arr["SPANISH",164]="Limpiando archivos temporales"
@@ -2328,7 +2328,7 @@ function language_strings() {
 	arr["GREEK",164]="Γίνεται καθαρισμός προσωρινών αρχείων"
 	arr["ITALIAN",164]="Pulendo i file temporanei"
 	arr["POLISH",164]="Usuwanie plików tymczasowych"
-	arr["GERMAN",164]="${pending_of_translation} Temporäre Dateien bereinigen"
+	arr["GERMAN",164]="Temporäre Dateien bereinigen"
 
 	arr["ENGLISH",165]="Checking if cleaning/restoring tasks are needed..."
 	arr["SPANISH",165]="Comprobando si hay que realizar tareas de limpieza/restauración..."
@@ -2339,7 +2339,7 @@ function language_strings() {
 	arr["GREEK",165]="Γίνεται έλεγχος αν χρειάζονται tasks καθαρισμού/αποκατάστασης..."
 	arr["ITALIAN",165]="Verificando se è necessarrio eseguire la pulizia/restauro..."
 	arr["POLISH",165]="Sprawdzenie czy wymagane jest czyszczenie/przywrócenie..."
-	arr["GERMAN",165]="${pending_of_translation} Überprüfung, ob Reinigungs/Restaurierungsarbeiten durchgeführt werden müssen..."
+	arr["GERMAN",165]="Überprüfung, ob Reinigungs/Restaurierungsarbeiten durchgeführt werden müssen..."
 
 	arr["ENGLISH",166]="Do you want to preserve monitor mode for your card on exit? ${normal_color}${visual_choice}"
 	arr["SPANISH",166]="¿Deseas conservar el modo monitor de tu interfaz al salir? ${normal_color}${visual_choice}"
@@ -2350,7 +2350,7 @@ function language_strings() {
 	arr["GREEK",166]="Θέλετε να παραμείνει η κάρτα σε κατάσταση παρακολούθησης κατά την έξοδο; ${normal_color}${visual_choice}"
 	arr["ITALIAN",166]="Vuoi mantenere l'interfaccia in modalità monitor dopo essere uscito? ${normal_color}${visual_choice}"
 	arr["POLISH",166]="Czy chcesz zachować tryb monitorowania teojej karty sieciowej po wyjsciu? ${normal_color}${visual_choice}"
-	arr["GERMAN",166]="${pending_of_translation} Möchten Sie den monitor Modus Ihrer Schnittstelle beim Beenden beibehalten? ${normal_color}${visual_choice}"
+	arr["GERMAN",166]="Möchten Sie den monitor-Modus Ihrer Interface beim Beenden beibehalten? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",167]="Putting your interface in managed mode"
 	arr["SPANISH",167]="Poniendo interfaz en modo managed"
@@ -2361,7 +2361,7 @@ function language_strings() {
 	arr["GREEK",167]="Η διεπαφή μπαίνει σε ετερόκλητη κατάσταση"
 	arr["ITALIAN",167]="Mettendo l'interfaccia in modalità managed"
 	arr["POLISH",167]="Uruchamianie w trybie zarządzania"
-	arr["GERMAN",167]="${pending_of_translation} Schnittstelle in verwalteten Modus managed"
+	arr["GERMAN",167]="Interface wird im managed-Modus eingestellt"
 
 	arr["ENGLISH",168]="Launching previously killed processes"
 	arr["SPANISH",168]="Arrancando procesos cerrados anteriormente"
@@ -2372,7 +2372,7 @@ function language_strings() {
 	arr["GREEK",168]="Γίνεται έναρξη των προηγούμενων σταματημένων διεργασιών"
 	arr["ITALIAN",168]="Lanciando i processi chiusi precedentemente"
 	arr["POLISH",168]="Uruchamianie wcześniej zakończonych procesów"
-	arr["GERMAN",168]="${pending_of_translation} Vorab geschlossene Prozesse starten"
+	arr["GERMAN",168]="Vorab geschlossene Prozesse starten"
 
 	arr["ENGLISH",169]="6.  Offline WPA/WPA2 decrypt menu"
 	arr["SPANISH",169]="6.  Menú de desencriptado WPA/WPA2 offline"
@@ -2383,7 +2383,7 @@ function language_strings() {
 	arr["GREEK",169]="6.  Μενού offline αποκρυπτογράφησης WPA/WPA2"
 	arr["ITALIAN",169]="6.  Menù per decifrare WPA/WPA2 offline"
 	arr["POLISH",169]="6.  Menu deszyfrowania WPA/WPA2 offline"
-	arr["GERMAN",169]="${pending_of_translation} 6.  Offline WPA/WPA2-Entschlüsselungsmenü"
+	arr["GERMAN",169]="6.  Offline WPA/WPA2-Entschlüsselungsmenü"
 
 	arr["ENGLISH",170]="Offline WPA/WPA2 decrypt menu"
 	arr["SPANISH",170]="Menú de desencriptado WPA/WPA2 offline"
@@ -2394,7 +2394,7 @@ function language_strings() {
 	arr["GREEK",170]="Μενού offline αποκρυπτογράφησης WPA/WPA2"
 	arr["ITALIAN",170]="Menù per decifrare WPA/WPA2 offline"
 	arr["POLISH",170]="Menu deszyfrowania WPA/WPA2 offline"
-	arr["GERMAN",170]="${pending_of_translation} Offline WPA/WPA2-Entschlüsselungsmenü"
+	arr["GERMAN",170]="Offline WPA/WPA2-Entschlüsselungsmenü"
 
 	arr["ENGLISH",171]="The key decrypt process is performed offline on a previously captured file"
 	arr["SPANISH",171]="El proceso de desencriptado de las claves se realiza de manera offline sobre un fichero capturado previamente"
@@ -2405,7 +2405,7 @@ function language_strings() {
 	arr["GREEK",171]="Η διεργασία αποκρυπτογράφησης κλειδιού έχει εκτελεστεί offline σε προηγούμενο αρχείο καταγραφής"
 	arr["ITALIAN",171]="Il processo di decodifica della chiave viene eseguito offline su un file catturato precedentemente"
 	arr["POLISH",171]="Proces deszyfrowania klucza odbywa się offline na poprzednio przechwyconym pliku"
-	arr["GERMAN",171]="${pending_of_translation} Die Entschlüsselung der Schlüssel erfolgt offline über eine zuvor erfasste Datei"
+	arr["GERMAN",171]="Die Entschlüsselung erfolgt offline über eine zuvor erfasste Datei"
 
 	arr["ENGLISH",172]="1.  (aircrack) Dictionary attack against capture file"
 	arr["SPANISH",172]="1.  (aircrack) Ataque de diccionario sobre fichero de captura"
@@ -2416,7 +2416,7 @@ function language_strings() {
 	arr["GREEK",172]="1.  (aircrack) Επίθεση με χρήση λεξικού σε αρχείο καταγραφής"
 	arr["ITALIAN",172]="1.  (aircrack) Attacco dizionario sul file di cattura"
 	arr["POLISH",172]="1.  (aircrack) Atak słownikowy na plik przechwytywania"
-	arr["GERMAN",172]="${pending_of_translation} 1.  (aircrack) Wörterbuchangriff auf die Aufnahmedatei"
+	arr["GERMAN",172]="1.  (aircrack) Wörterbuchangriff auf der aufgenommene Datei"
 
 	arr["ENGLISH",173]="Selected capture file: ${pink_color}${enteredpath}${normal_color}"
 	arr["SPANISH",173]="Fichero de captura seleccionado: ${pink_color}${enteredpath}${normal_color}"
@@ -2427,7 +2427,7 @@ function language_strings() {
 	arr["GREEK",173]="Επιλεγμένο αρχείο καταγραφής: ${pink_color}${enteredpath}${normal_color}"
 	arr["ITALIAN",173]="File di cattura selezionato: ${pink_color}${enteredpath}${normal_color}"
 	arr["POLISH",173]="Wybrany plik przechwytywania: ${pink_color}${enteredpath}${normal_color}"
-	arr["GERMAN",173]="${pending_of_translation} Ausgewählte Capture-Datei: ${pink_color}${enteredpath}${normal_color}"
+	arr["GERMAN",173]="Ausgewählte Capture-Datei: ${pink_color}${enteredpath}${normal_color}"
 
 	arr["ENGLISH",174]="6.  Return to main menu"
 	arr["SPANISH",174]="6.  Volver al menú principal"
@@ -2438,7 +2438,7 @@ function language_strings() {
 	arr["GREEK",174]="6.  Επιστροφή στο αρχικό μενού"
 	arr["ITALIAN",174]="6.  Torna al menú principale"
 	arr["POLISH",174]="6.  Wróć do menu głównego"
-	arr["GERMAN",174]="${pending_of_translation} 6.  Kehre zum Hauptmenü zurück"
+	arr["GERMAN",174]="6.  Zum Hauptmenü zurückkehren"
 
 	arr["ENGLISH",175]="2.  (aircrack + crunch) Bruteforce attack against capture file"
 	arr["SPANISH",175]="2.  (aircrack + crunch) Ataque de fuerza bruta sobre fichero de captura"
@@ -2449,7 +2449,7 @@ function language_strings() {
 	arr["GREEK",175]="2.  (aircrack + crunch) Επίθεση ωμής βίας σε αρχείο καταγραφής"
 	arr["ITALIAN",175]="2.  (aircrack + crunch) Attacco di forza bruta sul file di cattura"
 	arr["POLISH",175]="2.  (aircrack + crunch) Atak brute force na pliku przechwytywania"
-	arr["GERMAN",175]="${pending_of_translation} 2.  (aircrack + crunch) Brute-Force-Angriff auf die Capture-Datei"
+	arr["GERMAN",175]="2.  (aircrack + crunch) Brute-Force-Angriff auf die Capture-Datei"
 
 	arr["ENGLISH",176]="aircrack CPU, non GPU attacks"
 	arr["SPANISH",176]="ataques aircrack CPU, no GPU"
@@ -2460,7 +2460,7 @@ function language_strings() {
 	arr["GREEK",176]="επιθέσεις aircrack CPU, όχι GPU"
 	arr["ITALIAN",176]="attacchi aircrack CPU, non GPU"
 	arr["POLISH",176]="ataki CPU, nie GPU"
-	arr["GERMAN",176]="${pending_of_translation} CPU aircrack Angriffe, keine GPU"
+	arr["GERMAN",176]="CPU aircrack Angriffe, keine GPU"
 
 	arr["ENGLISH",177]="Selected captured file: ${pink_color}None${normal_color}"
 	arr["SPANISH",177]="Fichero capturado seleccionado: ${pink_color}Ninguno${normal_color}"
@@ -2471,7 +2471,7 @@ function language_strings() {
 	arr["GREEK",177]="Επιλεγμένο αρχείο καταγραφής: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",177]="File catturato selezionato: ${pink_color}Nessuno${normal_color}"
 	arr["POLISH",177]="Wybrany przechwycony plik: ${pink_color}Brak${normal_color}"
-	arr["GERMAN",177]="${pending_of_translation} Ausgewählte erfasste Datei: ${pink_color}Keine${normal_color}"
+	arr["GERMAN",177]="Ausgewählte erfasste Datei: ${pink_color}Keine${normal_color}"
 
 	arr["ENGLISH",178]="To decrypt the key of a WPA/WPA2 network, the capture file must contain a Handshake"
 	arr["SPANISH",178]="Para desencriptar la clave de una red WPA/WPA2, el fichero de captura debe contener un Handshake"
@@ -2482,7 +2482,7 @@ function language_strings() {
 	arr["GREEK",178]="Για να αποκρυπτογραφήσετε το κλειδί ενός WPA/WPA2 δικτύου, το αρχείο καταγραφής πρέπει να περιέχει μία Χειραψία"
 	arr["ITALIAN",178]="Per decriptare la chiave per una rete WPA/WPA2, il file di cattura deve contenere un Handshake"
 	arr["POLISH",178]="Aby odszyfrować klucz sieci WPA/WPA2, plik przechwytywania musi zawierać Handshake"
-	arr["GERMAN",178]="${pending_of_translation} Um den Schlüssel eines WPA/WPA2-Netzwerks zu entschlüsseln, muss die Erfassungsdatei einen Handshake enthalten"
+	arr["GERMAN",178]="Um den Schlüssel eines WPA/WPA2-Netzwerks zu entschlüsseln, muss die Erfassungsdatei einen Handshake enthalten"
 
 	arr["ENGLISH",179]="Decrypting by bruteforce, it could pass hours, days, weeks or even months to take it depending on the complexity of the password and your processing speed"
 	arr["SPANISH",179]="Desencriptando por fuerza bruta, podrían pasar horas, días, semanas o incluso meses hasta conseguirlo dependiendo de la complejidad de la contraseña y de tu velocidad de proceso"
@@ -2493,7 +2493,7 @@ function language_strings() {
 	arr["GREEK",179]="Αποκρυπτογραφώντας με χρήση ωμής βίας, μπορεί να περάσουν ώρες, μέρες, εβδομάδες ή ακόμη και μήνες για να το αποκτήσετε έχοντας υπόψιν την πολυπλοκότητα του κωδικού πρόσβασης και την ταχύτητα του επεξεργαστή"
 	arr["ITALIAN",179]="Decifrando con forza bruta, potrebbero trascorrere ore, giorni, settimane o addirittura mesi per ottenere la password a seconda della sua complessità e della velocità del processore"
 	arr["POLISH",179]="Odszyfrowywanie przez brut force może trwać godziny, dni, tygodnie lub nawet miesiące w zależności od złożoności hasła i szybkości przetwarzania"
-	arr["GERMAN",179]="${pending_of_translation} Die Entschlüsselung mit roher Gewalt könnte Stunden, Tage, Wochen oder sogar Monate in Anspruch nehmen, abhängig von der Komplexität des Passworts und der Geschwindigkeit des Prozesses"
+	arr["GERMAN",179]="Die Entschlüsselung mit roher Gewalt könnte Stunden, Tage, Wochen oder sogar Monate in Anspruch nehmen, abhängig von der Komplexität des Passworts und der Geschwindigkeit des Prozesses"
 
 	arr["ENGLISH",180]="Enter the path of a dictionary file:"
 	arr["SPANISH",180]="Introduce la ruta de un fichero de diccionario:"
@@ -2504,7 +2504,7 @@ function language_strings() {
 	arr["GREEK",180]="Εισάγετε το μονοπάτι ενός λεξικού:"
 	arr["ITALIAN",180]="Immettere il percorso di un file dizionario:"
 	arr["POLISH",180]="Wprowadź ścieżkę pliku słownika:"
-	arr["GERMAN",180]="${pending_of_translation} Geben Sie den Pfad einer Wörterbuchdatei ein:"
+	arr["GERMAN",180]="Geben Sie den Pfad einer Wörterbuchdatei ein:"
 
 	arr["ENGLISH",181]="The path to the dictionary file is valid. Script can continue..."
 	arr["SPANISH",181]="La ruta al fichero de diccionario es válida. El script puede continuar..."
@@ -2515,7 +2515,7 @@ function language_strings() {
 	arr["GREEK",181]="Το μονοπάτι για το λεξικό είναι έγκυρο. Το script μπορεί να συνεχίσει..."
 	arr["ITALIAN",181]="Il percorso del file dizionario è valido. Lo script può continuare..."
 	arr["POLISH",181]="Ścieżka do pliku słownika jest prawidłowa. Skrypt może kontynuować..."
-	arr["GERMAN",181]="${pending_of_translation} Der Pfad zur Wörterbuchdatei ist gültig. Das Skript kann fortfahren..."
+	arr["GERMAN",181]="Der Pfad zur Wörterbuchdatei ist gültig. Das Skript kann fortfahren..."
 
 	arr["ENGLISH",182]="Selected dictionary file: ${pink_color}${DICTIONARY}${normal_color}"
 	arr["SPANISH",182]="Fichero de diccionario seleccionado: ${pink_color}${DICTIONARY}${normal_color}"
@@ -2526,7 +2526,7 @@ function language_strings() {
 	arr["GREEK",182]="Επιλεγμένο λεξικό: ${pink_color}${DICTIONARY}${normal_color}"
 	arr["ITALIAN",182]="File di dizionario selezionato: ${pink_color}${DICTIONARY}${normal_color}"
 	arr["POLISH",182]="Wybrany plik słownika: ${pink_color}${DICTIONARY}${normal_color}"
-	arr["GERMAN",182]="${pending_of_translation} Ausgewählte Wörterbuchdatei: ${pink_color}${DICTIONARY}${normal_color}"
+	arr["GERMAN",182]="Ausgewählte Wörterbuchdatei: ${pink_color}${DICTIONARY}${normal_color}"
 
 	arr["ENGLISH",183]="You already have selected a dictionary file during this session [${normal_color}${DICTIONARY}${blue_color}]"
 	arr["SPANISH",183]="Ya tienes seleccionado un fichero de diccionario en esta sesión [${normal_color}${DICTIONARY}${blue_color}]"
@@ -2537,7 +2537,7 @@ function language_strings() {
 	arr["GREEK",183]="Έχετε ήδη επιλέξει λεξικό κατά τη διάρκεια της συνεδρίας [${normal_color}${DICTIONARY}${blue_color}]"
 	arr["ITALIAN",183]="È stato selezionato un file di dizionario in questa sessione [${normal_color}${DICTIONARY}${blue_color}]"
 	arr["POLISH",183]="W tej sesji wybrano plik słownika [${normal_color}${DICTIONARY}${blue_color}]"
-	arr["GERMAN",183]="${pending_of_translation} Sie haben in dieser Sitzung bereits eine Wörterbuchdatei ausgewählt [${normal_color}${DICTIONARY}${blue_color}]"
+	arr["GERMAN",183]="Sie haben in dieser Sitzung bereits eine Wörterbuchdatei ausgewählt [${normal_color}${DICTIONARY}${blue_color}]"
 
 	arr["ENGLISH",184]="Do you want to use this already selected dictionary file? ${normal_color}${visual_choice}"
 	arr["SPANISH",184]="¿Quieres utilizar este fichero de diccionario ya seleccionado? ${normal_color}${visual_choice}"
@@ -2548,7 +2548,7 @@ function language_strings() {
 	arr["GREEK",184]="Θέλετε να χρησιμοποιήσετε το ήδη επιλεγμένο λεξικό; ${normal_color}${visual_choice}"
 	arr["ITALIAN",184]="Vuoi utilizzare questo file di dizionario già selezionato? ${normal_color}${visual_choice}"
 	arr["POLISH",184]="Czy chcesz użyć już wybraniego pliku słownika? ${normal_color}${visual_choice}"
-	arr["GERMAN",184]="${pending_of_translation} Möchten Sie diese Wörterbuchdatei bereits ausgewählt verwenden? ${normal_color}${visual_choice}"
+	arr["GERMAN",184]="Möchten Sie diese ausgewählte Wörterbuchdatei verwenden? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",185]="Selected BSSID: ${pink_color}None${normal_color}"
 	arr["SPANISH",185]="BSSID seleccionado: ${pink_color}Ninguno${normal_color}"
@@ -2559,7 +2559,7 @@ function language_strings() {
 	arr["GREEK",185]="Επιλεγμένο BSSID: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",185]="BSSID selezionato: ${pink_color}Nessuno${normal_color}"
 	arr["POLISH",185]="Wybrany BSSID: ${pink_color}Brak${normal_color}"
-	arr["GERMAN",185]="${pending_of_translation} Ausgewählte BSSID: ${pink_color}Keine${normal_color}"
+	arr["GERMAN",185]="Ausgewählte BSSID: ${pink_color}Keine${normal_color}"
 
 	arr["ENGLISH",186]="You already have selected a capture file during this session [${normal_color}${enteredpath}${blue_color}]"
 	arr["SPANISH",186]="Ya tienes seleccionado un fichero de captura en esta sesión [${normal_color}${enteredpath}${blue_color}]"
@@ -2570,7 +2570,7 @@ function language_strings() {
 	arr["GREEK",186]="Έχετε ήδη επιλέξει αρχείο καταγραφής κατά τη διάρκεια της συνεδρίας [${normal_color}${enteredpath}${blue_color}]"
 	arr["ITALIAN",186]="È stato selezionato un file di cattura in questa sessione [${normal_color}${enteredpath}${blue_color}]"
 	arr["POLISH",186]="W tej sesji wybrano już plik przechwytywania [${normal_color}${enteredpath}${blue_color}]"
-	arr["GERMAN",186]="${pending_of_translation} Sie haben bereits eine Capture-Datei in dieser Sitzung ausgewählt [${normal_color}${enteredpath}${blue_color}]"
+	arr["GERMAN",186]="Sie haben bereits eine Capture-Datei in dieser Sitzung ausgewählt [${normal_color}${enteredpath}${blue_color}]"
 
 	arr["ENGLISH",187]="Do you want to use this already selected capture file? ${normal_color}${visual_choice}"
 	arr["SPANISH",187]="¿Quieres utilizar este fichero de captura ya seleccionado? ${normal_color}${visual_choice}"
@@ -2581,7 +2581,7 @@ function language_strings() {
 	arr["GREEK",187]="Θέλετε να χρησιμοποιήσετε το ήδη επιλεγμένο αρχείο καταγραφής; ${normal_color}${visual_choice}"
 	arr["ITALIAN",187]="Vuoi utilizzare questo file di cattura giá selezionato? ${normal_color}${visual_choice}"
 	arr["POLISH",187]="Czy chcesz użyć już wybranego pliku przechwytywania? ${normal_color}${visual_choice}"
-	arr["GERMAN",187]="${pending_of_translation} Möchten Sie diese Capture-Datei bereits ausgewählt verwenden? ${normal_color}${visual_choice}"
+	arr["GERMAN",187]="Möchten Sie diese ausgewählte Capture-Datei verwenden? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",188]="Enter the path of a captured file:"
 	arr["SPANISH",188]="Introduce la ruta de un fichero de captura:"
@@ -2592,7 +2592,7 @@ function language_strings() {
 	arr["GREEK",188]="Εισάγετε το μονοπάτι για ένα αρχείο καταγραφής:"
 	arr["ITALIAN",188]="Immettere il percorso di un file di cattura:"
 	arr["POLISH",188]="Wprowadź ścieżkę do pliku przechwytywania:"
-	arr["GERMAN",188]="${pending_of_translation} Geben Sie den Pfad einer Capture-Datei ein:"
+	arr["GERMAN",188]="Geben Sie den Pfad einer Capture-Datei ein:"
 
 	arr["ENGLISH",189]="The path to the capture file is valid. Script can continue..."
 	arr["SPANISH",189]="La ruta al fichero de captura es válida. El script puede continuar..."
@@ -2603,7 +2603,7 @@ function language_strings() {
 	arr["GREEK",189]="Το μονοπάτι για το αρχείο καταγραφής είναι έγκυρο. Το script μπορεί να συνεχίσει..."
 	arr["ITALIAN",189]="Il percorso del file di cattura è valido. Lo script può continuare..."
 	arr["POLISH",189]="Ścieżka do pliku przechwytywania jest prawidłowa. Skrypt może kontynuować..."
-	arr["GERMAN",189]="${pending_of_translation} Die Route zur Capture-Datei ist gültig. Das Skript kann fortfahren..."
+	arr["GERMAN",189]="Der Pfad zur Capture-Datei ist gültig. Das Skript kann fortfahren..."
 
 	arr["ENGLISH",190]="Starting decrypt. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",190]="Comenzando desencriptado. Una vez empezado, pulse [Ctrl+C] para pararlo..."
@@ -2614,7 +2614,7 @@ function language_strings() {
 	arr["GREEK",190]="Γίνεται έναρξη αποκρυπτογράφησης. Όταν ξεκινήσει, πατήστε [Ctrl+C] για να σταματήσει..."
 	arr["ITALIAN",190]="Cominciando a decifrare. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",190]="Uruchamianie odszyfrowania. Naciśnij [Ctrl+C] w trakcie trwania aby go zatrzymać..."
-	arr["GERMAN",190]="${pending_of_translation} Entschlüsselung starten. Nach dem Start drücken Sie [Ctrl+C], um es zu stoppen..."
+	arr["GERMAN",190]="Entschlüsselung starten. Nach dem Start drücken Sie [Ctrl+C], um es zu stoppen..."
 
 	arr["ENGLISH",191]="${blue_color}airgeddon can't find the directory path where you have BeEF installed. ${green_color}Do you want to enter it manually? ${normal_color}${visual_choice}"
 	arr["SPANISH",191]="${blue_color}airgeddon no ha podido encontrar la ruta del directorio donde tienes instalado BeEF. ${green_color}¿Quieres introducirla manualmente? ${normal_color}${visual_choice}"
@@ -2625,7 +2625,7 @@ function language_strings() {
 	arr["GREEK",191]="${blue_color}Το airgeddon δεν μπορεί να βρει το μονοπάτι για τον κατάλογο όπου έχετε εγκαταστημένο το BeEF. ${green_color}Θέλετε να το εισάγετε χειροκίνητα; ${normal_color}${visual_choice}"
 	arr["ITALIAN",191]="${blue_color}airgeddon non ha potuto trovare il percorso della directory in cui è stato installato BeEF. ${green_color}Vuoi inserirlo manualmente? ${normal_color}${visual_choice}"
 	arr["POLISH",191]="${blue_color}airgeddon nie mógł znaleźć ścieżki, w której zainstalowano BeEF. ${green_color}Czy chcesz ją wprowadzić ręcznie? ${normal_color}${visual_choice}"
-	arr["GERMAN",191]="${pending_of_translation} ${blue_color}airgeddon konnte den Verzeichnispfad, in dem BeEF installiert ist, nicht finden. ${green_color}Möchten Sie es manuell eingeben? ${normal_color}${visual_choice}"
+	arr["GERMAN",191]="${blue_color}airgeddon konnte den Verzeichnispfad, in den BeEF installiert ist, nicht finden. ${green_color}Möchten Sie es manuell eingeben? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",192]="You already have selected a BSSID during this session and is present in capture file [${normal_color}${bssid}${blue_color}]"
 	arr["SPANISH",192]="Ya tienes seleccionado un BSSID en esta sesión y está presente en el fichero de captura [${normal_color}${bssid}${blue_color}]"
@@ -2647,7 +2647,7 @@ function language_strings() {
 	arr["GREEK",193]="Θέλετε να χρησιμοποιήσετε το ήδη επιλεγμένο BSSID; ${normal_color}${visual_choice}"
 	arr["ITALIAN",193]="Vuoi usare questo BSSID già selezionato? ${normal_color}${visual_choice}"
 	arr["POLISH",193]="Czy chcesz użyć już wybranego BSSID? ${normal_color}${visual_choice}"
-	arr["GERMAN",193]="${pending_of_translation} Möchten Sie diese BSSID bereits ausgewählt verwenden? ${normal_color}${visual_choice}"
+	arr["GERMAN",193]="Möchten Sie diese ausgewählte BSSID verwenden? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",194]="Enter the minimum length of the key to decrypt (8-63):"
 	arr["SPANISH",194]="Introduce la longitud mínima de la clave a desencriptar (8-63):"
@@ -2658,7 +2658,7 @@ function language_strings() {
 	arr["GREEK",194]="Εισάγετε το ελάχιστο μήκος κλειδιού για αποκρυπτογράφηση (8-63):"
 	arr["ITALIAN",194]="Inserire la lunghezza minima della chiave da decifrare (8-63):"
 	arr["POLISH",194]="Wpisz minimalną długość klucza do odszyfrowania (8-63):"
-	arr["GERMAN",194]="${pending_of_translation} Geben Sie die Mindestlänge des zu entschlüsselnden Schlüssels ein (8-63):"
+	arr["GERMAN",194]="Geben Sie die Mindestlänge des zu entschlüsselnden Schlüssels ein (8-63):"
 
 	arr["ENGLISH",195]="Enter the maximum length of the key to decrypt (${minlength}-63):"
 	arr["SPANISH",195]="Introduce la longitud máxima de la clave a desencriptar (${minlength}-63):"
@@ -2669,7 +2669,7 @@ function language_strings() {
 	arr["GREEK",195]="Εισάγετε το μέγιστο μήκος κλειδιού για αποκρυπτογράφηση (${minlength}-63):"
 	arr["ITALIAN",195]="Inserire la lunghezza massima della chiave da decifrare (${minlength}-63):"
 	arr["POLISH",195]="Wpisz maksymalną długość klucza do odszyfrowania (${minlength}-63):"
-	arr["GERMAN",195]="${pending_of_translation} Geben Sie die maximale Länge des zu entschlüsselnden Schlüssels ein (${minlength}-63):"
+	arr["GERMAN",195]="Geben Sie die maximale Länge des zu entschlüsselnden Schlüssels ein (${minlength}-63):"
 
 	arr["ENGLISH",196]="Select the character set to use:"
 	arr["SPANISH",196]="Selecciona el juego de caracteres a utilizar:"
@@ -2680,7 +2680,7 @@ function language_strings() {
 	arr["GREEK",196]="Επιλέξτε το σετ χαρακτήρων που θα χρησιμοποιηθεί:"
 	arr["ITALIAN",196]="Selezionare il set di caratteri da utilizzare:"
 	arr["POLISH",196]="Wybierz zestaw znaków do użycia:"
-	arr["GERMAN",196]="${pending_of_translation} Wählen Sie den zu verwendenden Zeichensatz aus:"
+	arr["GERMAN",196]="Wählen Sie den Zeichensatz zu verwenden aus:"
 
 	arr["ENGLISH",197]="1.  Lowercase chars"
 	arr["SPANISH",197]="1.  Caracteres en minúsculas"
@@ -2691,7 +2691,7 @@ function language_strings() {
 	arr["GREEK",197]="1.  Πεζά"
 	arr["ITALIAN",197]="1.  Caratteri minuscoli"
 	arr["POLISH",197]="1.  Małe litery"
-	arr["GERMAN",197]="${pending_of_translation} 1.  Zeichen in Kleinbuchstaben"
+	arr["GERMAN",197]="1.  Zeichen in Kleinbuchstaben"
 
 	arr["ENGLISH",198]="2.  Uppercase chars"
 	arr["SPANISH",198]="2.  Caracteres en mayúsculas"
@@ -2702,7 +2702,7 @@ function language_strings() {
 	arr["GREEK",198]="2.  Κεφαλαία"
 	arr["ITALIAN",198]="2.  Caratteri maiuscoli"
 	arr["POLISH",198]="2.  Wielkie litery"
-	arr["GERMAN",198]="${pending_of_translation} 2.  Zeichen in Großbuchstaben"
+	arr["GERMAN",198]="2.  Zeichen in Großbuchstaben"
 
 	arr["ENGLISH",199]="3.  Numeric chars"
 	arr["SPANISH",199]="3.  Caracteres numéricos"
@@ -2713,7 +2713,7 @@ function language_strings() {
 	arr["GREEK",199]="3.  Αριθμοί"
 	arr["ITALIAN",199]="3.  Caratteri numerici"
 	arr["POLISH",199]="3.  Cyfry"
-	arr["GERMAN",199]="${pending_of_translation} 3.  Numerische Zeichen"
+	arr["GERMAN",199]="3.  Numerische Zeichen"
 
 	arr["ENGLISH",200]="4.  Symbol chars"
 	arr["SPANISH",200]="4.  Caracteres símbolos"
@@ -2724,7 +2724,7 @@ function language_strings() {
 	arr["GREEK",200]="4.  Σύμβολα"
 	arr["ITALIAN",200]="4.  Simboli"
 	arr["POLISH",200]="4.  Symbole"
-	arr["GERMAN",200]="${pending_of_translation} 4.  Zeichen Symbole"
+	arr["GERMAN",200]="4.  Zeichensymbole"
 
 	arr["ENGLISH",201]="5.  Lowercase + uppercase chars"
 	arr["SPANISH",201]="5.  Caracteres en minúsculas + mayúsculas"
@@ -2735,7 +2735,7 @@ function language_strings() {
 	arr["GREEK",201]="5.  Πεζά + κεφαλαία"
 	arr["ITALIAN",201]="5.  Caratteri minuscoli + maiuscoli"
 	arr["POLISH",201]="5.  Małe + wielkie litery"
-	arr["GERMAN",201]="${pending_of_translation} 5.  Zeichen in Kleinbuchstaben + Großbuchstaben"
+	arr["GERMAN",201]="5.  Zeichen in Klein- und Großbuchstaben"
 
 	arr["ENGLISH",202]="6.  Lowercase + numeric chars"
 	arr["SPANISH",202]="6.  Caracteres en minúsculas + numéricos"
@@ -2746,7 +2746,7 @@ function language_strings() {
 	arr["GREEK",202]="6.  Πεζά + αριθμοί"
 	arr["ITALIAN",202]="6.  Caratteri minuscoli + numerici"
 	arr["POLISH",202]="6.  Małe litery + cyfry"
-	arr["GERMAN",202]="${pending_of_translation} 6.  Zeichen in Kleinbuchstaben + numerisch"
+	arr["GERMAN",202]="6.  Zeichen in Kleinbuchstaben + numerisch"
 
 	arr["ENGLISH",203]="7.  Uppercase + numeric chars"
 	arr["SPANISH",203]="7.  Caracteres en mayúsculas + numéricos"
@@ -2757,7 +2757,7 @@ function language_strings() {
 	arr["GREEK",203]="7.  Κεφαλαία + αριθμοί"
 	arr["ITALIAN",203]="7.  Caratteri numerici + maiuscoli"
 	arr["POLISH",203]="7.  Wielkie litery + cyfry"
-	arr["GERMAN",203]="${pending_of_translation} 7.  Zeichen in Großbuchstaben + Zahlen"
+	arr["GERMAN",203]="7.  Zeichen in Großbuchstaben + Zahlen"
 
 	arr["ENGLISH",204]="8.  Symbol + numeric chars"
 	arr["SPANISH",204]="8.  Caracteres símbolos + numéricos"
@@ -2768,7 +2768,7 @@ function language_strings() {
 	arr["GREEK",204]="8.  Σύμβολα + αριθμοί"
 	arr["ITALIAN",204]="8.  simboli + numeri"
 	arr["POLISH",204]="8.  Cyfry + symbole"
-	arr["GERMAN",204]="${pending_of_translation} 8.  Symbole + numerische Symbole"
+	arr["GERMAN",204]="8.  Symbole + Ziffern"
 
 	arr["ENGLISH",205]="9.  Lowercase + uppercase + numeric chars"
 	arr["SPANISH",205]="9.  Caracteres en minúsculas + mayúsculas + numéricos"
@@ -2779,7 +2779,7 @@ function language_strings() {
 	arr["GREEK",205]="9.  Πεζά + κεφαλαία + αριθμοί"
 	arr["ITALIAN",205]="9.  Caratteri minuscoli + maiuscoli + numeri"
 	arr["POLISH",205]="9.  Małe litery + wielkie litery + cyfry"
-	arr["GERMAN",205]="${pending_of_translation} 9.  Zeichen in Kleinbuchstaben + Großbuchstaben + Ziffern"
+	arr["GERMAN",205]="9.  Zeichen in Kleinbuchstaben + Großbuchstaben + Ziffern"
 
 	arr["ENGLISH",206]="10. Lowercase + uppercase + symbol chars"
 	arr["SPANISH",206]="10. Caracteres en minúsculas + mayúsculas + símbolos"
@@ -2790,7 +2790,7 @@ function language_strings() {
 	arr["GREEK",206]="10. Πεζά + κεφαλαία + σύμβολα"
 	arr["ITALIAN",206]="10. Caratteri minuscoli + maiuscoli + simboli"
 	arr["POLISH",206]="10. Małe litery + wielkie + symbole"
-	arr["GERMAN",206]="${pending_of_translation} 10. Zeichen in Kleinbuchstaben + Großbuchstaben + Symbole"
+	arr["GERMAN",206]="10. Zeichen in Kleinbuchstaben + Großbuchstaben + Symbole"
 
 	arr["ENGLISH",207]="11. Lowercase + uppercase + numeric + symbol chars"
 	arr["SPANISH",207]="11. Caracteres en minúsculas + mayúsculas + numéricos + símbolos"
@@ -2801,7 +2801,7 @@ function language_strings() {
 	arr["GREEK",207]="11. Πεζά + κεφαλαία + αριθμοί + σύμβολα"
 	arr["ITALIAN",207]="11. Caratteri minuscoli + maiuscoli + numeri + simboli"
 	arr["POLISH",207]="11. Małe litery + wielkie litery + cyfry + symbole"
-	arr["GERMAN",207]="${pending_of_translation} 11. Zeichen in Kleinbuchstaben + Großbuchstaben + Ziffern + Symbole"
+	arr["GERMAN",207]="11. Zeichen in Kleinbuchstaben + Großbuchstaben + Ziffern + Symbole"
 
 	arr["ENGLISH",208]="If you choose a big charset and a long key length, the process could take so much time"
 	arr["SPANISH",208]="Si eliges un juego de caracteres amplio y una longitud de clave grande, el proceso podría demorarse mucho tiempo"
@@ -2812,7 +2812,7 @@ function language_strings() {
 	arr["GREEK",208]="Αν επιλέξετε μεγάλη συμβολοσειρά και μεγάλο μήκος κλειδιού, η διεργασία θα διαρκέσει αρκετά"
 	arr["ITALIAN",208]="Se si sceglie un set di caratteri grande e una grande lunghezza della chiave, il processo potrebbe richiedere molto tempo"
 	arr["POLISH",208]="Jeśli wybierzesz duży zestaw znaków i dużą długość klucza, proces może potrwać bardzo długo"
-	arr["GERMAN",208]="${pending_of_translation} Wenn Sie einen breiten Zeichensatz und eine große Schlüssellänge auswählen, kann der Vorgang sehr lange dauern"
+	arr["GERMAN",208]="Wenn Sie einen breiten Zeichensatz und eine große Schlüssellänge auswählen, kann der Vorgang sehr lange dauern"
 
 	arr["ENGLISH",209]="The charset to use is: [${normal_color}${showcharset}${blue_color}]"
 	arr["SPANISH",209]="El juego de caracteres elegido es: [${normal_color}${showcharset}${blue_color}]"
@@ -2823,7 +2823,7 @@ function language_strings() {
 	arr["GREEK",209]="Η συμβολοσειρά που θα χρησιμοποιηθεί είναι: [${normal_color}${showcharset}${blue_color}]"
 	arr["ITALIAN",209]="Il set di caratteri scelto è: [${normal_color}${showcharset}${blue_color}]"
 	arr["POLISH",209]="Wybrany zestaw znaków to: [${normal_color}${showcharset}${blue_color}]"
-	arr["GERMAN",209]="${pending_of_translation} Der gewählte Zeichensatz ist: [${normal_color}${showcharset}${blue_color}]"
+	arr["GERMAN",209]="Der gewählte Zeichensatz ist: [${normal_color}${showcharset}${blue_color}]"
 
 	arr["ENGLISH",210]="The script will check for internet access looking for a newer version. Please be patient..."
 	arr["SPANISH",210]="El script va a comprobar si tienes acceso a internet para ver si existe una nueva versión. Por favor ten paciencia..."
@@ -2834,7 +2834,7 @@ function language_strings() {
 	arr["GREEK",210]="Το script θα ελέγξει αν έχετε πρόσβαση στο διαδίκτυο και έπειτα για νεότερη έκδοση. Παρακαλώ κάντε υπομονή..."
 	arr["ITALIAN",210]="Lo script controllerà se si ha accesso a internet per vedere se c'è una nuova versione. Si prega di essere pazienti..."
 	arr["POLISH",210]="Skrypt sprawdzi, czy masz dostęp do internetu i czy jest nowa wersja. Cierpliwości..."
-	arr["GERMAN",210]="${pending_of_translation} Das Skript überprüft, ob Sie Zugriff auf das Internet haben, um zu sehen, ob eine neue Version existiert. Bitte sei geduldig..."
+	arr["GERMAN",210]="Das Skript überprüft, ob Sie Zugriff auf das Internet haben, um zu sehen, ob eine neue Version existiert. Wir bitten um Geduld..."
 
 	arr["ENGLISH",211]="It seems you have no internet access. The script can't connect to repository. It will continue without updating..."
 	arr["SPANISH",211]="Parece que no tienes conexión a internet. El script no puede conectar al repositorio. Continuará sin actualizarse..."
@@ -2845,7 +2845,7 @@ function language_strings() {
 	arr["GREEK",211]="Φαίνεται πως δεν έχετε πρόσβαση στο διαδίκτυο. Το script δεν μπορεί να συνδεθεί στο αποθετήριο. Θα συνεχίσει χωρίς να έχει ενημερωθεί..."
 	arr["ITALIAN",211]="Sembra che tu non abbia alcuna connessione a internet. Lo script non riesce a connettersi al repository. Continuerà senza aggiornarsi..."
 	arr["POLISH",211]="Wygląda na to, że nie masz połączenia z internetem. Skrypt nie może połączyć się z repozytorium. Kontynuacja bez aktualizacji..."
-	arr["GERMAN",211]="${pending_of_translation} Es scheint, dass Sie keine Internetverbindung haben. Das Skript kann keine Verbindung zum Repository herstellen. Es wird ohne Aktualisierung fortgesetzt..."
+	arr["GERMAN",211]="Es scheint, dass Sie keine Internetverbindung haben. Das Skript kann keine Verbindung zum Repository herstellen. Es wird ohne Aktualisierung fortgesetzt..."
 
 	arr["ENGLISH",212]="The script is already in the latest version. It doesn't need to be updated"
 	arr["SPANISH",212]="El script ya está en la última versión. No necesita ser actualizado"
@@ -2856,7 +2856,7 @@ function language_strings() {
 	arr["GREEK",212]="Το script είναι ήδη στην τελευταία έκδοση. Δεν χρειάζεται να ενημερωθεί"
 	arr["ITALIAN",212]="Lo script è già alla sua ultima versione. Non c'è bisogno di aggiornamenti"
 	arr["POLISH",212]="Skrypt jest już w najnowszej wersji. Nie ma potrzeby aktualizacji"
-	arr["GERMAN",212]="${pending_of_translation} Das Skript ist bereits in der neuesten Version. Es muss nicht aktualisiert werden"
+	arr["GERMAN",212]="Das Skript ist bereits in der neuesten Version. Es muss nicht aktualisiert werden"
 
 	arr["ENGLISH",213]="A new version of the script exists (v${airgeddon_last_version}). It will be downloaded"
 	arr["SPANISH",213]="Existe una nueva versión del script (v${airgeddon_last_version}). Será descargada"
@@ -2867,7 +2867,7 @@ function language_strings() {
 	arr["GREEK",213]="Υπάρχει νεότερη έκδοση του script (v${airgeddon_last_version}). Θα κατέβει"
 	arr["ITALIAN",213]="Esiste una nuova versione dello script (v${airgeddon_last_version}). Sarà scaricata"
 	arr["POLISH",213]="Jest nowa wersja skryptu (v${airgeddon_last_version}). Zostanie ona pobrana"
-	arr["GERMAN",213]="${pending_of_translation} Es gibt eine neue Version des Skripts (v${airgeddon_last_version}). Es wird heruntergeladen"
+	arr["GERMAN",213]="Es gibt eine neue Version des Skripts (v${airgeddon_last_version}). Sie wird automatisch heruntergeladet"
 
 	arr["ENGLISH",214]="The new version was successfully downloaded. The script will be launched again"
 	arr["SPANISH",214]="La nueva versión se ha descargado con éxito. El script se lanzará de nuevo"
@@ -2878,7 +2878,7 @@ function language_strings() {
 	arr["GREEK",214]="Η νεότερη έκδοση κατέβηκε επιτυχώς. Το script θα επανεκκινηθεί"
 	arr["ITALIAN",214]="La nuova versione è stata scaricata con successo. Lo script sarà lanciato di nuovo"
 	arr["POLISH",214]="Nowa wersja została pobrana pomyślnie. Skrypt zostanie uruchomiony ponownie"
-	arr["GERMAN",214]="${pending_of_translation} Die neue Version wurde erfolgreich heruntergeladen. Das Skript wird erneut gestartet"
+	arr["GERMAN",214]="Die neue Version wurde erfolgreich heruntergeladen. Das Skript wird erneut gestartet"
 
 	arr["ENGLISH",215]="WPA/WPA2 passwords always has 8 as a minimum length"
 	arr["SPANISH",215]="Una contraseña WPA/WPA2 siempre tiene como mínimo una longitud de 8"
@@ -2889,7 +2889,7 @@ function language_strings() {
 	arr["GREEK",215]="οι κωδικοί πρόσβασης WPA/WPA2 έχουν πάντα ελάχιστο μήκος 8"
 	arr["ITALIAN",215]="Una password WPA/WPA2 è sempre lunga almeno 8 caratteri"
 	arr["POLISH",215]="Hasło WPA/WPA2 ma zawsze długość co najmniej 8 znaków"
-	arr["GERMAN",215]="${pending_of_translation} Ein WPA/WPA2-Passwort hat immer eine Mindestlänge von 8"
+	arr["GERMAN",215]="Ein WPA/WPA2-Passwort hat immer eine Mindestlänge von 8"
 
 	arr["ENGLISH",216]="No networks found with Handshake captured on the selected file"
 	arr["SPANISH",216]="No se encontraron redes con Handshake capturado en el fichero seleccionado"
@@ -2900,7 +2900,7 @@ function language_strings() {
 	arr["GREEK",216]="Δεν βρέθηκαν δίκτυα με Χειραψία στο επιλεγμένο αρχείο"
 	arr["ITALIAN",216]="Nessuna rete trovata con Handshake catturati nel file selezionato"
 	arr["POLISH",216]="Nie znaleziono sieci z przechwyconym Handshake w wybranym pliku"
-	arr["GERMAN",216]="${pending_of_translation} In der ausgewählten Datei wurden keine Netzwerke mit Handshake gefunden"
+	arr["GERMAN",216]="In der ausgewählten Datei wurden keine Netzwerke mit Handshake gefunden"
 
 	arr["ENGLISH",217]="Only one valid target detected on file. BSSID autoselected [${normal_color}${bssid}${blue_color}]"
 	arr["SPANISH",217]="Sólo un objetivo válido detectado en el fichero. Se ha seleccionado automáticamente el BSSID [${normal_color}${bssid}${blue_color}]"
@@ -2911,7 +2911,7 @@ function language_strings() {
 	arr["GREEK",217]="Μόνο ένας έγκυρος στόχος εντοπίστηκε στο αρχείο. Επιλέχθηκε αυτόματα το BSSID [${normal_color}${bssid}${blue_color}]"
 	arr["ITALIAN",217]="Solo un bersaglio valido rilevato nel file. Viene selezionato automaticamente il BSSID [${normal_color}${bssid}${blue_color}]"
 	arr["POLISH",217]="W pliku został wykryty tylko jeden prawidłowy cel. BSSID wybrany automatycznie [${normal_color}${bssid}${blue_color}]"
-	arr["GERMAN",217]="${pending_of_translation} Nur ein gültiges Ziel wurde in der Datei gefunden. Die BSSID wurde automatisch ausgewählt [${normal_color}${bssid}${blue_color}]"
+	arr["GERMAN",217]="Nur ein gültiges Ziel wurde in der Datei gefunden. Die BSSID [${normal_color}${bssid}${blue_color}] wurde automatisch ausgewählt"
 
 	arr["ENGLISH",218]="Optional tools: checking..."
 	arr["SPANISH",218]="Herramientas opcionales: comprobando..."
@@ -2922,7 +2922,7 @@ function language_strings() {
 	arr["GREEK",218]="Προαιρετικά εργαλεία: γίνεται έλεγχος..."
 	arr["ITALIAN",218]="Strumenti opzionali: controllo ..."
 	arr["POLISH",218]="Narzędzia opcjonalne: sprawdzanie..."
-	arr["GERMAN",218]="${pending_of_translation} Optionale Werkzeuge: Überprüfung ..."
+	arr["GERMAN",218]="Optionale Tools: Überprüfung ..."
 
 	arr["ENGLISH",219]="Your distro has the essential tools but it hasn't some optional. The script can continue but you can't use some features. It is recommended to install missing tools"
 	arr["SPANISH",219]="Tu distro tiene las herramientas esenciales pero le faltan algunas opcionales. El script puede continuar pero no podrás utilizar algunas funcionalidades. Es recomendable instalar las herramientas que faltan"
@@ -2933,7 +2933,7 @@ function language_strings() {
 	arr["GREEK",219]="Η διανομή σας έχει τα απαραίτητα εργαλεία αλλά δεν έχει κάποια προαιρετικά. Το script μπορεί να συνεχίσει αλλά δεν θα μπορέσετε να χρησιμοποιήσετε κάποια χαρακτηριστικά. Συνιστάται να εγκαταστήσετε τα λείποντα εργαλεία"
 	arr["ITALIAN",219]="La tua distro ha gli strumenti essenziali, ma mancano alcuni opzionali. Lo script può continuare, ma non è possibile utilizzare alcune funzioni. Si consiglia di installare gli strumenti mancanti"
 	arr["POLISH",219]="Twoja dystrybucja Linuxa ma podstawowe narzędzia, ale brakuje niektórych opcjonalnych. Skrypt może być kontynuowany, ale nie będziesz mógł używać niektórych funkcji. Zaleca się zainstalowanie brakujących narzędzi"
-	arr["GERMAN",219]="${pending_of_translation} Ihre Distribution hat die wesentlichen Werkzeuge, aber einige optionale fehlen. Das Skript kann fortgesetzt werden, Sie können jedoch einige Funktionen nicht verwenden. Es empfiehlt sich, die fehlenden Tools zu installieren"
+	arr["GERMAN",219]="Ihre Distribution hat die wesentlichen Werkzeuge, aber einige optionale fehlen. Das Skript kann fortgesetzt werden, Sie können jedoch einige Funktionen nicht verwenden. Es empfiehlt sich, die fehlenden Tools zu installieren"
 
 	arr["ENGLISH",220]="Locked menu option was chosen"
 	arr["SPANISH",220]="Opción del menú bloqueada"
@@ -2944,7 +2944,7 @@ function language_strings() {
 	arr["GREEK",220]="Επιλέχθηκε κλειδωμένη επιλογή"
 	arr["ITALIAN",220]="Opzione del menù bloccata"
 	arr["POLISH",220]="Opcja zablokowana"
-	arr["GERMAN",220]="${pending_of_translation} Blockierte Menüoption"
+	arr["GERMAN",220]="Blockierte Menüoption"
 
 	arr["ENGLISH",221]="Accepted bash version (${BASH_VERSION}). Minimum required version: ${minimum_bash_version_required}"
 	arr["SPANISH",221]="Versión de bash (${BASH_VERSION}) aceptada. Mínimo requerido versión: ${minimum_bash_version_required}"
@@ -2955,7 +2955,7 @@ function language_strings() {
 	arr["GREEK",221]="Αποδεκτή έκδοση bash (${BASH_VERSION}). Ελάχιστη απαιτούμενη έκδοση: ${minimum_bash_version_required}"
 	arr["ITALIAN",221]="Versione di bash (${BASH_VERSION}) accettata. Minima versione richiesta: ${minimum_bash_version_required}"
 	arr["POLISH",221]="Zaakceptowano wersję bash (${BASH_VERSION}). Minimalna wymagana wersja: ${minimum_bash_version_required}"
-	arr["GERMAN",221]="${pending_of_translation} Bash-Version (${BASH_VERSION}) akzeptiert. Mindestversion erforderlich: ${minimum_bash_version_required}"
+	arr["GERMAN",221]="Bash-Version (${BASH_VERSION}) akzeptiert. Mindestversion erforderlich: ${minimum_bash_version_required}"
 
 	arr["ENGLISH",222]="Insufficient bash version (${BASH_VERSION}). Minimum required version: ${minimum_bash_version_required}"
 	arr["SPANISH",222]="Versión de bash insuficiente (${BASH_VERSION}). Mínimo requerido versión: ${minimum_bash_version_required}"
@@ -2966,7 +2966,7 @@ function language_strings() {
 	arr["GREEK",222]="Ανεπαρκής έκδοση bash (${BASH_VERSION}). Ελάχιστη απαιτούμενη έκδοση: ${minimum_bash_version_required}"
 	arr["ITALIAN",222]="Versione di bash insufficiente (${BASH_VERSION}). Versione minima richiesta: ${minimum_bash_version_required}"
 	arr["POLISH",222]="Niewystarczająca wersja bash (${BASH_VERSION}). Minimalna wymagana wersja: ${minimum_bash_version_required}"
-	arr["GERMAN",222]="${pending_of_translation} Unzureichende Bash-Version (${BASH_VERSION}). Mindestversion erforderlich: ${minimum_bash_version_required}"
+	arr["GERMAN",222]="Unzureichende Bash-Version (${BASH_VERSION}). Mindestversion erforderlich: ${minimum_bash_version_required}"
 
 	arr["ENGLISH",223]="airgeddon needs root permissions to work. Launch the script as root user or using \"sudo\""
 	arr["SPANISH",223]="airgeddon necesita permisos de root para funcionar. Lanza el script como usuario root o usando \"sudo\""
@@ -2977,7 +2977,7 @@ function language_strings() {
 	arr["GREEK",223]="Το airgeddon χρειάζεται root δικαιώματα για να δουλέψει. Ανοίξτε το script ως χρήστης root ή χρησιμοποιήστε \"sudo\""
 	arr["ITALIAN",223]="airgeddon ha bisogno dei permessi di root per l'esecuzione. Lancia lo script come root o usando \"sudo\""
 	arr["POLISH",223]="airgeddon wymaga uprawnień root do pracy. Uruchom skrypt jako root lub użyj \"sudo\""
-	arr["GERMAN",223]="${pending_of_translation} airgeddon benötigt root Berechtigungen um zu arbeiten. Starten Sie das Skript als root oder mit \"sudo\""
+	arr["GERMAN",223]="airgeddon benötigt root Berechtigungen um zu arbeiten. Starten Sie das Skript als root oder mit \"sudo\""
 
 	arr["ENGLISH",224]="The script execution continues from exactly the same point where it was"
 	arr["SPANISH",224]="El script continua su ejecución desde exactamente el mismo punto en el que estaba"
@@ -2988,7 +2988,7 @@ function language_strings() {
 	arr["GREEK",224]="Η εκτέλεση του script συνεχίζει ακριβώς από το ίδιο σημείο που ήταν"
 	arr["ITALIAN",224]="Lo script continua l'esecuzione esattamente dallo stesso punto in cui era"
 	arr["POLISH",224]="Skrypt kontynuuje wykonywanie z punktu, w którym zakończyl"
-	arr["GERMAN",224]="${pending_of_translation} Das Skript setzt seine Ausführung von genau dem Punkt fort, wo es war"
+	arr["GERMAN",224]="Das Skript setzt seine Ausführung von genau dem Punkt fort, wo es war"
 
 	arr["ENGLISH",225]="The script can't check if there is a new version because you haven't installed update tools needed"
 	arr["SPANISH",225]="El script no puede comprobar si hay una nueva versión porque no tienes instaladas las herramientas de actualización necesarias"
@@ -2999,7 +2999,7 @@ function language_strings() {
 	arr["GREEK",225]="Το script δεν μπορεί να ελέγξει αν υπάρχει νεότερη έκδοση γιατί δεν έχετε εγκαταστήσει τα απαραίτητα εργαλεία ενημερώσεων"
 	arr["ITALIAN",225]="Lo script non può verificare se c'è una nuova versione perché non sono stati installati gli strumenti di aggiornamento necessari"
 	arr["POLISH",225]="Skrypt nie może sprawdzić nowej wersji, ponieważ nie ma zainstalowanych niezbędnych narzędzi aktualizacji"
-	arr["GERMAN",225]="${pending_of_translation} Das Skript kann nicht überprüfen, ob eine neue Version vorhanden ist, da die erforderlichen Update-Tools nicht installiert sind"
+	arr["GERMAN",225]="Das Skript kann nicht überprüfen, ob eine neue Version vorhanden ist, da die erforderlichen Update-Tools nicht installiert sind"
 
 	arr["ENGLISH",226]="Update tools: checking..."
 	arr["SPANISH",226]="Herramientas de actualización: comprobando..."
@@ -3010,7 +3010,7 @@ function language_strings() {
 	arr["GREEK",226]="Εργαλεία ενημερώσεων: γίνεται έλεγχος..."
 	arr["ITALIAN",226]="Strumenti di aggiornamento: controllo ..."
 	arr["POLISH",226]="Narzędzia aktualizacji: sprawdzanie..."
-	arr["GERMAN",226]="${pending_of_translation} Update-Tools: Überprüfung..."
+	arr["GERMAN",226]="Update-Tools: Überprüfung..."
 
 	arr["ENGLISH",227]="Working...  "
 	arr["SPANISH",227]="Trabajando...  "
@@ -3021,7 +3021,7 @@ function language_strings() {
 	arr["GREEK",227]="Δουλεύει...  "
 	arr["ITALIAN",227]="Lavorando...  "
 	arr["POLISH",227]="Praca...  "
-	arr["GERMAN",227]="${pending_of_translation} Arbeiten..."
+	arr["GERMAN",227]="In der Arbeit..."
 
 	arr["ENGLISH",228]="                             Developed by ${author}"
 	arr["SPANISH",228]="                             Programado por ${author}"
@@ -3032,7 +3032,7 @@ function language_strings() {
 	arr["GREEK",228]="                             Προγραμματισμένο από ${author}"
 	arr["ITALIAN",228]="                             Sviluppato da ${author}"
 	arr["POLISH",228]="                             Opracowany przez ${author}"
-	arr["GERMAN",228]="${pending_of_translation}                              Geplant von ${author}"
+	arr["GERMAN",228]="                              Entwickelt von ${author}"
 
 	arr["ENGLISH",229]="hashcat CPU, non GPU attacks"
 	arr["SPANISH",229]="ataques hashcat CPU, no GPU"
@@ -3043,7 +3043,7 @@ function language_strings() {
 	arr["GREEK",229]="επιθέσεις hashcat CPU, όχι GPU"
 	arr["ITALIAN",229]="attacchi hashcat CPU, non GPU"
 	arr["POLISH",229]="ataki hashcat CPU, nie GPU"
-	arr["GERMAN",229]="${pending_of_translation} CPU-hashcat-Attacken, keine GPUs"
+	arr["GERMAN",229]="CPU-hashcat-Angriffe, keine GPUs"
 
 	arr["ENGLISH",230]="3.  (hashcat) Dictionary attack against capture file"
 	arr["SPANISH",230]="3.  (hashcat) Ataque de diccionario sobre fichero de captura"
@@ -3054,7 +3054,7 @@ function language_strings() {
 	arr["GREEK",230]="3.  (hashcat) Επίθεση με χρήση λεξικού σε αρχείο καταγραφής"
 	arr["ITALIAN",230]="3.  (hashcat) Attacco di dizionario sul file di cattura"
 	arr["POLISH",230]="3.  (hashcat) Atak słownikowy na plik przechwytywania"
-	arr["GERMAN",230]="${pending_of_translation} 3.  (hashcat) Wörterbuchangriff auf die Aufnahmedatei"
+	arr["GERMAN",230]="3.  (hashcat) Wörterbuchangriff auf die Aufnahmedatei"
 
 	arr["ENGLISH",231]="4.  (hashcat) Bruteforce attack against capture file"
 	arr["SPANISH",231]="4.  (hashcat) Ataque de fuerza bruta sobre fichero de captura"
@@ -3065,7 +3065,7 @@ function language_strings() {
 	arr["GREEK",231]="4.  (hashcat) Επίθεση ωμής βίας σε αρχείο καταγραφής"
 	arr["ITALIAN",231]="4.  (hashcat) Attacco di forza bruta sul file di cattura"
 	arr["POLISH",231]="4.  (hashcat) Atak brute force na plik przechwytywania"
-	arr["GERMAN",231]="${pending_of_translation} 4.  (hashcat) Brute-Force-Angriff auf die Capture-Datei"
+	arr["GERMAN",231]="4.  (hashcat) Brute-Force-Angriff auf die Capture-Datei"
 
 	arr["ENGLISH",232]="5.  (hashcat) Rule based attack against capture file"
 	arr["SPANISH",232]="5.  (hashcat) Ataque basado en reglas sobre fichero de captura"
@@ -3076,7 +3076,7 @@ function language_strings() {
 	arr["GREEK",232]="5.  (hashcat) Επίθεση κανόνων σε αρχείο καταγραφής"
 	arr["ITALIAN",232]="5.  (hashcat) Attacco basato su regole contro il file di cattura"
 	arr["POLISH",232]="5.  (hashcat) Atak bazujący na regułach na plik przechwytywania"
-	arr["GERMAN",232]="${pending_of_translation} 5.  (hashcat) Angriff basierend auf Regeln der Capture-Datei"
+	arr["GERMAN",232]="5.  (hashcat) Regeln-basierender Angriff gegen der Capture-Datei"
 
 	arr["ENGLISH",233]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${hashcat_potpath}]"
 	arr["SPANISH",233]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${hashcat_potpath}]"
@@ -3087,7 +3087,7 @@ function language_strings() {
 	arr["GREEK",233]="Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${hashcat_potpath}]"
 	arr["ITALIAN",233]="Immettere il percorso dove memorizzare il file o premere [Enter] per accettare quello di default ${normal_color}[${hashcat_potpath}]"
 	arr["POLISH",233]="Wpisz ścieżkę do zapisu pliku lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${hashcat_potpath}]"
-	arr["GERMAN",233]="${pending_of_translation} Schreibe den Pfad wo wir die Datei speichern werden soll, oder drücken Sie die [Enter], um den Standardvorschlag zu akzeptieren ${normal_color}[${hashcat_potpath}]"
+	arr["GERMAN",233]="Schreiben Sie den Pfad wo die Datei gespeichert werden soll, oder drücken Sie die [Enter], um den Standardvorschlag zu akzeptieren ${normal_color}[${hashcat_potpath}]"
 
 	arr["ENGLISH",234]="Contratulations!! It seems the key has been decrypted"
 	arr["SPANISH",234]="Enhorabuena!! Parece que la clave ha sido desencriptada"
@@ -3098,7 +3098,7 @@ function language_strings() {
 	arr["GREEK",234]="Συγχαρητήρια!! Φαίνεται πως το κλειδί αποκρυπτογραφήθηκε"
 	arr["ITALIAN",234]="Congratulazioni!! Sembra che la password è stata decifrata"
 	arr["POLISH",234]="Gratulacje!! Wygląda na to, że klucz został odszyfrowany"
-	arr["GERMAN",234]="${pending_of_translation} Herzlichen Glückwunsch!! Es scheint, dass der Schlüssel entschlüsselt wurde"
+	arr["GERMAN",234]="Herzlichen Glückwunsch!! Es scheint, dass der Schlüssel entschlüsselt wurde"
 
 	arr["ENGLISH",235]="Do you want to save the trophy file with the decrypted password? ${normal_color}${visual_choice}"
 	arr["SPANISH",235]="¿Quieres guardar el fichero de trofeo con la clave desencriptada? ${normal_color}${visual_choice}"
@@ -3109,7 +3109,7 @@ function language_strings() {
 	arr["GREEK",235]="Θέλετε να αποθηκεύσετε το αρχείο τρόπαιο με τον αποκρυπτογραφημένο κωδικό πρόσβασης; ${normal_color}${visual_choice}"
 	arr["ITALIAN",235]="Vuoi salvare il file trofeo con la password decifrata? ${normal_color}${visual_choice}"
 	arr["POLISH",235]="Czy chcesz zapisać plik trofeum przy użyciu odszyfrowanego klucza? ${normal_color}${visual_choice}"
-	arr["GERMAN",235]="${pending_of_translation} Möchten Sie die Trophäendatei mit dem entschlüsselten Schlüssel speichern? ${normal_color}${visual_choice}"
+	arr["GERMAN",235]="Möchten Sie die Trophäendatei mit dem entschlüsselten Schlüssel speichern? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",236]="Hashcat trophy file generated successfully at [${normal_color}${potenteredpath}${blue_color}]"
 	arr["SPANISH",236]="Fichero de trofeo hashcat generado con éxito en [${normal_color}${potenteredpath}${blue_color}]"
@@ -3120,7 +3120,7 @@ function language_strings() {
 	arr["GREEK",236]="Το hashcat αρχείο τρόπαιο δημιουργήθηκε επιτυχώς [${normal_color}${potenteredpath}${blue_color}]"
 	arr["ITALIAN",236]="File di trofeo di hashcat generato con successo [${normal_color}${potenteredpath}${blue_color}]"
 	arr["POLISH",236]="Plik trofeum hashcat został pomyślnie wygenerowany w [${normal_color}${potenteredpath}${blue_color}]"
-	arr["GERMAN",236]="${pending_of_translation} Trophäen-Datei-Hashcat erfolgreich in generiert [${normal_color}${potenteredpath}${blue_color}]"
+	arr["GERMAN",236]="Trophäen-Datei-Hashcat erfolgreich in [${normal_color}${potenteredpath}${blue_color}] generiert"
 
 	arr["ENGLISH",237]="5.  Lowercase + uppercase + numeric + symbol chars"
 	arr["SPANISH",237]="5.  Caracteres en minúsculas + mayúsculas + numéricos + símbolos"
@@ -3131,7 +3131,7 @@ function language_strings() {
 	arr["GREEK",237]="5.  Πεζά + κεφαλαία + αριθμοί + σύμβολα"
 	arr["ITALIAN",237]="5.  Caratteri minuscoli + maiuscoli + numeri + simboli"
 	arr["POLISH",237]="5.  Małe litery + wielkie litery + cyfry + symbole"
-	arr["GERMAN",237]="${pending_of_translation} 5.  Zeichen in Kleinbuchstaben + Großbuchstaben + Ziffern + Symbole"
+	arr["GERMAN",237]="5.  Zeichen in Kleinbuchstaben + Großbuchstaben + Ziffern + Symbole"
 
 	arr["ENGLISH",238]="Charset selection menu"
 	arr["SPANISH",238]="Menú de selección de juego de caracteres"
@@ -3142,7 +3142,7 @@ function language_strings() {
 	arr["GREEK",238]="Μενού επιλογής συμβολοσειράς"
 	arr["ITALIAN",238]="Menú di selezione del set di caratteri"
 	arr["POLISH",238]="Menu wyboru zestawu znaków"
-	arr["GERMAN",238]="${pending_of_translation} Zeichensatz-Auswahlmenü"
+	arr["GERMAN",238]="Zeichensatz-Auswahlmenü"
 
 	arr["ENGLISH",239]="You already have selected a rules file during this session [${normal_color}${RULES}${blue_color}]"
 	arr["SPANISH",239]="Ya tienes seleccionado un fichero de reglas en esta sesión [${normal_color}${RULES}${blue_color}]"
@@ -3153,7 +3153,7 @@ function language_strings() {
 	arr["GREEK",239]="Έχετε ήδη επιλέξει αρχείο κανόνων κατά τη διάρκεια τησ συνεδρίας [${normal_color}${RULES}${blue_color}]"
 	arr["ITALIAN",239]="È giá stato selezionato un file di regole in questa sessione [${normal_color}${RULES}${blue_color}]"
 	arr["POLISH",239]="Plik reguły został już wybrany w tej sesji [${normal_color}${RULES}${blue_color}]"
-	arr["GERMAN",239]="${pending_of_translation} Sie haben bereits eine Regeldatei in dieser Sitzung ausgewählt [${normal_color}${RULES}${blue_color}]"
+	arr["GERMAN",239]="Sie haben bereits eine Regeldatei ausgewählt [${normal_color}${RULES}${blue_color}]"
 
 	arr["ENGLISH",240]="Do you want to use this already selected rules file? ${normal_color}${visual_choice}"
 	arr["SPANISH",240]="¿Quieres utilizar este fichero de reglas ya seleccionado? ${normal_color}${visual_choice}"
@@ -3164,7 +3164,7 @@ function language_strings() {
 	arr["GREEK",240]="Θέλετε να χρησιμοποιήσετε το ήδη επιλεγμένο αρχείο κανόνων; ${normal_color}${visual_choice}"
 	arr["ITALIAN",240]="Vuoi utilizzare questo file di regole già selezionato? ${normal_color}${visual_choice}"
 	arr["POLISH",240]="Czy chcesz użyć tego już wybranego pliku reguł? ${normal_color}${visual_choice}"
-	arr["GERMAN",240]="${pending_of_translation} Möchten Sie diese bereits ausgewählte Regeldatei verwenden? ${normal_color}${visual_choice}"
+	arr["GERMAN",240]="Möchten Sie diese ausgewählte Regeldatei verwenden? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",241]="The path to the rules file is valid. Script can continue..."
 	arr["SPANISH",241]="La ruta al fichero de reglas es válida. El script puede continuar..."
@@ -3175,7 +3175,7 @@ function language_strings() {
 	arr["GREEK",241]="Το μονοπάτι για το αρχείο κανόνων είναι έγκυρο. Το script μπορεί να συνεχίσει..."
 	arr["ITALIAN",241]="Il percorso del file di regole è valido. Lo script può continuare..."
 	arr["POLISH",241]="Ścieżka do pliku reguł jest prawidłowa. Skrypt może kontynuować..."
-	arr["GERMAN",241]="${pending_of_translation} Der Pfad zur Regeldatei ist gültig. Das Skript kann fortfahren..."
+	arr["GERMAN",241]="Der Pfad zur Regeldatei ist gültig. Das Skript kann fortfahren..."
 
 	arr["ENGLISH",242]="Enter the path of a rules file:"
 	arr["SPANISH",242]="Introduce la ruta de un fichero de reglas:"
@@ -3186,7 +3186,7 @@ function language_strings() {
 	arr["GREEK",242]="Εισάγετε το μονοπάτι για ένα αρχείο κανόνων:"
 	arr["ITALIAN",242]="Immettere il percorso di un file di regole:"
 	arr["POLISH",242]="Wprowadź ścieżkę do pliku reguł:"
-	arr["GERMAN",242]="${pending_of_translation} Geben Sie den Pfad einer Regeldatei ein:"
+	arr["GERMAN",242]="Geben Sie den Pfad einer Regeldatei ein:"
 
 	arr["ENGLISH",243]="Selected rules file: ${pink_color}${RULES}${normal_color}"
 	arr["SPANISH",243]="Fichero de reglas seleccionado: ${pink_color}${RULES}${normal_color}"
@@ -3197,7 +3197,7 @@ function language_strings() {
 	arr["GREEK",243]="Επιλεγμένο αρχείο κανόνων: ${pink_color}${RULES}${normal_color}"
 	arr["ITALIAN",243]="File di regole selezionato: ${pink_color}${RULES}${normal_color}"
 	arr["POLISH",243]="Wybrany plik reguł: ${pink_color}${RULES}${normal_color}"
-	arr["GERMAN",243]="${pending_of_translation} Ausgewählte Regeldatei: ${pink_color}${RULES}${normal_color}"
+	arr["GERMAN",243]="Ausgewählte Regeldatei: ${pink_color}${RULES}${normal_color}"
 
 	arr["ENGLISH",244]="Rule based attacks change the words of the dictionary list according to the rules written in the rules file itself. They are very useful. Some distros has predefined rule files (Kali: /usr/share/hashcat/rules // Wifislax: /opt/hashcat/rules)"
 	arr["SPANISH",244]="Los ataques basados en reglas modifican las palabras de la lista del diccionario según las reglas escritas en el propio fichero de reglas. Son muy útiles. Algunas distros ya traen ficheros predefinidos de reglas (Kali: /usr/share/hashcat/rules // Wifislax: /opt/hashcat/rules)"
@@ -3208,7 +3208,7 @@ function language_strings() {
 	arr["GREEK",244]="Οι επιθέσεις κανόνων αλλάζουν τις λέξεις του λεξικού ανάλογα με τους κανόνες που έχουν γραφτεί στο αρχείο κανόνων. Είναι πολύ χρήσιμοι. Κάποιες διανομές έχουν προκαθορισμένα αρχεία κανόνων (Kali: /usr/share/hashcat/rules // Wifislax: /opt/hashcat/rules)"
 	arr["ITALIAN",244]="Gli attacchi basato su regole cambiano le parole della lista del dizionario secondo le regole scritte nel file delle regole stesso. Essi sono molto utili. Alcune distribuzioni hanno giá file di regole predefiniti (Kali: /usr/share/hashcat/rules // Wifislax: /opt/hashcat/rules)"
 	arr["POLISH",244]="Ataki bazujące na regułach modyfikują wyrazy ze słowników. Są bardzo przydatne. Niektóre dystrybucje Linuxa mają już predefiniowane pliki reguł (Kali: /usr/share/hashcat/rules // Wifislax: /opt/hashcat/rules)"
-	arr["GERMAN",244]="${pending_of_translation} Regelbasierte Angriffe modifizieren die Wörter in der Wörterbuchliste gemäß den Regeln, die in der Regeldatei selbst geschrieben sind. Sie sind sehr nützlich. Einige Distributionen bringen bereits vordefinierte Regeldateien mit (Kali: /usr/share/hashcat/rules // Wifislax: /opt/hashcat/rules)"
+	arr["GERMAN",244]="Regelbasierte Angriffe modifizieren die Wörter in der Wörterbuchliste gemäß den Regeln, die in der Regeldatei selbst geschrieben sind. Sie sind sehr nützlich. Einige Distributionen bringen bereits vordefinierte Regeldateien mit (Kali: /usr/share/hashcat/rules // Wifislax: /opt/hashcat/rules)"
 
 	arr["ENGLISH",245]="// ${yellow_color}Chipset:${normal_color} ${unknown_chipsetvar}"
 	arr["SPANISH",245]="// ${yellow_color}Chipset:${normal_color} ${unknown_chipsetvar}"
@@ -3219,7 +3219,7 @@ function language_strings() {
 	arr["GREEK",245]="// ${yellow_color}Chipset:${normal_color} ${unknown_chipsetvar}"
 	arr["ITALIAN",245]="// ${yellow_color}Chipset:${normal_color} ${unknown_chipsetvar}"
 	arr["POLISH",245]="// ${yellow_color}Chipset:${normal_color} ${unknown_chipsetvar}"
-	arr["GERMAN",245]="${pending_of_translation} // ${yellow_color}Chipset:${normal_color} ${unknown_chipsetvar}"
+	arr["GERMAN",245]="// ${yellow_color}Chipset:${normal_color} ${unknown_chipsetvar}"
 
 	arr["ENGLISH",246]="Every time you see a text with the prefix ${cyan_color}${pending_of_translation}${pink_color} acronym for \"Pending of Translation\", means the translation has been automatically generated and is still pending of review"
 	arr["SPANISH",246]="Cada vez que veas un texto con el prefijo ${cyan_color}${pending_of_translation}${pink_color} acrónimo de \"Pending of Translation\", significa que su traducción ha sido generada automáticamente y que aún está pendiente de revisión"
@@ -3230,7 +3230,7 @@ function language_strings() {
 	arr["GREEK",246]="Κάθε φορά που θα βλέπετε κείμενο με πρόθεμα ${cyan_color}${pending_of_translation}${pink_color} ακρωνύμιο για \"Pending of Translation\", σημαίνει πως η μετάφραση δημιουργήθηκε αυτόματα και αναμένεται κριτική"
 	arr["ITALIAN",246]="Ogni volta che vedi un testo con il prefisso ${cyan_color}${pending_of_translation}${pink_color} acronimo di \"Pending of Translation\" significa che la traduzione è stata generata automaticamente ed è ancora in attesa di revisione"
 	arr["POLISH",246]="Za każdym razem, gdy zobaczysz tekst z symbolem ${cyan_color}${pending_of_translation}${pink_color} dla \"Pending of Translation\", to tłumaczenie zostało wygenerowane automatycznie i nadal oczekuje na ręczną korektę"
-	arr["GERMAN",246]="${pending_of_translation} Jedes Mal, wenn Sie einen Text mit dem Präfix ${cyan_color}${pending_of_translation}${pink_color} Akronym für \"Pending of Translation\" sehen, bedeutet dies, dass Ihre Übersetzung automatisch erstellt wurde und noch aussteht"
+	arr["GERMAN",246]="Jedes Mal, wenn Sie einen Text mit dem Präfix ${cyan_color}${pending_of_translation}${pink_color} Akronym für \"Pending of Translation\" sehen, bedeutet dies, dass Ihre Übersetzung automatisch erstellt wurde"
 
 	arr["ENGLISH",247]="Despite having all essential tools installed, your system uses airmon-zc instead of airmon-ng. In order to work properly you need to install ethtool and you don't have it right now. Please, install it and launch the script again"
 	arr["SPANISH",247]="A pesar de tener todas las herramientas esenciales instaladas, tu sistema usa airmon-zc en lugar de airmon-ng. Para poder funcionar necesitas tener instalado ethtool y tú no lo tienes en este momento. Por favor, instálalo y vuelve a lanzar el script"
@@ -3241,7 +3241,7 @@ function language_strings() {
 	arr["GREEK",247]="Παρά του ότι είναι εγκατεστημένα όλα τα απραίτητα εργαλεία, το σύστημά σας χρησιμοποιεί το airmon-zc αντί το airmon-ng. Για να λειτουργήσει σωστά πρέπει να εγκαταστήσετε το ethtool το οποίο δεν το έχετε αυτή τη στιγμή. Παρακαλώ, εγκαταστήστε το και ξανανοίξτε το script"
 	arr["ITALIAN",247]="Pur avendo tutti gli strumenti essenziali installati, il sistema utilizza airmon-zc invece di airmon-ng. Per funzionare è necessario installare ethtool e tu non lo hai in questo momento. Si prega di installaro e lanciare nuovamente lo script"
 	arr["POLISH",247]="Mimo, iż zainstalowano wszystkie niezbędne narzędzia, twój system zamiast airmon-ng wykorzystuje airmon-zc. Aby móc korzystać ze skryptu, musisz zainstalować program ethtool, którego obecnie nie masz. Zainstaluj go i ponownie uruchom skrypt"
-	arr["GERMAN",247]="${pending_of_translation} Obwohl alle wesentlichen Tools installiert sind, verwendet Ihr System airmon-zc anstelle von airmon-ng. Um zu arbeiten, müssen Sie ethtool installiert haben und Sie haben es zur Zeit nicht. Bitte installieren Sie es und starten Sie das Skript erneut"
+	arr["GERMAN",247]="Obwohl alle wesentlichen Tools installiert sind, verwendet Ihr System airmon-zc anstelle von airmon-ng. Um zu arbeiten, müssen Sie ethtool installiert haben und Sie haben es zur Zeit nicht. Bitte installieren Sie es und starten Sie das Skript erneut"
 
 	arr["ENGLISH",248]="Language changed to Portuguese"
 	arr["SPANISH",248]="Idioma cambiado a Portugués"
@@ -3252,7 +3252,7 @@ function language_strings() {
 	arr["GREEK",248]="Η γλώσσα άλλαξε στα Πορτογαλικά"
 	arr["ITALIAN",248]="Lingua cambiata a Portoghese"
 	arr["POLISH",248]="Zmieniono język na Portugalski"
-	arr["GERMAN",248]="${pending_of_translation} Die Sprache wurde in Portugiesisch geändert"
+	arr["GERMAN",248]="Die Sprache wurde in Portugiesisch geändert"
 
 	arr["ENGLISH",249]="5.  Portuguese"
 	arr["SPANISH",249]="5.  Portugués"
@@ -3263,7 +3263,7 @@ function language_strings() {
 	arr["GREEK",249]="5.  Πορτογαλικά"
 	arr["ITALIAN",249]="5.  Portoghese"
 	arr["POLISH",249]="5.  Portugalski"
-	arr["GERMAN",249]="${pending_of_translation} 5.  Portugiesisch"
+	arr["GERMAN",249]="5.  Portugiesisch"
 
 	arr["ENGLISH",250]="If you see any bad translation or just want ${cyan_color}${pending_of_translation}${pink_color} marks to dissapear, write me to ${normal_color}${mail}${pink_color} to collaborate with translations"
 	arr["SPANISH",250]="Si ves alguna traducción incorrecta o quieres que desparezcan las marcas ${cyan_color}${pending_of_translation}${pink_color}, escríbeme a ${normal_color}${mail}${pink_color} para colaborar con las traducciones"
@@ -3274,7 +3274,7 @@ function language_strings() {
 	arr["GREEK",250]="Αν δείτε κάποια κακή μετάφραση ή απλά θέλετε τα σημάδια ${cyan_color}${pending_of_translation}${pink_color} να εξαφανιστούν, στείλτε μου στο ${normal_color}${mail}${pink_color} για να συνεργαστούμε με τις μεταφράσεις"
 	arr["ITALIAN",250]="Se vedi qualche errore di traduzione o vuoi che spariscano le marche ${cyan_color}${pending_of_translation}${pink_color}, scrivimi a ${normal_color}${mail}${pink_color} per collaborare con le traduzioni"
 	arr["POLISH",250]="Jeśli widzisz nieprawidłowe tłumaczenie lub chcesz usunąć tagi ${cyan_color}${pending_of_translation}${pink_color}, napisz do mnie ${normal_color}${mail}${pink_color}, aby współpracować przy tłumaczeniu"
-	arr["GERMAN",250]="${pending_of_translation} Wenn Sie eine falsche Übersetzung sehen oder möchten, dass die Marken ${cyan_color}${pending_of_translation}${pink_color} verschwinden, schreiben Sie mir an ${normal_color}${mail}${pink_color}, um mit den Übersetzungen zusammenzuarbeiten"
+	arr["GERMAN",250]="Wenn Sie eine falsche Übersetzung sehen oder möchten, dass die Marken ${cyan_color}${pending_of_translation}${pink_color} verschwinden, schreiben Sie mir an ${normal_color}${mail}${pink_color}, um mit den Übersetzungen zusammenzuarbeiten"
 
 	arr["ENGLISH",251]="You have chosen the same language that was selected. No changes will be done"
 	arr["SPANISH",251]="Has elegido el mismo idioma que estaba seleccionado. No se realizarán cambios"
