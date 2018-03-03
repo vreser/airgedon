@@ -2053,7 +2053,7 @@ function language_strings() {
 	arr["GREEK",139]="1.  Επίθεση Deauth / disassoc amok mdk3"
 	arr["ITALIAN",139]="1.  Attacco Deauth / Disassoc amok mdk3"
 	arr["POLISH",139]="1.  Atak Deauth / Disassoc amok mdk3"
-	arr["GERMAN",139]="1.  Deauth  / Disassoc Amok mdk3 Angriff"
+	arr["GERMAN",139]="1.  Deauth / Disassoc Amok mdk3 Angriff"
 
 	arr["ENGLISH",140]="2.  Deauth aireplay attack"
 	arr["SPANISH",140]="2.  Ataque Deauth aireplay"
@@ -2064,7 +2064,7 @@ function language_strings() {
 	arr["GREEK",140]="2.  Επίθεση Deauth aireplay"
 	arr["ITALIAN",140]="2.  Attacco Deauth aireplay"
 	arr["POLISH",140]="2.  Atak Deauth aireplay"
-	arr["GERMAN",140]="2.  Angriff Deauth aireplay Angriff"
+	arr["GERMAN",140]="2.  Deauth aireplay Angriff"
 
 	arr["ENGLISH",141]="3.  WIDS / WIPS / WDS Confusion attack"
 	arr["SPANISH",141]="3.  Ataque WIDS / WIPS / WDS Confusion"
@@ -2922,7 +2922,7 @@ function language_strings() {
 	arr["GREEK",218]="Προαιρετικά εργαλεία: γίνεται έλεγχος..."
 	arr["ITALIAN",218]="Strumenti opzionali: controllo ..."
 	arr["POLISH",218]="Narzędzia opcjonalne: sprawdzanie..."
-	arr["GERMAN",218]="Optionale Tools: Überprüfung ..."
+	arr["GERMAN",218]="Optionale Tools: Überprüfung..."
 
 	arr["ENGLISH",219]="Your distro has the essential tools but it hasn't some optional. The script can continue but you can't use some features. It is recommended to install missing tools"
 	arr["SPANISH",219]="Tu distro tiene las herramientas esenciales pero le faltan algunas opcionales. El script puede continuar pero no podrás utilizar algunas funcionalidades. Es recomendable instalar las herramientas que faltan"
@@ -3021,7 +3021,7 @@ function language_strings() {
 	arr["GREEK",227]="Δουλεύει...  "
 	arr["ITALIAN",227]="Lavorando...  "
 	arr["POLISH",227]="Praca...  "
-	arr["GERMAN",227]="In der Arbeit..."
+	arr["GERMAN",227]="In der Arbeit...  "
 
 	arr["ENGLISH",228]="                             Developed by ${author}"
 	arr["SPANISH",228]="                             Programado por ${author}"
@@ -3032,7 +3032,7 @@ function language_strings() {
 	arr["GREEK",228]="                             Προγραμματισμένο από ${author}"
 	arr["ITALIAN",228]="                             Sviluppato da ${author}"
 	arr["POLISH",228]="                             Opracowany przez ${author}"
-	arr["GERMAN",228]="                              Entwickelt von ${author}"
+	arr["GERMAN",228]="                             Entwickelt von ${author}"
 
 	arr["ENGLISH",229]="hashcat CPU, non GPU attacks"
 	arr["SPANISH",229]="ataques hashcat CPU, no GPU"
