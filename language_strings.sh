@@ -3835,7 +3835,7 @@ function language_strings() {
 	arr["GREEK",301]="Παρά του ότι είναι εγκατεστημένα όλα τα απραίτητα εργαλεία, το σύστημά σας χρησιμοποιεί το airmon-zc αντί το airmon-ng. Για να λειτουργήσει σωστά πρέπει να εγκαταστήσετε το lspci (pciutils) το οποίο δεν το έχετε αυτή τη στιγμή. Παρακαλώ, εγκαταστήστε το και ξανανοίξτε το script"
 	arr["ITALIAN",301]="Pur avendo tutti gli strumenti essenziali installati, il sistema utilizza airmon-zc invece di airmon-ng. Per funzionare è necessario installare lspci (pciutils) e tu non lo hai in questo momento. Si prega di installarlo e lanciare nuovamente lo script"
 	arr["POLISH",301]="Mimo, że zainstalowano wszystkie niezbędne narzędzia, system zamiast airmon-ng wykorzystuje airmon-zc. Aby pracować musisz mieć zainstalowany lspci (pciutils), którego w tej chwili nie masz. Zainstaluj go i ponownie uruchom skrypt"
-	arr["GERMAN",301]="${pending_of_translation} "
+	arr["GERMAN",301]="${pending_of_translation} Obwohl alle wesentlichen Tools installiert sind, verwendet Ihr System airmon-zc anstelle von airmon-ng. Um zu arbeiten, müssen Sie lspci (pciutils) installiert haben, und Sie haben es zur Zeit nicht. Bitte installieren Sie es und starten Sie das Skript erneut"
 
 	arr["ENGLISH",302]="Do you want to store in a file the sniffed captured passwords? ${blue_color}If you answer no (\"n\") they will be only shown on screen ${normal_color}${visual_choice}"
 	arr["SPANISH",302]="¿Deseas guardar en un fichero las contraseñas obtenidas del sniffing? ${blue_color}Si respondes que no (\"n\") solo se mostrarán por pantalla ${normal_color}${visual_choice}"
@@ -3846,7 +3846,7 @@ function language_strings() {
 	arr["GREEK",302]="Θέλετε να αποθηκεύσετε σε ένα αρχείο τους sniffed κωδικούς πρόσβασης; ${blue_color}Αν απαντήσετε όχι (\"n\") απλά θα εμφανιστούν στην οθόνη ${normal_color}${visual_choice}"
 	arr["ITALIAN",302]="Vuoi salvare in un file le password ottenute con sniffing? ${blue_color}Se si risponde no (\"n\") vengono visualizzate solo sullo schermo ${normal_color}${visual_choice}"
 	arr["POLISH",302]="Czy chcesz zapisywać hasła w plikach? ${blue_color}Jeśli odpowiesz nie (\"n\") zostaną tylko wyświetlone na ekranie ${normal_color}${visual_choice}"
-	arr["GERMAN",302]="${pending_of_translation} "
+	arr["GERMAN",302]="${pending_of_translation} Möchten Sie Kennwörter aus dem Sniffing in einer Datei speichern? ${blue_color} Wenn Sie mit Nein antworten (\"n\"), werden sie nur auf dem Bildschirm angezeigt ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",303]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${default_ettercap_logpath}]"
 	arr["SPANISH",303]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${default_ettercap_logpath}]"
@@ -3857,7 +3857,7 @@ function language_strings() {
 	arr["GREEK",303]="Πληκτρολογήστε το μονοπάτι για να αποθηκεύσετε το αρχείο ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${default_ettercap_logpath}]"
 	arr["ITALIAN",303]="Digitare il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${default_ettercap_logpath}]"
 	arr["POLISH",303]="Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${default_ettercap_logpath}]"
-	arr["GERMAN",303]="${pending_of_translation} "
+	arr["GERMAN",303]="${pending_of_translation} Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${default_ettercap_logpath}]"
 
 	arr["ENGLISH",304]="Parsing sniffer log..."
 	arr["SPANISH",304]="Analizando log del sniffer..."
@@ -3868,7 +3868,7 @@ function language_strings() {
 	arr["GREEK",304]="Γίνεται ανάλυση του log του sniffer..."
 	arr["ITALIAN",304]="Analizzando log dello sniffer..."
 	arr["POLISH",304]="Analiza logu sniffera..."
-	arr["GERMAN",304]="${pending_of_translation} "
+	arr["GERMAN",304]="${pending_of_translation} Sniffer-Protokoll analysieren..."
 
 	arr["ENGLISH",305]="No passwords detected on sniffers's log. File will not be saved"
 	arr["SPANISH",305]="No se ha encontrado ninguna contraseña en el log del sniffer. No se guardará el fichero"
@@ -3879,7 +3879,7 @@ function language_strings() {
 	arr["GREEK",305]="Δεν εντοπίστηκαν κωδικοί πρόσβασης στο log του sniffer. Το αρχείο δεν θα αποθηκευτεί"
 	arr["ITALIAN",305]="Nessuna password trovata nel log dello sniffer. Il file non viene salvato"
 	arr["POLISH",305]="W logu sniffera nie znaleziono haseł. Plik nie zostanie zapisany"
-	arr["GERMAN",305]="${pending_of_translation} "
+	arr["GERMAN",305]="${pending_of_translation} Im Sniffer-Protokoll wurde kein Passwort gefunden. Die Datei wird nicht gespeichert"
 
 	arr["ENGLISH",306]="Passwords captured by sniffer. File saved at ${normal_color}[${ettercap_logpath}]"
 	arr["SPANISH",306]="El sniffer ha capturado contraseñas. Fichero salvado en ${normal_color}[${ettercap_logpath}]"
@@ -3890,7 +3890,7 @@ function language_strings() {
 	arr["GREEK",306]="Καταγράφηκαν κωδικοί πρόσβασης από τον sniffer. Το αρχείο αποθηκεύτηκε στο ${normal_color}[${ettercap_logpath}]"
 	arr["ITALIAN",306]="Lo sniffer ha catturato delle password. File salvato in ${normal_color}[${ettercap_logpath}]"
 	arr["POLISH",306]="Sniffer przechwycił hasła. Plik zapisany w ${normal_color}[${ettercap_logpath}]"
-	arr["GERMAN",306]="${pending_of_translation} "
+	arr["GERMAN",306]="${pending_of_translation} Der Sniffer hat Passwörter erfasst. Datei gespeichert in ${normal_color}[${ettercap_logpath}]"
 
 	arr["ENGLISH",307]="Language changed to Russian"
 	arr["SPANISH",307]="Idioma cambiado a Ruso"
@@ -3901,7 +3901,7 @@ function language_strings() {
 	arr["GREEK",307]="Η γλώσσα άλλαξε στα Ρωσικά"
 	arr["ITALIAN",307]="Lingua cambiata in Russo"
 	arr["POLISH",307]="Zmieniono język na Rosyjski"
-	arr["GERMAN",307]="${pending_of_translation} "
+	arr["GERMAN",307]="${pending_of_translation} Die Sprache wurde auf Russisch geändert"
 
 	arr["ENGLISH",308]="6.  Russian"
 	arr["SPANISH",308]="6.  Ruso"
@@ -3912,7 +3912,7 @@ function language_strings() {
 	arr["GREEK",308]="6.  Ρωσικά"
 	arr["ITALIAN",308]="6.  Russo"
 	arr["POLISH",308]="6.  Rosyjski"
-	arr["GERMAN",308]="${pending_of_translation} "
+	arr["GERMAN",308]="${pending_of_translation} 6.  Russisch"
 
 	arr["ENGLISH",309]="Sslstrip technique is not infallible. It depends on many factors and not always work. Some browsers such as Mozilla Firefox latest versions are not affected"
 	arr["SPANISH",309]="La tecnica sslstrip no es infalible. Depende de muchos factores y no funciona siempre. Algunos navegadores como las últimas versiones de Mozilla Firefox no se ven afectados"
@@ -3923,7 +3923,7 @@ function language_strings() {
 	arr["GREEK",309]="Η τεχνική sslstrip δεν είναι αλάνθαστη. Εξαρτάται από πολλούς παράγοντες και δεν δουλεύει πάντα. Κάποιοι περιηγητές ιστού όπως οι τελευταίες εκδόσεις του Mozilla Firefox δεν επηρεάζονται"
 	arr["ITALIAN",309]="La tecnica sslstrip non è infallibile. Dipende da molti fattori e non sempre funziona. Alcuni browser, come le ultime versioni di Mozilla Firefox non sono vulnerabili"
 	arr["POLISH",309]="Technika sslstrip nie jest nieomylna. Zależy od wielu czynników i nie zawsze działa. Nie ma na przykład wpływu na niektóre przeglądarki, takie jak najnowsze wersje Mozilla Firefox"
-	arr["GERMAN",309]="${pending_of_translation} "
+	arr["GERMAN",309]="${pending_of_translation} Die sslstrip-Technik ist nicht unfehlbar. Es hängt von vielen Faktoren ab und funktioniert nicht immer. Einige Browser wie die neuesten Versionen von Mozilla Firefox sind nicht betroffen"
 
 	arr["ENGLISH",310]="Handshake file selected: ${pink_color}None${normal_color}"
 	arr["SPANISH",310]="Fichero de Handshake seleccionado: ${pink_color}Ninguno${normal_color}"
@@ -3934,7 +3934,7 @@ function language_strings() {
 	arr["GREEK",310]="Επιλεγμένο αρχείο Χειραψίας: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",310]="File di Handshake selezionato: ${pink_color}Nessuno${normal_color}"
 	arr["POLISH",310]="Wybrany plik Handshake: ${pink_color}Brak${normal_color}"
-	arr["GERMAN",310]="${pending_of_translation} "
+	arr["GERMAN",310]="${pending_of_translation} Ausgewählte Handshake-Datei: ${pink_color}Keine${normal_color}"
 
 	arr["ENGLISH",311]="Handshake file selected: ${pink_color}${et_handshake}${normal_color}"
 	arr["SPANISH",311]="Fichero de Handshake seleccionado: ${pink_color}${et_handshake}${normal_color}"
@@ -3945,7 +3945,7 @@ function language_strings() {
 	arr["GREEK",311]="Επιλεγμένο αρχείο Χειραψίας: ${pink_color}${et_handshake}${normal_color}"
 	arr["ITALIAN",311]="File di Handshake selezionato: ${pink_color}${et_handshake}${normal_color}"
 	arr["POLISH",311]="Wybrany plik Handshake: ${pink_color}${et_handshake}${normal_color}"
-	arr["GERMAN",311]="${pending_of_translation} "
+	arr["GERMAN",311]="${pending_of_translation} Ausgewählte Handshake-Datei: ${pink_color}${et_handshake}${normal_color}"
 
 	arr["ENGLISH",312]="No selected Handshake file detected during this session..."
 	arr["SPANISH",312]="No se ha detectado ningún fichero de Handshake seleccionado en esta sesión..."
@@ -3956,7 +3956,7 @@ function language_strings() {
 	arr["GREEK",312]="Δεν εντοπίστηκε κανένα αρχείο Χειραψίας κατά τη διάρκεια της συνεδρίας..."
 	arr["ITALIAN",312]="Non è stato rilevato nessun file di Handshake selezionato in questa sessione..."
 	arr["POLISH",312]="Nie wybrano pliku Handshake w tej sesji..."
-	arr["GERMAN",312]="${pending_of_translation} "
+	arr["GERMAN",312]="${pending_of_translation} In dieser Sitzung wurde keine Handshake-Datei ausgewählt..."
 
 	arr["ENGLISH",313]="Handshake selected file detected during this session [${normal_color}${et_handshake}${blue_color}]"
 	arr["SPANISH",313]="Se ha detectado un fichero de Handshake seleccionado en esta sesión [${normal_color}${et_handshake}${blue_color}]"
@@ -3967,7 +3967,7 @@ function language_strings() {
 	arr["GREEK",313]="Εντοπίστηκε επιλεγμένο αρχείο Χειραψίας κατά τη διάρκεια της συνεδρίας [${normal_color}${et_handshake}${blue_color}]"
 	arr["ITALIAN",313]="Trovato un file di Handshake selezionato in questa sessione [${normal_color}${et_handshake}${blue_color}]"
 	arr["POLISH",313]="Wkryto wybrany plik Handshake w tej sesji [${normal_color}${et_handshake}${blue_color}]"
-	arr["GERMAN",313]="${pending_of_translation} "
+	arr["GERMAN",313]="${pending_of_translation} In dieser Sitzung wurde eine ausgewählte Handshake-Datei gefunden [${normal_color}${et_handshake}${blue_color}]"
 
 	arr["ENGLISH",314]="Handshake file selected: ${pink_color}${enteredpath}${normal_color}"
 	arr["SPANISH",314]="Fichero de Handshake seleccionado: ${pink_color}${enteredpath}${normal_color}"
@@ -3978,7 +3978,7 @@ function language_strings() {
 	arr["GREEK",314]="Επιλεγμένο αρχείο Χειραψίας: ${pink_color}${enteredpath}${normal_color}"
 	arr["ITALIAN",314]="File di Handshake selezionato: ${pink_color}${enteredpath}${normal_color}"
 	arr["POLISH",314]="Wybrany plik Handshake: ${pink_color}${enteredpath}${normal_color}"
-	arr["GERMAN",314]="${pending_of_translation} "
+	arr["GERMAN",314]="${pending_of_translation} Ausgewählte Handshake-Datei: ${pink_color}${enteredpath}${normal_color}"
 
 	arr["ENGLISH",315]="This attack requires that you have previously a WPA/WPA2 network captured Handshake file"
 	arr["SPANISH",315]="Este ataque requiere que tengas capturado previamente un fichero de Handshake de una red WPA/WPA2"
@@ -3989,7 +3989,7 @@ function language_strings() {
 	arr["GREEK",315]="Αυτή η επίθεση απαιτεί να έχετε προηγουμένως κατεγράψει ένα αρχείο Χειραψίας από WPA/WPA2 δίκτο"
 	arr["ITALIAN",315]="Questo attacco richiede che tu abbia catturato precedentemente un file di Handshake di una rete WPA/WPA2"
 	arr["POLISH",315]="Ten atak wymaga uprzedniego przechwycenia pliku Handshake z sieci WPA/WPA2"
-	arr["GERMAN",315]="${pending_of_translation} "
+	arr["GERMAN",315]="${pending_of_translation} Dieser Angriff erfordert, dass Sie zuvor eine Handshake-Datei aus einem WPA/WPA2-Netzwerk erfasst haben"
 
 	arr["ENGLISH",316]="An exploration looking for targets is going to be done..."
 	arr["SPANISH",316]="Se va a realizar una exploración en busca de objetivos..."
@@ -4000,7 +4000,7 @@ function language_strings() {
 	arr["GREEK",316]="Πρόκειται να γίνει μία αναζήτηση για έυρεση στόχων..."
 	arr["ITALIAN",316]="Si effettuerà una scansione in cerca di obiettivi..."
 	arr["POLISH",316]="Zostanie przeprowadzone poszukiwanie celów..."
-	arr["GERMAN",316]="${pending_of_translation} "
+	arr["GERMAN",316]="${pending_of_translation} Eine Exploration wird auf der Suche nach Zielen durchgeführt..."
 
 	arr["ENGLISH",317]="If the password for the wifi network is achieved with the captive portal, you must decide where to save it. ${green_color}Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["SPANISH",317]="Si se consigue la contraseña de la red wifi con el portal cautivo, hay que decidir donde guardarla. ${green_color}Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${default_et_captive_portal_logpath}]"
@@ -4011,7 +4011,7 @@ function language_strings() {
 	arr["GREEK",317]="Εάν ο κωδικός πρόσβασης του δικτύου wifi επιτευχθεί με captive portal, θα πρέπει να αποφασίσετε που θα τον αποθηκεύσετε. ${green_color}Πληκτρολογήστε το μονοπάτι για να αποθηκεύσετε το αρχείο ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["ITALIAN",317]="Se si ottiene la passowrd della rete wireless con il captive portal, bisogna decidere dove salvarla. ${green_color}Immettere il percorso dove memorizzare il file o premere [Enter] per accettare quello di default proposto ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["POLISH",317]="Jeśli hasło sieci wifi zostanie uzyskane z portalu captive, musisz zdecydować gdzie je zapisać. ${green_color}Wpisz ścieżkę, w której zapiszemy plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${default_et_captive_portal_logpath}]"
-	arr["GERMAN",317]="${pending_of_translation} "
+	arr["GERMAN",317]="${pending_of_translation} Wenn Sie das Wi-Fi-Passwort mit dem Captive Portal erhalten, müssen Sie entscheiden, wo es gespeichert werden soll. ${green_color} Geben Sie den Pfad ein, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${default_et_captive_portal_logpath}]"
 
 	arr["ENGLISH",318]="Choose the language in which network clients will see the captive portal:"
 	arr["SPANISH",318]="Elige el idioma en el que los clientes de la red verán el portal cautivo:"
@@ -4022,7 +4022,7 @@ function language_strings() {
 	arr["GREEK",318]="Επιλέξτε τη γλώσσα που θα βλέπουν οι χρήστες του δικτύου στο captive portal:"
 	arr["ITALIAN",318]="Scegli la lingua in cui i clienti della rete vedranno il captive portal:"
 	arr["POLISH",318]="Wybierz język, w którym klienci sieci zobaczą portal:"
-	arr["GERMAN",318]="${pending_of_translation} "
+	arr["GERMAN",318]="${pending_of_translation} Wählen Sie die Sprache, in der die Clients des Netzwerks das Captive-Portal sehen:"
 
 	arr["ENGLISH",319]="The captive portal language has been established"
 	arr["SPANISH",319]="Se ha establecido el idioma del portal cautivo"
@@ -4033,7 +4033,7 @@ function language_strings() {
 	arr["GREEK",319]="Εγκαταστάθηκε η γλώσσα στο captive portal"
 	arr["ITALIAN",319]="La lingua del captive portal è stata stabilita"
 	arr["POLISH",319]="Został utworzony język portalu captive"
-	arr["GERMAN",319]="${pending_of_translation} "
+	arr["GERMAN",319]="${pending_of_translation} Die Sprache des Captive-Portals wurde festgelegt"
 
 	arr["ENGLISH",320]="7.  Greek"
 	arr["SPANISH",320]="7.  Griego"
@@ -4044,7 +4044,7 @@ function language_strings() {
 	arr["GREEK",320]="7.  Ελληνικά"
 	arr["ITALIAN",320]="7.  Greco"
 	arr["POLISH",320]="7.  Grecki"
-	arr["GERMAN",320]="${pending_of_translation} "
+	arr["GERMAN",320]="${pending_of_translation} 7.  Griechisch"
 
 	arr["ENGLISH",321]="Do you already have a captured Handshake file? ${blue_color}Answer yes (\"y\") to enter the path or answer no (\"n\") to capture a new one now ${normal_color}${visual_choice}"
 	arr["SPANISH",321]="¿Tienes ya un fichero de Handshake capturado? ${blue_color}Responde sí (\"y\") para introducir la ruta o responde no (\"n\") para capturar uno ahora ${normal_color}${visual_choice}"
@@ -4055,7 +4055,7 @@ function language_strings() {
 	arr["GREEK",321]="Έχετε ήδη κάποιο αρχείο Χειραψίας; ${blue_color}Απαντήστε ναι (\"y\") για να εισαγάγετε το μονοπάτι ή απαντήστε όχι (\"n\") για να καταγράψετε ένα νέο τώρα ${normal_color}${visual_choice}"
 	arr["ITALIAN",321]="Hai già catturato un file di Handshake? ${blue_color}Rispondi sì (\"y\") per introdurre il percorso o rispondi no (\"n\") per catturarne uno ora ${normal_color}${visual_choice}"
 	arr["POLISH",321]="Czy masz już przechwycony plik Handshake? ${blue_color}Odpowiedz tak (\"y\") aby wprowadzić ścieżkę lub odpowiedz nie (\"n\"), aby spróbować przechwycić go teraz ${normal_color}${visual_choice}"
-	arr["GERMAN",321]="${pending_of_translation} "
+	arr["GERMAN",321]="${pending_of_translation} Haben Sie bereits eine erfasste Handshake-Datei? ${blue_color} Beantworte yes (\"y\"), um den Pfad einzugeben oder antworte mit no (\"n\"), um jetzt einen zu erfassen ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",322]="It has been checked that there is a Handshake of the chosen target network while checking the selected capture file. Script can continue..."
 	arr["SPANISH",322]="Se ha comprobado que existe un Handshake de la red elegida como objetivo durante la exploración en el fichero de captura seleccionado. El script puede continuar..."
@@ -4066,7 +4066,7 @@ function language_strings() {
 	arr["GREEK",322]="Εντοπίστηκε η παρουσία Χειραψίας για το επιλεγμένο δίκτυο-στόχος καθώς γινόταν έλεγχος του επιλεγμένου αρχείου καταγραφής. Το script μπορεί να συνεχίσει..."
 	arr["ITALIAN",322]="É stato riscontrato che c'è un Handshake della rete scelta como obiettivo durante la esplorazione del file di cattura selezionato. Lo script può continuare..."
 	arr["POLISH",322]="Potwierdzono, że w wybranum pliku przechytywania jest plik Handshake z sieci docelowej. Skrypt może kontynuować..."
-	arr["GERMAN",322]="${pending_of_translation} "
+	arr["GERMAN",322]="${pending_of_translation} Es wurde überprüft, dass beim Scannen in der ausgewählten Aufnahmedatei ein Handshake des Netzwerks als Ziel ausgewählt wurde. Das Skript kann fortfahren..."
 
 	arr["ENGLISH",323]="There is no Handshake of the selected network on the capture file"
 	arr["SPANISH",323]="No se ha encontrado un Handshake de la red seleccionada en el fichero de captura"
@@ -4077,7 +4077,7 @@ function language_strings() {
 	arr["GREEK",323]="Δεν υπάρχει Χειραψία του επιλεγμένου δικτύου στο αρχείο καταγραφής"
 	arr["ITALIAN",323]="Non è stato trovato una Handshake della rete selezionata nel file di acquisizione"
 	arr["POLISH",323]="Nie znaleziono pliku Handshake z wybranej sieci w pliku przechwytywania"
-	arr["GERMAN",323]="${pending_of_translation} "
+	arr["GERMAN",323]="${pending_of_translation} Ein Handshake des ausgewählten Netzwerks wurde in der Erfassungsdatei nicht gefunden"
 
 	arr["ENGLISH",324]="Handshake file generated successfully at [${normal_color}${et_handshake}${blue_color}]"
 	arr["SPANISH",324]="Fichero de Handshake generado con éxito en [${normal_color}${et_handshake}${blue_color}]"
@@ -4088,7 +4088,7 @@ function language_strings() {
 	arr["GREEK",324]="Το αρχείο Χειραψίας δημιουργήθηκε επιτυχώς στο [${normal_color}${et_handshake}${blue_color}]"
 	arr["ITALIAN",324]="File di Handhake generato con successo in [${normal_color}${et_handshake}${blue_color}]"
 	arr["POLISH",324]="Plik Handshake został pomyślnie wygenerowany w [${normal_color}${et_handshake}${blue_color}]"
-	arr["GERMAN",324]="${pending_of_translation} "
+	arr["GERMAN",324]="${pending_of_translation} Handshake-Datei wurde erfolgreich in generiert [${normal_color}${et_handshake}${blue_color}]"
 
 	arr["ENGLISH",325]="Wait. Be patient..."
 	arr["SPANISH",325]="Espera. Ten un poco de paciencia..."
@@ -4099,7 +4099,7 @@ function language_strings() {
 	arr["GREEK",325]="Περιμένετε. Έχετε λίγη υπομονή..."
 	arr["ITALIAN",325]="Aspetta. Devi avere un pò di pazienza..."
 	arr["POLISH",325]="Czekaj cierpliwie..."
-	arr["GERMAN",325]="${pending_of_translation} "
+	arr["GERMAN",325]="${pending_of_translation} Warte Hab ein wenig Geduld..."
 
 	arr["ENGLISH",326]="Are you going to use the interface with internet access method? ${pink_color}If the answer is no (\"n\"), you'll need ${optional_tools_names[12]} installed to continue. Both will be checked ${normal_color}${visual_choice}"
 	arr["SPANISH",326]="¿Vas a utilizar el método de la interfaz con acceso a internet? ${pink_color}Si la respuesta es no (\"n\"), necesitarás tener instalado ${optional_tools_names[12]} para continuar. Ambas cosas se comprobarán ${normal_color}${visual_choice}"
@@ -4110,7 +4110,7 @@ function language_strings() {
 	arr["GREEK",326]="Σκοπεύετε να χρησιμοποιήσετε την διεπαφή με την μέθοδο πρόσβασης στο διαδίκτυο; ${pink_color}Αν απαντήσετε όχι (\"n\"), θα πρέπει να έχετε το ${optional_tools_names[12]} εγκατεστημένο για να συνεχίσετε. Και τα δύο ελέγχονται ${normal_color}${visual_choice}"
 	arr["ITALIAN",326]="Hai intenzione di utilizzare il metodo dell'interfaccia con accesso ad internet? ${pink_color}Se la risposta è no (\"n\") hai bisogno di tenere installato ${optional_tools_names[12]} per continuare. Entrambi saranno controllati ${normal_color}${visual_choice}"
 	arr["POLISH",326]="Czy zamierzasz używać metody interfejsu z dostępem do internetu? ${pink_color}Jeśli odpowiedź brzmi nie (\"n\"), musisz mieć zainstalowane ${optional_tools_names[12]}. Oba narzędzia zostaną sprawdzone ${normal_color}${visual_choice}"
-	arr["GERMAN",326]="${pending_of_translation} "
+	arr["GERMAN",326]="${pending_of_translation} Verwenden Sie die Schnittstellenmethode mit Internetzugang? ${pink_color}Wenn die Antwort nein ist (\"n\"), müssen Sie ${optional_tools_names[12]} installiert haben, um fortzufahren. Beide Dinge werden überprüft ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",327]="You don't have ${optional_tools_names[12]} installed. The script can't continue. Redirecting to main screen..."
 	arr["SPANISH",327]="No tienes instalado ${optional_tools_names[12]}. El script no puede continuar. Redirigiendo a la pantalla principal..."
@@ -4121,7 +4121,7 @@ function language_strings() {
 	arr["GREEK",327]="Το ${optional_tools_names[12]} δεν είναι εγκατεστημένο. Το script δεν μπορεί να συνεχίσει. Θα καθοδηγηθείτε στην κύρια οθόνη..."
 	arr["ITALIAN",327]="Non hai installato ${optional_tools_names[12]}. Lo script non può continuare. Reindirizzando alla schermata principale..."
 	arr["POLISH",327]="Nie masz zainstalowanych ${optional_tools_names[12]}. Skrypt nie może kontynuować. Przekierowywanie do głównego ekranu..."
-	arr["GERMAN",327]="${pending_of_translation} "
+	arr["GERMAN",327]="${pending_of_translation} Sie haben ${optional_tools_names[12]} nicht installiert. Das Skript kann nicht fortgesetzt werden. Weiterleitung zum Hauptbildschirm..."
 
 	arr["ENGLISH",328]="The unique Evil Twin attack in which it's not necessary to have an additional interface with internet access is the captive portal attack. As an alternative, you'll need another additional requirement: ${optional_tools_names[12]}"
 	arr["SPANISH",328]="El único ataque de Evil Twin en el que no es necesario tener una interfaz adicional con acceso a internet es el del portal cautivo. Como alternativa necesitarás otro requerimiento adicional: ${optional_tools_names[12]}"
@@ -4132,7 +4132,7 @@ function language_strings() {
 	arr["GREEK",328]="Η μόνη επίθεση Evil Twin στην οποία δεν είναι απαραίτητο να έχετε επιπλέον διεπαφή με πρόσβαση στο διαδίκτυο είναι η επίθεση με captive portal. Εναλλακτικά, θα χρειαστείτε το: ${optional_tools_names[12]}"
 	arr["ITALIAN",328]="L'unico attacco di tipo Evil Twin in cui non è necessario avere un'interfaccia supplementare con accesso a internet è quello con captive portal. In cambo avrai bisogno di un ulteriore requisito: ${optional_tools_names[12]}"
 	arr["POLISH",328]="Jedynym atakiem Evil Twin, w którym nie ma konieczności dodatkowego interfejsu z dostępem do internetu, jest atak Captive Portal. Alternatywnie potrzebujesz kolejnego dodatkowego narzędzia: ${optional_tools_names[12]}"
-	arr["GERMAN",328]="${pending_of_translation} "
+	arr["GERMAN",328]="${pending_of_translation} Der einzige Angriff von Evil Twin, bei dem keine zusätzliche Schnittstelle zum Internetzugang benötigt wird, ist die des Captive-Portals. Als Alternative benötigen Sie eine weitere zusätzliche Anforderung: ${optional_tools_names[12]}"
 
 	arr["ENGLISH",329]="It seems you have ${optional_tools_names[12]} installed. Script can continue..."
 	arr["SPANISH",329]="Se ha comprobado que tienes instalado ${optional_tools_names[12]}. El script puede continuar..."
@@ -4143,7 +4143,7 @@ function language_strings() {
 	arr["GREEK",329]="Φαίνεται πως το ${optional_tools_names[12]} είναι εγκατεστημένο. Το script μπορεί να συνεχίσει..."
 	arr["ITALIAN",329]="Sembra che hai installato ${optional_tools_names[12]}. Lo script può continuare..."
 	arr["POLISH",329]="Sprawdzono, że masz zainstalowane ${optional_tools_names[12]}. Skrypt może kontynuować..."
-	arr["GERMAN",329]="${pending_of_translation} "
+	arr["GERMAN",329]="${pending_of_translation} Es wurde bestätigt, dass Sie ${optional_tools_names[12]} installiert haben. Das Skript kann fortfahren..."
 
 	arr["ENGLISH",330]="At this point there are two options to prepare the captive portal. Either having an interface with internet access, or making a fake DNS using ${optional_tools_names[12]}"
 	arr["SPANISH",330]="Llegados a este punto hay dos opciones para preparar el portal cautivo. O bien tenemos una interfaz con acceso a internet, o preparamos un falso DNS usando ${optional_tools_names[12]}"
@@ -4154,7 +4154,7 @@ function language_strings() {
 	arr["GREEK",330]="Σε αυτό το σημείο υπάρχουν δύο επιλογές για την προετοιμασία του captive portal. Να έχετε μία διεπαφή με πρόσβαση στο διαδίκτυο, ή να φιάξετε ψευδές DNS χρησιμοποιώντας το ${optional_tools_names[12]}"
 	arr["ITALIAN",330]="A questo punto ci sono due opzioni per la preparazione del captive portal. O avere un'interfaccia con accesso a internet, o preparare un DNS falso utilizzando ${optional_tools_names[12]}"
 	arr["POLISH",330]="W tym momencie istnieją dwie możliwości przygotowania portalu Captive. Interfejs z dostępem do internet lub przygotowujemy fałszywy DNS przy użyciu ${optional_tools_names[12]}"
-	arr["GERMAN",330]="${pending_of_translation} "
+	arr["GERMAN",330]="${pending_of_translation} An dieser Stelle gibt es zwei Möglichkeiten, das Captive-Portal vorzubereiten. Entweder haben wir eine Schnittstelle mit Internetzugang, oder wir bereiten einen falschen DNS mit ${optional_tools_names[12]} vor"
 
 	arr["ENGLISH",331]="${option_counter_back}.${spaceiface}Return to Evil Twin attacks menu"
 	arr["SPANISH",331]="${option_counter_back}.${spaceiface}Volver al menú de ataques Evil Twin"
@@ -4165,7 +4165,7 @@ function language_strings() {
 	arr["GREEK",331]="${option_counter_back}.${spaceiface}Επιστροφή στο μενού επιθέσεων Evil Twin"
 	arr["ITALIAN",331]="${option_counter_back}.${spaceiface}Tornare al menu degli attacchi Evil Twin"
 	arr["POLISH",331]="${option_counter_back}.${spaceiface}Wróć do menu Atak Evil Twin"
-	arr["GERMAN",331]="${pending_of_translation} "
+	arr["GERMAN",331]="${pending_of_translation} ${option_counter_back}.${spaceiface}Zurück zum Angriffsmenü von Evil Twin"
 
 	arr["ENGLISH",332]="Language changed to Greek"
 	arr["SPANISH",332]="Idioma cambiado a Griego"
@@ -4176,7 +4176,7 @@ function language_strings() {
 	arr["GREEK",332]="Η γλώσσα άλλαξε στα Ελληνικά"
 	arr["ITALIAN",332]="Lingua cambiata in Greco"
 	arr["POLISH",332]="Zmieniono język na Grecki"
-	arr["GERMAN",332]="${pending_of_translation} "
+	arr["GERMAN",332]="${pending_of_translation} Die Sprache wurde in Griechisch geändert"
 
 	arr["ENGLISH",333]="8.  WPS attacks menu"
 	arr["SPANISH",333]="8.  Menú de ataques WPS"
@@ -4187,7 +4187,7 @@ function language_strings() {
 	arr["GREEK",333]="8.  Μενού επιθέσεων WPS"
 	arr["ITALIAN",333]="8.  Menú degli attacchi WPS"
 	arr["POLISH",333]="8.  Menu ataków WPS"
-	arr["GERMAN",333]="${pending_of_translation} "
+	arr["GERMAN",333]="${pending_of_translation} 8.  WPS-Angriffsmenü"
 
 	arr["ENGLISH",334]="WPS attacks menu"
 	arr["SPANISH",334]="Menú de ataques WPS"
@@ -4198,7 +4198,7 @@ function language_strings() {
 	arr["GREEK",334]="Μενού επιθέσεων WPS"
 	arr["ITALIAN",334]="Menú degli attacchi WPS"
 	arr["POLISH",334]="Menu ataków WPS"
-	arr["GERMAN",334]="${pending_of_translation} "
+	arr["GERMAN",334]="${pending_of_translation} WPS-Angriffsmenü"
 
 	arr["ENGLISH",335]="Selected WPS BSSID: ${pink_color}${wps_bssid}${normal_color}"
 	arr["SPANISH",335]="BSSID WPS seleccionado: ${pink_color}${wps_bssid}${normal_color}"
@@ -4209,7 +4209,7 @@ function language_strings() {
 	arr["GREEK",335]="Επιλεγμένο WPS BSSID: ${pink_color}${wps_bssid}${normal_color}"
 	arr["ITALIAN",335]="BSSID WPS selezionato: ${pink_color}${wps_bssid}${normal_color}"
 	arr["POLISH",335]="Wybrano BSSID WPS: ${pink_color}${wps_bssid}${normal_color}"
-	arr["GERMAN",335]="${pending_of_translation} "
+	arr["GERMAN",335]="${pending_of_translation} Ausgewählte WPS BSSID: ${pink_color}${wps_bssid}${normal_color}"
 
 	arr["ENGLISH",336]="Selected WPS channel: ${pink_color}${wps_channel}${normal_color}"
 	arr["SPANISH",336]="Canal WPS seleccionado: ${pink_color}${wps_channel}${normal_color}"
@@ -4220,7 +4220,7 @@ function language_strings() {
 	arr["GREEK",336]="Επιλεγμένο WPS κανάλι: ${pink_color}${wps_channel}${normal_color}"
 	arr["ITALIAN",336]="Canale WPS selezionato: ${pink_color}${wps_channel}${normal_color}"
 	arr["POLISH",336]="Wybrano kanał WPS: ${pink_color}${wps_channel}${normal_color}"
-	arr["GERMAN",336]="${pending_of_translation} "
+	arr["GERMAN",336]="${pending_of_translation} Ausgewählter WPS-Kanal: ${pink_color}${wps_channel}${normal_color}"
 
 	arr["ENGLISH",337]="Selected WPS ESSID: ${pink_color}${wps_essid}${blue_color} <- can't be used"
 	arr["SPANISH",337]="ESSID WPS seleccionado: ${pink_color}${wps_essid}${blue_color} <- no se puede usar"
@@ -4231,7 +4231,7 @@ function language_strings() {
 	arr["GREEK",337]="Επιλεγμένο WPS ESSID: ${pink_color}${wps_essid}${blue_color} <- δεν μπορεί να χρησιμοποιηθεί"
 	arr["ITALIAN",337]="ESSID WPS selezionato: ${pink_color}${wps_essid}${blue_color} <- non può essere utilizzato"
 	arr["POLISH",337]="Wybrano WPS ESSID: ${pink_color}${wps_essid}${blue_color} <- nie można użyć"
-	arr["GERMAN",337]="${pending_of_translation} "
+	arr["GERMAN",337]="${pending_of_translation} ESSID WPS ausgewählt: {pink_color}${wps_essid}${blue_color} <- kann nicht verwendet werden"
 
 	arr["ENGLISH",338]="Selected WPS ESSID: ${pink_color}${wps_essid}${normal_color}"
 	arr["SPANISH",338]="ESSID WPS seleccionado: ${pink_color}${wps_essid}${normal_color}"
@@ -4242,7 +4242,7 @@ function language_strings() {
 	arr["GREEK",338]="Επιλεγμένο WPS ESSID: ${pink_color}${wps_essid}${normal_color}"
 	arr["ITALIAN",338]="ESSID WPS selezionato: ${pink_color}${wps_essid}${normal_color}"
 	arr["POLISH",338]="Wybrano WPS ESSID: ${pink_color}${wps_essid}${normal_color}"
-	arr["GERMAN",338]="${pending_of_translation} "
+	arr["GERMAN",338]="${pending_of_translation} ESSID WPS ausgewählt: ${pink_color}${wps_essid}${normal_color}"
 
 	arr["ENGLISH",339]="Selected WPS BSSID: ${pink_color}None${normal_color}"
 	arr["SPANISH",339]="BSSID WPS seleccionado: ${pink_color}Ninguno${normal_color}"
@@ -4253,7 +4253,7 @@ function language_strings() {
 	arr["GREEK",339]="Επιλεγμένο WPS BSSID: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",339]="BSSID WPS selezionato: ${pink_color}Nessuno${normal_color}"
 	arr["POLISH",339]="Wybrano WPS BSSID: ${pink_color}Brak${normal_color}"
-	arr["GERMAN",339]="${pending_of_translation} "
+	arr["GERMAN",339]="${pending_of_translation} BSSID WPS ausgewählt: ${pink_color}Keine${normal_color}"
 
 	arr["ENGLISH",340]="Selected WPS channel: ${pink_color}None${normal_color}"
 	arr["SPANISH",340]="Canal WPS seleccionado: ${pink_color}Ninguno${normal_color}"
@@ -4264,7 +4264,7 @@ function language_strings() {
 	arr["GREEK",340]="Επιλεγμένο WPS κανάλι: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",340]="Canale WPS selezionato: ${pink_color}Nessuno${normal_color}"
 	arr["POLISH",340]="Wybrano kanał WPS: ${pink_color}Brak${normal_color}"
-	arr["GERMAN",340]="${pending_of_translation} "
+	arr["GERMAN",340]="${pending_of_translation} Ausgewählter WPS-Kanal: ${pink_color}Keine${normal_color}"
 
 	arr["ENGLISH",341]="Selected WPS ESSID: ${pink_color}None${normal_color}"
 	arr["SPANISH",341]="ESSID WPS seleccionado: ${pink_color}Ninguno${normal_color}"
@@ -4275,7 +4275,7 @@ function language_strings() {
 	arr["GREEK",341]="Επιλεγμένο WPS ESSID: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",341]="ESSID WPS selezionato: ${pink_color}Nessuno${normal_color}"
 	arr["POLISH",341]="Wybrano WPS ESSID: ${pink_color}Brak${normal_color}"
-	arr["GERMAN",341]="${pending_of_translation} "
+	arr["GERMAN",341]="${pending_of_translation} ESSID WPS ausgewählt: ${pink_color}Keine${normal_color}"
 
 	arr["ENGLISH",342]="Pixie Dust attack obtains PIN and password in seconds, but not all access points are affected"
 	arr["SPANISH",342]="El ataque Pixie Dust obtiene el PIN y la clave en segundos, pero no todos los puntos de acceso son vulnerables a este ataque"
@@ -4286,7 +4286,7 @@ function language_strings() {
 	arr["GREEK",342]="Η επίθεση Pixie Dust αποκτά το PIN και τον κωδικό πρόσβασης σε δευτερόλεπτα, αλλά μερικά σημεία πρόσβασης δεν επηρεάζονται"
 	arr["ITALIAN",342]="L'attacco Pixie Dust ottiene il PIN e la password in pochi secondi, ma non tutti i punti di accesso sono vulnerabili a questo attacco"
 	arr["POLISH",342]="Atak Pixie Dust pobiera PIN i klucz sieci w kilka sekund, ale nie wszystkie punkty dostępu są na niego podatne"
-	arr["GERMAN",342]="${pending_of_translation} "
+	arr["GERMAN",342]="${pending_of_translation} Der Pixie Dust Angriff erhält die PIN und den Schlüssel in Sekundenschnelle, aber nicht alle Zugangspunkte sind für diesen Angriff anfällig"
 
 	arr["ENGLISH",343]="In order to success on any WPS based attack, you need good signal of target network. We might otherwise get false negatives"
 	arr["SPANISH",343]="Para realizar cualquier ataque WPS es necesario tener una buena señal de la red objetivo. Si no, podríamos obtener falsos negativos"
@@ -4297,7 +4297,7 @@ function language_strings() {
 	arr["GREEK",343]="Για να εκτελεστεί επιτυχώς οποιαδήποτε επίθεση WPS, θα πρέπει να υπάρχει ισχυρό σήμα του δικτύου στόχου. Αλλιώς μπορεί να υπάρξουν ψευδώς αρνητικά αποτελέσματα"
 	arr["ITALIAN",343]="Per qualsiasi attacco WPS è necessario avere un buon segnale della rete obiettivo. Altrimenti potremmo ottenere falsi negativi"
 	arr["POLISH",343]="Aby wykonać dowolny atak WPS, trzeba mieć dobry sygnał z sieci docelowej. Jeśli nie, możemy błędnie stwierdzić ze AP jest odporny"
-	arr["GERMAN",343]="${pending_of_translation} "
+	arr["GERMAN",343]="${pending_of_translation} Um einen WPS-Angriff auszuführen, ist ein gutes Signal vom Zielnetzwerk erforderlich. Wenn nicht, könnten wir falsche Negative bekommen"
 
 	arr["ENGLISH",344]="Some access points can be blocked after failing some PIN connection attempts. It may vary depending on the access point"
 	arr["SPANISH",344]="Algunos puntos de acceso se bloquean tras fallar cierto número de intentos de conexión por PIN. Puede variar dependiendo del punto de acceso"
@@ -4308,7 +4308,7 @@ function language_strings() {
 	arr["GREEK",344]="Μερικά σημεία πρόσβασης μπορεί να μπλοκαριστούν μετά από μερικές αποτυχημένες προσπάθειες σύνδεσης PIN. Μπορεί να διαφέρει ανάλογα με το σημείο πρόσβασης"
 	arr["ITALIAN",344]="Alcuni punti di accesso si bloccano dopo un certo numero di tentativi di connessione con PIN. Può variare a seconda del punto di accesso"
 	arr["POLISH",344]="Niektóre punkty dostępu są blokowane po pewnej liczbie prób PIN. Liczba ta może się różnić w zależności od punktu dostępu"
-	arr["GERMAN",344]="${pending_of_translation} "
+	arr["GERMAN",344]="${pending_of_translation} Einige Zugriffspunkte sind blockiert, nachdem einige Versuche zur PIN-Verbindung fehlgeschlagen sind. Dies kann abhängig vom Zugriffspunkt variieren"
 
 	arr["ENGLISH",345]="5.  (bully) Custom PIN association"
 	arr["SPANISH",345]="5.  (bully) Asociación con PIN personalizado"
@@ -4319,7 +4319,7 @@ function language_strings() {
 	arr["GREEK",345]="5.  (bully) Σύνδεση με εξατομικευμένο PIN"
 	arr["ITALIAN",345]="5.  (bully) Associazione con PIN personalizzato"
 	arr["POLISH",345]="5.  (bully) Asocjacja z niestandardowym kodem PIN"
-	arr["GERMAN",345]="${pending_of_translation} "
+	arr["GERMAN",345]="${pending_of_translation} 5.  (bully) Assoziation mit personalisierter PIN"
 
 	arr["ENGLISH",346]="7.  (bully) Pixie Dust attack"
 	arr["SPANISH",346]="7.  (bully) Ataque Pixie Dust"
@@ -4330,7 +4330,7 @@ function language_strings() {
 	arr["GREEK",346]="7.  (bully) Επίθεση Pixie Dust"
 	arr["ITALIAN",346]="7.  (bully) Attacco Pixie Dust"
 	arr["POLISH",346]="7.  (bully) Atak Pixie Dust"
-	arr["GERMAN",346]="${pending_of_translation} "
+	arr["GERMAN",346]="${pending_of_translation} 7.  (bully) Pixie Dust Angriff"
 
 	arr["ENGLISH",347]="9.  (bully) Bruteforce PIN attack"
 	arr["SPANISH",347]="9.  (bully) Ataque de fuerza bruta por PIN"
@@ -4341,7 +4341,7 @@ function language_strings() {
 	arr["GREEK",347]="9.  (bully) Επίθεση PIN με χρήση ωμής βίας"
 	arr["ITALIAN",347]="9.  (bully) Attacco forza bruta con PIN"
 	arr["POLISH",347]="9.  (bully) Atak Brute Force za pomocą kodu PIN"
-	arr["GERMAN",347]="${pending_of_translation} "
+	arr["GERMAN",347]="${pending_of_translation} 9.  (bully) Brute-Force-Angriff durch PIN"
 
 	arr["ENGLISH",348]="11. (bully) Known PINs database based attack"
 	arr["SPANISH",348]="11. (bully) Ataque basado en base de datos de PINs conocidos"
@@ -4352,7 +4352,7 @@ function language_strings() {
 	arr["GREEK",348]="11. (bully) Επίθεση με χρήση βάσης δεδομένων γνωστών PIN"
 	arr["ITALIAN",348]="11. (bully) Attacco che utilizza una base dati di PIN"
 	arr["POLISH",348]="11. (bully) Atak oparty o bazę danych znanych PINów"
-	arr["GERMAN",348]="${pending_of_translation} "
+	arr["GERMAN",348]="${pending_of_translation} 11. (bully) Angriff basiert auf Datenbank bekannter PINs"
 
 	arr["ENGLISH",349]="  N.         BSSID      CHANNEL  PWR   LOCKED  ESSID"
 	arr["SPANISH",349]="  N.         BSSID        CANAL  PWR   LOCKED  ESSID"
@@ -4363,7 +4363,7 @@ function language_strings() {
 	arr["GREEK",349]="  N.         BSSID      CHANNEL  PWR   LOCKED  ESSID"
 	arr["ITALIAN",349]="  N.         BSSID       CANALE  PWR   LOCKED  ESSID"
 	arr["POLISH",349]="  N.         BSSID        KANAŁ  PWR   LOCKED  ESSID"
-	arr["GERMAN",349]="${pending_of_translation} "
+	arr["GERMAN",349]="${pending_of_translation}   N.         BSSID        KANAL  PWR   LOCKED  ESSID"
 
 	arr["ENGLISH",350]="${blue_color}You have selected a locked WPS network ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",350]="${blue_color}Has seleccionado una red WPS bloqueada ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -4374,7 +4374,7 @@ function language_strings() {
 	arr["GREEK",350]="${blue_color}Έχετε επιλέξει ένα κλειδωμένο WPS δίκτυο ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",350]="${blue_color}È stata selezionata una rete WPS bloccata ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",350]="${blue_color}Wybrano sieć z zablokowanym WPS ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
-	arr["GERMAN",350]="${pending_of_translation} "
+	arr["GERMAN",350]="${pending_of_translation} ${blue_color}Sie haben ein blockiertes WPS-Netzwerk ausgewählt ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",351]="WPS locked network: ${pink_color}${wps_locked}${normal_color}"
 	arr["SPANISH",351]="Red WPS bloqueada: ${pink_color}${wps_locked}${normal_color}"
