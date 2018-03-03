@@ -1701,7 +1701,7 @@ function language_strings() {
 	arr["GREEK",107]="Συμμετέχετε στο project ${normal_color}${urlgithub}"
 	arr["ITALIAN",107]="Unisciti al progetto in ${normal_color}${urlgithub}"
 	arr["POLISH",107]="Dołącz do projektu w ${normal_color}${urlgithub}"
-	arr["GERMAN",107]="Treten Sie das Projekt in ${normal_color}${urlgithub} bei"
+	arr["GERMAN",107]="Treten Sie das Projekt in ${normal_color}${urlgithub} ${pink_color}bei"
 
 	arr["ENGLISH",108]="Let's check if you have installed what script needs"
 	arr["SPANISH",108]="Vamos a chequear si tienes instalado lo que el script requiere"
