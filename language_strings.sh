@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180303
+#Date.........: 20180306
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -3890,7 +3890,7 @@ function language_strings() {
 	arr["GREEK",306]="Καταγράφηκαν κωδικοί πρόσβασης από τον sniffer. Το αρχείο αποθηκεύτηκε στο ${normal_color}[${ettercap_logpath}]"
 	arr["ITALIAN",306]="Lo sniffer ha catturato delle password. File salvato in ${normal_color}[${ettercap_logpath}]"
 	arr["POLISH",306]="Sniffer przechwycił hasła. Plik zapisany w ${normal_color}[${ettercap_logpath}]"
-	arr["GERMAN",306]="Der Sniffer hat Passwörter erfasst. Datei in ${normal_color}[${ettercap_logpath}] gespeichert"
+	arr["GERMAN",306]="Der Sniffer hat Passwörter erfasst. Datei in ${normal_color}[${ettercap_logpath}] ${blue_color}gespeichert"
 
 	arr["ENGLISH",307]="Language changed to Russian"
 	arr["SPANISH",307]="Idioma cambiado a Ruso"
