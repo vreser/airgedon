@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180225
+#Date.........: 20180227
 #Version......: 8.01
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -141,6 +141,7 @@ aircrack_pot_tmp="${aircrack_tmp_simple_name_file}.pot"
 
 #hashcat vars
 hashcat3_version="3.0"
+hashcat4_version="4.0.0"
 hashcat_hccapx_version="3.40"
 hashcat_tmp_simple_name_file="hctmp"
 hashcat_tmp_file="${hashcat_tmp_simple_name_file}.hccap"
@@ -5803,7 +5804,7 @@ function exec_hashcat_dictionary_attack() {
 
 	debug_print
 
-	hashcat_cmd="hashcat -m 2500 -a 0 \"${tmpdir}${hashcat_tmp_file}\" \"${DICTIONARY}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	hashcat_cmd="hashcat -m 2500 -a 0 \"${tmpdir}${hashcat_tmp_file}\" \"${DICTIONARY}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
 	eval "${hashcat_cmd}"
 	language_strings "${language}" 115 "read"
 }
@@ -5813,7 +5814,7 @@ function exec_hashcat_bruteforce_attack() {
 
 	debug_print
 
-	hashcat_cmd="hashcat -m 2500 -a 3 \"${tmpdir}${hashcat_tmp_file}\" \"${charset}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	hashcat_cmd="hashcat -m 2500 -a 3 \"${tmpdir}${hashcat_tmp_file}\" \"${charset}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
 	eval "${hashcat_cmd}"
 	language_strings "${language}" 115 "read"
 }
@@ -5823,7 +5824,7 @@ function exec_hashcat_rulebased_attack() {
 
 	debug_print
 
-	hashcat_cmd="hashcat -m 2500 -a 0 \"${tmpdir}${hashcat_tmp_file}\" \"${DICTIONARY}\" -r \"${RULES}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	hashcat_cmd="hashcat -m 2500 -a 0 \"${tmpdir}${hashcat_tmp_file}\" \"${DICTIONARY}\" -r \"${RULES}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
 	eval "${hashcat_cmd}"
 	language_strings "${language}" 115 "read"
 }
@@ -9537,11 +9538,18 @@ function set_hashcat_parameters() {
 
 	debug_print
 
-	hashcat_fix=""
+	hashcat_cmd_fix=""
 	hashcat_charset_fix_needed=0
 	if compare_floats_greater_or_equal "${hashcat_version}" "${hashcat3_version}"; then
-		hashcat_fix=" --weak-hash-threshold 0 -D 1 --force"
+
 		hashcat_charset_fix_needed=1
+
+		if compare_floats_greater_or_equal "${hashcat_version}" "${hashcat4_version}"; then
+			hashcat_cmd_fix=" -D 1 --force"
+		else
+			hashcat_cmd_fix=" --weak-hash-threshold 0 -D 1 --force"
+		fi
+
 		if compare_floats_greater_or_equal "${hashcat_version}" "${hashcat_hccapx_version}"; then
 			hccapx_needed=1
 		fi
