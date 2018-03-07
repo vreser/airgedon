@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180227
+#Date.........: 20180307
 #Version......: 8.01
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -188,7 +188,6 @@ urlscript_pins_dbfile="https://raw.githubusercontent.com/${github_user}/${github
 urlscript_pins_dbfile_checksum="https://raw.githubusercontent.com/${github_user}/${github_repository}/${branch}/${pins_dbfile_checksum}"
 urlscript_language_strings_file="https://raw.githubusercontent.com/${github_user}/${github_repository}/${branch}/${language_strings_file}"
 urlgithub_wiki="https://${repository_hostname}/${github_user}/${github_repository}/wiki"
-bitcoin="1AKnTXbomtwUzrm81FRzi5acSSXxGteGTH"
 mail="v1s1t0r.1s.h3r3@gmail.com"
 author="v1s1t0r"
 
