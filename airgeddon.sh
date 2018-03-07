@@ -187,7 +187,6 @@ urlscript_pins_dbfile="https://raw.githubusercontent.com/${github_user}/${github
 urlscript_pins_dbfile_checksum="https://raw.githubusercontent.com/${github_user}/${github_repository}/${branch}/${pins_dbfile_checksum}"
 urlscript_language_strings_file="https://raw.githubusercontent.com/${github_user}/${github_repository}/${branch}/${language_strings_file}"
 urlgithub_wiki="https://${repository_hostname}/${github_user}/${github_repository}/wiki"
-bitcoin="1NSzwqtBBdo4CrvynPZmd85xfbL7hw3Ptu"
 mail="v1s1t0r.1s.h3r3@gmail.com"
 author="v1s1t0r"
 
