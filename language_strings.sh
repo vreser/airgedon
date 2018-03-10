@@ -468,7 +468,7 @@ function language_strings() {
 	footer_texts["PORTUGUESE",1]="Se você gostou do script e o achou útil, apoie o projeto fazendo uma doação através: do PayPal (${mail}) ou enviando uma fração de uma criptomoeda (Bitcoin, Ethereum, Litecoin...). Qualquer quantidade, mesmo pequena (1, 2, 5 $/€) é bem-vinda. Links diretos e de com realizar em: ${urlgithub_wiki}/Contributing"
 	footer_texts["RUSSIAN",1]="${pending_of_translation} Если вам понравилась эта программа и она оказался для вас полезной, вы можете поддержать проект, сделав пожертвование. Через PayPal (${mail}) или отправки части криптовалюты (Bitcoin, Ethereum, Litecoin...). Приветствуется любая сумма, даже небольшая (1, 2, 5 $/€). Более подробную информацию и прямые ссылки можно получить по адресу: ${urlgithub_wiki}/Contributing"
 	footer_texts["GREEK",1]="${pending_of_translation} Εαν ευχαριστηθήκατε το script και το βρήκατε χρήσιμο, μπορείτε να υποστηρίξετε το project κάνοντας κάποια δωρεά. Μέσω του Paypal (${mail}) ή αποστέλλοντας ένα κλάσμα κρυπτοσυχνότητας (Bitcoin, Ethereum, Litecoin...). Είναι καλοδεχούμενο οποιοδήποτε ποσό (1, 2, 5 $/€), δεν έχει σημασία το πόσο λίγο μπορεί να είναι. Δίνονται περισσότερες πληροφορίες και links για να κάνετε δωρεά στη διεύθυνση: ${urlgithub_wiki}/Contributing"
-	footer_texts["ITALIAN",1]="${pending_of_translation} Se ti è piaciuto lo script e l'hai trovato utile, è possibile sostenere il progetto con una donazione. Attraverso PayPal (${mail}) o inviando una frazione di criptovaluta (Bitcoin, Ethereum, Litecoin...). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Ulteriori informazioni e collegamenti diretti per effettuare la donazione in: ${urlgithub_wiki}/Contributing"
+	footer_texts["ITALIAN",1]="Se ti è piaciuto lo script e l'hai trovato utile, è possibile sostenere il progetto con una donazione. Attraverso PayPal (${mail}) o inviando una frazione di criptovaluta (Bitcoin, Ethereum, Litecoin...). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Ulteriori informazioni e collegamenti diretti per effettuare la donazione in: ${urlgithub_wiki}/Contributing"
 	footer_texts["POLISH",1]="${pending_of_translation} Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi Paypal (${mail}) lub wysyłając ułamek kryptowaluty (Bitcoin, Ethereum, Litecoin...). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${urlgithub_wiki}/Contributing"
 
 	declare -A arr
@@ -1149,7 +1149,7 @@ function language_strings() {
 	arr["PORTUGUESE",67]="Filtro WEP ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",67]="${pending_of_translation} Фильтр WEP, активированный при сканировании. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",67]="${pending_of_translation} Το φίλτρο WEP ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
-	arr["ITALIAN",67]="${pending_of_translation} Filtro WEP attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
+	arr["ITALIAN",67]="Filtro WEP attivato nella scansione. Una volta avviato, premere [Ctrl+C] per fermarlo..."
 	arr["POLISH",67]="${pending_of_translation} Filtr WEP aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 
 	arr["ENGLISH",68]="No networks found"
@@ -4849,7 +4849,7 @@ function language_strings() {
 	arr["PORTUGUESE",437]="Se você gostou do script e o achou útil, apoie o projeto fazendo uma doação através: do PayPal (${normal_color}${mail}${pink_color}) ou enviando uma fração de uma criptomoeda (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualquer quantidade, mesmo pequena (1, 2, 5 $/€) é bem-vinda. Links diretos e de com realizar em: ${urlgithub_wiki}/Contributing"
 	arr["RUSSIAN",437]="${pending_of_translation} Если вам понравилась эта программа и она оказался для вас полезной, вы можете поддержать проект, сделав пожертвование. Через PayPal (${normal_color}${mail}${pink_color}) или отправки части криптовалюты (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Приветствуется любая сумма, даже небольшая (1, 2, 5 $/€). Более подробную информацию и прямые ссылки можно получить по адресу: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["GREEK",437]="${pending_of_translation} Εαν ευχαριστηθήκατε το script και το βρήκατε χρήσιμο, μπορείτε να υποστηρίξετε το project κάνοντας κάποια δωρεά. Μέσω του Paypal (${normal_color}${mail}${pink_color}) ή αποστέλλοντας ένα κλάσμα κρυπτοσυχνότητας (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Είναι καλοδεχούμενο οποιοδήποτε ποσό (1, 2, 5 $/€), δεν έχει σημασία το πόσο λίγο μπορεί να είναι. Δίνονται περισσότερες πληροφορίες και links για να κάνετε δωρεά στη διεύθυνση: ${normal_color}${urlgithub_wiki}/Contributing"
-	arr["ITALIAN",437]="${pending_of_translation} Se ti è piaciuto lo script e l'hai trovato utile, puoi sostenere il progetto con una donazione. Attraverso PayPal (${normal_color}${mail}${pink_color}) o inviando una frazione di criptovaluta (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Piú informazioni e collegamenti diretti per realizzarla in: ${normal_color}${urlgithub_wiki}/Contributing"
+	arr["ITALIAN",437]="Se ti è piaciuto lo script e l'hai trovato utile, puoi sostenere il progetto con una donazione. Attraverso PayPal (${normal_color}${mail}${pink_color}) o inviando una frazione di criptovaluta (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Piú informazioni e collegamenti diretti per realizzarla in: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["POLISH",437]="${pending_of_translation} Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi Paypal (${normal_color}${mail}${pink_color}) lub wysyłając ułamek kryptowaluty (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${urlgithub_wiki}/Contributing"
 
 	arr["ENGLISH",438]="We are looking for translators to other languages. If you want to see airgeddon in your native language and you also know english, contact us. More information at: ${normal_color}${urlgithub_wiki}/Contributing"
@@ -5689,7 +5689,7 @@ function language_strings() {
 	arr["PORTUGUESE",521]="Filtro WPS ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",521]="${pending_of_translation} Фильтр WPS, активированный при сканировании. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",521]="${pending_of_translation} Το φίλτρο WPS ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
-	arr["ITALIAN",521]="${pending_of_translation} Filtro WPS attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
+	arr["ITALIAN",521]="Filtro WPS attivato nella scansione. Una volta avviata, premere [Ctrl+C] per fermarla..."
 	arr["POLISH",521]="${pending_of_translation} Filtr WPS aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 
 	arr["ENGLISH",522]="No filters enabled on scan. When started, press [Ctrl+C] to stop..."
@@ -5699,7 +5699,7 @@ function language_strings() {
 	arr["PORTUGUESE",522]="Nenhum filtro ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",522]="${pending_of_translation} В сканировании не активированы фильтры. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",522]="${pending_of_translation} Δεν έχουν ενεργοποιηθεί φίλτρα στη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
-	arr["ITALIAN",522]="${pending_of_translation} Nessun filtro attivato nella scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
+	arr["ITALIAN",522]="Nessun filtro attivato nella scansione. Una volta avviata, premere [Ctrl+C] per fermarla..."
 	arr["POLISH",522]="${pending_of_translation} W skanie nie zostały włączone żadne filtry. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 
 	arr["ENGLISH",523]="WPA/WPA2 filter enabled in scan. When started, press [Ctrl+C] to stop..."
@@ -5709,7 +5709,7 @@ function language_strings() {
 	arr["PORTUGUESE",523]="Filtro WPA/WPA2 ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",523]="${pending_of_translation} Фильтр WPA/WPA2, активированный при сканировании. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",523]="${pending_of_translation} Το φίλτρο WPA/WPA2 ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
-	arr["ITALIAN",523]="${pending_of_translation} Filtro WPA/WPA2 attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
+	arr["ITALIAN",523]="Filtro WPA/WPA2 attivato nella scansione. Una volta avviata, premere [Ctrl+C] per fermarla..."
 	arr["POLISH",523]="${pending_of_translation} Filtr WPA/WPA2 aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 
 	case "${3}" in
