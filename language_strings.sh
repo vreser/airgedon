@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180309
+#Date.........: 20180310
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -532,7 +532,7 @@ function language_strings() {
 	arr["CATALAN",1]="Aquesta interfície ${current_iface_on_messages} no és una targeta wifi vàlida. No es compatible amb mode managed"
 	arr["PORTUGUESE",1]="Esta interface ${current_iface_on_messages} não é wifi. Ela não suporta o modo managed"
 	arr["RUSSIAN",1]="Этот интерфейс ${current_iface_on_messages} не является wifi картой. Он не поддерживает управляемый режим"
-	arr["GREEK",1]="Αυτή η διεπαφή ${current_iface_on_messages} δεν είναι κάρτα wifi. Δεν υποστηρίζει ετερόκλητη κατάσταση."
+	arr["GREEK",1]="Αυτή η διεπαφή ${current_iface_on_messages} δεν είναι κάρτα wifi. Δεν υποστηρίζει ετερόκλητη κατάσταση"
 	arr["ITALIAN",1]="Questa interfaccia ${current_iface_on_messages} non è una scheda wifi. Non supporta la modalità managed"
 	arr["POLISH",1]="Interfejs ${current_iface_on_messages} nie jest kartą wifi. Nie obsługuje trybu zarządzania"
 	arr["GERMAN",1]="Diese ${current_iface_on_messages}-Schnittstelle ist keine wifi-Karte. Managed modus ist nicht unterstützt"
@@ -2152,7 +2152,7 @@ function language_strings() {
 	arr["GREEK",148]="Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${handshakepath}]"
 	arr["ITALIAN",148]="Scrivere il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${handshakepath}]"
 	arr["POLISH",148]="Wpisz ścieżkę do zapisywania plików lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${handshakepath}]"
-	arr["GERMAN",148]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${handshakepath}] ${green_color}zu benutzen."
+	arr["GERMAN",148]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${handshakepath}] ${green_color}zu benutzen"
 
 	arr["ENGLISH",149]="Handshake file generated successfully at [${normal_color}${enteredpath}${blue_color}]"
 	arr["SPANISH",149]="Fichero de Handshake generado con éxito en [${normal_color}${enteredpath}${blue_color}]"
@@ -3824,7 +3824,7 @@ function language_strings() {
 	arr["GREEK",300]="Αν δουλέψει η εντολή xpdyinfo, το script θα μπορέσει να υπολογίσει την ανάλυση της οθόνης και να δείχνει τα παράθυρα καλύτερα. Εξαρτάται από το σύστημα, το όνομα του πακέτου που το περιέχει θα μπορούσε να είναι x11-utils, xdpyinfo, xorg-xdpyinfo, κτλπ."
 	arr["ITALIAN",300]="Se funziona il comando xdpyinfo, lo script calcolerà la risoluzione dello schermo e mostrerá le finestre in modo ottimizzato. A seconda del sistema il pacchetto che lo contiene può chiamarsi x11-utils, xdpyinfo, xorg-xdpyinfo, etc."
 	arr["POLISH",300]="Jeśli polecenie xdpyinfo działa w systemie, skrypt będzie mógł obliczyć rozdzielczość ekranu i lepiej wyświetlać okna. W zależności od systemu pakiet zawierający go może być nazwany x11-utils, xdpyinfo, xorg-xdpyinfo, itd."
-	arr["GERMAN",300]="Wenn Sie den Befehl xdpyinfo in Ihrem System verwenden, kann das Skript Ihre Bildschirmauflösung berechnen und Ihnen die Fenster in einer optimierten Weise zeigen. Je nach System kann das Paket, das es enthält, x11-utils, xdpyinfo, xorg-xdpyinfo usw. genannt werden."
+	arr["GERMAN",300]="Wenn Sie den Befehl xdpyinfo in Ihrem System verwenden, kann das Skript Ihre Bildschirmauflösung berechnen und Ihnen die Fenster in einer optimierten Weise zeigen. Je nach System kann das Paket, das es enthält, x11-utils, xdpyinfo, xorg-xdpyinfo usw. genannt werden"
 
 	arr["ENGLISH",301]="Despite having all essential tools installed, your system uses airmon-zc instead of airmon-ng. In order to work properly you need to install lspci (pciutils) and you don't have it right now. Please, install it and launch the script again"
 	arr["SPANISH",301]="A pesar de tener todas las herramientas esenciales instaladas, tu sistema usa airmon-zc en lugar de airmon-ng. Para poder funcionar necesitas tener instalado lspci (pciutils) y tú no lo tienes en este momento. Por favor, instálalo y vuelve a lanzar el script"
@@ -5379,7 +5379,7 @@ function language_strings() {
 
 	arr["ENGLISH",442]="If you install ccze you'll see some parts of airgeddon in a colorized way with better aspect. It's not a requirement or a dependency, but it will improve the user experience"
 	arr["SPANISH",442]="Si instalas el paquete ccze podrás ver algunas partes de airgeddon colorizadas y con mejor aspecto. No es un requerimiento ni una dependencia, pero mejorará la experiencia de usuario"
-	arr["FRENCH",442]="L'installation du paquet ccze améliore le rendu graphique d'airgeddon. Ce n'est pas un prérequis mais un petit plus pour rendre l’utilisation d'airgeddon plus agréable."
+	arr["FRENCH",442]="L'installation du paquet ccze améliore le rendu graphique d'airgeddon. Ce n'est pas un prérequis mais un petit plus pour rendre l’utilisation d'airgeddon plus agréable"
 	arr["CATALAN",442]="Si instal·les el paquet ccze podràs veure algunes parts de airgeddon coloriçades i amb millor aspecte. No és un requeriment ni una dependència, però millorarà l'experiència d'usuari"
 	arr["PORTUGUESE",442]="Se você instalar o pacote ccze poderá ver algumas partes do airgeddon coloridas e mais bonitas. Não é uma exigência nem uma dependência, mas melhora a experiência do usuário"
 	arr["RUSSIAN",442]="Если вы установите ccze, то некоторые цветные элементы airgeddon будут выглядеть лучше. Это не требование или зависимость, но это улучшит работу пользователя"
@@ -5753,7 +5753,7 @@ function language_strings() {
 
 	arr["ENGLISH",476]="A graphical X window system has not been detected. If you already have one, check it's working properly. It's essential for airgeddon. The script can't continue"
 	arr["SPANISH",476]="No se ha detectado un sistema gráfico de ventanas X. Si lo tienes, comprueba su que esté funcionando correctamente. Es esencial para airgeddon. El script no puede continuar"
-	arr["FRENCH",476]="Aucun système graphique X window détecté. Si un tel système est installé vérifiez qu'il fonctionne correctement. Le script ne peut pas continuer sans ça."
+	arr["FRENCH",476]="Aucun système graphique X window détecté. Si un tel système est installé vérifiez qu'il fonctionne correctement. Le script ne peut pas continuer sans ça"
 	arr["CATALAN",476]="No s'ha detectat un sistema gràfic de finestres X. Si el tens, comprova que estigui funcionant correctament. És essencial per a airgeddon. El script no pot continuar"
 	arr["PORTUGUESE",476]="Não foi detectado um sistema X Window (interface gráfica). Se você possui, verifique se está funcionando corretamente. É essencial para airgeddon. O script não pode continuar"
 	arr["RUSSIAN",476]="Графическая X система не обнаружена. Если она уже имеется, проверьте её работоспособность. Это важно для airgeddon. Скрипт не может продолжить"
@@ -6035,7 +6035,7 @@ function language_strings() {
 	arr["GREEK",501]="Εμφανίζεται το PIN που έχει υπολογιστεί χρησιμοποιώντας τον αλγόριθμο EasyBox..."
 	arr["ITALIAN",501]="Mostrando il PIN calcolato utilizzando l'algoritmo EasyBox..."
 	arr["POLISH",501]="Wyświetlanie kodu PIN przy użyciu algorytmu EasyBox..."
-	arr["GERMAN",501]="${pending_of_translation} "
+	arr["GERMAN",501]="${pending_of_translation} Angezeigte PIN wird mit dem EasyBox-Algorithmus berechnet..."
 
 	arr["ENGLISH",502]="Showing calculated PIN using Arcadyan algorithm..."
 	arr["SPANISH",502]="Mostrando PIN calculado con el algoritmo Arcadyan..."
@@ -6046,7 +6046,7 @@ function language_strings() {
 	arr["GREEK",502]="Εμφανίζεται το PIN που έχει υπολογιστεί χρησιμοποιώντας τον αλγόριθμο Arcadyan..."
 	arr["ITALIAN",502]="Mostrando il PIN calcolato utilizzando l'algoritmo Arcadyan..."
 	arr["POLISH",502]="Wyświetlanie kodu PIN obliczonego przy użyciu algorytmu Arcadyan..."
-	arr["GERMAN",502]="${pending_of_translation} "
+	arr["GERMAN",502]="${pending_of_translation} Berechnete PIN mit Arcadyan-Algorithmus anzeigen..."
 
 	arr["ENGLISH",503]="It's not necessary to perform the scan again to calculate the Arcadyan algorithm PIN. This has already been done in this session"
 	arr["SPANISH",503]="No es necesario realizar de nuevo el escaneo para calcular el PIN del algoritmo Arcadyan. Ya se realizó anteriormente en esta sesión"
@@ -6057,7 +6057,7 @@ function language_strings() {
 	arr["GREEK",503]="Δεν είναι απαραίτητο να εκτελέσετε ξανά το scan για να υπολογίσετε το PIN χρησιμοποιώντας τον Arcadyan αλγόριθμο. Έχει ήδη πραγματοποιηθεί σε αυτή τη συνεδρία"
 	arr["ITALIAN",503]="Non è necessario eseguire nuovamente la scansione per calcolare il PIN dell'algoritmo Arcadyan. È già stato fatto in precedenza in questa sessione"
 	arr["POLISH",503]="Nie jest konieczne przeprowadzanie skanowania aby obliczyć PIN algorytmem Arcadyan. Już zrobiliśmy je wcześniej w tej sesji"
-	arr["GERMAN",503]="${pending_of_translation} "
+	arr["GERMAN",503]="${pending_of_translation} Es ist nicht erforderlich, den Scan erneut durchzuführen, um die Arcadyan-Algorithmus-PIN zu berechnen. Es wurde zuvor in dieser Sitzung gemacht"
 
 	arr["ENGLISH",504]="${blue_color}This PIN calculation process is not entirely offline. A complete \"probe\" response is required from the target access point to obtain a necessary data. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",504]="${blue_color}Este proceso de cálculo de PIN no es puramente offline. Hace falta una respuesta \"probe\" completa del punto de acceso objetivo para obtener un dato necesario. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -6068,7 +6068,7 @@ function language_strings() {
 	arr["GREEK",504]="${blue_color}Αυτή η διαδικασία υπολογισμού PIN δεν είναι καθ' αυτοὺ offline. Απαιτείται ένα ολοκληρωμένο \"probe\" response από το σημείο πρόσβασης για να ληφθούν τα απαραίτητα δεδομένα. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",504]="${blue_color}Questo processo di calcolo del PIN non è puramente offline. É richiesta una risposta completa \"probe\" dal punto di accesso obiettivo per ottenere i dati necessari. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",504]=" ${blue_color}Ten proces obliczania kodu PIN nie jest wyłącznie offline. Wymagana jest pełna odpowiedź \"probe\" z docelowego punktu dostępu, aby uzyskać niezbędne dane. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
-	arr["GERMAN",504]="${pending_of_translation} "
+	arr["GERMAN",504]="${pending_of_translation} Dieser PIN-Berechnungsprozess ist nicht rein offline. Eine vollständige \"probe\"-Antwort vom Zielzugriffspunkt wird benötigt, um die erforderlichen Daten zu erhalten. ${green_color} Möchten Sie fortfahren? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",505]="Do you want to enable \"DoS pursuit mode\"? ${blue_color}This will launch again the attack if target AP change its channel countering \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["SPANISH",505]="¿Deseas activar el \"modo persecución DoS\"? ${blue_color}Esto relanzará el ataque si el AP objetivo cambia de canal contrarrestando el \"channel hopping\" ${normal_color}${visual_choice}"
@@ -6079,7 +6079,7 @@ function language_strings() {
 	arr["GREEK",505]="Θέλετε να ενεργοποιήσετε to \"DoS pursuit mode\"; ${blue_color}Αυτό θα ξεκινήσει πάλι την επίθεση, εάν το σημείο πρόσβασης αλλάξει το κανάλι του \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["ITALIAN",505]="Vuoi attivare la modalità \"DoS pursuit mode\"? ${blue_color}Questo riprenderà l'attacco se l'AP obiettivo cambia i canali contrastando il \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["POLISH",505]="Czy chcesz uaktywnić \"tryb DoS pursuit\"? ${blue_color}To spowoduje ponowne uruchomienie ataku, jeśli docelowy punkt dostępu AP zmieni kanały \"channel hopping\" ${normal_color}${visual_choice}"
-	arr["GERMAN",505]="${pending_of_translation} "
+	arr["GERMAN",505]="${pending_of_translation} Möchten Sie den \"DoS pursuit mode\" aktivieren? ${blue_color}Dadurch wird der Angriff erneut gestartet, wenn der Ziel-AP den Kanal ändert, indem er dem \"channel hopping\" entgegenwirkt ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",506]="DoS attack with the \"DoS pursuit mode\" enabled will start when you press [Enter] on this window. To stop it you must press [Ctrl+C] or close attack window"
 	arr["SPANISH",506]="El ataque DoS con el \"modo persecución DoS\" activado comenzará cuando pulse [Enter] en esta ventana. Para detenerlo deberá pulsar [Ctrl+C] o cerrar la ventana del ataque"
@@ -6090,7 +6090,7 @@ function language_strings() {
 	arr["GREEK",506]="Η επίθεση DoS με το \"DoS pursuit mode\" ενεργοποιημένο θα ξεκινήσει όταν πατήσετε [Enter] σε αυτό το παράθυρο. Για να το σταματήσετε πρέπει να πατήσετε [Ctrl+C] ή να κλείσετε το παράθυρο"
 	arr["ITALIAN",506]="L'attacco DoS con la modalità \"DoS pursuit mode\" abilitata inizierá quando si preme [Enter] in questa finestra. Per fermarlo bisogna premere [Ctrl+C] o chiudere la finestra di attacco"
 	arr["POLISH",506]="Atak DoS z uruchomionym trybem \"DoS pursuit\" zostanie uruchomiony po naciśnięciu przycisku [Enter] w tym oknie. Aby go zatrzymać, musisz nacisnąć [Ctrl+C] lub zamknąć okno ataku"
-	arr["GERMAN",506]="${pending_of_translation} "
+	arr["GERMAN",506]="${pending_of_translation} Der DoS-Angriff mit aktiviertem \"DoS pursuit mode\" wird gestartet, wenn Sie in diesem Fenster [Enter] drücken. Um es zu stoppen, müssen Sie [Ctrl+C] drücken oder das Angriffsfenster schließen"
 
 	arr["ENGLISH",507]="Channel change detected. Relaunching again DoS attack on \"DoS pursuit mode\" now on channel ${normal_color}${channel}"
 	arr["SPANISH",507]="Cambio de canal detectado. Relanzando de nuevo ataque DoS en \"modo persecución DoS\" ahora sobre el canal ${normal_color}${channel}"
@@ -6101,7 +6101,7 @@ function language_strings() {
 	arr["GREEK",507]="Εντοπίστηκε αλλαγή καναλιού. Γίνεται πάλι επίθεση DoS \"DoS pursuit mode\" στο κανάλι ${normal_color}${channel}"
 	arr["ITALIAN",507]="Cambio di canale rilevato. Riavviare nuovamente l'attacco DoS in modalità \"DoS pursuit mode\" sul canale ${normal_color}${channel}"
 	arr["POLISH",507]="Wykryto zmianę kanału. Ponowne uruchomienie ataku DoS w trybie \"DoS pursuit\" na kanale ${normal_color}${channel}"
-	arr["GERMAN",507]="${pending_of_translation} "
+	arr["GERMAN",507]="${pending_of_translation} Änderung des erkannten Kanals DoS-Angriff erneut im \"DoS pursuit mode\" auf dem Kanal wiederholen ${normal_color}${channel}"
 
 	arr["ENGLISH",508]="\"DoS pursuit mode\" can be unstable for this kind of DoS attack. If you are not obtaining an optimal result just select another kind of attack"
 	arr["SPANISH",508]="El \"modo persecución DoS\" puede ser inestable para este tipo de ataque DoS. Si el resultado no es óptimo selecciona otro tipo de ataque"
@@ -6112,7 +6112,7 @@ function language_strings() {
 	arr["GREEK",508]="Το \"DoS pursuit mode\" μπορεί να είναι ασταθής για αυτό το είδος επίθεσης DoS. Εάν δεν δείτε σωστό αποτέλεσμα, επιλέξτε κάποιο άλλο είδος επίθεσης"
 	arr["ITALIAN",508]="La modalitá \"DoS pursuit mode\" può essere instabile per questo tipo di attacco DoS. Se il risultato non è ottimale selezionare un altro tipo di attacco"
 	arr["POLISH",508]="\"tryb DoS pursuit\" może być niestabilny dla tego typu ataków DoS. Jeśli wynik nie jest optymalny, wybierz inny rodzaj ataku"
-	arr["GERMAN",508]="${pending_of_translation} "
+	arr["GERMAN",508]="${pending_of_translation} Der \"DoS pursuit mode\" kann für diese Art von DoS-Angriff instabil sein. Wenn das Ergebnis nicht optimal ist, wählen Sie eine andere Art von Angriff aus"
 
 	arr["ENGLISH",509]="If you want to integrate \"DoS pursuit mode\" on an Evil Twin attack, another additional wifi interface in monitor mode will be needed to be able to perform it"
 	arr["SPANISH",509]="Si se quiere integrar el \"modo persecución DoS\" en un ataque Evil Twin, será necesario tener otro interfaz wifi adicional en modo monitor para llevarlo a cabo"
@@ -6123,7 +6123,7 @@ function language_strings() {
 	arr["GREEK",509]="Εάν θέλετε να ενσωματώσετε το \"DoS pursuit mode\" σε μια επίθεση Evil Twin, θα χρειαστεί μια επιπλέον διεπαφή wifi σε κατάσταση παρακολούθησης για να εκτελεστεί σωστά"
 	arr["ITALIAN",509]="Se si desidera integrare la modalitá \"DoS pursuit mode\" in un attacco Evil Twin, sarà necessario disporre di un'altra interfaccia wifi aggiuntiva in modalità monitor"
 	arr["POLISH",509]="Jeśli chcesz zintegrować \"tryb DoS pursuit\" w ataku Evil Twin, konieczne będzie posiadanie innego dodatkowego interfejsu wifi w trybie monitorowania"
-	arr["GERMAN",509]="${pending_of_translation} "
+	arr["GERMAN",509]="${pending_of_translation} Wenn Sie den \"DoS pursuit mode\" in einen Evil-Twin-Angriff integrieren wollen, müssen Sie im Monitor-Modus noch eine zusätzliche WLAN-Schnittstelle zur Verfügung haben, um es auszuführen"
 
 	arr["ENGLISH",510]="On this screen, it's supposed an additional wifi interface is chosen, but you don't have anyone at this moment"
 	arr["SPANISH",510]="En esta pantalla, se supone que deberías elegir otro interfaz wifi adicional, pero no dispones de ninguno en este momento"
@@ -6134,7 +6134,7 @@ function language_strings() {
 	arr["GREEK",510]="Σε αυτήν την οθόνη, υποτίθεται ότι έχει επιλεγεί μια πρόσθετη διεπαφή wifi, αλλά δεν έχετε επιλέξει κάποια αυτήν τη στιγμή"
 	arr["ITALIAN",510]="In questa schermata, dovresti scegliere un'altra interfaccia wifi addizionale, ma in questo momento non ne hai nessuna"
 	arr["POLISH",510]="Na tym ekranie należy wybrać inny dodatkowy interfejs wifi, ale nie masz go w tym momencie"
-	arr["GERMAN",510]="${pending_of_translation} "
+	arr["GERMAN",510]="${pending_of_translation} Auf diesem Bildschirm sollten Sie eine andere zusätzliche Wi-Fi-Schnittstelle auswählen, aber Sie haben keine zu diesem Zeitpunkt"
 
 	arr["ENGLISH",511]="Select another wireless interface:"
 	arr["SPANISH",511]="Selecciona otra interfaz inalámbrica:"
@@ -6145,7 +6145,7 @@ function language_strings() {
 	arr["GREEK",511]="Επιλέξτε άλλη μία ασύρματη διεπαφή:"
 	arr["ITALIAN",511]="Seleziona un'altra interfaccia wireless:"
 	arr["POLISH",511]="Wybierz inny interfejs bezprzewodowy:"
-	arr["GERMAN",511]="${pending_of_translation} "
+	arr["GERMAN",511]="${pending_of_translation} Wählen Sie eine andere drahtlose Schnittstelle:"
 
 	arr["ENGLISH",512]="\"DoS pursuit mode\" interface: ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["SPANISH",512]="Interfaz para \"modo persecución DoS\": ${pink_color}${secondary_wifi_interface}${normal_color}"
@@ -6156,7 +6156,7 @@ function language_strings() {
 	arr["GREEK",512]="Διεπαφή για \"DoS pursuit mode\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["ITALIAN",512]="Interfaccia per la modalitá \"DoS pursuit mode\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["POLISH",512]="Interfejs dla \"tryb DoS pursuit\": ${pink_color}${secondary_wifi_interface}${normal_color}"
-	arr["GERMAN",512]="${pending_of_translation} "
+	arr["GERMAN",512]="${pending_of_translation} Schnittstelle für \"DoS pursuit mode\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 
 	arr["ENGLISH",513]="Interface will be tried to be changed to monitor mode automatically"
 	arr["SPANISH",513]="Se intentará cambiar la interfaz a modo monitor automáticamente"
@@ -6167,7 +6167,7 @@ function language_strings() {
 	arr["GREEK",513]="Γίνεται απόπειρα αλλαγής κατάστασης διεπαφής σε κατάσταση παρακολούθησης"
 	arr["ITALIAN",513]="Si cercherà di cambiare automaticamente l'interfaccia alla modalità monitor"
 	arr["POLISH",513]="Spowoduje to automatyczną zmianę interfejsu w tryb monitorowania"
-	arr["GERMAN",513]="${pending_of_translation} "
+	arr["GERMAN",513]="${pending_of_translation} Es wird versuchen, die Schnittstelle automatisch in den Überwachungsmodus zu ändern"
 
 	arr["ENGLISH",514]="Interface ${pink_color}${current_iface_on_messages}${blue_color} selected. Mode: ${pink_color}${ifacemode}${blue_color}. Supported bands: ${pink_color}${interface_supported_bands}${normal_color}"
 	arr["SPANISH",514]="Interfaz ${pink_color}${current_iface_on_messages}${blue_color} seleccionada. Modo: ${pink_color}${ifacemode}${blue_color}. Bandas soportadas: ${pink_color}${interface_supported_bands}${normal_color}"
@@ -6178,7 +6178,7 @@ function language_strings() {
 	arr["GREEK",514]="Η διεπαφή ${pink_color}${current_iface_on_messages}${blue_color} έχει επιλεχθεί. Κατάσταση: ${pink_color}${ifacemode}${blue_color}. Υποστηριζόμενες ζώνες: ${pink_color}${interface_supported_bands}${normal_color}"
 	arr["ITALIAN",514]="Interfaccia ${pink_color}${current_iface_on_messages}${blue_color} selezionata. Modalità: ${pink_color}${ifacemode}${blue_color}. Bande supportate: ${pink_color}${interface_supported_bands}${normal_color}"
 	arr["POLISH",514]="Wybrany został interfejs ${pink_color}${current_iface_on_messages}${blue_color}. Tryb: ${pink_color}${ifacemode}${blue_color}. Obsługiwane pasma: ${pink_color}${interface_supported_bands}${normal_color}"
-	arr["GERMAN",514]="${pending_of_translation} "
+	arr["GERMAN",514]="${pending_of_translation} Schnittstelle ${pink_color}${current_iface_on_messages}${blue_color} ausgewählt. Modus: ${pink_color}${ifacemode}${blue_color}. Unterstützte Bänder: ${pink_color}${interface_supported_bands}${normal_color}"
 
 	arr["ENGLISH",515]="You have selected a 5Ghz band channel but your wifi card doesn't support 5Ghz. The operation can't be performed"
 	arr["SPANISH",515]="Tienes un canal de la banda de 5Ghz seleccionado pero tu tarjeta wifi no soporta 5Ghz. La operación no se puede llevar a cabo"
@@ -6189,7 +6189,7 @@ function language_strings() {
 	arr["GREEK",515]="Έχετε επιλέξει κανάλι της ζώνης 5Ghz, αλλά η κάρτα wifi σας δεν υποστηρίζει 5Ghz. Η λειτουργία δεν μπορεί να πραγματοποιηθεί"
 	arr["ITALIAN",515]="Hai selezionato un canale della banda 5Ghz, ma la tua scheda wifi non supporta 5Ghz. L'operazione non può essere eseguita"
 	arr["POLISH",515]="Masz wybrane pasmo 5Ghz, lecz Twoja karta wifi go nie obsługuje. Operacja nie może być wykonana"
-	arr["GERMAN",515]="${pending_of_translation} "
+	arr["GERMAN",515]="${pending_of_translation} Sie haben einen Kanal des 5Ghz-Bandes ausgewählt, aber Ihre WLAN-Karte unterstützt 5Ghz nicht. Die Operation kann nicht ausgeführt werden"
 
 	arr["ENGLISH",516]="It is known that the software used in the 5Ghz band still presents some problems sometimes. For example airodump, that when scanning networks can show a value \"-1\" on channel depending of the card chipset and the driver. It is also known that Ralink chipsets sometimes are getting errors on high channels \">=60\""
 	arr["SPANISH",516]="Es conocido que el software utilizado en la banda de 5Ghz aún presenta algunos problemas a veces. Como por ejemplo airodump, que al escanear redes puede mostrar un valor \"-1\" en el canal dependiendo del chipset de tu tarjeta y del driver. También es conocido que los chipsets Ralink a veces dan fallos en los canales altos \">=60\""
@@ -6200,7 +6200,7 @@ function language_strings() {
 	arr["GREEK",516]="Είναι γνωστό ότι το λογισμικό που χρησιμοποιείται για την 5Ghz ζώνη εξακολουθεί να παρουσιάζει κάποια προβλήματα κατά καιρούς. Όπως για παράδειγμα το airodump, μπορεί να εμφανίσει την τιμή \"-1\" στη θέση του καναλιού καθώς γίνεται σάρωση, ανάλογα με το chipset της κάρτας σας και του προγράμματος οδήγησης (driver). Είναι επίσης γνωστό ότι τα Ralink chipsets μερικές φορές αποτυγχάνουν σε υψηλά κανάλια \">= 60\""
 	arr["ITALIAN",516]="È noto che il software utilizzato dalla banda 5Ghz presenta ancora qualche problema. Come per esempio airodump, che durante la scansione delle reti può mostrare un valore \"-1\" nel canale a seconda del chipset della scheda di rete e del driver. È anche noto che i chipset Ralink a volte danno dei problemi nei canali alti \">=60\""
 	arr["POLISH",516]="Powszechnie wiadomo, że oprogramowanie używane w paśmie 5Ghz wciąż ma pewne problemy. Na przykład airodump, który podczas skanowania sieci może pokazywać wartość \"-1\" w kanale w zależności od chipsetu karty i sterownika. Wiadomo również, że chipsety Ralink czasami zawodzą w wysokich kanałach \">=60\""
-	arr["GERMAN",516]="${pending_of_translation} "
+	arr["GERMAN",516]="${pending_of_translation} Es ist bekannt, dass die Software, die im 5Ghz-Band verwendet wird, immer noch einige Probleme aufweist. Wie zum Beispiel airodump, dass beim Scannen von Netzwerken kann zeigen Sie einen Wert \"-1\" in den Kanal abhängig von dem Chipsatz Ihrer Karte und des Treibers. Es ist auch bekannt, dass Ralink-Chipsätze manchmal Fehler in hohen Kanälen \">=60\" ergeben"
 
 	arr["ENGLISH",517]="Set channel (2.4Ghz 1-14) or (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
 	arr["SPANISH",517]="Selecciona un canal (2.4Ghz 1-14) o (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
@@ -6211,7 +6211,7 @@ function language_strings() {
 	arr["GREEK",517]="Θέστε κανάλι (2.4Ghz 1-14) ή (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
 	arr["ITALIAN",517]="Seleziona un canale (2.4Ghz 1-14) o (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
 	arr["POLISH",517]="Wybierz kanał (2.4Ghz 1-14) lub (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
-	arr["GERMAN",517]="${pending_of_translation} "
+	arr["GERMAN",517]="${pending_of_translation} Wähle einen Kanal aus (2.4Ghz 1-14) oder (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
 
 	arr["ENGLISH",518]="${blue_color}Your wifi card supports the 5Ghz band but your \"wash\" version included in reaver package (v${reaver_version}) is not able to scan both bands at once. To use dual band scan feature you must have at least version v${minimum_wash_dualscan_version} so you have to make a choice. ${green_color}Do you want to scan the 5Ghz band? ${pink_color}(If you answer no (\"n\"), 2.4Ghz band will be scanned) ${normal_color}${visual_choice}"
 	arr["SPANISH",518]="${blue_color}Tu tarjeta wifi soporta la banda de los 5Ghz pero tu versión de \"wash\" incluido en el paquete reaver (v${reaver_version}) no es capaz de escanear ambas bandas a la vez. Para utilizar el escaneo dual debes tener al menos la versión v${minimum_wash_dualscan_version} por lo que has de elegir. ${green_color}¿Deseas escanear en la banda de los 5Ghz? ${pink_color}(Si respondes que no (\"n\"), se escaneará la banda de 2.4Ghz) ${normal_color}${visual_choice}"
@@ -6222,7 +6222,7 @@ function language_strings() {
 	arr["GREEK",518]="${blue_color}Η κάρτα wifi σας υποστηρίζει την 5Ghz ζώνη, αλλά η έκδοση του \"wash\" που περιλαμβάνεται στο πακέτο του reaver (v${reaver_version}) δεν είναι σε θέση να σαρώσει ταυτόχρονα και τις δύο ζώνες (dual band). Για να χρησιμοποιήσετε την σάρωση για dual band, πρέπει να έχετε τουλάχιστον την έκδοση v${minimum_wash_dualscan_version} για να μπορέσετε να συνεχίσετε. ${green_color}Θέλετε να σαρώσετε στην 5Ghz ζώνη; ${pink_color}(Εάν απαντήσετε όχι (\"n\"), η 2.4Ghz ζώνη θα σαρωθεί) ${normal_color}${visual_choice}"
 	arr["ITALIAN",518]="${blue_color}La tua scheda wifi supporta la banda 5Ghz ma la tua versione di \"wash\" inclusa nel pacchetto reaver (v${reaver_version}) non è in grado di scansionare entrambe le bande contemporaneamente. Per usare la doppia scansione devi avere almeno la versione v${minimum_wash_dualscan_version}, quindi devi sceglierne una. ${green_color}Vuoi eseguire la scansione nella banda 5Ghz? ${pink_color}(Se rispondi no (\"n\"), verrà scansionata la banda 2.4Ghz) ${normal_color}${visual_choice}"
 	arr["POLISH",518]="${blue_color}Twoja karta wifi obsługuje pasmo 5Ghz, ale twoja wersja \"wash\" zawarta w pakiecie reaver (v${reaver_version}) nie jest w stanie skanować obu pasm w tym samym czasie. Aby użyć podwójnego skanowania, musisz mieć przynajmniej wersję v${minimum_wash_dualscan_version}. ${green_color}Musisz wybrać: czy chcesz skanować w paśmie 5Ghz? ${pink_color}(Jeśli odpowiesz nie (\"n\"), zostanie zeskanowane pasmo 2.4Ghz) ${normal_color}${visual_choice}"
-	arr["GERMAN",518]="${pending_of_translation} "
+	arr["GERMAN",518]="${pending_of_translation} ${blue_color}Ihre WLAN-Karte unterstützt das 5Ghz-Band, aber Ihre im reaver-Paket enthaltene Version von \"wash\" (v${reaver_version}) kann nicht beide Bänder gleichzeitig scannen. Um den dualen Scan zu verwenden, müssen Sie mindestens Version v${minimum_wash_dualscan_version} haben, damit Sie wählen müssen. ${green_color}Möchten Sie im 5Ghz-Band scannen? ${pink_color}(Wenn Sie nein (\"n\" antworten), wird das 2.4Ghz-Band gescannt) ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",519]="You have selected a 5Ghz target network and the \"DoS pursuit mode\", but the second interface needed to perform the attack doesn't support the 5Ghz band so the attack can't be performed"
 	arr["SPANISH",519]="Has seleccionado una red objetivo de 5Ghz y el \"modo persecución DoS\", pero el segundo interfaz necesario para llevar a cabo el ataque no soporta la banda de los 5Ghz por lo que este no se puede realizar"
@@ -6233,7 +6233,7 @@ function language_strings() {
 	arr["GREEK",519]="Έχετε επιλέξει ένα 5Ghz δίκτυο στόχος και το \"DoS pursuit mode\", αλλά η δεύτερη διεπαφή που απαιτείται για να εκτελέσετε την επίθεση δεν υποστηρίζει την 5Ghz ζώνη, ως αποτέλεσμα η επίθεση να μην μπορεί να εκτελεστεί"
 	arr["ITALIAN",519]="Hai selezionato come obbiettivo una rete di 5Ghz e la \"DoS pursuit mode\", ma la seconda interfaccia necessaria per eseguire l'attacco non supporta la banda 5Ghz, quindi l'attacco non puó essere eseguito"
 	arr["POLISH",519]="Wybrałeś docelową sieć 5Ghz i \"tryb DoS pursuit\", ale drugi interfejs potrzebny do przeprowadzenia ataku nie obsługuje pasma 5Ghz, więc nie można go wykonać"
-	arr["GERMAN",519]="${pending_of_translation} "
+	arr["GERMAN",519]="${pending_of_translation} Sie haben ein Zielnetzwerk mit 5Ghz und den \"DoS pursuit mode\" gewählt, aber die zweite Schnittstelle, die zur Ausführung des Angriffs benötigt wird, unterstützt das 5Ghz-Band nicht, so dass es nicht ausgeführt werden kann"
 
 	arr["ENGLISH",520]="In the 5Ghz band there are many channels in which because of the country configuration, you can't operate. There are also other channels in which you can't initiate communication, only communicate with an existing network. This makes starting an access point on a 5Ghz channel very likely to fail if it doesn't match an allowed channel. This is why Evil Twin will start on a channel in the 2.4Ghz band (1-11). But don't worry, it will be transparent for the users because the DoS attack still operate on the real 5Ghz channel against the target"
 	arr["SPANISH",520]="En la banda de los 5Ghz hay muchos canales en los que por la configuración del país, no puedes operar. También hay otros canales en los que no puedes iniciar la comunicación, solo comunicarte con una red existente. Esto hace que iniciar un punto de acceso en una canal de 5Ghz tenga muchas probabilidades de fallo si no coincide con un canal permitido. Es por esto que el Evil Twin se iniciará en un canal de la banda 2.4Ghz (1-11). Pero no te preocupes, será transparente para los usuarios ya que el ataque DoS sigue operando en el canal real de 5Ghz contra el objetivo"
@@ -6243,8 +6243,8 @@ function language_strings() {
 	arr["RUSSIAN",520]="В диапазоне 5Ghz есть много каналов, в которых вы не можете работать из-за настроек управляющего домена. Существуют также другие каналы, в которых вы не можете инициировать связь, а можете только обмениваться данными с существующей сетью. Это означает, что запуск точки доступа на канале 5Ghz с высокой степенью вероятности закончится неудачей, если выбран неразрешённый канал. Вот почему Evil Twin запускается на канале частот 2.4Ghz (1-11). Но не беспокойтесь, пользователи не заметят разницу, поскольку DoS-атака в отношении цели по-прежнему работает на реальном канале 5Ghz"
 	arr["GREEK",520]="Στην 5Ghz ζώνη υπάρχουν πολλά κανάλια τα οποία δεν μπορείτε να χρησιμοποιήσετε λόγω της διαμόρφωσης χώρας. Υπάρχουν επίσης και άλλα κανάλια στα οποία δεν μπορείτε να ξεκινήσετε κάποιου είδους επικοινωνία, αλλά μπορείτε να επικοινωνήσετε μόνο με ένα υπάρχον δίκτυο. Αυτό καθιστά την έναρξη ενός σημείου πρόσβασης σε κανάλι 5Ghz πολύ πιθανό να αποτύχει αν δεν ταιριάζει με κάποιο επιτρεπόμενο κανάλι. Αυτός είναι ο λόγος για τον οποίο το Evil Twin θα ξεκινήσει σε κανάλι στην 2.4Ghz ζώνη (1-11). Αλλά μην ανησυχείτε, θα είναι διαφανής στους χρήστες, επειδή η επίθεση DoS εξακολουθεί να λειτουργεί στο πραγματικό 5Ghz κανάλι έναντι του στόχου"
 	arr["ITALIAN",520]="Nella banda 5Ghz ci sono molti canali in cui non è possibile operare a causa della configurazione del paese. Esistono anche altri canali in cui non è possibile avviare la comunicazione, ma solo comunicare con una rete esistente. Ciò rende molto probabile che l'avvio di un punto di accesso su un canale a 5Ghz non riesca se non corrisponde a un canale consentito. Questo è il motivo per cui Evil Twin inizierà su un canale nella banda 2.4Ghz (1-11). Peró non preoccuparti, questo sarà trasparente per gli utenti poiché l'attacco DoS continua a funzionare sul vero canale 5Ghz contro l'obbiettivo selezionato"
-	arr["POLISH",520]="W paśmie 5Ghz istnieje wiele kanałów, które nie mogą działać z powodu konfiguracji kraju. Istnieją również inne kanały, w których nie można zainicjować komunikacji, a tylko komunikować się z istniejącą siecią. To sprawia, że uruchomienie punktu dostępu na kanale 5Ghz może się nie udać, jeśli nie pasuje do dozwolonego kanału. Dlatego atak Evil Twin rozpocznie się na kanale w paśmie 2.4GHz (1-11). Ale nie martw się, będzie to dla użytkowników niewidoczne, ponieważ atak DoS nadal działa przeciwko celowi na prawdziwym kanale 5Ghz"
-	arr["GERMAN",520]="${pending_of_translation} "
+	arr["POLISH",520]="W paśmie 5Ghz istnieje wiele kanałów, które nie mogą działać z powodu konfiguracji kraju. Istnieją również inne kanały, w których nie można zainicjować komunikacji, a tylko komunikować się z istniejącą siecią. To sprawia, że uruchomienie punktu dostępu na kanale 5Ghz może się nie udać, jeśli nie pasuje do dozwolonego kanału. Dlatego atak Evil Twin rozpocznie się na kanale w paśmie 2.4Ghz (1-11). Ale nie martw się, będzie to dla użytkowników niewidoczne, ponieważ atak DoS nadal działa przeciwko celowi na prawdziwym kanale 5Ghz"
+	arr["GERMAN",520]="${pending_of_translation} Im 5Ghz-Band gibt es viele Kanäle, in denen man nach der Konfiguration des Landes nicht arbeiten kann. Es gibt auch andere Kanäle, in denen Sie keine Kommunikation initiieren können, sondern nur mit einem bestehenden Netzwerk kommunizieren. Dies führt dazu, dass das Starten eines Zugangspunkts auf einem 5Ghz-Kanal sehr wahrscheinlich fehlschlägt, wenn er nicht mit einem zulässigen Kanal übereinstimmt. Deshalb startet der Evil Twin auf einem Kanal im 2.4Ghz-Band (1-11). Aber keine Sorge, es wird für die Benutzer transparent sein, da die DoS-Attacke weiterhin auf dem echten 5Ghz-Kanal gegen das Ziel arbeitet"
 
 	arr["ENGLISH",521]="WPS filter enabled in scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",521]="Filtro WPS activado en escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
@@ -6255,7 +6255,7 @@ function language_strings() {
 	arr["GREEK",521]="${pending_of_translation} Το φίλτρο WPS ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
 	arr["ITALIAN",521]="${pending_of_translation} Filtro WPS attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",521]="${pending_of_translation} Filtr WPS aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
-	arr["GERMAN",521]="${pending_of_translation} "
+	arr["GERMAN",521]="${pending_of_translation} WPS-Filter beim Scannen aktiviert. Einmal gestartet, drücken Sie [Ctrl+C], um es zu stoppen..."
 
 	arr["ENGLISH",522]="No filters enabled on scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",522]="No hay filtros activados en el escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
@@ -6266,7 +6266,7 @@ function language_strings() {
 	arr["GREEK",522]="${pending_of_translation} Δεν έχουν ενεργοποιηθεί φίλτρα στη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
 	arr["ITALIAN",522]="${pending_of_translation} Nessun filtro attivato nella scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",522]="${pending_of_translation} W skanie nie zostały włączone żadne filtry. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
-	arr["GERMAN",522]="${pending_of_translation} "
+	arr["GERMAN",522]="${pending_of_translation} Es sind keine aktivierten Filter im Scan vorhanden. Einmal gestartet, drücken Sie [Ctrl+C], um es zu stoppen..."
 
 	arr["ENGLISH",523]="WPA/WPA2 filter enabled in scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",523]="Filtro WPA/WPA2 activado en escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
@@ -6277,7 +6277,7 @@ function language_strings() {
 	arr["GREEK",523]="${pending_of_translation} Το φίλτρο WPA/WPA2 ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
 	arr["ITALIAN",523]="${pending_of_translation} Filtro WPA/WPA2 attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",523]="${pending_of_translation} Filtr WPA/WPA2 aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
-	arr["GERMAN",523]="${pending_of_translation} "
+	arr["GERMAN",523]="${pending_of_translation} WPA/WPA2-Filter beim Scannen aktiviert. Einmal gestartet, drücken Sie [Ctrl+C], um es zu stoppen..."
 
 	arr["ENGLISH",524]="10. German"
 	arr["SPANISH",524]="10. Alemán"
