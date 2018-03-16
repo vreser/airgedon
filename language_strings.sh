@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180315
+#Date.........: 20180316
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -4440,7 +4440,7 @@ function language_strings() {
 	arr["GREEK",356]="Μερικοί συνδυασμοί δεν λειτουργούν καλά. Όπως για παράδειγμα το reaver με κάρτες που έχουν Ralink chipset. Αν η κάρτα σας έχει αυτό το chipset είναι προτιμότερο να χρησιμοποιήσετε το bully"
 	arr["ITALIAN",356]="Alcune combinazioni non funzionano bene. Come ad esempio reaver e le schede con chipset Ralink. Se la scheda ha questo chipset è meglio usare bully"
 	arr["POLISH",356]="Niektóre kombinacje nie działają dobrze. Jak na przykład reaver i karty z chipsetem Ralink. Jeśli Twoja karta ma ten chipset lepiej jest użyć bully"
-	arr["GERMAN",356]="Einige Kombinationen funktionieren nicht gut. Zum Beispiel Reaver und Karten mit Ralink-Chipsatz. Wenn Ihre Karte diesen Chipsatz hat, ist es besser, bully zu benutzen"
+	arr["GERMAN",356]="Einige Kombinationen funktionieren nicht gut. Zum Beispiel Reaver und Karten mit Ralink-Chipsatz. Wenn Ihre Karte diesen Chipsatz hat, ist es besser, Bully zu benutzen"
 
 	arr["ENGLISH",357]="6.  (reaver) Custom PIN association"
 	arr["SPANISH",357]="6.  (reaver) Asociación con PIN personalizado"
@@ -4902,7 +4902,7 @@ function language_strings() {
 	arr["GREEK",398]="Πληκτρολογήστε το μονοπάτι για να αποθηκεύσετε το αρχείο ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${default_bettercap_logpath}]"
 	arr["ITALIAN",398]="Digitare il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${default_bettercap_logpath}]"
 	arr["POLISH",398]="Wpisz ścieżkę, w której będzie zapisany plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${default_bettercap_logpath}]"
-	arr["GERMAN",398]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die Enter-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${default_bettercap_logpath}]"
+	arr["GERMAN",398]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${default_bettercap_logpath}]"
 
 	arr["ENGLISH",399]="Passwords captured by sniffer. File saved at ${normal_color}[${bettercap_logpath}]"
 	arr["SPANISH",399]="El sniffer ha capturado contraseñas. Fichero salvado en ${normal_color}[${bettercap_logpath}]"
@@ -5870,7 +5870,7 @@ function language_strings() {
 	arr["GREEK",486]="Δεν είναι δυνατό να δημιουργηθεί PIN με τον αλγόριθμο Arcadyan. Για να το κάνετε αυτό, ενημερώστε το \"wash\" (περιλαμβάνεται στο πακέτο του reaver) σε νεότερη έκδοση, συμπεριλαμβανομένης της απαραίτητης επιλογής \"-j\" (v${minimum_wash_json_version})"
 	arr["ITALIAN",486]="Non è possibile generare il PIN con l'algoritmo Arcadyan. Per effettuare questa operazione, aggiornare \"wash\" (incluso nel pacchetto reaver) a una versione più nuova che disponga dell'opzione necessaria \"-j\" (v${minimum_wash_json_version})"
 	arr["POLISH",486]="Nie jest możliwe wygenerowanie kodu PIN za pomocą algorytmu Arcadyan. Aby to zrobić, uaktualnij \"wash\" (zawarty w pakiecie reaver) do wyższej wersji, która wspiera opcję \"-j\" (v${minimum_wash_json_version})"
-	arr["GERMAN",486]="${pending_of_translation} Es ist nicht möglich, die PIN mit dem Arcadyan-Algorithmus zu generieren. Aktualisieren Sie dazu \"wash\" (im reaver-Paket enthalten) auf eine höhere Version mit der erforderlichen Option \"-j\" (v${minimum_wash_json_version})"
+	arr["GERMAN",486]="${pending_of_translation} Es ist nicht möglich, die PIN mit dem Arcadyan-Algorithmus zu generieren. Aktualisieren Sie dazu \"wash\" (im Reaver-Paket enthalten) auf eine höhere Version mit der erforderlichen Option \"-j\" (v${minimum_wash_json_version})"
 
 	arr["ENGLISH",487]="PIN generated using Arcadyan algorithm (${normal_color}${arcadyan_pin}${yellow_color})"
 	arr["SPANISH",487]="Se ha generado el PIN con el algoritmo Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
@@ -5936,7 +5936,7 @@ function language_strings() {
 	arr["GREEK",492]="Ο αλγόριθμος Arcadyan δεν μπορεί να υπολογιστεί. Παρόλο που επιλέξατε την επιλογή bully για την επίθεση, χρειάζεται να χρησιμοποιήσετε το wash (περιλαμβάνεται στο πακέτο του reaver) για να υπολογίσετε το PIN και δεν το έχετε εγκαταστήσει. Το script θα συνεχίσει την επίθεση χωρίς να το συμπεριλάβει"
 	arr["ITALIAN",492]="L'algoritmo Arcadyan non può essere calcolato. Anche se hai scelto l'opzione di attacco con bully, per calcolare quel PIN che devi usare wash (incluso nel pacchetto reaver) e non l'hai installato. Lo script continuerà l'attacco senza includerlo"
 	arr["POLISH",492]="Nie można obliczyć algorytmu Arcadyan. Chociaż wybrano opcję ataku za pomocą bully, aby obliczyć ten kod PIN, musisz użyć wash (dołączonego do pakietu reaver) i nie masz go zainstalowanego. Skrypt będzie kontynuował atak bez jego włączania"
-	arr["GERMAN",492]="${pending_of_translation} Der Arcadyan-Algorithmus kann nicht berechnet werden. Obwohl Sie die Option bully attack gewählt haben, müssen Sie zur Berechnung dieser PIN die Funktion wash verwenden (im Paket reaver enthalten), und Sie haben sie nicht installiert. Das Skript setzt den Angriff fort, ohne es einzuschließen"
+	arr["GERMAN",492]="${pending_of_translation} Der Arcadyan-Algorithmus kann nicht berechnet werden. Obwohl Sie die Option Bully attack gewählt haben, müssen Sie zur Berechnung dieser PIN die Funktion wash verwenden (im Paket Reaver enthalten), und Sie haben sie nicht installiert. Das Skript setzt den Angriff fort, ohne es einzuschließen"
 
 	arr["ENGLISH",493]="The Arcadyan algorithm PIN has already been calculated for this target (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). There is no need to calculate it again"
 	arr["SPANISH",493]="El PIN del algoritmo Arcadyan ya fue calculado para este objetivo (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). No hace falta calcularlo de nuevo"
@@ -6222,7 +6222,7 @@ function language_strings() {
 	arr["GREEK",518]="${blue_color}Η κάρτα wifi σας υποστηρίζει την 5Ghz ζώνη, αλλά η έκδοση του \"wash\" που περιλαμβάνεται στο πακέτο του reaver (v${reaver_version}) δεν είναι σε θέση να σαρώσει ταυτόχρονα και τις δύο ζώνες (dual band). Για να χρησιμοποιήσετε την σάρωση για dual band, πρέπει να έχετε τουλάχιστον την έκδοση v${minimum_wash_dualscan_version} για να μπορέσετε να συνεχίσετε. ${green_color}Θέλετε να σαρώσετε στην 5Ghz ζώνη; ${pink_color}(Εάν απαντήσετε όχι (\"n\"), η 2.4Ghz ζώνη θα σαρωθεί) ${normal_color}${visual_choice}"
 	arr["ITALIAN",518]="${blue_color}La tua scheda wifi supporta la banda 5Ghz ma la tua versione di \"wash\" inclusa nel pacchetto reaver (v${reaver_version}) non è in grado di scansionare entrambe le bande contemporaneamente. Per usare la doppia scansione devi avere almeno la versione v${minimum_wash_dualscan_version}, quindi devi sceglierne una. ${green_color}Vuoi eseguire la scansione nella banda 5Ghz? ${pink_color}(Se rispondi no (\"n\"), verrà scansionata la banda 2.4Ghz) ${normal_color}${visual_choice}"
 	arr["POLISH",518]="${blue_color}Twoja karta wifi obsługuje pasmo 5Ghz, ale twoja wersja \"wash\" zawarta w pakiecie reaver (v${reaver_version}) nie jest w stanie skanować obu pasm w tym samym czasie. Aby użyć podwójnego skanowania, musisz mieć przynajmniej wersję v${minimum_wash_dualscan_version}. ${green_color}Musisz wybrać: czy chcesz skanować w paśmie 5Ghz? ${pink_color}(Jeśli odpowiesz nie (\"n\"), zostanie zeskanowane pasmo 2.4Ghz) ${normal_color}${visual_choice}"
-	arr["GERMAN",518]="${pending_of_translation} ${blue_color}Ihre WLAN-Karte unterstützt das 5Ghz-Band, aber Ihre im reaver-Paket enthaltene Version von \"wash\" (v${reaver_version}) kann nicht beide Bänder gleichzeitig scannen. Um den dualen Scan zu verwenden, müssen Sie mindestens Version v${minimum_wash_dualscan_version} haben, damit Sie wählen müssen. ${green_color}Möchten Sie im 5Ghz-Band scannen? ${pink_color}(Wenn Sie nein (\"n\" antworten), wird das 2.4Ghz-Band gescannt) ${normal_color}${visual_choice}"
+	arr["GERMAN",518]="${pending_of_translation} ${blue_color}Ihre WLAN-Karte unterstützt das 5Ghz-Band, aber Ihre im Reaver-Paket enthaltene Version von \"wash\" (v${reaver_version}) kann nicht beide Bänder gleichzeitig scannen. Um den dualen Scan zu verwenden, müssen Sie mindestens Version v${minimum_wash_dualscan_version} haben, damit Sie wählen müssen. ${green_color}Möchten Sie im 5Ghz-Band scannen? ${pink_color}(Wenn Sie nein (\"n\" antworten), wird das 2.4Ghz-Band gescannt) ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",519]="You have selected a 5Ghz target network and the \"DoS pursuit mode\", but the second interface needed to perform the attack doesn't support the 5Ghz band so the attack can't be performed"
 	arr["SPANISH",519]="Has seleccionado una red objetivo de 5Ghz y el \"modo persecución DoS\", pero el segundo interfaz necesario para llevar a cabo el ataque no soporta la banda de los 5Ghz por lo que este no se puede realizar"
