@@ -4,6 +4,7 @@
  - Return option now always at position 0 on all menus
  - Removed --weak--hash-threshold option for hashcat 4.0.0 or higher
  - Tested compatibility with Parrot 3.11
+ - Fixed aspect of network selection menu when network power is equal to -1
 
 ### 8.0
  - Added 5Ghz full support (scans, attacks, card detection, etc.)
