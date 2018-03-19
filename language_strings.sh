@@ -4844,7 +4844,7 @@ function language_strings() {
 
 	arr["ENGLISH",437]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through Paypal (${normal_color}${mail}${pink_color}) or sending a fraction of cryptocurrency (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["SPANISH",437]="Si te gustó el script y te pareció útil, puedes apoyar el proyecto haciendo una donación. A través de Paypal (${normal_color}${mail}${pink_color}) o enviando una fracción de criptomoneda (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Cualquier cantidad por pequeña que sea (1, 2, 5 $/€) es bien recibida. Más información y enlaces directos para realizarla en: ${normal_color}${urlgithub_wiki}/Contributing"
-	arr["FRENCH",437]="${pending_of_translation} Si le script vous a plus et que vous l'avez trouvé utile; vous pouvez soutenir le projet en faisant un don PayPal (${normal_color}${mail}${pink_color}) ou en envoyant une fraction de crypto-monnaie (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Toute contribution  (1, 2, 5 $/€) est bienvenue. Pour faire un don allez à: ${normal_color}${urlgithub_wiki}/Contributing"
+	arr["FRENCH",437]="Si le script vous a plus et que vous l'avez trouvé utile, vous pouvez soutenir le projet en faisant un don PayPal (${normal_color}${mail}${pink_color}) ou en envoyant une fraction de crypto-monnaie (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Toute contribution  (1, 2, 5 $/€) est bienvenue. Pour faire un don allez à: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["CATALAN",437]="Si et va agradar el script i et va semblar útil, pots donar suport al projecte fent una donació. A través de Paypal (${normal_color}${mail}${pink_color}) o enviant una fracció criptomoneda (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualsevol quantitat per petita que sigui (1, 2, 5 $/€) és ben rebuda. Més informació i enllaços directes per a realitzar-la en: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["PORTUGUESE",437]="Se você gostou do script e o achou útil, apoie o projeto fazendo uma doação através: do PayPal (${normal_color}${mail}${pink_color}) ou enviando uma fração de uma criptomoeda (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualquer quantidade, mesmo pequena (1, 2, 5 $/€) é bem-vinda. Links diretos e de com realizar em: ${urlgithub_wiki}/Contributing"
 	arr["RUSSIAN",437]="${pending_of_translation} Если вам понравилась эта программа и она оказался для вас полезной, вы можете поддержать проект, сделав пожертвование. Через PayPal (${normal_color}${mail}${pink_color}) или отправки части криптовалюты (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Приветствуется любая сумма, даже небольшая (1, 2, 5 $/€). Более подробную информацию и прямые ссылки можно получить по адресу: ${normal_color}${urlgithub_wiki}/Contributing"
@@ -5684,7 +5684,7 @@ function language_strings() {
 
 	arr["ENGLISH",521]="WPS filter enabled in scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",521]="Filtro WPS activado en escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
-	arr["FRENCH",521]="${pending_of_translation} Le filtre WPS est activé dans la numérisation. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
+	arr["FRENCH",521]="Le filtre WPS est activé dans la scan. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
 	arr["CATALAN",521]="Filtre WPS activat en escaneig. Una vegada iniciat, polsi [Ctrl+C] per detenir-ho..."
 	arr["PORTUGUESE",521]="Filtro WPS ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",521]="${pending_of_translation} Фильтр WPS, активированный при сканировании. После запуска, нажмите [Ctrl+C] для остановки..."
@@ -5694,7 +5694,7 @@ function language_strings() {
 
 	arr["ENGLISH",522]="No filters enabled on scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",522]="No hay filtros activados en el escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
-	arr["FRENCH",522]="${pending_of_translation} Aucun filtre activé dans le scan. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
+	arr["FRENCH",522]="Aucun filtre activé dans le scan. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
 	arr["CATALAN",522]="No hi ha filtres activats en l'escaneig. Una vegada iniciat, polsi [Ctrl+C] per detenir-ho..."
 	arr["PORTUGUESE",522]="Nenhum filtro ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",522]="${pending_of_translation} В сканировании не активированы фильтры. После запуска, нажмите [Ctrl+C] для остановки..."
@@ -5704,7 +5704,7 @@ function language_strings() {
 
 	arr["ENGLISH",523]="WPA/WPA2 filter enabled in scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",523]="Filtro WPA/WPA2 activado en escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
-	arr["FRENCH",523]="${pending_of_translation} Le filtre WPA/WPA2 est activé dans la numérisation. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
+	arr["FRENCH",523]="Le filtre WPA/WPA2 est activé dans la scan. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
 	arr["CATALAN",523]="Filtre WPA/WPA2 activat en escaneig. Una vegada iniciat, polsi [Ctrl+C] per detenir-ho..."
 	arr["PORTUGUESE",523]="Filtro WPA/WPA2 ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",523]="${pending_of_translation} Фильтр WPA/WPA2, активированный при сканировании. После запуска, нажмите [Ctrl+C] для остановки..."
