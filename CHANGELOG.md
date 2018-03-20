@@ -1,10 +1,11 @@
 ### 8.01
  - German language translation added (Thank you to "hamperfait")
  - Filters enabled on scannings based on menu or kind of attack
- - WPS PIN database now updates on startup updates too
+ - WPS PIN database now is updated on startup updates too
  - Return option now always at position 0 on all menus
  - Removed --weak--hash-threshold option for hashcat 4.0.0 or higher
  - Tested compatibility with Parrot 3.11
+ - Fixed aspect of network selection menu when network power is equal to -1
 
 ### 8.0
  - Added 5Ghz full support (scans, attacks, card detection, etc.)

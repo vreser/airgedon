@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180307
+#Date.........: 20180319
 #Version......: 8.01
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -8665,6 +8665,9 @@ function select_target() {
 			sp2="  "
 			if [[ ${exp_channel} -eq 0 ]]; then
 				exp_channel="-"
+			fi
+			if [[ ${exp_channel} -lt 0 ]]; then
+				sp2=" "
 			fi
 		elif [[ ${exp_channel} -ge 10 ]] && [[ ${exp_channel} -lt 99 ]]; then
 			sp2=" "
