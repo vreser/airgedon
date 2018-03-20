@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180316
+#Date.........: 20180315
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -506,11 +506,11 @@ function language_strings() {
 	footer_texts["ENGLISH",1]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through Paypal (${mail}) or sending a fraction of cryptocurrency (Bitcoin, Ethereum, Litecoin...). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${urlgithub_wiki}/Contributing"
 	footer_texts["SPANISH",1]="Si te gustó el script y te pareció útil, puedes apoyar el proyecto haciendo una donación. A través de Paypal (${mail}) o enviando una fracción de criptomoneda (Bitcoin, Ethereum, Litecoin...). Cualquier cantidad por pequeña que sea (1, 2, 5 $/€) es bien recibida. Más información y enlaces directos para realizarla en: ${urlgithub_wiki}/Contributing"
 	footer_texts["FRENCH",1]="${pending_of_translation} Si le script vous a plus et que vous l'avez trouvé utile; vous pouvez soutenir le projet en faisant un don PayPal (${mail}) ou en envoyant une fraction de crypto-monnaie (Bitcoin, Ethereum, Litecoin...). Toute contribution  (1, 2, 5 $/€) est bienvenue. Pour faire un don allez à: ${urlgithub_wiki}/Contributing"
-	footer_texts["CATALAN",1]="Si et va agradar el script i et va semblar útil, pots donar suport al projecte fent una donació. A través de Paypal (${mail}) o enviant una fracció criptomoneda (Bitcoin, Ethereum, Litecoin...). Qualsevol quantitat per petita que sigui (1, 2, 5 $/€) és ben rebuda. Més informació i enllaços directes per a realitzar-la en: ${urlgithub_wiki}/Contributing"
-	footer_texts["PORTUGUESE",1]="Se você gostou do script e o achou útil, apoie o projeto fazendo uma doação através: do PayPal (${mail}) ou enviando uma fração de uma criptomoeda (Bitcoin, Ethereum, Litecoin...). Qualquer quantidade, mesmo pequena (1, 2, 5 $/€) é bem-vinda. Links diretos e de com realizar em: ${urlgithub_wiki}/Contributing"
+	footer_texts["CATALAN",1]="${pending_of_translation} Si et va agradar el script i et va semblar útil, pots donar suport al projecte fent una donació. A través de Paypal (${mail}) o enviant una fracció criptomoneda (Bitcoin, Ethereum, Litecoin...). Qualsevol quantitat per petita que sigui (1, 2, 5 $/€) és ben rebuda. Més informació i enllaços directes per a realitzar-la en: ${urlgithub_wiki}/Contributing"
+	footer_texts["PORTUGUESE",1]="${pending_of_translation} Se você gostou do script e o achou útil, apoie o projeto fazendo uma doação, através: do PayPal (${mail}) ou enviando uma fração de cryptocurrency (Bitcoin, Ethereum, Litecoin...). Qualquer quantidade, mesmo pequena (1, 2, 5 $/€) é bem-vinda. Links diretos e de com realizar em: ${urlgithub_wiki}/Contributing"
 	footer_texts["RUSSIAN",1]="${pending_of_translation} Если вам понравилась эта программа и она оказался для вас полезной, вы можете поддержать проект, сделав пожертвование. Через PayPal (${mail}) или отправки части криптовалюты (Bitcoin, Ethereum, Litecoin...). Приветствуется любая сумма, даже небольшая (1, 2, 5 $/€). Более подробную информацию и прямые ссылки можно получить по адресу: ${urlgithub_wiki}/Contributing"
 	footer_texts["GREEK",1]="${pending_of_translation} Εαν ευχαριστηθήκατε το script και το βρήκατε χρήσιμο, μπορείτε να υποστηρίξετε το project κάνοντας κάποια δωρεά. Μέσω του Paypal (${mail}) ή αποστέλλοντας ένα κλάσμα κρυπτοσυχνότητας (Bitcoin, Ethereum, Litecoin...). Είναι καλοδεχούμενο οποιοδήποτε ποσό (1, 2, 5 $/€), δεν έχει σημασία το πόσο λίγο μπορεί να είναι. Δίνονται περισσότερες πληροφορίες και links για να κάνετε δωρεά στη διεύθυνση: ${urlgithub_wiki}/Contributing"
-	footer_texts["ITALIAN",1]="Se ti è piaciuto lo script e l'hai trovato utile, è possibile sostenere il progetto con una donazione. Attraverso PayPal (${mail}) o inviando una frazione di criptovaluta (Bitcoin, Ethereum, Litecoin...). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Ulteriori informazioni e collegamenti diretti per effettuare la donazione in: ${urlgithub_wiki}/Contributing"
+	footer_texts["ITALIAN",1]="${pending_of_translation} Se ti è piaciuto lo script e l'hai trovato utile, è possibile sostenere il progetto con una donazione. Attraverso PayPal (${mail}) o inviando una frazione di criptovaluta (Bitcoin, Ethereum, Litecoin...). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Ulteriori informazioni e collegamenti diretti per effettuare la donazione in: ${urlgithub_wiki}/Contributing"
 	footer_texts["POLISH",1]="${pending_of_translation} Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi Paypal (${mail}) lub wysyłając ułamek kryptowaluty (Bitcoin, Ethereum, Litecoin...). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${urlgithub_wiki}/Contributing"
 	footer_texts["GERMAN",1]="${pending_of_translation} Wenn Ihnen das Skript gefallen hat und Sie es nützlich fanden, können Sie das Projekt mit einer Spende unterstützen. Durch Paypal (${mail}) oder durch Senden eines Bruchteils von Kryptowährung (Bitcoin, Ethereum, Litecoin...). Jeder noch so kleine Betrag (1, 2, 5 $/€) wird gut angenommen. Weitere Informationen und direkte Links dazu finden Sie unter: ${urlgithub_wiki}/Contributing"
 
@@ -1256,10 +1256,10 @@ function language_strings() {
 	arr["SPANISH",67]="Filtro WEP activado en escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
 	arr["FRENCH",67]="${pending_of_translation} Le filtre WEP est activé dans la numérisation. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
 	arr["CATALAN",67]="${pending_of_translation} Filtre WEP activat en escaneig. Una vegada iniciat, polsi [Ctrl+C] per detenir-ho..."
-	arr["PORTUGUESE",67]="Filtro WEP ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
+	arr["PORTUGUESE",67]="${pending_of_translation} Filtro WEP ativado na digitalização. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",67]="${pending_of_translation} Фильтр WEP, активированный при сканировании. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",67]="${pending_of_translation} Το φίλτρο WEP ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
-	arr["ITALIAN",67]="Filtro WEP attivato nella scansione. Una volta avviato, premere [Ctrl+C] per fermarlo..."
+	arr["ITALIAN",67]="${pending_of_translation} Filtro WEP attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",67]="${pending_of_translation} Filtr WEP aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 	arr["GERMAN",67]="WEP-Filter beim Scannen aktiviert. Nach den Start, drücken Sie [Ctrl+C], um es zu stoppen..."
 
@@ -4440,7 +4440,7 @@ function language_strings() {
 	arr["GREEK",356]="Μερικοί συνδυασμοί δεν λειτουργούν καλά. Όπως για παράδειγμα το reaver με κάρτες που έχουν Ralink chipset. Αν η κάρτα σας έχει αυτό το chipset είναι προτιμότερο να χρησιμοποιήσετε το bully"
 	arr["ITALIAN",356]="Alcune combinazioni non funzionano bene. Come ad esempio reaver e le schede con chipset Ralink. Se la scheda ha questo chipset è meglio usare bully"
 	arr["POLISH",356]="Niektóre kombinacje nie działają dobrze. Jak na przykład reaver i karty z chipsetem Ralink. Jeśli Twoja karta ma ten chipset lepiej jest użyć bully"
-	arr["GERMAN",356]="Einige Kombinationen funktionieren nicht gut. Zum Beispiel Reaver und Karten mit Ralink-Chipsatz. Wenn Ihre Karte diesen Chipsatz hat, ist es besser, Bully zu benutzen"
+	arr["GERMAN",356]="Einige Kombinationen funktionieren nicht gut. Zum Beispiel Reaver und Karten mit Ralink-Chipsatz. Wenn Ihre Karte diesen Chipsatz hat, ist es besser, bully zu benutzen"
 
 	arr["ENGLISH",357]="6.  (reaver) Custom PIN association"
 	arr["SPANISH",357]="6.  (reaver) Asociación con PIN personalizado"
@@ -4902,7 +4902,7 @@ function language_strings() {
 	arr["GREEK",398]="Πληκτρολογήστε το μονοπάτι για να αποθηκεύσετε το αρχείο ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${default_bettercap_logpath}]"
 	arr["ITALIAN",398]="Digitare il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${default_bettercap_logpath}]"
 	arr["POLISH",398]="Wpisz ścieżkę, w której będzie zapisany plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${default_bettercap_logpath}]"
-	arr["GERMAN",398]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${default_bettercap_logpath}]"
+	arr["GERMAN",398]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die Enter-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${default_bettercap_logpath}]"
 
 	arr["ENGLISH",399]="Passwords captured by sniffer. File saved at ${normal_color}[${bettercap_logpath}]"
 	arr["SPANISH",399]="El sniffer ha capturado contraseñas. Fichero salvado en ${normal_color}[${bettercap_logpath}]"
@@ -4935,7 +4935,7 @@ function language_strings() {
 	arr["GREEK",401]="Το πακέτο beef που έχετε εγκαταστημένο δεν είναι το BeEF (Browser Exploitation Framework). Έχετε εγκατεστημένο το Beef (Flexible Brainfuck interpreter). Και τα δύο εκτελέσιμα αρχεία έχουν το ίδιο όνομα και μπορεί να γίνει κάποιο μπέρδεμα. Απεγκαταστήστε το και εγκαταστήστε αυτό που χρειάζεται το airgeddon, αν θέλετε να χρησιμοποιήσετε αυτή την επιλογή. Οδηγός εγκατάστασης: ${beef_installation_url}"
 	arr["ITALIAN",401]="Il pacchetto beef che hai installato non è BeEF (Browser Exploitation Framework). È stato installato Beef (Flexible Brainfuck interpreter). Entrambi gli eseguibili hanno lo nome e può essere fonte di confusione. Disinstallarlo e installare quello di cui ha bisogno airgeddon se si desidera utilizzare questa funzione. Guida all'installazione: ${beef_installation_url}"
 	arr["POLISH",401]="Zainstalowany pakiet beef nie jest BeEF (Browser Exploitation Framework). Masz zainstalowaną Beef (Flexible Brainfuck interpreter). Obydwa pliki wykonywalne są nazywane tak samo i mogą prowadzić do zamieszania. Odinstaluj i zainstaluj system airgeddon, jeśli potrzebujesz tej funkcji. Instrukcja instalacji: ${beef_installation_url}"
-	arr["GERMAN",401]="${pending_of_translation} Das von Ihnen installierte beef-Paket ist nicht BeEF (Browser Exploitation Framework). Sie haben Beef (Flexible Brainfuck Interpreter) installiert. Beide ausführbaren Dateien werden als gleich bezeichnet und können zu Verwirrung führen. Deinstallieren Sie es und installieren Sie das, das airgeddon benötigt, wenn Sie diese Funktion verwenden möchten. Installationsanleitung: ${beef_installation_url}"
+	arr["GERMAN",401]="Das von Ihnen installierte beef-Paket ist nicht BeEF (Browser Exploitation Framework). Sie haben Beef (Flexible Brainfuck Interpreter) installiert. Beide ausführbare Dateien werden als gleich bezeichnet und können zu Verwirrung führen. Deinstallieren Sie es und installieren Sie das, das airgeddon benötigt, wenn Sie diese Funktion verwenden möchten. Installationsanleitung: ${beef_installation_url}"
 
 	arr["ENGLISH",402]="Enter the absolute path of the directory where BeEF is installed:"
 	arr["SPANISH",402]="Introduce la ruta absoluta del directorio donde está instalado BeEF:"
@@ -4946,7 +4946,7 @@ function language_strings() {
 	arr["GREEK",402]="Εισάγετε το απόλυτο μονοπάτι για τον κατάλογο στον όποιο βρίσκεται εγκατεστημένο το BeEF:"
 	arr["ITALIAN",402]="Immettere il percorso assoluto della directory in cui è installato BeEF:"
 	arr["POLISH",402]="Wprowadż ścieżkę absolutną do instalacji BeEF:"
-	arr["GERMAN",402]="${pending_of_translation} Geben Sie den absoluten Pfad des Verzeichnisses ein, in dem BeEF installiert ist:"
+	arr["GERMAN",402]="Geben Sie den absoluten Pfad des Verzeichnisses ein, in dem BeEF installiert ist:"
 
 	arr["ENGLISH",403]="The directory you entered doesn't exist"
 	arr["SPANISH",403]="El directorio introducido no existe"
@@ -4957,7 +4957,7 @@ function language_strings() {
 	arr["GREEK",403]="Ο κατάλογος που έχετε εισάγει δεν υπάρχει"
 	arr["ITALIAN",403]="La cartella indicata non esiste"
 	arr["POLISH",403]="Wprowadzony katalog nie istnieje"
-	arr["GERMAN",403]="${pending_of_translation} Das eingegebene Verzeichnis existiert nicht"
+	arr["GERMAN",403]="Das eingegebene Verzeichnis existiert nicht"
 
 	arr["ENGLISH",404]="The entered path isn't absolute. An absolute path must always begin with \"/\""
 	arr["SPANISH",404]="La ruta introducida no es absoluta. Una ruta absoluta siempre debe comenzar por \"/\""
@@ -4968,7 +4968,7 @@ function language_strings() {
 	arr["GREEK",404]="Το μονοπάτι που έχετε εισάγει δεν είναι απόλυτο. Ένα απόλυτο μονοπάτι πρέπει πάντα να ξεκινάει με \"/\""
 	arr["ITALIAN",404]="Il percorso immesso non è assoluto. Un percorso assoluto deve sempre iniziare con \"/\""
 	arr["POLISH",404]="Wprowadzona ścieżka nie jest absolutna. Ścieżka abolutna musi się zawsze zaczynać od \"/\""
-	arr["GERMAN",404]="${pending_of_translation} Die eingegebene Route ist nicht absolut. Ein absoluter Pfad sollte immer mit \"/\" beginnen"
+	arr["GERMAN",404]="Der eingegebene Pfad ist nicht absolut. Ein absoluter Pfad sollte immer mit \"/\" beginnen"
 
 	arr["ENGLISH",405]="Checking BeEF..."
 	arr["SPANISH",405]="Comprobando BeEF..."
@@ -4979,7 +4979,7 @@ function language_strings() {
 	arr["GREEK",405]="Γίνεται έλεγχος του BeEF..."
 	arr["ITALIAN",405]="Controllando BeEF..."
 	arr["POLISH",405]="Sprawdzanie BeEF..."
-	arr["GERMAN",405]="${pending_of_translation} Überprüfung BeEF..."
+	arr["GERMAN",405]="BeEF wird überprüft..."
 
 	arr["ENGLISH",406]="No BeEF executable was detected in given directory"
 	arr["SPANISH",406]="No se ha detectado un ejecutable de BeEF en el directorio indicado"
@@ -4990,7 +4990,7 @@ function language_strings() {
 	arr["GREEK",406]="Δεν εντοπίστηκε κάποιο εκτελέσιμο αρχείο BeEF στον κατάλογο που έχετε εισάγει"
 	arr["ITALIAN",406]="Non è stato rilevato un eseguibile di BeEF nella directory specificata"
 	arr["POLISH",406]="Nie znaleziono pliku wykonywalnego BeEF w danym katalogu"
-	arr["GERMAN",406]="${pending_of_translation} Eine BeEF-Programmdatei wurde im angegebenen Verzeichnis nicht gefunden"
+	arr["GERMAN",406]="Keine BeEF-Programmdatei wurde im angegebenen Verzeichnis nicht gefunden"
 
 	arr["ENGLISH",407]="BeEF preparation"
 	arr["SPANISH",407]="Preparación BeEF"
@@ -5001,7 +5001,7 @@ function language_strings() {
 	arr["GREEK",407]="Προετοιμασία του BeEF"
 	arr["ITALIAN",407]="Preparando BeEF"
 	arr["POLISH",407]="Przygotowanie BeEF"
-	arr["GERMAN",407]="${pending_of_translation} BeEF Vorbereitung"
+	arr["GERMAN",407]="BeEF wird vorbereitet"
 
 	arr["ENGLISH",408]="If you installed BeEF manually, airgeddon might not be able to find it and the attack option can appear as restricted. You can try to solve it using the special menu option to fix this. It will work only if BeEF is already correctly installed and your unique problem is the script is not detecting it"
 	arr["SPANISH",408]="Si instalaste BeEF manualmente, puede que airgeddon no sea capaz de encontrarlo y la opción del ataque te aparezca restringida. Puedes intentar solucionarlo usando la opción del menú especial para ello. Esto sólo funcionará si BeEF ya está instalado correctamente y el único problema que tienes es que el script no lo detecta"
@@ -5012,7 +5012,7 @@ function language_strings() {
 	arr["GREEK",408]="Εάν έχετε εγκαταστήσει χειροκίνητα το BeEF, το airgeddon μπορεί να μην μπορέσει να το βρεί και η επιλογή της επίθεσης μπορεί να φανεί σαν περιορισμένη. Μπορείτε να προσπαθήσετε να διορθώσετε το πρόβλημα κάνοντας χρήση της ειδικής επιλογής στο μενού. Θα λειτουργήσει μόνο αν το BeEF έχει ήδη εγκατασταθεί σωστά και το μόνο πρόβλημα είναι ότι το script δεν το εντοπίζει"
 	arr["ITALIAN",408]="Se BeEF è stato installato manualmente, airgeddon potrebbe non essere in grado di trovarlo e l'opzione di attacco apparirà limitata. Si può cercare di risolvere il problema utilizzando l'opzione del menú specifica per questo. Questo funzionerá solo se BeEF è già installato correttamente e l'unico problema che hai è che lo script non lo rileva"
 	arr["POLISH",408]="Jeśli zainstalowałeś BeEF ręcznie, airgeddon może nie być w stanie go znaleźć, a opcja atakowania będzie ograniczona. Możesz spróbować rozwiązać ten problem używając specjalnej opcji menu. To będzie działać tylko wtedy, gdy BeEF jest już poprawnie zainstalowany i jedynym problemem jest to, że skrypt go nie wykrywa"
-	arr["GERMAN",408]="${pending_of_translation} Wenn Sie BeEF manuell installiert haben, kann airgeddon es möglicherweise nicht finden und die Angriffsoption scheint eingeschränkt zu sein. Sie können versuchen, es mithilfe der speziellen Menüoption dafür zu lösen. Dies funktioniert nur, wenn BeEF bereits korrekt installiert ist und das einzige Problem, das Sie haben, ist, dass das Skript es nicht erkennt"
+	arr["GERMAN",408]="$Wenn Sie BeEF manuell installiert haben, kann airgeddon es möglicherweise nicht finden und die Angriffsoption scheint eingeschränkt zu sein. Sie können versuchen, es mit hilfe der speziellen Menüoption dafür zu lösen. Dies funktioniert nur, wenn BeEF bereits korrekt installiert ist und das einzige Problem, das Sie haben, ist, dass das Skript es nicht erkennt"
 
 	arr["ENGLISH",409]="1.  Evil Twin AP attack with sniffing and bettercap-sslstrip2/BeEF"
 	arr["SPANISH",409]="1.  Ataque Evil Twin AP con sniffing y bettercap-sslstrip2/BeEF"
@@ -5023,7 +5023,7 @@ function language_strings() {
 	arr["GREEK",409]="1.  Επίθεση Evil Twin AP με sniffing και bettercap-sslstrip2/BeEF"
 	arr["ITALIAN",409]="1.  Attacco Evil Twin AP con sniffing e bettercap-sslstrip2/BeEF"
 	arr["POLISH",409]="1.  Atak Evil Twin AP ze sniffingiem i bettercap-sslstrip2/BeEF"
-	arr["GERMAN",409]="${pending_of_translation} 1.  Attack Evil Twin AP mit Sniffing und bettercap-sslstrip2/BeEF"
+	arr["GERMAN",409]="1.  Evil Twin AP Angriff mit Sniffing und bettercap-sslstrip2/BeEF"
 
 	arr["ENGLISH",410]="2.  Try to troubleshoot manually installed BeEF dependency problem"
 	arr["SPANISH",410]="2.  Intentar solucionar problema de dependencia BeEF instalado manualmente"
@@ -5034,7 +5034,7 @@ function language_strings() {
 	arr["GREEK",410]="2.  Προσπαθήστε να αντιμετωπίσετε το πρόβλημα με τα dependencies του χειροκίνητα εγκατεστημένου BeEF"
 	arr["ITALIAN",410]="2.  Cercare di risolvere il problema delle dipende di BeEF installato manualmente"
 	arr["POLISH",410]="2.  Próba rozwiązywania problemów z ręcznie zainstalowanym BeEF"
-	arr["GERMAN",410]="${pending_of_translation} 2.  Versuch, manuell installierte BeEF-Abhängigkeitsprobleme zu lösen"
+	arr["GERMAN",410]="2.  Versuche manuell installierte BeEF-Abhängigkeitsprobleme zu lösen"
 
 	arr["ENGLISH",411]="3.  Return to Evil Twin attacks menu"
 	arr["SPANISH",411]="3.  Volver al menú de ataques Evil Twin"
@@ -5045,7 +5045,7 @@ function language_strings() {
 	arr["GREEK",411]="3.  Επιστροφή στο μενού επιθέσεων Evil Twin"
 	arr["ITALIAN",411]="3.  Tornare al menú attacchi Evil Twin"
 	arr["POLISH",411]="3.  Wróć do menu Ataki Evil Twin"
-	arr["GERMAN",411]="${pending_of_translation} 3.  Zurück zum Angriffsmenü von Evil Twin"
+	arr["GERMAN",411]="3.  Zurück zum Evil-Twin-Angriffsmenü"
 
 	arr["ENGLISH",412]="You don't need to perform this action. Your BeEF is operational"
 	arr["SPANISH",412]="No necesitas realizar esta acción. Tu BeEF está operativo"
@@ -5056,7 +5056,7 @@ function language_strings() {
 	arr["GREEK",412]="Δεν χρειάζεται να εκτελέσετε αυτήν την ενέργεια. Το BeEF λειτουργεί κανονικά"
 	arr["ITALIAN",412]="Non è necessario fare questo. Il tuo BeEF è operativo"
 	arr["POLISH",412]="Nie musisz tego robić. Twoja BeEF działa"
-	arr["GERMAN",412]="${pending_of_translation} Sie müssen diese Aktion nicht durchführen. Ihr BeEF ist betriebsbereit"
+	arr["GERMAN",412]="Sie müssen diese Aktion nicht durchführen. Ihr BeEF ist betriebsbereit"
 
 	arr["ENGLISH",413]="airgeddon fixed the problem. Your BeEF is operational"
 	arr["SPANISH",413]="airgeddon ha solucionado el problema. Tu BeEF está operativo"
@@ -5067,7 +5067,7 @@ function language_strings() {
 	arr["GREEK",413]="Το airgeddon διόρθωσε το πρόβλημα. Το BeEF λειτουργεί κανονικά"
 	arr["ITALIAN",413]="airgeddon ha risolto il problema. Il tuo BeEF è operativo"
 	arr["POLISH",413]="airgeddon rozwiązał problem. Twoja BeEF działa"
-	arr["GERMAN",413]="${pending_of_translation} airgeddon hat das Problem gelöst. Ihr BeEF ist betriebsbereit"
+	arr["GERMAN",413]="airgeddon hat das Problem gelöst. Ihr BeEF ist betriebsbereit"
 
 	arr["ENGLISH",414]="You don't have curl installed. Is not possible to download PINs database file"
 	arr["SPANISH",414]="No tienes curl instalado. No se puede descargar el fichero de la base de datos de PINs"
@@ -5078,7 +5078,7 @@ function language_strings() {
 	arr["GREEK",414]="Το curl δεν είναι εγκατεστημένο. Είναι αδύνατον να κατέβει το αρχείο με την βάση δεδομένων PIN"
 	arr["ITALIAN",414]="Non si dispone di curl installato. Non è possibile scaricare il file della base dati dei PINs"
 	arr["POLISH",414]="Nie masz zainstalowanego curl. Nie można pobrać pliku bazy danych kodu PIN"
-	arr["GERMAN",414]="${pending_of_translation} Sie haben keine Locken installiert. Die Datei konnte nicht von der PIN-Datenbank heruntergeladen werden"
+	arr["GERMAN",414]="Sie haben curl nicht installiert. Die PIN-Datenbank konnte nicht heruntergeladen werden"
 
 	arr["ENGLISH",415]="${blue_color}airgeddon knows you have BeEF installed and you pass the validation, but it was unable to locate the right directory path where you have BeEF installed. Knowing the location gives some advantages for the execution because its configuration file can be customized instead of generic. ${green_color}Do you want to enter it manually? ${normal_color}${visual_choice}"
 	arr["SPANISH",415]="${blue_color}airgeddon sabe que tienes BeEF instalado y pasas la validación, pero no ha podido concretar la ruta del directorio exacto donde tienes instalado BeEF. Conocer la localización exacta tiene algunas ventajas a la hora de ejecutarlo ya que la configuración será personalizada en lugar de ser una configuración genérica. ${green_color}¿Quieres introducirla manualmente? ${normal_color}${visual_choice}"
@@ -5089,7 +5089,7 @@ function language_strings() {
 	arr["GREEK",415]="${blue_color}Το airgeddon γνωρίζει ότι έχετε εγκατεστημένο το BeEF και έχετε περάσει τους απαραίτητους ελέγχους, αλλά δεν μπόρεσε να εντοπίσει το σωστό μονοπάτι για τον κατάλογο όπου έχετε εγκαταστήσει το BeEF. Γνωρίζοντας το μονοπάτι για τον κατάλογο κάνει την διαδικασία της εκτέλεσης πλεονεκτική γιατί το αρχείο παραμέτρων μπορεί να ρυθμιστεί καταλλήλως, αντιθέτως με το προεπιλεγμένο. ${green_color}Θέλετε να το εισάγετε χειροκίνητα; ${normal_color}${visual_choice}"
 	arr["ITALIAN",415]="${blue_color}airgeddon sa che hai BeEF installato e passi la validazione, peró non ha potuto trovare il percorso esatto della directory in cui hai installato BeEF. Conoscere l'esatta posizione ha alcuni vantaggi all'ora di eseguiro perchè la configurazione sarà personalizzata, piuttosto che una configurazione generica. ${green_color}Vuoi inserirla manualmente? ${normal_color}${visual_choice}"
 	arr["POLISH",415]="${blue_color}airgeddon wie, że masz zainstalowaną wersję BeEF i przejdziesz walidację, ale nie możesz określić dokładnej ścieżki katalogu, w której zainstalowałeś BeEF. Znajomość dokładnej lokalizacji ma pewne zalety w czasie jej wykonywania, ponieważ konfiguracja zostanie dostosowana do indywidualnych potrzeb, a nie jako konfiguracja ogólna. ${green_color}Czy chcesz ją wprowadzić ręcznie? ${normal_color}${visual_choice}"
-	arr["GERMAN",415]="${pending_of_translation} ${blue_color}airgeddon weiß, dass Sie BeEF installiert haben und Sie die Validierung bestehen, aber Sie konnten den genauen Verzeichnispfad, in dem BeEF installiert ist, nicht angeben. Die genaue Position zu kennen, hat zum Zeitpunkt der Ausführung einige Vorteile, da die Konfiguration personalisiert wird, anstatt eine generische Konfiguration zu sein. ${green_color} Möchten Sie es manuell eingeben? ${normal_color}${visual_choice}"
+	arr["GERMAN",415]="${blue_color}airgeddon weiß, dass Sie BeEF installiert haben und Sie die Validierung bestehen, aber airgeddon konnte den genauen Verzeichnispfad, in den BeEF installiert ist, nicht angeben. Die genaue Position zu kennen, hat zum Zeitpunkt der Ausführung einige Vorteile, da die Konfiguration personalisiert wird, anstatt eine generische Konfiguration zu sein. ${green_color} Möchten Sie es manuell eingeben? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",416]="    You can run BeEF, but it is better if you run the second option before"
 	arr["SPANISH",416]="    Puedes ejecutar BeEF, pero es recomendable ejecutar la segunda opción antes"
@@ -5100,7 +5100,7 @@ function language_strings() {
 	arr["GREEK",416]="    Μπορείτε να εκτελέσετε το BeEF, αλλά είναι καλύτερα να διαλέξετε τη δεύτερη επιλογή από πρίν"
 	arr["ITALIAN",416]="    Puoi eseguire BeEF, peró si consiglia di eseguire prima la seconda opzione"
 	arr["POLISH",416]="    Możesz uruchomić BeEF, ale zaleca się uruchomienie drugiej opcji najpierw"
-	arr["GERMAN",416]="${pending_of_translation}     Sie können BeEF ausführen, es wird jedoch empfohlen, die zweite Option vorher auszuführen"
+	arr["GERMAN",416]="     Sie können BeEF ausführen, es wird jedoch empfohlen, die zweite Option vorher auszuführen"
 
 	arr["ENGLISH",417]="An unexpected error occurred, redirecting to the menu"
 	arr["SPANISH",417]="Ocurrió un error inesperado. Volviendo al menú"
@@ -5111,7 +5111,7 @@ function language_strings() {
 	arr["GREEK",417]="Παρουσιάστηκε μη αναμενόμενο σφάλμα, γίνεται ανακατεύθυνση στο μενού"
 	arr["ITALIAN",417]="Errore imprevisto. Tornando al menú"
 	arr["POLISH",417]="Wystąpił nieoczekiwany błąd. Powrót do menu"
-	arr["GERMAN",417]="${pending_of_translation} Ein unerwarteter Fehler ist aufgetreten. Zurück zum Menü"
+	arr["GERMAN",417]="Ein unerwarteter Fehler ist aufgetreten. Zurück zum Menü"
 
 	arr["ENGLISH",418]="Restoring MAC"
 	arr["SPANISH",418]="Restaurando MAC"
@@ -5122,7 +5122,7 @@ function language_strings() {
 	arr["GREEK",418]="Γίνεται αποκατάσταση της διεύθυνσης MAC"
 	arr["ITALIAN",418]="Ripristinando MAC"
 	arr["POLISH",418]="Przywracanie MAC"
-	arr["GERMAN",418]="${pending_of_translation} Wiederherstellen von MAC"
+	arr["GERMAN",418]="Wiederherstellen von MAC"
 
 	arr["ENGLISH",419]="Do you want to spoof your MAC address during this attack? ${normal_color}${visual_choice}"
 	arr["SPANISH",419]="¿Deseas falsear la dirección MAC de tu tarjeta durante el ataque? ${normal_color}${visual_choice}"
@@ -5133,7 +5133,7 @@ function language_strings() {
 	arr["GREEK",419]="Θέλετε να κρύψετε την αληθινή διεύθυνση MAC, δημιουργώντας μία ψεύτικη κατά την διάρκεια αυτής της επίθεσης; ${normal_color}${visual_choice}"
 	arr["ITALIAN",419]="Vuoi falsificare l'indirizzo MAC della scheda durante l'attacco? ${normal_color}${visual_choice}"
 	arr["POLISH",419]="Chcesz spoofować adres MAC karty podczas ataku? ${normal_color}${visual_choice}"
-	arr["GERMAN",419]="${pending_of_translation} Möchten Sie die MAC-Adresse Ihrer Karte während des Angriffs verfälschen? ${normal_color}${visual_choice}"
+	arr["GERMAN",419]="Möchten Sie die MAC-Adresse Ihrer Karte während des Angriffs verfälschen? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",420]="It has been detected that you are running airgeddon inside a Docker container. During this attack hostapd is used to create a fake AP. This component often conflicts with network-manager. From inside the container, airgeddon can't handle it. If you have network-manager installed on your host machine, close it or kill the conflicting processes or you'll get an error. For more information, see the Docker section of the Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["SPANISH",420]="Se ha detectado que estás ejecutando airgeddon en un contenedor de Docker. En este ataque se utiliza hostapd para crear un falso AP. Este componente suele dar conflicto con network-manager. Desde el contenedor, airgeddon no puede gestionarlo. Si tienes network-manager instalado en tu máquina host, ciérralo o mata los procesos en conflicto u obtendrás un error. Para más información consulta la sección Docker del Wiki: ${normal_color}${urlgithub_wiki}/Docker"
@@ -5144,7 +5144,7 @@ function language_strings() {
 	arr["GREEK",420]="Εντοπίστηκε πως τρέχετε το airgeddon μέσα σε Docker container. Κατά τη διάρκεια αυτής της επίθεσης χρησιμοποιείται το hostapd για να δημιουργήσει ψεύτικο AP. Η δημιουργία αυτού κάνει conflicts με τον network-manager. Το airgeddon δεν μπορεί να το χειριστεί μέσα από το container. Αν υπάρχει ο network-manager εγκατεστημένος στον host-υπολογιστή, κλείστε τον ή διακόψτε τις διεργασίες που κάνουν conflict αλλιώς θα υπάρξουν σφάλματα. Για περισσότερες πληροφορίες, ανατρέξτε στην ενότητα Docker του Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["ITALIAN",420]="È stato rilevato che si sta eseguendo airgeddon in un contenitore Docker. In questo attacco viene utilizzato hostapd per creare un falso AP. Questo componente tende a creare un conflitto con il network-manager. Dal contenitore, airgeddon non può gestirlo. Se si dispone di network-manager installato sul computer host, chiuderlo o uccidere i processi in conflitto o ci sará un errore. Per ulteriori informazioni consultare la sezione Docker della nostra Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["POLISH",420]="Wykryto, że używasz airgeddon w kontenerze Docker. W tym ataku hostapd służy do utworzenia fałszywego AP. Ten komponent często ma konflikt z network-manager. Z kontenera airgeddon nie może sobie z tym poradzić. Jeśli na komputerze hosta zainstalowano network-manager, zamknij lub zabij sprzeczne procesy lub otrzymasz błąd. Aby uzyskać więcej informacji, zobacz sekcję Docker Wiki: ${normal_color}${urlgithub_wiki}/Docker"
-	arr["GERMAN",420]="${pending_of_translation} Es wurde festgestellt, dass Sie airgeddon in einem Docker-Container ausführen. Bei diesem Angriff wird mit hostapd ein falscher AP erstellt. Diese Komponente steht normalerweise im Konflikt mit dem network-manager. Aus dem Container kann airgeddon das nicht schaffen. Wenn Sie den network-manager auf Ihrem Host-Computer installiert haben, schließen Sie ihn oder beenden Sie die Prozesse im Konflikt oder Sie erhalten einen Fehler. Weitere Informationen finden Sie im Abschnitt Docker des Wiki: ${normal_color}${urlgithub_wiki}/Docker"
+	arr["GERMAN",420]="Es wurde festgestellt, dass Sie airgeddon in einem Docker-Container ausführen. Bei diesem Angriff wird mit hostapd ein falscher AP erstellt. Diese Komponente steht normalerweise im Konflikt mit dem network-manager. Aus dem Container kann airgeddon das nicht schaffen. Wenn Sie den network-manager auf Ihrem Host-Computer installiert haben, schließen Sie ihn oder beenden Sie die Prozesse im Konflikt oder Sie erhalten einen Fehler. Weitere Informationen finden Sie im Abschnitt Docker des Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 
 	arr["ENGLISH",421]="Doubts? Visit our Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["SPANISH",421]="¿Dudas? Visita nuestro Wiki: ${normal_color}${urlgithub_wiki}"
@@ -5155,7 +5155,7 @@ function language_strings() {
 	arr["GREEK",421]="Απορίες; Επισκεφθείτε το Wiki μας: ${normal_color}${urlgithub_wiki}"
 	arr["ITALIAN",421]="Domande? Visita la nostra Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["POLISH",421]="Czy masz wątpliwości? Odwiedź nasze Wiki: ${normal_color}${urlgithub_wiki}"
-	arr["GERMAN",421]="${pending_of_translation} Zweifel? Besuchen Sie unser Wiki: ${normal_color}${urlgithub_wiki}"
+	arr["GERMAN",421]="Zweifel? Besuchen Sie unser Wiki: ${normal_color}${urlgithub_wiki}"
 
 	arr["ENGLISH",422]="The automatic update has been disabled when airgeddon is running in a Docker container. If you want to update it, download again the image tagged as \"latest\""
 	arr["SPANISH",422]="La actualización automática se ha desactivado cuando airgeddon se ejecuta en un contenedor de Docker. Si deseas actualizarlo descarga de nuevo la imagen con tag \"latest\""
@@ -5166,7 +5166,7 @@ function language_strings() {
 	arr["GREEK",422]="Η διαδικασία της αυτόματης ενημέρωσης είναι απενεργοποιημένη όταν το airgeddon τρέχει σε Docker container. Εάν θέλετε να το ενημερώσετε, κατεβάστε ξανά το αρχείο με την ετικέτα \"latest\""
 	arr["ITALIAN",422]="L'aggiornamento automatico viene disabilitato quando airgeddon viene eseguito in un contenitore Docker. Se vuoi aggiornarlo scaricare di nuovo l'immagine con il tag \"latest\""
 	arr["POLISH",422]="Automatyczna aktualizacja została wyłączona, gdy airgeddon jest uruchomiony w kontenerze Docker. Jeśli chcesz go zaktualizować, pobierz ponownie obraz oznaczony jako \"latest\""
-	arr["GERMAN",422]="${pending_of_translation} Die automatische Aktualisierung wurde deaktiviert, wenn airgeddon in einem Docker-Container ausgeführt wird. Wenn Sie es aktualisieren möchten, laden Sie das Bild erneut mit dem Tag \"latest\""
+	arr["GERMAN",422]="Die automatische Aktualisierung wird deaktiviert, wenn airgeddon in einem Docker-Container ausgeführt wird. Wenn Sie es aktualisieren möchten, laden Sie das Bild erneut mit dem Tag \"latest\""
 
 	arr["ENGLISH",423]="5.  WEP \"All-in-One\" attack"
 	arr["SPANISH",423]="5.  Ataque WEP \"Todo-en-Uno\""
@@ -5177,7 +5177,7 @@ function language_strings() {
 	arr["GREEK",423]="5.  Επίθεση WEP \"All-in-One\""
 	arr["ITALIAN",423]="5.  Attacco WEP \"Tutto-in-Uno\""
 	arr["POLISH",423]="5.  Atak WEP \"Wszystko-w-Jednym\""
-	arr["GERMAN",423]="${pending_of_translation} 5.  WEP-Angriff \"All-in-One\""
+	arr["GERMAN",423]="5.  WEP-Angriff \"All-in-One\""
 
 	arr["ENGLISH",424]="The selected network is invalid. Encryption type of target network must be WEP"
 	arr["SPANISH",424]="La red seleccionada no es válida. El tipo de encriptación de la red objetivo debe ser WEP"
@@ -5188,7 +5188,7 @@ function language_strings() {
 	arr["GREEK",424]="Το επιλεγμένο δίκτυο δεν είναι έγκυρο. Ο τύπος κρυπτογράφησης του δικτύου-στόχος πρέπει να είναι WEP"
 	arr["ITALIAN",424]="La rete selezionata non è valida. Il tipo di crittografia della rete obiettivo deve essere WEP"
 	arr["POLISH",424]="Wybrana sieć nie jest prawidłowa. Typem szyfrowania sieci docelowej musi być WEP"
-	arr["GERMAN",424]="${pending_of_translation} Das ausgewählte Netzwerk ist nicht gültig. Die Art der Verschlüsselung des Zielnetzwerks muss WEP sein"
+	arr["GERMAN",424]="Das ausgewählte Netzwerk ist nicht gültig. Die Art der Verschlüsselung des Zielnetzwerks muss WEP sein"
 
 	arr["ENGLISH",425]="You have a valid WEP target network selected. Script can continue..."
 	arr["SPANISH",425]="Tienes una red objetivo WEP válida seleccionada. El script puede continuar..."
@@ -5199,7 +5199,7 @@ function language_strings() {
 	arr["GREEK",425]="Έχετε επιλέξει ένα έγκυρο WEP δίκτυο-στόχος. Το script μπορεί να συνεχίσει..."
 	arr["ITALIAN",425]="Hai selezionato una rete obiettivo WEP valida. Lo script può continuare..."
 	arr["POLISH",425]="Wybrano prawidłową sieć docelową WEP. Skrypt może kontynuować..."
-	arr["GERMAN",425]="${pending_of_translation} Sie haben ein gültiges WEP-Zielnetzwerk ausgewählt. Das Skript kann fortfahren..."
+	arr["GERMAN",425]="Sie haben ein gültiges WEP-Zielnetzwerk ausgewählt. Das Skript kann fortfahren..."
 
 	arr["ENGLISH",426]="9.  WEP attacks menu"
 	arr["SPANISH",426]="9.  Menú de ataques WEP"
@@ -5210,7 +5210,7 @@ function language_strings() {
 	arr["GREEK",426]="9.  Μενού επιθέσεων WEP"
 	arr["ITALIAN",426]="9.  Menú degli attacchi WEP"
 	arr["POLISH",426]="9.  Menu ataków WEP"
-	arr["GERMAN",426]="${pending_of_translation} 9.  WEP-Angriffsmenü"
+	arr["GERMAN",426]="9.  WEP-Angriffsmenü"
 
 	arr["ENGLISH",427]="WEP attacks menu"
 	arr["SPANISH",427]="Menú de ataques WEP"
@@ -5221,7 +5221,7 @@ function language_strings() {
 	arr["GREEK",427]="Μενού επιθέσεων WEP"
 	arr["ITALIAN",427]="Menú degli attacchi WEP"
 	arr["POLISH",427]="Menu ataków WEP"
-	arr["GERMAN",427]="${pending_of_translation} WEP-Angriffsmenü"
+	arr["GERMAN",427]="WEP-Angriffsmenü"
 
 	arr["ENGLISH",428]="If real clients exist connected to the WEP encrypted network, the process will be significantly accelerated. Enough IVs (Initialization Vectors) will be catched faster"
 	arr["SPANISH",428]="Si existen clientes reales conectados a la red con encriptación WEP, el proceso se acelerará notablemente. Se obtendrán antes suficientes IVs (Vectores de Inicialización)"
@@ -5232,7 +5232,7 @@ function language_strings() {
 	arr["GREEK",428]="Εάν υπάρχουν αληθινοί συνδεδεμένοι χρήστες στο κρυπτογραφημένο WEP δίκτυο, η διαδικασία θα επιταχυνθεί σημαντικά. Θα καταγραφθούν αρκετά IVs (Initialization Vectors) γρηγορότερα"
 	arr["ITALIAN",428]="Se esistono dei clienti reali connessi alla rete con crittografia WEP il processo sará piú veloce. Si otterrano prima sufficienti IV (Vettori di Inizializzazione)"
 	arr["POLISH",428]="Jeśli istnieją prawdziwi klienci podłączeni do sieci z szyfrowaniem WEP, proces przyspiesza zauważalnie. Szybciej uzyskane zostaną wystarczające IVs (Wektory Inicjujące)"
-	arr["GERMAN",428]="${pending_of_translation} Wenn echte Clients über die WEP-Verschlüsselung mit dem Netzwerk verbunden sind, beschleunigt sich der Prozess erheblich. Ausreichende IVs werden vorher erhalten (InitialisierungsVektoren)"
+	arr["GERMAN",428]="Wenn echte Clients über die WEP-Verschlüsselung mit dem Netzwerk verbunden sind, beschleunigt sich der Prozess erheblich. Ausreichende IVs werden vorher erhalten (InitialisierungsVektoren)"
 
 	arr["ENGLISH",429]="The WEP \"All-in-One\" attack combines different techniques to generate enough traffic to decrypt the key (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentation, Fake association, etc.)"
 	arr["SPANISH",429]="El ataque WEP \"Todo-en-Uno\" combina diversas técnicas para generar el tráfico suficiente que hace falta para desencriptar la clave (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentación, Falsa asociación, etc.)"
@@ -5243,7 +5243,7 @@ function language_strings() {
 	arr["GREEK",429]="Η \"All-in-One\" επίθεση WEP συνδυάζει διαφορετικές τεχνικές για να παραχθεί αρκετή κίνηση για να αποκρυπτογραφήσει το κλειδί (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentation, Fake association, κλπ)"
 	arr["ITALIAN",429]="L'attacco WEP \"Tutto-in-Uno\" combina diverse tecniche per generare il traffico necessario per decifrare la chiave (Caffe Latte, Hirte, Replay, Chop-Chop, Frammentazione, Falsa associazione, etc.)"
 	arr["POLISH",429]="WEP typu \"Wszystko-w-Jednym\" łączy różne techniki, aby uzyskać wystarczająco dużo ruchu, aby odszyfrować klucz (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentation, Fałszywe asocjacja, itd.)"
-	arr["GERMAN",429]="${pending_of_translation} Der WEP-Angriff \"All-in-One\" kombiniert verschiedene Techniken, um genug Verkehr zu erzeugen, um den Schlüssel zu entschlüsseln (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentierung, falsche Assoziation, etc.)"
+	arr["GERMAN",429]="Der WEP-Angriff \"All-in-One\" kombiniert verschiedene Techniken, um genug Verkehr zu erzeugen, um den Schlüssel zu entschlüsseln (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentierung, falsche Assoziation, etc.)"
 
 	arr["ENGLISH",430]="If the password for the wifi network is obtained with the \"All-in-One\" WEP attack, you should decide where to save it. ${green_color}Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${wep_potpath}]"
 	arr["SPANISH",430]="Si se consigue la contraseña de la red wifi con el ataque WEP \"Todo-en-Uno\", hay que decidir donde guardarla. ${green_color}Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${wep_potpath}]"
@@ -5254,7 +5254,7 @@ function language_strings() {
 	arr["GREEK",430]="Εάν βρεθεί ο κωδικός πρόσβασης για το ασύρματο δίκτυο με την επίθεση WEP \"All-in-One\", θα πρέπει να αποφασίσετε που θα τον αποθηκεύσετε. ${green_color}Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${wep_potpath}]"
 	arr["ITALIAN",430]="Se si ottiene la password della rete wireless con l'attacco WEP \"Tutto-en-Uno\", decidere dove salvarla. ${green_color}Immettere il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${wep_potpath}]"
 	arr["POLISH",430]="Jeśli hasło sieci wifi zostanie zdobyte atakiem WEP \"Wszystko-w-Jednym\", musisz zdecydować, gdzie je zapisać. ${green_color}Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${wep_potpath}]"
-	arr["GERMAN",430]="${pending_of_translation} Wenn Sie das WLAN-Passwort mit dem WEP-Angriff \"All-in-One\" erhalten, müssen Sie entscheiden, wo Sie es speichern möchten. ${green_color} Geben Sie den Pfad ein, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${wep_potpath}] ${blue_color}zu akzeptieren"
+	arr["GERMAN",430]="Wenn Sie das WLAN-Passwort mit dem WEP-Angriff \"All-in-One\" erhalten, müssen Sie entscheiden, wo Sie es speichern möchten. ${green_color} Geben Sie den Pfad ein, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${wep_potpath}] ${blue_color}zu akzeptieren"
 
 	arr["ENGLISH",431]="The WEP protocol had a bad design and can be cracked in a few minutes if we have enough generated traffic"
 	arr["SPANISH",431]="El protocolo WEP tuvo un diseño erróneo y se puede romper en pocos minutos si se genera tráfico suficiente"
@@ -5265,7 +5265,7 @@ function language_strings() {
 	arr["GREEK",431]="Το πρωτόκολλο WEP είχε κακό σχεδιασμό και μπορεί να σπάσει μέσα σε λίγα λεπτά, αν έχουμε αρκετή κίνηση πακέτων"
 	arr["ITALIAN",431]="Il protocollo WEP fú disegnato male e si puó rompere in pochi minuti se si genera abbastanza traffico"
 	arr["POLISH",431]="Protokół WEP został nieprawidłowo zaprojektowany i może zostać złamany po kilku minutach, jeśli zostanie wygenerowany wystarczający ruch"
-	arr["GERMAN",431]="${pending_of_translation} Das WEP-Protokoll hatte ein falsches Design und kann in wenigen Minuten unterbrochen werden, wenn genügend Datenverkehr generiert wird"
+	arr["GERMAN",431]="Das WEP-Protokoll hatte ein falsches Design und kann in wenigen Minuten unterbrochen werden, wenn genügend Datenverkehr generiert wird"
 
 	arr["ENGLISH",432]="Captured IVs (Initialization Vectors) are shown on airodump capture window as \"Data\""
 	arr["SPANISH",432]="Los IVs (Vectores de Inicialización) capturados, son representados en la ventana de captura de airodump como \"Data\""
@@ -5276,7 +5276,7 @@ function language_strings() {
 	arr["GREEK",432]="Τα ληφθέντα IVs (Initialization Vectors) εμφανίζονται στο παράθυρο καταγραφής airodump ως \"Data\""
 	arr["ITALIAN",432]="I IV (Vettori di Inizializzazione) catturati, sono rappresentati nella finestra di acquisizione di airodump come \"Data\""
 	arr["POLISH",432]="Uchwycone obiekty IV (Wektory Inicjujące) są prezentowane w oknie przechwytywania airodump jako \"Data\""
-	arr["GERMAN",432]="${pending_of_translation} Die erfassten IVs (InitialisierungsVektoren) werden im Erfassungsfenster von airodump als \"Data\" dargestellt"
+	arr["GERMAN",432]="Die erfassten IVs (InitialisierungsVektoren) werden im Erfassungsfenster von airodump als \"Data\" dargestellt"
 
 	arr["ENGLISH",433]="Some access points are not vulnerable to certain WEP attacks. Like for example the Chop-Chop attack, that only affects some of them"
 	arr["SPANISH",433]="Algunos puntos de acceso no son vulnerables a ciertos ataques WEP. Como por ejemplo el ataque Chop-Chop, que solo afecta a algunos"
@@ -5287,7 +5287,7 @@ function language_strings() {
 	arr["GREEK",433]="Ορισμένα σημεία πρόσβασης δεν είναι ευάλωτα σε ορισμένες επιθέσεις WEP. Για παράδειγμα η επίθεση Chop-Chop, επηρεάζει μόνο μερικά από αυτά"
 	arr["ITALIAN",433]="Alcuni punti di accesso non sono vulnerabili a certi attacchi WEP. Come ad esempio l'attacco Chop-Chop, che colpisce solo alcuni"
 	arr["POLISH",433]="Niektóre punkty dostępu nie są podatne na niektóre ataki WEP. Na przykład atak Chop-Chop, który dotyka tylko niektórych osób"
-	arr["GERMAN",433]="${pending_of_translation} Einige Access Points sind nicht anfällig für bestimmte WEP-Angriffe. Zum Beispiel der Chop-Chop-Angriff, der nur einige betrifft"
+	arr["GERMAN",433]="Einige Access Points sind nicht anfällig für bestimmte WEP-Angriffe. Zum Beispiel der Chop-Chop-Angriff, der nur einige betrifft"
 
 	arr["ENGLISH",434]="WEP \"All-in-One\" attack has been started. Press [Enter] key on this window to stop it"
 	arr["SPANISH",434]="El ataque WEP \"Todo-en-Uno\" ha comenzado. Pulse la tecla [Enter] en esta ventana para pararlo"
@@ -5298,7 +5298,7 @@ function language_strings() {
 	arr["GREEK",434]="Η επίθεση WEP \"All-in-One\" έχει αρχίσει. Πατήστε το κουμπί [Enter] σε αυτό το παράθυρο για να την σταματήσετε"
 	arr["ITALIAN",434]="L'attacco WEP \"Tutto-in-Uno\" è iniziato. Premere il tasto [Enter] in questa finestra per fermarlo"
 	arr["POLISH",434]="Rozpoczął się atak WEP \"Wszystko-w-Jednym\". Naciśnij klawisz [Enter] w tym oknie, aby go zatrzymać"
-	arr["GERMAN",434]="${pending_of_translation} Der WEP-Angriff \"All-in-One\" hat begonnen. Drücken Sie die [Enter]-Taste in diesem Fenster, um sie zu stoppen"
+	arr["GERMAN",434]="Der WEP-Angriff \"All-in-One\" hat begonnen. Drücken Sie die [Enter]-Taste in diesem Fenster, um sie zu stoppen"
 
 	arr["ENGLISH",435]="Error trying to change interface mode. During the process the interface name must be changed, but it looks like you already have an interface occupying the name that would be needed (${normal_color}${desired_interface_name}${red_color})"
 	arr["SPANISH",435]="Error al intentar cambiar el modo de la interfaz. En el proceso el nombre de la interfaz cambia, pero parece que ya tienes una interfaz ocupando el nombre que se necesitaría (${normal_color}${desired_interface_name}${red_color})"
@@ -5309,7 +5309,7 @@ function language_strings() {
 	arr["GREEK",435]="Προέκυψε σφάλμα καθώς άλλαζε η κατάσταση της διεπαφής. Κατά τη διάρκεια της διαδικασίας, το όνομα της διεπαφής πρέπει να αλλάξει, αλλά φαίνεται ότι έχετε ήδη μια διεπαφή που έχει το όνομα που θα χρειαζόταν (${normal_color}${desired_interface_name}${red_color})"
 	arr["ITALIAN",435]="Errore cercando di cambiare la modalità dell'interfaccia. Nel processo il nome dell'interfaccia cambia, peró sembra che già disponi di un'interfaccia che usa il nome di cui avresti bisogno (${normal_color}${desired_interface_name}${red_color})"
 	arr["POLISH",435]="Wystąpił błąd podczas próby zmiany trybu interfejsu. Wymaga to zmiany jego nazwy, ale wygląda jednak na to, że masz już interfejs o nazwie, która będzie potrzebna (${normal_color}${desired_interface_name}${red_color})"
-	arr["GERMAN",435]="${pending_of_translation} Fehler beim Versuch, den Modus der Schnittstelle zu ändern. Dabei ändert sich der Name der Schnittstelle, aber es scheint, dass Sie bereits eine Schnittstelle haben, die den Namen belegt, der benötigt würde (${normal_color}${desired_interface_name}${red_color})"
+	arr["GERMAN",435]="Fehler beim Versuch, den Modus der Interface zu ändern. Dabei ändert sich der Name der Interface, aber es scheint, dass Sie bereits eine Interface haben, die den Namen belegt, der benötigt ist (${normal_color}${desired_interface_name}${red_color})"
 
 	arr["ENGLISH",436]="The hashcat version you have installed (${hashcat_version}) is greater or equal than ${hashcat_hccapx_version} so you need to convert the capture files to \"hccapx\" format, airgeddon will do this automatically. To do this you need a converter that is not present on your system (hashcat-utils package), install it to be able to perform this attack"
 	arr["SPANISH",436]="La versión de hashcat que tienes instalada (${hashcat_version}) es igual o superior a la ${hashcat_hccapx_version} por lo que es necesario convertir los ficheros de captura a formato \"hccapx\", airgeddon lo hará automáticamente. Pero para ello hace falta un conversor que no está presente en tu sistema (paquete hashcat-utils), instálalo para poder realizar este ataque"
@@ -5320,18 +5320,18 @@ function language_strings() {
 	arr["GREEK",436]="Η έκδοση του hashcat που έχετε εγκαταστήσει (${hashcat_version}) είναι ίδια ή νεότερη από την έκδοση ${hashcat_hccapx_version}, άρα το airgeddon θα μετατρέψει τα αρχεία καταγραφής σε \"hccapx\" για να συνεχιστεί η διαδικασία. Για να επιτευχθεί αυτό χρειάζεστε ένα μετατροπέα που δεν υπάρχει στο σύστημά σας (περιέχεται στο πακέτο hashcat-utils), εγκαταστήστε το για να εκτελέσετε αυτήν την επίθεση"
 	arr["ITALIAN",436]="La versione di hashcat installata (${hashcat_version}) è uguale o superiore alla ${hashcat_hccapx_version} quindi è necessario convertire i file di acquisizione al formato \"hccapx\", airgeddon lo fará automaticamente. Peró questo richiede un convertitore che non è presente nel sistema (pacchetto hashcat-utils), installalo per eseguire questo attacco"
 	arr["POLISH",436]="Zainstalowana wersja programu hashcat (${hashcat_version}) jest równa lub większa niż ${hashcat_hccapx_version}, dlatego konieczne jest przekonwertowanie plików przechwytywania do formatu \"hccapx\", airgeddon zrobi to automatycznie. Do tego potrzebny jest konwerter, który nie jest obecny w systemie (pakiet hashcat-utils), zainstaluj go, aby móc wykonać ten atak"
-	arr["GERMAN",436]="${pending_of_translation} Die Version von hashcat, die Sie installiert haben (${hashcat_version}), ist gleich oder größer als ${hashcat_hccapx_version}. Daher ist es notwendig, die Capture-Dateien in das Format \"hccapx\" zu konvertieren. airgeddon macht das automatisch. Dafür benötigen Sie einen Konverter, der nicht in Ihrem System vorhanden ist (Paket hashcat-utils), installieren Sie es, um diesen Angriff ausführen zu können"
+	arr["GERMAN",436]="Ihre installierte hashcat-Version (${hashcat_version}) ist gleich oder größer als ${hashcat_hccapx_version}. Daher ist es notwendig, die Capture-Dateien in das Format \"hccapx\" zu konvertieren. airgeddon macht das automatisch. Dafür benötigen Sie einen Konverter, der nicht in Ihrem System vorhanden ist (Paket hashcat-utils), installieren Sie es, um diesen Angriff ausführen zu können"
 
 	arr["ENGLISH",437]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through Paypal (${normal_color}${mail}${pink_color}) or sending a fraction of cryptocurrency (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["SPANISH",437]="Si te gustó el script y te pareció útil, puedes apoyar el proyecto haciendo una donación. A través de Paypal (${normal_color}${mail}${pink_color}) o enviando una fracción de criptomoneda (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Cualquier cantidad por pequeña que sea (1, 2, 5 $/€) es bien recibida. Más información y enlaces directos para realizarla en: ${normal_color}${urlgithub_wiki}/Contributing"
-	arr["FRENCH",437]="${pending_of_translation} Si le script vous a plus et que vous l'avez trouvé utile; vous pouvez soutenir le projet en faisant un don PayPal (${normal_color}${mail}${pink_color}) ou en envoyant une fraction de crypto-monnaie (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Toute contribution  (1, 2, 5 $/€) est bienvenue. Pour faire un don allez à: ${normal_color}${urlgithub_wiki}/Contributing"
-	arr["CATALAN",437]="Si et va agradar el script i et va semblar útil, pots donar suport al projecte fent una donació. A través de Paypal (${normal_color}${mail}${pink_color}) o enviant una fracció criptomoneda (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualsevol quantitat per petita que sigui (1, 2, 5 $/€) és ben rebuda. Més informació i enllaços directes per a realitzar-la en: ${normal_color}${urlgithub_wiki}/Contributing"
-	arr["PORTUGUESE",437]="Se você gostou do script e o achou útil, apoie o projeto fazendo uma doação através: do PayPal (${normal_color}${mail}${pink_color}) ou enviando uma fração de uma criptomoeda (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualquer quantidade, mesmo pequena (1, 2, 5 $/€) é bem-vinda. Links diretos e de com realizar em: ${urlgithub_wiki}/Contributing"
-	arr["RUSSIAN",437]="${pending_of_translation} Если вам понравилась эта программа и она оказался для вас полезной, вы можете поддержать проект, сделав пожертвование. Через PayPal (${normal_color}${mail}${pink_color}) или отправки части криптовалюты (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Приветствуется любая сумма, даже небольшая (1, 2, 5 $/€). Более подробную информацию и прямые ссылки можно получить по адресу: ${normal_color}${urlgithub_wiki}/Contributing"
+	arr["FRENCH",437]="${pending_of_translation} Si le script vous a plus et que vous l'avez trouvé utile; vous pouvez soutenir le projet en faisant un don Paypal (${normal_color}${mail}${pink_color}) ou en envoyant une fraction de crypto-monnaie (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Toute contribution  (1, 2, 5 $/€) est bienvenue. Pour faire un don allez à: ${normal_color}${urlgithub_wiki}/Contributing"
+	arr["CATALAN",437]="${pending_of_translation} Si et va agradar el script i et va semblar útil, pots donar suport al projecte fent una donació. A través de Paypal (${normal_color}${mail}${pink_color}) o enviant una fracció criptomoneda (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualsevol quantitat per petita que sigui (1, 2, 5 $/€) és ben rebuda. Més informació i enllaços directes per a realitzar-la en: ${normal_color}${urlgithub_wiki}/Contributing"
+	arr["PORTUGUESE",437]="${pending_of_translation} Se você gostou do script e o achou útil, apoie o projeto fazendo uma doação, através: do Paypal (${normal_color}${mail}${pink_color}) ou enviando uma fração de cryptocurrency (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualquer quantidade, mesmo pequena (1, 2, 5 $/€) é bem-vinda. Links diretos e de com realizar em: ${urlgithub_wiki}/Contributing"
+	arr["RUSSIAN",437]="${pending_of_translation} Если вам понравилась эта программа и она оказался для вас полезной, вы можете поддержать проект, сделав пожертвование. Через Paypal (${normal_color}${mail}${pink_color}) или отправки части криптовалюты (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Приветствуется любая сумма, даже небольшая (1, 2, 5 $/€). Более подробную информацию и прямые ссылки можно получить по адресу: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["GREEK",437]="${pending_of_translation} Εαν ευχαριστηθήκατε το script και το βρήκατε χρήσιμο, μπορείτε να υποστηρίξετε το project κάνοντας κάποια δωρεά. Μέσω του Paypal (${normal_color}${mail}${pink_color}) ή αποστέλλοντας ένα κλάσμα κρυπτοσυχνότητας (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Είναι καλοδεχούμενο οποιοδήποτε ποσό (1, 2, 5 $/€), δεν έχει σημασία το πόσο λίγο μπορεί να είναι. Δίνονται περισσότερες πληροφορίες και links για να κάνετε δωρεά στη διεύθυνση: ${normal_color}${urlgithub_wiki}/Contributing"
-	arr["ITALIAN",437]="Se ti è piaciuto lo script e l'hai trovato utile, puoi sostenere il progetto con una donazione. Attraverso PayPal (${normal_color}${mail}${pink_color}) o inviando una frazione di criptovaluta (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Piú informazioni e collegamenti diretti per realizzarla in: ${normal_color}${urlgithub_wiki}/Contributing"
+	arr["ITALIAN",437]="${pending_of_translation} Se ti è piaciuto lo script e l'hai trovato utile, puoi sostenere il progetto con una donazione. Attraverso Paypal (${normal_color}${mail}${pink_color}) o inviando una frazione di criptovaluta (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Piú informazioni e collegamenti diretti per realizzarla in: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["POLISH",437]="${pending_of_translation} Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi Paypal (${normal_color}${mail}${pink_color}) lub wysyłając ułamek kryptowaluty (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${urlgithub_wiki}/Contributing"
-	arr["GERMAN",437]="${pending_of_translation} Wenn Ihnen das Skript gefallen hat und Sie es nützlich fanden, können Sie das Projekt mit einer Spende unterstützen. Durch Paypal (${normal_color}${mail}${pink_color}) oder durch Senden eines Bruchteils der Kryptowährung (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Jeder noch so kleine Betrag (1, 2, 5 $/€) wird gut angenommen. Mehr Informationen und direkte Links, um es zu machen: ${normal_color}${urlgithub_wiki}/Contributing"
+	arr["GERMAN",437]="Wenn Ihnen das Skript gefallen hat und Sie es nützlich fanden, können Sie das Projekt mit einer Spende unterstützen. Durch Paypal (${normal_color}${mail}${pink_color}) oder durch Senden eines Bruchteils der Kryptowährung (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Jeder noch so kleine Betrag (1, 2, 5 $/€) wird gut angenommen. Mehr Informationen und direkte Links, um es zu machen: ${normal_color}${urlgithub_wiki}/Contributing"
 
 	arr["ENGLISH",438]="We are looking for translators to other languages. If you want to see airgeddon in your native language and you also know english, contact us. More information at: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["SPANISH",438]="Buscamos traductores para otros idiomas. Si quieres ver airgeddon en tu lengua materna y además sabes inglés, contáctanos. Más información en: ${normal_color}${urlgithub_wiki}/Contributing"
@@ -5342,7 +5342,7 @@ function language_strings() {
 	arr["GREEK",438]="Ψάχνουμε μεταφραστές για την υποστήριξη περισσότερων γλωσσών. Αν θέλετε να χρησιμοποιείτε το airgeddon στη μητρική σας γλώσσα, αλλά ξέρετε και αγγλικά, παρακαλούμε επικοινωνήστε μαζί μας. Περισσότερες πληροφορίες: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["ITALIAN",438]="Cerchiamo traduttori per le altre lingue. Se volete vedere airgeddon nella vostra lingua madre e conoscete anche l'inglese, non esitate a contattarci. Per maggiori informazioni: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["POLISH",438]="Szukamy tłumaczy na inne języki. Jeśli chcesz zobaczyć airgeddon w swoim ojczystym języku i znasz angielski, skontaktuj się z nami. Więcej informacji: ${normal_color}${urlgithub_wiki}/Contributing"
-	arr["GERMAN",438]="${pending_of_translation} Wir suchen Übersetzer für andere Sprachen. Wenn Sie airgeddon in Ihrer Muttersprache sehen und auch Englisch sprechen möchten, kontaktieren Sie uns. Weitere Informationen unter: ${normal_color}${urlgithub_wiki}/Contributing"
+	arr["GERMAN",438]="Wir suchen Übersetzer für andere Sprachen. Wenn Sie airgeddon in Ihrer Muttersprache sehen möchten, kontaktieren Sie uns. Weitere Informationen unter: ${normal_color}${urlgithub_wiki}/Contributing"
 
 	arr["ENGLISH",439]="${blue_color}You haven't selected any target, you'll be prompted to input data manually. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",439]="${blue_color}Se ha detectado que no tienes seleccionado ningún objetivo, tendrás que introducir los datos manualmente. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5353,7 +5353,7 @@ function language_strings() {
 	arr["GREEK",439]="${blue_color}Δεν έχετε επιλέξει κάποιο στόχο, θα σας ζητηθεί να εισάγετε τα δεδομένα χειροκίνητα. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",439]="${blue_color}Abbiamo rilevato che non è stato selezionato alcun obiettivo, è necessario immettere manualmente i dati. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",439]="${blue_color}Wykryto, że nie wybrano żadnych celów, konieczne będzie ręczne wprowadzanie danych. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
-	arr["GERMAN",439]="${pending_of_translation} ${blue_color}Wurde festgestellt, dass Sie kein Ziel ausgewählt haben, müssen Sie die Daten manuell eingeben. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
+	arr["GERMAN",439]="${blue_color}Es wurde festgestellt, dass Sie kein Ziel ausgewählt haben. Sie müssen die Daten manuell eingeben. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",440]="Aircrack trophy file generated successfully at [${normal_color}${aircrackpotenteredpath}${blue_color}]"
 	arr["SPANISH",440]="Fichero de trofeo aircrack generado con éxito en [${normal_color}${aircrackpotenteredpath}${blue_color}]"
@@ -5364,7 +5364,7 @@ function language_strings() {
 	arr["GREEK",440]="Το aircrack αρχείο τρόπαιο δημιουργήθηκε επιτυχώς [${normal_color}${aircrackpotenteredpath}${blue_color}]"
 	arr["ITALIAN",440]="Il file trofeo di aircrack è stato generato con successo in [${normal_color}${aircrackpotenteredpath}${blue_color}]"
 	arr["POLISH",440]="Plik trofeum aircrack został pomyślnie wygenerowany w [${normal_color}${aircrackpotenteredpath}${blue_color}]"
-	arr["GERMAN",440]="${pending_of_translation} Aircrack-Trophäendatei erfolgreich erstellt in [${normal_color}${aircrackpotenteredpath}${blue_color}]"
+	arr["GERMAN",440]="Aircrack-Trophäendatei erfolgreich erstellt in [${normal_color}${aircrackpotenteredpath}${blue_color}]"
 
 	arr["ENGLISH",441]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${aircrack_potpath}]"
 	arr["SPANISH",441]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${aircrack_potpath}]"
@@ -5375,7 +5375,7 @@ function language_strings() {
 	arr["GREEK",441]="Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${aircrack_potpath}]"
 	arr["ITALIAN",441]="Immettere il percorso dove memorizzare il file o premere [Enter] per accettare quello proposto di default ${normal_color}[${aircrack_potpath}]"
 	arr["POLISH",441]="Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${aircrack_potpath}]"
-	arr["GERMAN",441]="${pending_of_translation} Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${aircrack_potpath}]"
+	arr["GERMAN",441]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${aircrack_potpath}]"
 
 	arr["ENGLISH",442]="If you install ccze you'll see some parts of airgeddon in a colorized way with better aspect. It's not a requirement or a dependency, but it will improve the user experience"
 	arr["SPANISH",442]="Si instalas el paquete ccze podrás ver algunas partes de airgeddon colorizadas y con mejor aspecto. No es un requerimiento ni una dependencia, pero mejorará la experiencia de usuario"
@@ -5386,7 +5386,7 @@ function language_strings() {
 	arr["GREEK",442]="Αν εγκαταστήσετε το ccze θα δείτε μερικά κομμάτια του airgeddon, πολύχρωμα με καλύτερη εμφάνιση. Δεν είναι απαραίτητο dependency, αλλά θα βελτιώσει την εμπειρία του χρήστη"
 	arr["ITALIAN",442]="Se installi il pacchetto ccze vedrai alcune parti di airgeddon colorate e più belle. Non è un requisito né una dipendenza, ma migliorerà l'esperienza dell'utente"
 	arr["POLISH",442]="Jeśli zainstalujesz pakiet ccze, zobaczysz niektóre części airgeddon kolorowe i lepiej wygladajce. Nie jest to wymóg ani zależność, ale poprawi to komfort użytkowania"
-	arr["GERMAN",442]="${pending_of_translation} Wenn Sie das ccze-Paket installieren, sehen Sie einige Teile von airgeddon gefärbt und besser aussehend. Es ist keine Voraussetzung oder eine Abhängigkeit, aber es wird die Benutzererfahrung verbessern"
+	arr["GERMAN",442]="Wenn Sie das ccze-Paket installieren, sehen Sie einige Teile von airgeddon gefärbt und besser aussehend. Es ist keine Voraussetzung oder eine Abhängigkeit, aber es wird die Benutzererfahrung verbessern"
 
 	arr["ENGLISH",443]="Options and language menu"
 	arr["SPANISH",443]="Menú de opciones e idioma"
@@ -5397,7 +5397,7 @@ function language_strings() {
 	arr["GREEK",443]="Μενού επιλογών και γλώσσας"
 	arr["ITALIAN",443]="Menú opzioni e lingua"
 	arr["POLISH",443]="Opcje i menu językowe"
-	arr["GERMAN",443]="${pending_of_translation} Optionen und Sprachmenü"
+	arr["GERMAN",443]="Optionen und Sprachmenü"
 
 	arr["ENGLISH",444]="11. Options and language menu"
 	arr["SPANISH",444]="11. Menú de opciones e idioma"
@@ -5408,7 +5408,7 @@ function language_strings() {
 	arr["GREEK",444]="11. Μενού επιλογών και γλώσσας"
 	arr["ITALIAN",444]="11. Menú opzioni e lingua"
 	arr["POLISH",444]="11. Opcje i menu językowe"
-	arr["GERMAN",444]="${pending_of_translation} 11. Optionen und Sprachmenü"
+	arr["GERMAN",444]="11. Optionen und Sprachmenü"
 
 	arr["ENGLISH",445]="If you have ccze installed and are experiencing display errors or glitches on some windows, you should disable colorization in the option and language menu"
 	arr["SPANISH",445]="Si tienes instalado ccze y experimentas errores de visualización o parpadeos en algunas ventanas, desactiva la colorización en el menú de opciones e idioma"
@@ -5419,7 +5419,7 @@ function language_strings() {
 	arr["GREEK",445]="Εάν έχετε εγκαταστήσει το ccze και αντιμετωπίζετε σφάλματα εμφάνισης ή δυσλειτουργίες σε ορισμένα παράθυρα, θα πρέπει να απενεργοποιήσετε τον χρωματισμό στο μενού επιλογών και γλώσσας"
 	arr["ITALIAN",445]="Se hai installato ccze e vedi errori o alcune finestre tremolanti, disattiva la colorazione nel menú opzioni e lingua"
 	arr["POLISH",445]="Jeśli zainstalowano ccze i wystąpiły błędy wizualizacji lub migotania w niektórych oknach, powinieneś wyłączyć kolory w menu opcji i języka"
-	arr["GERMAN",445]="${pending_of_translation} Wenn Sie ccze installiert haben und in einigen Fenstern Anzeigefehler oder Flimmern auftreten, deaktivieren Sie die Einfärbung im Optionen- und Sprachmenü"
+	arr["GERMAN",445]="Wenn Sie ccze installiert haben und in einigen Fenstern Anzeigefehler oder Flimmern auftreten, deaktivieren Sie die Einfärbung im Optionen- und Sprachmenü"
 
 	arr["ENGLISH",446]="0.  Return to options menu"
 	arr["SPANISH",446]="0.  Volver al menú de opciones"
@@ -5430,7 +5430,7 @@ function language_strings() {
 	arr["GREEK",446]="0.  Επιστροφή στο μενού επιλογών"
 	arr["ITALIAN",446]="0.  Tornare al menú delle opzioni"
 	arr["POLISH",446]="0.  Wróć do menu opcji"
-	arr["GERMAN",446]="${pending_of_translation} 0.  Kehren Sie zum Optionsmenü zurück"
+	arr["GERMAN",446]="0.  um Optionsmenü zurückkehren"
 
 	arr["ENGLISH",447]="5.  Set permanently airgeddon's language to the current one"
 	arr["SPANISH",447]="5.  Cambiar permanentemente el idioma de airgeddon al actual"
@@ -5441,7 +5441,7 @@ function language_strings() {
 	arr["GREEK",447]="5.  Θέστε μόνιμα την τρέχουσα γλώσσα του airgeddon ως προεπιλεγμένη"
 	arr["ITALIAN",447]="5.  Modificare in modo permanente la lingua di airgeddon a quella attuale"
 	arr["POLISH",447]="5.  Trwale ustaw język airgeddon na aktualny"
-	arr["GERMAN",447]="${pending_of_translation} 5.  Ändern Sie permanent die Sprache von airgeddon in Strom"
+	arr["GERMAN",447]="5.  Ändern Sie permanent die Sprache von airgeddon zur aktuellen Sprache"
 
 	arr["ENGLISH",448]="If you installed airgeddon from a repository, you should not enable automatic updates. airgeddon will be updated when there is a new version in the repository"
 	arr["SPANISH",448]="Si instalaste airgeddon desde un repositorio, no deberías activar la actualización automática. airgeddon se actualizará cuando haya una nueva versión en el repositorio"
@@ -5452,7 +5452,7 @@ function language_strings() {
 	arr["GREEK",448]="Αν εγκαταστήσατε το airgeddon από κάποιο επίσημο αποθετήριο, δεν θα πρέπει να ενεργοποιήσετε τις αυτόματες ενημερώσεις. Το airgeddon θα ενημερωθεί όταν υπάρξει κάποια νέα έκδοση στο επίσημο αποθετήριο"
 	arr["ITALIAN",448]="Se è stato installato airgeddon da un repository, non si dovrebbe attivare l'aggiornamento automatico. airgeddon sará aggiornato quando ci sará una nuova versione nel repository"
 	arr["POLISH",448]="Jeśli zainstalowano airgeddon z repozytorium, nie należy włączać automatycznej aktualizacji. airgeddon zostanie zaktualizowany, gdy w repozytorium znajduje się nowa wersja"
-	arr["GERMAN",448]="${pending_of_translation} Wenn Sie airgeddon aus einem Repository installiert haben, sollten Sie das automatische Update nicht aktivieren. airgeddon wird aktualisiert, wenn eine neue Version im Repository vorhanden ist"
+	arr["GERMAN",448]="Wenn Sie airgeddon aus einem Repository installiert haben, sollten Sie das automatische Update nicht aktivieren. airgeddon wird aktualisiert, wenn eine neue Version im Repository vorhanden ist"
 
 	arr["ENGLISH",449]="2.  Enable automatic updates permanently"
 	arr["SPANISH",449]="2.  Habilitar permanentemente la actualización automática"
@@ -5463,7 +5463,7 @@ function language_strings() {
 	arr["GREEK",449]="2.  Ενεργοποιήστε μόνιμα τις αυτόματες ενημερώσεις"
 	arr["ITALIAN",449]="2.  Abilitare permanentemente l'aggiornamento automatico"
 	arr["POLISH",449]="2.  Trwale włącz automatyczną aktualizację"
-	arr["GERMAN",449]="${pending_of_translation} 2.  Aktivieren Sie die automatische Aktualisierung dauerhaft"
+	arr["GERMAN",449]="$2.  Aktivieren Sie die automatische Aktualisierung dauerhaft"
 
 	arr["ENGLISH",450]="3.  Enable colorization permanently (on some screen's output)"
 	arr["SPANISH",450]="3.  Habilitar permanentemente la colorización (en la salida de algunas pantallas)"
@@ -5474,7 +5474,7 @@ function language_strings() {
 	arr["GREEK",450]="3.  Ενεργοποιήστε μόνιμα τον χρωματισμό (σε κάποια σημεία)"
 	arr["ITALIAN",450]="3.  Abilitare permanentemente la colorazione (in alcuni schermi)"
 	arr["POLISH",450]="3.  Trwale włącz kolorowanie (na wyjściu niektórych ekranów)"
-	arr["GERMAN",450]="${pending_of_translation} 3.  Die Einfärbung dauerhaft aktivieren (in der Ausgabe einiger Bildschirme)"
+	arr["GERMAN",450]="3.  Die Einfärbung dauerhaft aktivieren (in der Ausgabe einiger Bildschirme)"
 
 	arr["ENGLISH",451]="Automatic updates: ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",451]="Actualizaciones automáticas: ${pink_color}Activadas${normal_color}"
@@ -5485,7 +5485,7 @@ function language_strings() {
 	arr["GREEK",451]="Αυτόματη ενημέρωση: ${pink_color}Ενεργοποιημένο${normal_color}"
 	arr["ITALIAN",451]="Aggiornamenti automatici: ${pink_color}Abilitati${normal_color}"
 	arr["POLISH",451]="Aktualizacje automatyczne: ${pink_color}Włączone${normal_color}"
-	arr["GERMAN",451]="${pending_of_translation} Automatische Updates: ${pink_color}Aktiviert${normal_color}"
+	arr["GERMAN",451]="Automatische Updates: ${pink_color}Aktiviert${normal_color}"
 
 	arr["ENGLISH",452]="Automatic updates: ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",452]="Actualizaciones automáticas: ${pink_color}Desactivadas${normal_color}"
@@ -5496,7 +5496,7 @@ function language_strings() {
 	arr["GREEK",452]="Αυτόματη ενημέρωση: ${pink_color}Απενεργοποιημένο${normal_color}"
 	arr["ITALIAN",452]="Aggiornamenti automatici: ${pink_color}Disabilitati${normal_color}"
 	arr["POLISH",452]="Aktualizacje automatyczne: ${pink_color}Wyłączone${normal_color}"
-	arr["GERMAN",452]="${pending_of_translation} Automatische Updates: ${pink_color}Deaktiviert${normal_color}"
+	arr["GERMAN",452]="Automatische Updates: ${pink_color}Deaktiviert${normal_color}"
 
 	arr["ENGLISH",453]="Colorization (on some screen's output): ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",453]="Colorización (en la salida de algunas pantallas): ${pink_color}Activada${normal_color}"
@@ -5507,7 +5507,7 @@ function language_strings() {
 	arr["GREEK",453]="Χρωματισμός (σε κάποια σημεία): ${pink_color}Ενεργοποιημένο${normal_color}"
 	arr["ITALIAN",453]="Colorazione (in alcuni schermi): ${pink_color}Abilitata${normal_color}"
 	arr["POLISH",453]="Kolorowanie (na wyjściu niektórych ekranów) ${pink_color}Włączone${normal_color}"
-	arr["GERMAN",453]="${pending_of_translation} Einfärbung (in der Ausgabe einiger Bildschirme): ${pink_color}Aktiviert${normal_color}"
+	arr["GERMAN",453]="Einfärbung (in der Ausgabe einiger Bildschirme): ${pink_color}Aktiviert${normal_color}"
 
 	arr["ENGLISH",454]="Colorization (on some screen's output): ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",454]="Colorización (en la salida de algunas pantallas): ${pink_color}Desactivada${normal_color}"
@@ -5518,7 +5518,7 @@ function language_strings() {
 	arr["GREEK",454]="Χρωματισμός (σε κάποια σημεία): ${pink_color}Απενεργοποιημένο${normal_color}"
 	arr["ITALIAN",454]="Colorazione (in alcuni schermi): ${pink_color}Disabilitata${normal_color}"
 	arr["POLISH",454]="Kolorowanie (na wyjściu niektórych ekranów) ${pink_color}Wyłączone${normal_color}"
-	arr["GERMAN",454]="${pending_of_translation} Einfärbung (in der Ausgabe einiger Bildschirme): ${pink_color}Deaktiviert${normal_color}"
+	arr["GERMAN",454]="Einfärbung (in der Ausgabe einiger Bildschirme): ${pink_color}Deaktiviert${normal_color}"
 
 	arr["ENGLISH",455]="2.  Disable automatic updates permanently"
 	arr["SPANISH",455]="2.  Deshabilitar permanentemente la actualización automática"
@@ -5529,7 +5529,7 @@ function language_strings() {
 	arr["GREEK",455]="2.  Απενεργοποιήστε μόνιμα τις αυτόματες ενημερώσεις"
 	arr["ITALIAN",455]="2.  Disattivare permanentemente gli aggiornamenti automatici"
 	arr["POLISH",455]="2.  Trwale wyłącz automatyczną aktualizację"
-	arr["GERMAN",455]="${pending_of_translation} 2.  Deaktivieren Sie die automatische Aktualisierung dauerhaft"
+	arr["GERMAN",455]="2.  Automatische Updates dauerhaft deaktivieren"
 
 	arr["ENGLISH",456]="3.  Disable colorization permanently (on some screen's output)"
 	arr["SPANISH",456]="3.  Deshabilitar permanentemente la colorización (en la salida de algunas pantallas)"
@@ -5540,7 +5540,7 @@ function language_strings() {
 	arr["GREEK",456]="3.  Απενεργοποιήστε μόνιμα τον χρωματισμό (σε κάποια σημεία)"
 	arr["ITALIAN",456]="3.  Disattivare permanentemente la colorazione (in alcuni schermi)"
 	arr["POLISH",456]="3.  Trwale wyłącz kolorowanie (na wyjściu niektórych ekranów)"
-	arr["GERMAN",456]="${pending_of_translation} 3.  Die Einfärbung dauerhaft deaktivieren (in der Ausgabe einiger Bildschirme)"
+	arr["GERMAN",456]="3.  Die Einfärbung dauerhaft deaktivieren (in der Ausgabe einiger Bildschirme)"
 
 	arr["ENGLISH",457]="${blue_color}Automatic updates are going to be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",457]="${blue_color}Se van a desactivar las actualizaciones automáticas. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5551,7 +5551,7 @@ function language_strings() {
 	arr["GREEK",457]="${blue_color}Οι αυτόματες ενημερώσεις πρόκειται να απενεργοποιηθούν. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",457]="${blue_color}Si stano per disattivare gli aggiornamenti automatici. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",457]="${blue_color}Aktualizacje automatyczne zostaną wyłączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
-	arr["GERMAN",457]="${pending_of_translation} ${blue_color}Automatische Updates werden deaktiviert. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
+	arr["GERMAN",457]="${blue_color}Automatische Updates werden deaktiviert. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",458]="${blue_color}Automatic updates are going to be enabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",458]="${blue_color}Se van a activar las actualizaciones automáticas. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5562,7 +5562,7 @@ function language_strings() {
 	arr["GREEK",458]="${blue_color}Οι αυτόματες ενημερώσεις πρόκειται να ενεργοποιηθούν. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",458]="${blue_color}Si stanno per attivare gli aggiornamenti automatici. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",458]="${blue_color}Automatyczne aktualizacje będą włączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
-	arr["GERMAN",458]="${pending_of_translation} ${blue_color}Automatische Updates werden aktiviert. ${green_color} Möchten Sie fortfahren? ${normal_color}${visual_choice}"
+	arr["GERMAN",458]="${blue_color}Automatische Updates werden aktiviert. ${green_color} Möchten Sie fortfahren? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",459]="If you installed airgeddon from a repository you shouldn't enable this option. airgeddon will be updated when the repositories do. If you continue, make sure you know what you are doing, or you could cause problems with update flow"
 	arr["SPANISH",459]="Si instalaste airgeddon desde un repositorio no deberías activar esta opción. airgeddon se actualizará cuando lo hagan los repositorios. Si continuas, asegúrate de saber bien lo que haces o podrías causar problemas con flujo de actualizaciones"
@@ -5573,7 +5573,7 @@ function language_strings() {
 	arr["GREEK",459]="Εάν εγκαταστήσατε το airgeddon από κάποιο επίσημο αποθετήριο, δεν πρέπει να ενεργοποιήσετε αυτή την επιλογή. Το airgeddon θα ενημερωθεί όταν ενημερωθούν και τα αποθετήρια. Αν συνεχίσετε, βεβαιωθείτε ότι γνωρίζετε τι κάνετε και ότι θα μπορεί να προκαλέσετε προβλήματα με τη ροή ενημέρωσης"
 	arr["ITALIAN",459]="Se airgeddon è stato installato da un repository non si dovrebbe attivare questa opzione. airgeddon sará aggiornato quando lo faranno i repository. Se continui, assicurati di sapere bene quello che fai o potrebbe causare problemi al flusso degli aggiornamenti"
 	arr["POLISH",459]="Jeśli zainstalowano airgeddon z repozytorium, nie należy włączać tej opcji. airgeddon zostanie zaktualizowany, gdy w repozytorium pojawi się nowa wersja. Jeśli kontynuujesz, upewnij się, że wiesz co robisz, bo to może spowodować problemy z aktualizacją"
-	arr["GERMAN",459]="${pending_of_translation} Wenn Sie airgeddon aus einem Repository installiert haben, sollten Sie diese Option nicht aktivieren. airgeddon wird aktualisiert, wenn die Repositories dies tun. Wenn Sie fortfahren, vergewissern Sie sich, dass Sie wissen, was Sie tun oder Probleme mit Updates verursachen können"
+	arr["GERMAN",459]="Wenn Sie airgeddon aus einem Repository installiert haben, sollten Sie diese Option nicht aktivieren. airgeddon wird aktualisiert, wenn die Repositories dies tun. Wenn Sie fortfahren, vergewissern Sie sich, dass Sie wissen, was Sie tun. Probleme können erscheinen"
 
 	arr["ENGLISH",460]="Automatic updates have been enabled"
 	arr["SPANISH",460]="Se han activado las actualizaciones automáticas"
@@ -5584,7 +5584,7 @@ function language_strings() {
 	arr["GREEK",460]="Οι αυτόματες ενημερώσεις έχουν ενεργοποιηθεί"
 	arr["ITALIAN",460]="Sono stati attivati gli aggiornamenti automatici"
 	arr["POLISH",460]="Automatyczne aktualizacje zostały włączone"
-	arr["GERMAN",460]="${pending_of_translation} Automatische Updates wurden aktiviert"
+	arr["GERMAN",460]="Automatische Updates wurden aktiviert"
 
 	arr["ENGLISH",461]="Automatic updates have been disabled"
 	arr["SPANISH",461]="Se han desactivado las actualizaciones automáticas"
@@ -5595,7 +5595,7 @@ function language_strings() {
 	arr["GREEK",461]="Οι αυτόματες ενημερώσεις έχουν απενεργοποιηθεί"
 	arr["ITALIAN",461]="Sono stati disattivati gli aggiornamenti automatici"
 	arr["POLISH",461]="Automatyczne aktualizacje zostały wyłączone"
-	arr["GERMAN",461]="${pending_of_translation} Automatische Updates wurden deaktiviert"
+	arr["GERMAN",461]="Automatische Updates wurden deaktiviert"
 
 	arr["ENGLISH",462]="${blue_color}Colorization (on some screen's output) is going to be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",462]="${blue_color}Se va a desactivar la colorización (en la salida de algunas pantallas). ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5606,7 +5606,7 @@ function language_strings() {
 	arr["GREEK",462]="${blue_color}Ο χρωματισμός (σε κάποια σημεία) πρόκειται να απενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",462]="${blue_color}La colorazione sará disattivata (in alcuni schermi). ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",462]="${blue_color}Koloryzacja zostanie wyłączona (na wyjściu niektórych ekranów). ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
-	arr["GERMAN",462]="${pending_of_translation} ${blue_color}Die Einfärbung wird deaktiviert (in der Ausgabe einiger Bildschirme). ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
+	arr["GERMAN",462]="${blue_color}Die Einfärbung wird deaktiviert (in der Ausgabe einiger Bildschirme). ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",463]="${blue_color}Colorization (on some screen's output) is going to be enabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",463]="${blue_color}Se va a activar la colorización (en la salida de algunas pantallas). ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5617,7 +5617,7 @@ function language_strings() {
 	arr["GREEK",463]="${blue_color}Ο χρωματισμός (σε κάποια σημεία) πρόκειται να ενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",463]="${blue_color}La colorazione sará attivata (in alcuni schermi). ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",463]="${blue_color}Koloryzacja zostanie włączona (na wyjściu niektórych ekranów). ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
-	arr["GERMAN",463]="${pending_of_translation} ${blue_color}Es aktiviert die Einfärbung (in der Ausgabe einiger Bildschirme). ${green_color}Willst du weitermachen? ${normal_color}${visual_choice}"
+	arr["GERMAN",463]="${blue_color}Die Einfärbung wird aktiviert (in der Ausgabe einiger Bildschirme). ${green_color}Wollen Sie fortfahren? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",464]="You don't have the ccze package installed so any change on this option will have no effect until you install it"
 	arr["SPANISH",464]="No tienes instalado el paquete ccze por lo que cualquier cambio que realices sobre esta opción no tendrá efecto hasta que lo instales"
@@ -5628,7 +5628,7 @@ function language_strings() {
 	arr["GREEK",464]="Δεν έχετε εγκατεστημένο το πακέτο ccze, οπότε οποιαδήποτε αλλαγή σε αυτήν την επιλογή δεν θα έχει αποτέλεσμα μέχρι να το εγκαταστήσετε"
 	arr["ITALIAN",464]="Non è stato installato il pacchetto ccze per cui tutte le modifiche apportate su questa opzione non avranno alcun effetto finché non si installa"
 	arr["POLISH",464]="Nie masz zainstalowanego pakietu ccze, więc wszelkie zmiany wprowadzone w tej opcji nie będą obowiązywać dopóki nie zostanie zainstalowany"
-	arr["GERMAN",464]="${pending_of_translation} Sie haben das ccze-Paket nicht installiert, sodass Änderungen, die Sie an dieser Option vornehmen, erst nach der Installation wirksam werden"
+	arr["GERMAN",464]="Sie haben das ccze-Paket nicht installiert, sodass Änderungen, die Sie an dieser Option vornehmen, erst nach der Installation wirksam werden"
 
 	arr["ENGLISH",465]="Colorization has been enabled"
 	arr["SPANISH",465]="Se ha activado la colorización"
@@ -5639,7 +5639,7 @@ function language_strings() {
 	arr["GREEK",465]="Ο χρωματισμός ενεργοποιήθηκε"
 	arr["ITALIAN",465]="La colorazione è stata abilitata"
 	arr["POLISH",465]="Koloryzacja została aktywowana"
-	arr["GERMAN",465]="${pending_of_translation} Die Einfärbung wurde aktiviert"
+	arr["GERMAN",465]="Die Einfärbung wurde aktiviert"
 
 	arr["ENGLISH",466]="Colorization has been disabled"
 	arr["SPANISH",466]="Se ha desactivado la colorización"
@@ -5650,7 +5650,7 @@ function language_strings() {
 	arr["GREEK",466]="Ο χρωματισμός απενεργοποιήθηκε"
 	arr["ITALIAN",466]="La colorazione è stata disabilitata"
 	arr["POLISH",466]="Koloryzacja została wyłączona"
-	arr["GERMAN",466]="${pending_of_translation} Die Einfärbung wurde deaktiviert"
+	arr["GERMAN",466]="Die Einfärbung wurde deaktiviert"
 
 	arr["ENGLISH",467]="4.  Enable startup language autodetection permanently"
 	arr["SPANISH",467]="4.  Habilitar permanentemente la autodetección de idioma al inicio"
@@ -5661,7 +5661,7 @@ function language_strings() {
 	arr["GREEK",467]="4.  Ενεργοποίηση του αυτόματου εντοπισμού γλώσσας κατά την εκκίνηση μόνιμα"
 	arr["ITALIAN",467]="4.  Abilitare permanentemente il rilevamento automatico della lingua all'inizio"
 	arr["POLISH",467]="4.  Trwale włącz automatyczne wykrywanie języka podczas uruchamiania"
-	arr["GERMAN",467]="${pending_of_translation} 4.  Die automatische Erkennung der Sprache beim Start dauerhaft aktivieren"
+	arr["GERMAN",467]="4.  Automatische Spracherkennung beim Start dauerhaft aktivieren"
 
 	arr["ENGLISH",468]="4.  Disable startup language autodetection permanently"
 	arr["SPANISH",468]="4.  Deshabilitar permanentemente la autodetección de idioma al inicio"
@@ -5672,7 +5672,7 @@ function language_strings() {
 	arr["GREEK",468]="4.  Απενεργοποίηση του αυτόματου εντοπισμού γλώσσας κατά την εκκίνηση μόνιμα"
 	arr["ITALIAN",468]="4.  Disattivare permanentemente il rilevamento automatico della lingua all'inizio"
 	arr["POLISH",468]="4.  Trwale wyłącz autodetekcję języka podczas uruchamiania"
-	arr["GERMAN",468]="${pending_of_translation} 4.  Die automatische Erkennung der Sprache beim Start dauerhaft deaktivieren"
+	arr["GERMAN",468]="4.  Automatische Spracherkennung beim Start dauerhaft deaktivieren"
 
 	arr["ENGLISH",469]="${blue_color}Startup language autodetection will be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",469]="${blue_color}Se va a deshabilitar la autodetección de idioma al inicio. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5683,7 +5683,7 @@ function language_strings() {
 	arr["GREEK",469]="${blue_color}Ο αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση θα απενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",469]="${blue_color}Si sta per disabilitare il rilevamento automatico della lingua all'inizio ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",469]="${blue_color}Autodetekcja języka zostanie wyłączona podczas uruchamiania. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
-	arr["GERMAN",469]="${pending_of_translation} ${blue_color}Es wird die automatische Erkennung der Sprache am Anfang deaktivieren. ${green_color}Willst du weitermachen? ${normal_color}${visual_choice}"
+	arr["GERMAN",469]="${blue_color}Die automatische Spracherkennung am Anfang wird deaktiviert. ${green_color}Wollen Sie weitermachen? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",470]="${blue_color}Startup language autodetection will be enabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",470]="${blue_color}Se va a habilitar la autodetección de idioma al inicio. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5694,7 +5694,7 @@ function language_strings() {
 	arr["GREEK",470]="${blue_color}Ο αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση θα ενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",470]="${blue_color}Si sta per abilitare il rilevamento automatico della lingua all'inizio. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",470]="${blue_color}Autodetekcja języka podczas uruchamiania zostanie włączona. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
-	arr["GERMAN",470]="${pending_of_translation} ${blue_color}Es wird die automatische Spracherkennung zu Beginn aktiviert. ${green_color}Willst du weitermachen? ${normal_color}${visual_choice}"
+	arr["GERMAN",470]="${blue_color}Die automatische Spracherkennung wird zu Beginn aktiviert. ${green_color}Wollen Sie weitermachen? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",471]="Any permanent change of language you have will be lost on the next start if you enable this option!!"
 	arr["SPANISH",471]="Cualquier cambio permanente de idioma que tenga se perderá en el siguiente inicio si activa esta opción!!"
@@ -5705,7 +5705,7 @@ function language_strings() {
 	arr["GREEK",471]="Οποιαδήποτε μόνιμη αλλαγή της γλώσσας θα χαθεί κατά την επόμενη εκκίνηση, αν ενεργοποιήσετε αυτή την επιλογή!!"
 	arr["ITALIAN",471]="Qualsiasi cambio permanente di lingua si perderá nel prossimo inizio se si attiva questa opzione!!"
 	arr["POLISH",471]="Każda trwała zmiana języka zostanie utracona podczas następnego startu, jeśli aktywujesz tę opcję!!"
-	arr["GERMAN",471]="${pending_of_translation} Jeder permanente Sprachwechsel, den Sie haben, wird beim nächsten Start verloren gehen, wenn Sie diese Option aktivieren!!"
+	arr["GERMAN",471]="Jeder permanente Sprachwechsel, den Sie haben, wird beim nächsten Start verloren gehen, wenn Sie diese Option aktivieren!!"
 
 	arr["ENGLISH",472]="Startup language autodetection has been enabled"
 	arr["SPANISH",472]="Se ha activado la autodetección de idioma al inicio"
@@ -5716,7 +5716,7 @@ function language_strings() {
 	arr["GREEK",472]="Ο αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση έχει ενεργοποιηθεί"
 	arr["ITALIAN",472]="Il rilevamento automatico della lingua all'inizio è abilitato"
 	arr["POLISH",472]="Autodetekcja języka podczas uruchamiania została aktywowana"
-	arr["GERMAN",472]="${pending_of_translation} Die automatische Spracherkennung wurde beim Start aktiviert"
+	arr["GERMAN",472]="Die automatische Spracherkennung am Start wurde aktiviert"
 
 	arr["ENGLISH",473]="Startup language autodetection has been disabled"
 	arr["SPANISH",473]="Se ha desactivado la autodetección de idioma al inicio"
@@ -5727,7 +5727,7 @@ function language_strings() {
 	arr["GREEK",473]="Ο αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση έχει απενεργοποιηθεί"
 	arr["ITALIAN",473]="È stato disattivato il rilevamento automatico della lingua all'inizio"
 	arr["POLISH",473]="Autodetekcja języka podczas uruchamiania została wyłączona"
-	arr["GERMAN",473]="${pending_of_translation} Die automatische Spracherkennung wurde beim Start deaktiviert"
+	arr["GERMAN",473]="Die automatische Spracherkennung am Start wurde deaktiviert"
 
 	arr["ENGLISH",474]="Startup language autodetection: ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",474]="Autodetección de idioma al inicio: ${pink_color}Activada${normal_color}"
@@ -5738,7 +5738,7 @@ function language_strings() {
 	arr["GREEK",474]="Αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση: ${pink_color}Ενεργοποιημένο${normal_color}"
 	arr["ITALIAN",474]="Rilevamento automatico della lingua all'inizio: ${pink_color}Abilitato${normal_color}"
 	arr["POLISH",474]="Automatyczne wykrywanie języka podczas uruchamiania: ${pink_color}Aktywowane${normal_color}"
-	arr["GERMAN",474]="${pending_of_translation} Automatische Spracherkennung am Anfang: ${pink_color}Aktiviert${normal_color}"
+	arr["GERMAN",474]="Automatische Spracherkennung am Start: ${pink_color}Aktiviert${normal_color}"
 
 	arr["ENGLISH",475]="Startup language autodetection: ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",475]="Autodetección de idioma al inicio: ${pink_color}Desactivada${normal_color}"
@@ -5749,7 +5749,7 @@ function language_strings() {
 	arr["GREEK",475]="Αυτόματος εντοπισμός γλώσσας κατά την εκκίνηση: ${pink_color}Απενεργοποιημένο${normal_color}"
 	arr["ITALIAN",475]="Rilevamento automatico della lingua all'inizio: ${pink_color}Disabilitato${normal_color}"
 	arr["POLISH",475]="Automatyczne wykrywanie języka podczas uruchamiania: ${pink_color}Niepełnosprawnych${normal_color}"
-	arr["GERMAN",475]="${pending_of_translation} Automatische Spracherkennung am Anfang: ${pink_color}Deaktiviert${normal_color}"
+	arr["GERMAN",475]="Automatische Spracherkennung am Start: ${pink_color}Deaktiviert${normal_color}"
 
 	arr["ENGLISH",476]="A graphical X window system has not been detected. If you already have one, check it's working properly. It's essential for airgeddon. The script can't continue"
 	arr["SPANISH",476]="No se ha detectado un sistema gráfico de ventanas X. Si lo tienes, comprueba su que esté funcionando correctamente. Es esencial para airgeddon. El script no puede continuar"
@@ -5760,7 +5760,7 @@ function language_strings() {
 	arr["GREEK",476]="Δεν έχει εντοπιστεί κάποιο γραφικό σύστημα παραθύρων X. Αν έχετε ήδη ένα, ελέγξτε ότι λειτουργεί σωστά. Είναι απαραίτητο για το airgeddon. Το script δεν μπορεί να συνεχίσει"
 	arr["ITALIAN",476]="Non è stato rilevato un server X grafico, se è presente controllare il corretto funzionamento. È essenziale per airgeddon. Lo script non può continuare"
 	arr["POLISH",476]="Nie wykryto graficznego systemu X Window. Jeśli go masz, sprawdź czy działa poprawnie. Jest niezbędne dla airgeddon. Skrypt nie może kontynuować"
-	arr["GERMAN",476]="${pending_of_translation} Es wurde kein Grafiksystem von Window X erkannt. Wenn Sie es haben, prüfen Sie, ob es korrekt funktioniert. Es ist wichtig für airgeddon. Das Skript kann nicht fortgesetzt werden"
+	arr["GERMAN",476]="Kein X Window-Grafiksystem wurde erkannt. Wenn Sie es haben, prüfen Sie, ob es richtig funktioniert. Es ist für airgeddon sehr wichtig. Das Skript kann nicht weiterfahren"
 
 	arr["ENGLISH",477]="The options in this menu containing the word \"permanently\" modify airgeddon to save the settings for the next time that is to be launched. However, you can always return to this menu to change the value of the option again"
 	arr["SPANISH",477]="Las opciones de este menú que contienen la palabra \"permanentemente\", modifican airgeddon para que incluso la siguiente vez que sea iniciado siga guardando la configuración. No obstante, siempre puedes volver a este menú a cambiar de nuevo el valor de la opción"
@@ -5771,7 +5771,7 @@ function language_strings() {
 	arr["GREEK",477]="Οι επιλογές σε αυτό το μενού που περιέχουν τη λέξη \"μόνιμα\" τροποποιούν το airgeddon ώστε να αποθηκεύει τις ρυθμίσεις για την επόμενη φορά. Ωστόσο, μπορείτε πάντα να επιστρέψετε σε αυτό το μενού για να αλλάξετε ξανά την τιμή της επιλογής"
 	arr["ITALIAN",477]="Le opzioni di questo menú che contengono la parola \"permanentemente\" modificano airgeddon in modo che anche la volta successiva che viene avviato continui con la configurazione salvata. Tuttavia, si può sempre tornare a questo menú per cambiare di nuovo il valore dell'opzione"
 	arr["POLISH",477]="Opcje w tym menu, które zawierają słowo \"trwale\" zmodyfikują airgeddon tak, że nawet przy następnym uruchomieniu będą zapisane. Jednak zawsze możesz wrócić do tego menu, aby ponownie zmienić ustawienia"
-	arr["GERMAN",477]="${pending_of_translation} Die Optionen dieses Menüs, die das Wort \"dauerhaft\" enthalten, modifizieren airgeddon so, dass auch beim nächsten Start die Konfiguration gespeichert wird. Sie können jedoch jederzeit zu diesem Menü zurückkehren, um den Wert der Option erneut zu ändern"
+	arr["GERMAN",477]="Die Optionen dieses Menüs, die das Wort \"dauerhaft\" enthalten, modifizieren airgeddon so, dass auch beim nächsten Start die Konfiguration gespeichert wird. Sie können jedoch jederzeit zu diesem Menü zurückkehren, um den Wert der Option erneut zu ändern"
 
 	arr["ENGLISH",478]="${blue_color}Language is going to be set permanently to the current one, so on the next start of airgeddon it will be used directly. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",478]="${blue_color}Se va a cambiar permanentemente el idioma al actual para que al siguiente inicio de airgeddon este sea el idioma en el que arranque directamente. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5782,7 +5782,7 @@ function language_strings() {
 	arr["GREEK",478]="${blue_color}Η τρέχουσα γλώσσα πρόκειται να τεθεί μόνιμα ως προεπιλεγμένη, ώστε κατά την επόμενη εκκίνηση του airgeddon θα χρησιμοποιηθεί κατ' ευθείαν αυτή. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",478]="${blue_color}Sarà modificata in modo permanente la lingua corrente in modo che al prossimo avvio di airgeddon questa sia la lingua di avvio. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",478]="${blue_color}To na stałe zmieni język na aktualny, tak aby był ustawiony przy następnym uruchomieniu airgeddon. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
-	arr["GERMAN",478]="${pending_of_translation} ${blue_color}Die aktuelle Sprache wird permanent geändert, so dass der nächste Start von airgeddon die Sprache ist, in der es direkt startet. ${green_color}Willst du weitermachen? ${normal_color}${visual_choice}"
+	arr["GERMAN",478]="${blue_color}Die aktuelle Sprache wird permanent geändert, so dass der nächste Start von airgeddon in diese Sprache direkt startet. ${green_color}Möchten Sie weitermachen? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",479]="This change conflicts with the startup language autodetection which is currently enabled. It will be disabled automatically in order to perform the change"
 	arr["SPANISH",479]="Este cambio entra en conflicto con la autodetección del idioma al inicio que en este momento está activada. Se desactivará automáticamente para poder realizar el cambio"
@@ -5793,7 +5793,7 @@ function language_strings() {
 	arr["GREEK",479]="Αυτή η αλλαγή έρχεται σε σύγκρουση με τoν αυτόματo εντοπισμό της γλώσσας εκκίνησης, ο οποίος είναι αυτή τη στιγμή ενεργοποιημένος. Θα απενεργοποιηθεί αυτόματα για να πραγματοποιηθεί η αλλαγή αυτή"
 	arr["ITALIAN",479]="Questo cambio è in conflitto con il rilevamento automatico di lingua di inizio che è attualmente attivo. Esso viene disattivato automaticamente per poter fare il cambio"
 	arr["POLISH",479]="Ta zmiana jest sprzeczna z automatyczną detekcją języka na początku, która jest aktualnie aktywna. Zostanie ona automatycznie deazktywowana w celu wprowadzenia zmian"
-	arr["GERMAN",479]="${pending_of_translation} Diese Änderung steht im Konflikt mit der automatischen Erkennung der Sprache, die zu diesem Zeitpunkt am Anfang aktiviert ist. Es wird automatisch deaktiviert, um die Änderung vorzunehmen"
+	arr["GERMAN",479]="Diese Änderung steht im Konflikt mit der automatischen Spracherkennung, die zu diesem Zeitpunkt am Anfang aktiviert ist. Es wird automatisch deaktiviert, um die Änderung vorzunehmen"
 
 	arr["ENGLISH",480]="Current language is the same of permanent language already set. No changes will be done"
 	arr["SPANISH",480]="El idioma actual es el mismo que ya está puesto como permanente. No se realizarán cambios"
@@ -5804,7 +5804,7 @@ function language_strings() {
 	arr["GREEK",480]="Η τρέχουσα γλώσσα είναι ίδια με τη μόνιμη γλώσσα που έχει οριστεί ήδη. Δεν θα γίνει καμία αλλαγή"
 	arr["ITALIAN",480]="La lingua è la stessa che è giá impostata come permanente. Nessuna modifica sará effettuata"
 	arr["POLISH",480]="Obecny język jest taki sam jak ten, który został już ustawiony jako stały. Nie zostaną wprowadzone żadne zmiany"
-	arr["GERMAN",480]="${pending_of_translation} Die aktuelle Sprache ist dieselbe, die bereits als permanent festgelegt wurde. Es werden keine Änderungen vorgenommen"
+	arr["GERMAN",480]="Die aktuelle Sprache ist dieselbe, die bereits als permanent festgelegt wurde. Es werden keine Änderungen vorgenommen"
 
 	arr["ENGLISH",481]="Language set to the current one permanently"
 	arr["SPANISH",481]="Idioma cambiado al actual permanentemente"
@@ -5815,7 +5815,7 @@ function language_strings() {
 	arr["GREEK",481]="Τέθηκε μόνιμα η τρέχουσα γλώσσα"
 	arr["ITALIAN",481]="Lingua cambiata a quella attuale permanentemente"
 	arr["POLISH",481]="Język trwale zmienił się na aktualny"
-	arr["GERMAN",481]="${pending_of_translation} Die Sprache wurde permanent in den aktuellen Zustand geändert"
+	arr["GERMAN",481]="Die Sprache wurde permanent geändert"
 
 	arr["ENGLISH",482]="8.  Italian"
 	arr["SPANISH",482]="8.  Italiano"
@@ -5826,7 +5826,7 @@ function language_strings() {
 	arr["GREEK",482]="8.  Ιταλικά"
 	arr["ITALIAN",482]="8.  Italiano"
 	arr["POLISH",482]="8.  Włoski"
-	arr["GERMAN",482]="${pending_of_translation} 8.  Italienisch"
+	arr["GERMAN",482]="8.  Italienisch"
 
 	arr["ENGLISH",483]="Language changed to Italian"
 	arr["SPANISH",483]="Idioma cambiado a Italiano"
@@ -5837,7 +5837,7 @@ function language_strings() {
 	arr["GREEK",483]="Η γλώσσα άλλαξε στα Ιταλικά"
 	arr["ITALIAN",483]="Lingua cambiata in Italiano"
 	arr["POLISH",483]="Zmieniono język na Włoski"
-	arr["GERMAN",483]="${pending_of_translation} Die Sprache wurde auf Italienisch geändert"
+	arr["GERMAN",483]="ie Sprache wurde auf Italienisch geändert"
 
 	arr["ENGLISH",484]="Root permissions successfully detected"
 	arr["SPANISH",484]="Permisos de root correctamente detectados"
@@ -5848,7 +5848,7 @@ function language_strings() {
 	arr["GREEK",484]="Τα δικαιώματα root έχουν παραχωρηθεί επιτυχώς"
 	arr["ITALIAN",484]="I permessi di root sono stati rilevati correttamente"
 	arr["POLISH",484]="Uprawnienia root zostały prawidłowo wykryte"
-	arr["GERMAN",484]="${pending_of_translation} Richtig erkannte root-Berechtigungen"
+	arr["GERMAN",484]="Richtig erkannte root-Berechtigungen"
 
 	arr["ENGLISH",485]="${blue_color}Some PINs have been added calculated using the algorithms (ComputePIN, EasyBox, etc.), however you can add one more (Arcadyan). Calculating it requires certain data and a background scan will have to be performed. The process may be very slow. ${green_color}Do you want to proceed with the calculation to add it? ${normal_color}${visual_choice}"
 	arr["SPANISH",485]="${blue_color}Se han añadido algunos PINs calculados por algoritmos (ComputePIN, EasyBox, etc.), pero aún se puede añadir uno más (Arcadyan). Calcularlo requiere ciertos datos y habrá que realizar un escaneo en segundo plano. Es posible que el proceso sea muy lento. ${green_color}¿Quieres proceder con el cálculo para añadirlo? ${normal_color}${visual_choice}"
@@ -5859,7 +5859,7 @@ function language_strings() {
 	arr["GREEK",485]="${blue_color}Έχουν προστεθεί ορισμένοι κωδικοί PIN υπολογισμένοι με τους αλγόριθμους (ComputePIN, EasyBox, κτλπ.), μπορείτε όμως να προσθέσετε άλλον έναν κωδικό (Arcadyan). Ο υπολογισμός του απαιτεί ορισμένα δεδομένα και θα πρέπει να πραγματοποιηθεί κάποιο scan στο background. Η διαδικασία αυτή μπορεί να αργοπορήσει. ${green_color}Θέλετε να συνεχίσετε με τον υπολογισμό του και να τον προσθέσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",485]="${blue_color}Sono stati aggiunti alcuni PIN calcolati da algoritmi (ComputePIN, EasyBox, etc.), ma è possibile aggiungerne ancora uno (Arcadyan). Il calcolo richiede alcuni dati e deve essere eseguita una scansione in secondo piano. Il processo può essere molto lento. ${green_color}Vuoi procedere con il calcolo per aggiungerlo? ${normal_color}${visual_choice}"
 	arr["POLISH",485]="${blue_color}Niektóre kody PIN zostały dodane obliczone algorytmami (ComputePIN, EasyBox, itd.) ale można jeszcze dodać jeden (Arcadyan). Obliczanie go wymaga pewnych danych oraz będzie musiało zostać wykonane skanowanie w tle. Proces ten może być bardzo powolny. ${green_color}Czy chcesz kontynuować obliczenie, aby go dodać? ${normal_color}${visual_choice}"
-	arr["GERMAN",485]="${pending_of_translation} ${blue_color}Einige von Algorithmen berechnete PINs (ComputePIN, EasyBox usw.) wurden hinzugefügt, aber es kann noch eine weitere hinzugefügt werden (Arcadyan). Die Berechnung erfordert bestimmte Daten und ein Scan im Hintergrund muss durchgeführt werden. Es ist möglich, dass der Prozess sehr langsam ist. ${green_color} Möchten Sie mit der Berechnung fortfahren, um sie hinzuzufügen? ${normal_color}${visual_choice}"
+	arr["GERMAN",485]="${blue_color}Einige von Algorithmen berechnete PINs (ComputePIN, EasyBox usw.) wurden hinzugefügt, aber es kann noch eine weitere hinzugefügt werden (Arcadyan). Die Berechnung erfordert bestimmte Daten und ein Scan im Hintergrund muss durchgeführt werden. Es ist möglich, dass der Prozess sehr langsam ist. ${green_color} Möchten Sie mit der Berechnung fortfahren, um sie hinzuzufügen? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",486]="It's not possible to generate PIN with Arcadyan algorithm. To be able to do it, update \"wash\" (included in reaver package) to a newer version including the necessary \"-j\" option (v${minimum_wash_json_version})"
 	arr["SPANISH",486]="No es posible generar el PIN con el algoritmo Arcadyan. Para poder hacerlo actualice \"wash\" (incluido en el paquete reaver) a una versión superior que tenga la necesaria opción \"-j\" (v${minimum_wash_json_version})"
@@ -5870,7 +5870,7 @@ function language_strings() {
 	arr["GREEK",486]="Δεν είναι δυνατό να δημιουργηθεί PIN με τον αλγόριθμο Arcadyan. Για να το κάνετε αυτό, ενημερώστε το \"wash\" (περιλαμβάνεται στο πακέτο του reaver) σε νεότερη έκδοση, συμπεριλαμβανομένης της απαραίτητης επιλογής \"-j\" (v${minimum_wash_json_version})"
 	arr["ITALIAN",486]="Non è possibile generare il PIN con l'algoritmo Arcadyan. Per effettuare questa operazione, aggiornare \"wash\" (incluso nel pacchetto reaver) a una versione più nuova che disponga dell'opzione necessaria \"-j\" (v${minimum_wash_json_version})"
 	arr["POLISH",486]="Nie jest możliwe wygenerowanie kodu PIN za pomocą algorytmu Arcadyan. Aby to zrobić, uaktualnij \"wash\" (zawarty w pakiecie reaver) do wyższej wersji, która wspiera opcję \"-j\" (v${minimum_wash_json_version})"
-	arr["GERMAN",486]="${pending_of_translation} Es ist nicht möglich, die PIN mit dem Arcadyan-Algorithmus zu generieren. Aktualisieren Sie dazu \"wash\" (im Reaver-Paket enthalten) auf eine höhere Version mit der erforderlichen Option \"-j\" (v${minimum_wash_json_version})"
+	arr["GERMAN",486]="Es ist nicht möglich, die PIN mit dem Arcadyan-Algorithmus zu generieren. Aktualisieren Sie dazu \"wash\" (im reaver-Paket enthalten) auf eine höhere Version mit der erforderlichen Option \"-j\" (v${minimum_wash_json_version})"
 
 	arr["ENGLISH",487]="PIN generated using Arcadyan algorithm (${normal_color}${arcadyan_pin}${yellow_color})"
 	arr["SPANISH",487]="Se ha generado el PIN con el algoritmo Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
@@ -5881,7 +5881,7 @@ function language_strings() {
 	arr["GREEK",487]="Το PIN δημιουργήθηκε με τον αλγόριθμο Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
 	arr["ITALIAN",487]="Il PIN è stato generato con l'algoritmo Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
 	arr["POLISH",487]="PIN został wygenerowany za pomocą algorytmu Arcadyan (${normal_color}${arcadyan_pin}${yellow_color})"
-	arr["GERMAN",487]="${pending_of_translation} Die PIN wurde mit dem Arcadyan-Algorithmus generiert  (${normal_color}${arcadyan_pin}${yellow_color})"
+	arr["GERMAN",487]="Die PIN wurde mit dem Arcadyan-Algorithmus generiert  (${normal_color}${arcadyan_pin}${yellow_color})"
 
 	arr["ENGLISH",488]="PIN can't be generated using Arcadyan algorithm. Failed to collect a complete \"probe\" response from the access point. Probably because of low signal quality"
 	arr["SPANISH",488]="No se ha podido generar el PIN con el algoritmo Arcadyan. No se ha podido recoger una respuesta \"probe\" completa del punto de acceso. Probablemente porque la señal no es buena"
@@ -5892,7 +5892,7 @@ function language_strings() {
 	arr["GREEK",488]="Το PIN δεν μπορεί να δημιουργηθεί χρησιμοποιώντας τον αλγόριθμο Arcadyan. Δεν ήταν δυνατή η συλλογή πλήρους \"probe\" response από το σημείο πρόσβασης. Πιθανόν επειδή το σήμα είναι χαμηλό"
 	arr["ITALIAN",488]="Impossibile generare il PIN con l'algoritmo Arcadyan. Impossibile raccogliere una risposta \"probe\" completa dal punto di accesso. Probabilmente perché il segnale non è buono"
 	arr["POLISH",488]="Nie można wygenerować kodu PIN za pomocą algorytmu Arcadyan. Nie udało się zebrać kompletnej odpowiedzi \"probe\" z punktu dostępu. Prawdopodobnie dlatego, że pozion sygnału jest słaby"
-	arr["GERMAN",488]="${pending_of_translation} Die PIN konnte nicht mit dem Arcadyan-Algorithmus generiert werden. Es konnte keine vollständige Antwort \"probe\" vom Zugriffspunkt gesammelt werden. Wahrscheinlich, weil das Signal nicht gut ist"
+	arr["GERMAN",488]="Die PIN konnte nicht mit dem Arcadyan-Algorithmus generiert werden. Keine vollständige Antwort \"probe\" vom Zugriffspunkt konnte gesammelt werden. Wahrscheinlich, weil das Signal nicht gut genug ist"
 
 	arr["ENGLISH",489]="Attempting to collect a complete \"probe\" response from the target access point. This process can take up to 4 minutes..."
 	arr["SPANISH",489]="Intentando recoger una respuesta \"probe\" completa del punto de acceso objetivo. Este proceso puede durar hasta 4 minutos..."
@@ -5903,7 +5903,7 @@ function language_strings() {
 	arr["GREEK",489]="Γίνεται προσπάθεια συλλογής πλήρους \"probe\" response από το σημείο πρόσβασης (στόχος). Αυτή η διαδικασία μπορεί να διαρκέσει έως και 4 λεπτά..."
 	arr["ITALIAN",489]="Cercando di raccogliere una risposta \"probe\" completa dal punto di accesso obiettivo. Questo processo può richiedere fino a 4 minuti..."
 	arr["POLISH",489]="Próba zebrania kompletnej odpowiedzi \"probe\" z docelowego punktu dostępu. Proces ten może potrwać do 4 minut..."
-	arr["GERMAN",489]="${pending_of_translation} Versuch, eine vollständige \"probe\"-Antwort vom Zielzugriffspunkt zu sammeln. Dieser Prozess kann bis zu 4 Minuten dauern..."
+	arr["GERMAN",489]="Versuch, eine vollständige \"probe\"-Antwort vom Zielzugriffspunkt zu sammeln. Dieser Prozess kann bis zu 4 Minuten dauern..."
 
 	arr["ENGLISH",490]="The Arcadyan algorithm needs a very specific data to calculate the PIN (the serial number of the access point). Getting this data can take a lot of time. You can optionally choose to try to generate it. This generated PIN is very useful in networks of type Orange-XXXX"
 	arr["SPANISH",490]="El algoritmo Arcadyan necesita un dato muy concreto para poder calcular el PIN (el número de serie del punto de acceso). Obtener este dato puede llevar bastante tiempo. Podrás elegir opcionalmente intentar generarlo. Este PIN generado es muy útil en redes del tipo Orange-XXXX"
@@ -5914,7 +5914,7 @@ function language_strings() {
 	arr["GREEK",490]="Ο αλγόριθμος Arcadyan χρειάζεται πολύ συγκεκριμένα δεδομένα για τον υπολογισμό του PIN (ο σειριακός αριθμός του σημείου πρόσβασης). Η λήψη αυτών των δεδομένων μπορεί να χρειαστεί αρκετό χρόνο. Μπορείτε να επιλέξετε να προσπαθήσετε να το δημιουργήσετε. Tο PIN που θα δημιουργηθεί είναι πολύ χρήσιμο σε δίκτυα τύπου Orange-XXXX"
 	arr["ITALIAN",490]="L'algoritmo Arcadyan richiede dati molto specifici per calcolare il PIN (il numero di serie del punto di accesso). Ottenere questi dati può richiedere molto tempo. Puoi scegliere opzionalmente di provare a generarlo. Questo PIN generato è molto utile nelle reti di tipo Orange-XXXX"
 	arr["POLISH",490]="Algorytm Arcadyan potrzebuje bardzo specyficznych danych do obliczania numeru PIN (numeru seryjny punktu dostępu). Uzyskanie tych danych może zająć trochę czasu. Można opcjonalnie zdecydować się na jego wygenerowanie. Ten wygenerowany kod PIN jest bardzo przydatny w sieciach typu Orange-XXXX"
-	arr["GERMAN",490]="${pending_of_translation} Der Arcadyan-Algorithmus benötigt sehr spezifische Daten, um die PIN (die Seriennummer des Access Points) berechnen zu können. Die Beschaffung dieser Daten kann sehr lange dauern. Sie können optional auswählen, ob Sie versuchen möchten, es zu generieren. Diese generierte PIN ist sehr nützlich in Netzwerken vom Typ Orange-XXXX"
+	arr["GERMAN",490]="Der Arcadyan-Algorithmus benötigt sehr spezifische Daten, um die PIN (die Seriennummer des Access Points) berechnen zu können. Die Beschaffung dieser Daten kann sehr lange dauern. Sie können optional auswählen, ob Sie versuchen möchten, es zu generieren. Diese generierte PIN ist sehr nützlich in Netzwerken vom Typ Orange-XXXX"
 
 	arr["ENGLISH",491]="Arcadyan algorithm is not useful for the selected target network, a valid value can't be calculated"
 	arr["SPANISH",491]="El algoritmo Arcadyan no sirve para la red objetivo seleccionada, no se puede calcular un valor válido"
@@ -5925,7 +5925,7 @@ function language_strings() {
 	arr["GREEK",491]="Ο αλγόριθμος Arcadyan δεν είναι χρήσιμος για το επιλεγμένο δίκτυο, δεν μπορεί να υπολογιστεί έγκυρη τιμή"
 	arr["ITALIAN",491]="L'algoritmo Arcadyan non è adatto alla rete selezionata come obiettivo, non è possibile calcolare un valore valido"
 	arr["POLISH",491]="Algorytm Arcadyan nie pasuje do wybranej sieci docelowej, nie można obliczyć prawidłowej wartości"
-	arr["GERMAN",491]="${pending_of_translation} Der Arcadyan-Algorithmus funktioniert nicht für das ausgewählte Zielnetzwerk, ein gültiger Wert kann nicht berechnet werden"
+	arr["GERMAN",491]="Der Arcadyan-Algorithmus funktioniert nicht für das ausgewählte Zielnetzwerk, ein gültiger Wert kann nicht berechnet werden"
 
 	arr["ENGLISH",492]="The Arcadyan algorithm can't be calculated. Although you chose the bully option for the attack, you need to use wash (included in reaver package) to calculate that PIN and you don't have it installed. The script will continue the attack without including it"
 	arr["SPANISH",492]="El algoritmo Arcadyan no puede ser calculado. Aunque elegiste la opción de ataque con bully, para calcular ese PIN se necesita utilizar wash (incluido en el paquete reaver) y tú no lo tienes instalado. El script continuará el ataque sin incluirlo"
@@ -5936,7 +5936,7 @@ function language_strings() {
 	arr["GREEK",492]="Ο αλγόριθμος Arcadyan δεν μπορεί να υπολογιστεί. Παρόλο που επιλέξατε την επιλογή bully για την επίθεση, χρειάζεται να χρησιμοποιήσετε το wash (περιλαμβάνεται στο πακέτο του reaver) για να υπολογίσετε το PIN και δεν το έχετε εγκαταστήσει. Το script θα συνεχίσει την επίθεση χωρίς να το συμπεριλάβει"
 	arr["ITALIAN",492]="L'algoritmo Arcadyan non può essere calcolato. Anche se hai scelto l'opzione di attacco con bully, per calcolare quel PIN che devi usare wash (incluso nel pacchetto reaver) e non l'hai installato. Lo script continuerà l'attacco senza includerlo"
 	arr["POLISH",492]="Nie można obliczyć algorytmu Arcadyan. Chociaż wybrano opcję ataku za pomocą bully, aby obliczyć ten kod PIN, musisz użyć wash (dołączonego do pakietu reaver) i nie masz go zainstalowanego. Skrypt będzie kontynuował atak bez jego włączania"
-	arr["GERMAN",492]="${pending_of_translation} Der Arcadyan-Algorithmus kann nicht berechnet werden. Obwohl Sie die Option Bully attack gewählt haben, müssen Sie zur Berechnung dieser PIN die Funktion wash verwenden (im Paket Reaver enthalten), und Sie haben sie nicht installiert. Das Skript setzt den Angriff fort, ohne es einzuschließen"
+	arr["GERMAN",492]="Der Arcadyan-Algorithmus kann nicht berechnet werden. Obwohl Sie den bully-Angriff gewählt haben, müssen Sie zur Berechnung dieser PIN die Funktion wash verwenden (im Paket reaver enthalten), und Sie haben sie nicht installiert. Das Skript setzt den Angriff fort, ohne es einzuschließen"
 
 	arr["ENGLISH",493]="The Arcadyan algorithm PIN has already been calculated for this target (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). There is no need to calculate it again"
 	arr["SPANISH",493]="El PIN del algoritmo Arcadyan ya fue calculado para este objetivo (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). No hace falta calcularlo de nuevo"
@@ -5947,7 +5947,7 @@ function language_strings() {
 	arr["GREEK",493]="Ο αλγόριθμος Arcadyan PIN έχει ήδη υπολογιστεί για αυτό το δίκτυο (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Δεν χρειάζεται να υπολογιστεί ξανά"
 	arr["ITALIAN",493]="Il PIN dell'algoritmo Arcadyan è già stato calcolato per questo obiettivo (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Non c'è bisogno di calcolarlo di nuovo"
 	arr["POLISH",493]="PIN algorytm Arcadyan został już obliczony dla tego celu (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Nie musisz go ponownie obliczać"
-	arr["GERMAN",493]="${pending_of_translation} Die Arcadyan-Algorithmus-PIN wurde bereits für diesen Zweck berechnet (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Keine Notwendigkeit, es erneut zu berechnen"
+	arr["GERMAN",493]="Die Arcadyan-Algorithmus-PIN wurde bereits für diesen Target berechnet (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). Keine Notwendigkeit, es erneut zu berechnen"
 
 	arr["ENGLISH",494]="13. Offline PIN generation using algorithms and database"
 	arr["SPANISH",494]="13. Generación offline de PINs con algoritmos y base de datos"
@@ -5958,7 +5958,7 @@ function language_strings() {
 	arr["GREEK",494]="13. Offline δημιουργία PIN με χρήση δίαφορων αλγορίθμων και έτοιμης βάσης δεδομένων"
 	arr["ITALIAN",494]="13. Generazione offline di PIN con algoritmi e database"
 	arr["POLISH",494]="13. Generowanie offline kodów PIN z algorytmami i bazą danych"
-	arr["GERMAN",494]="${pending_of_translation} 13. Offline Generierung von PINs mit Algorithmen und Datenbank"
+	arr["GERMAN",494]="13. Offline Generierung von PINs mit Algorithmen und Datenbank"
 
 	arr["ENGLISH",495]="Offline PIN generation menu"
 	arr["SPANISH",495]="Menú de generación offline de PINs"
@@ -5969,7 +5969,7 @@ function language_strings() {
 	arr["GREEK",495]="Μενού offline δημιουργίας PIN"
 	arr["ITALIAN",495]="Menu di generazione offline dei PIN"
 	arr["POLISH",495]="Menu generowania PIN offline"
-	arr["GERMAN",495]="${pending_of_translation} Menü zur Offline-Generierung von PINs"
+	arr["GERMAN",495]="Menü zur Offline-Generierung von PINs"
 
 	arr["ENGLISH",496]="5.  Search in PIN database"
 	arr["SPANISH",496]="5.  Consultar en la base de datos de PINs"
@@ -5980,7 +5980,7 @@ function language_strings() {
 	arr["GREEK",496]="5.  Αναζήτηση στη βάση δεδομένων PIN"
 	arr["ITALIAN",496]="5.  Controllare il database dei PIN"
 	arr["POLISH",496]="5.  Sprawdź bazę danych PIN"
-	arr["GERMAN",496]="${pending_of_translation} 5.  Konsultieren Sie in der Datenbank der PINs"
+	arr["GERMAN",496]="5.  Suchen Sie in der PIN-Datenbank"
 
 	arr["ENGLISH",497]="0.  Return to WPS attacks menu"
 	arr["SPANISH",497]="0.  Volver al menú de ataques WPS"
@@ -5991,7 +5991,7 @@ function language_strings() {
 	arr["GREEK",497]="0.  Επιστροφή στο μενού επιθέσεων WPS"
 	arr["ITALIAN",497]="0.  Tornare al menú attacchi WPS"
 	arr["POLISH",497]="0.  Wróć do menu Atak WPS"
-	arr["GERMAN",497]="${pending_of_translation} 0.  Kehren Sie zum WPS-Angriffsmenü zurück"
+	arr["GERMAN",497]="0.  Zum WPS-Angriffsmenü zurückkehren"
 
 	arr["ENGLISH",498]="choose database or algorithm"
 	arr["SPANISH",498]="escoge base de datos o algoritmo"
@@ -6002,7 +6002,7 @@ function language_strings() {
 	arr["GREEK",498]="επιλέξτε βάση δεδομένων ή αλγόριθμο"
 	arr["ITALIAN",498]="scegliere database o algoritmo"
 	arr["POLISH",498]="wybierz bazę danych lub algorytm"
-	arr["GERMAN",498]="${pending_of_translation} Wählen Sie eine Datenbank oder einen Algorithmus"
+	arr["GERMAN",498]="Wählen Sie eine Datenbank oder einen Algorithmus"
 
 	arr["ENGLISH",499]="Showing matches in the PIN database..."
 	arr["SPANISH",499]="Mostrando coincidencias de la base de datos de PINs..."
@@ -6013,7 +6013,7 @@ function language_strings() {
 	arr["GREEK",499]="Εμφάνιση αντιστοιχιών στη βάση δεδομένων PIN..."
 	arr["ITALIAN",499]="Mostrando le corrispondenze del database dei PIN..."
 	arr["POLISH",499]="Wyświetlanie dopasowań z bazy danych PIN..."
-	arr["GERMAN",499]="${pending_of_translation} Übereinstimmungen der PIN-Datenbank werden angezeigt..."
+	arr["GERMAN",499]="Übereinstimmungen der PIN-Datenbank werden angezeigt..."
 
 	arr["ENGLISH",500]="Showing calculated PIN using ComputePIN algorithm..."
 	arr["SPANISH",500]="Mostrando PIN calculado con el algoritmo ComputePIN..."
@@ -6024,7 +6024,7 @@ function language_strings() {
 	arr["GREEK",500]="Εμφανίζεται το PIN που έχει υπολογιστεί χρησιμοποιώντας τον αλγόριθμο ComputePIN..."
 	arr["ITALIAN",500]="Mostrando il PIN calcolato utilizzando l'algoritmo ComputePIN..."
 	arr["POLISH",500]="Wyświetlanie kodu PIN obliczonego przy użyciu algorytmu ComputePIN..."
-	arr["GERMAN",500]="${pending_of_translation} Berechnete PIN mit dem ComputePIN-Algorithmus anzeigen..."
+	arr["GERMAN",500]="Berechnete PIN mit dem ComputePIN-Algorithmus anzeigen..."
 
 	arr["ENGLISH",501]="Showing calculated PIN using EasyBox algorithm..."
 	arr["SPANISH",501]="Mostrando PIN calculado con el algoritmo EasyBox..."
@@ -6222,7 +6222,7 @@ function language_strings() {
 	arr["GREEK",518]="${blue_color}Η κάρτα wifi σας υποστηρίζει την 5Ghz ζώνη, αλλά η έκδοση του \"wash\" που περιλαμβάνεται στο πακέτο του reaver (v${reaver_version}) δεν είναι σε θέση να σαρώσει ταυτόχρονα και τις δύο ζώνες (dual band). Για να χρησιμοποιήσετε την σάρωση για dual band, πρέπει να έχετε τουλάχιστον την έκδοση v${minimum_wash_dualscan_version} για να μπορέσετε να συνεχίσετε. ${green_color}Θέλετε να σαρώσετε στην 5Ghz ζώνη; ${pink_color}(Εάν απαντήσετε όχι (\"n\"), η 2.4Ghz ζώνη θα σαρωθεί) ${normal_color}${visual_choice}"
 	arr["ITALIAN",518]="${blue_color}La tua scheda wifi supporta la banda 5Ghz ma la tua versione di \"wash\" inclusa nel pacchetto reaver (v${reaver_version}) non è in grado di scansionare entrambe le bande contemporaneamente. Per usare la doppia scansione devi avere almeno la versione v${minimum_wash_dualscan_version}, quindi devi sceglierne una. ${green_color}Vuoi eseguire la scansione nella banda 5Ghz? ${pink_color}(Se rispondi no (\"n\"), verrà scansionata la banda 2.4Ghz) ${normal_color}${visual_choice}"
 	arr["POLISH",518]="${blue_color}Twoja karta wifi obsługuje pasmo 5Ghz, ale twoja wersja \"wash\" zawarta w pakiecie reaver (v${reaver_version}) nie jest w stanie skanować obu pasm w tym samym czasie. Aby użyć podwójnego skanowania, musisz mieć przynajmniej wersję v${minimum_wash_dualscan_version}. ${green_color}Musisz wybrać: czy chcesz skanować w paśmie 5Ghz? ${pink_color}(Jeśli odpowiesz nie (\"n\"), zostanie zeskanowane pasmo 2.4Ghz) ${normal_color}${visual_choice}"
-	arr["GERMAN",518]="${pending_of_translation} ${blue_color}Ihre WLAN-Karte unterstützt das 5Ghz-Band, aber Ihre im Reaver-Paket enthaltene Version von \"wash\" (v${reaver_version}) kann nicht beide Bänder gleichzeitig scannen. Um den dualen Scan zu verwenden, müssen Sie mindestens Version v${minimum_wash_dualscan_version} haben, damit Sie wählen müssen. ${green_color}Möchten Sie im 5Ghz-Band scannen? ${pink_color}(Wenn Sie nein (\"n\" antworten), wird das 2.4Ghz-Band gescannt) ${normal_color}${visual_choice}"
+	arr["GERMAN",518]="${pending_of_translation} ${blue_color}Ihre WLAN-Karte unterstützt das 5Ghz-Band, aber Ihre im reaver-Paket enthaltene Version von \"wash\" (v${reaver_version}) kann nicht beide Bänder gleichzeitig scannen. Um den dualen Scan zu verwenden, müssen Sie mindestens Version v${minimum_wash_dualscan_version} haben, damit Sie wählen müssen. ${green_color}Möchten Sie im 5Ghz-Band scannen? ${pink_color}(Wenn Sie nein (\"n\" antworten), wird das 2.4Ghz-Band gescannt) ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",519]="You have selected a 5Ghz target network and the \"DoS pursuit mode\", but the second interface needed to perform the attack doesn't support the 5Ghz band so the attack can't be performed"
 	arr["SPANISH",519]="Has seleccionado una red objetivo de 5Ghz y el \"modo persecución DoS\", pero el segundo interfaz necesario para llevar a cabo el ataque no soporta la banda de los 5Ghz por lo que este no se puede realizar"
@@ -6249,33 +6249,33 @@ function language_strings() {
 	arr["ENGLISH",521]="WPS filter enabled in scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",521]="Filtro WPS activado en escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
 	arr["FRENCH",521]="${pending_of_translation} Le filtre WPS est activé dans la numérisation. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
-	arr["CATALAN",521]="Filtre WPS activat en escaneig. Una vegada iniciat, polsi [Ctrl+C] per detenir-ho..."
-	arr["PORTUGUESE",521]="Filtro WPS ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
+	arr["CATALAN",521]="${pending_of_translation} Filtre WPS activat en escaneig. Una vegada iniciat, polsi [Ctrl+C] per detenir-ho..."
+	arr["PORTUGUESE",521]="${pending_of_translation} Filtro WPS ativado na digitalização. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",521]="${pending_of_translation} Фильтр WPS, активированный при сканировании. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",521]="${pending_of_translation} Το φίλτρο WPS ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
-	arr["ITALIAN",521]="Filtro WPS attivato nella scansione. Una volta avviata, premere [Ctrl+C] per fermarla..."
+	arr["ITALIAN",521]="${pending_of_translation} Filtro WPS attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",521]="${pending_of_translation} Filtr WPS aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 	arr["GERMAN",521]="${pending_of_translation} WPS-Filter beim Scannen aktiviert. Einmal gestartet, drücken Sie [Ctrl+C], um es zu stoppen..."
 
 	arr["ENGLISH",522]="No filters enabled on scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",522]="No hay filtros activados en el escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
 	arr["FRENCH",522]="${pending_of_translation} Aucun filtre activé dans le scan. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
-	arr["CATALAN",522]="No hi ha filtres activats en l'escaneig. Una vegada iniciat, polsi [Ctrl+C] per detenir-ho..."
-	arr["PORTUGUESE",522]="Nenhum filtro ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
+	arr["CATALAN",522]="${pending_of_translation} No hi ha filtres activats en l'escaneig. Una vegada iniciat, polsi [Ctrl+C] per detenir-ho..."
+	arr["PORTUGUESE",522]="${pending_of_translation} Nenhum filtro ativado na varredura. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",522]="${pending_of_translation} В сканировании не активированы фильтры. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",522]="${pending_of_translation} Δεν έχουν ενεργοποιηθεί φίλτρα στη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
-	arr["ITALIAN",522]="Nessun filtro attivato nella scansione. Una volta avviata, premere [Ctrl+C] per fermarla..."
+	arr["ITALIAN",522]="${pending_of_translation} Nessun filtro attivato nella scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",522]="${pending_of_translation} W skanie nie zostały włączone żadne filtry. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 	arr["GERMAN",522]="${pending_of_translation} Es sind keine aktivierten Filter im Scan vorhanden. Einmal gestartet, drücken Sie [Ctrl+C], um es zu stoppen..."
 
 	arr["ENGLISH",523]="WPA/WPA2 filter enabled in scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",523]="Filtro WPA/WPA2 activado en escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
 	arr["FRENCH",523]="${pending_of_translation} Le filtre WPA/WPA2 est activé dans la numérisation. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
-	arr["CATALAN",523]="Filtre WPA/WPA2 activat en escaneig. Una vegada iniciat, polsi [Ctrl+C] per detenir-ho..."
-	arr["PORTUGUESE",523]="Filtro WPA/WPA2 ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
+	arr["CATALAN",523]="${pending_of_translation} Filtre WPA/WPA2 activat en escaneig. Una vegada iniciat, polsi [Ctrl+C] per detenir-ho..."
+	arr["PORTUGUESE",523]="${pending_of_translation} Filtro WPA/WPA2 ativado na digitalização. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",523]="${pending_of_translation} Фильтр WPA/WPA2, активированный при сканировании. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",523]="${pending_of_translation} Το φίλτρο WPA/WPA2 ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, πατήστε [Ctrl+C] για να σταματήσει..."
-	arr["ITALIAN",523]="Filtro WPA/WPA2 attivato nella scansione. Una volta avviata, premere [Ctrl+C] per fermarla..."
+	arr["ITALIAN",523]="${pending_of_translation} Filtro WPA/WPA2 attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
 	arr["POLISH",523]="${pending_of_translation} Filtr WPA/WPA2 aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 	arr["GERMAN",523]="${pending_of_translation} WPA/WPA2-Filter beim Scannen aktiviert. Einmal gestartet, drücken Sie [Ctrl+C], um es zu stoppen..."
 
