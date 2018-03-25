@@ -2870,7 +2870,6 @@ function exec_wps_custom_pin_bully_attack() {
 
 	echo
 	language_strings "${language}" 33 "yellow"
-	language_strings "${language}" 366 "blue"
 	language_strings "${language}" 4 "read"
 	recalculate_windows_sizes
 	xterm -hold -bg black -fg red -geometry "${g2_stdleft_window}" -T "WPS custom pin bully attack" -e "bash \"${tmpdir}${wps_attack_script_file}\"" > /dev/null 2>&1
@@ -2888,7 +2887,6 @@ function exec_wps_custom_pin_reaver_attack() {
 
 	echo
 	language_strings "${language}" 33 "yellow"
-	language_strings "${language}" 366 "blue"
 	language_strings "${language}" 4 "read"
 	recalculate_windows_sizes
 	xterm -hold -bg black -fg red -geometry "${g2_stdleft_window}" -T "WPS custom pin reaver attack" -e "bash \"${tmpdir}${wps_attack_script_file}\"" > /dev/null 2>&1
@@ -2906,7 +2904,6 @@ function exec_bully_pixiewps_attack() {
 
 	echo
 	language_strings "${language}" 33 "yellow"
-	language_strings "${language}" 366 "blue"
 	language_strings "${language}" 4 "read"
 	recalculate_windows_sizes
 	xterm -hold -bg black -fg red -geometry "${g2_stdright_window}" -T "WPS bully pixie dust attack" -e "bash \"${tmpdir}${wps_attack_script_file}\"" > /dev/null 2>&1
@@ -2924,7 +2921,6 @@ function exec_reaver_pixiewps_attack() {
 
 	echo
 	language_strings "${language}" 33 "yellow"
-	language_strings "${language}" 366 "blue"
 	language_strings "${language}" 4 "read"
 	recalculate_windows_sizes
 	xterm -hold -bg black -fg red -geometry "${g2_stdright_window}" -T "WPS reaver pixie dust attack" -e "bash \"${tmpdir}${wps_attack_script_file}\"" > /dev/null 2>&1
@@ -2942,7 +2938,6 @@ function exec_wps_bruteforce_pin_bully_attack() {
 
 	echo
 	language_strings "${language}" 33 "yellow"
-	language_strings "${language}" 366 "blue"
 	language_strings "${language}" 4 "read"
 	recalculate_windows_sizes
 	xterm -hold -bg black -fg red -geometry "${g2_stdleft_window}" -T "WPS bruteforce pin bully attack" -e "bash \"${tmpdir}${wps_attack_script_file}\"" > /dev/null 2>&1
@@ -2960,7 +2955,6 @@ function exec_wps_bruteforce_pin_reaver_attack() {
 
 	echo
 	language_strings "${language}" 33 "yellow"
-	language_strings "${language}" 366 "blue"
 	language_strings "${language}" 4 "read"
 	recalculate_windows_sizes
 	xterm -hold -bg black -fg red -geometry "${g2_stdleft_window}" -T "WPS bruteforce pin reaver attack" -e "bash \"${tmpdir}${wps_attack_script_file}\"" > /dev/null 2>&1
@@ -4501,6 +4495,7 @@ function wps_attacks_menu() {
 				get_bully_version
 				set_bully_verbosity
 				if wps_attacks_parameters; then
+					manage_wps_log
 					exec_wps_custom_pin_bully_attack
 				fi
 			fi
@@ -4511,6 +4506,7 @@ function wps_attacks_menu() {
 			else
 				wps_attack="custompin_reaver"
 				if wps_attacks_parameters; then
+					manage_wps_log
 					exec_wps_custom_pin_reaver_attack
 				fi
 			fi
@@ -4527,6 +4523,7 @@ function wps_attacks_menu() {
 					language_strings "${language}" 368 "yellow"
 					language_strings "${language}" 115 "read"
 					if wps_attacks_parameters; then
+						manage_wps_log
 						exec_bully_pixiewps_attack
 					fi
 				else
@@ -4547,6 +4544,7 @@ function wps_attacks_menu() {
 					language_strings "${language}" 370 "yellow"
 					language_strings "${language}" 115 "read"
 					if wps_attacks_parameters; then
+						manage_wps_log
 						exec_reaver_pixiewps_attack
 					fi
 				else
@@ -4564,6 +4562,7 @@ function wps_attacks_menu() {
 				get_bully_version
 				set_bully_verbosity
 				if wps_attacks_parameters; then
+					manage_wps_log
 					exec_wps_bruteforce_pin_bully_attack
 				fi
 			fi
@@ -4575,6 +4574,7 @@ function wps_attacks_menu() {
 				wps_attack="bruteforce_reaver"
 				get_reaver_version
 				if wps_attacks_parameters; then
+					manage_wps_log
 					exec_wps_bruteforce_pin_reaver_attack
 				fi
 			fi
@@ -4605,6 +4605,7 @@ function wps_attacks_menu() {
 
 				if [ "${db_error}" -eq 0 ]; then
 					if wps_attacks_parameters; then
+						manage_wps_log
 						exec_wps_pin_database_bully_attack
 					fi
 				fi
@@ -4634,6 +4635,7 @@ function wps_attacks_menu() {
 				language_strings "${language}" 115 "read"
 				if [ "${db_error}" -eq 0 ]; then
 					if wps_attacks_parameters; then
+						manage_wps_log
 						exec_wps_pin_database_reaver_attack
 					fi
 				fi
@@ -5501,6 +5503,25 @@ function manage_bettercap_log() {
 			read_path "bettercaplog"
 		done
 	fi
+}
+
+#Check if the passwords were captured using wps attacks and manage to save them on a file
+function manage_wps_log() {
+
+	debug_print
+
+	wps_potpath=$(env | grep ^HOME | awk -F = '{print $2}')
+	lastcharwps_potpath=${wps_potpath: -1}
+	if [ "${lastcharwps_potpath}" != "/" ]; then
+		wps_potpath="${wps_potpath}/"
+	fi
+	wpspot_filename="wps_captured_key-${wps_essid}.txt"
+	wps_potpath="${wps_potpath}${wpspot_filename}"
+
+	validpath=1
+	while [[ "${validpath}" != "0" ]]; do
+		read_path "wpspot"
+	done
 }
 
 #Check if the password was captured using wep all-in-one attack and manage to save it on a file
@@ -6376,6 +6397,41 @@ function set_wps_attack_script() {
 		pin_header3="${white_color})${normal_color}"
 		script_attack_cmd2="${attack_cmd2}"
 
+		function manage_wps_pot() {
+			echo "" > "${wpspotenteredpath}"
+			{
+	EOF
+
+	cat >&7 <<-'EOF'
+			date +%Y-%m-%d
+	EOF
+
+	cat >&7 <<-EOF
+			echo -e "${wps_texts[${language},1]}"
+			echo ""
+			echo -e "BSSID: ${wps_bssid}"
+			echo -e "${wps_texts[${language},2]}: ${wps_channel}"
+			echo -e "ESSID: ${wps_essid}"
+			echo ""
+			echo "---------------"
+			echo ""
+	EOF
+
+	cat >&7 <<-'EOF'
+			echo -e "${1}"
+			echo ""
+	EOF
+
+	cat >&7 <<-EOF
+			echo "---------------"
+			echo ""
+			echo "${footer_texts[${language},1]}"
+			} >> "${wpspotenteredpath}"
+
+			echo ""
+			echo -e "${white_color}${wps_texts[${language},3]}: ${yellow_color}${wpspotenteredpath}"
+		}
+
 		#Parse the output file generated by the attack
 		function parse_output() {
 
@@ -6636,6 +6692,7 @@ function set_wps_attack_script() {
 			echo -e "${pin_cracked_msg}${cracked_pin}"
 			if [ -n "${cracked_password}" ]; then
 				echo -e "${password_cracked_msg}${cracked_password}"
+				manage_wps_pot "${cracked_password}"
 			else
 				echo -e "${password_not_cracked_msg}"
 			fi
@@ -8075,6 +8132,10 @@ function validate_path() {
 				et_handshake="${pathname}${standardhandshake_filename}"
 				suggested_filename="${standardhandshake_filename}"
 			;;
+			"wpspot")
+				suggested_filename="${wpspot_filename}"
+				wpspotenteredpath+="${wpspot_filename}"
+			;;
 			"weppot")
 				suggested_filename="${weppot_filename}"
 				weppotenteredpath+="${weppot_filename}"
@@ -8204,6 +8265,14 @@ function read_path() {
 				et_captive_portal_logpath="${default_et_captive_portal_logpath}"
 			fi
 			validate_path "${et_captive_portal_logpath}" "${1}"
+		;;
+		"wpspot")
+			language_strings "${language}" 123 "blue"
+			read_and_clean_path "wpspotenteredpath"
+			if [ -z "${wpspotenteredpath}" ]; then
+				wpspotenteredpath="${wps_potpath}"
+			fi
+			validate_path "${wpspotenteredpath}" "${1}"
 		;;
 		"weppot")
 			language_strings "${language}" 430 "blue"
@@ -8818,7 +8887,6 @@ function wps_pin_database_prerequisites() {
 	if [ "${1}" != "no_attack" ]; then
 		check_and_set_common_algorithms
 		echo
-		language_strings "${language}" 366 "blue"
 		language_strings "${language}" 4 "read"
 	fi
 }

@@ -1,3 +1,6 @@
+### 8.10
+ - WPS decrypted networks now have trophy file
+
 ### 8.01
  - German language translation added (Thank you to "hamperfait")
  - Filters enabled on scannings based on menu or kind of attack
