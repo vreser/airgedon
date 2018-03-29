@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180321
+#Date.........: 20180329
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -508,7 +508,7 @@ function language_strings() {
 	footer_texts["FRENCH",1]="Si le script vous a plus et que vous l'avez trouvé utile, vous pouvez soutenir le projet en faisant un don PayPal (${mail}) ou en envoyant une fraction de crypto-monnaie (Bitcoin, Ethereum, Litecoin...). Toute contribution (1, 2, 5 $/€) est bienvenue. Pour faire un don allez à: ${urlgithub_wiki}/Contributing"
 	footer_texts["CATALAN",1]="Si et va agradar el script i et va semblar útil, pots donar suport al projecte fent una donació. A través de PayPal (${mail}) o enviant una fracció criptomoneda (Bitcoin, Ethereum, Litecoin...). Qualsevol quantitat per petita que sigui (1, 2, 5 $/€) és ben rebuda. Més informació i enllaços directes per a realitzar-la en: ${urlgithub_wiki}/Contributing"
 	footer_texts["PORTUGUESE",1]="Se você gostou do script e o achou útil, apoie o projeto fazendo uma doação através: do PayPal (${mail}) ou enviando uma fração de uma criptomoeda (Bitcoin, Ethereum, Litecoin...). Qualquer quantidade, mesmo pequena (1, 2, 5 $/€) é bem-vinda. Links diretos e de com realizar em: ${urlgithub_wiki}/Contributing"
-	footer_texts["RUSSIAN",1]="${pending_of_translation} Если вам понравилась эта программа и она оказался для вас полезной, вы можете поддержать проект, сделав пожертвование. Через PayPal (${mail}) или отправки части криптовалюты (Bitcoin, Ethereum, Litecoin...). Приветствуется любая сумма, даже небольшая (1, 2, 5 $/€). Более подробную информацию и прямые ссылки можно получить по адресу: ${urlgithub_wiki}/Contributing"
+	footer_texts["RUSSIAN",1]="Если вам понравилась эта программа и она оказался для вас полезной, вы можете поддержать проект, сделав пожертвование. Доступны переводы через PayPal (${mail}) и криптовалюту (Bitcoin, Ethereum, Litecoin...). Приветствуется любая сумма, даже небольшая (1, 2, 5 $/€). Более подробную информацию и прямые ссылки можно получить по адресу: ${urlgithub_wiki}/Contributing"
 	footer_texts["GREEK",1]="Εαν μείνατε ευχαριστημένοι από το script και το βρήκατε χρήσιμο, μπορείτε να υποστηρίξετε το project κάνοντας κάποια δωρεά. Μέσω PayPal (${mail}) ή αποστέλλοντας κάποιο κλάσμα κρυπτονομίσματος (Bitcoin, Ethereum, Litecoin...). Είναι καλοδεχούμενο οποιοδήποτε ποσό (1, 2, 5 $/€), δεν έχει σημασία το πόσο λίγο μπορεί να είναι. Δίνονται περισσότερες πληροφορίες και links για να κάνετε δωρεά, στη διεύθυνση: ${urlgithub_wiki}/Contributing"
 	footer_texts["ITALIAN",1]="Se ti è piaciuto lo script e l'hai trovato utile, puoi sostenere il progetto con una donazione. Attraverso PayPal (${mail}) o inviando una frazione di criptovaluta (Bitcoin, Ethereum, Litecoin...). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Piú informazioni e collegamenti diretti per realizzarla in: ${urlgithub_wiki}/Contributing"
 	footer_texts["POLISH",1]="${pending_of_translation} Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi PayPal (${mail}) lub wysyłając ułamek kryptowaluty (Bitcoin, Ethereum, Litecoin...). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${urlgithub_wiki}/Contributing"
