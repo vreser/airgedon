@@ -11,7 +11,7 @@ function set_language_strings_version() {
 
 	debug_print
 
-	language_strings_version="8.01-1"
+	language_strings_version="8.10-1"
 }
 
 #Set different language text strings
@@ -25,7 +25,7 @@ function language_strings() {
 		declare -gA wps_data_array
 	fi
 
-	#TODO clean or reuse strings 123, 174, 260, 331, 361, 411
+	#TODO clean or reuse strings 174, 260, 331, 361, 366, 411
 
 	declare -A unknown_chipset
 	unknown_chipset["ENGLISH"]="Unknown"
@@ -399,6 +399,40 @@ function language_strings() {
 	et_misc_texts["ITALIAN",27]="Questo attacco è composto da due parti. Presta attenzione alla schermata dello sniffer per vedere se compare una password. È inoltre possibile aprire il pannello di controllo di BeEF in ${white_color}${beef_control_panel_url}${pink_color} , effettuare il login (utente: ${white_color}beef${pink_color} / pass: ${white_color}${beef_pass}${pink_color}) e cercare di controllare il navigatore degli utenti"
 	et_misc_texts["POLISH",27]="Ten atak ma dwie części. Obserwuj ekran sniffera aby sprawdzić, czy pojawia się hasło. Możesz także otworzyć panel sterowania BeEF w ${white_color}${beef_control_panel_url}${pink_color} , zaloguj się (użytkownik: ${white_color}beef${pink_color} / hasło: ${white_color}${beef_pass}${pink_color}) i spróbuj kontrolować przeglądarkę klientów"
 	et_misc_texts["GERMAN",27]="Dieser Angriff besteht aus zwei Teilen. Bleiben Sie auf dem Sniffer-Bildschirm, um zu sehen, ob ein Passwort erscheint. Sie können auch das BeEF-Kontrollfeld in ${white_color}${beef_control_panel_url}${pink_color} öffnen, login (Benutzer: ${white_color}beef${pink_color} / pass: ${white_color}${beef_pass}${pink_color}) und versuchen den Browser des Clients zu kontrollieren"
+
+	declare -gA wps_texts
+	wps_texts["ENGLISH",1]="airgeddon. Decrypted password during WPS attack"
+	wps_texts["SPANISH",1]="airgeddon. Contraseña desencriptada en ataque WPS"
+	wps_texts["FRENCH",1]="${pending_of_translation} airgeddon. Mot de passe déchiffré avec l'attaque WPS"
+	wps_texts["CATALAN",1]="${pending_of_translation} airgeddon. Contrasenya desencriptada en atac WPS"
+	wps_texts["PORTUGUESE",1]="${pending_of_translation} airgeddon. Senha decifrada no ataque WPS"
+	wps_texts["RUSSIAN",1]="${pending_of_translation} airgeddon. Пароль расшифрован в WPS-атаке"
+	wps_texts["GREEK",1]="${pending_of_translation} airgeddon. Ο κωδικός αποκρυπτογραφήθηκε σε επίθεση WPS"
+	wps_texts["ITALIAN",1]="${pending_of_translation} airgeddon. Password decifrata con l'attacco WPS"
+	wps_texts["POLISH",1]="${pending_of_translation} airgeddon. Hasło odszyfrowane w ataku WPS"
+	wps_texts["GERMAN",1]="${pending_of_translation} airgeddon. Passwort bei WPS-Angriff entschlüsselt"
+
+	wps_texts["ENGLISH",2]="Channel"
+	wps_texts["SPANISH",2]="Canal"
+	wps_texts["FRENCH",2]="Canal"
+	wps_texts["CATALAN",2]="Canal"
+	wps_texts["PORTUGUESE",2]="Canal"
+	wps_texts["RUSSIAN",2]="Канал"
+	wps_texts["GREEK",2]="Κανάλι"
+	wps_texts["ITALIAN",2]="Canale"
+	wps_texts["POLISH",2]="Kanał"
+	wps_texts["GERMAN",2]="Kanal"
+
+	wps_texts["ENGLISH",3]="The password was saved on file"
+	wps_texts["SPANISH",3]="La contraseña se ha guardado en el fichero"
+	wps_texts["FRENCH",3]="Le mot de passe est enregistré dans le fichier"
+	wps_texts["CATALAN",3]="La contrasenya s'ha guardat en el fitxer"
+	wps_texts["PORTUGUESE",3]="A senha foi salva no arquivo"
+	wps_texts["RUSSIAN",3]="Пароль был сохранён в файле"
+	wps_texts["GREEK",3]="Ο κωδικός πρόσβασης αποθηκεύτηκε σε αρχείο"
+	wps_texts["ITALIAN",3]="La password è stata salvata nel file"
+	wps_texts["POLISH",3]="Hasło zostało zapisane do pliku"
+	wps_texts["GERMAN",3]="Das Passwort wurde in der Datei gespeichert"
 
 	declare -gA wep_texts
 	wep_texts["ENGLISH",1]="airgeddon. Captured password during WEP attack"
@@ -1868,16 +1902,16 @@ function language_strings() {
 	arr["POLISH",122]="6.  Oczyść/zoptymalizuj plik Handshake"
 	arr["GERMAN",122]="6.  Handshake-Datei bereinigen/optimieren"
 
-	arr["ENGLISH",123]="7.  Return to main menu"
-	arr["SPANISH",123]="7.  Volver al menú principal"
-	arr["FRENCH",123]="7.  Retourner au menu principal"
-	arr["CATALAN",123]="7.  Tornar al menú principal"
-	arr["PORTUGUESE",123]="7.  Voltar ao menu principal"
-	arr["RUSSIAN",123]="7.  Возврат в главное меню"
-	arr["GREEK",123]="7.  Επιστροφή στο αρχικό μενού"
-	arr["ITALIAN",123]="7.  Tornare al menu principale"
-	arr["POLISH",123]="7.  Wróć do menu głównego"
-	arr["GERMAN",123]="7.  Zum Hauptmenü zurückkehren"
+	arr["ENGLISH",123]="If the password for the wifi network is obtained with the WPS attack, you should decide where to save it. ${green_color}Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${wps_potpath}]"
+	arr["SPANISH",123]="Si se consigue la contraseña de la red wifi con el ataque WPS, hay que decidir donde guardarla. ${green_color}Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${wps_potpath}]"
+	arr["FRENCH",123]="${pending_of_translation} Si le mot de passe est obtenu par une attaque WPS, il faut ensuite indiquer l'endroit pour la garder. ${green_color}Entrez la route vers l'endroit où vous voulez garder le fichier ou bien appuyez sur [Enter] si la route proposée par défaut vous convient ${normal_color}[${wps_potpath}]"
+	arr["CATALAN",123]="${pending_of_translation} Si s'aconsegueix la contrasenya de la xarxa wifi amb l'atac WPS, cal decidir on guardar-la. ${green_color}Escriu la ruta on guardarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${wps_potpath}]"
+	arr["PORTUGUESE",123]="${pending_of_translation} Se a senha da rede wifi for obtida com o ataque WPS, onde deseja salvá-la?. ${green_color}Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${wps_potpath}]"
+	arr["RUSSIAN",123]="${pending_of_translation} Если во время WPS атаки на Wi-Fi сеть получен пароль, вы должны решить, где его сохранить. ${green_color} Наберите путь для сохранения файла или нажмите [Enter] для принятия значения по умолчанию ${normal_color}[${wps_potpath}]"
+	arr["GREEK",123]="${pending_of_translation} Εάν βρεθεί ο κωδικός πρόσβασης για το ασύρματο δίκτυο με την επίθεση WPS, θα πρέπει να αποφασίσετε που θα τον αποθηκεύσετε. ${green_color}Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${wps_potpath}]"
+	arr["ITALIAN",123]="${pending_of_translation} Se si ottiene la password della rete wireless con l'attacco WPS, decidere dove salvarla. ${green_color}Immettere il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${wps_potpath}]"
+	arr["POLISH",123]="${pending_of_translation} Jeśli hasło sieci wifi zostanie zdobyte atakiem WPS, musisz zdecydować, gdzie je zapisać. ${green_color}Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${wps_potpath}]"
+	arr["GERMAN",123]="${pending_of_translation} Wenn Sie das WLAN-Passwort mit dem WPS-Angriff erhalten, müssen Sie entscheiden, wo Sie es speichern möchten. ${green_color} Geben Sie den Pfad ein, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${wps_potpath}] ${blue_color}zu akzeptieren"
 
 	arr["ENGLISH",124]="monitor mode needed for capturing"
 	arr["SPANISH",124]="modo monitor requerido en captura"
