@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180329
+#Date.........: 20180403
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -5282,7 +5282,7 @@ function language_strings() {
 	arr["ENGLISH",430]="If the password for the wifi network is obtained with the \"All-in-One\" WEP attack, you should decide where to save it. ${green_color}Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${wep_potpath}]"
 	arr["SPANISH",430]="Si se consigue la contraseña de la red wifi con el ataque WEP \"Todo-en-Uno\", hay que decidir donde guardarla. ${green_color}Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${wep_potpath}]"
 	arr["FRENCH",430]="Si le mot de passe est obtenu par une attaque WEP \"Tout-en-Un\", il faut ensuite indiquer l'endroit pour la garder. ${green_color}Entrez la route vers l'endroit où vous voulez garder le fichier ou bien appuyez sur [Enter] si la route proposée par défaut vous convient ${normal_color}[${wep_potpath}]"
-	arr["CATALAN",430]="Si s'aconsegueix la contrasenya de la xarxa wifi amb l'atac WEP \"Tot-en-Un \", cal decidir on guardar-la. ${green_color}Escriu la ruta on guardarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${wep_potpath}]"
+	arr["CATALAN",430]="Si s'aconsegueix la contrasenya de la xarxa wifi amb l'atac WEP \"Tot-en-Un\", cal decidir on guardar-la. ${green_color}Escriu la ruta on guardarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${wep_potpath}]"
 	arr["PORTUGUESE",430]="Se a senha da rede wifi for obtida com o ataque WEP \"Tudo-em-Um\", onde deseja salvá-la?. ${green_color}Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${wep_potpath}]"
 	arr["RUSSIAN",430]="Если во время WEP атаки \"Все-в-Одном\" на Wi-Fi сеть получен пароль, вы должны решить, где его сохранить. ${green_color} Наберите путь для сохранения файла или нажмите [Enter] для принятия значения по умолчанию ${normal_color}[${wep_potpath}]"
 	arr["GREEK",430]="Εάν βρεθεί ο κωδικός πρόσβασης για το ασύρματο δίκτυο με την επίθεση WEP \"All-in-One\", θα πρέπει να αποφασίσετε που θα τον αποθηκεύσετε. ${green_color}Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${wep_potpath}]"
