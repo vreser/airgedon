@@ -17,7 +17,7 @@ Please note we have a [Code of Conduct], please follow it in all your interactio
 3. Ask by mail [v1s1t0r.1s.h3r3@gmail.com] if you have any doubt. You'll be informed about how to proceed.
 4. You can be added as a collaborator on the project.
 5. Knowledge about `git` is not mandatory but is really appreciated to push directly into the project repository.
-6. If you want to create a pull request with a new language to be added, at least the 80% of the phrases must be translated and the rest nust be done with at least _an automatic-translations_ system and marked with PoT mark.
+6. If you want to create a pull request with a new language to be added, at least the 80% of the phrases must be translated and the rest must be done with at least _an automatic-translation_ system and marked with PoT (Pending of Translation) mark.
 
 ## Collaborating Developers
 
