@@ -1,5 +1,6 @@
 ### 8.10
  - WPS decrypted networks now have trophy file
+ - Tested compatibility with Kali 2018.2
 
 ### 8.01
  - German language translation added (Thank you to "hamperfait")
