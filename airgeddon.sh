@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180325
+#Date.........: 20180513
 #Version......: 8.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -4410,6 +4410,12 @@ function beef_pre_menu() {
 				if check_interface_wifi "${interface}"; then
 					et_mode="et_sniffing_sslstrip2"
 					get_bettercap_version
+					if compare_floats_greater_than "${bettercap_version}" "${minimum_bettercap_fixed_beef_iptables_issue}"; then
+						echo
+						language_strings "${language}" 174 "red"
+						language_strings "${language}" 115 "read"
+						return
+					fi
 					et_dos_menu
 				else
 					echo
@@ -9641,6 +9647,9 @@ function get_bettercap_version() {
 	debug_print
 
 	bettercap_version=$(bettercap -v 2> /dev/null | grep -E "^bettercap [0-9]" | awk '{print $2}')
+	if [ -z "${bettercap_version}" ]; then
+		bettercap_version="2.5"
+	fi
 }
 
 #Determine bully version

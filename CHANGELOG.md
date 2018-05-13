@@ -1,6 +1,7 @@
 ### 8.10
  - WPS decrypted networks now have trophy file
  - Tested compatibility with Kali 2018.2
+ - Controlled error for unsupported bettercap 2.x version
 
 ### 8.01
  - German language translation added (Thank you to "hamperfait")

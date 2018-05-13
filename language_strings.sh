@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180403
+#Date.........: 20180513
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -25,7 +25,7 @@ function language_strings() {
 		declare -gA wps_data_array
 	fi
 
-	#TODO clean or reuse strings 174, 260, 331, 361, 366, 411
+	#TODO clean or reuse strings 260, 331, 361, 366, 411
 
 	declare -A unknown_chipset
 	unknown_chipset["ENGLISH"]="Unknown"
@@ -2463,16 +2463,16 @@ function language_strings() {
 	arr["POLISH",173]="Wybrany plik przechwytywania: ${pink_color}${enteredpath}${normal_color}"
 	arr["GERMAN",173]="Ausgewählte Capture-Datei: ${pink_color}${enteredpath}${normal_color}"
 
-	arr["ENGLISH",174]="6.  Return to main menu"
-	arr["SPANISH",174]="6.  Volver al menú principal"
-	arr["FRENCH",174]="6.  Retourner au menu principal"
-	arr["CATALAN",174]="6.  Tornar al menú principal"
-	arr["PORTUGUESE",174]="6.  Voltar para o menu principal"
-	arr["RUSSIAN",174]="6.  Возврат в главное меню"
-	arr["GREEK",174]="6.  Επιστροφή στο αρχικό μενού"
-	arr["ITALIAN",174]="6.  Torna al menú principale"
-	arr["POLISH",174]="6.  Wróć do menu głównego"
-	arr["GERMAN",174]="6.  Zum Hauptmenü zurückkehren"
+	arr["ENGLISH",174]="It seems you have an unsupported by airgeddon bettercap version. The last bettercap supported version is ${minimum_bettercap_fixed_beef_iptables_issue}. If you want to get this attack working you should perform a downgrade of the package"
+	arr["SPANISH",174]="Parece que tienes una versión de bettercap no soportada por airgeddon. La última versión soportada de bettercap es la ${minimum_bettercap_fixed_beef_iptables_issue}. Si quieres realizar este ataque deberías hacer un downgrade del paquete"
+	arr["FRENCH",174]="${pending_of_translation} Il semble que vous avez une version non supportée par airgeddon bettercap. La dernière version prise en charge par bettercap est ${minimum_bettercap_fixed_beef_iptables_issue}. Si vous voulez que cette attaque fonctionne, vous devez effectuer une downgrade du paquet"
+	arr["CATALAN",174]="${pending_of_translation} Sembla que no teniu una versió millorada de airgeddon. L'última versió compatible amb bettercap és ${minimum_bettercap_fixed_beef_iptables_issue}. Si voleu que aquest atac funcioni, hauríeu de realitzar un downgrade del paquet"
+	arr["PORTUGUESE",174]="${pending_of_translation} Parece que você tem uma versão sem suporte do airgeddon bettercap. A última versão suportada pelo bettercap é ${minimum_bettercap_fixed_beef_iptables_issue}. Se você quiser que este ataque funcione, você deve fazer um downgrade do pacote"
+	arr["RUSSIAN",174]="${pending_of_translation} Кажется, у вас есть неподдерживаемая версия airmeddon bettercap. Последняя поддерживаемая версия bettercap ${minimum_bettercap_fixed_beef_iptables_issue}. Если вы хотите, чтобы эта атака работала, вы должны выполнить понижение пакета"
+	arr["GREEK",174]="${pending_of_translation} Φαίνεται ότι έχετε μια μη υποστηριζόμενη έκδοση airgeddon bettercap. Η τελευταία έκδοση που υποστηρίζεται από το bettercap είναι ${minimum_bettercap_fixed_beef_iptables_issue}. Αν θέλετε να επιτύχετε αυτή την επίθεση, θα πρέπει να εκτελέσετε υποβάθμιση του πακέτου"
+	arr["ITALIAN",174]="${pending_of_translation} Sembra che tu non sia supportato dalla versione bettercap di airgeddon. L'ultima versione supportata da bettercap è ${minimum_bettercap_fixed_beef_iptables_issue}. Se vuoi far funzionare questo attacco devi eseguire un downgrade del pacchetto"
+	arr["POLISH",174]="${pending_of_translation} Wygląda na to, że masz nieobsługiwaną przez airgeddon wersję lepszej wersji. Ostatnia obsługiwana wersja bettercap jest ${minimum_bettercap_fixed_beef_iptables_issue}. Jeśli chcesz, aby ten atak działał, powinieneś obniżyć pakiet"
+	arr["GERMAN",174]="${pending_of_translation} Es scheint, dass Sie von der airgeddon bettercap Version nicht unterstützt werden. Die letzte bettercap unterstützte Version ist ${minimum_bettercap_fixed_beef_iptables_issue}. Wenn Sie diesen Angriff zum Laufen bringen wollen, sollten Sie ein Downgrade des Paketes durchführen"
 
 	arr["ENGLISH",175]="2.  (aircrack + crunch) Bruteforce attack against capture file"
 	arr["SPANISH",175]="2.  (aircrack + crunch) Ataque de fuerza bruta sobre fichero de captura"
