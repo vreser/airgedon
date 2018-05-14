@@ -408,7 +408,7 @@ function language_strings() {
 	wps_texts["PORTUGUESE",1]="${pending_of_translation} airgeddon. Senha decifrada no ataque WPS"
 	wps_texts["RUSSIAN",1]="${pending_of_translation} airgeddon. Пароль расшифрован в WPS-атаке"
 	wps_texts["GREEK",1]="${pending_of_translation} airgeddon. Ο κωδικός αποκρυπτογραφήθηκε σε επίθεση WPS"
-	wps_texts["ITALIAN",1]="${pending_of_translation} airgeddon. Password decifrata con l'attacco WPS"
+	wps_texts["ITALIAN",1]="airgeddon. Password decifrata con l'attacco WPS"
 	wps_texts["POLISH",1]="${pending_of_translation} airgeddon. Hasło odszyfrowane w ataku WPS"
 	wps_texts["GERMAN",1]="${pending_of_translation} airgeddon. Passwort bei WPS-Angriff entschlüsselt"
 
@@ -1293,7 +1293,7 @@ function language_strings() {
 	arr["PORTUGUESE",67]="${pending_of_translation} Filtro WEP ativado na digitalização. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",67]="${pending_of_translation} Фильтр WEP, активированный при сканировании. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",67]="Το φίλτρο WEP ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, μπορείτε να το σταματήσετε πατώντας [Ctrl+C]..."
-	arr["ITALIAN",67]="${pending_of_translation} Filtro WEP attivato in scansione. Una volta avviato, premere [Ctrl+C] per fermare..."
+	arr["ITALIAN",67]="Filtro WEP attivato durante la scansione. Una volta avviato, premere [Ctrl+C] per fermarlo..."
 	arr["POLISH",67]="${pending_of_translation} Filtr WEP aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 	arr["GERMAN",67]="WEP-Filter beim Scannen aktiviert. Nach den Start, drücken Sie [Ctrl+C], um es zu stoppen..."
 
@@ -1909,7 +1909,7 @@ function language_strings() {
 	arr["PORTUGUESE",123]="${pending_of_translation} Se a senha da rede wifi for obtida com o ataque WPS, onde deseja salvá-la?. ${green_color}Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${wps_potpath}]"
 	arr["RUSSIAN",123]="${pending_of_translation} Если во время WPS атаки на Wi-Fi сеть получен пароль, вы должны решить, где его сохранить. ${green_color} Наберите путь для сохранения файла или нажмите [Enter] для принятия значения по умолчанию ${normal_color}[${wps_potpath}]"
 	arr["GREEK",123]="${pending_of_translation} Εάν βρεθεί ο κωδικός πρόσβασης για το ασύρματο δίκτυο με την επίθεση WPS, θα πρέπει να αποφασίσετε που θα τον αποθηκεύσετε. ${green_color}Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${wps_potpath}]"
-	arr["ITALIAN",123]="${pending_of_translation} Se si ottiene la password della rete wireless con l'attacco WPS, decidere dove salvarla. ${green_color}Immettere il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${wps_potpath}]"
+	arr["ITALIAN",123]="Se si ottiene la password della rete wireless con l'attacco WPS, bisogna decidere dove salvarla. ${green_color}Scrivere il percorso dove salvare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${wps_potpath}]"
 	arr["POLISH",123]="${pending_of_translation} Jeśli hasło sieci wifi zostanie zdobyte atakiem WPS, musisz zdecydować, gdzie je zapisać. ${green_color}Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${wps_potpath}]"
 	arr["GERMAN",123]="${pending_of_translation} Wenn Sie das WLAN-Passwort mit dem WPS-Angriff erhalten, müssen Sie entscheiden, wo Sie es speichern möchten. ${green_color} Geben Sie den Pfad ein, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${wps_potpath}] ${blue_color}zu akzeptieren"
 
@@ -2470,7 +2470,7 @@ function language_strings() {
 	arr["PORTUGUESE",174]="${pending_of_translation} Parece que você tem uma versão sem suporte do airgeddon bettercap. A última versão suportada pelo bettercap é ${minimum_bettercap_fixed_beef_iptables_issue}. Se você quiser que este ataque funcione, você deve fazer um downgrade do pacote"
 	arr["RUSSIAN",174]="${pending_of_translation} Кажется, у вас есть неподдерживаемая версия airmeddon bettercap. Последняя поддерживаемая версия bettercap ${minimum_bettercap_fixed_beef_iptables_issue}. Если вы хотите, чтобы эта атака работала, вы должны выполнить понижение пакета"
 	arr["GREEK",174]="${pending_of_translation} Φαίνεται ότι έχετε μια μη υποστηριζόμενη έκδοση airgeddon bettercap. Η τελευταία έκδοση που υποστηρίζεται από το bettercap είναι ${minimum_bettercap_fixed_beef_iptables_issue}. Αν θέλετε να επιτύχετε αυτή την επίθεση, θα πρέπει να εκτελέσετε υποβάθμιση του πακέτου"
-	arr["ITALIAN",174]="${pending_of_translation} Sembra che tu non sia supportato dalla versione bettercap di airgeddon. L'ultima versione supportata da bettercap è ${minimum_bettercap_fixed_beef_iptables_issue}. Se vuoi far funzionare questo attacco devi eseguire un downgrade del pacchetto"
+	arr["ITALIAN",174]="Sembra che tu abbia una versione di bettercap non supportata da airgeddon. L'ultima versione di bettercap supportata è ${minimum_bettercap_fixed_beef_iptables_issue}. Se vuoi far funzionare questo attacco devi eseguire un downgrade del pacchetto"
 	arr["POLISH",174]="${pending_of_translation} Wygląda na to, że masz nieobsługiwaną przez airgeddon wersję lepszej wersji. Ostatnia obsługiwana wersja bettercap jest ${minimum_bettercap_fixed_beef_iptables_issue}. Jeśli chcesz, aby ten atak działał, powinieneś obniżyć pakiet"
 	arr["GERMAN",174]="${pending_of_translation} Es scheint, dass Sie von der airgeddon bettercap Version nicht unterstützt werden. Die letzte bettercap unterstützte Version ist ${minimum_bettercap_fixed_beef_iptables_issue}. Wenn Sie diesen Angriff zum Laufen bringen wollen, sollten Sie ein Downgrade des Paketes durchführen"
 
