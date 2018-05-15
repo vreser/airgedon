@@ -1288,7 +1288,7 @@ function language_strings() {
 
 	arr["ENGLISH",67]="WEP filter enabled in scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",67]="Filtro WEP activado en escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
-	arr["FRENCH",67]="${pending_of_translation} Le filtre WEP est activé dans la numérisation. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
+	arr["FRENCH",67]="Le filtre WEP est activé dans le scan. Une fois l'opération lancée, veuillez presser [Ctrl+C] pour l'arrêter..."
 	arr["CATALAN",67]="Filtre WEP activat en escaneig. Una vegada iniciat, polsi [Ctrl+C] per detenir-ho..."
 	arr["PORTUGUESE",67]="Filtro WEP ativo na busca de redes wifi. Uma vez iniciado, pressione [Ctrl+C] para pará-lo..."
 	arr["RUSSIAN",67]="${pending_of_translation} Фильтр WEP, активированный при сканировании. После запуска, нажмите [Ctrl+C] для остановки..."
