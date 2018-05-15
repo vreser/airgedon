@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180513
+#Date.........: 20180515
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -2466,13 +2466,8 @@ function language_strings() {
 	arr["ENGLISH",174]="It seems you have an unsupported by airgeddon bettercap version. The last bettercap supported version is ${minimum_bettercap_fixed_beef_iptables_issue}. If you want to get this attack working you should perform a downgrade of the package"
 	arr["SPANISH",174]="Parece que tienes una versión de bettercap no soportada por airgeddon. La última versión soportada de bettercap es la ${minimum_bettercap_fixed_beef_iptables_issue}. Si quieres realizar este ataque deberías hacer un downgrade del paquete"
 	arr["FRENCH",174]="${pending_of_translation} Il semble que vous avez une version non supportée par airgeddon bettercap. La dernière version prise en charge par bettercap est ${minimum_bettercap_fixed_beef_iptables_issue}. Si vous voulez que cette attaque fonctionne, vous devez effectuer une downgrade du paquet"
-<<<<<<< HEAD
 	arr["CATALAN",174]="Sembla que teniu una versió de bettercap no suportada per airgeddon. L'última versió suportada de bettercap és ${minimum_bettercap_fixed_beef_iptables_issue}. Si voleu que aquest atac funcioni, hauríeu de realitzar un downgrade del paquet"
-	arr["PORTUGUESE",174]="${pending_of_translation} Parece que você tem uma versão sem suporte do airgeddon bettercap. A última versão suportada pelo bettercap é ${minimum_bettercap_fixed_beef_iptables_issue}. Se você quiser que este ataque funcione, você deve fazer um downgrade do pacote"
-=======
-	arr["CATALAN",174]="Sembla que no teniu una versió millorada d'airgeddon. L'última versió compatible amb bettercap és ${minimum_bettercap_fixed_beef_iptables_issue}. Si voleu que aquest atac funcioni, hauríeu de realitzar un downgrade del paquet"
 	arr["PORTUGUESE",174]="Sua versão do bettercap não é suportada pelo airgeddon. A última versão suportada é ${minimum_bettercap_fixed_beef_iptables_issue}. Se você quiser que este ataque funcione, você deve fazer um downgrade"
->>>>>>> a52a4fe5721dfbeeb6895ec9d99fccc1d96e498f
 	arr["RUSSIAN",174]="${pending_of_translation} Кажется, у вас есть неподдерживаемая версия airmeddon bettercap. Последняя поддерживаемая версия bettercap ${minimum_bettercap_fixed_beef_iptables_issue}. Если вы хотите, чтобы эта атака работала, вы должны выполнить понижение пакета"
 	arr["GREEK",174]="${pending_of_translation} Φαίνεται ότι έχετε μια μη υποστηριζόμενη έκδοση airgeddon bettercap. Η τελευταία έκδοση που υποστηρίζεται από το bettercap είναι ${minimum_bettercap_fixed_beef_iptables_issue}. Αν θέλετε να επιτύχετε αυτή την επίθεση, θα πρέπει να εκτελέσετε υποβάθμιση του πακέτου"
 	arr["ITALIAN",174]="Sembra che tu abbia una versione di bettercap non supportata da airgeddon. L'ultima versione di bettercap supportata è ${minimum_bettercap_fixed_beef_iptables_issue}. Se vuoi far funzionare questo attacco devi eseguire un downgrade del pacchetto"
