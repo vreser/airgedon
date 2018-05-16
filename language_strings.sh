@@ -409,7 +409,7 @@ function language_strings() {
 	wps_texts["RUSSIAN",1]="airgeddon. Пароль расшифрован во время WPS атаки"
 	wps_texts["GREEK",1]="${pending_of_translation} airgeddon. Ο κωδικός αποκρυπτογραφήθηκε σε επίθεση WPS"
 	wps_texts["ITALIAN",1]="airgeddon. Password decifrata con l'attacco WPS"
-	wps_texts["POLISH",1]="${pending_of_translation} airgeddon. Hasło odszyfrowane w ataku WPS"
+	wps_texts["POLISH",1]="airgeddon. Hasło odszyfrowane w ataku WPS"
 	wps_texts["GERMAN",1]="${pending_of_translation} airgeddon. Passwort bei WPS-Angriff entschlüsselt"
 
 	wps_texts["ENGLISH",2]="Channel"
@@ -545,7 +545,7 @@ function language_strings() {
 	footer_texts["RUSSIAN",1]="Если вам понравилась эта программа и она оказался для вас полезной, вы можете поддержать проект, сделав пожертвование. Доступны переводы через PayPal (${mail}) и криптовалюту (Bitcoin, Ethereum, Litecoin...). Приветствуется любая сумма, даже небольшая (1, 2, 5 $/€). Более подробную информацию и прямые ссылки можно получить по адресу: ${urlgithub_wiki}/Contributing"
 	footer_texts["GREEK",1]="Εαν μείνατε ευχαριστημένοι από το script και το βρήκατε χρήσιμο, μπορείτε να υποστηρίξετε το project κάνοντας κάποια δωρεά. Μέσω PayPal (${mail}) ή αποστέλλοντας κάποιο κλάσμα κρυπτονομίσματος (Bitcoin, Ethereum, Litecoin...). Είναι καλοδεχούμενο οποιοδήποτε ποσό (1, 2, 5 $/€), δεν έχει σημασία το πόσο λίγο μπορεί να είναι. Δίνονται περισσότερες πληροφορίες και links για να κάνετε δωρεά, στη διεύθυνση: ${urlgithub_wiki}/Contributing"
 	footer_texts["ITALIAN",1]="Se ti è piaciuto lo script e l'hai trovato utile, puoi sostenere il progetto con una donazione. Attraverso PayPal (${mail}) o inviando una frazione di criptovaluta (Bitcoin, Ethereum, Litecoin...). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Piú informazioni e collegamenti diretti per realizzarla in: ${urlgithub_wiki}/Contributing"
-	footer_texts["POLISH",1]="${pending_of_translation} Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi PayPal (${mail}) lub wysyłając ułamek kryptowaluty (Bitcoin, Ethereum, Litecoin...). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${urlgithub_wiki}/Contributing"
+	footer_texts["POLISH",1]="Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi PayPal (${mail}) lub wysyłając ułamek kryptowaluty (Bitcoin, Ethereum, Litecoin...). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${urlgithub_wiki}/Contributing"
 	footer_texts["GERMAN",1]="Wenn Ihnen das Skript gefallen hat und Sie es nützlich fanden, können Sie das Projekt mit einer Spende unterstützen. Durch PayPal (${mail}) oder durch Senden eines Bruchteils von Kryptowährung (Bitcoin, Ethereum, Litecoin...). Jeder kleine Betrag (1, 2, 5 $/€) wird gut angenommen. Weitere Informationen und direkte Links dazu finden Sie unter: ${urlgithub_wiki}/Contributing"
 
 	declare -A arr
@@ -1294,7 +1294,7 @@ function language_strings() {
 	arr["RUSSIAN",67]="Для сканирования активирован фильтр WEP. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",67]="Το φίλτρο WEP ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, μπορείτε να το σταματήσετε πατώντας [Ctrl+C]..."
 	arr["ITALIAN",67]="Filtro WEP attivato durante la scansione. Una volta avviato, premere [Ctrl+C] per fermarlo..."
-	arr["POLISH",67]="${pending_of_translation} Filtr WEP aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
+	arr["POLISH",67]="Filtr WEP aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 	arr["GERMAN",67]="WEP-Filter beim Scannen aktiviert. Nach den Start, drücken Sie [Ctrl+C], um es zu stoppen..."
 
 	arr["ENGLISH",68]="No networks found"
@@ -1910,7 +1910,7 @@ function language_strings() {
 	arr["RUSSIAN",123]="Если во время WPS атаки на Wi-Fi сеть получен пароль, вы должны решить, где его сохранить. ${green_color} Наберите путь для сохранения файла или нажмите [Enter] для принятия значения по умолчанию ${normal_color}[${wps_potpath}]"
 	arr["GREEK",123]="${pending_of_translation} Εάν βρεθεί ο κωδικός πρόσβασης για το ασύρματο δίκτυο με την επίθεση WPS, θα πρέπει να αποφασίσετε που θα τον αποθηκεύσετε. ${green_color}Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${wps_potpath}]"
 	arr["ITALIAN",123]="Se si ottiene la password della rete wireless con l'attacco WPS, bisogna decidere dove salvarla. ${green_color}Scrivere il percorso dove salvare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${wps_potpath}]"
-	arr["POLISH",123]="${pending_of_translation} Jeśli hasło sieci wifi zostanie zdobyte atakiem WPS, musisz zdecydować, gdzie je zapisać. ${green_color}Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${wps_potpath}]"
+	arr["POLISH",123]="Jeśli hasło sieci wifi zostanie uzyskane atakiem WPS, musisz zdecydować gdzie je zapisać. ${green_color}Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${wps_potpath}]"
 	arr["GERMAN",123]="${pending_of_translation} Wenn Sie das WLAN-Passwort mit dem WPS-Angriff erhalten, müssen Sie entscheiden, wo Sie es speichern möchten. ${green_color} Geben Sie den Pfad ein, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${wps_potpath}] ${blue_color}zu akzeptieren"
 
 	arr["ENGLISH",124]="monitor mode needed for capturing"
@@ -2471,7 +2471,7 @@ function language_strings() {
 	arr["RUSSIAN",174]="Кажется, ваша версия bettercap не поддерживается airgeddon. Последняя поддерживаемая версия bettercap ${minimum_bettercap_fixed_beef_iptables_issue}. Если вы хотите, чтобы эта атака работала, вы должны понизить версию этого пакета"
 	arr["GREEK",174]="${pending_of_translation} Φαίνεται ότι έχετε μια μη υποστηριζόμενη έκδοση airgeddon bettercap. Η τελευταία έκδοση που υποστηρίζεται από το bettercap είναι ${minimum_bettercap_fixed_beef_iptables_issue}. Αν θέλετε να επιτύχετε αυτή την επίθεση, θα πρέπει να εκτελέσετε υποβάθμιση του πακέτου"
 	arr["ITALIAN",174]="Sembra che tu abbia una versione di bettercap non supportata da airgeddon. L'ultima versione di bettercap supportata è ${minimum_bettercap_fixed_beef_iptables_issue}. Se vuoi far funzionare questo attacco devi eseguire un downgrade del pacchetto"
-	arr["POLISH",174]="${pending_of_translation} Wygląda na to, że masz nieobsługiwaną przez airgeddon wersję lepszej wersji. Ostatnia obsługiwana wersja bettercap jest ${minimum_bettercap_fixed_beef_iptables_issue}. Jeśli chcesz, aby ten atak działał, powinieneś obniżyć pakiet"
+	arr["POLISH",174]="Wygląda na to, że masz nieobsługiwaną przez airgeddon wersję bettercap. Ostatnia obsługiwana wersja bettercap to ${minimum_bettercap_fixed_beef_iptables_issue}. Jeśli chcesz, aby ten atak działał, musisz obniżyć wersje"
 	arr["GERMAN",174]="${pending_of_translation} Es scheint, dass Sie von der airgeddon bettercap Version nicht unterstützt werden. Die letzte bettercap unterstützte Version ist ${minimum_bettercap_fixed_beef_iptables_issue}. Wenn Sie diesen Angriff zum Laufen bringen wollen, sollten Sie ein Downgrade des Paketes durchführen"
 
 	arr["ENGLISH",175]="2.  (aircrack + crunch) Bruteforce attack against capture file"
@@ -5364,7 +5364,7 @@ function language_strings() {
 	arr["RUSSIAN",437]="Если вам понравилась эта программа и она оказался для вас полезной, вы можете поддержать проект, сделав пожертвование. Доступны переводы через PayPal (${normal_color}${mail}${pink_color}) и криптовалюту (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Приветствуется любая сумма, даже небольшая (1, 2, 5 $/€). Более подробную информацию и прямые ссылки можно получить по адресу: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["GREEK",437]="Εαν μείνατε ευχαριστημένοι από το script και το βρήκατε χρήσιμο, μπορείτε να υποστηρίξετε το project κάνοντας κάποια δωρεά. Μέσω PayPal (${normal_color}${mail}${pink_color}) ή αποστέλλοντας κάποιο κλάσμα κρυπτονομίσματος (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Είναι καλοδεχούμενο οποιοδήποτε ποσό (1, 2, 5 $/€), δεν έχει σημασία το πόσο λίγο μπορεί να είναι. Δίνονται περισσότερες πληροφορίες και links για να κάνετε δωρεά, στη διεύθυνση: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["ITALIAN",437]="Se ti è piaciuto lo script e l'hai trovato utile, puoi sostenere il progetto con una donazione. Attraverso PayPal (${normal_color}${mail}${pink_color}) o inviando una frazione di criptovaluta (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Piú informazioni e collegamenti diretti per realizzarla in: ${normal_color}${urlgithub_wiki}/Contributing"
-	arr["POLISH",437]="${pending_of_translation} Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi PayPal (${normal_color}${mail}${pink_color}) lub wysyłając ułamek kryptowaluty (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${normal_color}${urlgithub_wiki}/Contributing"
+	arr["POLISH",437]="Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi PayPal (${normal_color}${mail}${pink_color}) lub wysyłając ułamek kryptowaluty (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["GERMAN",437]="Wenn Ihnen das Skript gefallen hat und Sie es nützlich fanden, können Sie das Projekt mit einer Spende unterstützen. Durch PayPal (${normal_color}${mail}${pink_color}) oder durch Senden eines Bruchteils der Kryptowährung (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Jeder kleine Betrag (1, 2, 5 $/€) wird gut angenommen. Mehr Informationen und direkte Links, um es zu machen: ${normal_color}${urlgithub_wiki}/Contributing"
 
 	arr["ENGLISH",438]="We are looking for translators to other languages. If you want to see airgeddon in your native language and you also know english, contact us. More information at: ${normal_color}${urlgithub_wiki}/Contributing"
@@ -6288,7 +6288,7 @@ function language_strings() {
 	arr["RUSSIAN",521]="Для сканирования включен фильтр WPS. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",521]="Το φίλτρο WPS ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, μπορείτε να το σταματήσετε πατώντας [Ctrl+C]..."
 	arr["ITALIAN",521]="Filtro WPS attivato nella scansione. Una volta avviata, premere [Ctrl+C] per fermarla..."
-	arr["POLISH",521]="${pending_of_translation} Filtr WPS aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
+	arr["POLISH",521]="Filtr WPS aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 	arr["GERMAN",521]="WPS-Filter beim Scannen aktiviert. Nach dem Start, drücken Sie [Ctrl+C], um es zu stoppen..."
 
 	arr["ENGLISH",522]="No filters enabled on scan. When started, press [Ctrl+C] to stop..."
@@ -6299,7 +6299,7 @@ function language_strings() {
 	arr["RUSSIAN",522]="В сканировании не активированы фильтры. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",522]="Δεν έχουν ενεργοποιηθεί φίλτρα στη σάρωση. Όταν αρχίσει, μπορείτε να το σταματήσετε πατώντας [Ctrl+C]..."
 	arr["ITALIAN",522]="Nessun filtro attivato nella scansione. Una volta avviata, premere [Ctrl+C] per fermarla..."
-	arr["POLISH",522]="${pending_of_translation} W skanie nie zostały włączone żadne filtry. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
+	arr["POLISH",522]="W skanowaniu nie zostały włączone żadne filtry. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 	arr["GERMAN",522]="Es sind keine aktivierten Filter im Scan vorhanden. Nach dem Start, drücken Sie [Ctrl+C], um es zu stoppen..."
 
 	arr["ENGLISH",523]="WPA/WPA2 filter enabled in scan. When started, press [Ctrl+C] to stop..."
@@ -6310,7 +6310,7 @@ function language_strings() {
 	arr["RUSSIAN",523]="Для сканирования включен фильтр WPA/WPA2. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",523]="Το φίλτρο WPA/WPA2 ενεργοποιήθηκε κατά τη σάρωση. Όταν αρχίσει, μπορείτε να το σταματήσετε πατώντας [Ctrl+C]..."
 	arr["ITALIAN",523]="Filtro WPA/WPA2 attivato nella scansione. Una volta avviata, premere [Ctrl+C] per fermarla..."
-	arr["POLISH",523]="${pending_of_translation} Filtr WPA/WPA2 aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
+	arr["POLISH",523]="Filtr WPA/WPA2 aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 	arr["GERMAN",523]="WPA/WPA2-Filter beim Scannen aktiviert. Nach dem Start, drücken Sie [Ctrl+C], um es zu stoppen..."
 
 	arr["ENGLISH",524]="10. German"
