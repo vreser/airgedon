@@ -410,7 +410,7 @@ function language_strings() {
 	wps_texts["GREEK",1]="${pending_of_translation} airgeddon. Ο κωδικός αποκρυπτογραφήθηκε σε επίθεση WPS"
 	wps_texts["ITALIAN",1]="airgeddon. Password decifrata con l'attacco WPS"
 	wps_texts["POLISH",1]="airgeddon. Hasło odszyfrowane w ataku WPS"
-	wps_texts["GERMAN",1]="${pending_of_translation} airgeddon. Passwort bei WPS-Angriff entschlüsselt"
+	wps_texts["GERMAN",1]="airgeddon. Passwort bei WPS-Angriff entschlüsselt"
 
 	wps_texts["ENGLISH",2]="Channel"
 	wps_texts["SPANISH",2]="Canal"
@@ -1911,7 +1911,7 @@ function language_strings() {
 	arr["GREEK",123]="${pending_of_translation} Εάν βρεθεί ο κωδικός πρόσβασης για το ασύρματο δίκτυο με την επίθεση WPS, θα πρέπει να αποφασίσετε που θα τον αποθηκεύσετε. ${green_color}Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${wps_potpath}]"
 	arr["ITALIAN",123]="Se si ottiene la password della rete wireless con l'attacco WPS, bisogna decidere dove salvarla. ${green_color}Scrivere il percorso dove salvare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${wps_potpath}]"
 	arr["POLISH",123]="Jeśli hasło sieci wifi zostanie uzyskane atakiem WPS, musisz zdecydować gdzie je zapisać. ${green_color}Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${wps_potpath}]"
-	arr["GERMAN",123]="${pending_of_translation} Wenn Sie das WLAN-Passwort mit dem WPS-Angriff erhalten, müssen Sie entscheiden, wo Sie es speichern möchten. ${green_color} Geben Sie den Pfad ein, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${wps_potpath}] ${blue_color}zu akzeptieren"
+	arr["GERMAN",123]="Wenn Sie das WLAN-Passwort mit dem WPS-Angriff erhalten, müssen Sie entscheiden, wo Sie es speichern möchten. ${green_color} Geben Sie den Pfad ein, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${wps_potpath}] ${blue_color}zu akzeptieren"
 
 	arr["ENGLISH",124]="monitor mode needed for capturing"
 	arr["SPANISH",124]="modo monitor requerido en captura"
@@ -2472,7 +2472,7 @@ function language_strings() {
 	arr["GREEK",174]="${pending_of_translation} Φαίνεται ότι έχετε μια μη υποστηριζόμενη έκδοση airgeddon bettercap. Η τελευταία έκδοση που υποστηρίζεται από το bettercap είναι ${minimum_bettercap_fixed_beef_iptables_issue}. Αν θέλετε να επιτύχετε αυτή την επίθεση, θα πρέπει να εκτελέσετε υποβάθμιση του πακέτου"
 	arr["ITALIAN",174]="Sembra che tu abbia una versione di bettercap non supportata da airgeddon. L'ultima versione di bettercap supportata è ${minimum_bettercap_fixed_beef_iptables_issue}. Se vuoi far funzionare questo attacco devi eseguire un downgrade del pacchetto"
 	arr["POLISH",174]="Wygląda na to, że masz nieobsługiwaną przez airgeddon wersję bettercap. Ostatnia obsługiwana wersja bettercap to ${minimum_bettercap_fixed_beef_iptables_issue}. Jeśli chcesz, aby ten atak działał, musisz obniżyć wersje"
-	arr["GERMAN",174]="${pending_of_translation} Es scheint, dass Sie von der airgeddon bettercap Version nicht unterstützt werden. Die letzte bettercap unterstützte Version ist ${minimum_bettercap_fixed_beef_iptables_issue}. Wenn Sie diesen Angriff zum Laufen bringen wollen, sollten Sie ein Downgrade des Paketes durchführen"
+	arr["GERMAN",174]="Anscheinend ist die benutzte bettercap version von airgeddon nicht unterstützt. Die letzte unterstützte bettercap Version ist ${minimum_bettercap_fixed_beef_iptables_issue}. Wenn Sie diesen Angriff beuntzen wollen, sollten Sie ein Downgrade des bettercap-Pakets durchführen"
 
 	arr["ENGLISH",175]="2.  (aircrack + crunch) Bruteforce attack against capture file"
 	arr["SPANISH",175]="2.  (aircrack + crunch) Ataque de fuerza bruta sobre fichero de captura"
