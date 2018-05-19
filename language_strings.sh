@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180515
+#Date.........: 20180519
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -769,16 +769,16 @@ function language_strings() {
 	arr["POLISH",19]="Cierpliwości. Zakańczam procesy, które mogłyby powodować konflikty..."
 	arr["GERMAN",19]="Wir bitten um Geduld. Mögliche konfliktreiche Prozesse werden gerade gestoppt..."
 
-	arr["ENGLISH",20]="This interface ${current_iface_on_messages} doesn't support monitor mode"
-	arr["SPANISH",20]="Esta interfaz ${current_iface_on_messages} no soporta modo monitor"
-	arr["FRENCH",20]="L'interface ${current_iface_on_messages} n'est pas compatible mode moniteur"
-	arr["CATALAN",20]="Aquesta interfície ${current_iface_on_messages} no suporta mode monitor"
-	arr["PORTUGUESE",20]="Esta interface ${current_iface_on_messages} não suporta o modo monitor"
-	arr["RUSSIAN",20]="Этот интерфейс ${current_iface_on_messages} не поддерживает режим монитора"
-	arr["GREEK",20]="Αυτή η διεπαφή ${current_iface_on_messages} δεν υποστηρίζει κατάσταση παρακολούθησης"
-	arr["ITALIAN",20]="Questa interfaccia ${current_iface_on_messages} non supporta la modalità monitor"
-	arr["POLISH",20]="Interfejs ${current_iface_on_messages} nie obsługuje trybu monitorowania"
-	arr["GERMAN",20]="Diese ${current_iface_on_messages}-Interface unterstützt den monitor-Modus nicht"
+	arr["ENGLISH",20]="This interface ${current_iface_on_messages} doesn't support monitor mode or is not compatible with airmon"
+	arr["SPANISH",20]="Esta interfaz ${current_iface_on_messages} no soporta modo monitor o no es compatible con airmon"
+	arr["FRENCH",20]="${pending_of_translation} L'interface ${current_iface_on_messages} n'est pas compatible mode moniteur ou n'est pas compatible avec airmon"
+	arr["CATALAN",20]="${pending_of_translation} Aquesta interfície ${current_iface_on_messages} no suporta mode monitor o no és compatible amb airmon"
+	arr["PORTUGUESE",20]="${pending_of_translation} Esta interface ${current_iface_on_messages} não suporta o modo monitor ou não é compatível com o airmon"
+	arr["RUSSIAN",20]="${pending_of_translation} Этот интерфейс ${current_iface_on_messages} не поддерживает режим монитора или не совместим с воздухом"
+	arr["GREEK",20]="${pending_of_translation} Αυτή η διεπαφή ${current_iface_on_messages} δεν υποστηρίζει κατάσταση παρακολούθησης ή δεν είναι συμβατή με το airmon"
+	arr["ITALIAN",20]="${pending_of_translation} Questa interfaccia ${current_iface_on_messages} non supporta la modalità monitor o non è compatibile con airmon"
+	arr["POLISH",20]="${pending_of_translation} Interfejs ${current_iface_on_messages} nie obsługuje trybu monitorowania lub nie jest kompatybilny z airmon"
+	arr["GERMAN",20]="${pending_of_translation} Diese ${current_iface_on_messages}-Interface unterstützt den monitor-Modus nicht oder ist nicht mit airmon kompatibel"
 
 	arr["ENGLISH",21]="The interface changed its name while putting in monitor mode. Autoselected"
 	arr["SPANISH",21]="Esta interfaz ha cambiado su nombre al ponerla en modo monitor. Se ha seleccionado automáticamente"
