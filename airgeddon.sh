@@ -8411,7 +8411,7 @@ function capture_handshake_window() {
 
 	rm -rf "${tmpdir}handshake"* > /dev/null 2>&1
 	recalculate_windows_sizes
-	xterm +j -sb -rightbar -geometry "${g1_topright_window}" -T "Capturing Handshake" -e airodump-ng -c "${channel}" -d "${bssid}" -w "${tmpdir}handshake" "${interface}" 2>&1 | tee handcheck.txt  &
+	xterm +j -sb -rightbar -geometry "${g1_topright_window}" -T "Capturing Handshake" -e "airodump-ng -c \"${channel}\" -d \"${bssid}\" -w \"${tmpdir}handshake\" \"${interface}\" 2>&1 | tee handcheck.txt" > /dev/null 2>&1 &
 	processidcapture=$!
 }
 
