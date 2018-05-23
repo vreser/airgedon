@@ -172,7 +172,7 @@
 
 ### 4.31
  - Now optionally on Evil Twin captive portal attack you can choose between to have internet access or to use a "dns trick"
- - Fixed bug writing handshake files on some paths
+ - Fixed bug writing Handshake files on some paths
  - Added possibility to get back to Evil Twin main menu from the internet interface selection menu
 
 ### 4.3
@@ -298,7 +298,7 @@
  - README.md beautified
 
 ### 3.22
- - Cleaning handshake files now perform some checks to avoid corruption file problem
+ - Cleaning Handshake files now perform some checks to avoid corruption file problem
  - Capture files are checked before cracking looking for Handshakes and easy targeting
  - Fixed bug checking existence of files
 
