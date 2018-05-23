@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180523
+#Date.........: 20180524
 #Version......: 8.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -115,7 +115,6 @@ declare -A possible_alias_names=(
 airgeddon_version="8.10"
 language_strings_expected_version="8.10-1"
 standardhandshake_filename="handshake-01.cap"
-handshake_check="handshake_check.txt"
 tmpdir="/tmp/"
 osversionfile_dir="/etc/"
 minimum_bash_version_required="4.2"
@@ -5104,16 +5103,18 @@ function check_bssid_in_captured_file() {
 
 	nets_from_file=$(echo "1" | aircrack-ng "${1}" 2> /dev/null | grep -E "WPA \([1-9][0-9]? handshake" | awk '{ saved = $1; $1 = ""; print substr($0, 2) }')
 
-	echo
-	if [ "${nets_from_file}" = "" ]; then
-		if [ ! -f "${1}" ]; then
-			language_strings "${language}" 161 "red"
-			language_strings "${language}" 115 "read"
-		else
-			language_strings "${language}" 216 "red"
-			language_strings "${language}" 115 "read"
+	if [ "${2}" != "silent" ]; then
+		echo
+		if [ "${nets_from_file}" = "" ]; then
+			if [ ! -f "${1}" ]; then
+				language_strings "${language}" 161 "red"
+				language_strings "${language}" 115 "read"
+			else
+				language_strings "${language}" 216 "red"
+				language_strings "${language}" 115 "read"
+			fi
+			return 1
 		fi
-		return 1
 	fi
 
 	declare -A bssids_detected
@@ -5127,13 +5128,17 @@ function check_bssid_in_captured_file() {
 
 	for targetbssid in "${bssids_detected[@]}"; do
 		if [ "${bssid}" = "${targetbssid}" ]; then
-			language_strings "${language}" 322 "yellow"
+			if [ "${2}" != "silent" ]; then
+				language_strings "${language}" 322 "yellow"
+			fi
 			return 0
 		fi
 	done
 
-	language_strings "${language}" 323 "red"
-	language_strings "${language}" 115 "read"
+	if [ "${2}" != "silent" ]; then
+		language_strings "${language}" 323 "red"
+		language_strings "${language}" 115 "read"
+	fi
 	return 1
 }
 
@@ -8304,7 +8309,7 @@ function attack_handshake_menu() {
 	if [ "${1}" = "handshake" ]; then
 		sleep 5
 		kill "${processidcapture}" &> /dev/null
-		if grep -iqe "\[ WPA handshake:" "${tmpdir}${handshake_check}"; then
+		if check_bssid_in_captured_file "${tmpdir}${standardhandshake_filename}" "silent"; then
 
 			handshakepath="${default_save_path}"
 			lastcharhandshakepath=${handshakepath: -1}
@@ -8413,7 +8418,7 @@ function capture_handshake_window() {
 
 	rm -rf "${tmpdir}handshake"* > /dev/null 2>&1
 	recalculate_windows_sizes
-	xterm +j -sb -rightbar -geometry "${g1_topright_window}" -T "Capturing Handshake" -e "airodump-ng -c \"${channel}\" -d \"${bssid}\" -w \"${tmpdir}handshake\" \"${interface}\" 2>&1 | tee ${tmpdir}${handshake_check}" > /dev/null 2>&1 &
+	xterm +j -sb -rightbar -geometry "${g1_topright_window}" -T "Capturing Handshake" -e airodump-ng -c "${channel}" -d "${bssid}" -w "${tmpdir}handshake" "${interface}" > /dev/null 2>&1 &
 	processidcapture=$!
 }
 
