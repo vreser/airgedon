@@ -8301,8 +8301,9 @@ function attack_handshake_menu() {
 	debug_print
 
 	if [ "${1}" = "handshake" ]; then
+		sleep 4s
 		kill "${processidcapture}" &> /dev/null
-		if grep -q handshake "handcheck.txt"; then
+		if grep -q WPA "handcheck.txt"; then
 
 			handshakepath="${default_save_path}"
 			lastcharhandshakepath=${handshakepath: -1}
