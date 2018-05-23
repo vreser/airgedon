@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180519
+#Date.........: 20180523
 #Version......: 8.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -115,6 +115,7 @@ declare -A possible_alias_names=(
 airgeddon_version="8.10"
 language_strings_expected_version="8.10-1"
 standardhandshake_filename="handshake-01.cap"
+handshake_check="handshake_check.txt"
 tmpdir="/tmp/"
 osversionfile_dir="/etc/"
 minimum_bash_version_required="4.2"
@@ -8301,9 +8302,9 @@ function attack_handshake_menu() {
 	debug_print
 
 	if [ "${1}" = "handshake" ]; then
-		sleep 4s
+		sleep 5
 		kill "${processidcapture}" &> /dev/null
-		if grep -q WPA "handcheck.txt"; then
+		if grep -iqe "\[ WPA handshake:" "${tmpdir}${handshake_check}"; then
 
 			handshakepath="${default_save_path}"
 			lastcharhandshakepath=${handshakepath: -1}
@@ -8412,7 +8413,7 @@ function capture_handshake_window() {
 
 	rm -rf "${tmpdir}handshake"* > /dev/null 2>&1
 	recalculate_windows_sizes
-	xterm +j -sb -rightbar -geometry "${g1_topright_window}" -T "Capturing Handshake" -e "airodump-ng -c \"${channel}\" -d \"${bssid}\" -w \"${tmpdir}handshake\" \"${interface}\" 2>&1 | tee handcheck.txt" > /dev/null 2>&1 &
+	xterm +j -sb -rightbar -geometry "${g1_topright_window}" -T "Capturing Handshake" -e "airodump-ng -c \"${channel}\" -d \"${bssid}\" -w \"${tmpdir}handshake\" \"${interface}\" 2>&1 | tee ${tmpdir}${handshake_check}" > /dev/null 2>&1 &
 	processidcapture=$!
 }
 
