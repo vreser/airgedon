@@ -8018,11 +8018,9 @@ function capture_handshake_evil_twin() {
 
 	processidattack=$!
 	sleep ${sleeptimeattack} && kill ${processidattack} &> /dev/null
-
-	ask_yesno 145
-	handshake_captured=${yesno}
+	sleep 5
 	kill "${processidcapture}" &> /dev/null
-	if [ "${handshake_captured}" = "y" ]; then
+	if check_bssid_in_captured_file "${tmpdir}${standardhandshake_filename}" "silent"; then
 
 		handshakepath="${default_save_path}"
 		lastcharhandshakepath=${handshakepath: -1}
