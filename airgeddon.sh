@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180527
+#Date.........: 20180528
 #Version......: 8.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -2346,6 +2346,27 @@ function ask_timeout() {
 	esac
 
 	language_strings "${language}" 391 "blue"
+}
+
+#Handle the proccess of checking handshake capture
+function handshake_capture_check() {
+
+	debug_print
+
+	local time_counter=0
+	while true; do
+		sleep 5
+		if check_bssid_in_captured_file "${tmpdir}${standardhandshake_filename}" "silent"; then
+			break
+		fi
+
+		time_counter=$((time_counter + 5))
+		if [ ${time_counter} -ge ${timeout_capture_handshake} ]; then
+			break
+		fi
+	done
+
+	kill "${processidcapture}" &> /dev/null
 }
 
 #Validate if selected network has the needed type of encryption
@@ -8037,9 +8058,7 @@ function capture_handshake_evil_twin() {
 
 	processidattack=$!
 	sleep ${sleeptimeattack} && kill ${processidattack} &> /dev/null
-	sleep 5
-	#TODO pending implementation of timeout
-	kill "${processidcapture}" &> /dev/null
+	handshake_capture_check
 	if check_bssid_in_captured_file "${tmpdir}${standardhandshake_filename}" "silent"; then
 
 		handshakepath="${default_save_path}"
@@ -8325,9 +8344,7 @@ function attack_handshake_menu() {
 	debug_print
 
 	if [ "${1}" = "handshake" ]; then
-		sleep 5
-		#TODO pending implementation of timeout
-		kill "${processidcapture}" &> /dev/null
+		handshake_capture_check
 		if check_bssid_in_captured_file "${tmpdir}${standardhandshake_filename}" "silent"; then
 
 			handshakepath="${default_save_path}"

@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180527
+#Date.........: 20180528
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -2155,16 +2155,16 @@ function language_strings() {
 	arr["POLISH",145]="Czy dostałeś Handshake? ${pink_color}(Spójrz w prawym górnym rogu okna przechwytywania) ${normal_color}${visual_choice}"
 	arr["GERMAN",145]="Haben Sie den Handshake bekommen? ${pink_color}(Schauen Sie oben rechts im Aufnahmefenster nach) ${normal_color}${visual_choice}"
 
-	arr["ENGLISH",146]="It seems we failed... try it again or choose another attack"
-	arr["SPANISH",146]="Parece que no lo hemos conseguido... inténtalo de nuevo o elige otro ataque"
-	arr["FRENCH",146]="Il semble que c'est un échec... Essayez à nouveau ou choisissez une autre attaque"
-	arr["CATALAN",146]="Sembla que no ho hem aconseguit... intenta-ho de nou o tria un altre atac"
-	arr["PORTUGUESE",146]="Parece que nos falhamos... tente novamente ou escolha outro ataque"
-	arr["RUSSIAN",146]="Кажется мы потерпели неудачу... попробуйте снова или выберите другую атаку"
-	arr["GREEK",146]="Φαίνεται πως αποτύχαμε... προσπαθήστε ξανά ή επιλέξτε άλλη επίθεση"
-	arr["ITALIAN",146]="Sembra che abbiamo fallito... riprovare o scegliere un altro attacco"
-	arr["POLISH",146]="Wygląda na to, że się nie udało... spróbuj ponownie lub wybierz inny atak"
-	arr["GERMAN",146]="Es scheint, dass wir es nicht geschafft haben... versuchen Sie es erneut oder wählen Sie einen anderen Angriff"
+	arr["ENGLISH",146]="It seems we failed... try it again, choose another attack or increase the timeout"
+	arr["SPANISH",146]="Parece que no lo hemos conseguido... inténtalo de nuevo, elige otro ataque on incrementa el timeout"
+	arr["FRENCH",146]="${pending_of_translation} Il semble que c'est un échec... Essayez à nouveau ou choisissez une autre attaque"
+	arr["CATALAN",146]="${pending_of_translation} Sembla que no ho hem aconseguit... intenta-ho de nou o tria un altre atac"
+	arr["PORTUGUESE",146]="${pending_of_translation} Parece que nos falhamos... tente novamente ou escolha outro ataque"
+	arr["RUSSIAN",146]="${pending_of_translation} Кажется мы потерпели неудачу... попробуйте снова или выберите другую атаку"
+	arr["GREEK",146]="${pending_of_translation} Φαίνεται πως αποτύχαμε... προσπαθήστε ξανά ή επιλέξτε άλλη επίθεση"
+	arr["ITALIAN",146]="${pending_of_translation} Sembra che abbiamo fallito... riprovare o scegliere un altro attacco"
+	arr["POLISH",146]="${pending_of_translation} Wygląda na to, że się nie udało... spróbuj ponownie lub wybierz inny atak"
+	arr["GERMAN",146]="${pending_of_translation} Es scheint, dass wir es nicht geschafft haben... versuchen Sie es erneut oder wählen Sie einen anderen Angriff"
 
 	arr["ENGLISH",147]="0.  Return to Handshake tools menu"
 	arr["SPANISH",147]="0.  Volver al menú de herramientas Handshake"
