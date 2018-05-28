@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180519
+#Date.........: 20180528
 #Version......: 8.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -115,6 +115,7 @@ declare -A possible_alias_names=(
 airgeddon_version="8.10"
 language_strings_expected_version="8.10-1"
 standardhandshake_filename="handshake-01.cap"
+timeout_capture_handshake="20"
 tmpdir="/tmp/"
 osversionfile_dir="/etc/"
 minimum_bash_version_required="4.2"
@@ -2277,27 +2278,38 @@ function read_timeout() {
 
 	echo
 	case ${1} in
-		"standard")
-			language_strings "${language}" 393 "green"
+		"wps_standard")
+			min_max_timeout="10-100"
+			timeout_shown="${timeout_secs_per_pin}"
 		;;
-		"pixiedust")
-			language_strings "${language}" 394 "green"
+		"wps_pixiedust")
+			min_max_timeout="25-2400"
+			timeout_shown="${timeout_secs_per_pixiedust}"
+		;;
+		"capture_handshake")
+			min_max_timeout="10-100"
+			timeout_shown="${timeout_capture_handshake}"
 		;;
 	esac
+
+	language_strings "${language}" 393 "green"
 	read -r timeout
 }
 
 #Validate the user input for timeouts
-function ask_wps_timeout() {
+function ask_timeout() {
 
 	debug_print
 
 	case ${1} in
-		"standard")
+		"wps_standard")
 			local regexp="^[1-9][0-9]$|^100$|^$"
 		;;
-		"pixiedust")
+		"wps_pixiedust")
 			local regexp="^2[5-9]$|^[3-9][0-9]$|^[1-9][0-9]{2}$|^1[0-9]{3}$|^2[0-3][0-9]{2}$|^2400$|^$"
+		;;
+		"capture_handshake")
+			local regexp="^[1-9][0-9]$|^100$|^$"
 		;;
 	esac
 
@@ -2308,26 +2320,53 @@ function ask_wps_timeout() {
 
 	if [ "${timeout}" = "" ]; then
 		case ${1} in
-			"standard")
+			"wps_standard")
 				timeout=${timeout_secs_per_pin}
 			;;
-			"pixiedust")
+			"wps_pixiedust")
 				timeout=${timeout_secs_per_pixiedust}
+			;;
+			"capture_handshake")
+				timeout=${timeout_capture_handshake}
 			;;
 		esac
 	fi
 
 	echo
 	case ${1} in
-		"standard")
+		"wps_standard")
 			timeout_secs_per_pin=${timeout}
-			language_strings "${language}" 391 "blue"
 		;;
-		"pixiedust")
+		"wps_pixiedust")
 			timeout_secs_per_pixiedust=${timeout}
-			language_strings "${language}" 392 "blue"
+		;;
+		"capture_handshake")
+			timeout_capture_handshake=${timeout}
 		;;
 	esac
+
+	language_strings "${language}" 391 "blue"
+}
+
+#Handle the proccess of checking handshake capture
+function handshake_capture_check() {
+
+	debug_print
+
+	local time_counter=0
+	while true; do
+		sleep 5
+		if check_bssid_in_captured_file "${tmpdir}${standardhandshake_filename}" "silent"; then
+			break
+		fi
+
+		time_counter=$((time_counter + 5))
+		if [ ${time_counter} -ge ${timeout_capture_handshake} ]; then
+			break
+		fi
+	done
+
+	kill "${processidcapture}" &> /dev/null
 }
 
 #Validate if selected network has the needed type of encryption
@@ -3589,13 +3628,13 @@ function wps_attacks_parameters() {
 		case ${wps_attack} in
 			"custompin_bully"|"custompin_reaver")
 				ask_custom_pin
-				ask_wps_timeout "standard"
+				ask_timeout "wps_standard"
 			;;
 			"pixiedust_bully"|"pixiedust_reaver")
-				ask_wps_timeout "pixiedust"
+				ask_timeout "wps_pixiedust"
 			;;
 			"pindb_bully"|"pindb_reaver")
-				ask_wps_timeout "standard"
+				ask_timeout "wps_standard"
 			;;
 		esac
 	fi
@@ -5103,16 +5142,18 @@ function check_bssid_in_captured_file() {
 
 	nets_from_file=$(echo "1" | aircrack-ng "${1}" 2> /dev/null | grep -E "WPA \([1-9][0-9]? handshake" | awk '{ saved = $1; $1 = ""; print substr($0, 2) }')
 
-	echo
-	if [ "${nets_from_file}" = "" ]; then
-		if [ ! -f "${1}" ]; then
-			language_strings "${language}" 161 "red"
-			language_strings "${language}" 115 "read"
-		else
-			language_strings "${language}" 216 "red"
-			language_strings "${language}" 115 "read"
+	if [ "${2}" != "silent" ]; then
+		echo
+		if [ "${nets_from_file}" = "" ]; then
+			if [ ! -f "${1}" ]; then
+				language_strings "${language}" 161 "red"
+				language_strings "${language}" 115 "read"
+			else
+				language_strings "${language}" 216 "red"
+				language_strings "${language}" 115 "read"
+			fi
+			return 1
 		fi
-		return 1
 	fi
 
 	declare -A bssids_detected
@@ -5126,13 +5167,17 @@ function check_bssid_in_captured_file() {
 
 	for targetbssid in "${bssids_detected[@]}"; do
 		if [ "${bssid}" = "${targetbssid}" ]; then
-			language_strings "${language}" 322 "yellow"
+			if [ "${2}" != "silent" ]; then
+				language_strings "${language}" 322 "yellow"
+			fi
 			return 0
 		fi
 	done
 
-	language_strings "${language}" 323 "red"
-	language_strings "${language}" 115 "read"
+	if [ "${2}" != "silent" ]; then
+		language_strings "${language}" 323 "red"
+		language_strings "${language}" 115 "read"
+	fi
 	return 1
 }
 
@@ -7987,6 +8032,7 @@ function capture_handshake_evil_twin() {
 		return 1
 	fi
 
+	ask_timeout "capture_handshake"
 	capture_handshake_window
 
 	case ${et_dos_attack} in
@@ -8012,11 +8058,8 @@ function capture_handshake_evil_twin() {
 
 	processidattack=$!
 	sleep ${sleeptimeattack} && kill ${processidattack} &> /dev/null
-
-	ask_yesno 145
-	handshake_captured=${yesno}
-	kill "${processidcapture}" &> /dev/null
-	if [ "${handshake_captured}" = "y" ]; then
+	handshake_capture_check
+	if check_bssid_in_captured_file "${tmpdir}${standardhandshake_filename}" "silent"; then
 
 		handshakepath="${default_save_path}"
 		lastcharhandshakepath=${handshakepath: -1}
@@ -8301,10 +8344,8 @@ function attack_handshake_menu() {
 	debug_print
 
 	if [ "${1}" = "handshake" ]; then
-		ask_yesno 145
-		handshake_captured=${yesno}
-		kill "${processidcapture}" &> /dev/null
-		if [ "${handshake_captured}" = "y" ]; then
+		handshake_capture_check
+		if check_bssid_in_captured_file "${tmpdir}${standardhandshake_filename}" "silent"; then
 
 			handshakepath="${default_save_path}"
 			lastcharhandshakepath=${handshakepath: -1}
@@ -8356,6 +8397,7 @@ function attack_handshake_menu() {
 				forbidden_menu_option
 				attack_handshake_menu "new"
 			else
+				ask_timeout "capture_handshake"
 				capture_handshake_window
 				rm -rf "${tmpdir}bl.txt" > /dev/null 2>&1
 				echo "${bssid}" > "${tmpdir}bl.txt"
@@ -8369,6 +8411,7 @@ function attack_handshake_menu() {
 				forbidden_menu_option
 				attack_handshake_menu "new"
 			else
+				ask_timeout "capture_handshake"
 				capture_handshake_window
 				${airmon} start "${interface}" "${channel}" > /dev/null 2>&1
 				recalculate_windows_sizes
@@ -8381,6 +8424,7 @@ function attack_handshake_menu() {
 				forbidden_menu_option
 				attack_handshake_menu "new"
 			else
+				ask_timeout "capture_handshake"
 				capture_handshake_window
 				recalculate_windows_sizes
 				xterm +j -bg black -fg red -geometry "${g1_bottomleft_window}" -T "wids / wips / wds confusion attack" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
@@ -8404,6 +8448,7 @@ function capture_handshake_window() {
 
 	debug_print
 
+	echo
 	language_strings "${language}" 143 "blue"
 	echo
 	language_strings "${language}" 144 "yellow"

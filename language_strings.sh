@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180523
+#Date.........: 20180528
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -25,7 +25,7 @@ function language_strings() {
 		declare -gA wps_data_array
 	fi
 
-	#TODO clean or reuse strings 260, 331, 361, 366, 411
+	#TODO clean or reuse strings 260, 331, 361, 366, 411, 392, 394
 
 	declare -A unknown_chipset
 	unknown_chipset["ENGLISH"]="Unknown"
@@ -2133,16 +2133,16 @@ function language_strings() {
 	arr["POLISH",143]="Otworzą się dwa okna. Jedna z przechwytywaczem Handshake, a druga z atakiem, zmuszającym klientów ich do ponownego połączenia"
 	arr["GERMAN",143]="Zwei Fenster werden sich öffnen. Eine mit dem Handshake-Grabber und eine mit dem Angriff, der die Kunden zwingt, sich wieder zu verbinden"
 
-	arr["ENGLISH",144]="Don't close any window manually, script will do when needed. In about 20 seconds maximum you'll know if you've got the Handshake"
-	arr["SPANISH",144]="No cierres manualmente ninguna ventana, el script lo hará cuando proceda. En unos 20 segundos como máximo sabrás si conseguiste el Handshake"
-	arr["FRENCH",144]="Ne pas fermer une des fenêtres manuellement: Le script va le faire automatiquement si besoin est. Vos saurez dans tout a plus 20 secondes si avez obtenu le Handshake"
-	arr["CATALAN",144]="No tanquis manualment cap finestra, el script ho farà quan escaigui. En uns 20 segons com a màxim sabràs si vas aconseguir el Handshake"
-	arr["PORTUGUESE",144]="Não feche nenhuma janela manualmente, o script fechará quando necessário. Em cerca de 20 segundos no máximo você vai saber se tem o Handshake"
-	arr["RUSSIAN",144]="Не закрывайте вручную какое-либо окно, скрипт сделает это когда нужно. Примерно в максимум 20 секунд вы узнаете, получили ли вы рукопожатие"
-	arr["GREEK",144]="Μην επιχειρήσετε το κλείσιμο κάποιου παραθύρου χειροκίνητα, εάν χρειαστεί το script θα το κάνει μόνο του. Σε περίπου 20 δευτερόλεπτα το μέγιστο θα μάθετε αν αποκτήσατε την Χειραψία"
-	arr["ITALIAN",144]="Non chiudere nessuna finestra manualmente, lo script lo fará cuando necessario. In 20 secondi al massimo scoprirai se hai catturato l'Handshake"
-	arr["POLISH",144]="Nie należy ręcznie zamykać okien, skrypt to zrobi w razie potrzeby. W ciągu co najwyżej 20 sekund dowiesz się, czy masz Handshake"
-	arr["GERMAN",144]="Schließen Sie kein Fenster manuell, das Skript wird dies bei Bedarf tun. In ungefähr 20 Sekunden werden Sie wissen, ob Sie den Handshake bekommen haben"
+	arr["ENGLISH",144]="Don't close any window manually, script will do when needed. In about ${timeout} seconds maximum you'll know if you've got the Handshake"
+	arr["SPANISH",144]="No cierres manualmente ninguna ventana, el script lo hará cuando proceda. En unos ${timeout} segundos como máximo sabrás si conseguiste el Handshake"
+	arr["FRENCH",144]="Ne pas fermer une des fenêtres manuellement: Le script va le faire automatiquement si besoin est. Vos saurez dans tout a plus ${timeout} secondes si avez obtenu le Handshake"
+	arr["CATALAN",144]="No tanquis manualment cap finestra, el script ho farà quan escaigui. En uns ${timeout} segons com a màxim sabràs si vas aconseguir el Handshake"
+	arr["PORTUGUESE",144]="Não feche nenhuma janela manualmente, o script fechará quando necessário. Em cerca de ${timeout} segundos no máximo você vai saber se tem o Handshake"
+	arr["RUSSIAN",144]="Не закрывайте вручную какое-либо окно, скрипт сделает это когда нужно. Примерно в максимум ${timeout} секунд вы узнаете, получили ли вы рукопожатие"
+	arr["GREEK",144]="Μην επιχειρήσετε το κλείσιμο κάποιου παραθύρου χειροκίνητα, εάν χρειαστεί το script θα το κάνει μόνο του. Σε περίπου ${timeout} δευτερόλεπτα το μέγιστο θα μάθετε αν αποκτήσατε την Χειραψία"
+	arr["ITALIAN",144]="Non chiudere nessuna finestra manualmente, lo script lo fará cuando necessario. In ${timeout} secondi al massimo scoprirai se hai catturato l'Handshake"
+	arr["POLISH",144]="Nie należy ręcznie zamykać okien, skrypt to zrobi w razie potrzeby. W ciągu co najwyżej ${timeout} sekund dowiesz się, czy masz Handshake"
+	arr["GERMAN",144]="Schließen Sie kein Fenster manuell, das Skript wird dies bei Bedarf tun. In ungefähr ${timeout} Sekunden werden Sie wissen, ob Sie den Handshake bekommen haben"
 
 	arr["ENGLISH",145]="Did you get the Handshake? ${pink_color}(Look at the top right corner of the capture window) ${normal_color}${visual_choice}"
 	arr["SPANISH",145]="¿Conseguiste el Handshake? ${pink_color}(Mira en la parte superior derecha de la ventana de captura) ${normal_color}${visual_choice}"
@@ -2155,16 +2155,16 @@ function language_strings() {
 	arr["POLISH",145]="Czy dostałeś Handshake? ${pink_color}(Spójrz w prawym górnym rogu okna przechwytywania) ${normal_color}${visual_choice}"
 	arr["GERMAN",145]="Haben Sie den Handshake bekommen? ${pink_color}(Schauen Sie oben rechts im Aufnahmefenster nach) ${normal_color}${visual_choice}"
 
-	arr["ENGLISH",146]="It seems we failed... try it again or choose another attack"
-	arr["SPANISH",146]="Parece que no lo hemos conseguido... inténtalo de nuevo o elige otro ataque"
-	arr["FRENCH",146]="Il semble que c'est un échec... Essayez à nouveau ou choisissez une autre attaque"
-	arr["CATALAN",146]="Sembla que no ho hem aconseguit... intenta-ho de nou o tria un altre atac"
-	arr["PORTUGUESE",146]="Parece que nos falhamos... tente novamente ou escolha outro ataque"
-	arr["RUSSIAN",146]="Кажется мы потерпели неудачу... попробуйте снова или выберите другую атаку"
-	arr["GREEK",146]="Φαίνεται πως αποτύχαμε... προσπαθήστε ξανά ή επιλέξτε άλλη επίθεση"
-	arr["ITALIAN",146]="Sembra che abbiamo fallito... riprovare o scegliere un altro attacco"
-	arr["POLISH",146]="Wygląda na to, że się nie udało... spróbuj ponownie lub wybierz inny atak"
-	arr["GERMAN",146]="Es scheint, dass wir es nicht geschafft haben... versuchen Sie es erneut oder wählen Sie einen anderen Angriff"
+	arr["ENGLISH",146]="It seems we failed... try it again, choose another attack or increase the timeout"
+	arr["SPANISH",146]="Parece que no lo hemos conseguido... inténtalo de nuevo, elige otro ataque on incrementa el timeout"
+	arr["FRENCH",146]="${pending_of_translation} Il semble que c'est un échec... Essayez à nouveau ou choisissez une autre attaque"
+	arr["CATALAN",146]="${pending_of_translation} Sembla que no ho hem aconseguit... intenta-ho de nou o tria un altre atac"
+	arr["PORTUGUESE",146]="${pending_of_translation} Parece que nos falhamos... tente novamente ou escolha outro ataque"
+	arr["RUSSIAN",146]="${pending_of_translation} Кажется мы потерпели неудачу... попробуйте снова или выберите другую атаку"
+	arr["GREEK",146]="${pending_of_translation} Φαίνεται πως αποτύχαμε... προσπαθήστε ξανά ή επιλέξτε άλλη επίθεση"
+	arr["ITALIAN",146]="${pending_of_translation} Sembra che abbiamo fallito... riprovare o scegliere un altro attacco"
+	arr["POLISH",146]="${pending_of_translation} Wygląda na to, że się nie udało... spróbuj ponownie lub wybierz inny atak"
+	arr["GERMAN",146]="${pending_of_translation} Es scheint, dass wir es nicht geschafft haben... versuchen Sie es erneut oder wählen Sie einen anderen Angriff"
 
 	arr["ENGLISH",147]="0.  Return to Handshake tools menu"
 	arr["SPANISH",147]="0.  Volver al menú de herramientas Handshake"
@@ -4850,16 +4850,16 @@ function language_strings() {
 	arr["POLISH",390]="Niektóre punkty dostępu mają włączoną funkcję PBC (Push Button Connect) i nie można połączyć się za pośrednictwem WPS, jeśli nie naciśniesz fizycznego przycisku"
 	arr["GERMAN",390]="Bei einigen Access Points ist nur PBC (Push Button Connect) aktiviert, und Sie können keine Verbindung über WPS herstellen, wenn Sie nicht die physische Taste drücken"
 
-	arr["ENGLISH",391]="Timeout set to ${normal_color}${timeout_secs_per_pin}${blue_color} seconds"
-	arr["SPANISH",391]="Timeout elegido ${normal_color}${timeout_secs_per_pin}${blue_color} segundos"
-	arr["FRENCH",391]="Paramétrage du timeout ${normal_color}${timeout_secs_per_pin}${blue_color} secondes"
-	arr["CATALAN",391]="Temps d'espera triat ${normal_color}${timeout_secs_per_pin}${blue_color} segons"
-	arr["PORTUGUESE",391]="Timeout definido para ${normal_color}${timeout_secs_per_pin}${blue_color} segundos"
-	arr["RUSSIAN",391]="Тайм-аут установлен на ${normal_color}${timeout_secs_per_pin}${blue_color} секунд"
-	arr["GREEK",391]="Το timeout τέθηκε στα ${normal_color}${timeout_secs_per_pin}${blue_color} δευτερόλεπτα"
-	arr["ITALIAN",391]="Timeout scelto ${normal_color}${timeout_secs_per_pin}${blue_color} secondi"
-	arr["POLISH",391]="Wybrany limit czasu ${normal_color}${timeout_secs_per_pin}${blue_color} sekund"
-	arr["GERMAN",391]="Ausgewähltes Timeout ${normal_color}${timeout_secs_per_pin}${blue_color} Sekunden"
+	arr["ENGLISH",391]="Timeout set to ${normal_color}${timeout}${blue_color} seconds"
+	arr["SPANISH",391]="Timeout elegido ${normal_color}${timeout}${blue_color} segundos"
+	arr["FRENCH",391]="Paramétrage du timeout ${normal_color}${timeout}${blue_color} secondes"
+	arr["CATALAN",391]="Temps d'espera triat ${normal_color}${timeout}${blue_color} segons"
+	arr["PORTUGUESE",391]="Timeout definido para ${normal_color}${timeout}${blue_color} segundos"
+	arr["RUSSIAN",391]="Тайм-аут установлен на ${normal_color}${timeout}${blue_color} секунд"
+	arr["GREEK",391]="Το timeout τέθηκε στα ${normal_color}${timeout}${blue_color} δευτερόλεπτα"
+	arr["ITALIAN",391]="Timeout scelto ${normal_color}${timeout}${blue_color} secondi"
+	arr["POLISH",391]="Wybrany limit czasu ${normal_color}${timeout}${blue_color} sekund"
+	arr["GERMAN",391]="Ausgewähltes Timeout ${normal_color}${timeout}${blue_color} Sekunden"
 
 	arr["ENGLISH",392]="Pixie Dust timeout set to ${normal_color}${timeout_secs_per_pixiedust}${blue_color} seconds"
 	arr["SPANISH",392]="Timeout elegido para Pixie Dust ${normal_color}${timeout_secs_per_pixiedust}${blue_color} segundos"
@@ -4872,16 +4872,16 @@ function language_strings() {
 	arr["POLISH",392]="Limit czasu wybrany dla Pixie Dust ${normal_color}${timeout_secs_per_pixiedust}${blue_color} sekund"
 	arr["GERMAN",392]="Zeitlimit für Pixie Dust ${normal_color}${timeout_secs_per_pixiedust}${blue_color} Sekunden"
 
-	arr["ENGLISH",393]="Type value in seconds (10-100) for timeout or press [Enter] to accept the proposal [${normal_color}${timeout_secs_per_pin}${green_color}]:"
-	arr["SPANISH",393]="Escribe un valor en segundos (10-100) para el timeout o pulsa [Enter] para aceptar el valor propuesto [${normal_color}${timeout_secs_per_pin}${green_color}]:"
-	arr["FRENCH",393]="Entrez un intervalle de temps en secondes (10-100) pour le timeout ou appuyez sur [Enter] pour valider la valeur proposée [${normal_color}${timeout_secs_per_pin}${green_color}]:"
-	arr["CATALAN",393]="Escriu un valor en segons (10-100) per al temps d'espera o prem [Enter] per acceptar el valor proposat [${normal_color}${timeout_secs_per_pin}${green_color}]:"
-	arr["PORTUGUESE",393]="Insira um valor em segundos (10-100) para o timeout ou pressione [Enter] para aceitar o valor padrão [${normal_color}${timeout_secs_per_pin}${green_color}]:"
-	arr["RUSSIAN",393]="Введите значение в секундах (10-100) для тайм-аута или нажмите [Enter], чтобы оставить по умолчанию [${normal_color}${timeout_secs_per_pin}${green_color}]:"
-	arr["GREEK",393]="Εισάγετε μια τιμή σε δευτερόλεπτα (10-100) για το timeout ή πατήστε [Enter] για να τεθεί η προεπιλεγμένη τιμή [${normal_color}${timeout_secs_per_pin}${green_color}]:"
-	arr["ITALIAN",393]="Scrivi un valore in secondi (10-100) per il timeout o premi [Enter] per accettare il valore proposto [${normal_color}${timeout_secs_per_pin}${green_color}]:"
-	arr["POLISH",393]="Wprowadź wartość w sekundach (10-100) dla limitu czasu lub naciśnij klawisz [Enter], aby zaakceptować proponowaną wartość [${normal_color}${timeout_secs_per_pin}${green_color}]:"
-	arr["GERMAN",393]="Geben Sie einen Wert in Sekunden (10-100) für die Zeitüberschreitung ein oder drücken Sie [Enter], um den vorgeschlagenen Wert zu übernehmen [${normal_color}${timeout_secs_per_pin}${green_color}]:"
+	arr["ENGLISH",393]="Type value in seconds (${min_max_timeout}) for timeout or press [Enter] to accept the proposal [${normal_color}${timeout_shown}${green_color}]:"
+	arr["SPANISH",393]="Escribe un valor en segundos (${min_max_timeout}) para el timeout o pulsa [Enter] para aceptar el valor propuesto [${normal_color}${timeout_shown}${green_color}]:"
+	arr["FRENCH",393]="Entrez un intervalle de temps en secondes (${min_max_timeout}) pour le timeout ou appuyez sur [Enter] pour valider la valeur proposée [${normal_color}${timeout_shown}${green_color}]:"
+	arr["CATALAN",393]="Escriu un valor en segons (${min_max_timeout}) per al temps d'espera o prem [Enter] per acceptar el valor proposat [${normal_color}${timeout_shown}${green_color}]:"
+	arr["PORTUGUESE",393]="Insira um valor em segundos (${min_max_timeout}) para o timeout ou pressione [Enter] para aceitar o valor padrão [${normal_color}${timeout_shown}${green_color}]:"
+	arr["RUSSIAN",393]="Введите значение в секундах (${min_max_timeout}) для тайм-аута или нажмите [Enter], чтобы оставить по умолчанию [${normal_color}${timeout_shown}${green_color}]:"
+	arr["GREEK",393]="Εισάγετε μια τιμή σε δευτερόλεπτα (${min_max_timeout}) για το timeout ή πατήστε [Enter] για να τεθεί η προεπιλεγμένη τιμή [${normal_color}${timeout_shown}${green_color}]:"
+	arr["ITALIAN",393]="Scrivi un valore in secondi (${min_max_timeout}) per il timeout o premi [Enter] per accettare il valore proposto [${normal_color}${timeout_shown}${green_color}]:"
+	arr["POLISH",393]="Wprowadź wartość w sekundach (${min_max_timeout}) dla limitu czasu lub naciśnij klawisz [Enter], aby zaakceptować proponowaną wartość [${normal_color}${timeout_shown}${green_color}]:"
+	arr["GERMAN",393]="Geben Sie einen Wert in Sekunden (${min_max_timeout}) für die Zeitüberschreitung ein oder drücken Sie [Enter], um den vorgeschlagenen Wert zu übernehmen [${normal_color}${timeout_shown}${green_color}]:"
 
 	arr["ENGLISH",394]="Type value in seconds (25-2400) for Pixie Dust timeout or press [Enter] to accept the proposal [${normal_color}${timeout_secs_per_pixiedust}${green_color}]:"
 	arr["SPANISH",394]="Escribe un valor en segundos (25-2400) para el timeout de Pixie Dust o pulsa [Enter] para aceptar el valor propuesto [${normal_color}${timeout_secs_per_pixiedust}${green_color}]:"
