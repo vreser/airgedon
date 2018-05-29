@@ -403,7 +403,7 @@ function language_strings() {
 	declare -gA wps_texts
 	wps_texts["ENGLISH",1]="airgeddon. Decrypted password during WPS attack"
 	wps_texts["SPANISH",1]="airgeddon. Contraseña desencriptada en ataque WPS"
-	wps_texts["FRENCH",1]="${pending_of_translation} airgeddon. Mot de passe déchiffré avec l'attaque WPS"
+	wps_texts["FRENCH",1]="airgeddon. Mot de passe déchiffré à l'aide de l'attaque WPS"
 	wps_texts["CATALAN",1]="airgeddon. Contrasenya desencriptada amb l'atac WPS"
 	wps_texts["PORTUGUESE",1]="airgeddon. Senha decifrada no ataque WPS"
 	wps_texts["RUSSIAN",1]="airgeddon. Пароль расшифрован во время WPS атаки"
@@ -771,7 +771,7 @@ function language_strings() {
 
 	arr["ENGLISH",20]="This interface ${current_iface_on_messages} doesn't support monitor mode or is not compatible with airmon"
 	arr["SPANISH",20]="Esta interfaz ${current_iface_on_messages} no soporta modo monitor o no es compatible con airmon"
-	arr["FRENCH",20]="${pending_of_translation} L'interface ${current_iface_on_messages} n'est pas compatible mode moniteur ou n'est pas compatible avec airmon"
+	arr["FRENCH",20]="L'interface ${current_iface_on_messages} n'est pas compatible en mode moniteur ou n'est pas compatible avec airmon"
 	arr["CATALAN",20]="${pending_of_translation} Aquesta interfície ${current_iface_on_messages} no suporta mode monitor o no és compatible amb airmon"
 	arr["PORTUGUESE",20]="A interface ${current_iface_on_messages} não suporta o modo monitor ou não é compatível com o airmon"
 	arr["RUSSIAN",20]="${pending_of_translation} Этот интерфейс ${current_iface_on_messages} не поддерживает режим монитора или не совместим с воздухом"
@@ -1904,7 +1904,7 @@ function language_strings() {
 
 	arr["ENGLISH",123]="If the password for the wifi network is obtained with the WPS attack, you should decide where to save it. ${green_color}Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${wps_potpath}]"
 	arr["SPANISH",123]="Si se consigue la contraseña de la red wifi con el ataque WPS, hay que decidir donde guardarla. ${green_color}Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${wps_potpath}]"
-	arr["FRENCH",123]="${pending_of_translation} Si le mot de passe est obtenu par une attaque WPS, il faut ensuite indiquer l'endroit pour la garder. ${green_color}Entrez la route vers l'endroit où vous voulez garder le fichier ou bien appuyez sur [Enter] si la route proposée par défaut vous convient ${normal_color}[${wps_potpath}]"
+	arr["FRENCH",123]="Si le mot de passe est obtenu par une attaque WPS, il faut ensuite indiquer l'endroit pour la sauvegarder. ${green_color}Entrez le chemin de l'endroit où vous voulez garder le fichier ou bien appuyez sur [Enter] si le chemin proposée par défaut vous convient ${normal_color}[${wps_potpath}]"
 	arr["CATALAN",123]="Si s'aconsegueix la contrasenya de la xarxa wifi amb l'atac WPS, cal decidir on guardar-la. ${green_color}Escriu la ruta on guardarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${wps_potpath}]"
 	arr["PORTUGUESE",123]="Se a senha da rede wifi for obtida com o ataque WPS, onde deseja salvá-la?. ${green_color}Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${wps_potpath}]"
 	arr["RUSSIAN",123]="Если во время WPS атаки на Wi-Fi сеть получен пароль, вы должны решить, где его сохранить. ${green_color} Наберите путь для сохранения файла или нажмите [Enter] для принятия значения по умолчанию ${normal_color}[${wps_potpath}]"
@@ -2157,7 +2157,7 @@ function language_strings() {
 
 	arr["ENGLISH",146]="It seems we failed... try it again, choose another attack or increase the timeout"
 	arr["SPANISH",146]="Parece que no lo hemos conseguido... inténtalo de nuevo, elige otro ataque on incrementa el timeout"
-	arr["FRENCH",146]="${pending_of_translation} Il semble que c'est un échec... Essayez à nouveau ou choisissez une autre attaque"
+	arr["FRENCH",146]="Il semble que c'est un échec... Essayez à nouveau ou choisissez une autre attaque"
 	arr["CATALAN",146]="${pending_of_translation} Sembla que no ho hem aconseguit... intenta-ho de nou o tria un altre atac"
 	arr["PORTUGUESE",146]="Parece que nos falhamos... Tente novamente, escolha outro ataque ou aumente o timeout"
 	arr["RUSSIAN",146]="${pending_of_translation} Кажется мы потерпели неудачу... попробуйте снова или выберите другую атаку"
@@ -2465,7 +2465,7 @@ function language_strings() {
 
 	arr["ENGLISH",174]="It seems you have an unsupported by airgeddon bettercap version. The last bettercap supported version is ${minimum_bettercap_fixed_beef_iptables_issue}. If you want to get this attack working you should perform a downgrade of the package"
 	arr["SPANISH",174]="Parece que tienes una versión de bettercap no soportada por airgeddon. La última versión soportada de bettercap es la ${minimum_bettercap_fixed_beef_iptables_issue}. Si quieres realizar este ataque deberías hacer un downgrade del paquete"
-	arr["FRENCH",174]="${pending_of_translation} Il semble que vous avez une version non supportée par airgeddon bettercap. La dernière version prise en charge par bettercap est ${minimum_bettercap_fixed_beef_iptables_issue}. Si vous voulez que cette attaque fonctionne, vous devez effectuer une downgrade du paquet"
+	arr["FRENCH",174]="Il semble que vous avez une version non supportée de bettercap par airgeddon. La dernière version prise en charge par bettercap est ${minimum_bettercap_fixed_beef_iptables_issue}. Si vous voulez que cette attaque fonctionne, vous devez effectuer une downgrade du paquet"
 	arr["CATALAN",174]="Sembla que teniu una versió de bettercap no suportada per airgeddon. L'última versió suportada de bettercap és ${minimum_bettercap_fixed_beef_iptables_issue}. Si voleu que aquest atac funcioni, hauríeu de realitzar un downgrade del paquet"
 	arr["PORTUGUESE",174]="Sua versão do bettercap não é suportada pelo airgeddon. A última versão suportada é ${minimum_bettercap_fixed_beef_iptables_issue}. Se você quiser que este ataque funcione, você deve fazer um downgrade"
 	arr["RUSSIAN",174]="Кажется, ваша версия bettercap не поддерживается airgeddon. Последняя поддерживаемая версия bettercap ${minimum_bettercap_fixed_beef_iptables_issue}. Если вы хотите, чтобы эта атака работала, вы должны понизить версию этого пакета"
