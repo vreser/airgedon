@@ -778,7 +778,7 @@ function language_strings() {
 	arr["GREEK",20]="Αυτή η διεπαφή ${current_iface_on_messages} δεν υποστηρίζει την κατάσταση παρακολούθησης ή δεν είναι συμβατή με το airmon"
 	arr["ITALIAN",20]="${pending_of_translation} Questa interfaccia ${current_iface_on_messages} non supporta la modalità monitor o non è compatibile con airmon"
 	arr["POLISH",20]="${pending_of_translation} Interfejs ${current_iface_on_messages} nie obsługuje trybu monitorowania lub nie jest kompatybilny z airmon"
-	arr["GERMAN",20]="${pending_of_translation} Diese ${current_iface_on_messages}-Interface unterstützt den monitor-Modus nicht oder ist nicht mit airmon kompatibel"
+	arr["GERMAN",20]="Diese ${current_iface_on_messages}-Interface unterstützt den monitor-Modus nicht oder ist mit airmon nicht kompatibel"
 
 	arr["ENGLISH",21]="The interface changed its name while putting in monitor mode. Autoselected"
 	arr["SPANISH",21]="Esta interfaz ha cambiado su nombre al ponerla en modo monitor. Se ha seleccionado automáticamente"
@@ -2164,7 +2164,7 @@ function language_strings() {
 	arr["GREEK",146]="${pending_of_translation} Φαίνεται πως αποτύχαμε... προσπαθήστε ξανά ή επιλέξτε άλλη επίθεση"
 	arr["ITALIAN",146]="${pending_of_translation} Sembra che abbiamo fallito... riprovare o scegliere un altro attacco"
 	arr["POLISH",146]="${pending_of_translation} Wygląda na to, że się nie udało... spróbuj ponownie lub wybierz inny atak"
-	arr["GERMAN",146]="${pending_of_translation} Es scheint, dass wir es nicht geschafft haben... versuchen Sie es erneut oder wählen Sie einen anderen Angriff"
+	arr["GERMAN",146]="Anscheinend haben wir es nicht geschafft... versuchen Sie es erneut oder wählen Sie einen anderen Angriff"
 
 	arr["ENGLISH",147]="0.  Return to Handshake tools menu"
 	arr["SPANISH",147]="0.  Volver al menú de herramientas Handshake"
