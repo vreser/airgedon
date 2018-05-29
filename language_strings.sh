@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180528
+#Date.........: 20180529
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -435,16 +435,16 @@ function language_strings() {
 	wps_texts["GERMAN",3]="Das Passwort wurde in der Datei gespeichert"
 
 	declare -gA wep_texts
-	wep_texts["ENGLISH",1]="airgeddon. Captured password during WEP attack"
-	wep_texts["SPANISH",1]="airgeddon. Contraseña capturada en ataque WEP"
-	wep_texts["FRENCH",1]="airgeddon. Mot de passe obtenu lors de l'attaque WEP"
-	wep_texts["CATALAN",1]="airgeddon. Contrasenya capturada en atac WEP"
-	wep_texts["PORTUGUESE",1]="airgeddon. Senha capturada no ataque WEP"
-	wep_texts["RUSSIAN",1]="airgeddon. В атаке WEP захвачен пароль"
-	wep_texts["GREEK",1]="airgeddon. Ο κωδικός πρόσβασης κατά την διάρκεια της επίθεσης WEP"
-	wep_texts["ITALIAN",1]="airgeddon. Password catturata con l'attacco WEP"
-	wep_texts["POLISH",1]="airgeddon. Hasło przechwycone podczas ataku WEP"
-	wep_texts["GERMAN",1]="airgeddon. Passwort bei WEP-Angriff erfasst"
+	wep_texts["ENGLISH",1]="airgeddon. Decrypted password during WEP attack"
+	wep_texts["SPANISH",1]="airgeddon. Contraseña desencriptada en ataque WEP"
+	wep_texts["FRENCH",1]="airgeddon. Mot de passe déchiffré à l'aide de l'attaque WEP"
+	wep_texts["CATALAN",1]="airgeddon. Contrasenya desencriptada amb l'atac WEP"
+	wep_texts["PORTUGUESE",1]="airgeddon. Senha decifrada no ataque WEP"
+	wep_texts["RUSSIAN",1]="airgeddon. Пароль расшифрован во время WEP атаки"
+	wep_texts["GREEK",1]="airgeddon. Ο κωδικός αποκρυπτογραφήθηκε κατά την επίθεση WEP"
+	wep_texts["ITALIAN",1]="airgeddon. Password decifrata con l'attacco WEP"
+	wep_texts["POLISH",1]="airgeddon. Hasło odszyfrowane w ataku WEP"
+	wep_texts["GERMAN",1]="airgeddon. Passwort bei WEP-Angriff entschlüsselt"
 
 	wep_texts["ENGLISH",2]="Channel"
 	wep_texts["SPANISH",2]="Canal"
