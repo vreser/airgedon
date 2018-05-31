@@ -776,7 +776,7 @@ function language_strings() {
 	arr["PORTUGUESE",20]="A interface ${current_iface_on_messages} não suporta o modo monitor ou não é compatível com o airmon"
 	arr["RUSSIAN",20]="${pending_of_translation} Этот интерфейс ${current_iface_on_messages} не поддерживает режим монитора или не совместим с воздухом"
 	arr["GREEK",20]="Αυτή η διεπαφή ${current_iface_on_messages} δεν υποστηρίζει την κατάσταση παρακολούθησης ή δεν είναι συμβατή με το airmon"
-	arr["ITALIAN",20]="${pending_of_translation} Questa interfaccia ${current_iface_on_messages} non supporta la modalità monitor o non è compatibile con airmon"
+	arr["ITALIAN",20]="Questa interfaccia ${current_iface_on_messages} non supporta la modalità monitor o non è compatibile con airmon"
 	arr["POLISH",20]="${pending_of_translation} Interfejs ${current_iface_on_messages} nie obsługuje trybu monitorowania lub nie jest kompatybilny z airmon"
 	arr["GERMAN",20]="Diese ${current_iface_on_messages}-Interface unterstützt den monitor-Modus nicht oder ist mit airmon nicht kompatibel"
 
@@ -2156,13 +2156,13 @@ function language_strings() {
 	arr["GERMAN",145]="Haben Sie den Handshake bekommen? ${pink_color}(Schauen Sie oben rechts im Aufnahmefenster nach) ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",146]="It seems we failed... try it again, choose another attack or increase the timeout"
-	arr["SPANISH",146]="Parece que no lo hemos conseguido... inténtalo de nuevo, elige otro ataque on incrementa el timeout"
+	arr["SPANISH",146]="Parece que no lo hemos conseguido... inténtalo de nuevo, elige otro ataque o incrementa el timeout"
 	arr["FRENCH",146]="Il semble que c'est un échec... Essayez à nouveau ou choisissez une autre attaque"
 	arr["CATALAN",146]="${pending_of_translation} Sembla que no ho hem aconseguit... intenta-ho de nou o tria un altre atac"
 	arr["PORTUGUESE",146]="Parece que nos falhamos... Tente novamente, escolha outro ataque ou aumente o timeout"
 	arr["RUSSIAN",146]="${pending_of_translation} Кажется мы потерпели неудачу... попробуйте снова или выберите другую атаку"
 	arr["GREEK",146]="${pending_of_translation} Φαίνεται πως αποτύχαμε... προσπαθήστε ξανά ή επιλέξτε άλλη επίθεση"
-	arr["ITALIAN",146]="${pending_of_translation} Sembra che abbiamo fallito... riprovare o scegliere un altro attacco"
+	arr["ITALIAN",146]="Sembra che abbiamo fallito... riprova, scegli un altro attacco o aumenta il timeout"
 	arr["POLISH",146]="${pending_of_translation} Wygląda na to, że się nie udało... spróbuj ponownie lub wybierz inny atak"
 	arr["GERMAN",146]="Anscheinend haben wir es nicht geschafft... versuchen Sie es erneut oder wählen Sie einen anderen Angriff"
 
