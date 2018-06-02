@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180528
+#Date.........: 20180602
 #Version......: 8.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -1661,7 +1661,7 @@ function language_menu() {
 	language_strings "${language}" 320
 	language_strings "${language}" 482
 	language_strings "${language}" 58
-	language_strings "${language}" 524
+	language_strings "${language}" 331
 	print_hint ${current_menu}
 
 	read -r language_selected
@@ -1756,7 +1756,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="GERMAN"
-				language_strings "${language}" 525 "yellow"
+				language_strings "${language}" 260 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -1836,7 +1836,7 @@ function dos_pursuit_mode_et_handler() {
 
 			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ -n "${channel}" ]] && [[ "${channel}" -gt 14 ]] && [[ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]]; then
 				echo
-				language_strings "${language}" 519 "red"
+				language_strings "${language}" 394 "red"
 				language_strings "${language}" 115 "read"
 				return_to_et_main_menu=1
 				return 1
@@ -5637,7 +5637,7 @@ function set_captive_portal_language() {
 	language_strings "${language}" 320
 	language_strings "${language}" 482
 	language_strings "${language}" 58
-	language_strings "${language}" 524
+	language_strings "${language}" 331
 	print_hint ${current_menu}
 
 	read -r captive_portal_language_selected
@@ -6022,7 +6022,6 @@ function exec_et_sniffing_sslstrip2_attack() {
 		recover_current_channel
 	fi
 	restore_et_interface
-
 	if [ ${bettercap_log} -eq 1 ]; then
 		parse_bettercap_log
 	fi
@@ -8490,12 +8489,12 @@ function explore_for_targets_option() {
 				language_strings "${language}" 67 "yellow"
 			;;
 			"WPA")
-				language_strings "${language}" 523 "yellow"
+				language_strings "${language}" 361 "yellow"
 			;;
 		esac
 	else
 		cypher_filter=""
-		language_strings "${language}" 522 "yellow"
+		language_strings "${language}" 366 "yellow"
 	fi
 	language_strings "${language}" 115 "read"
 
@@ -8595,7 +8594,7 @@ function explore_for_wps_targets_option() {
 		if check_dual_scan_on_wash; then
 			wash_band_modifier="-2 -5"
 		else
-			ask_yesno 518 "no"
+			ask_yesno 145 "no"
 			if [ "${yesno}" = "y" ]; then
 				wash_band_modifier="-5"
 			fi
@@ -8603,7 +8602,7 @@ function explore_for_wps_targets_option() {
 	fi
 
 	echo
-	language_strings "${language}" 521 "yellow"
+	language_strings "${language}" 411 "yellow"
 	language_strings "${language}" 115 "read"
 
 	tmpfiles_toclean=1
@@ -9054,7 +9053,7 @@ function et_prerequisites() {
 		else
 			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ "${channel}" -gt 14 ]] && [[ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]]; then
 				echo
-				language_strings "${language}" 519 "red"
+				language_strings "${language}" 394 "red"
 				language_strings "${language}" 115 "read"
 				return_to_et_main_menu=1
 				return
@@ -9088,7 +9087,7 @@ function et_prerequisites() {
 
 	if [[ "${channel}" -gt 14 ]]; then
 		echo
-		language_strings "${language}" 520 "blue"
+		language_strings "${language}" 392 "blue"
 	fi
 
 	echo
