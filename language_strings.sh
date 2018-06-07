@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180603
+#Date.........: 20180607
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -775,7 +775,7 @@ function language_strings() {
 	arr["RUSSIAN",20]="${pending_of_translation} Этот интерфейс ${current_iface_on_messages} не поддерживает режим монитора или не совместим с воздухом"
 	arr["GREEK",20]="Αυτή η διεπαφή ${current_iface_on_messages} δεν υποστηρίζει την κατάσταση παρακολούθησης ή δεν είναι συμβατή με το airmon"
 	arr["ITALIAN",20]="Questa interfaccia ${current_iface_on_messages} non supporta la modalità monitor o non è compatibile con airmon"
-	arr["POLISH",20]="${pending_of_translation} Interfejs ${current_iface_on_messages} nie obsługuje trybu monitorowania lub nie jest kompatybilny z airmon"
+	arr["POLISH",20]="Interfejs ${current_iface_on_messages} nie obsługuje trybu monitorowania lub nie jest kompatybilny z airmon"
 	arr["GERMAN",20]="Diese ${current_iface_on_messages}-Interface unterstützt den monitor-Modus nicht oder ist mit airmon nicht kompatibel"
 
 	arr["ENGLISH",21]="The interface changed its name while putting in monitor mode. Autoselected"
@@ -2161,7 +2161,7 @@ function language_strings() {
 	arr["RUSSIAN",146]="${pending_of_translation} Кажется мы потерпели неудачу... попробуйте снова или выберите другую атаку"
 	arr["GREEK",146]="Φαίνεται πως αποτύχαμε... προσπαθήστε ξανά ή επιλέξτε άλλου είδους επίθεση ή αυξήστε το timeout"
 	arr["ITALIAN",146]="Sembra che abbiamo fallito... riprova, scegli un altro attacco o aumenta il timeout"
-	arr["POLISH",146]="${pending_of_translation} Wygląda na to, że się nie udało... spróbuj ponownie lub wybierz inny atak"
+	arr["POLISH",146]="Wygląda na to, że się nie udało... spróbuj ponownie, wybierz inny atak lub zwiększ timeout"
 	arr["GERMAN",146]="Anscheinend haben wir es nicht geschafft... versuchen Sie es erneut oder wählen Sie einen anderen Angriff"
 
 	arr["ENGLISH",147]="0.  Return to Handshake tools menu"
