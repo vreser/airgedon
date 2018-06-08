@@ -2158,11 +2158,11 @@ function language_strings() {
 	arr["FRENCH",146]="Il semble que c'est un échec... Essayez à nouveau, choisissez une autre attaque ou augmentez le timeout"
 	arr["CATALAN",146]="Sembla que no ho hem aconseguit... intenta-ho de nou, tria un altre atac o incrementa el timeout"
 	arr["PORTUGUESE",146]="Parece que nos falhamos... Tente novamente, escolha outro ataque ou aumente o timeout"
-	arr["RUSSIAN",146]="${pending_of_translation} Кажется мы потерпели неудачу... попробуйте снова или выберите другую атаку"
+	arr["RUSSIAN",146]="${pending_of_translation} Кажется мы потерпели неудачу... повторите попытку, выберите другую атаку или увеличьте timeout"
 	arr["GREEK",146]="Φαίνεται πως αποτύχαμε... προσπαθήστε ξανά ή επιλέξτε άλλου είδους επίθεση ή αυξήστε το timeout"
 	arr["ITALIAN",146]="Sembra che abbiamo fallito... riprova, scegli un altro attacco o aumenta il timeout"
 	arr["POLISH",146]="Wygląda na to, że się nie udało... spróbuj ponownie, wybierz inny atak lub zwiększ timeout"
-	arr["GERMAN",146]="Anscheinend haben wir es nicht geschafft... versuchen Sie es erneut oder wählen Sie einen anderen Angriff"
+	arr["GERMAN",146]="Anscheinend haben wir es nicht geschafft... versuchen Sie es erneut oder erhöhen Sie den timeout"
 
 	arr["ENGLISH",147]="0.  Return to Handshake tools menu"
 	arr["SPANISH",147]="0.  Volver al menú de herramientas Handshake"
