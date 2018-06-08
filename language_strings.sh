@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180607
+#Date.........: 20180608
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -2155,8 +2155,8 @@ function language_strings() {
 
 	arr["ENGLISH",146]="It seems we failed... try it again, choose another attack or increase the timeout"
 	arr["SPANISH",146]="Parece que no lo hemos conseguido... inténtalo de nuevo, elige otro ataque o incrementa el timeout"
-	arr["FRENCH",146]="Il semble que c'est un échec... Essayez à nouveau ou choisissez une autre attaque"
-	arr["CATALAN",146]="Sembla que no ho hem aconseguit... intenta-ho de nou o tria un altre atac"
+	arr["FRENCH",146]="Il semble que c'est un échec... Essayez à nouveau, choisissez une autre attaque ou augmentez le timeout"
+	arr["CATALAN",146]="Sembla que no ho hem aconseguit... intenta-ho de nou, tria un altre atac o incrementa el timeout"
 	arr["PORTUGUESE",146]="Parece que nos falhamos... Tente novamente, escolha outro ataque ou aumente o timeout"
 	arr["RUSSIAN",146]="${pending_of_translation} Кажется мы потерпели неудачу... попробуйте снова или выберите другую атаку"
 	arr["GREEK",146]="Φαίνεται πως αποτύχαμε... προσπαθήστε ξανά ή επιλέξτε άλλου είδους επίθεση ή αυξήστε το timeout"
