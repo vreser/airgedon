@@ -1,6 +1,6 @@
 ### 8.10
  - WPS decrypted networks now have trophy file
- - Tested compatibility with Kali 2018.2, Ubuntu 18.04 and Parrot 4.0.1
+ - Tested compatibility with Kali 2018.2, Ubuntu 18.04 and Parrot 4.x
  - Controlled error for unsupported bettercap 2.x version
  - Automatic check added on Handshake capture (Thank you to "IwraStudios")
 
