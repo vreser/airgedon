@@ -21,6 +21,7 @@ All the needed info about how to "install | use | enjoy" `airgeddon` is present 
   - [Optional Tools]
 	 - [BeEF Tips]
 	 - [Hashcat Tips]
+	 - [Bettercap Tips]
   - [Update Tools]
   - [Internal Tools]
   - [Known incompatibilities]
@@ -59,6 +60,7 @@ All the needed info about how to "install | use | enjoy" `airgeddon` is present 
 [Optional Tools]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Optional%20Tools
 [BeEF Tips]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/BeEF%20Tips
 [Hashcat Tips]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Hashcat%20Tips
+[Bettercap Tips]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Bettercap%20Tips
 [Update Tools]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Update%20Tools
 [Internal Tools]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Internal%20Tools
 [Known incompatibilities]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Known%20incompatibilities
