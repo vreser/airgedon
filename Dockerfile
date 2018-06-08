@@ -13,6 +13,7 @@ LABEL \
 #Env vars
 ENV AIRGEDDON_URL="https://github.com/v1s1t0r1sh3r3/airgeddon.git"
 ENV HASHCAT2_URL="https://github.com/v1s1t0r1sh3r3/hashcat2.0.git"
+ENV BETTERCAP162_URL="https://github.com/v1s1t0r1sh3r3/bettercap1.6.2.git"
 ENV DEBIAN_FRONTEND="noninteractive"
 
 #Update system
@@ -83,7 +84,12 @@ RUN \
 RUN \
 	apt -y install \
 	beef-xss \
-	bettercap
+	bettercap \
+	ruby-packetfu \
+	ruby-colorize \
+	ruby-net-dns \
+	ruby-em-proxy \
+	ruby-network-interface
 
 #Env var for display
 ENV DISPLAY=":0"
@@ -119,11 +125,16 @@ RUN \
 	cp /opt/hashcat2.0/hashcat /usr/bin/ && \
 	chmod +x /usr/bin/hashcat
 
+#Downgrade Bettercap
+RUN \
+	git clone ${BETTERCAP162_URL} && \
+	dpkg -i /opt/bettercap1.6.2/bettercap_1.6.2-0parrot1_all.deb
+
 #Clean packages
 RUN \
 	apt clean && \
 	apt autoclean && \
-	apt autoremove
+	apt autoremove -y
 
 #Clean files
 RUN rm -rf /opt/airgeddon/imgs > /dev/null 2>&1 && \
@@ -135,6 +146,7 @@ RUN rm -rf /opt/airgeddon/imgs > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/Dockerfile > /dev/null 2>&1 && \
 	rm -rf /opt/airgeddon/binaries > /dev/null 2>&1 && \
 	rm -rf /opt/hashcat2.0 > /dev/null 2>&1 && \
+	rm -rf /opt/bettercap1.6.2 > /dev/null 2>&1 && \
 	rm -rf /tmp/* > /dev/null 2>&1 && \
 	rm -rf /var/lib/apt/lists/* > /dev/null 2>&1
 
