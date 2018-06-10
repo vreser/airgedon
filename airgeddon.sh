@@ -426,6 +426,7 @@ function language_strings_handling_messages() {
 	language_strings_no_file["ITALIAN"]="Errore. Non si trova il file delle traduzioni"
 	language_strings_no_file["POLISH"]="Błąd. Nie znaleziono pliku tłumaczenia"
 	language_strings_no_file["GERMAN"]="Fehler. Die Übersetzungsdatei wurde nicht gefunden"
+	language_strings_no_file["TURKISH"]="${pending_of_translation} Hata. Çeviri dosyası bulunamadı"
 
 	declare -gA language_strings_file_mismatch
 	language_strings_file_mismatch["ENGLISH"]="Error. The language strings file found mismatches expected version"
@@ -438,6 +439,7 @@ function language_strings_handling_messages() {
 	language_strings_file_mismatch["ITALIAN"]="Errore. Il file delle traduzioni trovato non è la versione prevista"
 	language_strings_file_mismatch["POLISH"]="Błąd. Znaleziony plik tłumaczenia nie jest oczekiwaną wersją"
 	language_strings_file_mismatch["GERMAN"]="Fehler. Die gefundene Übersetzungsdatei ist nicht die erwartete Version"
+	language_strings_file_mismatch["TURKISH"]="${pending_of_translation} Hata. Bulunan çeviri dosyası beklenen sürüm değil"
 
 	declare -gA language_strings_try_to_download
 	language_strings_try_to_download["ENGLISH"]="airgeddon will try to download the language strings file..."
@@ -450,6 +452,7 @@ function language_strings_handling_messages() {
 	language_strings_try_to_download["ITALIAN"]="airgeddon cercherá di scaricare il file delle traduzioni..."
 	language_strings_try_to_download["POLISH"]="airgeddon spróbuje pobrać plik tłumaczeń..."
 	language_strings_try_to_download["GERMAN"]="airgeddon wird versuchen, die Übersetzungsdatei herunterzuladen..."
+	language_strings_try_to_download["TURKISH"]="${pending_of_translation} airgeddon çeviri dosyasını indirmeye çalışacak..."
 
 	declare -gA language_strings_successfully_downloaded
 	language_strings_successfully_downloaded["ENGLISH"]="Language strings file was successfully downloaded"
@@ -462,6 +465,7 @@ function language_strings_handling_messages() {
 	language_strings_successfully_downloaded["ITALIAN"]="Il file delle traduzioni è stato scaricato con successo"
 	language_strings_successfully_downloaded["POLISH"]="Plik z tłumaczeniem został pomyślnie pobrany"
 	language_strings_successfully_downloaded["GERMAN"]="Die Übersetzungsdatei wurde erfolgreich heruntergeladen"
+	language_strings_successfully_downloaded["TURKISH"]="${pending_of_translation} Çeviri dosyası başarıyla indirildi"
 
 	declare -gA language_strings_failed_downloading
 	language_strings_failed_downloading["ENGLISH"]="The language string file can't be downloaded. Check your internet connection or download it manually from ${normal_color}${urlgithub}"
@@ -474,6 +478,7 @@ function language_strings_handling_messages() {
 	language_strings_failed_downloading["ITALIAN"]="Impossibile scaricare il file delle traduzioni. Controlla la tua connessione a internet o scaricalo manualmente ${normal_color}${urlgithub}"
 	language_strings_failed_downloading["POLISH"]="Nie można pobrać pliku tłumaczenia. Sprawdź połączenie internetowe lub pobierz go ręcznie z ${normal_color}${urlgithub}"
 	language_strings_failed_downloading["GERMAN"]="Die Übersetzungsdatei konnte nicht heruntergeladen werden. Überprüfen Sie Ihre Internetverbindung oder laden Sie sie manuell von ${normal_color}${urlgithub} runter"
+	language_strings_failed_downloading["TURKISH"]="${pending_of_translation} Çeviri dosyası indirilemedi. İnternet bağlantınızı kontrol edin veya manuel olarak indirin ${normal_color}${urlgithub}"
 
 	declare -gA language_strings_first_time
 	language_strings_first_time["ENGLISH"]="If you are seeing this message after an automatic update, don't be scared! It's probably because airgeddon has different file structure since version 6.1. It will be automatically fixed"
@@ -486,6 +491,7 @@ function language_strings_handling_messages() {
 	language_strings_first_time["ITALIAN"]="Se stai vedendo questo messaggio dopo un aggiornamento automatico, niente panico! probabilmente è perché a partire dalla versione 6.1 é cambiata la struttura dei file di airgeddon. Sarà riparato automaticamente"
 	language_strings_first_time["POLISH"]="Jeśli widzisz tę wiadomość po automatycznej aktualizacji, nie obawiaj się! To prawdopodobnie dlatego, że w wersji 6.1 zmieniła się struktura plików airgeddon. Naprawi się automatycznie"
 	language_strings_first_time["GERMAN"]="Wenn Sie diese Nachricht nach einem automatischen Update sehen, haben Sie keine Angst! Das liegt vermutlich daran, dass ab Version 6.1 die Dateistruktur von airgeddon geändert wurde. Es wird automatisch repariert"
+	language_strings_first_time["TURKISH"]="${pending_of_translation} Otomatik bir güncellemeden sonra bu mesajı görüyorsanız, korkmayın! muhtemelen 6.1 sürümünden itibaren airgeddon dosya yapısı değişmiştir. Otomatik olarak tamir edilecektir"
 
 	declare -gA language_strings_exiting
 	language_strings_exiting["ENGLISH"]="Exiting airgeddon script v${airgeddon_version} - See you soon! :)"
@@ -498,6 +504,7 @@ function language_strings_handling_messages() {
 	language_strings_exiting["ITALIAN"]="Uscendo dallo script airgeddon v${airgeddon_version} - A presto! :)"
 	language_strings_exiting["POLISH"]="Wyjście z skryptu airgeddon v${airgeddon_version} - Do zobaczenia wkrótce! :)"
 	language_strings_exiting["GERMAN"]="Sie verlassen airgeddon v${airgeddon_version} - Bis bald! :)"
+	language_strings_exiting["TURKISH"]="${pending_of_translation} airgeddon komut dosyası ayrılıyor v${airgeddon_version} - Yakında görüşürüz! :)"
 
 	declare -gA language_strings_key_to_continue
 	language_strings_key_to_continue["ENGLISH"]="Press [Enter] key to continue..."
@@ -510,6 +517,7 @@ function language_strings_handling_messages() {
 	language_strings_key_to_continue["ITALIAN"]="Premere il tasto [Enter] per continuare..."
 	language_strings_key_to_continue["POLISH"]="Naciśnij klawisz [Enter] aby kontynuować..."
 	language_strings_key_to_continue["GERMAN"]="Drücken Sie die [Enter]-Taste um fortzufahren..."
+	language_strings_key_to_continue["TURKISH"]="${pending_of_translation} Devam etmek için [Enter] tuşuna basın..."
 }
 
 #Toggle language auto-detection feature
