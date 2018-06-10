@@ -1671,6 +1671,7 @@ function language_menu() {
 	language_strings "${language}" 482
 	language_strings "${language}" 58
 	language_strings "${language}" 331
+	language_strings "${language}" 519
 	print_hint ${current_menu}
 
 	read -r language_selected
@@ -1769,7 +1770,7 @@ function language_menu() {
 			fi
 			language_strings "${language}" 115 "read"
 		;;
-		10)
+		11)
 			if [ "${language}" = "TURKISH" ]; then
 				language_strings "${language}" 251 "red"
 			else
