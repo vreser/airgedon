@@ -1,3 +1,6 @@
+### 8.11
+ - Turkish language translation added (Thank you to "curious01")
+
 ### 8.10
  - WPS decrypted networks now have trophy file
  - Tested compatibility with Kali 2018.2, Ubuntu 18.04 and Parrot 4.x
