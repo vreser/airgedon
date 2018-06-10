@@ -33,6 +33,7 @@ declare -A lang_association=(
 								["it"]="ITALIAN"
 								["pl"]="POLISH"
 								["de"]="GERMAN"
+								["tr"]="TURKISH"
 							)
 
 #Tools vars
@@ -1765,6 +1766,15 @@ function language_menu() {
 			else
 				language="GERMAN"
 				language_strings "${language}" 260 "yellow"
+			fi
+			language_strings "${language}" 115 "read"
+		;;
+		10)
+			if [ "${language}" = "TURKISH" ]; then
+				language_strings "${language}" 251 "red"
+			else
+				language="TURKISH"
+				language_strings "${language}" 518 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -5684,6 +5694,9 @@ function set_captive_portal_language() {
 		;;
 		10)
 			captive_portal_language="GERMAN"
+		;;
+		11)
+			captive_portal_language="TURKISH"
 		;;
 		*)
 			invalid_captive_portal_language_selected

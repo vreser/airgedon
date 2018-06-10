@@ -6245,6 +6245,17 @@ function language_strings() {
 	arr["POLISH",517]="Wybierz kanał (2.4Ghz 1-14) lub (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
 	arr["GERMAN",517]="Wählen Sie einen Kanal aus (2.4Ghz 1-14) oder (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
 
+	arr["ENGLISH",518]="Language changed to Turkish"
+	arr["SPANISH",518]="Idioma cambiado a Turco"
+	arr["FRENCH",518]="${pending_of_translation} Le script sera maintenant en Turc"
+	arr["CATALAN",518]="${pending_of_translation} Idioma canviat a Turc"
+	arr["PORTUGUESE",518]="${pending_of_translation} Idioma alterado para Turco"
+	arr["RUSSIAN",518]="${pending_of_translation} Язык изменён на турецкий"
+	arr["GREEK",518]="${pending_of_translation} Η γλώσσα άλλαξε στα Τουρκικά"
+	arr["ITALIAN",518]="${pending_of_translation} Lingua cambiata a Turco"
+	arr["POLISH",518]="${pending_of_translation} Zmieniono język na Turecki"
+	arr["GERMAN",518]="${pending_of_translation} Sprache wurde auf Türkisch geändert"
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"
