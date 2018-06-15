@@ -3,6 +3,7 @@
  - Tested compatibility with Kali 2018.2, Ubuntu 18.04 and Parrot 4.x
  - Controlled error for unsupported bettercap 2.x version
  - Automatic check added on Handshake capture (Thank you to "IwraStudios")
+ - Fixed card detection bug on some Linux
 
 ### 8.01
  - German language translation added (Thank you to "hamperfait")
