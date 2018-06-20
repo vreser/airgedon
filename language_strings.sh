@@ -2079,7 +2079,7 @@ function language_strings() {
 	arr["ITALIAN",123]="Se si ottiene la password della rete wireless con l'attacco WPS, bisogna decidere dove salvarla. ${green_color}Scrivere il percorso dove salvare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${wps_potpath}]"
 	arr["POLISH",123]="Jeśli hasło sieci wifi zostanie uzyskane atakiem WPS, musisz zdecydować gdzie je zapisać. ${green_color}Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${wps_potpath}]"
 	arr["GERMAN",123]="Wenn Sie das WLAN-Passwort mit dem WPS-Angriff erhalten, müssen Sie entscheiden, wo Sie es speichern möchten. ${green_color} Geben Sie den Pfad ein, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${wps_potpath}] ${blue_color}zu akzeptieren"
-	arr["TURKISH",123]="${pending_of_translation} "
+	arr["TURKISH",123]="Eğer wifi şifresini WPS saldırısı yöntemi ile elde ettiyseniz, nereye kaydedileceğini belirlemelisiniz. ${green_color}Dizin yolu girin veya [Enter] tuşuna varsayılan yere kaydedin. ${normal_color}[${wps_potpath}]"
 
 	arr["ENGLISH",124]="monitor mode needed for capturing"
 	arr["SPANISH",124]="modo monitor requerido en captura"
@@ -2343,7 +2343,7 @@ function language_strings() {
 	arr["ITALIAN",145]="${blue_color}La tua scheda wifi supporta la banda 5Ghz ma la tua versione di \"wash\" inclusa nel pacchetto reaver (v${reaver_version}) non è in grado di scansionare entrambe le bande contemporaneamente. Per usare la doppia scansione devi avere almeno la versione v${minimum_wash_dualscan_version}, quindi devi sceglierne una. ${green_color}Vuoi eseguire la scansione nella banda 5Ghz? ${pink_color}(Se rispondi no (\"n\"), verrà scansionata la banda 2.4Ghz) ${normal_color}${visual_choice}"
 	arr["POLISH",145]="${blue_color}Twoja karta wifi obsługuje pasmo 5Ghz, ale twoja wersja \"wash\" zawarta w pakiecie reaver (v${reaver_version}) nie jest w stanie skanować obu pasm w tym samym czasie. Aby użyć podwójnego skanowania, musisz mieć przynajmniej wersję v${minimum_wash_dualscan_version}. ${green_color}Musisz wybrać: czy chcesz skanować w paśmie 5Ghz? ${pink_color}(Jeśli odpowiesz nie (\"n\"), zostanie zeskanowane pasmo 2.4Ghz) ${normal_color}${visual_choice}"
 	arr["GERMAN",145]="${blue_color}Ihre WLAN-Karte unterstützt das 5Ghz-Band, aber Ihre im reaver-Paket enthaltene Version von \"wash\" (v${reaver_version}) kann nicht beide Bänder gleichzeitig scannen. Um den dualen Scan zu verwenden, müssen Sie mindestens Version v${minimum_wash_dualscan_version} haben, also müssen Sie wählen. ${green_color}Möchten Sie im 5Ghz-Band scannen? ${pink_color}(Wenn Sie nein (\"n\" antworten), wird das 2.4Ghz-Band gescannt) ${normal_color}${visual_choice}"
-	arr["TURKISH",145]="${pending_of_translation} "
+	arr["TURKISH",145]="${blue_color}Wifi kartınız 5Ghz destekliyor fakat \"wash\" versiyonunuz iki bandı aynı anda taramayı desteklemiyor. İkili band taramayı yapabilmek için en son versiyona v${minimum_wash_dualscan_version} sahip olmanız gerekiyor. ${green_color}5Ghz band taramayı istiyor musunuz? ${pink_color}(Eğer cevabınız hayır ise (\"n\"), 2.4Ghz band taranacak) ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",146]="It seems we failed... try it again, choose another attack or increase the timeout"
 	arr["SPANISH",146]="Parece que no lo hemos conseguido... inténtalo de nuevo, elige otro ataque o incrementa el timeout"
@@ -3603,7 +3603,7 @@ function language_strings() {
 	arr["ITALIAN",250]="Se vedi qualche errore di traduzione o vuoi che spariscano le marche ${cyan_color}${pending_of_translation}${pink_color}, scrivimi a ${normal_color}${mail}${pink_color} per collaborare con le traduzioni"
 	arr["POLISH",250]="Jeśli widzisz nieprawidłowe tłumaczenie lub chcesz usunąć tagi ${cyan_color}${pending_of_translation}${pink_color}, napisz do mnie ${normal_color}${mail}${pink_color}, aby współpracować przy tłumaczeniu"
 	arr["GERMAN",250]="Wenn Sie eine falsche Übersetzung sehen oder möchten, dass die Marken ${cyan_color}${pending_of_translation}${pink_color} verschwinden, schreiben Sie mir an ${normal_color}${mail}${pink_color}, um mit den Übersetzungen zusammenzuarbeiten"
-	arr["TURKISH",250]="${pending_of_translation} "
+	arr["TURKISH",250]="Eğer kötü bir çeviri gördüyseniz veya sadece çeviri yapmak istiyorsanız ${cyan_color}${pending_of_translation}${pink_color} işaretleyip bana yazın. ${normal_color}${mail}${pink_color}"
 
 	arr["ENGLISH",251]="You have chosen the same language that was selected. No changes will be done"
 	arr["SPANISH",251]="Has elegido el mismo idioma que estaba seleccionado. No se realizarán cambios"
@@ -4203,7 +4203,7 @@ function language_strings() {
 	arr["ITALIAN",300]="Se funziona il comando xdpyinfo, lo script calcolerà la risoluzione dello schermo e mostrerá le finestre in modo ottimizzato. A seconda del sistema il pacchetto che lo contiene può chiamarsi x11-utils, xdpyinfo, xorg-xdpyinfo, etc."
 	arr["POLISH",300]="Jeśli polecenie xdpyinfo działa w systemie, skrypt będzie mógł obliczyć rozdzielczość ekranu i lepiej wyświetlać okna. W zależności od systemu pakiet zawierający go może być nazwany x11-utils, xdpyinfo, xorg-xdpyinfo, itd."
 	arr["GERMAN",300]="Wenn Sie den Befehl xdpyinfo in Ihrem System verwenden, kann das Skript Ihre Bildschirmauflösung berechnen und Ihnen die Fenster in einer optimierten Weise zeigen. Je nach System kann das Paket, das es enthält, x11-utils, xdpyinfo, xorg-xdpyinfo usw. genannt werden"
-	arr["TURKISH",300]="${pending_of_translation} "
+	arr["TURKISH",300]="Eğer xpdyinfo komutu çalışırsa, yazılım ekran çözünürlüğünüzü hesaplayabilecek ve en iyi boyutlardaki pencereler ile çalışacak. Paket isimleri sisteminize göre x11-utils, xdpyinfo, xorg-xdpyinfo, vb... olarak değişiklik gösterebilir. "
 
 	arr["ENGLISH",301]="Despite having all essential tools installed, your system uses airmon-zc instead of airmon-ng. In order to work properly you need to install lspci (pciutils) and you don't have it right now. Please, install it and launch the script again"
 	arr["SPANISH",301]="A pesar de tener todas las herramientas esenciales instaladas, tu sistema usa airmon-zc en lugar de airmon-ng. Para poder funcionar necesitas tener instalado lspci (pciutils) y tú no lo tienes en este momento. Por favor, instálalo y vuelve a lanzar el script"
@@ -4215,7 +4215,7 @@ function language_strings() {
 	arr["ITALIAN",301]="Pur avendo tutti gli strumenti essenziali installati, il sistema utilizza airmon-zc invece di airmon-ng. Per funzionare è necessario installare lspci (pciutils) e tu non lo hai in questo momento. Si prega di installarlo e lanciare nuovamente lo script"
 	arr["POLISH",301]="Mimo, że zainstalowano wszystkie niezbędne narzędzia, system zamiast airmon-ng wykorzystuje airmon-zc. Aby pracować musisz mieć zainstalowany lspci (pciutils), którego w tej chwili nie masz. Zainstaluj go i ponownie uruchom skrypt"
 	arr["GERMAN",301]="Obwohl alle wesentlichen Tools installiert sind, verwendet Ihr System airmon-zc anstelle von airmon-ng. Um zu arbeiten, müssen Sie lspci (pciutils) installiert haben, und Sie haben es zur Zeit nicht. Bitte installieren Sie es und starten Sie das Skript erneut"
-	arr["TURKISH",301]="${pending_of_translation} "
+	arr["TURKISH",301]="Tüm gerekli araçlara sahip olmasına rağmen, sisteminiz airmon-ng yerine airmon-zc kullanıyor. Düzgün çalışması için lspci'yi (pciutils) kurmanız gerekiyor ve şu anda buna sahip değilsiniz. Lütfen kurun ve yazılımı tekrar başlatın"
 
 	arr["ENGLISH",302]="Do you want to store in a file the sniffed captured passwords? ${blue_color}If you answer no (\"n\") they will be only shown on screen ${normal_color}${visual_choice}"
 	arr["SPANISH",302]="¿Deseas guardar en un fichero las contraseñas obtenidas del sniffing? ${blue_color}Si respondes que no (\"n\") solo se mostrarán por pantalla ${normal_color}${visual_choice}"
@@ -4227,7 +4227,7 @@ function language_strings() {
 	arr["ITALIAN",302]="Vuoi salvare in un file le password ottenute con sniffing? ${blue_color}Se si risponde no (\"n\") vengono visualizzate solo sullo schermo ${normal_color}${visual_choice}"
 	arr["POLISH",302]="Czy chcesz zapisywać hasła w plikach? ${blue_color}Jeśli odpowiesz nie (\"n\") zostaną tylko wyświetlone na ekranie ${normal_color}${visual_choice}"
 	arr["GERMAN",302]="Möchten Sie die aus dem Sniffing erhaltene Passwörter in einer Datei speichern? ${blue_color} Wenn Sie mit Nein antworten (\"n\"), werden sie nur auf dem Bildschirm angezeigt ${normal_color}${visual_choice}"
-	arr["TURKISH",302]="${pending_of_translation} "
+	arr["TURKISH",302]="Yakalanan şifreler bir dosyada saklamak ister misiniz? Eğer cevap hayır ise (\"n\") sadece ekranda gösterilecekler ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",303]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${default_ettercap_logpath}]"
 	arr["SPANISH",303]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${default_ettercap_logpath}]"
@@ -4239,7 +4239,7 @@ function language_strings() {
 	arr["ITALIAN",303]="Digitare il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${default_ettercap_logpath}]"
 	arr["POLISH",303]="Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${default_ettercap_logpath}]"
 	arr["GERMAN",303]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${default_ettercap_logpath}]"
-	arr["TURKISH",303]="${pending_of_translation} "
+	arr["TURKISH",303]="Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın ${normal_color}[${default_ettercap_logpath}]"
 
 	arr["ENGLISH",304]="Parsing sniffer log..."
 	arr["SPANISH",304]="Analizando log del sniffer..."
@@ -4395,7 +4395,7 @@ function language_strings() {
 	arr["ITALIAN",316]="Si effettuerà una scansione in cerca di obiettivi..."
 	arr["POLISH",316]="Zostanie przeprowadzone poszukiwanie celów..."
 	arr["GERMAN",316]="Ein Scan wird auf der Suche nach Zielen durchgeführt..."
-	arr["TURKISH",316]="${pending_of_translation} "
+	arr["TURKISH",316]="Hedefleri arayan bir keşif yapılacaktır...*"
 
 	arr["ENGLISH",317]="If the password for the wifi network is achieved with the captive portal, you must decide where to save it. ${green_color}Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["SPANISH",317]="Si se consigue la contraseña de la red wifi con el portal cautivo, hay que decidir donde guardarla. ${green_color}Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${default_et_captive_portal_logpath}]"
@@ -4407,7 +4407,7 @@ function language_strings() {
 	arr["ITALIAN",317]="Se si ottiene la passowrd della rete wireless con il captive portal, bisogna decidere dove salvarla. ${green_color}Immettere il percorso dove memorizzare il file o premere [Enter] per accettare quello di default proposto ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["POLISH",317]="Jeśli hasło sieci wifi zostanie uzyskane z portalu captive, musisz zdecydować gdzie je zapisać. ${green_color}Wpisz ścieżkę, w której zapiszemy plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${default_et_captive_portal_logpath}]"
 	arr["GERMAN",317]="Wenn Sie das WLAN-Passwort mit dem Captive Portal erhalten, müssen Sie entscheiden, wo es gespeichert werden soll. ${green_color} Geben Sie den Pfad ein, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${default_et_captive_portal_logpath}]"
-	arr["TURKISH",317]="${pending_of_translation} "
+	arr["TURKISH",317]="Eğer wifi ağının şifresi esaret portalı ile yakalandıysa, nereye kaydedileceğini belirlemelisiniz. ${green_color}Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın. ${normal_color}[${default_et_captive_portal_logpath}]"
 
 	arr["ENGLISH",318]="Choose the language in which network clients will see the captive portal:"
 	arr["SPANISH",318]="Elige el idioma en el que los clientes de la red verán el portal cautivo:"
@@ -4515,7 +4515,7 @@ function language_strings() {
 	arr["ITALIAN",326]="Hai intenzione di utilizzare il metodo dell'interfaccia con accesso ad internet? ${pink_color}Se la risposta è no (\"n\") hai bisogno di tenere installato ${optional_tools_names[12]} per continuare. Entrambi saranno controllati ${normal_color}${visual_choice}"
 	arr["POLISH",326]="Czy zamierzasz używać metody interfejsu z dostępem do internetu? ${pink_color}Jeśli odpowiedź brzmi nie (\"n\"), musisz mieć zainstalowane ${optional_tools_names[12]}. Oba narzędzia zostaną sprawdzone ${normal_color}${visual_choice}"
 	arr["GERMAN",326]="Verwenden Sie die Interface mit Internetzugang? ${pink_color}Wenn die Antwort nein ist (\"n\"), müssen Sie ${optional_tools_names[12]} installiert haben, um fortzufahren. Beides wird überprüft ${normal_color}${visual_choice}"
-	arr["TURKISH",326]="${pending_of_translation} "
+	arr["TURKISH",326]="İnternet erişim yöntemiyle arayüzü kullanacak mısınız? ${pink_color}Eğer cevap hayır ise (\"n\"), devam etmek için ${optional_tools_names[12]} aracına ihtiyacınız olacak. İkisi de kontrol edilecek ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",327]="You don't have ${optional_tools_names[12]} installed. The script can't continue. Redirecting to main screen..."
 	arr["SPANISH",327]="No tienes instalado ${optional_tools_names[12]}. El script no puede continuar. Redirigiendo a la pantalla principal..."
@@ -4527,7 +4527,7 @@ function language_strings() {
 	arr["ITALIAN",327]="Non hai installato ${optional_tools_names[12]}. Lo script non può continuare. Reindirizzando alla schermata principale..."
 	arr["POLISH",327]="Nie masz zainstalowanych ${optional_tools_names[12]}. Skrypt nie może kontynuować. Przekierowywanie do głównego ekranu..."
 	arr["GERMAN",327]="Sie haben ${optional_tools_names[12]} nicht installiert. Das Skript kann nicht fortgesetzt werden. Weiterleitung zum Hauptbildschirm weitergeleitet..."
-	arr["TURKISH",327]="${pending_of_translation} "
+	arr["TURKISH",327]="${optional_tools_names[12]} aracı bulunamadı. Yazılım devam edemez. Ana ekrana yönlendiriliyorsunuz..."
 
 	arr["ENGLISH",328]="The unique Evil Twin attack in which it's not necessary to have an additional interface with internet access is the captive portal attack. As an alternative, you'll need another additional requirement: ${optional_tools_names[12]}"
 	arr["SPANISH",328]="El único ataque de Evil Twin en el que no es necesario tener una interfaz adicional con acceso a internet es el del portal cautivo. Como alternativa necesitarás otro requerimiento adicional: ${optional_tools_names[12]}"
@@ -4539,7 +4539,7 @@ function language_strings() {
 	arr["ITALIAN",328]="L'unico attacco di tipo Evil Twin in cui non è necessario avere un'interfaccia supplementare con accesso a internet è quello con captive portal. In cambo avrai bisogno di un ulteriore requisito: ${optional_tools_names[12]}"
 	arr["POLISH",328]="Jedynym atakiem Evil Twin, w którym nie ma konieczności dodatkowego interfejsu z dostępem do internetu, jest atak Captive Portal. Alternatywnie potrzebujesz kolejnego dodatkowego narzędzia: ${optional_tools_names[12]}"
 	arr["GERMAN",328]="Der einzige Angriff von Evil Twin, bei dem keine zusätzliche Interface zum Internetzugang benötigt wird, ist die des Captive-Portals. Als Alternative benötigen Sie eine weitere zusätzliche Anforderung: ${optional_tools_names[12]}"
-	arr["TURKISH",328]="${pending_of_translation} "
+	arr["TURKISH",328]="İnternet erişimi olan ek bir arayüze sahip olmanın gerekli olmadığı benzersiz Şeytani İkiz saldırısı, esaret portalı saldırısıdır. Alternatif olarak, başka bir ek gereksinime ihtiyacınız olacak: ${optional_tools_names[12]}"
 
 	arr["ENGLISH",329]="It seems you have ${optional_tools_names[12]} installed. Script can continue..."
 	arr["SPANISH",329]="Se ha comprobado que tienes instalado ${optional_tools_names[12]}. El script puede continuar..."
@@ -4563,7 +4563,7 @@ function language_strings() {
 	arr["ITALIAN",330]="A questo punto ci sono due opzioni per la preparazione del captive portal. O avere un'interfaccia con accesso a internet, o preparare un DNS falso utilizzando ${optional_tools_names[12]}"
 	arr["POLISH",330]="W tym momencie istnieją dwie możliwości przygotowania portalu Captive. Interfejs z dostępem do internet lub przygotowujemy fałszywy DNS przy użyciu ${optional_tools_names[12]}"
 	arr["GERMAN",330]="An dieser Stelle gibt es zwei Möglichkeiten, das Captive-Portal vorzubereiten. Entweder haben wir eine Schnittstelle mit Internetzugang, oder wir bereiten einen falschen DNS mit ${optional_tools_names[12]} vor"
-	arr["TURKISH",330]="${pending_of_translation} "
+	arr["TURKISH",330]="Bu noktada esaret portalını hazırlamak için iki seçenek var. İnternet erişimi olan bir arayüze sahip olmak ya da sahte bir DNS kullanmak ${optional_tools_names[12]}"
 
 	arr["ENGLISH",331]="10. German"
 	arr["SPANISH",331]="10. Alemán"
@@ -4779,7 +4779,7 @@ function language_strings() {
 	arr["ITALIAN",348]="11. (bully) Attacco che utilizza una base dati di PIN"
 	arr["POLISH",348]="11. (bully) Atak oparty o bazę danych znanych PINów"
 	arr["GERMAN",348]="11. (bully) Angriff auf Datenbank bekannter PINs basiert"
-	arr["TURKISH",348]="${pending_of_translation} "
+	arr["TURKISH",348]="11. (bully) Bilinen PIN'ler veritabanı saldırısı"
 
 	arr["ENGLISH",349]="  N.         BSSID      CHANNEL  PWR   LOCKED  ESSID"
 	arr["SPANISH",349]="  N.         BSSID        CANAL  PWR   LOCKED  ESSID"
@@ -4839,7 +4839,7 @@ function language_strings() {
 	arr["ITALIAN",353]="Effettuando un piccolo test per risolvere il possibile problema di \"bad FCS\" se presente. Parametrizzando..."
 	arr["POLISH",353]="Przeprowadzenie małego testu, aby rozwiązać problem \"bad FCS\" jeśli istniał. Parametryzowanie..."
 	arr["GERMAN",353]="Ein Test wird ausgeführt, um das mögliche Problem von \"bad FCS\" zu lösen, falls es existiert. Parametrieren..."
-	arr["TURKISH",353]="${pending_of_translation} "
+	arr["TURKISH",353]="Varsa olası \"bad FCS\" sorununu çözme kontrol ediliyor. Parametrelendiriliyor..."
 
 	arr["ENGLISH",354]="Done! parameter set"
 	arr["SPANISH",354]="Hecho! parámetro fijado"
@@ -4863,7 +4863,7 @@ function language_strings() {
 	arr["ITALIAN",355]="Questa interfaccia è stata configurata anteriormente. Non c'è bisogno di controllare di nuovo"
 	arr["POLISH",355]="Ten interfejs został wcześniej sparametryzowany. Nie jest konieczne ponownie sprawdzenie"
 	arr["GERMAN",355]="Diese Interface wurde zuvor parametriert. Es ist nicht notwendig, die Überprüfung erneut durchzuführen"
-	arr["TURKISH",355]="${pending_of_translation} "
+	arr["TURKISH",355]="Bu arayüz daha önce parametrize edilmiş gibi görünüyor. Tekrar kontrol etmek gerekli değil"
 
 	arr["ENGLISH",356]="Some combinations don't work well. Such as reaver and Ralink chipset cards. If your card has this chipset is recommended to use bully"
 	arr["SPANISH",356]="Algunas combinaciones no funcionan bien. Como por ejemplo reaver y las tarjetas con chipset Ralink. Si tu tarjeta tiene este chipset es mejor utilizar bully"
@@ -4875,7 +4875,7 @@ function language_strings() {
 	arr["ITALIAN",356]="Alcune combinazioni non funzionano bene. Come ad esempio reaver e le schede con chipset Ralink. Se la scheda ha questo chipset è meglio usare bully"
 	arr["POLISH",356]="Niektóre kombinacje nie działają dobrze. Jak na przykład reaver i karty z chipsetem Ralink. Jeśli Twoja karta ma ten chipset lepiej jest użyć bully"
 	arr["GERMAN",356]="Einige Kombinationen funktionieren nicht gut. Zum Beispiel Reaver und Karten mit Ralink-Chipsatz. Wenn Ihre Karte diesen Chipsatz hat, ist es besser, bully zu benutzen"
-	arr["TURKISH",356]="${pending_of_translation} "
+	arr["TURKISH",356]="Bazı kombinasyonlar iyi çalışmıyor. Reaver ve Ralink chipset kartları gibi. Kartınızın bu yonga seti varsa, bully kullanmanız önerilir"
 
 	arr["ENGLISH",357]="6.  (reaver) Custom PIN association"
 	arr["SPANISH",357]="6.  (reaver) Asociación con PIN personalizado"
@@ -5007,7 +5007,7 @@ function language_strings() {
 	arr["ITALIAN",367]="È stato installato bully (v${bully_version}), ma non la versione richiesta. Per realizzare l'attacco Pixie Dust integrato con bully devi avere almeno la versione v${minimum_bully_pixiewps_version}"
 	arr["POLISH",367]="Masz zainstalowane bully (v${bully_version}), ale nie wymaganą wersję. Aby atak Pixie Dust był zintegrowany z bully, musisz mieć co najmniej wersję v${minimum_bully_pixiewps_version}"
 	arr["GERMAN",367]="Sie haben Bully installiert (v${bully_version}), obwohl nicht die erforderliche Version. Um den Pixie Dust Angriff mit Bully zu integrieren, müssen Sie mindestens die Version v${minimum_bully_pixiewps_version} haben"
-	arr["TURKISH",367]="${pending_of_translation} "
+	arr["TURKISH",367]="Bully versiyonunuz (v${bully_version}), ama istenilen versiyon değil. Pixie Dust entegreli bully saldırısı yapmak için en az versiyona sahip olmalısınız v${minimum_bully_pixiewps_version}"
 
 	arr["ENGLISH",368]="You have bully installed (v${bully_version}). You meet the version requirement to perform Pixie Dust integrated bully attack (minimum version v${minimum_bully_pixiewps_version}). Script can continue..."
 	arr["SPANISH",368]="Tienes bully instalado (v${bully_version}). Cumples con el requisito de versión para realizar el ataque Pixie Dust integrado con bully (versión mínima v${minimum_bully_pixiewps_version}). El script puede continuar..."
@@ -5019,7 +5019,7 @@ function language_strings() {
 	arr["ITALIAN",368]="È stato installato bully (v${bully_version}). Soddisfi il requisito della versione per realizzare l'attacco Pixie Dust integrato con bully (versione minima v${minimum_bully_pixiewps_version}). Lo script può continuare..."
 	arr["POLISH",368]="Masz zainstalowany bully (v${bully_version}). Spełnia ona wymagania wersji, aby atak Pixie Dust był zintegrowany z bully (wersja minimalna v${minimum_bully_pixiewps_version}). Skrypt może kontynuować..."
 	arr["GERMAN",368]="Sie haben bully installiert (v${bully_version}). Du erfüllst die Versionsvoraussetzung, um den mit dem bully integrierten Pixie Dust-Angriff auszuführen (Mindestversion v${minimum_bully_pixiewps_version}). Das Skript kann fortfahren..."
-	arr["TURKISH",368]="${pending_of_translation} "
+	arr["TURKISH",368]="Bully versiyonunuz (v${bully_version}), İstenilen versiyon karşılanıyor (minimum version v${minimum_bully_pixiewps_version}) ve Pixie Dust entegreli bully saldırısı yapmak için yazılım devam edebilir...  "
 
 	arr["ENGLISH",369]="To perform the Pixie Dust integrated attack with reaver or bully, you must have installed at least ${minimum_reaver_pixiewps_version} version for reaver and ${minimum_bully_pixiewps_version} for bully"
 	arr["SPANISH",369]="Para realizar el ataque Pixie Dust integrado con reaver o con bully, has de tener instalada como mínimo la versión ${minimum_reaver_pixiewps_version} para reaver y ${minimum_bully_pixiewps_version} para bully"
