@@ -249,7 +249,7 @@ function language_strings() {
 	et_misc_texts["ITALIAN",12]="Mostrare password"
 	et_misc_texts["POLISH",12]="Pokaż hasło"
 	et_misc_texts["GERMAN",12]="Passwort zeigen"
-	et_misc_texts["ENGLISH",12]="Şifreyi göster"
+	et_misc_texts["TURKISH",12]="Şifreyi göster"
 
 	et_misc_texts["ENGLISH",13]="Submit"
 	et_misc_texts["SPANISH",13]="Enviar"
@@ -261,7 +261,7 @@ function language_strings() {
 	et_misc_texts["ITALIAN",13]="Inviare"
 	et_misc_texts["POLISH",13]="Wyślij"
 	et_misc_texts["GERMAN",13]="Schicken"
-	et_misc_texts["ENGLISH",13]="Tamam"
+	et_misc_texts["TURKISH",13]="Tamam"
 
 	et_misc_texts["ENGLISH",14]="An unexpected error occurred, redirecting to the main screen"
 	et_misc_texts["SPANISH",14]="Ha ocurrido un error inesperado, redirigiendo a la pantalla principal"
@@ -285,7 +285,7 @@ function language_strings() {
 	et_misc_texts["ITALIAN",15]="Portale Internet"
 	et_misc_texts["POLISH",15]="Portal internetowy"
 	et_misc_texts["GERMAN",15]="Internet Portal"
-	et_misc_texts["ENGLISH",15]="İnternet Portalı"
+	et_misc_texts["TURKISH",15]="İnternet Portalı"
 
 	et_misc_texts["ENGLISH",16]="The password must be at least 8 characters"
 	et_misc_texts["SPANISH",16]="La contraseña debe tener al menos 8 caracteres"
@@ -442,7 +442,7 @@ function language_strings() {
 	wps_texts["ITALIAN",1]="airgeddon. Password decifrata con l'attacco WPS"
 	wps_texts["POLISH",1]="airgeddon. Hasło odszyfrowane w ataku WPS"
 	wps_texts["GERMAN",1]="airgeddon. Passwort bei WPS-Angriff entschlüsselt"
-	wep_texts["TURKISH",1]="airgeddon. WPS saldırısı sırasında çözülen şifre"
+	wps_texts["TURKISH",1]="airgeddon. WPS saldırısı sırasında çözülen şifre"
 
 	wps_texts["ENGLISH",2]="Channel"
 	wps_texts["SPANISH",2]="Canal"
@@ -454,7 +454,7 @@ function language_strings() {
 	wps_texts["ITALIAN",2]="Canale"
 	wps_texts["POLISH",2]="Kanał"
 	wps_texts["GERMAN",2]="Kanal"
-	wep_texts["TURKISH",2]="Kanal"
+	wps_texts["TURKISH",2]="Kanal"
 
 	wps_texts["ENGLISH",3]="The password was saved on file"
 	wps_texts["SPANISH",3]="La contraseña se ha guardado en el fichero"
