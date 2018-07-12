@@ -7158,7 +7158,7 @@ function set_captive_portal_page() {
 	echo -e "echo -e '\t\t\t<form method=\"post\" id=\"loginform\" name=\"loginform\" action=\"check.htm\">'"
 	echo -e "echo -e '\t\t\t\t<div class=\"title\">'"
 	echo -e "echo -e '\t\t\t\t\t<p>${et_misc_texts[${captive_portal_language},9]}</p>'"
-	echo -e "echo -e '\t\t\t\t\t<span class=\"bold\">${essid}</span>'"
+	echo -e "echo -e '\t\t\t\t\t<span class=\"bold\">${essid//\'/}</span>'"
 	echo -e "echo -e '\t\t\t\t</div>'"
 	echo -e "echo -e '\t\t\t\t<p>${et_misc_texts[${captive_portal_language},10]}</p>'"
 	echo -e "echo -e '\t\t\t\t<label>'"
