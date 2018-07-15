@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180611
+#Date.........: 20180715
 #Version......: 8.11
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
