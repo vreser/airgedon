@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180715
+#Date.........: 20180717
 #Version......: 8.11
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -5657,6 +5657,7 @@ function set_captive_portal_language() {
 	language_strings "${language}" 482
 	language_strings "${language}" 58
 	language_strings "${language}" 331
+	language_strings "${language}" 519
 	print_hint ${current_menu}
 
 	read -r captive_portal_language_selected
