@@ -1,6 +1,6 @@
 ### 8.11
  - Turkish language translation added (Thank you to "curious01")
- - Fixed error on captive portal on some SSID strange chars
+ - Fixed error on captive portal for some SSID strange chars
 
 ### 8.10
  - WPS decrypted networks now have trophy file
