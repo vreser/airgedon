@@ -1,5 +1,5 @@
 ### 8.11
- - Turkish language translation added (Thank you to "curious01")
+ - Turkish language translation added (Thank you to "UN5T48L3")
  - Fixed error on captive portal for some SSID strange chars
 
 ### 8.10
