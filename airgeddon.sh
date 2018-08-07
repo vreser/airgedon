@@ -1797,7 +1797,7 @@ function set_chipset() {
 			if [[ -f /sys/class/net/${1}/device/vendor ]] && [[ -f /sys/class/net/${1}/device/device ]]; then
 				vendor_and_device=$(cat "/sys/class/net/${1}/device/vendor"):$(cat "/sys/class/net/${1}/device/device")
 				if hash lspci 2> /dev/null; then
-					chipset=$(lspci -d "${vendor_and_device}" | cut -f 3 -d ":" | sed -e "${sedruleall}")
+					chipset=$(lspci -d "${vendor_and_device}" | head -n 1 | cut -f 3 -d ":" | sed -e "${sedruleall}")
 				fi
 			else
 				if hash ethtool 2> /dev/null; then

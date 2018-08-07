@@ -1,6 +1,7 @@
 ### 8.11
  - Fixed error on captive portal on some SSID strange chars
  - Fixed error showing SSIDs containing spaces on WPS network selection menu
+ - Fixed error on chipset detection for some cards
 
 ### 8.10
  - WPS decrypted networks now have trophy file
