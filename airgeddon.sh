@@ -948,7 +948,7 @@ function wash_json_scan() {
 		if grep "${1}" "${tmpdir}wps_json_data.txt" > /dev/null; then
 			serial=$(grep "${1}" "${tmpdir}wps_json_data.txt" | awk -F '"wps_serial" : "' '{print $2}' | awk -F '"' '{print $1}' | sed 's/.*\(....\)/\1/' 2> /dev/null)
 			kill "${wash_json_capture_alive}" &> /dev/null
-			wait "${wash_json_capture_alive}" 2>/dev/null
+			wait "${wash_json_capture_alive}" 2> /dev/null
 			break
 		fi
 	done
@@ -1421,11 +1421,6 @@ function monitor_option() {
 			else
 				secondary_interface_airmon_compatible=0
 			fi
-			#TODO review if here should be any other check
-			#interface name change --- OK
-			#interface mac change --- really needed to check?
-			#interface supported band --- OK
-			#Secondary interface mode check or change?
 		fi
 	else
 		if [ "${check_kill_needed}" -eq 1 ]; then
@@ -2498,10 +2493,10 @@ function kill_wep_windows() {
 	debug_print
 
 	kill "${wep_script_pid}" &> /dev/null
-	wait $! 2>/dev/null
+	wait $! 2> /dev/null
 
 	kill "${wep_key_script_pid}" &> /dev/null
-	wait $! 2>/dev/null
+	wait $! 2> /dev/null
 
 	readarray -t WEP_PROCESSES_TO_KILL < <(cat < "${tmpdir}${wepdir}${wep_processes_file}" 2> /dev/null)
 	for item in "${WEP_PROCESSES_TO_KILL[@]}"; do
@@ -7833,7 +7828,7 @@ function kill_dos_pursuit_mode_processes() {
 
 	for item in "${dos_pursuit_mode_pids[@]}"; do
 		kill -9 "${item}" &> /dev/null
-		wait "${item}" 2>/dev/null
+		wait "${item}" 2> /dev/null
 	done
 
 	if ! stty sane > /dev/null 2>&1; then
