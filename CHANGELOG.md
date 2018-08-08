@@ -1,4 +1,5 @@
 ### 8.11
+ - Extended cards compatibility. Now airmon non compatible cards can be used
  - Fixed error on captive portal on some SSID strange chars
  - Fixed error showing SSIDs containing spaces on WPS network selection menu
  - Fixed error on chipset detection for some cards
