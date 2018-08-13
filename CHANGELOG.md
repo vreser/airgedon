@@ -1,6 +1,7 @@
 ### 8.11
+ - Turkish language translation added (Thank you to "UN5T48L3")
  - Extended cards compatibility. Now airmon non compatible cards can be used
- - Fixed error on captive portal on some SSID strange chars
+ - Fixed error on captive portal for some SSID strange chars
  - Fixed error showing SSIDs containing spaces on WPS network selection menu
  - Fixed error on chipset detection for some cards
 
