@@ -1,3 +1,6 @@
+### 9.0
+ - New WPA/WPA2 enterprise attacks menu
+
 ### 8.11
  - Turkish language translation added (Thank you to "UN5T48L3")
  - Extended cards compatibility. Now airmon non compatible cards can be used
