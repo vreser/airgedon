@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180717
+#Date.........: 20180809
 #Version......: 8.11
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -957,7 +957,7 @@ function wash_json_scan() {
 		if grep "${1}" "${tmpdir}wps_json_data.txt" > /dev/null; then
 			serial=$(grep "${1}" "${tmpdir}wps_json_data.txt" | awk -F '"wps_serial" : "' '{print $2}' | awk -F '"' '{print $1}' | sed 's/.*\(....\)/\1/' 2> /dev/null)
 			kill "${wash_json_capture_alive}" &> /dev/null
-			wait "${wash_json_capture_alive}" 2>/dev/null
+			wait "${wash_json_capture_alive}" 2> /dev/null
 			break
 		fi
 	done
@@ -1262,18 +1262,20 @@ function prepare_et_interface() {
 	et_initial_state=${ifacemode}
 
 	if [ "${ifacemode}" != "Managed" ]; then
-		new_interface=$(${airmon} stop "${interface}" 2> /dev/null | grep station | head -n 1)
-		ifacemode="Managed"
-		[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
-		if [ "${interface}" != "${new_interface}" ]; then
-			if check_interface_coherence; then
-				interface=${new_interface}
-				phy_interface=$(physical_interface_finder "${interface}")
-				check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
-				current_iface_on_messages="${interface}"
+		if [ "${interface_airmon_compatible}" -eq 1 ]; then
+			new_interface=$(${airmon} stop "${interface}" 2> /dev/null | grep station | head -n 1)
+			ifacemode="Managed"
+			[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
+			if [ "${interface}" != "${new_interface}" ]; then
+				if check_interface_coherence; then
+					interface=${new_interface}
+					phy_interface=$(physical_interface_finder "${interface}")
+					check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
+					current_iface_on_messages="${interface}"
+				fi
+				echo
+				language_strings "${language}" 15 "yellow"
 			fi
-			echo
-			language_strings "${language}" 15 "yellow"
 		fi
 	fi
 }
@@ -1293,27 +1295,33 @@ function restore_et_interface() {
 	iw dev "${iface_monitor_et_deauth}" del > /dev/null 2>&1
 
 	if [ "${et_initial_state}" = "Managed" ]; then
-		ifconfig "${interface}" down > /dev/null 2>&1
-		iwconfig "${interface}" mode managed > /dev/null 2>&1
-		ifconfig "${interface}" up > /dev/null 2>&1
+		set_mode_without_airmon "${interface}" "managed"
 		ifacemode="Managed"
 	else
-		new_interface=$(${airmon} start "${interface}" 2> /dev/null | grep monitor)
-		desired_interface_name=""
-		[[ ${new_interface} =~ ^You[[:space:]]already[[:space:]]have[[:space:]]a[[:space:]]([A-Za-z0-9]+)[[:space:]]device ]] && desired_interface_name="${BASH_REMATCH[1]}"
-		if [ -n "${desired_interface_name}" ]; then
-			echo
-			language_strings "${language}" 435 "red"
-			language_strings "${language}" 115 "read"
-			return
-		fi
-		ifacemode="Monitor"
-		[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
-		if [ "${interface}" != "${new_interface}" ]; then
-			interface=${new_interface}
-			phy_interface=$(physical_interface_finder "${interface}")
-			check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
-			current_iface_on_messages="${interface}"
+		if [ "${interface_airmon_compatible}" -eq 1 ]; then
+			new_interface=$(${airmon} start "${interface}" 2> /dev/null | grep monitor)
+			desired_interface_name=""
+			[[ ${new_interface} =~ ^You[[:space:]]already[[:space:]]have[[:space:]]a[[:space:]]([A-Za-z0-9]+)[[:space:]]device ]] && desired_interface_name="${BASH_REMATCH[1]}"
+			if [ -n "${desired_interface_name}" ]; then
+				echo
+				language_strings "${language}" 435 "red"
+				language_strings "${language}" 115 "read"
+				return
+			fi
+
+			ifacemode="Monitor"
+
+			[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
+			if [ "${interface}" != "${new_interface}" ]; then
+				interface=${new_interface}
+				phy_interface=$(physical_interface_finder "${interface}")
+				check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
+				current_iface_on_messages="${interface}"
+			fi
+		else
+			if set_mode_without_airmon "${interface}" "monitor"; then
+				ifacemode="Monitor"
+			fi
 		fi
 	fi
 }
@@ -1328,7 +1336,7 @@ function disable_rfkill() {
 	fi
 }
 
-#Put the interface on managed mode and manage the possible name change
+#Set the interface on managed mode and manage the possible name change
 function managed_option() {
 
 	debug_print
@@ -1343,29 +1351,49 @@ function managed_option() {
 	ifconfig "${1}" up
 
 	if [ "${1}" = "${interface}" ]; then
-		new_interface=$(${airmon} stop "${1}" 2> /dev/null | grep station | head -n 1)
-		ifacemode="Managed"
-		[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
-
-		if [ "${interface}" != "${new_interface}" ]; then
-			if check_interface_coherence; then
-				interface=${new_interface}
-				phy_interface=$(physical_interface_finder "${interface}")
-				check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
-				current_iface_on_messages="${interface}"
+		if [ "${interface_airmon_compatible}" -eq 0 ]; then
+			if ! set_mode_without_airmon "${1}" "managed"; then
+				echo
+				language_strings "${language}" 1 "red"
+				language_strings "${language}" 115 "read"
+				return 1
+			else
+				ifacemode="Managed"
 			fi
-			echo
-			language_strings "${language}" 15 "yellow"
+		else
+			new_interface=$(${airmon} stop "${1}" 2> /dev/null | grep station | head -n 1)
+			ifacemode="Managed"
+			[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
+
+			if [ "${interface}" != "${new_interface}" ]; then
+				if check_interface_coherence; then
+					interface=${new_interface}
+					phy_interface=$(physical_interface_finder "${interface}")
+					check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
+					current_iface_on_messages="${interface}"
+				fi
+				echo
+				language_strings "${language}" 15 "yellow"
+			fi
 		fi
 	else
-		new_secondary_interface=$(${airmon} stop "${1}" 2> /dev/null | grep station | head -n 1)
-		[[ ${new_secondary_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_secondary_interface="${BASH_REMATCH[1]}"
+		if [ "${secondary_interface_airmon_compatible}" -eq 0 ]; then
+			if ! set_mode_without_airmon "${1}" "managed"; then
+				echo
+				language_strings "${language}" 1 "red"
+				language_strings "${language}" 115 "read"
+				return 1
+			fi
+		else
+			new_secondary_interface=$(${airmon} stop "${1}" 2> /dev/null | grep station | head -n 1)
+			[[ ${new_secondary_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_secondary_interface="${BASH_REMATCH[1]}"
 
-		if [ "${1}" != "${new_secondary_interface}" ]; then
-			secondary_wifi_interface=${new_secondary_interface}
-			current_iface_on_messages="${secondary_wifi_interface}"
-			echo
-			language_strings "${language}" 15 "yellow"
+			if [ "${1}" != "${new_secondary_interface}" ]; then
+				secondary_wifi_interface=${new_secondary_interface}
+				current_iface_on_messages="${secondary_wifi_interface}"
+				echo
+				language_strings "${language}" 15 "yellow"
+			fi
 		fi
 	fi
 
@@ -1375,7 +1403,7 @@ function managed_option() {
 	return 0
 }
 
-#Put the interface on monitor mode and manage the possible name change
+#Set the interface on monitor mode and manage the possible name change
 function monitor_option() {
 
 	debug_print
@@ -1387,66 +1415,101 @@ function monitor_option() {
 	disable_rfkill
 
 	language_strings "${language}" 18 "blue"
-
 	ifconfig "${1}" up
 
 	if ! iwconfig "${1}" rate 1M > /dev/null 2>&1; then
-		echo
-		language_strings "${language}" 20 "red"
-		language_strings "${language}" 115 "read"
-		return 1
-	fi
-
-	if [ "${check_kill_needed}" -eq 1 ]; then
-		language_strings "${language}" 19 "blue"
-		${airmon} check kill > /dev/null 2>&1
-		nm_processes_killed=1
-	fi
-
-	desired_interface_name=""
-	if [ "${1}" = "${interface}" ]; then
-		new_interface=$(${airmon} start "${1}" 2> /dev/null | grep monitor)
-		[[ ${new_interface} =~ ^You[[:space:]]already[[:space:]]have[[:space:]]a[[:space:]]([A-Za-z0-9]+)[[:space:]]device ]] && desired_interface_name="${BASH_REMATCH[1]}"
-	else
-		new_secondary_interface=$(${airmon} start "${1}" 2> /dev/null | grep monitor)
-		[[ ${new_secondary_interface} =~ ^You[[:space:]]already[[:space:]]have[[:space:]]a[[:space:]]([A-Za-z0-9]+)[[:space:]]device ]] && desired_interface_name="${BASH_REMATCH[1]}"
-	fi
-
-	if [ -n "${desired_interface_name}" ]; then
-		echo
-		language_strings "${language}" 435 "red"
-		language_strings "${language}" 115 "read"
-		return 1
-	fi
-
-	if [ "${1}" = "${interface}" ]; then
-		ifacemode="Monitor"
-		[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
-
-		if [ "${interface}" != "${new_interface}" ]; then
-			if check_interface_coherence; then
-				interface="${new_interface}"
-				phy_interface=$(physical_interface_finder "${interface}")
-				check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
-				current_iface_on_messages="${interface}"
-			fi
+		if ! set_mode_without_airmon "${1}" "monitor"; then
 			echo
-			language_strings "${language}" 21 "yellow"
+			language_strings "${language}" 20 "red"
+			language_strings "${language}" 115 "read"
+			return 1
+		else
+			if [ "${1}" = "${interface}" ]; then
+				interface_airmon_compatible=0
+				ifacemode="Monitor"
+			else
+				secondary_interface_airmon_compatible=0
+			fi
 		fi
 	else
-		[[ ${new_secondary_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_secondary_interface="${BASH_REMATCH[1]}"
+		if [ "${check_kill_needed}" -eq 1 ]; then
+			language_strings "${language}" 19 "blue"
+			${airmon} check kill > /dev/null 2>&1
+			nm_processes_killed=1
+		fi
 
-		if [ "${1}" != "${new_secondary_interface}" ]; then
-			secondary_wifi_interface="${new_secondary_interface}"
-			current_iface_on_messages="${secondary_wifi_interface}"
+		desired_interface_name=""
+		if [ "${1}" = "${interface}" ]; then
+			interface_airmon_compatible=1
+			new_interface=$(${airmon} start "${1}" 2> /dev/null | grep monitor)
+			[[ ${new_interface} =~ ^You[[:space:]]already[[:space:]]have[[:space:]]a[[:space:]]([A-Za-z0-9]+)[[:space:]]device ]] && desired_interface_name="${BASH_REMATCH[1]}"
+		else
+			secondary_interface_airmon_compatible=1
+			new_secondary_interface=$(${airmon} start "${1}" 2> /dev/null | grep monitor)
+			[[ ${new_secondary_interface} =~ ^You[[:space:]]already[[:space:]]have[[:space:]]a[[:space:]]([A-Za-z0-9]+)[[:space:]]device ]] && desired_interface_name="${BASH_REMATCH[1]}"
+		fi
+
+		if [ -n "${desired_interface_name}" ]; then
 			echo
-			language_strings "${language}" 21 "yellow"
+			language_strings "${language}" 435 "red"
+			language_strings "${language}" 115 "read"
+			return 1
+		fi
+
+		if [ "${1}" = "${interface}" ]; then
+			ifacemode="Monitor"
+			[[ ${new_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_interface="${BASH_REMATCH[1]}"
+
+			if [ "${interface}" != "${new_interface}" ]; then
+				if check_interface_coherence; then
+					interface="${new_interface}"
+					phy_interface=$(physical_interface_finder "${interface}")
+					check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
+					current_iface_on_messages="${interface}"
+				fi
+				echo
+				language_strings "${language}" 21 "yellow"
+			fi
+		else
+			[[ ${new_secondary_interface} =~ \]?([A-Za-z0-9]+)\)?$ ]] && new_secondary_interface="${BASH_REMATCH[1]}"
+
+			if [ "${1}" != "${new_secondary_interface}" ]; then
+				secondary_wifi_interface="${new_secondary_interface}"
+				current_iface_on_messages="${secondary_wifi_interface}"
+				echo
+				language_strings "${language}" 21 "yellow"
+			fi
 		fi
 	fi
 
 	echo
 	language_strings "${language}" 22 "yellow"
 	language_strings "${language}" 115 "read"
+	return 0
+}
+
+#Set the interface on monitor/managed mode without airmon
+function set_mode_without_airmon() {
+
+	debug_print
+
+	local error
+	local mode
+
+	if [ "${2}" = "monitor" ]; then
+		mode="monitor"
+	else
+		mode="managed"
+	fi
+
+	ifconfig "${1}" down > /dev/null 2>&1
+	iwconfig "${1}" mode "${mode}" > /dev/null 2>&1
+	error=$?
+	ifconfig "${1}" up > /dev/null 2>&1
+
+	if [ "${error}" != 0 ]; then
+		return 1
+	fi
 	return 0
 }
 
@@ -1816,7 +1879,7 @@ function set_chipset() {
 			if [[ -f /sys/class/net/${1}/device/vendor ]] && [[ -f /sys/class/net/${1}/device/device ]]; then
 				vendor_and_device=$(cat "/sys/class/net/${1}/device/vendor"):$(cat "/sys/class/net/${1}/device/device")
 				if hash lspci 2> /dev/null; then
-					chipset=$(lspci -d "${vendor_and_device}" | cut -f 3 -d ":" | sed -e "${sedruleall}")
+					chipset=$(lspci -d "${vendor_and_device}" | head -n 1 | cut -f 3 -d ":" | sed -e "${sedruleall}")
 				fi
 			else
 				if hash ethtool 2> /dev/null; then
@@ -2449,10 +2512,10 @@ function kill_wep_windows() {
 	debug_print
 
 	kill "${wep_script_pid}" &> /dev/null
-	wait $! 2>/dev/null
+	wait $! 2> /dev/null
 
 	kill "${wep_key_script_pid}" &> /dev/null
-	wait $! 2>/dev/null
+	wait $! 2> /dev/null
 
 	readarray -t WEP_PROCESSES_TO_KILL < <(cat < "${tmpdir}${wepdir}${wep_processes_file}" 2> /dev/null)
 	for item in "${WEP_PROCESSES_TO_KILL[@]}"; do
@@ -7788,7 +7851,7 @@ function kill_dos_pursuit_mode_processes() {
 
 	for item in "${dos_pursuit_mode_pids[@]}"; do
 		kill -9 "${item}" &> /dev/null
-		wait "${item}" 2>/dev/null
+		wait "${item}" 2> /dev/null
 	done
 
 	if ! stty sane > /dev/null 2>&1; then
@@ -8692,7 +8755,7 @@ function explore_for_wps_targets_option() {
 			expwps_channel=$(echo "${expwps_line}" | awk '{print $2}')
 			expwps_power=$(echo "${expwps_line}" | awk '{print $3}')
 			expwps_locked=$(echo "${expwps_line}" | awk '{print $5}')
-			expwps_essid=$(echo "${expwps_line}" | awk '{print $NF}' | sed -e 's/^[ \t]*//')
+			expwps_essid=$(echo "${expwps_line}" | awk -F '\t| {2,}' '{print $NF}')
 
 			if [[ ${expwps_channel} -le 9 ]]; then
 				wpssp2="  "
@@ -9553,7 +9616,11 @@ function exit_script_option() {
 		if [ "${yesno}" = "n" ]; then
 			action_on_exit_taken=1
 			language_strings "${language}" 167 "multiline"
-			${airmon} stop "${interface}" > /dev/null 2>&1
+			if [ "${interface_airmon_compatible}" -eq 1 ]; then
+				${airmon} stop "${interface}" > /dev/null 2>&1
+			else
+				set_mode_without_airmon "${interface}" "managed"
+			fi
 			ifacemode="Managed"
 			time_loop
 			echo -e "${green_color} Ok\r${normal_color}"
@@ -10547,6 +10614,8 @@ function initialize_script_settings() {
 	http_proxy_set=0
 	hccapx_needed=0
 	xterm_ok=1
+	interface_airmon_compatible=1
+	secondary_interface_airmon_compatible=1
 	declare -gA wps_data_array
 }
 

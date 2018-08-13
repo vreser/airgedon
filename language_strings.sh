@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180803
+#Date.........: 20180809
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -773,7 +773,7 @@ function language_strings() {
 	arr["GERMAN",14]="Diese ${current_iface_on_messages}-Interface befindet sich nicht im monitor Modus"
 	arr["TURKISH",14]="Bu arayüz ${current_iface_on_messages} izleme modunda değildir"
 
-	arr["ENGLISH",15]="The interface changed its name while putting in managed mode. Autoselected"
+	arr["ENGLISH",15]="The interface changed its name while setting in managed mode. Autoselected"
 	arr["SPANISH",15]="Esta interfaz ha cambiado su nombre al ponerse en modo managed. Se ha seleccionado automáticamente"
 	arr["FRENCH",15]="Le nom de l'interface a changé lors du passage en mode managed. Elle a été sélectionnée automatiquement"
 	arr["CATALAN",15]="Aquesta interfície ha canviat de nom al posar-la en mode managed. S'ha triat automàticament"
@@ -797,7 +797,7 @@ function language_strings() {
 	arr["GERMAN",16]="Der Managed-Modus wurde auf ${current_iface_on_messages} festgelegt"
 	arr["TURKISH",16]="Yönetici modu açıldı ${current_iface_on_messages}"
 
-	arr["ENGLISH",17]="Putting your interface in managed mode..."
+	arr["ENGLISH",17]="Setting your interface in managed mode..."
 	arr["SPANISH",17]="Poniendo la interfaz en modo managed..."
 	arr["FRENCH",17]="L'interface est en train de passer en mode managed..."
 	arr["CATALAN",17]="Configurant la interfície en mode managed..."
@@ -809,7 +809,7 @@ function language_strings() {
 	arr["GERMAN",17]="Interface wird zum Managed-Modus versetzt..."
 	arr["TURKISH",17]="Arayüzünüz yönetici moduna çeviriliyor..."
 
-	arr["ENGLISH",18]="Putting your interface in monitor mode..."
+	arr["ENGLISH",18]="Setting your interface in monitor mode..."
 	arr["SPANISH",18]="Poniendo la interfaz en modo monitor..."
 	arr["FRENCH",18]="L'interface est en train de passer en mode moniteur..."
 	arr["CATALAN",18]="Configurant la interfície en mode monitor..."
@@ -833,19 +833,19 @@ function language_strings() {
 	arr["GERMAN",19]="Wir bitten um Geduld. Mögliche konfliktreiche Prozesse werden gerade gestoppt..."
 	arr["TURKISH",19]="Lütfen sabırlı olun. Bazı çelişkili süreçler sonlandırılıyor..."
 
-	arr["ENGLISH",20]="This interface ${current_iface_on_messages} doesn't support monitor mode or is not compatible with airmon"
-	arr["SPANISH",20]="Esta interfaz ${current_iface_on_messages} no soporta modo monitor o no es compatible con airmon"
-	arr["FRENCH",20]="L'interface ${current_iface_on_messages} n'est pas compatible en mode moniteur ou n'est pas compatible avec airmon"
-	arr["CATALAN",20]="Aquesta interfície ${current_iface_on_messages} no suporta mode monitor o no és compatible amb airmon"
-	arr["PORTUGUESE",20]="A interface ${current_iface_on_messages} não suporta o modo monitor ou não é compatível com o airmon"
-	arr["RUSSIAN",20]="Этот интерфейс ${current_iface_on_messages} не поддерживает режим монитора или не совместим с airmon"
-	arr["GREEK",20]="Αυτή η διεπαφή ${current_iface_on_messages} δεν υποστηρίζει την κατάσταση παρακολούθησης ή δεν είναι συμβατή με το airmon"
-	arr["ITALIAN",20]="Questa interfaccia ${current_iface_on_messages} non supporta la modalità monitor o non è compatibile con airmon"
-	arr["POLISH",20]="Interfejs ${current_iface_on_messages} nie obsługuje trybu monitorowania lub nie jest kompatybilny z airmon"
-	arr["GERMAN",20]="Diese ${current_iface_on_messages}-Interface unterstützt den monitor-Modus nicht oder ist mit airmon nicht kompatibel"
+	arr["ENGLISH",20]="This interface ${current_iface_on_messages} doesn't support monitor mode"
+	arr["SPANISH",20]="Esta interfaz ${current_iface_on_messages} no soporta modo monitor"
+	arr["FRENCH",20]="L'interface ${current_iface_on_messages} n'est pas compatible mode moniteur"
+	arr["CATALAN",20]="Aquesta interfície ${current_iface_on_messages} no suporta mode monitor"
+	arr["PORTUGUESE",20]="Esta interface ${current_iface_on_messages} não suporta o modo monitor"
+	arr["RUSSIAN",20]="Этот интерфейс ${current_iface_on_messages} не поддерживает режим монитора"
+	arr["GREEK",20]="Αυτή η διεπαφή ${current_iface_on_messages} δεν υποστηρίζει κατάσταση παρακολούθησης"
+	arr["ITALIAN",20]="Questa interfaccia ${current_iface_on_messages} non supporta la modalità monitor"
+	arr["POLISH",20]="Interfejs ${current_iface_on_messages} nie obsługuje trybu monitorowania"
+	arr["GERMAN",20]="Diese ${current_iface_on_messages}-Interface unterstützt den monitor-Modus nicht"
 	arr["TURKISH",20]="Bu arayüz ${current_iface_on_messages} izleme modunu desteklemiyor"
 
-	arr["ENGLISH",21]="The interface changed its name while putting in monitor mode. Autoselected"
+	arr["ENGLISH",21]="The interface changed its name while setting in monitor mode. Autoselected"
 	arr["SPANISH",21]="Esta interfaz ha cambiado su nombre al ponerla en modo monitor. Se ha seleccionado automáticamente"
 	arr["FRENCH",21]="Le nom de l'interface à changé lors de l'activation du mode moniteur. Elle a été automatiquement sélectionnée"
 	arr["CATALAN",21]="Aquesta interfície ha canviat de nom al posar-la en mode monitor. S'ha seleccionat automàticament"
@@ -2597,7 +2597,7 @@ function language_strings() {
 	arr["GERMAN",166]="Möchten Sie den monitor-Modus Ihrer Interface beim Beenden beibehalten? ${normal_color}${visual_choice}"
 	arr["TURKISH",166]="Çıkışta kartınızın monitör modunu korumak istiyor musunuz? ${normal_color}${visual_choice}"
 
-	arr["ENGLISH",167]="Putting your interface in managed mode"
+	arr["ENGLISH",167]="Setting your interface in managed mode"
 	arr["SPANISH",167]="Poniendo interfaz en modo managed"
 	arr["FRENCH",167]="L'interface est en train de passer en mode managed"
 	arr["CATALAN",167]="Configurant la interfície en mode managed"
