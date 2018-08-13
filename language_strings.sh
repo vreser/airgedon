@@ -1589,17 +1589,18 @@ function language_strings() {
 	arr["GERMAN",82]="Ungültige Sprache"
 	arr["TURKISH",82]="Yanlış bir dil seçildi"
 
+	#This string is special. The phrases don't mean the same intentionally
 	arr["ENGLISH",83]="Language changed to English"
-	arr["SPANISH",83]="Idioma cambiado a Inglés"
-	arr["FRENCH",83]="Le script sera maintenant en Anglais"
-	arr["CATALAN",83]="Idioma canviat a Anglés"
-	arr["PORTUGUESE",83]="Idioma alterado para Inglês"
-	arr["RUSSIAN",83]="Язык изменён на английский"
-	arr["GREEK",83]="Η γλώσσα άλλαξε στα Αγγλικά"
-	arr["ITALIAN",83]="Lingua cambiata in Inglese"
-	arr["POLISH",83]="Zmieniono język na Angielski"
-	arr["GERMAN",83]="Die Sprache wurde zu Englisch eingestellt"
-	arr["TURKISH",83]="Dil İngilizce olarak değiştirildi"
+	arr["SPANISH",83]="Idioma cambiado a Español"
+	arr["FRENCH",83]="Le script sera maintenant en Français"
+	arr["CATALAN",83]="Idioma canviat a Català"
+	arr["PORTUGUESE",83]="Idioma alterado para Português"
+	arr["RUSSIAN",83]="Язык изменён на русский"
+	arr["GREEK",83]="Η γλώσσα άλλαξε στα Ελληνικά"
+	arr["ITALIAN",83]="Lingua cambiata in Italiano"
+	arr["POLISH",83]="Zmieniono język na Polski"
+	arr["GERMAN",83]="Sprache wurde auf Deutsch geändert"
+	arr["TURKISH",83]="Dil Türkçe olarak değiştirildi"
 
 	arr["ENGLISH",84]="Language changed to Spanish"
 	arr["SPANISH",84]="Idioma cambiado a Español"
@@ -6832,6 +6833,8 @@ function language_strings() {
 	arr["POLISH",519]="${pending_of_translation} 11. Turecki"
 	arr["GERMAN",519]="${pending_of_translation} 11. Türkisch"
 	arr["TURKISH",519]="11. Türkçe"
+
+	#TODO phrases to be reused: 57, 84, 112, 117, 248, 260, 307, 332, 483, 518
 
 	case "${3}" in
 		"yellow")

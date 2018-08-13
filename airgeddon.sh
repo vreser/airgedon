@@ -1757,7 +1757,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="SPANISH"
-				language_strings "${language}" 84 "yellow"
+				language_strings "${language}" 83 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -1766,7 +1766,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="FRENCH"
-				language_strings "${language}" 112 "yellow"
+				language_strings "${language}" 83 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -1775,7 +1775,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="CATALAN"
-				language_strings "${language}" 117 "yellow"
+				language_strings "${language}" 83 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -1784,7 +1784,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="PORTUGUESE"
-				language_strings "${language}" 248 "yellow"
+				language_strings "${language}" 83 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -1793,7 +1793,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="RUSSIAN"
-				language_strings "${language}" 307 "yellow"
+				language_strings "${language}" 83 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -1802,7 +1802,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="GREEK"
-				language_strings "${language}" 332 "yellow"
+				language_strings "${language}" 83 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -1811,7 +1811,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="ITALIAN"
-				language_strings "${language}" 483 "yellow"
+				language_strings "${language}" 83 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -1820,7 +1820,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="POLISH"
-				language_strings "${language}" 57 "yellow"
+				language_strings "${language}" 83 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -1829,7 +1829,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="GERMAN"
-				language_strings "${language}" 260 "yellow"
+				language_strings "${language}" 83 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
@@ -1838,7 +1838,7 @@ function language_menu() {
 				language_strings "${language}" 251 "red"
 			else
 				language="TURKISH"
-				language_strings "${language}" 518 "yellow"
+				language_strings "${language}" 83 "yellow"
 			fi
 			language_strings "${language}" 115 "read"
 		;;
