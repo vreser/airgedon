@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180813
+#Date.........: 20180814
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -70,6 +70,7 @@ optional_tools_names=(
 						"bettercap"
 						"beef"
 						"packetforge-ng"
+						"hostapd-wpe"
 					)
 
 update_tools=("curl")
@@ -104,6 +105,7 @@ declare -A possible_package_names=(
 									[${optional_tools_names[18]}]="bettercap" #bettercap
 									[${optional_tools_names[19]}]="beef-xss / beef-project" #beef
 									[${optional_tools_names[20]}]="aircrack-ng" #packetforge-ng
+									[${optional_tools_names[21]}]="hostapd-wpe" #hostapd-wpe
 									[${update_tools[0]}]="curl" #curl
 								)
 
@@ -298,6 +300,8 @@ declare evil_twin_dos_hints=(267 268 509)
 declare beef_hints=(408)
 declare wps_hints=(342 343 344 356 369 390 490)
 declare wep_hints=(431 429 428 432 433)
+#TODO hint array
+declare enterprise_hints=()
 
 #Charset vars
 crunch_lowercasecharset="abcdefghijklmnopqrstuvwxyz"
@@ -4311,6 +4315,7 @@ function main_menu() {
 	language_strings "${language}" 252
 	language_strings "${language}" 333
 	language_strings "${language}" 426
+	language_strings "${language}" 57
 	print_simple_separator
 	language_strings "${language}" 60
 	language_strings "${language}" 444
@@ -4349,9 +4354,14 @@ function main_menu() {
 			wep_attacks_menu
 		;;
 		10)
-			credits_option
+			#TODO
+			under_construction_message
+			#enterprise_attacks_menu
 		;;
 		11)
+			credits_option
+		;;
+		12)
 			option_menu
 		;;
 		*)

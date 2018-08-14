@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180813
+#Date.........: 20180814
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -1277,17 +1277,17 @@ function language_strings() {
 	arr["GERMAN",56]="3.  Setzen Sie die Interface im managed-Modus ein"
 	arr["TURKISH",56]="3.  Arayüzün yönetici modunu aç"
 
-	arr["ENGLISH",57]="Language changed to Polish"
-	arr["SPANISH",57]="Idioma cambiado a Polaco"
-	arr["FRENCH",57]="Le script sera maintenant en Polonais"
-	arr["CATALAN",57]="Idioma canviat a Polonès"
-	arr["PORTUGUESE",57]="Idioma alterado para Polonês"
-	arr["RUSSIAN",57]="Язык изменён на польский"
-	arr["GREEK",57]="Η γλώσσα άλλαξε στα Πολωνικά"
-	arr["ITALIAN",57]="Lingua cambiata a Polacco"
-	arr["POLISH",57]="Zmieniono język na Polski"
-	arr["GERMAN",57]="Die Sprache wurde zu Polnisch geändert"
-	arr["TURKISH",57]="Dil Polish olarak değiştirildi"
+	arr["ENGLISH",57]="10. Enterprise attacks menu"
+	arr["SPANISH",57]="10. Menú de ataques Enterprise"
+	arr["FRENCH",57]="${pending_of_translation} 10. "
+	arr["CATALAN",57]="${pending_of_translation} 10. "
+	arr["PORTUGUESE",57]="${pending_of_translation} 10. "
+	arr["RUSSIAN",57]="${pending_of_translation} 10. "
+	arr["GREEK",57]="${pending_of_translation} 10. "
+	arr["ITALIAN",57]="${pending_of_translation} 10. "
+	arr["POLISH",57]="${pending_of_translation} 10. "
+	arr["GERMAN",57]="${pending_of_translation} 10. "
+	arr["TURKISH",57]="${pending_of_translation} 10. "
 
 	arr["ENGLISH",58]="9.  Polish"
 	arr["SPANISH",58]="9.  Polaco"
@@ -1313,17 +1313,17 @@ function language_strings() {
 	arr["GERMAN",59]="0.  Zum Hauptmenü zurück"
 	arr["TURKISH",59]="0.  Ana menüye dön"
 
-	arr["ENGLISH",60]="10. About & Credits"
-	arr["SPANISH",60]="10. Acerca de & Créditos"
-	arr["FRENCH",60]="10. A propos de & Crédits"
-	arr["CATALAN",60]="10. Sobre & Crédits"
-	arr["PORTUGUESE",60]="10. Sobre & Créditos"
-	arr["RUSSIAN",60]="10. О программе и Благодарности"
-	arr["GREEK",60]="10. Σχετικά με & Εύσημα"
-	arr["ITALIAN",60]="10. Informazioni & Credits"
-	arr["POLISH",60]="10. O programie & Podziękowania"
-	arr["GERMAN",60]="10. About & Credits"
-	arr["TURKISH",60]="10. Hakkında & Güven"
+	arr["ENGLISH",60]="11. About & Credits"
+	arr["SPANISH",60]="11. Acerca de & Créditos"
+	arr["FRENCH",60]="11. A propos de & Crédits"
+	arr["CATALAN",60]="11. Sobre & Crédits"
+	arr["PORTUGUESE",60]="11. Sobre & Créditos"
+	arr["RUSSIAN",60]="11. О программе и Благодарности"
+	arr["GREEK",60]="11. Σχετικά με & Εύσημα"
+	arr["ITALIAN",60]="11. Informazioni & Credits"
+	arr["POLISH",60]="11. O programie & Podziękowania"
+	arr["GERMAN",60]="11. About & Credits"
+	arr["TURKISH",60]="11. Hakkında & Güven"
 
 	arr["ENGLISH",61]="0.  Exit script"
 	arr["SPANISH",61]="0.  Salir del script"
@@ -5922,17 +5922,17 @@ function language_strings() {
 	arr["GERMAN",443]="Optionen und Sprachmenü"
 	arr["TURKISH",443]="Ayarlar ve dil menüsü"
 
-	arr["ENGLISH",444]="11. Options and language menu"
-	arr["SPANISH",444]="11. Menú de opciones e idioma"
-	arr["FRENCH",444]="11. Menu options et langues"
-	arr["CATALAN",444]="11. Menú d'opcions i idioma"
-	arr["PORTUGUESE",444]="11. Opções de menu e idioma"
-	arr["RUSSIAN",444]="11. Настройки и языковое меню"
-	arr["GREEK",444]="11. Μενού επιλογών και γλώσσας"
-	arr["ITALIAN",444]="11. Menú opzioni e lingua"
-	arr["POLISH",444]="11. Opcje i menu językowe"
-	arr["GERMAN",444]="11. Optionen und Sprachmenü"
-	arr["TURKISH",444]="11. Ayarlar ve dil menüsü"
+	arr["ENGLISH",444]="12. Options and language menu"
+	arr["SPANISH",444]="12. Menú de opciones e idioma"
+	arr["FRENCH",444]="12. Menu options et langues"
+	arr["CATALAN",444]="12. Menú d'opcions i idioma"
+	arr["PORTUGUESE",444]="12. Opções de menu e idioma"
+	arr["RUSSIAN",444]="12. Настройки и языковое меню"
+	arr["GREEK",444]="12. Μενού επιλογών και γλώσσας"
+	arr["ITALIAN",444]="12. Menú opzioni e lingua"
+	arr["POLISH",444]="12. Opcje i menu językowe"
+	arr["GERMAN",444]="12. Optionen und Sprachmenü"
+	arr["TURKISH",444]="12. Ayarlar ve dil menüsü"
 
 	arr["ENGLISH",445]="If you have ccze installed and are experiencing display errors or glitches on some windows, you should disable colorization in the option and language menu"
 	arr["SPANISH",445]="Si tienes instalado ccze y experimentas errores de visualización o parpadeos en algunas ventanas, desactiva la colorización en el menú de opciones e idioma"
@@ -6834,7 +6834,7 @@ function language_strings() {
 	arr["GERMAN",519]="${pending_of_translation} 11. Türkisch"
 	arr["TURKISH",519]="11. Türkçe"
 
-	#TODO phrases to be reused: 57, 84, 112, 117, 248, 260, 307, 332, 483, 518
+	#TODO phrases to be reused: 84, 112, 117, 248, 260, 307, 332, 483, 518
 
 	case "${3}" in
 		"yellow")
