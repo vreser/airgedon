@@ -300,7 +300,7 @@ declare evil_twin_dos_hints=(267 268 509)
 declare beef_hints=(408)
 declare wps_hints=(342 343 344 356 369 390 490)
 declare wep_hints=(431 429 428 432 433)
-#TODO hint array
+#TODO enterprise hints array
 declare enterprise_hints=()
 
 #Charset vars
