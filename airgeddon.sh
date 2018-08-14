@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180814
+#Date.........: 20180815
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -300,8 +300,8 @@ declare evil_twin_dos_hints=(267 268 509)
 declare beef_hints=(408)
 declare wps_hints=(342 343 344 356 369 390 490)
 declare wep_hints=(431 429 428 432 433)
-#TODO enterprise hints array
-declare enterprise_hints=()
+#TODO complete enterprise hints array
+declare enterprise_hints=(112 332 483 518)
 
 #Charset vars
 crunch_lowercasecharset="abcdefghijklmnopqrstuvwxyz"
@@ -4041,6 +4041,15 @@ function initialize_menu_and_print_selections() {
 			print_iface_selected
 			print_all_target_vars_et
 		;;
+		"enterprise_attacks_menu")
+			return_to_enterprise_main_menu=0
+			enterprise_mode=""
+			enterprise_processes=()
+			secondary_wifi_interface=""
+			print_iface_selected
+			print_all_target_vars
+			#TODO review this
+		;;
 		"et_dos_menu")
 			dos_pursuit_mode=0
 			if [ ${retry_handshake_capture} -eq 1 ]; then
@@ -4285,6 +4294,13 @@ function print_hint() {
 			randomhint=$(shuf -i 0-"${hintlength}" -n 1)
 			strtoprint=${hints[beef_hints|${randomhint}]}
 		;;
+		"enterprise_attacks_menu")
+			store_array hints enterprise_hints "${enterprise_hints[@]}"
+			hintlength=${#enterprise_hints[@]}
+			((hintlength--))
+			randomhint=$(shuf -i 0-"${hintlength}" -n 1)
+			strtoprint=${hints[enterprise_hints|${randomhint}]}
+		;;
 	esac
 
 	print_simple_separator
@@ -4354,9 +4370,7 @@ function main_menu() {
 			wep_attacks_menu
 		;;
 		10)
-			#TODO
-			under_construction_message
-			#enterprise_attacks_menu
+			enterprise_attacks_menu
 		;;
 		11)
 			credits_option
@@ -4370,6 +4384,62 @@ function main_menu() {
 	esac
 
 	main_menu
+}
+
+#Enterprise attacks menu
+function enterprise_attacks_menu() {
+
+	debug_print
+
+	clear
+	language_strings "${language}" 84 "title"
+	current_menu="enterprise_attacks_menu"
+	initialize_menu_and_print_selections
+	echo
+	language_strings "${language}" 47 "green"
+	print_simple_separator
+	language_strings "${language}" 59
+	language_strings "${language}" 48
+	language_strings "${language}" 55
+	language_strings "${language}" 56
+	language_strings "${language}" 49
+	language_strings "${language}" 117 "separator"
+	language_strings "${language}" 260
+	language_strings "${language}" 248 "separator"
+	language_strings "${language}" 307
+	#TODO review more possible options
+	print_hint ${current_menu}
+
+	read -r enterprise_option
+	case ${enterprise_option} in
+		0)
+			return
+		;;
+		1)
+			select_interface
+		;;
+		2)
+			monitor_option "${interface}"
+		;;
+		3)
+			managed_option "${interface}"
+		;;
+		4)
+			#TODO evaluate if finally we are going to pass an argument here for filtering
+			explore_for_targets_option
+		;;
+		5)
+			under_construction_message
+		;;
+		6)
+			under_construction_message
+		;;
+		*)
+			invalid_menu_option
+		;;
+	esac
+
+	enterprise_attacks_menu
 }
 
 #Evil Twin attacks menu
