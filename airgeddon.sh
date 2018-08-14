@@ -4427,7 +4427,7 @@ function enterprise_attacks_menu() {
 		;;
 		4)
 			#TODO evaluate if finally we are going to pass an argument here for filtering
-			explore_for_targets_option
+			explore_for_targets_option "WPA"
 		;;
 		5)
 			if contains_element "${enterprise_attack_dependencies}" "${forbidden_options[@]}"; then
