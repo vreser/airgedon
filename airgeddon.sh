@@ -3966,6 +3966,7 @@ function initialize_menu_options_dependencies() {
 	reaver_pixie_dust_attack_dependencies=(${optional_tools_names[14]} ${optional_tools_names[16]})
 	et_sniffing_sslstrip2_dependencies=(${optional_tools_names[5]} ${optional_tools_names[6]} ${optional_tools_names[7]} ${optional_tools_names[18]} ${optional_tools_names[19]})
 	wep_attack_dependencies=(${optional_tools_names[2]} ${optional_tools_names[20]})
+	enterprise_attack_dependencies=(${optional_tools_names[21]})
 }
 
 #Set possible changes for some commands that can be found in different ways depending of the O.S.
@@ -4404,9 +4405,9 @@ function enterprise_attacks_menu() {
 	language_strings "${language}" 56
 	language_strings "${language}" 49
 	language_strings "${language}" 117 "separator"
-	language_strings "${language}" 260
+	language_strings "${language}" 260 enterprise_attack_dependencies[@]
 	language_strings "${language}" 248 "separator"
-	language_strings "${language}" 307
+	language_strings "${language}" 307 enterprise_attack_dependencies[@]
 	#TODO review more possible options
 	print_hint ${current_menu}
 
@@ -4429,10 +4430,18 @@ function enterprise_attacks_menu() {
 			explore_for_targets_option
 		;;
 		5)
-			under_construction_message
+			if contains_element "${enterprise_attack_dependencies}" "${forbidden_options[@]}"; then
+				forbidden_menu_option
+			else
+				under_construction_message
+			fi
 		;;
 		6)
-			under_construction_message
+			if contains_element "${enterprise_attack_dependencies}" "${forbidden_options[@]}"; then
+				forbidden_menu_option
+			else
+				under_construction_message
+			fi
 		;;
 		*)
 			invalid_menu_option
@@ -11258,6 +11267,7 @@ function remove_warnings() {
 	echo "${bully_pixie_dust_attack_dependencies[@]}" > /dev/null 2>&1
 	echo "${reaver_pixie_dust_attack_dependencies[@]}" > /dev/null 2>&1
 	echo "${wep_attack_dependencies[@]}" > /dev/null 2>&1
+	echo "${enterprise_attack_dependencies[@]}" > /dev/null 2>&1
 	echo "${is_arm}" > /dev/null 2>&1
 }
 
