@@ -4433,16 +4433,30 @@ function enterprise_attacks_menu() {
 			if contains_element "${enterprise_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
-				enterprise_mode="smooth"
-				under_construction_message
+				current_iface_on_messages="${interface}"
+				if check_interface_wifi "${interface}"; then
+					enterprise_mode="smooth"
+					under_construction_message
+				else
+					echo
+					language_strings "${language}" 281 "red"
+					language_strings "${language}" 115 "read"
+				fi
 			fi
 		;;
 		6)
 			if contains_element "${enterprise_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
-				enterprise_mode="hardcore"
-				under_construction_message
+				current_iface_on_messages="${interface}"
+				if check_interface_wifi "${interface}"; then
+					enterprise_mode="hardcore"
+					under_construction_message
+				else
+					echo
+					language_strings "${language}" 281 "red"
+					language_strings "${language}" 115 "read"
+				fi
 			fi
 		;;
 		*)
