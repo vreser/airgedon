@@ -1,5 +1,6 @@
 ### 9.0
  - New WPA/WPA2 enterprise attacks menu
+ - Compatibility extended to Linux Mint 18.x
 
 ### 8.11
  - Turkish language translation added (Thank you to "UN5T48L3")

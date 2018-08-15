@@ -270,6 +270,7 @@ known_compatible_distros=(
 							"BlackArch"
 							"Cyborg"
 							"Ubuntu"
+							"Mint"
 							"Debian"
 							"SuSE"
 							"CentOS"
@@ -10159,22 +10160,22 @@ function detect_distro_phase2() {
 	debug_print
 
 	if [ "${distro}" = "Unknown Linux" ]; then
-		if [ -f ${osversionfile_dir}"centos-release" ]; then
+		if [ -f "${osversionfile_dir}centos-release" ]; then
 			distro="CentOS"
-		elif [ -f ${osversionfile_dir}"fedora-release" ]; then
+		elif [ -f "${osversionfile_dir}fedora-release" ]; then
 			distro="Fedora"
-		elif [ -f ${osversionfile_dir}"gentoo-release" ]; then
+		elif [ -f "${osversionfile_dir}gentoo-release" ]; then
 			distro="Gentoo"
-		elif [ -f ${osversionfile_dir}"openmandriva-release" ]; then
+		elif [ -f "${osversionfile_dir}openmandriva-release" ]; then
 			distro="OpenMandriva"
-		elif [ -f ${osversionfile_dir}"redhat-release" ]; then
+		elif [ -f "${osversionfile_dir}redhat-release" ]; then
 			distro="Red Hat"
-		elif [ -f ${osversionfile_dir}"SuSE-release" ]; then
+		elif [ -f "${osversionfile_dir}SuSE-release" ]; then
 			distro="SuSE"
-		elif [ -f ${osversionfile_dir}"debian_version" ]; then
+		elif [ -f "${osversionfile_dir}debian_version" ]; then
 			distro="Debian"
-			if [ -f ${osversionfile_dir}"os-release" ]; then
-				extra_os_info=$(grep "PRETTY_NAME" < ${osversionfile_dir}"os-release")
+			if [ -f "${osversionfile_dir}os-release" ]; then
+				extra_os_info="$(grep "PRETTY_NAME" < "${osversionfile_dir}os-release")"
 				if [[ "${extra_os_info}" =~ Raspbian ]]; then
 					distro="Raspbian"
 					is_arm=1
@@ -10185,14 +10186,21 @@ function detect_distro_phase2() {
 			fi
 		fi
 	elif [ "${distro}" = "Arch" ]; then
-		if [ -f ${osversionfile_dir}"os-release" ]; then
-			extra_os_info=$(grep "PRETTY_NAME" < ${osversionfile_dir}"os-release")
+		if [ -f "${osversionfile_dir}os-release" ]; then
+			extra_os_info="$(grep "PRETTY_NAME" < "${osversionfile_dir}os-release")"
 			if [[ "${extra_os_info}" =~ BlackArch ]]; then
 				distro="BlackArch"
 			elif [[ "${extra_os_info}" =~ Kali ]]; then
 				#Kali is intentionally here too to avoid some Kali arm distro bad detection
 				distro="Kali"
 				is_arm=1
+			fi
+		fi
+	elif [ "${distro}" = "Ubuntu" ]; then
+		if [ -f "${osversionfile_dir}os-release" ]; then
+			extra_os_info="$(grep "PRETTY_NAME" < "${osversionfile_dir}os-release")"
+			if [[ "${extra_os_info}" =~ Mint ]]; then
+				distro="Mint"
 			fi
 		fi
 	fi
@@ -10244,7 +10252,7 @@ function special_distro_features() {
 			ywindow_edge_lines=1
 			ywindow_edge_pixels=15
 		;;
-		"Ubuntu")
+		"Ubuntu"|"Mint")
 			networkmanager_cmd="service network-manager restart"
 			xratio=6.2
 			yratio=13.9
