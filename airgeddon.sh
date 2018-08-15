@@ -1904,8 +1904,10 @@ function set_chipset() {
 	fi
 }
 
-#Manage and validate the prerequisites for DoS Pursuit mode integrated on Evil Twin attacks
+#Manage and validate the prerequisites for DoS Pursuit mode integrated on Evil Twin and Enterprise attacks
 function dos_pursuit_mode_et_handler() {
+
+	#TODO pending to adapt it to enterprise attacks
 
 	debug_print
 
@@ -1957,8 +1959,10 @@ function dos_pursuit_mode_et_handler() {
 	return 0
 }
 
-#Secondary interface selection menu for Evil Twin attacks
+#Secondary interface selection menu for Evil Twin and Enterprise attacks
 function select_secondary_et_interface() {
+
+	#TODO pending to adapt it to enterprise attacks
 
 	debug_print
 
@@ -4031,6 +4035,7 @@ function initialize_menu_and_print_selections() {
 			print_iface_selected
 		;;
 		"evil_twin_attacks_menu")
+			enterprise_mode=""
 			return_to_et_main_menu=0
 			retry_handshake_capture=0
 			return_to_et_main_menu_from_beef=0
@@ -4050,17 +4055,20 @@ function initialize_menu_and_print_selections() {
 			secondary_wifi_interface=""
 			print_iface_selected
 			print_all_target_vars
-			#TODO review this
 		;;
 		"et_dos_menu")
 			dos_pursuit_mode=0
-			if [ ${retry_handshake_capture} -eq 1 ]; then
-				retry_handshake_capture=0
-				retrying_handshake_capture=1
-			fi
 			print_iface_selected
-			print_et_target_vars
-			print_iface_internet_selected
+			if [ -n "${enterprise_mode}" ]; then
+				print_all_target_vars
+			else
+				if [ ${retry_handshake_capture} -eq 1 ]; then
+					retry_handshake_capture=0
+					retrying_handshake_capture=1
+				fi
+				print_et_target_vars
+				print_iface_internet_selected
+			fi
 		;;
 		"wps_attacks_menu")
 			print_iface_selected
@@ -4437,7 +4445,7 @@ function enterprise_attacks_menu() {
 				current_iface_on_messages="${interface}"
 				if check_interface_wifi "${interface}"; then
 					enterprise_mode="smooth"
-					under_construction_message
+					et_dos_menu "enterprise"
 				else
 					echo
 					language_strings "${language}" 281 "red"
@@ -4452,7 +4460,7 @@ function enterprise_attacks_menu() {
 				current_iface_on_messages="${interface}"
 				if check_interface_wifi "${interface}"; then
 					enterprise_mode="noisy"
-					under_construction_message
+					et_dos_menu "enterprise"
 				else
 					echo
 					language_strings "${language}" 281 "red"
@@ -9134,8 +9142,10 @@ function wps_pin_database_prerequisites() {
 	fi
 }
 
-#Manage and validate the prerequisites for Evil Twin attacks
+#Manage and validate the prerequisites for Evil Twin and Enterprise attacks
 function et_prerequisites() {
+
+	#TODO pending to adapt it to enterprise attacks
 
 	debug_print
 
@@ -9347,23 +9357,35 @@ function ask_et_handshake_file() {
 	fi
 }
 
-#DoS Evil Twin attacks menu
+#DoS Evil Twin and Enterprise attacks menu
 function et_dos_menu() {
 
 	debug_print
 
-	if [ ${return_to_et_main_menu} -eq 1 ]; then
+	if [[ -n "${return_to_et_main_menu}" ]] && [[ ${return_to_et_main_menu} -eq 1 ]]; then
+		return
+	fi
+
+	if [[ -n "${return_to_enterprise_main_menu}" ]] && [[ ${return_to_enterprise_main_menu} -eq 1 ]]; then
 		return
 	fi
 
 	clear
-	language_strings "${language}" 265 "title"
+	if [ "${1}" = "enterprise" ]; then
+		language_strings "${language}" 520 "title"
+	else
+		language_strings "${language}" 265 "title"
+	fi
 	current_menu="et_dos_menu"
 	initialize_menu_and_print_selections
 	echo
 	language_strings "${language}" 47 "green"
 	print_simple_separator
-	language_strings "${language}" 266
+	if [ "${1}" = "enterprise" ]; then
+		language_strings "${language}" 521
+	else
+		language_strings "${language}" 266
+	fi
 	print_simple_separator
 	language_strings "${language}" 139 mdk3_attack_dependencies[@]
 	language_strings "${language}" 140 aireplay_attack_dependencies[@]
@@ -9373,11 +9395,12 @@ function et_dos_menu() {
 	read -r et_dos_option
 	case ${et_dos_option} in
 		0)
-			return_to_et_main_menu_from_beef=1
+			if [ "${1}" != "enterprise" ]; then
+				return_to_et_main_menu_from_beef=1
+			fi
 			return
 		;;
 		1)
-
 			if contains_element "${et_dos_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
@@ -9419,6 +9442,8 @@ function et_dos_menu() {
 					else
 						et_prerequisites
 					fi
+				elif [ -n "${enterprise_mode}" ]; then
+					et_prerequisites
 				else
 					if detect_internet_interface; then
 						et_prerequisites
@@ -9470,6 +9495,8 @@ function et_dos_menu() {
 					else
 						et_prerequisites
 					fi
+				elif [ -n "${enterprise_mode}" ]; then
+					et_prerequisites
 				else
 					if detect_internet_interface; then
 						et_prerequisites
@@ -9521,6 +9548,8 @@ function et_dos_menu() {
 					else
 						et_prerequisites
 					fi
+				elif [ -n "${enterprise_mode}" ]; then
+					et_prerequisites
 				else
 					if detect_internet_interface; then
 						et_prerequisites
@@ -9535,7 +9564,11 @@ function et_dos_menu() {
 		;;
 	esac
 
-	et_dos_menu
+	if [ "${1}" = "enterprise" ]; then
+		et_dos_menu "${1}"
+	else
+		et_dos_menu
+	fi
 }
 
 #Selected internet interface detection

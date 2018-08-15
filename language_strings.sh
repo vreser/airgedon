@@ -6838,6 +6838,30 @@ function language_strings() {
 	arr["GERMAN",519]="${pending_of_translation} 11. Türkisch"
 	arr["TURKISH",519]="11. Türkçe"
 
+	arr["ENGLISH",520]="Enterprise Evil Twin deauth"
+	arr["SPANISH",520]="Desautenticación para Evil Twin Enterprise"
+	arr["FRENCH",520]="${pending_of_translation} Dés-authentification pour Evil Twin Enterprise"
+	arr["CATALAN",520]="${pending_of_translation} Desautenticació per Evil Twin Enterprise"
+	arr["PORTUGUESE",520]="${pending_of_translation} Desautenticação para Evil Twin Enterprise"
+	arr["RUSSIAN",520]="${pending_of_translation} Деаутентификация для Злого Двойника Enterprise"
+	arr["GREEK",520]="${pending_of_translation} Enterprise Evil Twin deauth"
+	arr["ITALIAN",520]="${pending_of_translation} Desautenticazione per Evil Twin Enterprise"
+	arr["POLISH",520]="${pending_of_translation} Deautentykacja dla Evil Twin Enterprise"
+	arr["GERMAN",520]="${pending_of_translation} Deauthentifizierung für das Evil Twin Enterprise"
+	arr["TURKISH",520]="${pending_of_translation} Şeytani İkiz Enterprise deauth"
+
+	arr["ENGLISH",521]="0.  Return to Enterprise attacks menu"
+	arr["SPANISH",521]="0.  Volver al menú de ataques Enterprise"
+	arr["FRENCH",521]="${pending_of_translation} 0.  Retour au menu d'attaques Enterprise"
+	arr["CATALAN",521]="${pending_of_translation} 0.  Tornar al menú d'atacs Enterprise"
+	arr["PORTUGUESE",521]="${pending_of_translation} 0.  Voltar ao menu de ataques Enterprise"
+	arr["RUSSIAN",521]="${pending_of_translation} 0.  Вернуться в меню атак Злой Двойник Enterprise"
+	arr["GREEK",521]="${pending_of_translation} 0.  Επιστροφή στο μενού επιθέσεων Enterprise"
+	arr["ITALIAN",521]="${pending_of_translation} 0.  Tornare al menu attacchi Enterprise"
+	arr["POLISH",521]="${pending_of_translation} 0.  Wróć do menu Enterprise Atak"
+	arr["GERMAN",521]="${pending_of_translation} 0.  Zurück zum Enterprise Angriffsmenü"
+	arr["TURKISH",521]="${pending_of_translation} 0.  Şeytani İkiz Enterprise saldırı menüsüne geri dön"
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"
