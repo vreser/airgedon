@@ -4451,7 +4451,7 @@ function enterprise_attacks_menu() {
 			else
 				current_iface_on_messages="${interface}"
 				if check_interface_wifi "${interface}"; then
-					enterprise_mode="hardcore"
+					enterprise_mode="noisy"
 					under_construction_message
 				else
 					echo
