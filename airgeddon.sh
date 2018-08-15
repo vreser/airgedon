@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180815
+#Date.........: 20180816
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -1259,7 +1259,7 @@ function prepare_et_monitor() {
 	iwconfig "${iface_monitor_et_deauth}" channel "${channel}" > /dev/null 2>&1
 }
 
-#Assure the mode of the interface before the Evil Twin process
+#Assure the mode of the interface before the Evil Twin or Enterprise process
 function prepare_et_interface() {
 
 	debug_print
@@ -1285,7 +1285,7 @@ function prepare_et_interface() {
 	fi
 }
 
-#Restore the state of the interfaces after Evil Twin process
+#Restore the state of the interfaces after Evil Twin or Enterprise process
 function restore_et_interface() {
 
 	debug_print
@@ -1907,8 +1907,6 @@ function set_chipset() {
 #Manage and validate the prerequisites for DoS Pursuit mode integrated on Evil Twin and Enterprise attacks
 function dos_pursuit_mode_et_handler() {
 
-	#TODO pending to adapt it to enterprise attacks
-
 	debug_print
 
 	ask_yesno 505 "no"
@@ -1927,7 +1925,12 @@ function dos_pursuit_mode_et_handler() {
 				echo
 				language_strings "${language}" 394 "red"
 				language_strings "${language}" 115 "read"
-				return_to_et_main_menu=1
+
+				if [ -n "${enterprise_mode}" ]; then
+					return_to_enterprise_main_menu=1
+				else
+					return_to_et_main_menu=1
+				fi
 				return 1
 			fi
 
@@ -1939,7 +1942,11 @@ function dos_pursuit_mode_et_handler() {
 				language_strings "${language}" 115 "read"
 				echo
 				if ! monitor_option "${secondary_wifi_interface}"; then
-					return_to_et_main_menu=1
+					if [ -n "${enterprise_mode}" ]; then
+						return_to_enterprise_main_menu=1
+					else
+						return_to_et_main_menu=1
+					fi
 					return 1
 				else
 					echo
@@ -1962,33 +1969,47 @@ function dos_pursuit_mode_et_handler() {
 #Secondary interface selection menu for Evil Twin and Enterprise attacks
 function select_secondary_et_interface() {
 
-	#TODO pending to adapt it to enterprise attacks
-
 	debug_print
 
 	if [ "${return_to_et_main_menu}" -eq 1 ]; then
 		return 1
 	fi
 
-	current_menu="evil_twin_attacks_menu"
+	if [ "${return_to_enterprise_main_menu}" -eq 1 ]; then
+		return 1
+	fi
+
 	clear
-	case ${et_mode} in
-		"et_onlyap")
-			language_strings "${language}" 270 "title"
-		;;
-		"et_sniffing")
-			language_strings "${language}" 291 "title"
-		;;
-		"et_sniffing_sslstrip")
-			language_strings "${language}" 292 "title"
-		;;
-		"et_sniffing_sslstrip2")
-			language_strings "${language}" 397 "title"
-		;;
-		"et_captive_portal")
-			language_strings "${language}" 293 "title"
-		;;
-	esac
+	if [ -n "${enterprise_mode}" ]; then
+		current_menu="enterprise_attacks_menu"
+		case ${enterprise_mode} in
+			"smooth")
+				language_strings "${language}" 522 "title"
+			;;
+			"noisy")
+				language_strings "${language}" 523 "title"
+			;;
+		esac
+	else
+		current_menu="evil_twin_attacks_menu"
+		case ${et_mode} in
+			"et_onlyap")
+				language_strings "${language}" 270 "title"
+			;;
+			"et_sniffing")
+				language_strings "${language}" 291 "title"
+			;;
+			"et_sniffing_sslstrip")
+				language_strings "${language}" 292 "title"
+			;;
+			"et_sniffing_sslstrip2")
+				language_strings "${language}" 397 "title"
+			;;
+			"et_captive_portal")
+				language_strings "${language}" 293 "title"
+			;;
+		esac
+	fi
 
 	if [ "${1}" = "dos_pursuit_mode" ]; then
 		secondary_ifaces=$(iwconfig 2>&1 | grep "802.11" | grep -v "no wireless extensions" | grep "${interface}" -v | awk '{print $1}')
@@ -2001,7 +2022,6 @@ function select_secondary_et_interface() {
 
 	option_counter=0
 	for item in ${secondary_ifaces}; do
-
 		if [ ${option_counter} -eq 0 ]; then
 			if [ "${1}" = "dos_pursuit_mode" ]; then
 				language_strings "${language}" 511 "green"
@@ -2009,7 +2029,11 @@ function select_secondary_et_interface() {
 				language_strings "${language}" 279 "green"
 			fi
 			print_simple_separator
-			language_strings "${language}" 266
+			if [ -n "${enterprise_mode}" ]; then
+				language_strings "${language}" 521
+			else
+				language_strings "${language}" 266
+			fi
 			print_simple_separator
 		fi
 
@@ -2029,8 +2053,12 @@ function select_secondary_et_interface() {
 	done
 
 	if [ ${option_counter} -eq 0 ]; then
-		return_to_et_main_menu=1
-		return_to_et_main_menu_from_beef=1
+		if [ -n "${enterprise_mode}" ]; then
+			return_to_enterprise_main_menu=1
+		else
+			return_to_et_main_menu=1
+			return_to_et_main_menu_from_beef=1
+		fi
 
 		echo
 		if [ "${1}" = "dos_pursuit_mode" ]; then
@@ -2049,8 +2077,12 @@ function select_secondary_et_interface() {
 
 	read -r secondary_iface
 	if [ "${secondary_iface}" -eq 0 ]; then
-		return_to_et_main_menu=1
-		return_to_et_main_menu_from_beef=1
+		if [ -n "${enterprise_mode}" ]; then
+			return_to_enterprise_main_menu=1
+		else
+			return_to_et_main_menu=1
+			return_to_et_main_menu_from_beef=1
+		fi
 		return 1
 	elif [[ ! ${secondary_iface} =~ ^[[:digit:]]+$ ]] || (( secondary_iface < 1 || secondary_iface > option_counter )); then
 		if [ "${1}" = "dos_pursuit_mode" ]; then
@@ -9145,38 +9177,52 @@ function wps_pin_database_prerequisites() {
 #Manage and validate the prerequisites for Evil Twin and Enterprise attacks
 function et_prerequisites() {
 
-	#TODO pending to adapt it to enterprise attacks
-
 	debug_print
 
 	if [ ${retry_handshake_capture} -eq 1 ]; then
 		return
 	fi
 
-	current_menu="evil_twin_attacks_menu"
 	clear
-
-	case ${et_mode} in
-		"et_onlyap")
-			language_strings "${language}" 270 "title"
-		;;
-		"et_sniffing")
-			language_strings "${language}" 291 "title"
-		;;
-		"et_sniffing_sslstrip")
-			language_strings "${language}" 292 "title"
-		;;
-		"et_sniffing_sslstrip2")
-			language_strings "${language}" 397 "title"
-		;;
-		"et_captive_portal")
-			language_strings "${language}" 293 "title"
-		;;
-	esac
+	if [ -n "${enterprise_mode}" ]; then
+		current_menu="enterprise_attacks_menu"
+		case ${enterprise_mode} in
+			"smooth")
+				language_strings "${language}" 522 "title"
+			;;
+			"noisy")
+				language_strings "${language}" 523 "title"
+			;;
+		esac
+	else
+		current_menu="evil_twin_attacks_menu"
+		case ${et_mode} in
+			"et_onlyap")
+				language_strings "${language}" 270 "title"
+			;;
+			"et_sniffing")
+				language_strings "${language}" 291 "title"
+			;;
+			"et_sniffing_sslstrip")
+				language_strings "${language}" 292 "title"
+			;;
+			"et_sniffing_sslstrip2")
+				language_strings "${language}" 397 "title"
+			;;
+			"et_captive_portal")
+				language_strings "${language}" 293 "title"
+			;;
+		esac
+	fi
 
 	print_iface_selected
-	print_et_target_vars
-	print_iface_internet_selected
+	if [ -n "${enterprise_mode}" ]; then
+		print_all_target_vars
+	else
+		print_et_target_vars
+		print_iface_internet_selected
+	fi
+
 	if [ "${dos_pursuit_mode}" -eq 1 ]; then
 		language_strings "${language}" 512 "blue"
 	fi
@@ -9190,8 +9236,12 @@ function et_prerequisites() {
 		print_simple_separator
 		ask_yesno 277 "yes"
 		if [ "${yesno}" = "n" ]; then
-			return_to_et_main_menu=1
-			return_to_et_main_menu_from_beef=1
+			if [ -n "${enterprise_mode}" ]; then
+				return_to_enterprise_main_menu=1
+			else
+				return_to_et_main_menu=1
+				return_to_et_main_menu_from_beef=1
+			fi
 			return
 		fi
 	fi
@@ -9245,19 +9295,31 @@ function et_prerequisites() {
 		language_strings "${language}" 31 "blue"
 	else
 		if ! ask_bssid; then
-			return_to_et_main_menu=1
+			if [ -n "${enterprise_mode}" ]; then
+				return_to_enterprise_main_menu=1
+			else
+				return_to_et_main_menu=1
+			fi
 			return
 		fi
 
 		if ! ask_channel; then
-			return_to_et_main_menu=1
+			if [ -n "${enterprise_mode}" ]; then
+				return_to_enterprise_main_menu=1
+			else
+				return_to_et_main_menu=1
+			fi
 			return
 		else
 			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ "${channel}" -gt 14 ]] && [[ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]]; then
 				echo
 				language_strings "${language}" 394 "red"
 				language_strings "${language}" 115 "read"
-				return_to_et_main_menu=1
+				if [ -n "${enterprise_mode}" ]; then
+					return_to_enterprise_main_menu=1
+				else
+					return_to_et_main_menu=1
+				fi
 				return
 			fi
 		fi
@@ -9278,8 +9340,12 @@ function et_prerequisites() {
 		fi
 	fi
 
-	return_to_et_main_menu=1
-	return_to_et_main_menu_from_beef=1
+	if [ -n "${enterprise_mode}" ]; then
+		return_to_enterprise_main_menu=1
+	else
+		return_to_et_main_menu=1
+		return_to_et_main_menu_from_beef=1
+	fi
 
 	if [ "${is_docker}" -eq 1 ]; then
 		echo
@@ -9297,23 +9363,35 @@ function et_prerequisites() {
 	language_strings "${language}" 115 "read"
 	prepare_et_interface
 
-	case ${et_mode} in
-		"et_onlyap")
-			exec_et_onlyap_attack
-		;;
-		"et_sniffing")
-			exec_et_sniffing_attack
-		;;
-		"et_sniffing_sslstrip")
-			exec_et_sniffing_sslstrip_attack
-		;;
-		"et_sniffing_sslstrip2")
-			exec_et_sniffing_sslstrip2_attack
-		;;
-		"et_captive_portal")
-			exec_et_captive_portal_attack
-		;;
-	esac
+	if [ -n "${enterprise_mode}" ]; then
+		case ${enterprise_mode} in
+			#TODO enterprise attacks pending
+			"smooth")
+				under_construction_message
+			;;
+			"noisy")
+				under_construction_message
+			;;
+		esac
+	else
+		case ${et_mode} in
+			"et_onlyap")
+				exec_et_onlyap_attack
+			;;
+			"et_sniffing")
+				exec_et_sniffing_attack
+			;;
+			"et_sniffing_sslstrip")
+				exec_et_sniffing_sslstrip_attack
+			;;
+			"et_sniffing_sslstrip2")
+				exec_et_sniffing_sslstrip2_attack
+			;;
+			"et_captive_portal")
+				exec_et_captive_portal_attack
+			;;
+		esac
+	fi
 }
 
 #Manage the Handshake file requirement for captive portal Evil Twin attack

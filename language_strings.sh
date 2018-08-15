@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180815
+#Date.........: 20180816
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -6861,6 +6861,32 @@ function language_strings() {
 	arr["POLISH",521]="${pending_of_translation} 0.  Wróć do menu Enterprise Atak"
 	arr["GERMAN",521]="${pending_of_translation} 0.  Zurück zum Enterprise Angriffsmenü"
 	arr["TURKISH",521]="${pending_of_translation} 0.  Şeytani İkiz Enterprise saldırı menüsüne geri dön"
+
+	arr["ENGLISH",522]="Smooth mode Enterprise Evil Twin"
+	arr["SPANISH",522]="Evil Twin Enterprise modo smooth"
+	#TODO translate this stuff
+	arr["FRENCH",522]="${pending_of_translation} "
+	arr["CATALAN",522]="${pending_of_translation} "
+	arr["PORTUGUESE",522]="${pending_of_translation} "
+	arr["RUSSIAN",522]="${pending_of_translation} "
+	arr["GREEK",522]="${pending_of_translation} "
+	arr["ITALIAN",522]="${pending_of_translation} "
+	arr["POLISH",522]="${pending_of_translation} "
+	arr["GERMAN",522]="${pending_of_translation} "
+	arr["TURKISH",522]="${pending_of_translation} "
+
+	arr["ENGLISH",523]="Noisy mode Enterprise Evil Twin"
+	arr["SPANISH",523]="Evil Twin Enterprise modo noisy"
+	#TODO translate this stuff
+	arr["FRENCH",523]="${pending_of_translation} "
+	arr["CATALAN",523]="${pending_of_translation} "
+	arr["PORTUGUESE",523]="${pending_of_translation} "
+	arr["RUSSIAN",523]="${pending_of_translation} "
+	arr["GREEK",523]="${pending_of_translation} "
+	arr["ITALIAN",523]="${pending_of_translation} "
+	arr["POLISH",523]="${pending_of_translation} "
+	arr["GERMAN",523]="${pending_of_translation} "
+	arr["TURKISH",523]="${pending_of_translation} "
 
 	case "${3}" in
 		"yellow")
