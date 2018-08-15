@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180809
+#Date.........: 20180815
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -3599,7 +3599,7 @@ function language_strings() {
 	arr["CATALAN",250]="Si veus alguna traducció incorrecta o vols que desapareguin les marques ${cyan_color}${pending_of_translation}${pink_color}, escriu-me a ${normal_color}${mail}${pink_color} per col·laborar amb les traduccions"
 	arr["PORTUGUESE",250]="Se você ver qualquer erro de tradução ou quer que as marcas ${cyan_color}${pending_of_translation}${pink_color} sejam retiradas, escreva para ${normal_color}${mail}${pink_color} para colaborar com as traduções"
 	arr["RUSSIAN",250]="Если вы видите плохой перевод или просто хотите снять пометку ${cyan_color}${pending_of_translation}${pink_color} напишите мне на ${normal_color}${mail}${pink_color} для сотрудничества с переводчиками"
-	arr["GREEK",250]="Αν δείτε κάποια κακή μετάφραση ή απλά θέλετε τα σημάδια ${cyan_color}${pending_of_translation}${pink_color} να εξαφανιστούν, στείλτε μου στο ${normal_color}${mail}${pink_color} για να συνεργαστούμε με τις μεταφράσεις"
+	arr["GREEK",250]="Αν δείτε κάποια λανθασμένη ή ατελής μετάφραση ή απλά θέλετε τα σημάδια ${cyan_color}${pending_of_translation}${pink_color} να εξαφανιστούν, στείλτε μου στο ${normal_color}${mail}${pink_color} για να συνεργαστούμε με τις μεταφράσεις"
 	arr["ITALIAN",250]="Se vedi qualche errore di traduzione o vuoi che spariscano le marche ${cyan_color}${pending_of_translation}${pink_color}, scrivimi a ${normal_color}${mail}${pink_color} per collaborare con le traduzioni"
 	arr["POLISH",250]="Jeśli widzisz nieprawidłowe tłumaczenie lub chcesz usunąć tagi ${cyan_color}${pending_of_translation}${pink_color}, napisz do mnie ${normal_color}${mail}${pink_color}, aby współpracować przy tłumaczeniu"
 	arr["GERMAN",250]="Wenn Sie eine falsche Übersetzung sehen oder möchten, dass die Marken ${cyan_color}${pending_of_translation}${pink_color} verschwinden, schreiben Sie mir an ${normal_color}${mail}${pink_color}, um mit den Übersetzungen zusammenzuarbeiten"
@@ -6815,7 +6815,7 @@ function language_strings() {
 	arr["CATALAN",518]="${pending_of_translation} Idioma canviat a Turc"
 	arr["PORTUGUESE",518]="Idioma alterado para Turco"
 	arr["RUSSIAN",518]="${pending_of_translation} Язык изменён на Турецкий"
-	arr["GREEK",518]="${pending_of_translation} Η γλώσσα άλλαξε στα Τουρκικά"
+	arr["GREEK",518]="Η γλώσσα άλλαξε στα Τουρκικά"
 	arr["ITALIAN",518]="Lingua cambiata a Turco"
 	arr["POLISH",518]="${pending_of_translation} Zmieniono język na Turecki"
 	arr["GERMAN",518]="${pending_of_translation} Sprache wurde auf Türkisch geändert"
@@ -6827,7 +6827,7 @@ function language_strings() {
 	arr["CATALAN",519]="${pending_of_translation} 11. Turc"
 	arr["PORTUGUESE",519]="11. Turco"
 	arr["RUSSIAN",519]="${pending_of_translation} 11. Турецкий"
-	arr["GREEK",519]="${pending_of_translation} 11. Τουρκικά"
+	arr["GREEK",519]="11. Τουρκικά"
 	arr["ITALIAN",519]="11. Turco"
 	arr["POLISH",519]="${pending_of_translation} 11. Turecki"
 	arr["GERMAN",519]="${pending_of_translation} 11. Türkisch"
