@@ -4430,7 +4430,7 @@ function enterprise_attacks_menu() {
 			explore_for_targets_option "WPA"
 		;;
 		5)
-			if contains_element "${enterprise_attack_dependencies}" "${forbidden_options[@]}"; then
+			if contains_element "${enterprise_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
 				enterprise_mode="smooth"
@@ -4438,7 +4438,7 @@ function enterprise_attacks_menu() {
 			fi
 		;;
 		6)
-			if contains_element "${enterprise_attack_dependencies}" "${forbidden_options[@]}"; then
+			if contains_element "${enterprise_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
 				enterprise_mode="hardcore"
