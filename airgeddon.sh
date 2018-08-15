@@ -4426,13 +4426,14 @@ function enterprise_attacks_menu() {
 			managed_option "${interface}"
 		;;
 		4)
-			#TODO evaluate if finally we are going to pass an argument here for filtering
+			#TODO evaluate if finally we are going to pass an additional argument here for Enterprise filtering on parsing
 			explore_for_targets_option "WPA"
 		;;
 		5)
 			if contains_element "${enterprise_attack_dependencies}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
+				enterprise_mode="smooth"
 				under_construction_message
 			fi
 		;;
@@ -4440,6 +4441,7 @@ function enterprise_attacks_menu() {
 			if contains_element "${enterprise_attack_dependencies}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
+				enterprise_mode="hardcore"
 				under_construction_message
 			fi
 		;;
