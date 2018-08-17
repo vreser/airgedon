@@ -229,7 +229,9 @@ beef_pass="airgeddon"
 beef_db="beef.db"
 beef_installation_url="https://github.com/beefproject/beef/wiki/Installation"
 hostapd_file="ag.hostapd.conf"
-control_file="ag.control.sh"
+hostapd_wpe_file="ag.hostapd_wpe.conf"
+control_et_file="ag.et_control.sh"
+control_enterprise_file="ag.enterprise_control.sh"
 webserver_file="ag.lighttpd.conf"
 webdir="www/"
 indexfile="index.htm"
@@ -4083,7 +4085,7 @@ function initialize_menu_and_print_selections() {
 		"enterprise_attacks_menu")
 			return_to_enterprise_main_menu=0
 			enterprise_mode=""
-			enterprise_processes=()
+			et_processes=()
 			secondary_wifi_interface=""
 			print_iface_selected
 			print_all_target_vars
@@ -4141,8 +4143,10 @@ function clean_tmpfiles() {
 	rm -rf "${tmpdir}hctmp"* > /dev/null 2>&1
 	rm -rf "${tmpdir}${aircrack_pot_tmp}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${hostapd_file}" > /dev/null 2>&1
+	rm -rf "${tmpdir}${hostapd_wpe_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${dhcpd_file}" > /dev/null 2>&1
-	rm -rf "${tmpdir}${control_file}" > /dev/null 2>&1
+	rm -rf "${tmpdir}${control_et_file}" > /dev/null 2>&1
+	rm -rf "${tmpdir}${control_enterprise_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}parsed_file" > /dev/null 2>&1
 	rm -rf "${tmpdir}${ettercap_file}"* > /dev/null 2>&1
 	rm -rf "${tmpdir}${bettercap_file}"* > /dev/null 2>&1
@@ -4449,7 +4453,6 @@ function enterprise_attacks_menu() {
 	language_strings "${language}" 260 enterprise_attack_dependencies[@]
 	language_strings "${language}" 248 "separator"
 	language_strings "${language}" 307 enterprise_attack_dependencies[@]
-	#TODO review more possible options
 	print_hint ${current_menu}
 
 	read -r enterprise_option
@@ -6133,6 +6136,30 @@ function exec_hashcat_rulebased_attack() {
 	language_strings "${language}" 115 "read"
 }
 
+#Execute Enterprise smooth attack
+function exec_enterprise_attack() {
+
+	debug_print
+
+	set_hostapd_wpe_config
+	launch_fake_ap
+	exec_et_deauth
+	#TODO uncomment these lines as soon as set_enterprise_control_script function is finished
+	#set_enterprise_control_script
+	#launch_enterprise_control_window
+
+	echo
+	language_strings "${language}" 524 "yellow"
+	language_strings "${language}" 115 "read"
+
+	kill_et_windows
+	if [ "${dos_pursuit_mode}" -eq 1 ]; then
+		recover_current_channel
+	fi
+	restore_et_interface
+	clean_tmpfiles
+}
+
 #Execute Evil Twin only Access Point attack
 function exec_et_onlyap_attack() {
 
@@ -6144,8 +6171,8 @@ function exec_et_onlyap_attack() {
 	set_std_internet_routing_rules
 	launch_dhcp_server
 	exec_et_deauth
-	set_control_script
-	launch_control_window
+	set_et_control_script
+	launch_et_control_window
 
 	echo
 	language_strings "${language}" 298 "yellow"
@@ -6171,8 +6198,8 @@ function exec_et_sniffing_attack() {
 	launch_dhcp_server
 	exec_et_deauth
 	launch_ettercap_sniffing
-	set_control_script
-	launch_control_window
+	set_et_control_script
+	launch_et_control_window
 
 	echo
 	language_strings "${language}" 298 "yellow"
@@ -6202,8 +6229,8 @@ function exec_et_sniffing_sslstrip_attack() {
 	exec_et_deauth
 	launch_sslstrip
 	launch_ettercap_sniffing
-	set_control_script
-	launch_control_window
+	set_et_control_script
+	launch_et_control_window
 
 	echo
 	language_strings "${language}" 298 "yellow"
@@ -6241,8 +6268,8 @@ function exec_et_sniffing_sslstrip2_attack() {
 	fi
 	launch_beef
 	launch_bettercap_sniffing
-	set_control_script
-	launch_control_window
+	set_et_control_script
+	launch_et_control_window
 
 	echo
 	language_strings "${language}" 298 "yellow"
@@ -6271,8 +6298,8 @@ function exec_et_captive_portal_attack() {
 	set_std_internet_routing_rules
 	launch_dhcp_server
 	exec_et_deauth
-	set_control_script
-	launch_control_window
+	set_et_control_script
+	launch_et_control_window
 	if [ ${captive_portal_mode} = "dnsblackhole" ]; then
 		launch_dns_blackhole
 	fi
@@ -6322,12 +6349,66 @@ function set_hostapd_config() {
 	} >> "${tmpdir}${hostapd_file}"
 }
 
-#Launch hostapd fake Access Point
+#Create configuration file for hostapd
+function set_hostapd_wpe_config() {
+
+	debug_print
+
+	tmpfiles_toclean=1
+	rm -rf "${tmpdir}${hostapd_wpe_file}" > /dev/null 2>&1
+
+	different_mac_digit=$(tr -dc A-F0-9 < /dev/urandom | fold -w2 | head -n 100 | grep -v "${bssid:10:1}" | head -c 1)
+	et_bssid=${bssid::10}${different_mac_digit}${bssid:11:6}
+
+	{
+	echo -e "interface=${interface}"
+	echo -e "driver=nl80211"
+	echo -e "ssid=${essid}"
+	echo -e "bssid=${et_bssid}"
+	} >> "${tmpdir}${hostapd_wpe_file}"
+
+	if [[ "${channel}" -gt 14 ]]; then
+		et_channel=$(shuf -i 1-11 -n 1)
+	else
+		et_channel="${channel}"
+	fi
+
+	{
+	echo -e "channel=${et_channel}"
+	echo -e "eap_server=1"
+	echo -e "eap_fast_a_id=101112131415161718191a1b1c1d1e1f"
+	echo -e "eap_fast_a_id_info=hostapd-wpe"
+	echo -e "eap_fast_prov=3"
+	echo -e "ieee8021x=1"
+	echo -e "pac_key_lifetime=604800"
+	echo -e "pac_key_refresh_time=86400"
+	echo -e "pac_opaque_encr_key=000102030405060708090a0b0c0d0e0f"
+	echo -e "wpa=2"
+	echo -e "wpa_key_mgmt=WPA-EAP"
+	echo -e "wpa_pairwise=CCMP"
+	echo -e "rsn_pairwise=CCMP"
+	echo -e "eap_user_file=/etc/hostapd-wpe/hostapd-wpe.eap_user"
+	} >> "${tmpdir}${hostapd_wpe_file}"
+
+	#TODO review certificate options for future versions. For now, using defaults
+	{
+	echo -e "ca_cert=/etc/hostapd-wpe/certs/ca.pem"
+	echo -e "server_cert=/etc/hostapd-wpe/certs/server.pem"
+	echo -e "private_key=/etc/hostapd-wpe/certs/server.key"
+	echo -e "private_key_passwd=whatever"
+	} >> "${tmpdir}${hostapd_wpe_file}"
+}
+
+#Launch hostapd and hostapd-wpe fake Access Point
 function launch_fake_ap() {
 
 	debug_print
 
-	killall hostapd > /dev/null 2>&1
+	if [ -n "${enterprise_mode}" ]; then
+		killall hostapd-wpe > /dev/null 2>&1
+	else
+		killall hostapd > /dev/null 2>&1
+	fi
 	${airmon} check kill > /dev/null 2>&1
 	nm_processes_killed=1
 
@@ -6336,18 +6417,25 @@ function launch_fake_ap() {
 	fi
 
 	recalculate_windows_sizes
-	case ${et_mode} in
-		"et_onlyap")
-			hostapd_scr_window_position=${g1_topleft_window}
-		;;
-		"et_sniffing"|"et_captive_portal"|"et_sniffing_sslstrip2")
-			hostapd_scr_window_position=${g3_topleft_window}
-		;;
-		"et_sniffing_sslstrip")
-			hostapd_scr_window_position=${g4_topleft_window}
-		;;
-	esac
-	xterm -hold -bg black -fg blue -geometry "${hostapd_scr_window_position}" -T "AP" -e "hostapd \"${tmpdir}${hostapd_file}\"" > /dev/null 2>&1 &
+	local command
+	if [ -n "${enterprise_mode}" ]; then
+		command="hostapd-wpe \"${tmpdir}${hostapd_wpe_file}\""
+		hostapd_scr_window_position=${g1_topleft_window}
+	else
+		command="hostapd \"${tmpdir}${hostapd_file}\""
+		case ${et_mode} in
+			"et_onlyap")
+				hostapd_scr_window_position=${g1_topleft_window}
+			;;
+			"et_sniffing"|"et_captive_portal"|"et_sniffing_sslstrip2")
+				hostapd_scr_window_position=${g3_topleft_window}
+			;;
+			"et_sniffing_sslstrip")
+				hostapd_scr_window_position=${g4_topleft_window}
+			;;
+		esac
+	fi
+	xterm -hold -bg black -fg green -geometry "${hostapd_scr_window_position}" -T "AP" -e "${command}" > /dev/null 2>&1 &
 	et_processes+=($!)
 	sleep 3
 }
@@ -6543,7 +6631,7 @@ function launch_dhcp_server() {
 	sleep 2
 }
 
-#Execute DoS for Evil Twin attacks
+#Execute DoS for Evil Twin and Enterprise attacks
 function exec_et_deauth() {
 
 	debug_print
@@ -6568,17 +6656,21 @@ function exec_et_deauth() {
 	esac
 
 	recalculate_windows_sizes
-	case ${et_mode} in
-		"et_onlyap")
-			deauth_scr_window_position=${g1_bottomright_window}
-		;;
-		"et_sniffing"|"et_captive_portal"|"et_sniffing_sslstrip2")
-			deauth_scr_window_position=${g3_bottomleft_window}
-		;;
-		"et_sniffing_sslstrip")
-			deauth_scr_window_position=${g4_bottomleft_window}
-		;;
-	esac
+	if [ -n "${enterprise_mode}" ]; then
+		deauth_scr_window_position=${g1_bottomleft_window}
+	else
+		case ${et_mode} in
+			"et_onlyap")
+				deauth_scr_window_position=${g1_bottomright_window}
+			;;
+			"et_sniffing"|"et_captive_portal"|"et_sniffing_sslstrip2")
+				deauth_scr_window_position=${g3_bottomleft_window}
+			;;
+			"et_sniffing_sslstrip")
+				deauth_scr_window_position=${g4_bottomleft_window}
+			;;
+		esac
+	fi
 
 	if [ "${dos_pursuit_mode}" -eq 1 ]; then
 		dos_pursuit_mode_pids=()
@@ -6995,14 +7087,34 @@ function set_wps_attack_script() {
 	sleep 1
 }
 
-#Create here-doc bash script used for control windows on Evil Twin attacks
-function set_control_script() {
+#Create here-doc bash script used for control windows on Enterprise attacks
+function set_enterprise_control_script() {
 
 	debug_print
 
-	rm -rf "${tmpdir}${control_file}" > /dev/null 2>&1
+	rm -rf "${tmpdir}${control_enterprise_file}" > /dev/null 2>&1
 
-	exec 7>"${tmpdir}${control_file}"
+	exec 7>"${tmpdir}${control_enterprise_file}"
+
+	cat >&7 <<-EOF
+		#!/usr/bin/env bash
+		enterprise_heredoc_mode=${enterprise_mode}
+	EOF
+
+	#TODO complete the here-doc based on attack mode
+
+	exec 7>&-
+	sleep 1
+}
+
+#Create here-doc bash script used for control windows on Evil Twin attacks
+function set_et_control_script() {
+
+	debug_print
+
+	rm -rf "${tmpdir}${control_et_file}" > /dev/null 2>&1
+
+	exec 7>"${tmpdir}${control_et_file}"
 
 	cat >&7 <<-EOF
 		#!/usr/bin/env bash
@@ -7240,8 +7352,18 @@ function launch_dns_blackhole() {
 	et_processes+=($!)
 }
 
+#Launch control window for Enterprise attacks
+function launch_enterprise_control_window() {
+
+	debug_print
+
+	recalculate_windows_sizes
+	xterm -hold -bg black -fg white -geometry "${g1_topright_window}" -T "Control" -e "bash \"${tmpdir}${control_enterprise_file}\"" > /dev/null 2>&1 &
+	enterprise_process_control_window=$!
+}
+
 #Launch control window for Evil Twin attacks
-function launch_control_window() {
+function launch_et_control_window() {
 
 	debug_print
 
@@ -7267,7 +7389,7 @@ function launch_control_window() {
 			control_scr_window_position=${g4_topright_window}
 		;;
 	esac
-	xterm -hold -bg black -fg white -geometry "${control_scr_window_position}" -T "Control" -e "bash \"${tmpdir}${control_file}\"" > /dev/null 2>&1 &
+	xterm -hold -bg black -fg white -geometry "${control_scr_window_position}" -T "Control" -e "bash \"${tmpdir}${control_et_file}\"" > /dev/null 2>&1 &
 	et_process_control_window=$!
 }
 
@@ -7525,7 +7647,7 @@ function launch_sslstrip() {
 
 	rm -rf "${tmpdir}${sslstrip_file}" > /dev/null 2>&1
 	recalculate_windows_sizes
-	xterm -hold -bg black -fg green -geometry "${g4_middleright_window}" -T "Sslstrip" -e "sslstrip -w \"${tmpdir}${sslstrip_file}\" -p -l ${sslstrip_port} -f -k" > /dev/null 2>&1 &
+	xterm -hold -bg black -fg blue -geometry "${g4_middleright_window}" -T "Sslstrip" -e "sslstrip -w \"${tmpdir}${sslstrip_file}\" -p -l ${sslstrip_port} -f -k" > /dev/null 2>&1 &
 	et_processes+=($!)
 }
 
@@ -7966,7 +8088,7 @@ function write_et_processes() {
 	done
 }
 
-#Kill the Evil Twin processes
+#Kill the Evil Twin and Enterprise processes
 function kill_et_windows() {
 
 	debug_print
@@ -7986,8 +8108,14 @@ function kill_et_windows() {
 	for item in "${et_processes[@]}"; do
 		kill "${item}" &> /dev/null
 	done
-	kill ${et_process_control_window} &> /dev/null
-	killall hostapd > /dev/null 2>&1
+
+	if [ -n "${enterprise_mode}" ]; then
+		kill ${enterprise_process_control_window} &> /dev/null
+		killall hostapd-wpe > /dev/null 2>&1
+	else
+		kill ${et_process_control_window} &> /dev/null
+		killall hostapd > /dev/null 2>&1
+	fi
 }
 
 #Kill DoS pursuit mode processes
@@ -9326,7 +9454,10 @@ function et_prerequisites() {
 		ask_essid "noverify"
 	fi
 
-	if [[ "${et_mode}" = "et_sniffing" ]] || [[ "${et_mode}" = "et_sniffing_sslstrip" ]]; then
+	if [ -n "${enterprise_mode}" ]; then
+		#TODO here comes questions and inputs about certs, possible paths to save files, etc
+		:
+	elif [[ "${et_mode}" = "et_sniffing" ]] || [[ "${et_mode}" = "et_sniffing_sslstrip" ]]; then
 		manage_ettercap_log
 	elif [ "${et_mode}" = "et_sniffing_sslstrip2" ]; then
 		manage_bettercap_log
@@ -9364,15 +9495,7 @@ function et_prerequisites() {
 	prepare_et_interface
 
 	if [ -n "${enterprise_mode}" ]; then
-		case ${enterprise_mode} in
-			#TODO enterprise attacks pending
-			"smooth")
-				under_construction_message
-			;;
-			"noisy")
-				under_construction_message
-			;;
-		esac
+		exec_enterprise_attack
 	else
 		case ${et_mode} in
 			"et_onlyap")

@@ -6888,6 +6888,18 @@ function language_strings() {
 	arr["GERMAN",523]="${pending_of_translation} "
 	arr["TURKISH",523]="${pending_of_translation} "
 
+	arr["ENGLISH",524]="Enterprise Evil Twin attack has been started. Press [Enter] key on this window to stop it"
+	arr["SPANISH",524]="El ataque Evil Twin Enterprise ha comenzado. Pulse la tecla [Enter] en esta ventana para pararlo"
+	arr["FRENCH",524]="${pending_of_translation} L'attaque Evil Twin Enterprise a commencé. Pressez la touche [Enter] dans cette console pour l'arrêter"
+	arr["CATALAN",524]="${pending_of_translation} L'atac Evil Twin Enterprise ha començat. Prem [Enter] a aquesta finestra per aturar-lo"
+	arr["PORTUGUESE",524]="${pending_of_translation} Ataque Evil Twin Enterprise iniciado. Pressione a tecla [Enter] nesta janela para parar"
+	arr["RUSSIAN",524]="${pending_of_translation} Атака Злой Двойник начата Enterprise. Для её остановки клавишу [Enter] в этом окне"
+	arr["GREEK",524]="${pending_of_translation} Η επίθεση Evil Twin Enterprise ξεκίνησε. Πατήστε το κουμπί [Enter] σε αυτό το παράθυρο για να την σταματήσετε"
+	arr["ITALIAN",524]="${pending_of_translation} L'attacco Evil Twin Enterprise è iniziato. Premere il tasto [Enter] in questa finestra per fermarlo"
+	arr["POLISH",524]="${pending_of_translation} Rozpoczął się atak Evil Twin Enterprise. Naciśnij klawisz [Enter] w tym oknie, aby go zatrzymać"
+	arr["GERMAN",524]="${pending_of_translation} Der Evil-Twin-Enterprise-Angriff hat begonnen. Drücken Sie die [Enter]-Taste in diesem Fenster, um es zu stoppen"
+	arr["TURKISH",524]="${pending_of_translation} Şeytani İkiz saldırısı Enterprise başlatıldı. Durdurmak için bu pencerede [Enter] tuşlayınız"
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"
