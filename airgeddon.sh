@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180816
+#Date.........: 20180817
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -230,6 +230,7 @@ beef_db="beef.db"
 beef_installation_url="https://github.com/beefproject/beef/wiki/Installation"
 hostapd_file="ag.hostapd.conf"
 hostapd_wpe_file="ag.hostapd_wpe.conf"
+hostapd_wpe_log="ag.hostapd_wpe.log"
 control_et_file="ag.et_control.sh"
 control_enterprise_file="ag.enterprise_control.sh"
 webserver_file="ag.lighttpd.conf"
@@ -4144,6 +4145,7 @@ function clean_tmpfiles() {
 	rm -rf "${tmpdir}${aircrack_pot_tmp}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${hostapd_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${hostapd_wpe_file}" > /dev/null 2>&1
+	rm -rf "${tmpdir}${hostapd_wpe_log}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${dhcpd_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${control_et_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${control_enterprise_file}" > /dev/null 2>&1
@@ -6356,6 +6358,7 @@ function set_hostapd_wpe_config() {
 
 	tmpfiles_toclean=1
 	rm -rf "${tmpdir}${hostapd_wpe_file}" > /dev/null 2>&1
+	rm -rf "${tmpdir}${hostapd_wpe_log}" > /dev/null 2>&1
 
 	different_mac_digit=$(tr -dc A-F0-9 < /dev/urandom | fold -w2 | head -n 100 | grep -v "${bssid:10:1}" | head -c 1)
 	et_bssid=${bssid::10}${different_mac_digit}${bssid:11:6}
@@ -6375,6 +6378,7 @@ function set_hostapd_wpe_config() {
 
 	{
 	echo -e "channel=${et_channel}"
+	echo -e "wpe_logfile=${tmpdir}${hostapd_wpe_log}"
 	echo -e "eap_server=1"
 	echo -e "eap_fast_a_id=101112131415161718191a1b1c1d1e1f"
 	echo -e "eap_fast_a_id_info=hostapd-wpe"
