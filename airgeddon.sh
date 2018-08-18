@@ -8530,7 +8530,7 @@ function validate_path() {
 				return 1
 			fi
 		else
-			if ! dir_permission_check; then
+			if ! dir_permission_check "${1}"; then
 				language_strings "${language}" 526 "red"
 				return 1
 			fi
@@ -8630,27 +8630,20 @@ function validate_path() {
 	return 0
 }
 
-#It checks the writee permissions permission of a directory recursively
+#It checks the write permissions of a directory recursively
 function dir_permission_check() {
 
 	debug_print
 
-	echo "control: ${1}"
-	if check_write_permissions "${1}"; then
-		return 0
-	else
-		basedir=$(dirname "${1}")
-		if [ "${basedir}" != "/" ]; then
-			if dir_permission_check "${basedir}"; then
-				return 0
-			else
-				return 1
-			fi
-		elif check_write_permissions "${basedir}"; then
+	if [ -e "${1}" ]; then
+		if [ -d "${1}" ] && check_write_permissions "${1}" && [ -x "${1}" ]; then
 			return 0
 		else
 			return 1
 		fi
+	else
+		dir_permission_check "$(dirname "${1}")"
+		return $?
 	fi
 }
 
