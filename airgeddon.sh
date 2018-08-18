@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180817
+#Date.........: 20180818
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -5828,6 +5828,26 @@ function manage_wep_log() {
 	done
 }
 
+#Check if a hash or a password was captured using Evil Twin Enterprise attack and manage to save it on a directory
+function manage_enterprise_log() {
+
+	debug_print
+
+	enterprise_potpath=$(env | grep ^HOME | awk -F = '{print $2}')
+
+	lastcharenterprise_potpath=${enterprise_potpath: -1}
+	if [ "${lastcharenterprise_potpath}" != "/" ]; then
+		enterprise_potpath="${enterprise_potpath}/"
+	fi
+	enterprisepot_suggested_dirname="enterprise_captured-${essid}"
+	enterprise_potpath="${enterprise_potpath}${enterprisepot_suggested_dirname}/"
+
+	validpath=1
+	while [[ "${validpath}" != "0" ]]; do
+		read_path "enterprisepot"
+	done
+}
+
 #Check if the passwords were captured using the captive portal Evil Twin attack and manage to save them on a file
 function manage_captive_portal_log() {
 
@@ -8499,21 +8519,41 @@ function validate_path() {
 
 	debug_print
 
-	dirname=${1%/*}
-
-	if [[ ! -d "${dirname}" ]] || [[ "${dirname}" = "." ]]; then
-		language_strings "${language}" 156 "red"
-		return 1
-	fi
-
-	if ! check_write_permissions "${dirname}"; then
-		language_strings "${language}" 157 "red"
-		return 1
-	fi
-
 	lastcharmanualpath=${1: -1}
-	if [[ "${lastcharmanualpath}" = "/" ]] || [[ -d "${1}" ]]; then
 
+	if [ "${2}" = "enterprisepot" ]; then
+		dirname=$(dirname "${1}")
+
+		if [ -d "${dirname}" ]; then
+			if ! check_write_permissions "${dirname}"; then
+				language_strings "${language}" 157 "red"
+				return 1
+			fi
+		else
+			if ! dir_permission_check; then
+				language_strings "${language}" 526 "red"
+				return 1
+			fi
+		fi
+
+		if [ "${lastcharmanualpath}" != "/" ]; then
+			pathname="${1}/"
+		fi
+	else
+		dirname=${1%/*}
+
+		if [[ ! -d "${dirname}" ]] || [[ "${dirname}" = "." ]]; then
+			language_strings "${language}" 156 "red"
+			return 1
+		fi
+
+		if ! check_write_permissions "${dirname}"; then
+			language_strings "${language}" 157 "red"
+			return 1
+		fi
+	fi
+
+	if [[ "${lastcharmanualpath}" = "/" ]] || [[ -d "${1}" ]] || [[ "${2}" = "enterprisepot" ]]; then
 		if [ "${lastcharmanualpath}" != "/" ]; then
 			pathname="${1}/"
 		else
@@ -8553,6 +8593,31 @@ function validate_path() {
 				suggested_filename="${weppot_filename}"
 				weppotenteredpath+="${weppot_filename}"
 			;;
+			"enterprisepot")
+				enterprise_potpath="${pathname}"
+				enterprise_basepath=$(dirname "${enterprise_potpath}")
+
+				if [[ "${enterprise_basepath}" != "." ]]; then
+					enterprise_dirname=$(basename "${enterprise_potpath}")
+				fi
+
+				if [ "${enterprise_basepath}" != "/" ]; then
+					enterprise_basepath+="/"
+				fi
+
+				if [ "${enterprise_dirname}" != "${enterprisepot_suggested_dirname}" ]; then
+					enterprise_completepath="${enterprise_potpath}${enterprisepot_suggested_dirname}/"
+				else
+					enterprise_completepath="${enterprise_potpath}"
+					if [ "${enterprise_potpath: -1}" != "/" ]; then
+						enterprise_completepath+="/"
+					fi
+				fi
+
+				echo
+				language_strings "${language}" 158 "yellow"
+				return 0
+			;;
 		esac
 
 		echo
@@ -8560,8 +8625,33 @@ function validate_path() {
 		return 0
 	fi
 
+	echo
 	language_strings "${language}" 158 "yellow"
 	return 0
+}
+
+#It checks the writee permissions permission of a directory recursively
+function dir_permission_check() {
+
+	debug_print
+
+	echo "control: ${1}"
+	if check_write_permissions "${1}"; then
+		return 0
+	else
+		basedir=$(dirname "${1}")
+		if [ "${basedir}" != "/" ]; then
+			if dir_permission_check "${basedir}"; then
+				return 0
+			else
+				return 1
+			fi
+		elif check_write_permissions "${basedir}"; then
+			return 0
+		else
+			return 1
+		fi
+	fi
 }
 
 #Check for write permissions on a given path
@@ -8694,6 +8784,14 @@ function read_path() {
 				weppotenteredpath="${wep_potpath}"
 			fi
 			validate_path "${weppotenteredpath}" "${1}"
+		;;
+		"enterprisepot")
+			language_strings "${language}" 525 "blue"
+			read_and_clean_path "enterprisepotenteredpath"
+			if [ -z "${enterprisepotenteredpath}" ]; then
+				enterprisepotenteredpath="${enterprise_potpath}"
+			fi
+			validate_path "${enterprisepotenteredpath}" "${1}"
 		;;
 	esac
 
@@ -9459,8 +9557,7 @@ function et_prerequisites() {
 	fi
 
 	if [ -n "${enterprise_mode}" ]; then
-		#TODO here comes questions and inputs about certs, possible paths to save files, etc
-		:
+		manage_enterprise_log
 	elif [[ "${et_mode}" = "et_sniffing" ]] || [[ "${et_mode}" = "et_sniffing_sslstrip" ]]; then
 		manage_ettercap_log
 	elif [ "${et_mode}" = "et_sniffing_sslstrip2" ]; then

@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180816
+#Date.........: 20180818
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -6899,6 +6899,32 @@ function language_strings() {
 	arr["POLISH",524]="${pending_of_translation} Rozpoczął się atak Evil Twin Enterprise. Naciśnij klawisz [Enter] w tym oknie, aby go zatrzymać"
 	arr["GERMAN",524]="${pending_of_translation} Der Evil-Twin-Enterprise-Angriff hat begonnen. Drücken Sie die [Enter]-Taste in diesem Fenster, um es zu stoppen"
 	arr["TURKISH",524]="${pending_of_translation} Şeytani İkiz saldırısı Enterprise başlatıldı. Durdurmak için bu pencerede [Enter] tuşlayınız"
+
+	arr["ENGLISH",525]="If a hash or password is obtained during the Evil Twin Enterprise attack, you should decide where to save it. ${green_color} More than one file will be saved, type the path (directory) to store the file/s. If the directory not exists, airgeddon will create it. Press [Enter] to accept the default proposal ${normal_color}[${enterprise_potpath}]"
+	arr["SPANISH",525]="Si se consigue capturar algún hash o contraseña durante el ataque Evil Twin Enterprise, hay que decidir donde guardarlo. ${green_color}Se guardarán varios ficheros, escribe la ruta (el directorio) donde escribiremos el/los fichero/s. Si en directorio no existe, airgeddon lo generará. Pulsa [Enter] para aceptar la ruta propuesta por defecto ${normal_color}[${enterprise_potpath}]"
+	#TODO translate this stuff
+	arr["FRENCH",525]="${pending_of_translation} "
+	arr["CATALAN",525]="${pending_of_translation} "
+	arr["PORTUGUESE",525]="${pending_of_translation} "
+	arr["RUSSIAN",525]="${pending_of_translation} "
+	arr["GREEK",525]="${pending_of_translation} "
+	arr["ITALIAN",525]="${pending_of_translation} "
+	arr["POLISH",525]="${pending_of_translation} "
+	arr["GERMAN",525]="${pending_of_translation} "
+	arr["TURKISH",525]="${pending_of_translation} "
+
+	arr["ENGLISH",526]="Directory not exists or you don't have permission to write"
+	arr["SPANISH",526]="El directorio no existe o no tienes permisos de escritura"
+	#TODO translate this stuff
+	arr["FRENCH",526]="${pending_of_translation} "
+	arr["CATALAN",526]="${pending_of_translation} "
+	arr["PORTUGUESE",526]="${pending_of_translation} "
+	arr["RUSSIAN",526]="${pending_of_translation} "
+	arr["GREEK",526]="${pending_of_translation} "
+	arr["ITALIAN",526]="${pending_of_translation} "
+	arr["POLISH",526]="${pending_of_translation} "
+	arr["GERMAN",526]="${pending_of_translation} "
+	arr["TURKISH",526]="${pending_of_translation} "
 
 	case "${3}" in
 		"yellow")
