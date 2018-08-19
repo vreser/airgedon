@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180818
+#Date.........: 20180819
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -578,6 +578,69 @@ function language_strings() {
 	aircrack_texts["POLISH",1]="airgeddon. Hasło odszyfrowane z użyciem aircrack"
 	aircrack_texts["GERMAN",1]="airgeddon. Passwort mit aircrack entschlüsselt"
 	aircrack_texts["TURKISH",1]="airgeddon. Aircrack kullanarak şifreyi çözdü"
+
+	declare -gA enterprise_texts
+	enterprise_texts["ENGLISH",0]="Enterprise Evil Twin AP Info"
+	enterprise_texts["SPANISH",0]="Info Evil Twin Enterprise AP"
+	enterprise_texts["FRENCH",0]="${pending_of_translation} Info Evil Twin Enterprise AP"
+	enterprise_texts["CATALAN",0]="${pending_of_translation} Info Evil Twin Enterprise AP"
+	enterprise_texts["PORTUGUESE",0]="${pending_of_translation} Info Evil Twin Enterprise AP"
+	enterprise_texts["RUSSIAN",0]="${pending_of_translation} Информация о Enterprise Evil Twin"
+	enterprise_texts["GREEK",0]="${pending_of_translation} Πληροφορίες Evil Twin Enterprise AP"
+	enterprise_texts["ITALIAN",0]="${pending_of_translation} Info Evil Twin Enterprise AP"
+	enterprise_texts["POLISH",0]="${pending_of_translation} Informacja Evil Twin Enterprise AP"
+	enterprise_texts["GERMAN",0]="${pending_of_translation} Information über Evil Twin Enterprise AP"
+	enterprise_texts["TURKISH",0]="${pending_of_translation} Şeytani Enterprise İkiz"
+
+	enterprise_texts["ENGLISH",1]="Channel"
+	enterprise_texts["SPANISH",1]="Canal"
+	enterprise_texts["FRENCH",1]="Canal"
+	enterprise_texts["CATALAN",1]="Canal"
+	enterprise_texts["PORTUGUESE",1]="Canal"
+	enterprise_texts["RUSSIAN",1]="Канал"
+	enterprise_texts["GREEK",1]="Κανάλι"
+	enterprise_texts["ITALIAN",1]="Canale"
+	enterprise_texts["POLISH",1]="Kanał"
+	enterprise_texts["GERMAN",1]="Kanal"
+	enterprise_texts["TURKISH",1]="Kanal"
+
+	enterprise_texts["ENGLISH",2]="Online time"
+	enterprise_texts["SPANISH",2]="Tiempo online"
+	enterprise_texts["FRENCH",2]="Temps en ligne"
+	enterprise_texts["CATALAN",2]="Temps online"
+	enterprise_texts["PORTUGUESE",2]="Tempo online"
+	enterprise_texts["RUSSIAN",2]="Время онлайн"
+	enterprise_texts["GREEK",2]="Χρόνος σε σύνδεση"
+	enterprise_texts["ITALIAN",2]="Tempo online"
+	enterprise_texts["POLISH",2]="Czas online"
+	enterprise_texts["GERMAN",2]="Zeit online"
+	enterprise_texts["TURKISH",2]="Çevrimiçi zaman"
+
+	enterprise_texts["ENGLISH",3]="On this attack, we'll wait for a network client to provide us with a hash or a password for the Enterprise wifi network in our fake AP. You selected \"smooth\" mode, so as soon as one password or hash is captured, the attack will be dismantled"
+	enterprise_texts["SPANISH",3]="Con este ataque, esperaremos a que algún cliente nos de un hash o su contraseña de la red wifi Enterprise en nuestro AP falso. Has seleccionado el modo \"smooth\", por lo que tan pronto se capture un hash o contraseña, el ataque se parará"
+	#TODO translate this stuff
+	enterprise_texts["FRENCH",3]="${pending_of_translation} "
+	enterprise_texts["CATALAN",3]="${pending_of_translation} "
+	enterprise_texts["PORTUGUESE",3]="${pending_of_translation} "
+	enterprise_texts["RUSSIAN",3]="${pending_of_translation} "
+	enterprise_texts["GREEK",3]="${pending_of_translation} "
+	enterprise_texts["ITALIAN",3]="${pending_of_translation} "
+	enterprise_texts["POLISH",3]="${pending_of_translation} "
+	enterprise_texts["GERMAN",3]="${pending_of_translation} "
+	enterprise_texts["TURKISH",3]="${pending_of_translation} "
+
+	enterprise_texts["ENGLISH",4]="On this attack, we'll wait for a network client to provide us with a hash or a password for the Enterprise wifi network in our fake AP. You selected \"noisy\" mode, so the attack won't stop until you press [Enter] key on the main window"
+	enterprise_texts["SPANISH",4]="Con este ataque, esperaremos a que algún cliente nos de un hash o su contraseña de la red wifi Enterpriseen nuestro AP falso. Has seleccionado el modo \"noisy\", por lo que el ataque no parará hasta que pulses la tecla [Enter] en la pantalla principal"
+	#TODO translate this stuff
+	enterprise_texts["FRENCH",4]="${pending_of_translation} "
+	enterprise_texts["CATALAN",4]="${pending_of_translation} "
+	enterprise_texts["PORTUGUESE",4]="${pending_of_translation} "
+	enterprise_texts["RUSSIAN",4]="${pending_of_translation} "
+	enterprise_texts["GREEK",4]="${pending_of_translation} "
+	enterprise_texts["ITALIAN",4]="${pending_of_translation} "
+	enterprise_texts["POLISH",4]="${pending_of_translation} "
+	enterprise_texts["GERMAN",4]="${pending_of_translation} "
+	enterprise_texts["TURKISH",4]="${pending_of_translation} "
 
 	declare -gA footer_texts
 	footer_texts["ENGLISH",1]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through PayPal (${mail}) or sending a fraction of cryptocurrency (Bitcoin, Ethereum, Litecoin...). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${urlgithub_wiki}/Contributing"

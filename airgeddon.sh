@@ -235,6 +235,7 @@ hostapd_wpe_file="ag.hostapd_wpe.conf"
 hostapd_wpe_log="ag.hostapd_wpe.log"
 control_et_file="ag.et_control.sh"
 control_enterprise_file="ag.enterprise_control.sh"
+enterprisedir="enterprise/"
 webserver_file="ag.lighttpd.conf"
 webdir="www/"
 indexfile="index.htm"
@@ -6168,9 +6169,8 @@ function exec_enterprise_attack() {
 	set_hostapd_wpe_config
 	launch_fake_ap
 	exec_et_deauth
-	#TODO uncomment these lines as soon as set_enterprise_control_script function is finished
-	#set_enterprise_control_script
-	#launch_enterprise_control_window
+	set_enterprise_control_script
+	launch_enterprise_control_window
 
 	echo
 	language_strings "${language}" 524 "yellow"
@@ -6181,6 +6181,8 @@ function exec_enterprise_attack() {
 		recover_current_channel
 	fi
 	restore_et_interface
+	#TODO save stuff from tmpfiles to ${enterprise_completepath} if something was captured
+	#TODO check if hash was captured to start asleap process after asking user
 	clean_tmpfiles
 }
 
@@ -7122,12 +7124,55 @@ function set_enterprise_control_script() {
 
 	exec 7>"${tmpdir}${control_enterprise_file}"
 
+	local control_msg
+	if [ ${enterprise_mode} = "smooth" ]; then
+		control_msg=${enterprise_texts[${language},3]}
+	else
+		control_msg=${enterprise_texts[${language},4]}
+	fi
+
 	cat >&7 <<-EOF
 		#!/usr/bin/env bash
-		enterprise_heredoc_mode=${enterprise_mode}
+		enterprise_heredoc_mode="${enterprise_mode}"
 	EOF
 
-	#TODO complete the here-doc based on attack mode
+	cat >&7 <<-'EOF'
+		date_counter=$(date +%s)
+		while true; do
+	EOF
+
+	cat >&7 <<-EOF
+			if [ "${channel}" != "${et_channel}" ]; then
+				et_control_window_channel="${et_channel} (5Ghz: ${channel})"
+			else
+				et_control_window_channel="${channel}"
+			fi
+			echo -e "\t${yellow_color}${enterprise_texts[${language},0]} ${white_color}// ${blue_color}BSSID: ${normal_color}${bssid} ${yellow_color}// ${blue_color}${enterprise_texts[${language},1]}: ${normal_color}\${et_control_window_channel} ${yellow_color}// ${blue_color}ESSID: ${normal_color}${essid}"
+			echo
+			echo -e "\t${green_color}${enterprise_texts[${language},2]}${normal_color}"
+	EOF
+
+	cat >&7 <<-'EOF'
+			hours=$(date -u --date @$(($(date +%s) - date_counter)) +%H)
+			mins=$(date -u --date @$(($(date +%s) - date_counter)) +%M)
+			secs=$(date -u --date @$(($(date +%s) - date_counter)) +%S)
+			echo -e "\t${hours}:${mins}:${secs}"
+	EOF
+
+	cat >&7 <<-EOF
+			echo -e "\t${pink_color}${control_msg}${normal_color}\n"
+	EOF
+
+	#TODO parse hostapd-wpe output
+	#Create a success file always once a hash or a password is captured
+	#All temp files must be written to ${tmpdir}${enterprisedir}
+	#Stop attack if hash or password is captured on smooth mode otherwise don't do anything
+
+	cat >&7 <<-EOF
+			echo -ne "\033[K\033[u"
+			sleep 0.3
+		done
+	EOF
 
 	exec 7>&-
 	sleep 1
