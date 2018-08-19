@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180818
+#Date.........: 20180819
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -7372,7 +7372,7 @@ function launch_dns_blackhole() {
 	debug_print
 
 	recalculate_windows_sizes
-	xterm -hold -bg black -fg green -geometry "${g4_middleright_window}" -T "DNS" -e "${optional_tools_names[12]} -i ${interface}" > /dev/null 2>&1 &
+	xterm -hold -bg black -fg blue -geometry "${g4_middleright_window}" -T "DNS" -e "${optional_tools_names[12]} -i ${interface}" > /dev/null 2>&1 &
 	et_processes+=($!)
 }
 
