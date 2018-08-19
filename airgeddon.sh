@@ -71,6 +71,7 @@ optional_tools_names=(
 						"beef"
 						"packetforge-ng"
 						"hostapd-wpe"
+						"asleap"
 					)
 
 update_tools=("curl")
@@ -106,6 +107,7 @@ declare -A possible_package_names=(
 									[${optional_tools_names[19]}]="beef-xss / beef-project" #beef
 									[${optional_tools_names[20]}]="aircrack-ng" #packetforge-ng
 									[${optional_tools_names[21]}]="hostapd-wpe" #hostapd-wpe
+									[${optional_tools_names[22]}]="asleap" #asleap
 									[${update_tools[0]}]="curl" #curl
 								)
 
@@ -4006,7 +4008,7 @@ function initialize_menu_options_dependencies() {
 	reaver_pixie_dust_attack_dependencies=(${optional_tools_names[14]} ${optional_tools_names[16]})
 	et_sniffing_sslstrip2_dependencies=(${optional_tools_names[5]} ${optional_tools_names[6]} ${optional_tools_names[7]} ${optional_tools_names[18]} ${optional_tools_names[19]})
 	wep_attack_dependencies=(${optional_tools_names[2]} ${optional_tools_names[20]})
-	enterprise_attack_dependencies=(${optional_tools_names[21]})
+	enterprise_attack_dependencies=(${optional_tools_names[21]} ${optional_tools_names[22]})
 }
 
 #Set possible changes for some commands that can be found in different ways depending of the O.S.
