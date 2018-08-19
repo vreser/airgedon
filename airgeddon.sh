@@ -244,7 +244,8 @@ cssfile="portal.css"
 jsfile="portal.js"
 attemptsfile="ag.et_attempts.txt"
 currentpassfile="ag.et_currentpass.txt"
-successfile="ag.et_success.txt"
+et_successfile="ag.et_success.txt"
+enterprise_successfile="ag.enterprise_success.txt"
 processesfile="ag.et_processes.txt"
 channelfile="ag.et_channel.txt"
 possible_dhcp_leases_files=(
@@ -7164,7 +7165,7 @@ function set_enterprise_control_script() {
 	EOF
 
 	#TODO parse hostapd-wpe output
-	#Create a success file always once a hash or a password is captured
+	#Create a success file ${tmpdir}${enterprisedir}${enterprise_successfile} always once a hash or a password is captured
 	#All temp files must be written to ${tmpdir}${enterprisedir}
 	#Stop attack if hash or password is captured on smooth mode otherwise don't do anything
 
@@ -7342,7 +7343,7 @@ function set_et_control_script() {
 	EOF
 
 	cat >&7 <<-EOF
-				if [ -f "${tmpdir}${webdir}${successfile}" ]; then
+				if [ -f "${tmpdir}${webdir}${et_successfile}" ]; then
 					clear
 					echo -e "\t${yellow_color}${et_misc_texts[${language},0]} ${white_color}// ${blue_color}BSSID: ${normal_color}${bssid} ${yellow_color}// ${blue_color}${et_misc_texts[${language},1]}: ${normal_color}${channel} ${yellow_color}// ${blue_color}ESSID: ${normal_color}${essid}"
 					echo
@@ -7646,7 +7647,7 @@ function set_captive_portal_page() {
 	EOF
 
 	cat >&4 <<-EOF
-				touch "${tmpdir}${webdir}${successfile}"
+				touch "${tmpdir}${webdir}${et_successfile}"
 				echo '${et_misc_texts[${captive_portal_language},18]}'
 				et_successful=1
 			else
