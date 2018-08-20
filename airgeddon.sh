@@ -4477,8 +4477,7 @@ function enterprise_attacks_menu() {
 			managed_option "${interface}"
 		;;
 		4)
-			#TODO evaluate if finally we are going to pass an additional argument here for Enterprise filtering on parsing
-			explore_for_targets_option "WPA"
+			explore_for_targets_option "WPA" "enterprise"
 		;;
 		5)
 			if contains_element "${enterprise_option}" "${forbidden_options[@]}"; then
@@ -9040,7 +9039,11 @@ function explore_for_targets_option() {
 				language_strings "${language}" 67 "yellow"
 			;;
 			"WPA")
-				language_strings "${language}" 361 "yellow"
+				if [[ -n "${2}" ]] && [[ "${2}" = "enterprise" ]]; then
+					language_strings "${language}" 527 "yellow"
+				else
+					language_strings "${language}" 361 "yellow"
+				fi
 			;;
 		esac
 	else
@@ -9078,7 +9081,7 @@ function explore_for_targets_option() {
 	rm -rf "${tmpdir}nws.txt" > /dev/null 2>&1
 	rm -rf "${tmpdir}wnws.txt" > /dev/null 2>&1
 	i=0
-	while IFS=, read -r exp_mac _ _ exp_channel _ exp_enc _ _ exp_power _ _ _ exp_idlength exp_essid _; do
+	while IFS=, read -r exp_mac _ _ exp_channel _ exp_enc _ exp_auth exp_power _ _ _ exp_idlength exp_essid _; do
 
 		chars_mac=${#exp_mac}
 		if [ "${chars_mac}" -ge 17 ]; then
@@ -9106,7 +9109,13 @@ function explore_for_targets_option() {
 
 			exp_enc=$(echo "${exp_enc}" | awk '{print $1}')
 
-			echo -e "${exp_mac},${exp_channel},${exp_power},${exp_essid},${exp_enc}" >> "${tmpdir}nws.txt"
+			if [[ -n "${2}" ]] && [[ "${2}" = "enterprise" ]]; then
+				if [[ "${exp_auth}" =~ "MGT" ]]; then
+					echo -e "${exp_mac},${exp_channel},${exp_power},${exp_essid},${exp_enc}" >> "${tmpdir}nws.txt"
+				fi
+			else
+				echo -e "${exp_mac},${exp_channel},${exp_power},${exp_essid},${exp_enc}" >> "${tmpdir}nws.txt"
+			fi
 		fi
 	done < "${tmpdir}nws.csv"
 	sort -t "," -d -k 4 "${tmpdir}nws.txt" > "${tmpdir}wnws.txt"

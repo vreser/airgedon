@@ -6989,6 +6989,19 @@ function language_strings() {
 	arr["GERMAN",526]="${pending_of_translation} "
 	arr["TURKISH",526]="${pending_of_translation} "
 
+	arr["ENGLISH",527]="WPA/WPA2 and Enterprise filter enabled. It's not possible to filter Enterprise networks during the scan, the filter will be applied in network selection menu in which only Enterprise networks will be shown. When started, press [Ctrl+C] to stop..."
+	arr["SPANISH",527]="Filtro WPA/WPA2 y Enterprsie activado. Durante el escaneo no es posible filtrar redes Enterprise, el filtro se aplicará en la pantalla de selección de red donde solo se mostrarán redes Enterprise. Una vez empezado, pulse [Ctrl+C] para pararlo..."
+	#TODO translate this stuff
+	arr["FRENCH",527]="${pending_of_translation} "
+	arr["CATALAN",527]="${pending_of_translation} "
+	arr["PORTUGUESE",527]="${pending_of_translation} "
+	arr["RUSSIAN",527]="${pending_of_translation} "
+	arr["GREEK",527]="${pending_of_translation} "
+	arr["ITALIAN",527]="${pending_of_translation} "
+	arr["POLISH",527]="${pending_of_translation} "
+	arr["GERMAN",527]="${pending_of_translation} "
+	arr["TURKISH",527]="${pending_of_translation} "
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"
