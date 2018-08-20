@@ -9679,7 +9679,11 @@ function et_prerequisites() {
 
 	if [ "${is_docker}" -eq 1 ]; then
 		echo
-		language_strings "${language}" 420 "pink"
+		if [ -n "${enterprise_mode}" ]; then
+			language_strings "${language}" 528 "pink"
+		else
+			language_strings "${language}" 420 "pink"
+		fi
 		language_strings "${language}" 115 "read"
 	fi
 

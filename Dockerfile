@@ -78,7 +78,9 @@ RUN \
 	reaver \
 	bully \
 	pixiewps \
-	expect
+	expect \
+	hostapd-wpe \
+	asleap
 
 #Install needed Ruby gems
 RUN \
