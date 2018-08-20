@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180820
+#Date.........: 20180821
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -2108,7 +2108,7 @@ function language_strings() {
 	arr["ITALIAN",120]="Menù degli strumenti Handshake"
 	arr["POLISH",120]="Menu narzędzi Handshake"
 	arr["GERMAN",120]="Handshake-Tools-Menü"
-	arr["ENGLISH",120]="Handshake araçları menüsü"
+	arr["TURKISH",120]="Handshake araçları menüsü"
 
 	arr["ENGLISH",121]="5.  Capture Handshake"
 	arr["SPANISH",121]="5.  Capturar Handshake"
