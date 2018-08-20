@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180819
+#Date.........: 20180820
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -143,7 +143,7 @@ function language_strings() {
 	et_misc_texts["GERMAN",3]="Ips durch DHCP an mögliche verbundene Clients geliefert"
 	et_misc_texts["TURKISH",3]="Olası bağlanmış istemcilere verilen DHCP ipler"
 
-	et_misc_texts["ENGLISH",4]="With this attack you have to use an external sniffer to try to obtain client passwords connected to the network"
+	et_misc_texts["ENGLISH",4]="On this attack you have to use an external sniffer to try to obtain client passwords connected to the network"
 	et_misc_texts["SPANISH",4]="Con este ataque has de usar un sniffer externo para intentar obtener contraseñas de los clientes conectados a la red"
 	et_misc_texts["FRENCH",4]="Avec cette attaque, vous devez utiliser un sniffeur pour tenter d'obtenir les mots de passe des clients connectés au réseau"
 	et_misc_texts["CATALAN",4]="Amb aquest atac has d'utilitzar un sniffer extern per intentar obtenir contrasenyes dels clients connectats a la xarxa"
@@ -155,7 +155,7 @@ function language_strings() {
 	et_misc_texts["GERMAN",4]="Mit diesem Angriff ist ein externer Sniffer erforderlich um Passwörter von am Netzwerk verbundene clients zu stehlen"
 	et_misc_texts["TURKISH",4]="Bu saldırı sonucunda ağa bağlı müşteri şifrelerini edinmek için harici bir algılayıcı kullanmanız gerekir"
 
-	et_misc_texts["ENGLISH",5]="With this attack, watch the sniffer's screen to see if a password appears"
+	et_misc_texts["ENGLISH",5]="On this attack, watch the sniffer's screen to see if a password appears"
 	et_misc_texts["SPANISH",5]="Con este ataque, estate atento a la pantalla del sniffer para ver si aparece alguna contraseña"
 	et_misc_texts["FRENCH",5]="Vérifiez pendant l'attaque dans la console du sniffeur si un mot de passe a été capturé"
 	et_misc_texts["CATALAN",5]="Amb aquest atac, estigues atent a la pantalla de l'sniffer per veure si apareix alguna contrasenya"
@@ -167,7 +167,7 @@ function language_strings() {
 	et_misc_texts["GERMAN",5]="Schau mit diesem Angriff ans Bildschirm ob ein Passwort erscheint"
 	et_misc_texts["TURKISH",5]="Bu saldırı ile algılayıcının ekranını görebilir ve şifre çıktığında şifreyi görebilirsiniz"
 
-	et_misc_texts["ENGLISH",6]="With this attack, we'll wait for a network client to provide us with the password for the wifi network in our captive portal"
+	et_misc_texts["ENGLISH",6]="On this attack, we'll wait for a network client to provide us with the password for the wifi network in our captive portal"
 	et_misc_texts["SPANISH",6]="Con este ataque, esperaremos a que un cliente de la red nos provea de la contraseña de la red wifi en nuestro portal cautivo"
 	et_misc_texts["FRENCH",6]="Avec cette attaque nous allons attendre qu'un client rentre le mot de passe du réseau cible dans notre portail captif"
 	et_misc_texts["CATALAN",6]="Amb aquest atac, esperarem que un client de la xarxa ens proveeixi de la contrasenya de la xarxa wifi al nostre portal captiu"
@@ -616,8 +616,8 @@ function language_strings() {
 	enterprise_texts["GERMAN",2]="Zeit online"
 	enterprise_texts["TURKISH",2]="Çevrimiçi zaman"
 
-	enterprise_texts["ENGLISH",3]="On this attack, we'll wait for a network client to provide us with a hash or a password for the Enterprise wifi network in our fake AP. You selected \"smooth\" mode, so as soon as one password or hash is captured, the attack will be dismantled"
-	enterprise_texts["SPANISH",3]="Con este ataque, esperaremos a que algún cliente nos de un hash o su contraseña de la red wifi Enterprise en nuestro AP falso. Has seleccionado el modo \"smooth\", por lo que tan pronto se capture un hash o contraseña, el ataque se parará"
+	enterprise_texts["ENGLISH",3]="On this attack, we'll wait for a network client to provide us a hash or a password for the Enterprise wifi network in our fake AP. You selected \"smooth\" mode, so as soon as one password or hash is captured, the attack will be dismantled. You can also stop it pressing [Enter] key on the main window"
+	enterprise_texts["SPANISH",3]="Con este ataque, esperaremos a que algún cliente nos de un hash o su contraseña de la red wifi Enterprise en nuestro AP falso. Has seleccionado el modo \"smooth\", por lo que tan pronto se capture un hash o contraseña, el ataque se parará. También puedes parar el ataque pulsando la tecla [Enter] en la pantalla principal"
 	#TODO translate this stuff
 	enterprise_texts["FRENCH",3]="${pending_of_translation} "
 	enterprise_texts["CATALAN",3]="${pending_of_translation} "
@@ -629,7 +629,7 @@ function language_strings() {
 	enterprise_texts["GERMAN",3]="${pending_of_translation} "
 	enterprise_texts["TURKISH",3]="${pending_of_translation} "
 
-	enterprise_texts["ENGLISH",4]="On this attack, we'll wait for a network client to provide us with a hash or a password for the Enterprise wifi network in our fake AP. You selected \"noisy\" mode, so the attack won't stop until you press [Enter] key on the main window"
+	enterprise_texts["ENGLISH",4]="On this attack, we'll wait for a network client to provide us a hash or a password for the Enterprise wifi network in our fake AP. You selected \"noisy\" mode, so the attack won't stop until you press [Enter] key on the main window"
 	enterprise_texts["SPANISH",4]="Con este ataque, esperaremos a que algún cliente nos de un hash o su contraseña de la red wifi Enterpriseen nuestro AP falso. Has seleccionado el modo \"noisy\", por lo que el ataque no parará hasta que pulses la tecla [Enter] en la pantalla principal"
 	#TODO translate this stuff
 	enterprise_texts["FRENCH",4]="${pending_of_translation} "
