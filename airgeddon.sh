@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180820
+#Date.........: 20180821
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -2689,7 +2689,7 @@ function set_wep_key_script() {
 	cat >&8 <<-EOF
 		kill_wep_script_windows
 		rm -rf "${tmpdir}${wepdir}${wep_processes_file}"
-		touch "${tmpdir}${wepdir}${wep_processes_file}"
+		touch "${tmpdir}${wepdir}${wep_processes_file}" > /dev/null 2>&1
 	EOF
 
 	cat >&8 <<-'EOF'
@@ -6532,7 +6532,7 @@ function set_dhcp_config() {
 		echo -e "lease-file-name \"${possible_dhcp_leases_files[${key_leases_found}]}\";" >> "${tmpdir}${dhcpd_file}"
 		chmod a+w "${possible_dhcp_leases_files[${key_leases_found}]}" > /dev/null 2>&1
 	else
-		touch "${possible_dhcp_leases_files[0]}"
+		touch "${possible_dhcp_leases_files[0]}" > /dev/null 2>&1
 		echo -e "lease-file-name \"${possible_dhcp_leases_files[0]}\";" >> "${tmpdir}${dhcpd_file}"
 		chmod a+w "${possible_dhcp_leases_files[0]}" > /dev/null 2>&1
 	fi
@@ -7143,7 +7143,8 @@ function set_enterprise_control_script() {
 		#!/usr/bin/env bash
 		enterprise_heredoc_mode="${enterprise_mode}"
 		path_to_processes="${tmpdir}${enterprisedir}${enterprise_processesfile}"
-		wpe_logfile=${tmpdir}${hostapd_wpe_log}
+		wpe_logfile="${tmpdir}${hostapd_wpe_log}"
+		success_file="${tmpdir}${enterprisedir}${enterprise_successfile}"
 	EOF
 
 	cat >&7 <<-'EOF'
@@ -7157,18 +7158,33 @@ function set_enterprise_control_script() {
 
 		function check_captured() {
 
+			local hash_captured=0
+			local cleartext_password_captured=0
 			readarray -t ENTERPRISE_LINES_TO_PARSE < <(cat < "${wpe_logfile}" 2> /dev/null)
 			for item in "${ENTERPRISE_LINES_TO_PARSE[@]}"; do
-				if [[ "${item}" =~ hashcat|username: ]]; then
-	EOF
 
-	#TODO improve this check_captured function to write on enterprise_successfile the type of the capture (0 if hash, 1 if clear, 2 if both)
-
-	cat >&7 <<-EOF
-					touch "${tmpdir}${enterprisedir}${enterprise_successfile}"
-					return 0
+				if [[ "${item}" =~ challenge: ]]; then
+					hash_captured=1
+				elif [[ "${item}" =~ password: ]]; then
+					cleartext_password_captured=1
 				fi
 			done
+
+			if [[ ${hash_captured} -eq 1 ]] || [[ ${cleartext_password_captured} -eq 1 ]]; then
+				touch "${success_file}" > /dev/null 2>&1
+			fi
+
+			if [[ ${hash_captured} -eq 1 ]] && [[ ${cleartext_password_captured} -eq 0 ]]; then
+				echo 0 > "${success_file}" 2> /dev/null
+				return 0
+			elif [[ ${hash_captured} -eq 0 ]] && [[ ${cleartext_password_captured} -eq 1 ]]; then
+				echo 1 > "${success_file}" 2> /dev/null
+				return 0
+			elif [[ ${hash_captured} -eq 1 ]] && [[ ${cleartext_password_captured} -eq 1 ]]; then
+				echo 2 > "${success_file}" 2> /dev/null
+				return 0
+			fi
+
 			return 1
 		}
 	EOF
@@ -7684,7 +7700,7 @@ function set_captive_portal_page() {
 	EOF
 
 	cat >&4 <<-EOF
-				touch "${tmpdir}${webdir}${et_successfile}"
+				touch "${tmpdir}${webdir}${et_successfile}" > /dev/null 2>&1
 				echo '${et_misc_texts[${captive_portal_language},18]}'
 				et_successful=1
 			else
