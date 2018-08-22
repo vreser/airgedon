@@ -590,7 +590,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",0]="${pending_of_translation} Info Evil Twin Enterprise AP"
 	enterprise_texts["POLISH",0]="${pending_of_translation} Informacja Evil Twin Enterprise AP"
 	enterprise_texts["GERMAN",0]="${pending_of_translation} Information über Evil Twin Enterprise AP"
-	enterprise_texts["TURKISH",0]="${pending_of_translation} Şeytani Enterprise İkiz"
+	enterprise_texts["TURKISH",0]="${pending_of_translation} Bilgi Enterprise Şeytani İkiz"
 
 	enterprise_texts["ENGLISH",1]="Channel"
 	enterprise_texts["SPANISH",1]="Canal"
@@ -630,7 +630,7 @@ function language_strings() {
 	enterprise_texts["TURKISH",3]="${pending_of_translation} "
 
 	enterprise_texts["ENGLISH",4]="On this attack, we'll wait for a network client to provide us a hash or a password for the Enterprise wifi network in our fake AP. You selected \"noisy\" mode, so the attack won't stop until you press [Enter] key on the main window"
-	enterprise_texts["SPANISH",4]="Con este ataque, esperaremos a que algún cliente nos de un hash o su contraseña de la red wifi Enterpriseen nuestro AP falso. Has seleccionado el modo \"noisy\", por lo que el ataque no parará hasta que pulses la tecla [Enter] en la pantalla principal"
+	enterprise_texts["SPANISH",4]="Con este ataque, esperaremos a que algún cliente nos de un hash o su contraseña de la red wifi Enterprise en nuestro AP falso. Has seleccionado el modo \"noisy\", por lo que el ataque no parará hasta que pulses la tecla [Enter] en la pantalla principal"
 	#TODO translate this stuff
 	enterprise_texts["FRENCH",4]="${pending_of_translation} "
 	enterprise_texts["CATALAN",4]="${pending_of_translation} "
@@ -2003,15 +2003,15 @@ function language_strings() {
 
 	arr["ENGLISH",112]="WPA/WPA2 Enterprise networks are commonly used in corporate environments. They use a Radius server for authentication and unlike conventional networks require more elements for authentication, not just a password. They may require username, password and occasionally a certificate"
 	arr["SPANISH",112]="Las redes WPA/WPA2 Enterprise suelen configurarse en entornos corporativos. Utilizan un servidor Radius para la autenticación y a diferencia de las redes convencionales requieren más elementos para la autenticación, no solo una contraseña. Pueden requerir usuario y contraseña además de un certificado"
-	arr["FRENCH",112]="${pending_of_translation} Les réseaux WPA / WPA2 Enterprise sont généralement configurés dans des environnements d'entreprise. Ils utilisent un serveur Radius pour l'authentification et, contrairement aux réseaux conventionnels, nécessitent plus d'éléments pour l'authentification, pas seulement un mot de passe. Ils peuvent exiger un nom d'utilisateur et un mot de passe en plus d'un certificat"
-	arr["CATALAN",112]="${pending_of_translation} Les xarxes WPA / WPA2 Enterprise solen configurar-se en entorns corporatius. Utilitzen un servidor Radius per a l'autenticació i a diferència de les xarxes convencionals requereixen més elements per a l'autenticació, no sols una contrasenya. Poden requerir usuari i contrasenya a més d'un certificat"
-	arr["PORTUGUESE",112]="${pending_of_translation} WPA / WPA2 As redes Enterprise geralmente são configuradas em ambientes corporativos. Eles usam um servidor Radius para autenticação e, ao contrário das redes convencionais, exigem mais elementos para autenticação, não apenas uma senha. Eles podem exigir um nome de usuário e senha, além de um certificado"
-	arr["RUSSIAN",112]="${pending_of_translation} Сети WPA / WPA2 Enterprise обычно используются в корпоративных средах. Они используют сервер Radius для аутентификации и в отличие от обычных сетей требуют больше элементов аутентификации, а не только пароля. Они могут требовать имя пользователя, пароль и иногда сертификат"
-	arr["GREEK",112]="${pending_of_translation} Τα δίκτυα WPA / WPA2 Enterprise χρησιμοποιούνται συνήθως σε εταιρικά περιβάλλοντα. Χρησιμοποιούν έναν διακομιστή Radius για έλεγχο ταυτότητας και σε αντίθεση με τα συμβατικά δίκτυα απαιτούν περισσότερα στοιχεία για έλεγχο ταυτότητας, όχι μόνο κωδικό πρόσβασης. Μπορεί να απαιτούν όνομα χρήστη, κωδικό πρόσβασης και περιστασιακά πιστοποιητικό"
-	arr["ITALIAN",112]="${pending_of_translation} Le reti WPA / WPA2 Enterprise sono solitamente configurate negli ambienti aziendali. Utilizzano un server Radius per l'autenticazione e, diversamente dalle reti convenzionali, richiedono più elementi per l'autenticazione, non solo una password. Possono richiedere un nome utente e una password oltre a un certificato"
-	arr["POLISH",112]="${pending_of_translation} Sieci Enterprise WPA / WPA2 są powszechnie stosowane w środowiskach korporacyjnych. Korzystają z serwera Radius do uwierzytelniania iw przeciwieństwie do sieci konwencjonalnych wymagają więcej elementów do uwierzytelnienia, a nie tylko hasła. Mogą wymagać nazwy użytkownika, hasła i czasami certyfikatu"
-	arr["GERMAN",112]="${pending_of_translation} WPA / WPA2 Enterprise-Netzwerke werden häufig in Unternehmensumgebungen verwendet. Sie verwenden einen Radius-Server zur Authentifizierung und benötigen im Gegensatz zu herkömmlichen Netzwerken mehr Elemente zur Authentifizierung als ein Passwort. Sie benötigen möglicherweise Benutzernamen, Passwort und gelegentlich ein Zertifikat"
-	arr["TURKISH",112]="${pending_of_translation} WPA / WPA2 Enterprise ağlar, şirket ortamlarında yaygın olarak kullanılır. Kimlik doğrulaması için bir Radius sunucu kullanıyorlar ve geleneksel ağların aksine, yalnızca bir şifre değil, kimlik doğrulama için daha fazla öğe gerekiyor. Kullanıcı adı, şifre ve bazen sertifika isteyebilirler"
+	arr["FRENCH",112]="${pending_of_translation} Les réseaux WPA/WPA2 Enterprise sont généralement configurés dans des environnements d'entreprise. Ils utilisent un serveur Radius pour l'authentification et, contrairement aux réseaux conventionnels, nécessitent plus d'éléments pour l'authentification, pas seulement un mot de passe. Ils peuvent exiger un nom d'utilisateur et un mot de passe en plus d'un certificat"
+	arr["CATALAN",112]="${pending_of_translation} Les xarxes WPA/WPA2 Enterprise solen configurar-se en entorns corporatius. Utilitzen un servidor Radius per a l'autenticació i a diferència de les xarxes convencionals requereixen més elements per a l'autenticació, no sols una contrasenya. Poden requerir usuari i contrasenya a més d'un certificat"
+	arr["PORTUGUESE",112]="${pending_of_translation} WPA/WPA2 As redes Enterprise geralmente são configuradas em ambientes corporativos. Eles usam um servidor Radius para autenticação e, ao contrário das redes convencionais, exigem mais elementos para autenticação, não apenas uma senha. Eles podem exigir um nome de usuário e senha, além de um certificado"
+	arr["RUSSIAN",112]="${pending_of_translation} Сети WPA/WPA2 Enterprise обычно используются в корпоративных средах. Они используют сервер Radius для аутентификации и в отличие от обычных сетей требуют больше элементов аутентификации, а не только пароля. Они могут требовать имя пользователя, пароль и иногда сертификат"
+	arr["GREEK",112]="${pending_of_translation} Τα δίκτυα WPA/WPA2 Enterprise χρησιμοποιούνται συνήθως σε εταιρικά περιβάλλοντα. Χρησιμοποιούν έναν διακομιστή Radius για έλεγχο ταυτότητας και σε αντίθεση με τα συμβατικά δίκτυα απαιτούν περισσότερα στοιχεία για έλεγχο ταυτότητας, όχι μόνο κωδικό πρόσβασης. Μπορεί να απαιτούν όνομα χρήστη, κωδικό πρόσβασης και περιστασιακά πιστοποιητικό"
+	arr["ITALIAN",112]="${pending_of_translation} Le reti WPA/WPA2 Enterprise sono solitamente configurate negli ambienti aziendali. Utilizzano un server Radius per l'autenticazione e, diversamente dalle reti convenzionali, richiedono più elementi per l'autenticazione, non solo una password. Possono richiedere un nome utente e una password oltre a un certificato"
+	arr["POLISH",112]="${pending_of_translation} Sieci Enterprise WPA/WPA2 są powszechnie stosowane w środowiskach korporacyjnych. Korzystają z serwera Radius do uwierzytelniania iw przeciwieństwie do sieci konwencjonalnych wymagają więcej elementów do uwierzytelnienia, a nie tylko hasła. Mogą wymagać nazwy użytkownika, hasła i czasami certyfikatu"
+	arr["GERMAN",112]="${pending_of_translation} WPA/WPA2 Enterprise-Netzwerke werden häufig in Unternehmensumgebungen verwendet. Sie verwenden einen Radius-Server zur Authentifizierung und benötigen im Gegensatz zu herkömmlichen Netzwerken mehr Elemente zur Authentifizierung als ein Passwort. Sie benötigen möglicherweise Benutzernamen, Passwort und gelegentlich ein Zertifikat"
+	arr["TURKISH",112]="${pending_of_translation} WPA/WPA2 Enterprise ağlar, şirket ortamlarında yaygın olarak kullanılır. Kimlik doğrulaması için bir Radius sunucu kullanıyorlar ve geleneksel ağların aksine, yalnızca bir şifre değil, kimlik doğrulama için daha fazla öğe gerekiyor. Kullanıcı adı, şifre ve bazen sertifika isteyebilirler"
 
 	arr["ENGLISH",113]="3.  French"
 	arr["SPANISH",113]="3.  Francés"
@@ -5396,7 +5396,7 @@ function language_strings() {
 	arr["ITALIAN",394]="Hai selezionato come obbiettivo una rete di 5Ghz e la \"DoS pursuit mode\", ma la seconda interfaccia necessaria per eseguire l'attacco non supporta la banda 5Ghz, quindi l'attacco non puó essere eseguito"
 	arr["POLISH",394]="Wybrałeś docelową sieć 5Ghz i \"tryb DoS pursuit\", ale drugi interfejs potrzebny do przeprowadzenia ataku nie obsługuje pasma 5Ghz, więc nie można go wykonać"
 	arr["GERMAN",394]="Sie haben ein Zielnetzwerk mit 5Ghz und den \"DoS pursuit mode\" gewählt, aber die zweite Schnittstelle, die zur Ausführung des Angriffs benötigt wird, unterstützt das 5Ghz-Band nicht, so dass es nicht ausgeführt werden kann"
-	arr["TURKISH",394]="${pending_of_translation} Bir 5Ghz hedef ağı ve \"DoS peşinde koşma modu\" nı seçtiniz, ancak saldırıyı gerçekleştirmek için gereken ikinci arabirim, 5Ghz bandını desteklemiyor, böylece saldırı gerçekleştirilemiyor"
+	arr["TURKISH",394]="${pending_of_translation} Bir 5Ghz hedef ağı ve \"DoS takip modu\" nı seçtiniz, ancak saldırıyı gerçekleştirmek için gereken ikinci arabirim, 5Ghz bandını desteklemiyor, böylece saldırı gerçekleştirilemiyor"
 
 	arr["ENGLISH",395]="Skipping intro, more window size needed"
 	arr["SPANISH",395]="Saltando presentación, se necesita más tamaño de ventana"
@@ -6753,7 +6753,7 @@ function language_strings() {
 	arr["ITALIAN",507]="Cambio di canale rilevato. Riavviare nuovamente l'attacco DoS in modalità \"DoS pursuit mode\" sul canale ${normal_color}${channel}"
 	arr["POLISH",507]="Wykryto zmianę kanału. Ponowne uruchomienie ataku DoS w trybie \"DoS pursuit\" na kanale ${normal_color}${channel}"
 	arr["GERMAN",507]="Änderung des erkannten Kanals DoS-Angriff erneut im \"DoS pursuit mode\" auf dem Kanal wiederholen ${normal_color}${channel}"
-	arr["TURKISH",507]="${pending_of_translation} Kanal değişikliği tespit edildi. Yeniden yeniden başlatılıyor DoS saldırısı şu anda kanalda \"DoS peşinde koşma modu\" ${normal_color}${channel}"
+	arr["TURKISH",507]="${pending_of_translation} Kanal değişikliği tespit edildi. Yeniden yeniden başlatılıyor DoS saldırısı şu anda kanalda \"DoS takip modu\" ${normal_color}${channel}"
 
 	arr["ENGLISH",508]="\"DoS pursuit mode\" can be unstable for this kind of DoS attack. If you are not obtaining an optimal result just select another kind of attack"
 	arr["SPANISH",508]="El \"modo persecución DoS\" puede ser inestable para este tipo de ataque DoS. Si el resultado no es óptimo selecciona otro tipo de ataque"
@@ -6933,7 +6933,7 @@ function language_strings() {
 	arr["ITALIAN",522]="${pending_of_translation} Modalità smooth Evil Twin Enterprise"
 	arr["POLISH",522]="${pending_of_translation} Tryb smooth Enterprise Evil Twin"
 	arr["GERMAN",522]="${pending_of_translation} Smooth-Modus Enterprise Evil Twin"
-	arr["TURKISH",522]="${pending_of_translation} Smooth mod Kurumsal Evil Twin"
+	arr["TURKISH",522]="${pending_of_translation} Smooth mod Enterprise Evil Twin"
 
 	arr["ENGLISH",523]="Noisy mode Enterprise Evil Twin"
 	arr["SPANISH",523]="Evil Twin Enterprise modo noisy"
@@ -6945,7 +6945,7 @@ function language_strings() {
 	arr["ITALIAN",523]="${pending_of_translation} Modalità noisy Evil Twin Enterprise"
 	arr["POLISH",523]="${pending_of_translation} Tryb noisy Enterprise Evil Twin"
 	arr["GERMAN",523]="${pending_of_translation} Noisy-Modus Enterprise Evil Twin"
-	arr["TURKISH",523]="${pending_of_translation} Noisy mod Kurumsal Evil Twin"
+	arr["TURKISH",523]="${pending_of_translation} Noisy mod Enterprise Evil Twin"
 
 	arr["ENGLISH",524]="Enterprise Evil Twin attack has been started. Press [Enter] key on this window to stop it"
 	arr["SPANISH",524]="El ataque Evil Twin Enterprise ha comenzado. Pulse la tecla [Enter] en esta ventana para pararlo"
