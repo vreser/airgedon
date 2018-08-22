@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180821
+#Date.........: 20180822
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -2003,16 +2003,15 @@ function language_strings() {
 
 	arr["ENGLISH",112]="WPA/WPA2 Enterprise networks are commonly used in corporate environments. They use a Radius server for authentication and unlike conventional networks require more elements for authentication, not just a password. They may require username, password and occasionally a certificate"
 	arr["SPANISH",112]="Las redes WPA/WPA2 Enterprise suelen configurarse en entornos corporativos. Utilizan un servidor Radius para la autenticación y a diferencia de las redes convencionales requieren más elementos para la autenticación, no solo una contraseña. Pueden requerir usuario y contraseña además de un certificado"
-	#TODO translate this stuff
-	arr["FRENCH",112]="${pending_of_translation} "
-	arr["CATALAN",112]="${pending_of_translation} "
-	arr["PORTUGUESE",112]="${pending_of_translation} "
-	arr["RUSSIAN",112]="${pending_of_translation} "
-	arr["GREEK",112]="${pending_of_translation} "
-	arr["ITALIAN",112]="${pending_of_translation} "
-	arr["POLISH",112]="${pending_of_translation} "
-	arr["GERMAN",112]="${pending_of_translation} "
-	arr["TURKISH",112]="${pending_of_translation} "
+	arr["FRENCH",112]="${pending_of_translation} Les réseaux WPA / WPA2 Enterprise sont généralement configurés dans des environnements d'entreprise. Ils utilisent un serveur Radius pour l'authentification et, contrairement aux réseaux conventionnels, nécessitent plus d'éléments pour l'authentification, pas seulement un mot de passe. Ils peuvent exiger un nom d'utilisateur et un mot de passe en plus d'un certificat"
+	arr["CATALAN",112]="${pending_of_translation} Les xarxes WPA / WPA2 Enterprise solen configurar-se en entorns corporatius. Utilitzen un servidor Radius per a l'autenticació i a diferència de les xarxes convencionals requereixen més elements per a l'autenticació, no sols una contrasenya. Poden requerir usuari i contrasenya a més d'un certificat"
+	arr["PORTUGUESE",112]="${pending_of_translation} WPA / WPA2 As redes Enterprise geralmente são configuradas em ambientes corporativos. Eles usam um servidor Radius para autenticação e, ao contrário das redes convencionais, exigem mais elementos para autenticação, não apenas uma senha. Eles podem exigir um nome de usuário e senha, além de um certificado"
+	arr["RUSSIAN",112]="${pending_of_translation} Сети WPA / WPA2 Enterprise обычно используются в корпоративных средах. Они используют сервер Radius для аутентификации и в отличие от обычных сетей требуют больше элементов аутентификации, а не только пароля. Они могут требовать имя пользователя, пароль и иногда сертификат"
+	arr["GREEK",112]="${pending_of_translation} Τα δίκτυα WPA / WPA2 Enterprise χρησιμοποιούνται συνήθως σε εταιρικά περιβάλλοντα. Χρησιμοποιούν έναν διακομιστή Radius για έλεγχο ταυτότητας και σε αντίθεση με τα συμβατικά δίκτυα απαιτούν περισσότερα στοιχεία για έλεγχο ταυτότητας, όχι μόνο κωδικό πρόσβασης. Μπορεί να απαιτούν όνομα χρήστη, κωδικό πρόσβασης και περιστασιακά πιστοποιητικό"
+	arr["ITALIAN",112]="${pending_of_translation} Le reti WPA / WPA2 Enterprise sono solitamente configurate negli ambienti aziendali. Utilizzano un server Radius per l'autenticazione e, diversamente dalle reti convenzionali, richiedono più elementi per l'autenticazione, non solo una password. Possono richiedere un nome utente e una password oltre a un certificato"
+	arr["POLISH",112]="${pending_of_translation} Sieci Enterprise WPA / WPA2 są powszechnie stosowane w środowiskach korporacyjnych. Korzystają z serwera Radius do uwierzytelniania iw przeciwieństwie do sieci konwencjonalnych wymagają więcej elementów do uwierzytelnienia, a nie tylko hasła. Mogą wymagać nazwy użytkownika, hasła i czasami certyfikatu"
+	arr["GERMAN",112]="${pending_of_translation} WPA / WPA2 Enterprise-Netzwerke werden häufig in Unternehmensumgebungen verwendet. Sie verwenden einen Radius-Server zur Authentifizierung und benötigen im Gegensatz zu herkömmlichen Netzwerken mehr Elemente zur Authentifizierung als ein Passwort. Sie benötigen möglicherweise Benutzernamen, Passwort und gelegentlich ein Zertifikat"
+	arr["TURKISH",112]="${pending_of_translation} WPA / WPA2 Enterprise ağlar, şirket ortamlarında yaygın olarak kullanılır. Kimlik doğrulaması için bir Radius sunucu kullanıyorlar ve geleneksel ağların aksine, yalnızca bir şifre değil, kimlik doğrulama için daha fazla öğe gerekiyor. Kullanıcı adı, şifre ve bazen sertifika isteyebilirler"
 
 	arr["ENGLISH",113]="3.  French"
 	arr["SPANISH",113]="3.  Francés"
@@ -2530,7 +2529,7 @@ function language_strings() {
 	arr["GERMAN",155]="Das Verzeichnis existiert, aber es wurde kein Dateiname angegeben. Es wird sich selbst erzeugen [${normal_color}${suggested_filename}${yellow_color}]"
 	arr["TURKISH",155]="Dizin var ancak dosya adı belirtmediniz. O otomatik üretilecek [${normal_color}${suggested_filename}${yellow_color}]"
 
-	arr["ENGLISH",156]="Directory not exists"
+	arr["ENGLISH",156]="Directory does not exist"
 	arr["SPANISH",156]="El directorio no existe"
 	arr["FRENCH",156]="Le dossier n'existe pas"
 	arr["CATALAN",156]="El directori no existeix"
@@ -6876,18 +6875,17 @@ function language_strings() {
 	arr["GERMAN",517]="Wählen Sie einen Kanal aus (2.4Ghz 1-14) oder (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
 	arr["TURKISH",517]="Kanal seç (2.4Ghz 1-14) or (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
 
-	arr["ENGLISH",518]="After capturing credentials during an Enterprise network attack, remember that you can try to decrypt NTLM hashes using the \"offline WPA/WPA2 decrypt menu\""
-	arr["SPANISH",518]="Tras capturar unas credenciales en un ataque a una red Enterprise, recuerda que puedes intentar descifrar los hashes NTLM usando el \"menú de desencriptado WPA/WPA2 offline\""
-	#TODO translate this stuff
-	arr["FRENCH",518]="${pending_of_translation} "
-	arr["CATALAN",518]="${pending_of_translation} "
-	arr["PORTUGUESE",518]="${pending_of_translation} "
-	arr["RUSSIAN",518]="${pending_of_translation} "
-	arr["GREEK",518]="${pending_of_translation} "
-	arr["ITALIAN",518]="${pending_of_translation} "
-	arr["POLISH",518]="${pending_of_translation} "
-	arr["GERMAN",518]="${pending_of_translation} "
-	arr["TURKISH",518]="${pending_of_translation} "
+	arr["ENGLISH",518]="After capturing credentials during an Enterprise network attack, remember that you can try to decrypt NTLM hashes using the \"Offline WPA/WPA2 decrypt menu\""
+	arr["SPANISH",518]="Tras capturar unas credenciales en un ataque a una red Enterprise, recuerda que puedes intentar descifrar los hashes NTLM usando el \"Menú de desencriptado WPA/WPA2 offline\""
+	arr["FRENCH",518]="${pending_of_translation} Après avoir capturé les informations d'identification dans une attaque réseau Enterprise, n'oubliez pas que vous pouvez essayer de décrypter les hachages NTLM à l'aide du \"Menu crack WPA/WPA2 offline\""
+	arr["CATALAN",518]="${pending_of_translation} Després capturar unes credencials en un atac a una xarxa Enterprise, recorda que pots intentar desxifrar els hashes NTLM usant el \"Menú per desxifrar WPA/WPA2 offline\""
+	arr["PORTUGUESE",518]="${pending_of_translation} Depois de capturar credenciais em um ataque de rede Enterprise, lembre-se de que você pode tentar descriptografar hashes NTLM usando o \"Menu de descriptografia WPA/WPA2 offline\""
+	arr["RUSSIAN",518]="${pending_of_translation} После захвата учетных данных в сетевой атаке Enterprise помните, что вы можете попытаться расшифровать хеширование NTLM с помощью \"Меню офлайн расшифровки WPA/WPA2\""
+	arr["GREEK",518]="${pending_of_translation} Αφού καταγράψετε τα διαπιστευτήρια σε μια επίθεση δικτύου Enterprise, θυμηθείτε ότι μπορείτε να προσπαθήσετε να αποκρυπτογραφήσετε τα hash του NTLM χρησιμοποιώντας το \"Μενού offline αποκρυπτογράφησης WPA/WPA2\""
+	arr["ITALIAN",518]="${pending_of_translation} Dopo aver acquisito le credenziali in un attacco di rete Enterprise, ricorda che puoi provare a decrittografare gli hash NTLM utilizzando il \"Menù per decifrare WPA/WPA2 offline\""
+	arr["POLISH",518]="${pending_of_translation} Po przechwyceniu poświadczeń w ataku sieciowym Enterprise, pamiętaj, że możesz spróbować odszyfrować hashy NTLM za pomocą \"Menu deszyfrowania WPA/WPA2 offline\""
+	arr["GERMAN",518]="${pending_of_translation} Bedenken Sie nach dem Erfassen der Anmeldedaten bei einem Enterprise-Netzwerkangriff, dass Sie versuchen können, NTLM-Hashes mit dem \"Offline WPA/WPA2-Entschlüsselungsmenü\" zu entschlüsseln."
+	arr["TURKISH",518]="${pending_of_translation} Enterprise ağ saldırısında kimlik bilgilerini aldıktan sonra, \"Çevrimdışı WPA/WPA2 decrypt menüsü\" kullanarak NTLM karmalarını çözmeyi deneyebilirsiniz."
 
 	arr["ENGLISH",519]="11. Turkish"
 	arr["SPANISH",519]="11. Turco"
@@ -6961,7 +6959,7 @@ function language_strings() {
 	arr["GERMAN",524]="${pending_of_translation} Der Evil-Twin-Enterprise-Angriff hat begonnen. Drücken Sie die [Enter]-Taste in diesem Fenster, um es zu stoppen"
 	arr["TURKISH",524]="${pending_of_translation} Şeytani İkiz saldırısı Enterprise başlatıldı. Durdurmak için bu pencerede [Enter] tuşlayınız"
 
-	arr["ENGLISH",525]="If a hash or password is obtained during the Evil Twin Enterprise attack, you should decide where to save it. ${green_color} More than one file will be saved, type the path (directory) to store the file/s. If the directory not exists, airgeddon will create it. Press [Enter] to accept the default proposal ${normal_color}[${enterprise_potpath}]"
+	arr["ENGLISH",525]="If a hash or password is obtained during the Evil Twin Enterprise attack, you should decide where to save it. ${green_color} More than one file will be saved, type the path (directory) to store the file/s. If the directory does not exist, airgeddon will create it. Press [Enter] to accept the default proposal ${normal_color}[${enterprise_potpath}]"
 	arr["SPANISH",525]="Si se consigue capturar algún hash o contraseña durante el ataque Evil Twin Enterprise, hay que decidir donde guardarlo. ${green_color}Se guardarán varios ficheros, escribe la ruta (el directorio) donde escribiremos el/los fichero/s. Si en directorio no existe, airgeddon lo generará. Pulsa [Enter] para aceptar la ruta propuesta por defecto ${normal_color}[${enterprise_potpath}]"
 	#TODO translate this stuff
 	arr["FRENCH",525]="${pending_of_translation} "
