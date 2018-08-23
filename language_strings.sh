@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180822
+#Date.........: 20180823
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -641,6 +641,32 @@ function language_strings() {
 	enterprise_texts["POLISH",4]="${pending_of_translation} "
 	enterprise_texts["GERMAN",4]="${pending_of_translation} "
 	enterprise_texts["TURKISH",4]="${pending_of_translation} "
+
+	enterprise_texts["ENGLISH",5]="Last captured user"
+	enterprise_texts["SPANISH",5]="Último usuario capturado"
+	#TODO translate this stuff
+	enterprise_texts["FRENCH",5]="${pending_of_translation} "
+	enterprise_texts["CATALAN",5]="${pending_of_translation} "
+	enterprise_texts["PORTUGUESE",5]="${pending_of_translation} "
+	enterprise_texts["RUSSIAN",5]="${pending_of_translation} "
+	enterprise_texts["GREEK",5]="${pending_of_translation} "
+	enterprise_texts["ITALIAN",5]="${pending_of_translation} "
+	enterprise_texts["POLISH",5]="${pending_of_translation} "
+	enterprise_texts["GERMAN",5]="${pending_of_translation} "
+	enterprise_texts["TURKISH",5]="${pending_of_translation} "
+
+	enterprise_texts["ENGLISH",6]="Nothing captured yet"
+	enterprise_texts["SPANISH",6]="Aún no se ha capturado nada"
+	#TODO translate this stuff
+	enterprise_texts["FRENCH",6]="${pending_of_translation} "
+	enterprise_texts["CATALAN",6]="${pending_of_translation} "
+	enterprise_texts["PORTUGUESE",6]="${pending_of_translation} "
+	enterprise_texts["RUSSIAN",6]="${pending_of_translation} "
+	enterprise_texts["GREEK",6]="${pending_of_translation} "
+	enterprise_texts["ITALIAN",6]="${pending_of_translation} "
+	enterprise_texts["POLISH",6]="${pending_of_translation} "
+	enterprise_texts["GERMAN",6]="${pending_of_translation} "
+	enterprise_texts["TURKISH",6]="${pending_of_translation} "
 
 	declare -gA footer_texts
 	footer_texts["ENGLISH",1]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through PayPal (${mail}) or sending a fraction of cryptocurrency (Bitcoin, Ethereum, Litecoin...). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${urlgithub_wiki}/Contributing"

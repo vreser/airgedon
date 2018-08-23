@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180821
+#Date.........: 20180823
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -7148,6 +7148,7 @@ function set_enterprise_control_script() {
 	EOF
 
 	cat >&7 <<-'EOF'
+		#Kill Evil Twin Enterprise processes
 		function kill_enterprise_windows() {
 
 			readarray -t ENTERPRISE_PROCESSES_TO_KILL < <(cat < "${path_to_processes}" 2> /dev/null)
@@ -7156,6 +7157,7 @@ function set_enterprise_control_script() {
 			done
 		}
 
+		#Check if a hash or a password was captured (0=hash, 1=cleartextpass, 2=both)
 		function check_captured() {
 
 			local hash_captured=0
@@ -7187,10 +7189,19 @@ function set_enterprise_control_script() {
 
 			return 1
 		}
+
+		#Get last captured user name
+		function get_last_username() {
+
+			line_with_last_user=$(grep -E "username:" "${wpe_logfile}" | tail -1)
+			[[ ${line_with_last_user} =~ username:[[:space:]](.*) ]] && last_username="${BASH_REMATCH[1]}"
+		}
 	EOF
 
 	cat >&7 <<-'EOF'
+
 		date_counter=$(date +%s)
+		last_username=""
 		while true; do
 	EOF
 
@@ -7217,8 +7228,25 @@ function set_enterprise_control_script() {
 	EOF
 
 	cat >&7 <<-'EOF'
-			if check_captured && [ "${enterprise_heredoc_mode}" = "smooth" ]; then
-				kill_enterprise_windows
+			echo
+			if [ -z "${last_username}" ]; then
+	EOF
+
+	cat >&7 <<-EOF
+				echo -e "\t${blue_color}${enterprise_texts[${language},6]}${normal_color}"
+			else
+				last_name_to_print="${blue_color}${enterprise_texts[${language},5]}:${normal_color}"
+	EOF
+
+	cat >&7 <<-'EOF'
+				echo -e "\t${last_name_to_print} ${last_username}"
+			fi
+
+			if check_captured; then
+				get_last_username
+			 	if [ "${enterprise_heredoc_mode}" = "smooth" ]; then
+					kill_enterprise_windows
+				fi
 			fi
 	EOF
 
