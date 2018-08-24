@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180823
+#Date.........: 20180824
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -644,29 +644,27 @@ function language_strings() {
 
 	enterprise_texts["ENGLISH",5]="Last captured user"
 	enterprise_texts["SPANISH",5]="Último usuario capturado"
-	#TODO translate this stuff
-	enterprise_texts["FRENCH",5]="${pending_of_translation} "
-	enterprise_texts["CATALAN",5]="${pending_of_translation} "
-	enterprise_texts["PORTUGUESE",5]="${pending_of_translation} "
-	enterprise_texts["RUSSIAN",5]="${pending_of_translation} "
-	enterprise_texts["GREEK",5]="${pending_of_translation} "
-	enterprise_texts["ITALIAN",5]="${pending_of_translation} "
-	enterprise_texts["POLISH",5]="${pending_of_translation} "
-	enterprise_texts["GERMAN",5]="${pending_of_translation} "
-	enterprise_texts["TURKISH",5]="${pending_of_translation} "
+	enterprise_texts["FRENCH",5]="${pending_of_translation} Dernier utilisateur capturé"
+	enterprise_texts["CATALAN",5]="${pending_of_translation} Darrer usuari capturat"
+	enterprise_texts["PORTUGUESE",5]="${pending_of_translation} Último usuário capturado"
+	enterprise_texts["RUSSIAN",5]="${pending_of_translation} Последний захваченный пользователь"
+	enterprise_texts["GREEK",5]="${pending_of_translation} Τελευταίος χρήστης που καταγράφηκε"
+	enterprise_texts["ITALIAN",5]="${pending_of_translation} Ultimo utente catturato"
+	enterprise_texts["POLISH",5]="${pending_of_translation} Ostatni użytkownik przechwycony"
+	enterprise_texts["GERMAN",5]="${pending_of_translation} Letzter Nutzer erfasst"
+	enterprise_texts["TURKISH",5]="${pending_of_translation} Son yakalanan kullanıcı"
 
 	enterprise_texts["ENGLISH",6]="Nothing captured yet"
 	enterprise_texts["SPANISH",6]="Aún no se ha capturado nada"
-	#TODO translate this stuff
-	enterprise_texts["FRENCH",6]="${pending_of_translation} "
-	enterprise_texts["CATALAN",6]="${pending_of_translation} "
-	enterprise_texts["PORTUGUESE",6]="${pending_of_translation} "
-	enterprise_texts["RUSSIAN",6]="${pending_of_translation} "
-	enterprise_texts["GREEK",6]="${pending_of_translation} "
-	enterprise_texts["ITALIAN",6]="${pending_of_translation} "
-	enterprise_texts["POLISH",6]="${pending_of_translation} "
-	enterprise_texts["GERMAN",6]="${pending_of_translation} "
-	enterprise_texts["TURKISH",6]="${pending_of_translation} "
+	enterprise_texts["FRENCH",6]="${pending_of_translation} Rien n'a encore été capturé"
+	enterprise_texts["CATALAN",6]="${pending_of_translation} Encara no s'ha capturat res"
+	enterprise_texts["PORTUGUESE",6]="${pending_of_translation} Nada foi capturado ainda"
+	enterprise_texts["RUSSIAN",6]="${pending_of_translation} Пока ничего не зафиксировано"
+	enterprise_texts["GREEK",6]="${pending_of_translation} Τίποτα δεν έχει καταγραφεί ακόμα"
+	enterprise_texts["ITALIAN",6]="${pending_of_translation} Niente è stato ancora catturato"
+	enterprise_texts["POLISH",6]="${pending_of_translation} Nic jeszcze nie zostało uchwycone"
+	enterprise_texts["GERMAN",6]="${pending_of_translation} Nichts wurde bisher erfasst"
+	enterprise_texts["TURKISH",6]="${pending_of_translation} Henüz yakalanan bir şey yok"
 
 	declare -gA footer_texts
 	footer_texts["ENGLISH",1]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through PayPal (${mail}) or sending a fraction of cryptocurrency (Bitcoin, Ethereum, Litecoin...). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${urlgithub_wiki}/Contributing"
