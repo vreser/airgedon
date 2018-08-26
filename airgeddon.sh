@@ -7157,32 +7157,32 @@ function set_enterprise_control_script() {
 			done
 		}
 
-		#Check if a hash or a password was captured (0=hash, 1=cleartextpass, 2=both)
+		#Check if a hash or a password was captured (0=hash, 1=plaintextpass, 2=both)
 		function check_captured() {
 
 			local hash_captured=0
-			local cleartext_password_captured=0
+			local plaintext_password_captured=0
 			readarray -t ENTERPRISE_LINES_TO_PARSE < <(cat < "${wpe_logfile}" 2> /dev/null)
 			for item in "${ENTERPRISE_LINES_TO_PARSE[@]}"; do
 
 				if [[ "${item}" =~ challenge: ]]; then
 					hash_captured=1
 				elif [[ "${item}" =~ password: ]]; then
-					cleartext_password_captured=1
+					plaintext_password_captured=1
 				fi
 			done
 
-			if [[ ${hash_captured} -eq 1 ]] || [[ ${cleartext_password_captured} -eq 1 ]]; then
+			if [[ ${hash_captured} -eq 1 ]] || [[ ${plaintext_password_captured} -eq 1 ]]; then
 				touch "${success_file}" > /dev/null 2>&1
 			fi
 
-			if [[ ${hash_captured} -eq 1 ]] && [[ ${cleartext_password_captured} -eq 0 ]]; then
+			if [[ ${hash_captured} -eq 1 ]] && [[ ${plaintext_password_captured} -eq 0 ]]; then
 				echo 0 > "${success_file}" 2> /dev/null
 				return 0
-			elif [[ ${hash_captured} -eq 0 ]] && [[ ${cleartext_password_captured} -eq 1 ]]; then
+			elif [[ ${hash_captured} -eq 0 ]] && [[ ${plaintext_password_captured} -eq 1 ]]; then
 				echo 1 > "${success_file}" 2> /dev/null
 				return 0
-			elif [[ ${hash_captured} -eq 1 ]] && [[ ${cleartext_password_captured} -eq 1 ]]; then
+			elif [[ ${hash_captured} -eq 1 ]] && [[ ${plaintext_password_captured} -eq 1 ]]; then
 				echo 2 > "${success_file}" 2> /dev/null
 				return 0
 			fi
@@ -7194,30 +7194,25 @@ function set_enterprise_control_script() {
 		function set_captured_counters() {
 
 			local new_username_found=0
+			declare -A lines_and_usernames
 
-			readarray -t CAPTURED_USERNAMES < <(grep -n -E "username:" "${wpe_logfile}"  | uniq --skip-fields=1 2> /dev/null)
+			readarray -t CAPTURED_USERNAMES < <(grep -n -E "username:" "${wpe_logfile}" | sort -k 2,2 | uniq --skip-fields=1 2> /dev/null)
 			for item in "${CAPTURED_USERNAMES[@]}"; do
 				[[ $item =~ ([0-9]+):.*username:[[:space:]](.*) ]] && line_number="${BASH_REMATCH[1]}" && username="${BASH_REMATCH[2]}"
-
-				if [ ! "${lines_and_usernames[${username}]}" ]; then
-					new_username_found=1
-					lines_and_usernames["${username}"]="${line_number}"
-				fi
+				lines_and_usernames["${username}"]="${line_number}"
 			done
 
-			if [ ${new_username_found} -eq 1 ]; then
-				for item2 in "${lines_and_usernames[@]}"; do
-					local line_to_check=$((item2 + 1))
-					local text_to_check=$(sed "${line_to_check}q;d" "${wpe_logfile}" 2> /dev/null)
-					if [[ "${text_to_check}" =~ challenge: ]]; then
-						hashes_counter=$((hashes_counter + 1))
-						break
-					elif [[ "${text_to_check}" =~ password: ]]; then
-						cleartext_pass_counter=$((cleartext_pass_counter + 1))
-						break
-					fi
-				done
-			fi
+			hashes_counter=0
+			plaintext_pass_counter=0
+			for item2 in "${lines_and_usernames[@]}"; do
+				local line_to_check=$((item2 + 1))
+				local text_to_check=$(sed "${line_to_check}q;d" "${wpe_logfile}" 2> /dev/null)
+				if [[ "${text_to_check}" =~ challenge: ]]; then
+					hashes_counter=$((hashes_counter + 1))
+				elif [[ "${text_to_check}" =~ password: ]]; then
+					plaintext_pass_counter=$((plaintext_pass_counter + 1))
+				fi
+			done
 		}
 
 		#Get last captured user name
@@ -7232,9 +7227,6 @@ function set_enterprise_control_script() {
 
 		date_counter=$(date +%s)
 		last_username=""
-		hashes_counter=0
-		cleartext_pass_counter=0
-		declare -gA lines_and_usernames
 		while true; do
 	EOF
 
@@ -7272,13 +7264,13 @@ function set_enterprise_control_script() {
 			else
 				last_name_to_print="${blue_color}${enterprise_texts[${language},5]}:${normal_color}"
 				hashes_counter_message="${blue_color}${enterprise_texts[${language},7]}:${normal_color}"
-				cleartext_pass_counter_message="${blue_color}${enterprise_texts[${language},8]}:${normal_color}"
+				plaintext_pass_counter_message="${blue_color}${enterprise_texts[${language},8]}:${normal_color}"
 	EOF
 
 	cat >&7 <<-'EOF'
 				echo -e "\t${last_name_to_print} ${last_username}"
 				echo -e "\t${hashes_counter_message} ${hashes_counter}"
-				echo -e "\t${cleartext_pass_counter_message} ${cleartext_pass_counter}"
+				echo -e "\t${plaintext_pass_counter_message} ${plaintext_pass_counter}"
 			fi
 
 			if check_captured; then
