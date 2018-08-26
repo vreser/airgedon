@@ -2,8 +2,8 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180809
-#Version......: 8.11
+#Date.........: 20180827
+#Version......: 8.12
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
 
@@ -113,8 +113,8 @@ declare -A possible_alias_names=(
 								)
 
 #General vars
-airgeddon_version="8.11"
-language_strings_expected_version="8.11-1"
+airgeddon_version="8.12"
+language_strings_expected_version="8.12-1"
 standardhandshake_filename="handshake-01.cap"
 timeout_capture_handshake="20"
 tmpdir="/tmp/"
@@ -8755,7 +8755,7 @@ function explore_for_wps_targets_option() {
 			expwps_channel=$(echo "${expwps_line}" | awk '{print $2}')
 			expwps_power=$(echo "${expwps_line}" | awk '{print $3}')
 			expwps_locked=$(echo "${expwps_line}" | awk '{print $5}')
-			expwps_essid=$(echo "${expwps_line}" | awk -F '\t| {2,}' '{print $NF}')
+			expwps_essid=$(echo "${expwps_line//\`/}" | awk -F '\t| {2,}' '{print $NF}')
 
 			if [[ ${expwps_channel} -le 9 ]]; then
 				wpssp2="  "

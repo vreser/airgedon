@@ -1,3 +1,6 @@
+### 8.12
+ - Fixed error on WPS attacks for strange chars in some SSIDs
+
 ### 8.11
  - Turkish language translation added (Thank you to "UN5T48L3")
  - Extended cards compatibility. Now airmon non compatible cards can be used
