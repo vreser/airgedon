@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180824
+#Date.........: 20180826
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -665,6 +665,30 @@ function language_strings() {
 	enterprise_texts["POLISH",6]="${pending_of_translation} Nic jeszcze nie zostało uchwycone"
 	enterprise_texts["GERMAN",6]="${pending_of_translation} Nichts wurde bisher erfasst"
 	enterprise_texts["TURKISH",6]="${pending_of_translation} Henüz yakalanan bir şey yok"
+
+	enterprise_texts["ENGLISH",7]="Captured hashes"
+	enterprise_texts["SPANISH",7]="Hashes capturados"
+	enterprise_texts["FRENCH",7]="${pending_of_translation} Hashes capturés"
+	enterprise_texts["CATALAN",7]="${pending_of_translation} Hashes capturats"
+	enterprise_texts["PORTUGUESE",7]="${pending_of_translation} Hashes capturados"
+	enterprise_texts["RUSSIAN",7]="${pending_of_translation} Захваченные хеши"
+	enterprise_texts["GREEK",7]="${pending_of_translation} Συγκεντρωμένα hashes"
+	enterprise_texts["ITALIAN",7]="${pending_of_translation} Hash catturati"
+	enterprise_texts["POLISH",7]="${pending_of_translation} Uchwycone hasze"
+	enterprise_texts["GERMAN",7]="${pending_of_translation} Gefangene Hashes"
+	enterprise_texts["TURKISH",7]="${pending_of_translation} Yakalanan karmalar"
+
+	enterprise_texts["ENGLISH",8]="Captured plain text passwords"
+	enterprise_texts["SPANISH",8]="Contraseñas en texto plano capturadas"
+	enterprise_texts["FRENCH",8]="${pending_of_translation} Mots de passe en texte brut capturés"
+	enterprise_texts["CATALAN",8]="${pending_of_translation} Contrasenyes en text pla capturades"
+	enterprise_texts["PORTUGUESE",8]="${pending_of_translation} Senhas em texto simples capturadas"
+	enterprise_texts["RUSSIAN",8]="${pending_of_translation} Записанные пароли открытого текста"
+	enterprise_texts["GREEK",8]="${pending_of_translation} Κρατούμενοι κωδικοί απλού κειμένου"
+	enterprise_texts["ITALIAN",8]="${pending_of_translation} Password in testo semplice acquisite"
+	enterprise_texts["POLISH",8]="${pending_of_translation} Przechwycone hasła tekstowe"
+	enterprise_texts["GERMAN",8]="${pending_of_translation} Erfasste Klartextpasswörter"
+	enterprise_texts["TURKISH",8]="${pending_of_translation} Yakalanan düz metinde şifreler"
 
 	declare -gA footer_texts
 	footer_texts["ENGLISH",1]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through PayPal (${mail}) or sending a fraction of cryptocurrency (Bitcoin, Ethereum, Litecoin...). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${urlgithub_wiki}/Contributing"

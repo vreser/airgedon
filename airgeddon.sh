@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180823
+#Date.........: 20180826
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -7190,6 +7190,36 @@ function set_enterprise_control_script() {
 			return 1
 		}
 
+		#Set captured hashes and passwords counters
+		function set_captured_counters() {
+
+			local new_username_found=0
+
+			readarray -t CAPTURED_USERNAMES < <(grep -n -E "username:" "${wpe_logfile}"  | uniq --skip-fields=1 2> /dev/null)
+			for item in "${CAPTURED_USERNAMES[@]}"; do
+				[[ $item =~ ([0-9]+):.*username:[[:space:]](.*) ]] && line_number="${BASH_REMATCH[1]}" && username="${BASH_REMATCH[2]}"
+
+				if [ ! "${lines_and_usernames[${username}]}" ]; then
+					new_username_found=1
+					lines_and_usernames["${username}"]="${line_number}"
+				fi
+			done
+
+			if [ ${new_username_found} -eq 1 ]; then
+				for item2 in "${lines_and_usernames[@]}"; do
+					local line_to_check=$((item2 + 1))
+					local text_to_check=$(sed "${line_to_check}q;d" "${wpe_logfile}" 2> /dev/null)
+					if [[ "${text_to_check}" =~ challenge: ]]; then
+						hashes_counter=$((hashes_counter + 1))
+						break
+					elif [[ "${text_to_check}" =~ password: ]]; then
+						cleartext_pass_counter=$((cleartext_pass_counter + 1))
+						break
+					fi
+				done
+			fi
+		}
+
 		#Get last captured user name
 		function get_last_username() {
 
@@ -7202,6 +7232,9 @@ function set_enterprise_control_script() {
 
 		date_counter=$(date +%s)
 		last_username=""
+		hashes_counter=0
+		cleartext_pass_counter=0
+		declare -gA lines_and_usernames
 		while true; do
 	EOF
 
@@ -7234,16 +7267,23 @@ function set_enterprise_control_script() {
 
 	cat >&7 <<-EOF
 				echo -e "\t${blue_color}${enterprise_texts[${language},6]}${normal_color}"
+				echo -e "\t${blue_color}${enterprise_texts[${language},7]}${normal_color}: 0"
+				echo -e "\t${blue_color}${enterprise_texts[${language},8]}${normal_color}: 0"
 			else
 				last_name_to_print="${blue_color}${enterprise_texts[${language},5]}:${normal_color}"
+				hashes_counter_message="${blue_color}${enterprise_texts[${language},7]}:${normal_color}"
+				cleartext_pass_counter_message="${blue_color}${enterprise_texts[${language},8]}:${normal_color}"
 	EOF
 
 	cat >&7 <<-'EOF'
 				echo -e "\t${last_name_to_print} ${last_username}"
+				echo -e "\t${hashes_counter_message} ${hashes_counter}"
+				echo -e "\t${cleartext_pass_counter_message} ${cleartext_pass_counter}"
 			fi
 
 			if check_captured; then
 				get_last_username
+				set_captured_counters
 			 	if [ "${enterprise_heredoc_mode}" = "smooth" ]; then
 					kill_enterprise_windows
 				fi
