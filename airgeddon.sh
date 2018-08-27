@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180827
+#Date.........: 20180828
 #Version......: 8.12
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -7244,7 +7244,7 @@ function set_captive_portal_page() {
 	echo -e "echo -e '\t\t\t<form method=\"post\" id=\"loginform\" name=\"loginform\" action=\"check.htm\">'"
 	echo -e "echo -e '\t\t\t\t<div class=\"title\">'"
 	echo -e "echo -e '\t\t\t\t\t<p>${et_misc_texts[${captive_portal_language},9]}</p>'"
-	echo -e "echo -e '\t\t\t\t\t<span class=\"bold\">${essid//\'/}</span>'"
+	echo -e "echo -e '\t\t\t\t\t<span class=\"bold\">${essid//[\`\']/}</span>'"
 	echo -e "echo -e '\t\t\t\t</div>'"
 	echo -e "echo -e '\t\t\t\t<p>${et_misc_texts[${captive_portal_language},10]}</p>'"
 	echo -e "echo -e '\t\t\t\t<label>'"
@@ -8755,7 +8755,7 @@ function explore_for_wps_targets_option() {
 			expwps_channel=$(echo "${expwps_line}" | awk '{print $2}')
 			expwps_power=$(echo "${expwps_line}" | awk '{print $3}')
 			expwps_locked=$(echo "${expwps_line}" | awk '{print $5}')
-			expwps_essid=$(echo "${expwps_line//\`/}" | awk -F '\t| {2,}' '{print $NF}')
+			expwps_essid=$(echo "${expwps_line//[\`\']/}" | awk -F '\t| {2,}' '{print $NF}')
 
 			if [[ ${expwps_channel} -le 9 ]]; then
 				wpssp2="  "
