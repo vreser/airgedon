@@ -3123,7 +3123,7 @@ function language_strings() {
 	arr["ITALIAN",210]="Lo script controllerà se si ha accesso a internet per vedere se c'è una nuova versione. Si prega di essere pazienti..."
 	arr["POLISH",210]="Skrypt sprawdzi, czy masz dostęp do internetu i czy jest nowa wersja. Cierpliwości..."
 	arr["GERMAN",210]="Das Skript überprüft, ob Sie Zugriff auf das Internet haben, um zu sehen, ob eine neue Version existiert. Wir bitten um Geduld..."
-	arr["TURKISH",210]="${_translation} Komut, daha yeni bir sürümü arayan internet erişimini kontrol edecektir. Lütfen sabırlı olun..."
+	arr["TURKISH",210]="${pending_translation} Komut, daha yeni bir sürümü arayan internet erişimini kontrol edecektir. Lütfen sabırlı olun..."
 
 	arr["ENGLISH",211]="It seems you have no internet access. The script can't connect to repository. It will continue without updating..."
 	arr["SPANISH",211]="Parece que no tienes conexión a internet. El script no puede conectar al repositorio. Continuará sin actualizarse..."
