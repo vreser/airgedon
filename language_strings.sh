@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180826
+#Date.........: 20180828
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -687,6 +687,30 @@ function language_strings() {
 	enterprise_texts["POLISH",8]="${pending_of_translation} Przechwycone hasła tekstowe"
 	enterprise_texts["GERMAN",8]="${pending_of_translation} Erfasste Klartextpasswörter"
 	enterprise_texts["TURKISH",8]="${pending_of_translation} Yakalanan düz metinde şifreler"
+
+	enterprise_texts["ENGLISH",9]="Press [Enter] on the main script window to continue, this window will be closed"
+	enterprise_texts["SPANISH",9]="Pulsa [Enter] en la ventana principal del script para continuar, esta ventana se cerrará"
+	enterprise_texts["FRENCH",9]="Appuyez sur [Enter] dans la fenêtre principale du script pour continuer, cette fenêtre se fermera"
+	enterprise_texts["CATALAN",9]="Prem [Enter] a la finestra principal del script per continuar, aquesta finestra es tancarà"
+	enterprise_texts["PORTUGUESE",9]="Pressione [Enter] na janela principal do script para continuar e esta janela será fechada"
+	enterprise_texts["RUSSIAN",9]="Нажмите [Enter] в главном окне для продолжения, это окно будет закрыто"
+	enterprise_texts["GREEK",9]="Πατήστε [Enter] στο κύριο παράθυρο του script για να συνεχίσετε, το παράθυρο αυτό θα κλείσει"
+	enterprise_texts["ITALIAN",9]="Premere il tasto [Enter] nella finestra principale dello script per continuare, questa finestra si chiuderà"
+	enterprise_texts["POLISH",9]="Wciśnij [Enter] w oknie głównym skryptu aby kontynuować, to okno zostanie zamknięte"
+	enterprise_texts["GERMAN",9]="Drücken Sie [Enter] im Hauptfenster um fortzufahren, dieses Fenster wird geschlossen"
+	enterprise_texts["TURKISH",9]="Devam etmek için [Enter] tuşuna basınız, bu sayfa kapatılacaktır"
+
+	enterprise_texts["ENGLISH",10]="The captured files were saved on directory"
+	enterprise_texts["SPANISH",10]="Los ficheros capturados se han guardado en el directorio"
+	enterprise_texts["FRENCH",10]="${pending_of_translation} Les fichiers capturés ont été enregistrés dans le répertoire"
+	enterprise_texts["CATALAN",10]="${pending_of_translation} Els fitxers capturats s'han desat al directori"
+	enterprise_texts["PORTUGUESE",10]="${pending_of_translation} Os arquivos capturados foram salvos no diretório"
+	enterprise_texts["RUSSIAN",10]="${pending_of_translation} Захваченные файлы были сохранены в каталоге"
+	enterprise_texts["GREEK",10]="${pending_of_translation} Τα αρχεία που έχουν ληφθεί αποθηκεύτηκαν στον κατάλογο"
+	enterprise_texts["ITALIAN",10]="${pending_of_translation} I file catturati sono stati salvati nella directory"
+	enterprise_texts["POLISH",10]="${pending_of_translation} Przechwycone pliki zostały zapisane w katalogu"
+	enterprise_texts["GERMAN",10]="${pending_of_translation} Die erfassten Dateien wurden im Verzeichnis gespeichert"
+	enterprise_texts["TURKISH",10]="${pending_of_translation} Yakalanan dosyalar dizine kaydedildi"
 
 	declare -gA footer_texts
 	footer_texts["ENGLISH",1]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through PayPal (${mail}) or sending a fraction of cryptocurrency (Bitcoin, Ethereum, Litecoin...). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${urlgithub_wiki}/Contributing"

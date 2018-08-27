@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180826
+#Date.........: 20180828
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -7145,6 +7145,8 @@ function set_enterprise_control_script() {
 		path_to_processes="${tmpdir}${enterprisedir}${enterprise_processesfile}"
 		wpe_logfile="${tmpdir}${hostapd_wpe_log}"
 		success_file="${tmpdir}${enterprisedir}${enterprise_successfile}"
+		done_msg="${yellow_color}${enterprise_texts[${language},9]}${normal_color}"
+		log_reminder_msg="${pink_color}${enterprise_texts[${language},10]}: [${normal_color}${enterprise_completepath}${pink_color}]${normal_color}"
 	EOF
 
 	cat >&7 <<-'EOF'
@@ -7227,7 +7229,11 @@ function set_enterprise_control_script() {
 
 		date_counter=$(date +%s)
 		last_username=""
+		break_on_next_loop=0
 		while true; do
+			if [ ${break_on_next_loop} -eq 1 ]; then
+				tput ed
+			fi
 	EOF
 
 	cat >&7 <<-EOF
@@ -7246,10 +7252,13 @@ function set_enterprise_control_script() {
 			mins=$(date -u --date @$(($(date +%s) - date_counter)) +%M)
 			secs=$(date -u --date @$(($(date +%s) - date_counter)) +%S)
 			echo -e "\t${hours}:${mins}:${secs}"
+
+			if [ ${break_on_next_loop} -eq 0 ]; then
 	EOF
 
 	cat >&7 <<-EOF
-			echo -e "\t${pink_color}${control_msg}${normal_color}\n"
+				echo -e "\t${pink_color}${control_msg}${normal_color}\n"
+			fi
 	EOF
 
 	cat >&7 <<-'EOF'
@@ -7268,24 +7277,35 @@ function set_enterprise_control_script() {
 	EOF
 
 	cat >&7 <<-'EOF'
-				echo -e "\t${last_name_to_print} ${last_username}"
+				tput el && echo -e "\t${last_name_to_print} ${last_username}"
 				echo -e "\t${hashes_counter_message} ${hashes_counter}"
 				echo -e "\t${plaintext_pass_counter_message} ${plaintext_pass_counter}"
+			fi
+
+			if [ ${break_on_next_loop} -eq 1 ]; then
+				kill_enterprise_windows
+				break
 			fi
 
 			if check_captured; then
 				get_last_username
 				set_captured_counters
 			 	if [ "${enterprise_heredoc_mode}" = "smooth" ]; then
-					kill_enterprise_windows
+					break_on_next_loop=1
 				fi
 			fi
-	EOF
 
-	cat >&7 <<-EOF
 			echo -ne "\033[K\033[u"
 			sleep 0.3
 		done
+
+		if [ "${enterprise_heredoc_mode}" = "smooth" ]; then
+			echo
+			echo -e "\t${log_reminder_msg}"
+			echo
+			echo -e "\t${done_msg}"
+			exit 0
+		fi
 	EOF
 
 	exec 7>&-
