@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180828
+#Date.........: 20180829
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -5870,6 +5870,161 @@ function manage_captive_portal_log() {
 	done
 }
 
+#Handle enterprise log captures
+function handle_enterprise_log() {
+
+	debug_print
+
+	if [ -f "${tmpdir}${enterprisedir}${enterprise_successfile}" ]; then
+
+		enterprise_attack_result_code=$(cat < "${tmpdir}${enterprisedir}${enterprise_successfile}" 2> /dev/null)
+		echo
+		if [ "${enterprise_attack_result_code}" -eq 0 ]; then
+			language_strings "${language}" 530 "yellow"
+			parse_from_enterprise "hashes"
+		elif [ "${enterprise_attack_result_code}" -eq 1 ]; then
+			language_strings "${language}" 531 "yellow"
+			parse_from_enterprise "passwords"
+		elif [ "${enterprise_attack_result_code}" -eq 2 ]; then
+			language_strings "${language}" 532 "yellow"
+			parse_from_enterprise "both"
+		fi
+
+		echo
+		language_strings "${language}" 533 "blue"
+		language_strings "${language}" 115 "read"
+	else
+		echo
+		language_strings "${language}" 529 "red"
+		language_strings "${language}" 115 "read"
+	fi
+}
+
+#Parse enterprise log to create trophy files
+function parse_from_enterprise() {
+
+	debug_print
+
+	local line_number
+	local username
+	local john_hashes=()
+	local hashcat_hashes=()
+	local passwords=()
+	local line_to_check
+	local text_to_check
+
+	readarray -t CAPTURED_USERNAMES < <(grep -n -E "username:" "${tmpdir}${hostapd_wpe_log}" | sort -k 2,2 | uniq --skip-fields=1 2> /dev/null)
+	for item in "${CAPTURED_USERNAMES[@]}"; do
+		[[ "${item}" =~ ([0-9]+):.*username:[[:blank:]](.*) ]] && line_number="${BASH_REMATCH[1]}" && username="${BASH_REMATCH[2]}"
+		line_to_check=$((line_number + 1))
+		text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
+
+		case ${1} in
+			"hashes")
+				if [[ "${text_to_check}" =~ challenge: ]]; then
+					line_to_check=$((line_number + 3))
+					text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
+					[[ "${text_to_check}" =~ jtr[[:blank:]]NETNTLM:[[:blank:]]+(.*) ]] && john_hashes+=("${BASH_REMATCH[1]}")
+
+					line_to_check=$((line_number + 4))
+					text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
+					[[ "${text_to_check}" =~ hashcat[[:blank:]]NETNTLM:[[:blank:]]+(.*) ]] && hashcat_hashes+=("${BASH_REMATCH[1]}")
+				fi
+			;;
+			"passwords")
+				if [[ "${text_to_check}" =~ password:[[:blank:]]+(.*) ]]; then
+					passwords+=("${username} / ${BASH_REMATCH[1]}")
+				fi
+			;;
+			"both")
+				if [[ "${text_to_check}" =~ challenge: ]]; then
+					line_to_check=$((line_number + 3))
+					text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
+					[[ "${text_to_check}" =~ jtr[[:blank:]]NETNTLM:[[:blank:]]+(.*) ]] && john_hashes+=("${BASH_REMATCH[1]}")
+
+					line_to_check=$((line_number + 4))
+					text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
+					[[ "${text_to_check}" =~ hashcat[[:blank:]]NETNTLM:[[:blank:]]+(.*) ]] && hashcat_hashes+=("${BASH_REMATCH[1]}")
+				fi
+
+				if [[ "${text_to_check}" =~ password:[[:blank:]]+(.*) ]]; then
+					passwords+=("${username} / ${BASH_REMATCH[1]}")
+				fi
+			;;
+		esac
+	done
+
+	prepare_enterprise_trophy_dir
+
+	case ${1} in
+		"hashes")
+			write_enterprise_hashes_file "hashcat" "${hashcat_hashes[@]}"
+			write_enterprise_hashes_file "john" "${john_hashes[@]}"
+		;;
+		"passwords")
+			write_enterprise_passwords_file "${passwords[@]}"
+		;;
+		"both")
+			write_enterprise_hashes_file "hashcat" "${hashcat_hashes[@]}"
+			write_enterprise_hashes_file "john" "${john_hashes[@]}"
+			write_enterprise_passwords_file "${passwords[@]}"
+		;;
+	esac
+}
+
+#Prepare dir for enterprise trophy files
+function prepare_enterprise_trophy_dir() {
+
+	debug_print
+
+	if [ ! -d "${enterprise_completepath}" ]; then
+		mkdir -p "${enterprise_completepath}" > /dev/null 2>&1
+	fi
+}
+
+#Write enterprise captured hashes to trophy file
+function write_enterprise_hashes_file() {
+
+	debug_print
+
+	local values=("${@:2}")
+	rm -rf "${enterprise_completepath}enterprise_captured_${1}_${bssid}_hashes.txt" > /dev/null 2>&1
+
+	for item in "${values[@]}"; do
+		{
+		echo "${item}"
+		} >> "${enterprise_completepath}enterprise_captured_${1}_${bssid}_hashes.txt"
+	done
+}
+
+#Write enterprise captured passwords to trophy file
+function write_enterprise_passwords_file() {
+
+	debug_print
+
+	local values=("${@:1}")
+	rm -rf "${enterprise_completepath}enterprise_captured_${bssid}_passwords.txt" > /dev/null 2>&1
+
+	{
+	echo ""
+	date +%Y-%m-%d
+	echo "${enterprise_texts[${language},11]}"
+	echo ""
+	echo "BSSID: ${bssid}"
+	echo ""
+	echo "---------------"
+	echo ""
+	} >> "${enterprise_completepath}enterprise_captured_${bssid}_passwords.txt"
+
+	for item in "${values[@]}"; do
+		{
+		echo "${item}"
+		} >> "${enterprise_completepath}enterprise_captured_${bssid}_passwords.txt"
+	done
+
+	add_contributing_footer_to_file "${enterprise_completepath}enterprise_captured_${bssid}_passwords.txt"
+}
+
 #Captive portal language menu
 function set_captive_portal_language() {
 
@@ -6183,7 +6338,7 @@ function exec_enterprise_attack() {
 		recover_current_channel
 	fi
 	restore_et_interface
-	#TODO save stuff from tmpfiles to ${enterprise_completepath} if something was captured (this is checked if file ${tmpdir}${enterprisedir}${enterprise_successfile} exists)
+	handle_enterprise_log
 	#TODO check if hash was captured to start asleap process after asking user
 	clean_tmpfiles
 }
@@ -7200,7 +7355,7 @@ function set_enterprise_control_script() {
 
 			readarray -t CAPTURED_USERNAMES < <(grep -n -E "username:" "${wpe_logfile}" | sort -k 2,2 | uniq --skip-fields=1 2> /dev/null)
 			for item in "${CAPTURED_USERNAMES[@]}"; do
-				[[ $item =~ ([0-9]+):.*username:[[:space:]](.*) ]] && line_number="${BASH_REMATCH[1]}" && username="${BASH_REMATCH[2]}"
+				[[ ${item} =~ ([0-9]+):.*username:[[:space:]](.*) ]] && line_number="${BASH_REMATCH[1]}" && username="${BASH_REMATCH[2]}"
 				lines_and_usernames["${username}"]="${line_number}"
 			done
 

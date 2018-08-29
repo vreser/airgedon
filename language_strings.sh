@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180828
+#Date.........: 20180829
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -700,17 +700,29 @@ function language_strings() {
 	enterprise_texts["GERMAN",9]="Drücken Sie [Enter] im Hauptfenster um fortzufahren, dieses Fenster wird geschlossen"
 	enterprise_texts["TURKISH",9]="Devam etmek için [Enter] tuşuna basınız, bu sayfa kapatılacaktır"
 
-	enterprise_texts["ENGLISH",10]="The captured files were saved on directory"
-	enterprise_texts["SPANISH",10]="Los ficheros capturados se han guardado en el directorio"
-	enterprise_texts["FRENCH",10]="${pending_of_translation} Les fichiers capturés ont été enregistrés dans le répertoire"
-	enterprise_texts["CATALAN",10]="${pending_of_translation} Els fitxers capturats s'han desat al directori"
-	enterprise_texts["PORTUGUESE",10]="${pending_of_translation} Os arquivos capturados foram salvos no diretório"
-	enterprise_texts["RUSSIAN",10]="${pending_of_translation} Захваченные файлы были сохранены в каталоге"
-	enterprise_texts["GREEK",10]="${pending_of_translation} Τα αρχεία που έχουν ληφθεί αποθηκεύτηκαν στον κατάλογο"
-	enterprise_texts["ITALIAN",10]="${pending_of_translation} I file catturati sono stati salvati nella directory"
-	enterprise_texts["POLISH",10]="${pending_of_translation} Przechwycone pliki zostały zapisane w katalogu"
-	enterprise_texts["GERMAN",10]="${pending_of_translation} Die erfassten Dateien wurden im Verzeichnis gespeichert"
-	enterprise_texts["TURKISH",10]="${pending_of_translation} Yakalanan dosyalar dizine kaydedildi"
+	enterprise_texts["ENGLISH",10]="The captured files will be saved on directory"
+	enterprise_texts["SPANISH",10]="Los ficheros capturados se guardarán en el directorio"
+	enterprise_texts["FRENCH",10]="${pending_of_translation} Les fichiers capturés seront enregistrés dans le répertoire"
+	enterprise_texts["CATALAN",10]="${pending_of_translation} Els fitxers capturats es guardaran al directori"
+	enterprise_texts["PORTUGUESE",10]="${pending_of_translation} Os arquivos capturados serão salvos no diretório"
+	enterprise_texts["RUSSIAN",10]="${pending_of_translation} Захваченные файлы будут сохранены в каталоге"
+	enterprise_texts["GREEK",10]="${pending_of_translation} Τα αρχεία που έχουν ληφθεί θα αποθηκευτούν στον κατάλογο"
+	enterprise_texts["ITALIAN",10]="${pending_of_translation} I file catturati verranno salvati nella directory"
+	enterprise_texts["POLISH",10]="${pending_of_translation} Przechwycone pliki zostaną zapisane w katalogu"
+	enterprise_texts["GERMAN",10]="${pending_of_translation} Die erfassten Dateien werden im Verzeichnis gespeichert"
+	enterprise_texts["TURKISH",10]="${pending_of_translation} Yakalanan dosyalar dizine kaydedilecek"
+
+	enterprise_texts["ENGLISH",11]="airgeddon. Captured passwords during Enterprise Evil Twin"
+	enterprise_texts["SPANISH",11]="airgeddon. Contraseñas capturadas en Evil Twin Enterprise"
+	enterprise_texts["FRENCH",11]="${pending_of_translation} airgeddon. Mots de passe capturés dans Evil Twin Enterprise"
+	enterprise_texts["CATALAN",11]="${pending_of_translation} airgeddon. Contrasenyes capturades en Evil Twin Enterprise"
+	enterprise_texts["PORTUGUESE",11]="${pending_of_translation} airgeddon. Senhas capturadas no Evil Twin Enterprise"
+	enterprise_texts["RUSSIAN",11]="${pending_of_translation} airgeddon. Пароли, записанные в Evil Twin Enterprise"
+	enterprise_texts["GREEK",11]="${pending_of_translation} airgeddon. Κωδικοί που καταγράφηκαν στο Evil Twin Enterprise"
+	enterprise_texts["ITALIAN",11]="${pending_of_translation} airgeddon. Password acquisite in Evil Twin Enterprise"
+	enterprise_texts["POLISH",11]="${pending_of_translation} airgeddon. Hasła przechwycone w Evil Twin Enterprise"
+	enterprise_texts["GERMAN",11]="${pending_of_translation} airgeddon. Passwörter in Evil Twin Enterprise"
+	enterprise_texts["TURKISH",11]="${pending_of_translation} airgeddon. Evil Twin Enterprise'da yakalanan şifreler"
 
 	declare -gA footer_texts
 	footer_texts["ENGLISH",1]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through PayPal (${mail}) or sending a fraction of cryptocurrency (Bitcoin, Ethereum, Litecoin...). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${urlgithub_wiki}/Contributing"
@@ -5326,7 +5338,7 @@ function language_strings() {
 
 	arr["ENGLISH",383]="It seems there is a more up-to-date PINs database file. It will be downloaded..."
 	arr["SPANISH",383]="Parece que hay un fichero de base de datos de PINs más actualizado. Será descargado..."
-	arr["FRENCH",383]="Une base de données PIN plus actuelle a été détectée et va être installée"
+	arr["FRENCH",383]="Une base de données PIN plus actuelle a été détectée et va être installée. Lancement du téléchargement..."
 	arr["CATALAN",383]="Sembla que hi ha un fitxer de base de dades de PINs més actualitzat. Serà descarregat..."
 	arr["PORTUGUESE",383]="Parece que há um banco de dados de PINs mais recente. Ele será baixado..."
 	arr["RUSSIAN",383]="Есть более новый файл базы данных PIN. Он будет загружен..."
@@ -7077,6 +7089,66 @@ function language_strings() {
 	arr["POLISH",528]="Wykryto, że używasz airgeddon w kontenerze Docker. W tym ataku hostapd-wpe służy do utworzenia fałszywego AP. Ten komponent często ma konflikt z network-manager. Z kontenera airgeddon nie może sobie z tym poradzić. Jeśli na komputerze hosta zainstalowano network-manager, zamknij lub zabij sprzeczne procesy lub otrzymasz błąd. Aby uzyskać więcej informacji, zobacz sekcję Docker Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["GERMAN",528]="Es wurde festgestellt, dass Sie airgeddon in einem Docker-Container ausführen. Bei diesem Angriff wird mit hostapd-wpe ein falscher AP erstellt. Diese Komponente steht normalerweise im Konflikt mit dem network-manager. Aus dem Container kann airgeddon das nicht schaffen. Wenn Sie den network-manager auf Ihrem Host-Computer installiert haben, schließen Sie ihn oder beenden Sie die Prozesse im Konflikt oder Sie erhalten einen Fehler. Weitere Informationen finden Sie im Abschnitt Docker des Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["TURKISH",528]="${pending_of_translation} Bir Docker kabının içinde airgeddon çalıştırdığınız tespit edildi. Bu saldırı sırasında hostapd-wpe sahte bir AP oluşturmak için kullanılır. Bu bileşen genellikle ağ yöneticisi ile çakışır. Konteynırın içinden, hava hücresi bunu kaldıramaz. Ana makinenize ağ yöneticisi yüklüyse, kapat veya çakışan işlemleri durdurun veya bir hatayla karşılaşırsınız. Daha fazla bilgi için, Wiki'nin Docker bölümüne bakın: ${normal_color}${urlgithub_wiki}/Docker"
+
+	arr["ENGLISH",529]="It seems that nothing was captured during the Enterprise Evil Twin attack"
+	arr["SPANISH",529]="Parece que no se ha capturado nada durante el ataque Evil Twin Enterprise"
+	arr["FRENCH",529]="${pending_of_translation} On dirait que rien n'a été capturé lors de l'attaque Evil Twin Enterprise"
+	arr["CATALAN",529]="${pending_of_translation} Sembla que no s'ha capturat res durant l'atac Evil Twin Enterprise"
+	arr["PORTUGUESE",529]="${pending_of_translation} Parece que nada foi capturado durante o ataque da Evil Twin Enterprise"
+	arr["RUSSIAN",529]="${pending_of_translation} Кажется, что ничего не было захвачено во время атаки Enterprise Evil Twin"
+	arr["GREEK",529]="${pending_of_translation} Φαίνεται ότι τίποτα δεν καταγράφηκε κατά τη διάρκεια της επίθεσης Enterprise Evil Twin"
+	arr["ITALIAN",529]="${pending_of_translation} Sembra che nulla sia stato catturato durante l'attacco Evil Twin Enterprise"
+	arr["POLISH",529]="${pending_of_translation} Wygląda na to, że nic nie zostało złapane podczas ataku Zli Twin Enterprise"
+	arr["GERMAN",529]="${pending_of_translation} Es sieht so aus, als wäre nichts während des Angriffs von Evil Twin Enterprise gefangen worden"
+	arr["TURKISH",529]="${pending_of_translation} Evil Twin Enterprise saldırısı sırasında yakalanan hiçbir şey yok gibi görünüyor"
+
+	arr["ENGLISH",530]="Contratulations!! It seems you captured some hash/es"
+	arr["SPANISH",530]="Enhorabuena!! Parece que has capturado algún hash"
+	arr["FRENCH",530]="${pending_of_translation} Félicitations!! Il semble que vous ayez capturé du hash"
+	arr["CATALAN",530]="${pending_of_translation} Enhorabona!! Sembla que has capturat algun hash/es"
+	arr["PORTUGUESE",530]="${pending_of_translation} Parabéns!! Parece que você capturou algum hash/es"
+	arr["RUSSIAN",530]="${pending_of_translation} Поздравления!! Кажется, вы захватили некоторый хэш"
+	arr["GREEK",530]="${pending_of_translation} Συγχαρητήρια!! Φαίνεται ότι έχετε συλλάβει κάποιο hash"
+	arr["ITALIAN",530]="${pending_of_translation} Congratulazioni!! Sembra che tu abbia catturato qualche hash"
+	arr["POLISH",530]="${pending_of_translation} Gratulacje!! Wygląda na to, że zdobyłeś hash"
+	arr["GERMAN",530]="${pending_of_translation} Herzlichen Glückwunsch!! Es scheint, dass Sie etwas Hash erfasst haben"
+	arr["TURKISH",530]="${pending_of_translation} Tebrikler!! Görünüşe göre bazı hashları yakaladın"
+
+	arr["ENGLISH",531]="Contratulations!! It seems you captured some plain text password/s"
+	arr["SPANISH",531]="Enhorabuena!! Parece que has capturado alguna contraseña en texto plano"
+	arr["FRENCH",531]="${pending_of_translation} Félicitations!! Il semble que vous ayez capturé un mot de passe en texte brut"
+	arr["CATALAN",531]="${pending_of_translation} Enhorabona!! Sembla que has capturat alguna contrasenya en text pla"
+	arr["PORTUGUESE",531]="${pending_of_translation} Parabéns!! Parece que você capturou alguma senha em texto simples"
+	arr["RUSSIAN",531]="${pending_of_translation} Поздравления!! Кажется, что вы захватили некоторый пароль в текстовом виде"
+	arr["GREEK",531]="${pending_of_translation} Συγχαρητήρια!! Φαίνεται ότι έχετε καταγράψει κάποιο κωδικό πρόσβασης σε απλό κείμενο"
+	arr["ITALIAN",531]="${pending_of_translation} Congratulazioni!! Sembra che tu abbia catturato qualche password in testo normale"
+	arr["POLISH",531]="${pending_of_translation} Gratulacje!! Wygląda na to, że zdobyłeś hasło w postaci zwykłego tekstu"
+	arr["GERMAN",531]="${pending_of_translation} Herzlichen Glückwunsch!! Es scheint, dass Sie ein Passwort im Klartext erfasst haben"
+	arr["TURKISH",531]="${pending_of_translation} Tebrikler!! Düz metinde bazı şifreleri yakaladınız gibi görünüyor"
+
+	arr["ENGLISH",532]="Contratulations!! It seems you captured hashes and plain text passwords"
+	arr["SPANISH",532]="Enhorabuena!! Parece que has capturado hashes y contraseñas en texto plano"
+	arr["FRENCH",532]="${pending_of_translation} Félicitations!! Il semble que vous ayez capturé des hashes et des mots de passe en texte brut"
+	arr["CATALAN",532]="${pending_of_translation} Enhorabona!! Sembla que has capturat hashes i contrasenyes en text pla"
+	arr["PORTUGUESE",532]="${pending_of_translation} Parabéns!! Parece que você capturou hashes e senhas em texto simples"
+	arr["RUSSIAN",532]="${pending_of_translation} Поздравления!! Кажется, что вы захватили хэши и пароли в текстовом виде"
+	arr["GREEK",532]="${pending_of_translation} Συγχαρητήρια!! Φαίνεται ότι έχετε καταγράψει τα hashes και τους κωδικούς πρόσβασης σε απλό κείμενο"
+	arr["ITALIAN",532]="${pending_of_translation} Congratulazioni!! Sembra che tu abbia catturato hash e password in testo normale"
+	arr["POLISH",532]="${pending_of_translation} Gratulacje!! Wygląda na to, że przechwyciłeś skróty i hasła w postaci zwykłego tekstu"
+	arr["GERMAN",532]="${pending_of_translation} Herzlichen Glückwunsch!! Es scheint, dass Sie Hashes und Passwörter im Klartext erfasst haben"
+	arr["TURKISH",532]="${pending_of_translation} Tebrikler!! Düz metinde karma ve şifreleri ele geçirmişsiniz gibi görünüyor"
+
+	arr["ENGLISH",533]="The captured files were saved on directory [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
+	arr["SPANISH",533]="Los ficheros capturados se han guardado en el directorio [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
+	arr["FRENCH",533]="${pending_of_translation} Les fichiers capturés ont été enregistrés dans le répertoire [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
+	arr["CATALAN",533]="${pending_of_translation} Els fitxers capturats s'han desat al directori [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
+	arr["PORTUGUESE",533]="${pending_of_translation} Os arquivos capturados foram salvos no diretório [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
+	arr["RUSSIAN",533]="${pending_of_translation} Захваченные файлы были сохранены в каталоге [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
+	arr["GREEK",533]="${pending_of_translation} Τα αρχεία που έχουν ληφθεί αποθηκεύτηκαν στον κατάλογο [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
+	arr["ITALIAN",533]="${pending_of_translation} I file catturati sono stati salvati nella directory [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
+	arr["POLISH",533]="${pending_of_translation} Przechwycone pliki zostały zapisane w katalogu [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
+	arr["GERMAN",533]="${pending_of_translation} Die erfassten Dateien wurden im Verzeichnis gespeichert [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
+	arr["TURKISH",533]="${pending_of_translation} Yakalanan dosyalar dizine kaydedildi [${normal_color}${enterprise_completepath}${pink_color}]${blue_color}"
 
 	case "${3}" in
 		"yellow")
