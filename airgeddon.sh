@@ -5915,7 +5915,7 @@ function parse_from_enterprise() {
 
 	readarray -t CAPTURED_USERNAMES < <(grep -n -E "username:" "${tmpdir}${hostapd_wpe_log}" | sort -k 2,2 | uniq --skip-fields=1 2> /dev/null)
 	for item in "${CAPTURED_USERNAMES[@]}"; do
-		[[ "${item}" =~ ([0-9]+):.*username:[[:blank:]](.*) ]] && line_number="${BASH_REMATCH[1]}" && username="${BASH_REMATCH[2]}"
+		[[ "${item}" =~ ([0-9]+):.*username:[[:blank:]]+(.*) ]] && line_number="${BASH_REMATCH[1]}" && username="${BASH_REMATCH[2]}"
 		line_to_check=$((line_number + 1))
 		text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
 
@@ -7355,7 +7355,7 @@ function set_enterprise_control_script() {
 
 			readarray -t CAPTURED_USERNAMES < <(grep -n -E "username:" "${wpe_logfile}" | sort -k 2,2 | uniq --skip-fields=1 2> /dev/null)
 			for item in "${CAPTURED_USERNAMES[@]}"; do
-				[[ ${item} =~ ([0-9]+):.*username:[[:space:]](.*) ]] && line_number="${BASH_REMATCH[1]}" && username="${BASH_REMATCH[2]}"
+				[[ ${item} =~ ([0-9]+):.*username:[[:blank:]]+(.*) ]] && line_number="${BASH_REMATCH[1]}" && username="${BASH_REMATCH[2]}"
 				lines_and_usernames["${username}"]="${line_number}"
 			done
 
@@ -7376,7 +7376,7 @@ function set_enterprise_control_script() {
 		function get_last_username() {
 
 			line_with_last_user=$(grep -E "username:" "${wpe_logfile}" | tail -1)
-			[[ ${line_with_last_user} =~ username:[[:space:]](.*) ]] && last_username="${BASH_REMATCH[1]}"
+			[[ ${line_with_last_user} =~ username:[[:blank:]]+(.*) ]] && last_username="${BASH_REMATCH[1]}"
 		}
 	EOF
 
