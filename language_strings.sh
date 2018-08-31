@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180829
+#Date.........: 20180831
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -7149,6 +7149,42 @@ function language_strings() {
 	arr["POLISH",533]="${pending_of_translation} Przechwycone pliki zostały zapisane w katalogu [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
 	arr["GERMAN",533]="${pending_of_translation} Die erfassten Dateien wurden im Verzeichnis gespeichert [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
 	arr["TURKISH",533]="${pending_of_translation} Yakalanan dosyalar dizine kaydedildi [${normal_color}${enterprise_completepath}${pink_color}]${blue_color}"
+
+	arr["ENGLISH",534]="1.  Personal"
+	arr["SPANISH",534]="1.  Personal"
+	arr["FRENCH",534]="${pending_of_translation} 1.  Personal"
+	arr["CATALAN",534]="${pending_of_translation} 1.  Personal"
+	arr["PORTUGUESE",534]="${pending_of_translation} 1.  Personal"
+	arr["RUSSIAN",534]="${pending_of_translation} 1.  Personal"
+	arr["GREEK",534]="${pending_of_translation} 1.  Personal"
+	arr["ITALIAN",534]="${pending_of_translation} 1.  Personal"
+	arr["POLISH",534]="${pending_of_translation} 1.  Personal"
+	arr["GERMAN",534]="${pending_of_translation} 1.  Personal"
+	arr["TURKISH",534]="${pending_of_translation} 1.  Personal"
+
+	arr["ENGLISH",535]="2.  Enterprise"
+	arr["SPANISH",535]="2.  Enterprise"
+	arr["FRENCH",535]="${pending_of_translation} 2.  Enterprise"
+	arr["CATALAN",535]="${pending_of_translation} 2.  Enterprise"
+	arr["PORTUGUESE",535]="${pending_of_translation} 2.  Enterprise"
+	arr["RUSSIAN",535]="${pending_of_translation} 2.  Enterprise"
+	arr["GREEK",535]="${pending_of_translation} 2.  Enterprise"
+	arr["ITALIAN",535]="${pending_of_translation} 2.  Enterprise"
+	arr["POLISH",535]="${pending_of_translation} 2.  Enterprise"
+	arr["GERMAN",535]="${pending_of_translation} 2.  Enterprise"
+	arr["TURKISH",535]="${pending_of_translation} 2.  Enterprise"
+
+	arr["ENGLISH",536]="0.  Return to offline WPA/WPA2 decrypt menu"
+	arr["SPANISH",536]="0.  Volver al menú de desencriptado WPA/WPA2 offline"
+	arr["FRENCH",536]="${pending_of_translation} 0.  Retour au menu crack WPA/WPA2 offline"
+	arr["CATALAN",536]="${pending_of_translation} 0.  Tornar al menú per desxifrar WPA/WPA2 offline"
+	arr["PORTUGUESE",536]="${pending_of_translation} 0.  Voltar ao menu de descriptografia WPA/WPA2 offline"
+	arr["RUSSIAN",536]="${pending_of_translation} 0.  Вернуться в меню офлайн расшифровки WPA/WPA2"
+	arr["GREEK",536]="${pending_of_translation} 0.  Επιστροφή στο μενού offline αποκρυπτογράφησης WPA/WPA2"
+	arr["ITALIAN",536]="${pending_of_translation} 0.  Tornare al menù per decifrare WPA/WPA2 offline"
+	arr["POLISH",536]="${pending_of_translation} 0.  Wróć do menu deszyfrowania WPA/WPA2 offline"
+	arr["GERMAN",536]="${pending_of_translation} 0.  Zurück zum Offline-WPA/WPA2-Entschlüsselungsmenü"
+	arr["TURKISH",536]="${pending_of_translation} 0.  Çevrimdışı WPA/WPA2 şifre çözme menüsüne dön"
 
 	case "${3}" in
 		"yellow")

@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180829
+#Date.........: 20180831
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -300,7 +300,9 @@ declare main_hints=(128 134 163 437 438 442 445 516)
 declare dos_hints=(129 131 133)
 declare handshake_hints=(127 130 132 136)
 declare handshake_attack_hints=(142)
-declare decrypt_hints=(171 178 179 208 244 163)
+declare decrypt_hints=(171 179 208 244 163)
+declare personal_decrypt_hints=(171 178 179 208 244 163)
+declare enterprise_decrypt_hints=(171 179 208 244 163) #TODO jtr hint
 declare select_interface_hints=(246)
 declare language_hints=(250 438)
 declare option_hints=(445 250 448 477)
@@ -4054,7 +4056,7 @@ function initialize_menu_and_print_selections() {
 		"main_menu")
 			print_iface_selected
 		;;
-		"decrypt_menu")
+		"decrypt_menu"|"personal_decrypt_menu"|"enterprise_decrypt_menu")
 			print_decrypt_vars
 		;;
 		"handshake_tools_menu")
@@ -4290,6 +4292,20 @@ function print_hint() {
 			((hintlength--))
 			randomhint=$(shuf -i 0-"${hintlength}" -n 1)
 			strtoprint=${hints[decrypt_hints|${randomhint}]}
+		;;
+		"personal_decrypt_menu")
+			store_array hints personal_decrypt_hints "${personal_decrypt_hints[@]}"
+			hintlength=${#personal_decrypt_hints[@]}
+			((hintlength--))
+			randomhint=$(shuf -i 0-"${hintlength}" -n 1)
+			strtoprint=${hints[personal_decrypt_hints|${randomhint}]}
+		;;
+		"enterprise_decrypt_menu")
+			store_array hints enterprise_decrypt_hints "${enterprise_decrypt_hints[@]}"
+			hintlength=${#enterprise_decrypt_hints[@]}
+			((hintlength--))
+			randomhint=$(shuf -i 0-"${hintlength}" -n 1)
+			strtoprint=${hints[enterprise_decrypt_hints|${randomhint}]}
 		;;
 		"select_interface_menu")
 			store_array hints select_interface_hints "${select_interface_hints[@]}"
@@ -5188,6 +5204,42 @@ function decrypt_menu() {
 	language_strings "${language}" 47 "green"
 	print_simple_separator
 	language_strings "${language}" 59
+	language_strings "${language}" 534
+	language_strings "${language}" 535
+	print_hint ${current_menu}
+
+	read -r decrypt_option
+	case ${decrypt_option} in
+		0)
+			return
+		;;
+		1)
+			personal_decrypt_menu
+		;;
+		2)
+			enterprise_decrypt_menu
+		;;
+		*)
+			invalid_menu_option
+		;;
+	esac
+
+	decrypt_menu
+}
+
+#Offline personal decryption attacks menu
+function personal_decrypt_menu() {
+
+	debug_print
+
+	clear
+	language_strings "${language}" 170 "title"
+	current_menu="personal_decrypt_menu"
+	initialize_menu_and_print_selections
+	echo
+	language_strings "${language}" 47 "green"
+	print_simple_separator
+	language_strings "${language}" 536
 	language_strings "${language}" 176 "separator"
 	language_strings "${language}" 172
 	language_strings "${language}" 175 aircrack_attacks_dependencies[@]
@@ -5197,27 +5249,27 @@ function decrypt_menu() {
 	language_strings "${language}" 232 hashcat_attacks_dependencies[@]
 	print_hint ${current_menu}
 
-	read -r decrypt_option
-	case ${decrypt_option} in
+	read -r personal_decrypt_option
+	case ${personal_decrypt_option} in
 		0)
 			return
 		;;
 		1)
-			if contains_element "${decrypt_option}" "${forbidden_options[@]}"; then
+			if contains_element "${personal_decrypt_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
 				aircrack_dictionary_attack_option
 			fi
 		;;
 		2)
-			if contains_element "${decrypt_option}" "${forbidden_options[@]}"; then
+			if contains_element "${personal_decrypt_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
 				aircrack_bruteforce_attack_option
 			fi
 		;;
 		3)
-			if contains_element "${decrypt_option}" "${forbidden_options[@]}"; then
+			if contains_element "${personal_decrypt_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
 				get_hashcat_version
@@ -5226,7 +5278,7 @@ function decrypt_menu() {
 			fi
 		;;
 		4)
-			if contains_element "${decrypt_option}" "${forbidden_options[@]}"; then
+			if contains_element "${personal_decrypt_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
 				get_hashcat_version
@@ -5235,7 +5287,7 @@ function decrypt_menu() {
 			fi
 		;;
 		5)
-			if contains_element "${decrypt_option}" "${forbidden_options[@]}"; then
+			if contains_element "${personal_decrypt_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
 				get_hashcat_version
@@ -5248,7 +5300,16 @@ function decrypt_menu() {
 		;;
 	esac
 
-	decrypt_menu
+	personal_decrypt_menu
+}
+
+#Offline enterprise decryption attacks menu
+#TODO enterprise_decrypt_menu
+function enterprise_decrypt_menu() {
+
+	debug_print
+
+	under_construction_message
 }
 
 #Read the user input on rules file questions
