@@ -6818,7 +6818,7 @@ function language_strings() {
 	arr["GREEK",518]="Η γλώσσα άλλαξε στα Τουρκικά"
 	arr["ITALIAN",518]="Lingua cambiata a Turco"
 	arr["POLISH",518]="Zmieniono język na Turecki"
-	arr["GERMAN",518]="${pending_of_translation} Sprache wurde auf Türkisch geändert"
+	arr["GERMAN",518]="Sprache wurde auf Türkisch geändert"
 	arr["TURKISH",518]="Dil Türkçe olarak değiştirildi"
 
 	arr["ENGLISH",519]="11. Turkish"
@@ -6830,7 +6830,7 @@ function language_strings() {
 	arr["GREEK",519]="11. Τουρκικά"
 	arr["ITALIAN",519]="11. Turco"
 	arr["POLISH",519]=" 11. Turecki"
-	arr["GERMAN",519]="${pending_of_translation} 11. Türkisch"
+	arr["GERMAN",519]=" 11. Türkisch"
 	arr["TURKISH",519]="11. Türkçe"
 
 	case "${3}" in
