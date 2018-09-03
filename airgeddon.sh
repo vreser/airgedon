@@ -3966,7 +3966,7 @@ function print_all_target_vars_wps() {
 	fi
 }
 
-#Print selected target parameters on decrypt menu (bssid, Handshake file, dictionary file and rules file)
+#Print selected target parameters on decrypt menu (bssid, Handshake file, dictionary file, rules file and enterprise stuff)
 function print_decrypt_vars() {
 
 	debug_print
@@ -3990,6 +3990,56 @@ function print_decrypt_vars() {
 	if [ -n "${RULES}" ]; then
 		language_strings "${language}" 243 "blue"
 	fi
+
+	#TODO print enterprise decryption vars
+}
+
+#Print selected target parameters on personal decrypt menu (bssid, Handshake file, dictionary file and rules file)
+function print_personal_decrypt_vars() {
+
+	debug_print
+
+	if [ -n "${bssid}" ]; then
+		language_strings "${language}" 43 "blue"
+	else
+		language_strings "${language}" 185 "blue"
+	fi
+
+	if [ -n "${enteredpath}" ]; then
+		language_strings "${language}" 173 "blue"
+	else
+		language_strings "${language}" 177 "blue"
+	fi
+
+	if [ -n "${DICTIONARY}" ]; then
+		language_strings "${language}" 182 "blue"
+	fi
+
+	if [ -n "${RULES}" ]; then
+		language_strings "${language}" 243 "blue"
+	fi
+}
+
+#Print selected target parameters on enterprise decrypt menu (bssid, dictionary file, rules file and hashes files)
+function print_enterprise_decrypt_vars() {
+
+	debug_print
+
+	if [ -n "${bssid}" ]; then
+		language_strings "${language}" 43 "blue"
+	else
+		language_strings "${language}" 185 "blue"
+	fi
+
+	if [ -n "${DICTIONARY}" ]; then
+		language_strings "${language}" 182 "blue"
+	fi
+
+	if [ -n "${RULES}" ]; then
+		language_strings "${language}" 243 "blue"
+	fi
+
+	#TODO print enterprise decryption vars
 }
 
 #Create the dependencies arrays
@@ -4057,8 +4107,14 @@ function initialize_menu_and_print_selections() {
 		"main_menu")
 			print_iface_selected
 		;;
-		"decrypt_menu"|"personal_decrypt_menu"|"enterprise_decrypt_menu")
+		"decrypt_menu")
 			print_decrypt_vars
+		;;
+		"personal_decrypt_menu")
+			print_personal_decrypt_vars
+		;;
+		"enterprise_decrypt_menu")
+			print_enterprise_decrypt_vars
 		;;
 		"handshake_tools_menu")
 			print_iface_selected
