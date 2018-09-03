@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180831
+#Date.........: 20180903
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -248,6 +248,7 @@ et_successfile="ag.et_success.txt"
 enterprise_successfile="ag.enterprise_success.txt"
 et_processesfile="ag.et_processes.txt"
 enterprise_processesfile="ag.enterprise_processes.txt"
+asleap_pot_tmp="ag.asleap_tmp.txt"
 channelfile="ag.et_channel.txt"
 possible_dhcp_leases_files=(
 								"/var/lib/dhcp/dhcpd.leases"
@@ -4166,6 +4167,7 @@ function clean_tmpfiles() {
 	rm -rf "${tmpdir}${webserver_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${webdir}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${enterprisedir}" > /dev/null 2>&1
+	rm -rf "${tmpdir}${asleap_pot_tmp}" > /dev/null 2>&1
 	if [ "${dhcpd_path_changed}" -eq 1 ]; then
 		rm -rf "${dhcp_path}" > /dev/null 2>&1
 	fi
@@ -5805,6 +5807,45 @@ function manage_aircrack_pot() {
 	fi
 }
 
+#Check if the password was decrypted using asleap and manage to save it on a file
+function manage_asleap_pot() {
+
+	debug_print
+
+	asleap_output=$(cat "${tmpdir}${asleap_pot_tmp}")
+
+	if [[ "${asleap_output}" =~ password:[[:blank:]]+(.*) ]]; then
+
+		rm -rf "${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt" > /dev/null 2>&1
+
+		{
+		echo ""
+		date +%Y-%m-%d
+		echo "${asleap_texts[${language},1]}"
+		echo ""
+		echo "ESSID: ${essid}"
+		echo "BSSID: ${bssid}"
+		echo ""
+		echo "---------------"
+		echo ""
+		echo "${enterprise_username} / ${BASH_REMATCH[1]}"
+		} >> "${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt"
+
+		add_contributing_footer_to_file "${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt"
+
+		echo
+		language_strings "${language}" 234 "yellow"
+		echo
+		language_strings "${language}" 539 "blue"
+		language_strings "${language}" 115 "read"
+	else
+		echo
+		language_strings "${language}" 540 "red"
+		echo
+		language_strings "${language}" 115 "read"
+	fi
+}
+
 #Check if the passwords were captured using ettercap and manage to save them on a file
 function manage_ettercap_log() {
 
@@ -5973,6 +6014,7 @@ function parse_from_enterprise() {
 	local passwords=()
 	local line_to_check
 	local text_to_check
+	declare -gA enterprise_captured_challenges_responses
 
 	readarray -t CAPTURED_USERNAMES < <(grep -n -E "username:" "${tmpdir}${hostapd_wpe_log}" | sort -k 2,2 | uniq --skip-fields=1 2> /dev/null)
 	for item in "${CAPTURED_USERNAMES[@]}"; do
@@ -5980,39 +6022,24 @@ function parse_from_enterprise() {
 		line_to_check=$((line_number + 1))
 		text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
 
-		case ${1} in
-			"hashes")
-				if [[ "${text_to_check}" =~ challenge: ]]; then
-					line_to_check=$((line_number + 3))
-					text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
-					[[ "${text_to_check}" =~ jtr[[:blank:]]NETNTLM:[[:blank:]]+(.*) ]] && john_hashes+=("${BASH_REMATCH[1]}")
+		if [[ "${text_to_check}" =~ challenge:[[:blank:]]+(.*) ]]; then
+			enterprise_captured_challenges_responses["${username}"]="${BASH_REMATCH[1]}"
+			line_to_check=$((line_number + 2))
+			text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
+			[[ "${text_to_check}" =~ response:[[:blank:]]+(.*) ]] && enterprise_captured_challenges_responses["${username}"]+=" / ${BASH_REMATCH[1]}"
 
-					line_to_check=$((line_number + 4))
-					text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
-					[[ "${text_to_check}" =~ hashcat[[:blank:]]NETNTLM:[[:blank:]]+(.*) ]] && hashcat_hashes+=("${BASH_REMATCH[1]}")
-				fi
-			;;
-			"passwords")
-				if [[ "${text_to_check}" =~ password:[[:blank:]]+(.*) ]]; then
-					passwords+=("${username} / ${BASH_REMATCH[1]}")
-				fi
-			;;
-			"both")
-				if [[ "${text_to_check}" =~ challenge: ]]; then
-					line_to_check=$((line_number + 3))
-					text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
-					[[ "${text_to_check}" =~ jtr[[:blank:]]NETNTLM:[[:blank:]]+(.*) ]] && john_hashes+=("${BASH_REMATCH[1]}")
+			line_to_check=$((line_number + 3))
+			text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
+			[[ "${text_to_check}" =~ jtr[[:blank:]]NETNTLM:[[:blank:]]+(.*) ]] && john_hashes+=("${BASH_REMATCH[1]}")
 
-					line_to_check=$((line_number + 4))
-					text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
-					[[ "${text_to_check}" =~ hashcat[[:blank:]]NETNTLM:[[:blank:]]+(.*) ]] && hashcat_hashes+=("${BASH_REMATCH[1]}")
-				fi
+			line_to_check=$((line_number + 4))
+			text_to_check=$(sed "${line_to_check}q;d" "${tmpdir}${hostapd_wpe_log}" 2> /dev/null)
+			[[ "${text_to_check}" =~ hashcat[[:blank:]]NETNTLM:[[:blank:]]+(.*) ]] && hashcat_hashes+=("${BASH_REMATCH[1]}")
+		fi
 
-				if [[ "${text_to_check}" =~ password:[[:blank:]]+(.*) ]]; then
-					passwords+=("${username} / ${BASH_REMATCH[1]}")
-				fi
-			;;
-		esac
+		if [[ "${text_to_check}" =~ password:[[:blank:]]+(.*) ]]; then
+			passwords+=("${username} / ${BASH_REMATCH[1]}")
+		fi
 	done
 
 	prepare_enterprise_trophy_dir
@@ -6031,6 +6058,8 @@ function parse_from_enterprise() {
 			write_enterprise_passwords_file "${passwords[@]}"
 		;;
 	esac
+
+	enterprise_username="${username}"
 }
 
 #Prepare dir for enterprise trophy files
@@ -6071,6 +6100,7 @@ function write_enterprise_passwords_file() {
 	date +%Y-%m-%d
 	echo "${enterprise_texts[${language},11]}"
 	echo ""
+	echo "ESSID: ${essid}"
 	echo "BSSID: ${bssid}"
 	echo ""
 	echo "---------------"
@@ -6400,8 +6430,39 @@ function exec_enterprise_attack() {
 	fi
 	restore_et_interface
 	handle_enterprise_log
-	#TODO check if hash was captured to start asleap process after asking user
+
+	ask_yesno 537 "no"
+	if [ "${yesno}" = "y" ]; then
+		if [ ${enterprise_mode} = "noisy" ]; then
+			#TODO pending to print a menu with usernames with captured challenges and responses for noisy mode
+			:
+		fi
+
+		echo
+		language_strings "${language}" 538 "blue"
+
+		#TODO possibility to redo attack if failed. Possible loop
+		ask_dictionary
+		echo
+		exec_asleap_attack
+		manage_asleap_pot
+	fi
 	clean_tmpfiles
+}
+
+#Execute asleap attack
+function exec_asleap_attack() {
+
+	debug_print
+
+	local challenge
+	local response
+
+	rm -rf "${tmpdir}${asleap_pot_tmp}" > /dev/null 2>&1
+
+	[[ "${enterprise_captured_challenges_responses[${enterprise_username}]}" =~ (([0-9a-zA-Z]{2}:?)+)[[:blank:]]/[[:blank:]](.*) ]] && challenge="${BASH_REMATCH[1]}" && response="${BASH_REMATCH[3]}"
+	asleap_cmd="asleap -C \"${challenge}\" -R \"${response}\" -W \"${DICTIONARY}\" -v | tee \"${tmpdir}${asleap_pot_tmp}\" ${colorize}"
+	eval "${asleap_cmd}"
 }
 
 #Execute Evil Twin only Access Point attack

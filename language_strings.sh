@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180831
+#Date.........: 20180903
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -553,6 +553,19 @@ function language_strings() {
 	wep_texts["GERMAN",7]="Drücken Sie [Enter] im Hauptfenster des Skripts um fortzufahren. Dieses Fenster wird geschlossen"
 	wep_texts["TURKISH",7]="Yazılımın ana penceresinde [Enter] tuşlayarak devam ediniz. Bu pencere kapatılacak"
 
+	declare -gA asleap_texts
+	asleap_texts["ENGLISH",1]="airgeddon. Decrypted password using asleap"
+	asleap_texts["SPANISH",1]="airgeddon. Contraseña desencriptada con asleap"
+	asleap_texts["FRENCH",1]="airgeddon. Mot de passe déchiffré avec asleap"
+	asleap_texts["CATALAN",1]="airgeddon. Contrasenya desencriptada amb asleap"
+	asleap_texts["PORTUGUESE",1]="airgeddon descriptografou a senha usando asleap"
+	asleap_texts["RUSSIAN",1]="airgeddon. Пароль расшифрован с использованием asleap"
+	asleap_texts["GREEK",1]="airgeddon. Αποκρυπτογραφημένος κωδικός πρόσβασης με χρήση asleap"
+	asleap_texts["ITALIAN",1]="airgeddon. Password decifrata con asleap"
+	asleap_texts["POLISH",1]="airgeddon. Hasło odszyfrowane z użyciem asleap"
+	asleap_texts["GERMAN",1]="airgeddon. Passwort mit asleap entschlüsselt"
+	asleap_texts["TURKISH",1]="airgeddon. asleap kullanarak şifreyi çözdü"
+
 	declare -gA hashcat_texts
 	hashcat_texts["ENGLISH",1]="airgeddon. Decrypted password using hashcat"
 	hashcat_texts["SPANISH",1]="airgeddon. Contraseña desencriptada con hashcat"
@@ -688,17 +701,17 @@ function language_strings() {
 	enterprise_texts["GERMAN",8]="${pending_of_translation} Erfasste Klartextpasswörter"
 	enterprise_texts["TURKISH",8]="${pending_of_translation} Yakalanan düz metinde şifreler"
 
-	enterprise_texts["ENGLISH",9]="Press [Enter] on the main script window to continue, this window will be closed"
-	enterprise_texts["SPANISH",9]="Pulsa [Enter] en la ventana principal del script para continuar, esta ventana se cerrará"
-	enterprise_texts["FRENCH",9]="Appuyez sur [Enter] dans la fenêtre principale du script pour continuer, cette fenêtre se fermera"
-	enterprise_texts["CATALAN",9]="Prem [Enter] a la finestra principal del script per continuar, aquesta finestra es tancarà"
-	enterprise_texts["PORTUGUESE",9]="Pressione [Enter] na janela principal do script para continuar e esta janela será fechada"
-	enterprise_texts["RUSSIAN",9]="Нажмите [Enter] в главном окне для продолжения, это окно будет закрыто"
-	enterprise_texts["GREEK",9]="Πατήστε [Enter] στο κύριο παράθυρο του script για να συνεχίσετε, το παράθυρο αυτό θα κλείσει"
-	enterprise_texts["ITALIAN",9]="Premere il tasto [Enter] nella finestra principale dello script per continuare, questa finestra si chiuderà"
-	enterprise_texts["POLISH",9]="Wciśnij [Enter] w oknie głównym skryptu aby kontynuować, to okno zostanie zamknięte"
-	enterprise_texts["GERMAN",9]="Drücken Sie [Enter] im Hauptfenster um fortzufahren, dieses Fenster wird geschlossen"
-	enterprise_texts["TURKISH",9]="Devam etmek için [Enter] tuşuna basınız, bu sayfa kapatılacaktır"
+	enterprise_texts["ENGLISH",9]="Press [Enter] on the main script window to continue, this window will be closed and the files will be generated"
+	enterprise_texts["SPANISH",9]="Pulsa [Enter] en la ventana principal del script para continuar, esta ventana se cerrará y los ficheros serán generados"
+	enterprise_texts["FRENCH",9]="${pending_of_translation} Appuyez sur [Enter] dans la fenêtre principale du script pour continuer, cette fenêtre se fermera et les fichiers seront générés"
+	enterprise_texts["CATALAN",9]="${pending_of_translation} Prem [Enter] a la finestra principal del script per continuar, aquesta finestra es tancarà i els fitxers seran generats"
+	enterprise_texts["PORTUGUESE",9]="${pending_of_translation} Pressione [Enter] na janela principal do script para continuar e esta janela será fechada e os arquivos serão gerados"
+	enterprise_texts["RUSSIAN",9]="${pending_of_translation} Нажмите [Enter] в главном окне для продолжения, это окно будет закрыто и файлы будут сгенерированы"
+	enterprise_texts["GREEK",9]="${pending_of_translation} Πατήστε [Enter] στο κύριο παράθυρο του script για να συνεχίσετε, το παράθυρο αυτό θα κλείσει και θα δημιουργηθούν τα αρχεία"
+	enterprise_texts["ITALIAN",9]="${pending_of_translation} Premere il tasto [Enter] nella finestra principale dello script per continuare, questa finestra si chiuderà e i file verranno generati"
+	enterprise_texts["POLISH",9]="${pending_of_translation} Wciśnij [Enter] w oknie głównym skryptu aby kontynuować, to okno zostanie zamknięte i pliki zostaną wygenerowane"
+	enterprise_texts["GERMAN",9]="${pending_of_translation} Drücken Sie [Enter] im Hauptfenster um fortzufahren, dieses Fenster wird geschlossen und die Dateien werden generiert"
+	enterprise_texts["TURKISH",9]="${pending_of_translation} Devam etmek için [Enter] tuşuna basınız, bu sayfa kapatılacaktır ve dosyalar oluşturulacak"
 
 	enterprise_texts["ENGLISH",10]="The captured files will be saved on directory"
 	enterprise_texts["SPANISH",10]="Los ficheros capturados se guardarán en el directorio"
@@ -7102,11 +7115,11 @@ function language_strings() {
 	arr["GERMAN",529]="${pending_of_translation} Es sieht so aus, als wäre nichts während des Angriffs von Evil Twin Enterprise gefangen worden"
 	arr["TURKISH",529]="${pending_of_translation} Evil Twin Enterprise saldırısı sırasında yakalanan hiçbir şey yok gibi görünüyor"
 
-	arr["ENGLISH",530]="Contratulations!! It seems you captured some hash/es"
+	arr["ENGLISH",530]="Contratulations!! It seems you captured some hashes"
 	arr["SPANISH",530]="Enhorabuena!! Parece que has capturado algún hash"
 	arr["FRENCH",530]="${pending_of_translation} Félicitations!! Il semble que vous ayez capturé du hash"
-	arr["CATALAN",530]="${pending_of_translation} Enhorabona!! Sembla que has capturat algun hash/es"
-	arr["PORTUGUESE",530]="${pending_of_translation} Parabéns!! Parece que você capturou algum hash/es"
+	arr["CATALAN",530]="${pending_of_translation} Enhorabona!! Sembla que has capturat algun hash"
+	arr["PORTUGUESE",530]="${pending_of_translation} Parabéns!! Parece que você capturou algum hashes"
 	arr["RUSSIAN",530]="${pending_of_translation} Поздравления!! Кажется, вы захватили некоторый хэш"
 	arr["GREEK",530]="${pending_of_translation} Συγχαρητήρια!! Φαίνεται ότι έχετε συλλάβει κάποιο hash"
 	arr["ITALIAN",530]="${pending_of_translation} Congratulazioni!! Sembra che tu abbia catturato qualche hash"
@@ -7185,6 +7198,57 @@ function language_strings() {
 	arr["POLISH",536]="${pending_of_translation} 0.  Wróć do menu deszyfrowania WPA/WPA2 offline"
 	arr["GERMAN",536]="${pending_of_translation} 0.  Zurück zum Offline-WPA/WPA2-Entschlüsselungsmenü"
 	arr["TURKISH",536]="${pending_of_translation} 0.  Çevrimdışı WPA/WPA2 şifre çözme menüsüne dön"
+
+	arr["ENGLISH",537]="Do you want to try to decrypt captured stuff? ${blue_color}Asleap tool will be used. If you answer no \"n\" you'll can try to do it later using hashcat or john the ripper from the offline WPA/WPA2 decrypt menu ${normal_color}${visual_choice}"
+	arr["SPANISH",537]="¿Quieres intentar descifrar lo capturado? ${blue_color}Se utilizará la herramienta asleap. Si respondes no \"n\" podrás intentarlo más tarde utilizando hashcat o john the ripper desde el menú de desencriptado offline WPA/WPA2 ${normal_color}${visual_choice}"
+	#TODO translate this stuff
+	arr["FRENCH",537]="${pending_of_translation} "
+	arr["CATALAN",537]="${pending_of_translation} "
+	arr["PORTUGUESE",537]="${pending_of_translation} "
+	arr["RUSSIAN",537]="${pending_of_translation} "
+	arr["GREEK",537]="${pending_of_translation} "
+	arr["ITALIAN",537]="${pending_of_translation} "
+	arr["POLISH",537]="${pending_of_translation} "
+	arr["GERMAN",537]="${pending_of_translation} "
+	arr["TURKISH",537]="${pending_of_translation} "
+
+	arr["ENGLISH",538]="The password for the username ${normal_color}${enterprise_username}${blue_color} will be tried to be decrypted with asleap tool using challenge and response: ${normal_color}${enterprise_captured_challenges_responses[${enterprise_username}]}"
+	arr["SPANISH",538]="Se procederá a intentar descifrar con la herramienta asleap la contraseña del usuario ${normal_color}${enterprise_username}${blue_color} cuyo challenge y response son: ${normal_color}${enterprise_captured_challenges_responses[${enterprise_username}]}"
+	#TODO translate this stuff
+	arr["FRENCH",538]="${pending_of_translation} "
+	arr["CATALAN",538]="${pending_of_translation} "
+	arr["PORTUGUESE",538]="${pending_of_translation} "
+	arr["RUSSIAN",538]="${pending_of_translation} "
+	arr["GREEK",538]="${pending_of_translation} "
+	arr["ITALIAN",538]="${pending_of_translation} "
+	arr["POLISH",538]="${pending_of_translation} "
+	arr["GERMAN",538]="${pending_of_translation} "
+	arr["TURKISH",538]="${pending_of_translation} "
+
+	arr["ENGLISH",539]="Asleap trophy file generated successfully at [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+	arr["SPANISH",539]="Fichero de trofeo asleap generado con éxito en [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+	arr["FRENCH",539]="Le fichier trophée asleap a bien été crée dans [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+	arr["CATALAN",539]="Fitxer de trofeu asleap generat amb èxit a [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+	arr["PORTUGUESE",539]="Arquivo de troféu asleap gerado com sucesso [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+	arr["RUSSIAN",539]="Трофейный файл asleap был успешно сгенерирован в [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+	arr["GREEK",539]="Το asleap αρχείο τρόπαιο δημιουργήθηκε επιτυχώς [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+	arr["ITALIAN",539]="File di trofeo di asleap generato con successo [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+	arr["POLISH",539]="Plik trofeum asleap został pomyślnie wygenerowany w [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+	arr["GERMAN",539]="Trophäen-Datei-Asleap erfolgreich in [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}] generiert"
+	arr["TURKISH",539]="Asleap trophy dosyası başarıyla şurada oluşturuldu [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+
+	arr["ENGLISH",540]="It seems we failed... try it again choosing using bruteforce or rule based attack from the offline WPA/WPA2 decrypt menu"
+	arr["SPANISH",540]="Parece que no lo hemos conseguido... inténtalo de nuevo por fuerza bruta o un ataque basado en reglas desde el menú de desencriptado offline WPA/WPA2"
+	#TODO translate this stuff
+	arr["FRENCH",540]="${pending_of_translation} "
+	arr["CATALAN",540]="${pending_of_translation} "
+	arr["PORTUGUESE",540]="${pending_of_translation} "
+	arr["RUSSIAN",540]="${pending_of_translation} "
+	arr["GREEK",540]="${pending_of_translation} "
+	arr["ITALIAN",540]="${pending_of_translation} "
+	arr["POLISH",540]="${pending_of_translation} "
+	arr["GERMAN",540]="${pending_of_translation} "
+	arr["TURKISH",540]="${pending_of_translation} "
 
 	case "${3}" in
 		"yellow")
