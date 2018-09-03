@@ -6434,29 +6434,37 @@ function exec_enterprise_attack() {
 	fi
 	restore_et_interface
 	handle_enterprise_log
-
-	#TODO fix this. This question should be only if a hash was captured
-	ask_yesno 537 "no"
-	if [ "${yesno}" = "y" ]; then
-
-		asleap_attack_finished=0
-
-		if [ ${enterprise_mode} = "noisy" ]; then
-			#TODO pending to print a menu with usernames with captured challenges and responses for noisy mode
-			:
-		fi
-
-		echo
-		language_strings "${language}" 538 "blue"
-
-		while [[ "${asleap_attack_finished}" != "1" ]]; do
-			ask_dictionary
-			echo
-			exec_asleap_attack
-			manage_asleap_pot
-		done
-	fi
+	handle_asleap_attack
 	clean_tmpfiles
+}
+
+#Manage and handle asleap attack integrated on Evil Twin and Enterprise
+function handle_asleap_attack() {
+
+	debug_print
+
+	if [ -f "${tmpdir}${enterprisedir}${enterprise_successfile}" ]; then
+		ask_yesno 537 "no"
+		if [ "${yesno}" = "y" ]; then
+
+			asleap_attack_finished=0
+
+			if [ ${enterprise_mode} = "noisy" ]; then
+				#TODO pending to print a menu with usernames with captured challenges and responses for noisy mode
+				:
+			fi
+
+			echo
+			language_strings "${language}" 538 "blue"
+
+			while [[ "${asleap_attack_finished}" != "1" ]]; do
+				ask_dictionary
+				echo
+				exec_asleap_attack
+				manage_asleap_pot
+			done
+		fi
+	fi
 }
 
 #Execute asleap attack
