@@ -7237,8 +7237,8 @@ function language_strings() {
 	arr["GERMAN",539]="Trophäen-Datei-Asleap erfolgreich in [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}] generiert"
 	arr["TURKISH",539]="Asleap trophy dosyası başarıyla şurada oluşturuldu [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
 
-	arr["ENGLISH",540]="It seems we failed... try it again choosing using bruteforce or rule based attack from the offline WPA/WPA2 decrypt menu"
-	arr["SPANISH",540]="Parece que no lo hemos conseguido... inténtalo de nuevo por fuerza bruta o un ataque basado en reglas desde el menú de desencriptado offline WPA/WPA2"
+	arr["ENGLISH",540]="It seems we failed... try it again using another dictionary or choose bruteforce/rule based attack from the offline WPA/WPA2 decrypt menu"
+	arr["SPANISH",540]="Parece que no lo hemos conseguido... inténtalo de nuevo con otro diccionario o por fuerza bruta/ataque basado en reglas desde el menú de desencriptado offline WPA/WPA2"
 	#TODO translate this stuff
 	arr["FRENCH",540]="${pending_of_translation} "
 	arr["CATALAN",540]="${pending_of_translation} "
@@ -7249,6 +7249,19 @@ function language_strings() {
 	arr["POLISH",540]="${pending_of_translation} "
 	arr["GERMAN",540]="${pending_of_translation} "
 	arr["TURKISH",540]="${pending_of_translation} "
+
+	arr["ENGLISH",541]="Do you want to retry asleap attack using another dictionary? ${normal_color}${visual_choice}"
+	arr["SPANISH",541]="¿Quieres intentar de nuevo el ataque con asleap utilizando otro diccionario? ${normal_color}${visual_choice}"
+	#TODO translate this stuff
+	arr["FRENCH",541]="${pending_of_translation} "
+	arr["CATALAN",541]="${pending_of_translation} "
+	arr["PORTUGUESE",541]="${pending_of_translation} "
+	arr["RUSSIAN",541]="${pending_of_translation} "
+	arr["GREEK",541]="${pending_of_translation} "
+	arr["ITALIAN",541]="${pending_of_translation} "
+	arr["POLISH",541]="${pending_of_translation} "
+	arr["GERMAN",541]="${pending_of_translation} "
+	arr["TURKISH",541]="${pending_of_translation} "
 
 	case "${3}" in
 		"yellow")

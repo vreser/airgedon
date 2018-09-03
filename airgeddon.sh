@@ -5816,6 +5816,7 @@ function manage_asleap_pot() {
 
 	if [[ "${asleap_output}" =~ password:[[:blank:]]+(.*) ]]; then
 
+		asleap_attack_finished=1
 		rm -rf "${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt" > /dev/null 2>&1
 
 		{
@@ -5841,8 +5842,11 @@ function manage_asleap_pot() {
 	else
 		echo
 		language_strings "${language}" 540 "red"
-		echo
-		language_strings "${language}" 115 "read"
+
+		ask_yesno 541 "no"
+		if [ "${yesno}" = "n" ]; then
+			asleap_attack_finished=1
+		fi
 	fi
 }
 
@@ -6431,8 +6435,12 @@ function exec_enterprise_attack() {
 	restore_et_interface
 	handle_enterprise_log
 
+	#TODO fix this. This question should be only if a hash was captured
 	ask_yesno 537 "no"
 	if [ "${yesno}" = "y" ]; then
+
+		asleap_attack_finished=0
+
 		if [ ${enterprise_mode} = "noisy" ]; then
 			#TODO pending to print a menu with usernames with captured challenges and responses for noisy mode
 			:
@@ -6441,11 +6449,12 @@ function exec_enterprise_attack() {
 		echo
 		language_strings "${language}" 538 "blue"
 
-		#TODO possibility to redo attack if failed. Possible loop
-		ask_dictionary
-		echo
-		exec_asleap_attack
-		manage_asleap_pot
+		while [[ "${asleap_attack_finished}" != "1" ]]; do
+			ask_dictionary
+			echo
+			exec_asleap_attack
+			manage_asleap_pot
+		done
 	fi
 	clean_tmpfiles
 }
