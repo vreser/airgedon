@@ -2,6 +2,11 @@
  - New WPA/WPA2 enterprise attacks menu
  - Compatibility extended to Linux Mint 18.x
 
+### 8.12
+ - Fixed error on WPS attacks for strange chars in some SSIDs
+ - Tested compatibility with Kali 2018.3, Fedora 28, Backbox 5.x and BlackArch 2018.06.01
+ - Added prompt symbol for every user interaction
+
 ### 8.11
  - Turkish language translation added (Thank you to "UN5T48L3")
  - Extended cards compatibility. Now airmon non compatible cards can be used

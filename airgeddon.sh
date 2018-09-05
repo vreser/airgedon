@@ -1593,7 +1593,7 @@ function option_menu() {
 	language_strings "${language}" 447
 	print_hint ${current_menu}
 
-	read -r option_selected
+	read -rp "> " option_selected
 	case ${option_selected} in
 		0)
 			return
@@ -1752,7 +1752,7 @@ function language_menu() {
 	language_strings "${language}" 519
 	print_hint ${current_menu}
 
-	read -r language_selected
+	read -rp "> " language_selected
 	echo
 	case ${language_selected} in
 		0)
@@ -2085,7 +2085,7 @@ function select_secondary_et_interface() {
 	fi
 	print_hint ${current_menu}
 
-	read -r secondary_iface
+	read -rp "> " secondary_iface
 	if [ "${secondary_iface}" -eq 0 ]; then
 		if [ -n "${enterprise_mode}" ]; then
 			return_to_enterprise_main_menu=1
@@ -2159,7 +2159,7 @@ function select_interface() {
 	done
 	print_hint ${current_menu}
 
-	read -r iface
+	read -rp "> " iface
 	if [[ ! ${iface} =~ ^[[:digit:]]+$ ]] || (( iface < 1 || iface > option_counter )); then
 		invalid_iface_selected
 	else
@@ -2184,7 +2184,7 @@ function read_yesno() {
 
 	echo
 	language_strings "${language}" "${1}" "green"
-	read -r yesno
+	read -rp "> " yesno
 }
 
 #Validate the input on yes/no questions
@@ -2238,9 +2238,9 @@ function read_channel() {
 	fi
 
 	if [ "${1}" = "wps" ]; then
-		read -r wps_channel
+		read -rp "> " wps_channel
 	else
-		read -r channel
+		read -rp "> " channel
 	fi
 }
 
@@ -2299,9 +2299,9 @@ function read_bssid() {
 	echo
 	language_strings "${language}" 27 "green"
 	if [ "${1}" = "wps" ]; then
-		read -r wps_bssid
+		read -rp "> " wps_bssid
 	else
-		read -r bssid
+		read -rp "> " bssid
 	fi
 }
 
@@ -2349,7 +2349,7 @@ function read_essid() {
 
 	echo
 	language_strings "${language}" 29 "green"
-	read -r essid
+	read -rp "> " essid
 }
 
 #Validate the input on essid questions
@@ -2386,7 +2386,7 @@ function read_custom_pin() {
 
 	echo
 	language_strings "${language}" 363 "green"
-	read -r custom_pin
+	read -rp "> " custom_pin
 }
 
 #Validate the input on custom pin questions
@@ -2426,7 +2426,7 @@ function read_timeout() {
 	esac
 
 	language_strings "${language}" 393 "green"
-	read -r timeout
+	read -rp "> " timeout
 }
 
 #Validate the user input for timeouts
@@ -4464,7 +4464,7 @@ function main_menu() {
 	language_strings "${language}" 444
 	print_hint ${current_menu}
 
-	read -r main_option
+	read -rp "> " main_option
 	case ${main_option} in
 		0)
 			exit_script_option
@@ -4618,7 +4618,7 @@ function evil_twin_attacks_menu() {
 	language_strings "${language}" 263 et_captive_portal_dependencies[@]
 	print_hint ${current_menu}
 
-	read -r et_option
+	read -rp "> " et_option
 	case ${et_option} in
 		0)
 			return
@@ -4748,7 +4748,7 @@ function beef_pre_menu() {
 	language_strings "${language}" 410
 	print_hint ${current_menu}
 
-	read -r beef_option
+	read -rp "> " beef_option
 	case ${beef_option} in
 		0)
 			return
@@ -4822,7 +4822,7 @@ function wps_attacks_menu() {
 	language_strings "${language}" 494
 	print_hint ${current_menu}
 
-	read -r wps_option
+	read -rp "> " wps_option
 	case ${wps_option} in
 		0)
 			return
@@ -5033,7 +5033,7 @@ function offline_pin_generation_menu() {
 	echo "8.  Arcadyan"
 	print_hint ${current_menu}
 
-	read -r offline_pin_generation_option
+	read -rp "> " offline_pin_generation_option
 	case ${offline_pin_generation_option} in
 		0)
 			return
@@ -5217,7 +5217,7 @@ function wep_attacks_menu() {
 	language_strings "${language}" 423 wep_attack_dependencies[@]
 	print_hint ${current_menu}
 
-	read -r wep_option
+	read -rp "> " wep_option
 	case ${wep_option} in
 		0)
 			return
@@ -5307,7 +5307,7 @@ function personal_decrypt_menu() {
 	language_strings "${language}" 232 hashcat_attacks_dependencies[@]
 	print_hint ${current_menu}
 
-	read -r personal_decrypt_option
+	read -rp "> " personal_decrypt_option
 	case ${personal_decrypt_option} in
 		0)
 			return
@@ -5600,7 +5600,7 @@ function select_wpa_bssid_target_from_captured_file() {
 		while [[ ! ${target_network_on_file} =~ ^[[:digit:]]+$ ]] || (( target_network_on_file < 1 || target_network_on_file > option_counter )); do
 			echo
 			language_strings "${language}" 3 "green"
-			read -r target_network_on_file
+			read -rp "> " target_network_on_file
 		done
 
 	else
@@ -6204,7 +6204,7 @@ function set_captive_portal_language() {
 	language_strings "${language}" 519
 	print_hint ${current_menu}
 
-	read -r captive_portal_language_selected
+	read -rp "> " captive_portal_language_selected
 	echo
 	case ${captive_portal_language_selected} in
 		0)
@@ -6261,7 +6261,7 @@ function set_minlength() {
 	while [[ ! ${minlength} =~ ^[8-9]$|^[1-5][0-9]$|^6[0-3]$ ]]; do
 		echo
 		language_strings "${language}" 194 "green"
-		read -r minlength
+		read -rp "> " minlength
 	done
 }
 
@@ -6274,7 +6274,7 @@ function set_maxlength() {
 	while [[ ! ${maxlength} =~ ^[8-9]$|^[1-5][0-9]$|^6[0-3]$ ]]; do
 		echo
 		language_strings "${language}" 195 "green"
-		read -r maxlength
+		read -rp "> " maxlength
 	done
 }
 
@@ -6314,7 +6314,7 @@ function set_charset() {
 			language_strings "${language}" 206
 			language_strings "${language}" 207
 			print_hint ${current_menu}
-			read -r charset_option
+			read -rp "> " charset_option
 			case ${charset_option} in
 				1)
 					charset=${crunch_lowercasecharset}
@@ -6354,7 +6354,7 @@ function set_charset() {
 		"hashcat")
 			language_strings "${language}" 237
 			print_hint ${current_menu}
-			read -r charset_option
+			read -rp "> " charset_option
 			case ${charset_option} in
 				1)
 					charset="?l"
@@ -8106,7 +8106,7 @@ function set_captive_portal_page() {
 	echo -e "echo -e '\t\t\t<form method=\"post\" id=\"loginform\" name=\"loginform\" action=\"check.htm\">'"
 	echo -e "echo -e '\t\t\t\t<div class=\"title\">'"
 	echo -e "echo -e '\t\t\t\t\t<p>${et_misc_texts[${captive_portal_language},9]}</p>'"
-	echo -e "echo -e '\t\t\t\t\t<span class=\"bold\">${essid//\'/}</span>'"
+	echo -e "echo -e '\t\t\t\t\t<span class=\"bold\">${essid//[\`\']/}</span>'"
 	echo -e "echo -e '\t\t\t\t</div>'"
 	echo -e "echo -e '\t\t\t\t<p>${et_misc_texts[${captive_portal_language},10]}</p>'"
 	echo -e "echo -e '\t\t\t\t<label>'"
@@ -8450,7 +8450,7 @@ function manual_beef_set() {
 	while [[ "${valid_possible_beef_path}" != "1" ]]; do
 		echo
 		language_strings "${language}" 402 "green"
-		read -r manually_entered_beef_path
+		read -rp "> " manually_entered_beef_path
 		if [ -n "${manually_entered_beef_path}" ]; then
 			lastcharmanually_entered_beef_path=${manually_entered_beef_path: -1}
 			if [ "${lastcharmanually_entered_beef_path}" != "/" ]; then
@@ -8811,7 +8811,7 @@ function handshake_tools_menu() {
 	language_strings "${language}" 122 clean_handshake_dependencies[@]
 	print_hint ${current_menu}
 
-	read -r handshake_option
+	read -rp "> " handshake_option
 	case ${handshake_option} in
 		0)
 			return
@@ -8919,7 +8919,7 @@ function dos_attacks_menu() {
 	language_strings "${language}" 64 mdk3_attack_dependencies[@]
 	print_hint ${current_menu}
 
-	read -r dos_option
+	read -rp "> " dos_option
 	case ${dos_option} in
 		0)
 			return
@@ -9246,7 +9246,7 @@ function read_and_clean_path() {
 	settings="$(shopt -p extglob)"
 	shopt -s extglob
 
-	read -r var
+	read -rp "> " var
 	local regexp='^[ '"'"']*(.*[^ '"'"'])[ '"'"']*$'
 	[[ ${var} =~ ${regexp} ]] && var="${BASH_REMATCH[1]}"
 	eval "${1}=\$var"
@@ -9421,7 +9421,7 @@ function attack_handshake_menu() {
 	language_strings "${language}" 141 mdk3_attack_dependencies[@]
 	print_hint ${current_menu}
 
-	read -r attack_handshake_option
+	read -rp "> " attack_handshake_option
 	case ${attack_handshake_option} in
 		0)
 			return
@@ -9714,7 +9714,7 @@ function explore_for_wps_targets_option() {
 			expwps_channel=$(echo "${expwps_line}" | awk '{print $2}')
 			expwps_power=$(echo "${expwps_line}" | awk '{print $3}')
 			expwps_locked=$(echo "${expwps_line}" | awk '{print $5}')
-			expwps_essid=$(echo "${expwps_line}" | awk -F '\t| {2,}' '{print $NF}')
+			expwps_essid=$(echo "${expwps_line//[\`\']/}" | awk -F '\t| {2,}' '{print $NF}')
 
 			if [[ ${expwps_channel} -le 9 ]]; then
 				wpssp2="  "
@@ -9773,7 +9773,7 @@ function explore_for_wps_targets_option() {
 	else
 		print_large_separator
 		language_strings "${language}" 3 "green"
-		read -r selected_wps_target_network
+		read -rp "> " selected_wps_target_network
 	fi
 
 	while [[ ! ${selected_wps_target_network} =~ ^[[:digit:]]+$ ]] || (( selected_wps_target_network < 1 || selected_wps_target_network > wash_counter )) || [[ ${wps_lockeds[${selected_wps_target_network}]} = "Yes" ]]; do
@@ -9786,7 +9786,7 @@ function explore_for_wps_targets_option() {
 				else
 					echo
 					language_strings "${language}" 3 "green"
-					read -r selected_wps_target_network
+					read -rp "> " selected_wps_target_network
 					continue
 				fi
 			fi
@@ -9796,7 +9796,7 @@ function explore_for_wps_targets_option() {
 		language_strings "${language}" 72 "red"
 		echo
 		language_strings "${language}" 3 "green"
-		read -r selected_wps_target_network
+		read -rp "> " selected_wps_target_network
 	done
 
 	wps_essid=${wps_network_names[${selected_wps_target_network}]}
@@ -9885,7 +9885,7 @@ function select_target() {
 		language_strings "${language}" 71 "yellow"
 		print_large_separator
 		language_strings "${language}" 3 "green"
-		read -r selected_target_network
+		read -rp "> " selected_target_network
 	fi
 
 	while [[ ! ${selected_target_network} =~ ^[[:digit:]]+$ ]] || (( selected_target_network < 1 || selected_target_network > i )); do
@@ -9893,7 +9893,7 @@ function select_target() {
 		language_strings "${language}" 72 "red"
 		echo
 		language_strings "${language}" 3 "green"
-		read -r selected_target_network
+		read -rp "> " selected_target_network
 	done
 
 	essid=${network_names[${selected_target_network}]}
@@ -10281,7 +10281,7 @@ function et_dos_menu() {
 	language_strings "${language}" 141 mdk3_attack_dependencies[@]
 	print_hint ${current_menu}
 
-	read -r et_dos_option
+	read -rp "> " et_dos_option
 	case ${et_dos_option} in
 		0)
 			if [ "${1}" != "enterprise" ]; then
