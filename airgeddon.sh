@@ -6506,8 +6506,12 @@ function handle_asleap_attack() {
 			asleap_attack_finished=0
 
 			if [ ${enterprise_mode} = "noisy" ]; then
-				#TODO pending to print a menu with usernames with captured challenges and responses for noisy mode
-				:
+				if [ ${#enterprise_captured_challenges_responses[@]} -eq 1 ]; then
+					echo
+					language_strings "${language}" 542 "yellow"
+				else
+					select_captured_enterprise_user
+				fi
 			fi
 
 			echo
@@ -6521,6 +6525,41 @@ function handle_asleap_attack() {
 			done
 		fi
 	fi
+}
+
+#Menu for captured enterprise user selection
+function select_captured_enterprise_user() {
+
+	debug_print
+
+	echo
+	language_strings "${language}" 47 "green"
+	print_simple_separator
+
+	local counter=0
+	local space="  "
+	declare -A temp_array_enterpise_users
+	for item in "${!enterprise_captured_challenges_responses[@]}"; do
+		if [ ${counter} -gt 9 ]; then
+			space=" "
+		fi
+		counter=$((counter + 1))
+		echo "${counter}.${space}${item}"
+		temp_array_enterpise_users[${counter}]="${item}"
+	done
+	print_simple_separator
+
+	option_enterprise_user_selected=""
+	while [[ -z "${option_enterprise_user_selected}" ]]; do
+		read -r option_enterprise_user_selected
+		if [[ ! "${option_enterprise_user_selected}" =~ ^[0-9]+$ ]] || [[ ${option_enterprise_user_selected} -lt 1 ]] || [[ ${option_enterprise_user_selected} -gt ${counter} ]]; then
+			option_enterprise_user_selected=""
+			echo
+			language_strings "${language}" 543 "red"
+		fi
+	done
+
+	enterprise_username="${temp_array_enterpise_users[${option_enterprise_user_selected}]}"
 }
 
 #Execute asleap attack

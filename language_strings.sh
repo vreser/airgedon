@@ -7263,6 +7263,32 @@ function language_strings() {
 	arr["GERMAN",541]="${pending_of_translation} "
 	arr["TURKISH",541]="${pending_of_translation} "
 
+	arr["ENGLISH",542]="You captured hash only for one user. Autoselected"
+	arr["SPANISH",542]="Solo capturaste hash de un usuario. Se ha seleccionado automáticamente"
+	#TODO translate this stuff
+	arr["FRENCH",542]="${pending_of_translation} "
+	arr["CATALAN",542]="${pending_of_translation} "
+	arr["PORTUGUESE",542]="${pending_of_translation} "
+	arr["RUSSIAN",542]="${pending_of_translation} "
+	arr["GREEK",542]="${pending_of_translation} "
+	arr["ITALIAN",542]="${pending_of_translation} "
+	arr["POLISH",542]="${pending_of_translation} "
+	arr["GERMAN",542]="${pending_of_translation} "
+	arr["TURKISH",542]="${pending_of_translation} "
+
+	arr["ENGLISH",543]="Chosen option is invalid. Select one number shown in the menu"
+	arr["SPANISH",543]="La opción elegida no es válida. Selecciona un número de los mostrados en el menú"
+	#TODO translate this stuff
+	arr["FRENCH",543]="${pending_of_translation} "
+	arr["CATALAN",543]="${pending_of_translation} "
+	arr["PORTUGUESE",543]="${pending_of_translation} "
+	arr["RUSSIAN",543]="${pending_of_translation} "
+	arr["GREEK",543]="${pending_of_translation} "
+	arr["ITALIAN",543]="${pending_of_translation} "
+	arr["POLISH",543]="${pending_of_translation} "
+	arr["GERMAN",543]="${pending_of_translation} "
+	arr["TURKISH",543]="${pending_of_translation} "
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"
