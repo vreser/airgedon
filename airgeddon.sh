@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180905
+#Date.........: 20180906
 #Version......: 8.12
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -2259,7 +2259,7 @@ function ask_bssid() {
 
 	debug_print
 
-	local regexp="^([a-fA-F0-9]{2}:){5}[a-zA-Z0-9]{2}$"
+	local regexp="^([[:xdigit:]]{2}:){5}[[:xdigit:]]{2}$"
 
 	if [ "${1}" = "wps" ]; then
 		if [ -z "${wps_bssid}" ]; then
