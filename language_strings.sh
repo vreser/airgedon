@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180903
+#Date.........: 20180913
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -7239,16 +7239,15 @@ function language_strings() {
 
 	arr["ENGLISH",540]="It seems we failed... try it again using another dictionary or choose bruteforce/rule based attack from the offline WPA/WPA2 decrypt menu"
 	arr["SPANISH",540]="Parece que no lo hemos conseguido... inténtalo de nuevo con otro diccionario o por fuerza bruta/ataque basado en reglas desde el menú de desencriptado offline WPA/WPA2"
-	#TODO translate this stuff
-	arr["FRENCH",540]="${pending_of_translation} "
-	arr["CATALAN",540]="${pending_of_translation} "
-	arr["PORTUGUESE",540]="${pending_of_translation} "
-	arr["RUSSIAN",540]="${pending_of_translation} "
-	arr["GREEK",540]="${pending_of_translation} "
-	arr["ITALIAN",540]="${pending_of_translation} "
-	arr["POLISH",540]="${pending_of_translation} "
-	arr["GERMAN",540]="${pending_of_translation} "
-	arr["TURKISH",540]="${pending_of_translation} "
+	arr["FRENCH",540]="${pending_of_translation} Il semble que nous n'ayons pas réussi... essayez à nouveau avec un autre dictionnaire ou par force brutale/attaque basée sur les règles du menu de décryptage hors ligne WPA/WPA2"
+	arr["CATALAN",540]="${pending_of_translation} Sembla que no ho hem aconseguit... intenta-ho de nou amb un altre diccionari o per força bruta/atac basat en regles des del menú de desencriptat offline WPA/WPA2"
+	arr["PORTUGUESE",540]="${pending_of_translation} Parece que não conseguimos... tente novamente com outro dicionário ou por força bruta/ataque baseado em regras do menu de descriptografia offline WPA/WPA2"
+	arr["RUSSIAN",540]="${pending_of_translation} Кажется, мы потерпели неудачу... повторите попытку с помощью другого словаря или выберите атаку, основанную на грубой силе/правилах, из автономного WPA/WPA2 дешифрованного меню"
+	arr["GREEK",540]="${pending_of_translation} Φαίνεται ότι αποτύχαμε... Δοκιμάστε το ξανά χρησιμοποιώντας ένα άλλο λεξικό ή επιλέξτε τη βίαιη επίθεση/εξάρτηση βάσει κανόνων από το μενού αποκρυπτογράφησης WPA/WPA2 εκτός σύνδεσης"
+	arr["ITALIAN",540]="${pending_of_translation} Sembra che non ci siamo riusciti... riprovare con un altro dizionario o con forza bruta/attacco basato su regole del menu di decodifica offline WPA/WPA2"
+	arr["POLISH",540]="${pending_of_translation} Wygląda na to, że się nie udało... spróbuj ponownie, używając innego słownika lub wybierz atak z użyciem brutalnej siły/reguły z menu odszyfrowania offline WPA/WPA2"
+	arr["GERMAN",540]="${pending_of_translation} Es scheint, dass wir es versäumt haben... versuchen Sie es erneut mit einem anderen Wörterbuch oder wählen Sie Brute-Force/Regel-basierte Angriffe aus dem Offline-WPA/WPA2-Entschlüsselungsmenü"
+	arr["TURKISH",540]="${pending_of_translation} Başarısız görünüyoruz... başka bir sözlük kullanarak tekrar deneyin ya da çevrimdışı WPA/WPA2 şifre çözme menüsünden kaba kuvvet/kural tabanlı saldırı seçin"
 
 	arr["ENGLISH",541]="Do you want to retry asleap attack using another dictionary? ${normal_color}${visual_choice}"
 	arr["SPANISH",541]="¿Quieres intentar de nuevo el ataque con asleap utilizando otro diccionario? ${normal_color}${visual_choice}"
