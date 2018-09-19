@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180903
+#Date.........: 20180919
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -5266,7 +5266,7 @@ function decrypt_menu() {
 	language_strings "${language}" 535
 	print_hint ${current_menu}
 
-	read -r decrypt_option
+	read -rp "> " decrypt_option
 	case ${decrypt_option} in
 		0)
 			return
@@ -5367,7 +5367,59 @@ function enterprise_decrypt_menu() {
 
 	debug_print
 
-	under_construction_message
+	clear
+	language_strings "${language}" 170 "title"
+	current_menu="enterprise_decrypt_menu"
+	initialize_menu_and_print_selections
+	echo
+	language_strings "${language}" 47 "green"
+	print_simple_separator
+	language_strings "${language}" 536
+	language_strings "${language}" 544 "separator"
+	language_strings "${language}" 545 #TODO jtr dependencies
+	language_strings "${language}" 546 #TODO jtr dependencies
+	language_strings "${language}" 547 #TODO jtr dependencies
+	language_strings "${language}" 229 "separator"
+	language_strings "${language}" 550 hashcat_attacks_dependencies[@]
+	language_strings "${language}" 551 hashcat_attacks_dependencies[@]
+	language_strings "${language}" 552 hashcat_attacks_dependencies[@]
+	language_strings "${language}" 548 "separator"
+	language_strings "${language}" 549 #TODO asleap dependencies
+
+	print_hint ${current_menu}
+
+	read -rp "> " enterprise_decrypt_option
+	case ${enterprise_decrypt_option} in
+		0)
+			return
+		;;
+		1)
+			under_construction_message
+		;;
+		2)
+			under_construction_message
+		;;
+		3)
+			under_construction_message
+		;;
+		4)
+			under_construction_message
+		;;
+		5)
+			under_construction_message
+		;;
+		6)
+			under_construction_message
+		;;
+		7)
+			under_construction_message
+		;;
+		*)
+			invalid_menu_option
+		;;
+	esac
+
+	enterprise_decrypt_menu
 }
 
 #Read the user input on rules file questions
