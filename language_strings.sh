@@ -5163,7 +5163,7 @@ function language_strings() {
 	arr["ITALIAN",380]="Desideri che la prossima volta che viene lanciato questo attacco in questa sessione si tenti di nuovo? ${normal_color}${visual_choice}"
 	arr["POLISH",380]="Czy chcesz spróbować ponownie tego ataku dla tej sesji podczas następnego uruchomienia? ${normal_color}${visual_choice}"
 	arr["GERMAN",380]="Möchten Sie beim nächsten Start dieses Angriffs in dieser Sitzung erneut versuchen? ${normal_color}${visual_choice}"
-	arr["TURKISH",380]="${pending_of_translation} Bu seans için bu saldırıyı bir daha başlattığınızda tekrar denemek ister misin? ${normal_color}${visual_choice}"
+	arr["TURKISH",380]="Bu seans için bu saldırıyı bir daha başlattığınızda tekrar denemek ister misin? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",381]="An error occurred while trying to access to the checksum file of remote PINs database"
 	arr["SPANISH",381]="Ocurrió un error al intentar acceder al fichero de checksum de la base de datos de PINs remota"
@@ -5175,7 +5175,7 @@ function language_strings() {
 	arr["ITALIAN",381]="Si è verificato un errore durante il tentativo di accedere al file di checksum della basse dati dei PINs remota"
 	arr["POLISH",381]="Podczas próby uzyskania dostępu do pliku kontrolnego zdalnej bazy danych PIN wystąpił błąd"
 	arr["GERMAN",381]="Beim Versuch, auf die checksum der Remote-PIN-Datenbank zuzugreifen, ist ein Fehler aufgetreten"
-	arr["TURKISH",381]="${pending_of_translation} Uzak PIN'ler veritabanının sağlama dosyasına erişmeye çalışırken bir hata oluştu"
+	arr["TURKISH",381]="Uzak PIN'ler veritabanının sağlama dosyasına erişmeye çalışırken bir hata oluştu"
 
 	arr["ENGLISH",382]="Checksums of the local and remote files match. Your PINs database file is up-to-date"
 	arr["SPANISH",382]="Los checksum de los ficheros local y remoto coinciden. Tu fichero de base de datos de PINs está actualizado"
@@ -5187,7 +5187,7 @@ function language_strings() {
 	arr["ITALIAN",382]="I checksum dei file locali e remoti corrispondono. Il file di base dati dei PINs è aggiornato"
 	arr["POLISH",382]="Sprawdzono sumy kontrolne pliku lokalnego i zdalnego. Plik bazy danych kodów PIN jest aktualny"
 	arr["GERMAN",382]="Die Checksum der lokalen und Remote-Dateien stimmen überein. Ihre PIN-Datenbankdatei ist auf dem neuesten Stand"
-	arr["TURKISH",382]="${pending_of_translation} Yerel ve uzak dosyaların sağlama toplamları eşleşir. PIN'leriniz veritabanı dosyanız güncel"
+	arr["TURKISH",382]="Yerel ve uzak dosyaların sağlama toplamları eşleşir. PIN'leriniz veritabanı dosyanız güncel"
 
 	arr["ENGLISH",383]="It seems there is a more up-to-date PINs database file. It will be downloaded..."
 	arr["SPANISH",383]="Parece que hay un fichero de base de datos de PINs más actualizado. Será descargado..."
@@ -5199,7 +5199,7 @@ function language_strings() {
 	arr["ITALIAN",383]="Sembra che ci sia un file di base dati dei PINs piú aggiornato. Sarà scaricato..."
 	arr["POLISH",383]="Wygląda na to, że istnieje bardziej aktualny plik bazy danych PIN. Zostanie pobrany..."
 	arr["GERMAN",383]="Es scheint, dass es eine aktualisierte Datenbank von PINs gibt. Sie wird heruntergeladen..."
-	arr["TURKISH",383]="${pending_of_translation} Daha güncel bir PIN veritabanı dosyası var gibi görünüyor. İndirilecek..."
+	arr["TURKISH",383]="Daha güncel bir PIN veritabanı dosyası var gibi görünüyor. İndirilecek..."
 
 	arr["ENGLISH",384]="Searching in PINs database. Please be patient..."
 	arr["SPANISH",384]="Buscando en la base de datos de PINs. Por favor ten paciencia..."
@@ -5211,7 +5211,7 @@ function language_strings() {
 	arr["ITALIAN",384]="Cercando nella base dati dei PINs. Si prega di essere pazienti..."
 	arr["POLISH",384]="Wyszukiwanie bazy danych kodu PIN. Cierpliwości..."
 	arr["GERMAN",384]="PINs Datenbank wird durchgesucht. Bitte haben Sie etwas Geduld..."
-	arr["TURKISH",384]="${pending_of_translation} PIN veritabanında arama. Lütfen sabırlı olun..."
+	arr["TURKISH",384]="PIN veritabanında arama. Lütfen sabırlı olun..."
 
 	arr["ENGLISH",385]="Only one match found in the PINs database"
 	arr["SPANISH",385]="Se ha encontrado sólo una coincidencia en la base de datos de PINs"
@@ -5223,7 +5223,7 @@ function language_strings() {
 	arr["ITALIAN",385]="Solo una corrispondenza trovata nella base dati dei PINs"
 	arr["POLISH",385]="Znaleziono tylko jeden pasujący kod PIN w bazie danych"
 	arr["GERMAN",385]="In der PIN-Datenbank wurde nur eine Übereinstimmung gefunden"
-	arr["TURKISH",385]="${pending_of_translation} PIN veritabanında sadece bir eşleşme bulundu"
+	arr["TURKISH",385]="PIN veritabanında sadece bir eşleşme bulundu"
 
 	arr["ENGLISH",386]="${counter_pins_found} matching PINs have been found in the PINs database"
 	arr["SPANISH",386]="Se han encontrado ${counter_pins_found} PINs coincidentes en la base de datos de PINs"
@@ -5235,7 +5235,7 @@ function language_strings() {
 	arr["ITALIAN",386]="Trovati ${counter_pins_found} PINs coincidenti nella base dati dei PINs"
 	arr["POLISH",386]="Znaleziono ${counter_pins_found} pasujących kodów PIN w bazie danych"
 	arr["GERMAN",386]="${counter_pins_found} übereinstimmende PINs wurden in der PIN-Datenbank"
-	arr["TURKISH",386]="${pending_of_translation} ${counter_pins_found} PIN'lerde eşleşen PIN'ler bulundu"
+	arr["TURKISH",386]="${counter_pins_found} PIN'lerde eşleşen PIN'ler bulundu"
 
 	arr["ENGLISH",387]="No matches found in the PINs database"
 	arr["SPANISH",387]="No se ha encontrado ninguna coincidencia en la base de datos de PINs"
@@ -5247,7 +5247,7 @@ function language_strings() {
 	arr["ITALIAN",387]="Nessuna corrispondenza trovata nella base dati dei PINs"
 	arr["POLISH",387]="Brak dopasowania w bazie danych kodów PIN"
 	arr["GERMAN",387]="Keine Übereinstimmungen wurden in der PIN-Datenbank gefunden"
-	arr["TURKISH",387]="${pending_of_translation} PINs veritabanında eşleşme bulunamadı"
+	arr["TURKISH",387]="PINs veritabanında eşleşme bulunamadı"
 
 	arr["ENGLISH",388]="Calculating and adding possible PINs using common known algorithms (ComputePIN, EasyBox, etc.) ..."
 	arr["SPANISH",388]="Calculando y añadiendo posibles PINs usando algoritmos conocidos comunes (ComputePIN, EasyBox, etc.) ..."
@@ -5259,7 +5259,7 @@ function language_strings() {
 	arr["ITALIAN",388]="Calcolando e aggiungendo possibili PINs utilizzando noti algoritmi conosciuti (ComputePIN, EasyBox, etc.) ..."
 	arr["POLISH",388]="Obliczanie i dodawanie możliwych kodów PIN przy użyciu powszechnie znanych algorytmów (ComputePIN, EasyBox, itd.) ..."
 	arr["GERMAN",388]="Berechnung und Hinzufügen von möglichen PINs mit bekannten Algorithmen (ComputePIN, EasyBox, etc.) ..."
-	arr["TURKISH",388]="${pending_of_translation} Bilinen bilinen algoritmaları (ComputePIN, EasyBox, vb.) Kullanarak olası PIN'leri hesaplamak ve eklemek ..."
+	arr["TURKISH",388]="Bilinen bilinen algoritmaları (ComputePIN, EasyBox, vb.) Kullanarak olası PIN'leri hesaplamak ve eklemek ..."
 
 	arr["ENGLISH",389]="PINs calculated by algorithms have been added. The attack will be launched with a total of ${counter_pins_found} PINs"
 	arr["SPANISH",389]="Se han añadido PINs calculados por los algoritmos. El ataque se lanzará con un total de ${counter_pins_found} PINs"
@@ -5271,7 +5271,7 @@ function language_strings() {
 	arr["ITALIAN",389]="Sono stati aggiunti PINs calcolati dagli algoritmi. L'attacco sará lanciato con un totale di ${counter_pins_found} PINs"
 	arr["POLISH",389]="Kody PIN obliczone pzez algorytmy zostały dodane. Atak zostanie uruchomiony w sumie dla ${counter_pins_found} kodów PIN"
 	arr["GERMAN",389]="Die von den Algorithmen berechneten PINs wurden hinzugefügt. Der Angriff wird mit insgesamt ${counter_pins_found} PINs gestartet"
-	arr["TURKISH",389]="${pending_of_translation} Algoritmalar tarafından hesaplanan PIN'ler eklendi. Saldırı toplam ${counter_pins_found} PIN ile başlatılacak"
+	arr["TURKISH",389]="Algoritmalar tarafından hesaplanan PIN'ler eklendi. Saldırı toplam ${counter_pins_found} PIN ile başlatılacak"
 
 	arr["ENGLISH",390]="Some access points have only PBC (Push Button Connect) enabled and you can't connect via WPS if you don't press the physical button on the device"
 	arr["SPANISH",390]="Algunos puntos de acceso tienen activado solamente PBC (Push Button Connect) y no podrás conectar por WPS si no se pulsa el boton físico del mismo"
@@ -5283,7 +5283,7 @@ function language_strings() {
 	arr["ITALIAN",390]="Alcuni punti di accesso hanno solo PBC (Push Button Connect) attivato e non è possibile connettersi tramite WPS se non viene premuto il pulsante fisico"
 	arr["POLISH",390]="Niektóre punkty dostępu mają włączoną funkcję PBC (Push Button Connect) i nie można połączyć się za pośrednictwem WPS, jeśli nie naciśniesz fizycznego przycisku"
 	arr["GERMAN",390]="Bei einigen Access Points ist nur PBC (Push Button Connect) aktiviert, und Sie können keine Verbindung über WPS herstellen, wenn Sie nicht die physische Taste drücken"
-	arr["TURKISH",390]="${pending_of_translation} Bazı erişim noktalarının yalnızca PBC (Push Button Connect) özelliği vardır ve cihazdaki fiziksel tuşa basmazsanız WPS ile bağlanamazsınız"
+	arr["TURKISH",390]="Bazı erişim noktalarının yalnızca PBC (Push Button Connect) özelliği vardır ve cihazdaki fiziksel tuşa basmazsanız WPS ile bağlanamazsınız"
 
 	arr["ENGLISH",391]="Timeout set to ${normal_color}${timeout}${blue_color} seconds"
 	arr["SPANISH",391]="Timeout elegido ${normal_color}${timeout}${blue_color} segundos"
@@ -5295,7 +5295,7 @@ function language_strings() {
 	arr["ITALIAN",391]="Timeout scelto ${normal_color}${timeout}${blue_color} secondi"
 	arr["POLISH",391]="Wybrany limit czasu ${normal_color}${timeout}${blue_color} sekund"
 	arr["GERMAN",391]="Ausgewähltes Timeout ${normal_color}${timeout}${blue_color} Sekunden"
-	arr["TURKISH",391]="${pending_of_translation} Zaman aşımı ${normal_color}${timeout}${blue_color} saniye olarak ayarlandı"
+	arr["TURKISH",391]="Zaman aşımı ${normal_color}${timeout}${blue_color} saniye olarak ayarlandı"
 
 	arr["ENGLISH",392]="In the 5Ghz band there are many channels in which because of the country configuration, you can't operate. There are also other channels in which you can't initiate communication, only communicate with an existing network. This makes starting an access point on a 5Ghz channel very likely to fail if it doesn't match an allowed channel. This is why Evil Twin will start on a channel in the 2.4Ghz band (1-11). But don't worry, it will be transparent for the users because the DoS attack still operate on the real 5Ghz channel against the target"
 	arr["SPANISH",392]="En la banda de los 5Ghz hay muchos canales en los que por la configuración del país, no puedes operar. También hay otros canales en los que no puedes iniciar la comunicación, solo comunicarte con una red existente. Esto hace que iniciar un punto de acceso en una canal de 5Ghz tenga muchas probabilidades de fallo si no coincide con un canal permitido. Es por esto que el Evil Twin se iniciará en un canal de la banda 2.4Ghz (1-11). Pero no te preocupes, será transparente para los usuarios ya que el ataque DoS sigue operando en el canal real de 5Ghz contra el objetivo"
@@ -5307,7 +5307,7 @@ function language_strings() {
 	arr["ITALIAN",392]="Nella banda 5Ghz ci sono molti canali in cui non è possibile operare a causa della configurazione del paese. Esistono anche altri canali in cui non è possibile avviare la comunicazione, ma solo comunicare con una rete esistente. Ciò rende molto probabile che l'avvio di un punto di accesso su un canale a 5Ghz non riesca se non corrisponde a un canale consentito. Questo è il motivo per cui Evil Twin inizierà su un canale nella banda 2.4Ghz (1-11). Peró non preoccuparti, questo sarà trasparente per gli utenti poiché l'attacco DoS continua a funzionare sul vero canale 5Ghz contro l'obbiettivo selezionato"
 	arr["POLISH",392]="W paśmie 5Ghz istnieje wiele kanałów, które nie mogą działać z powodu konfiguracji kraju. Istnieją również inne kanały, w których nie można zainicjować komunikacji, a tylko komunikować się z istniejącą siecią. To sprawia, że uruchomienie punktu dostępu na kanale 5Ghz może się nie udać, jeśli nie pasuje do dozwolonego kanału. Dlatego atak Evil Twin rozpocznie się na kanale w paśmie 2.4Ghz (1-11). Ale nie martw się, będzie to dla użytkowników niewidoczne, ponieważ atak DoS nadal działa przeciwko celowi na prawdziwym kanale 5Ghz"
 	arr["GERMAN",392]="Im 5Ghz-Band gibt es viele Kanäle, in denen man nach der Konfiguration des Landes nicht arbeiten kann. Es gibt auch andere Kanäle, in denen Sie keine Kommunikation starten können, sondern nur mit einem bestehenden Netzwerk kommunizieren. Dies führt dazu, dass das Starten eines APs auf einem 5Ghz-Kanal sehr wahrscheinlich fehlschlägt, wenn es nicht mit einem zulässigen Kanal übereinstimmt. Deshalb startet der Evil Twin auf einem Kanal im 2.4Ghz-Band (1-11). Aber keine Sorge, es wird für die Benutzer transparent sein, da die DoS-Attacke weiterhin auf dem echten 5Ghz-Kanal gegen das Ziel arbeitet"
-	arr["TURKISH",392]="${pending_of_translation} 5Ghz bandında, ülke konfigürasyonu nedeniyle çalışamayacağınız pek çok kanal var. İletişimi başlatamayacağınız başka kanallar da vardır, sadece mevcut bir ağ ile iletişim kurabilirsiniz. Bu, izin verilen bir kanalla eşleşmezse başarısız olması muhtemel 5 GHz'lik bir kanalda bir erişim noktası başlatılmasını sağlar. Bu yüzden Evil Twin 2.4Ghz bandında (1-11) bir kanalda başlayacaktır. Ama endişelenmeyin, kullanıcılar için şeffaf olacak çünkü DoS saldırısı hala hedefe karşı gerçek 5GHz kanalında çalışıyor"
+	arr["TURKISH",392]="5Ghz bandında, ülke konfigürasyonu nedeniyle çalışamayacağınız pek çok kanal var. İletişimi başlatamayacağınız başka kanallar da vardır, sadece mevcut bir ağ ile iletişim kurabilirsiniz. Bu, izin verilen bir kanalla eşleşmezse başarısız olması muhtemel 5 GHz'lik bir kanalda bir erişim noktası başlatılmasını sağlar. Bu yüzden Evil Twin 2.4Ghz bandında (1-11) bir kanalda başlayacaktır. Ama endişelenmeyin, kullanıcılar için şeffaf olacak çünkü DoS saldırısı hala hedefe karşı gerçek 5GHz kanalında çalışıyor"
 
 	arr["ENGLISH",393]="Type value in seconds (${min_max_timeout}) for timeout or press [Enter] to accept the proposal [${normal_color}${timeout_shown}${green_color}]:"
 	arr["SPANISH",393]="Escribe un valor en segundos (${min_max_timeout}) para el timeout o pulsa [Enter] para aceptar el valor propuesto [${normal_color}${timeout_shown}${green_color}]:"
@@ -5319,7 +5319,7 @@ function language_strings() {
 	arr["ITALIAN",393]="Scrivi un valore in secondi (${min_max_timeout}) per il timeout o premi [Enter] per accettare il valore proposto [${normal_color}${timeout_shown}${green_color}]:"
 	arr["POLISH",393]="Wprowadź wartość w sekundach (${min_max_timeout}) dla limitu czasu lub naciśnij klawisz [Enter], aby zaakceptować proponowaną wartość [${normal_color}${timeout_shown}${green_color}]:"
 	arr["GERMAN",393]="Geben Sie einen Wert in Sekunden (${min_max_timeout}) für die Zeitüberschreitung ein oder drücken Sie [Enter], um den vorgeschlagenen Wert zu übernehmen [${normal_color}${timeout_shown}${green_color}]:"
-	arr["TURKISH",393]="${pending_of_translation} Zaman aşımı için saniye cinsinden değeri (${min_max_timeout}) yazın veya teklifi kabul etmek için [Enter] tuşuna basın [${normal_color}${timeout_shown}${green_color}]:"
+	arr["TURKISH",393]="Zaman aşımı için saniye cinsinden değeri (${min_max_timeout}) yazın veya teklifi kabul etmek için [Enter] tuşuna basın [${normal_color}${timeout_shown}${green_color}]:"
 
 	arr["ENGLISH",394]="You have selected a 5Ghz target network and the \"DoS pursuit mode\", but the second interface needed to perform the attack doesn't support the 5Ghz band so the attack can't be performed"
 	arr["SPANISH",394]="Has seleccionado una red objetivo de 5Ghz y el \"modo persecución DoS\", pero el segundo interfaz necesario para llevar a cabo el ataque no soporta la banda de los 5Ghz por lo que este no se puede realizar"
@@ -5331,7 +5331,7 @@ function language_strings() {
 	arr["ITALIAN",394]="Hai selezionato come obbiettivo una rete di 5Ghz e la \"DoS pursuit mode\", ma la seconda interfaccia necessaria per eseguire l'attacco non supporta la banda 5Ghz, quindi l'attacco non puó essere eseguito"
 	arr["POLISH",394]="Wybrałeś docelową sieć 5Ghz i \"tryb DoS pursuit\", ale drugi interfejs potrzebny do przeprowadzenia ataku nie obsługuje pasma 5Ghz, więc nie można go wykonać"
 	arr["GERMAN",394]="Sie haben ein Zielnetzwerk mit 5Ghz und den \"DoS pursuit mode\" gewählt, aber die zweite Schnittstelle, die zur Ausführung des Angriffs benötigt wird, unterstützt das 5Ghz-Band nicht, so dass es nicht ausgeführt werden kann"
-	arr["TURKISH",394]="${pending_of_translation} Bir 5Ghz hedef ağı ve \"DoS peşinde koşma modu\" nı seçtiniz, ancak saldırıyı gerçekleştirmek için gereken ikinci arabirim, 5Ghz bandını desteklemiyor, böylece saldırı gerçekleştirilemiyor"
+	arr["TURKISH",394]="Bir 5Ghz hedef ağı ve \"DoS peşinde koşma modu\" nı seçtiniz, ancak saldırıyı gerçekleştirmek için gereken ikinci arabirim, 5Ghz bandını desteklemiyor, böylece saldırı gerçekleştirilemiyor"
 
 	arr["ENGLISH",395]="Skipping intro, more window size needed"
 	arr["SPANISH",395]="Saltando presentación, se necesita más tamaño de ventana"
@@ -5343,7 +5343,7 @@ function language_strings() {
 	arr["ITALIAN",395]="Saltando la presentazione, è necessaria una finestra piú grande"
 	arr["POLISH",395]="Pomijanie prezentacji, potrzebujesz większego rozmiaru okna"
 	arr["GERMAN",395]="Intro wird übersprungen, mehr Fenstergröße ist erforderlich"
-	arr["TURKISH",395]="${pending_of_translation} Giriş atlanıyor, daha fazla pencere boyutu gerekiyor"
+	arr["TURKISH",395]="Giriş atlanıyor, daha fazla pencere boyutu gerekiyor"
 
 	arr["ENGLISH",396]="8.  Evil Twin AP attack with sniffing and bettercap-sslstrip2/BeEF"
 	arr["SPANISH",396]="8.  Ataque Evil Twin AP con sniffing y bettercap-sslstrip2/BeEF"
@@ -5355,7 +5355,7 @@ function language_strings() {
 	arr["ITALIAN",396]="8.  Attacco Evil Twin AP con sniffing e bettercap-sslstrip2/BeEF"
 	arr["POLISH",396]="8.  Atak Evil Twin AP ze sniffingiem i bettercap-sslstrip2/BeEF"
 	arr["GERMAN",396]="8.  Evil Twin AP Angriff mit Sniffing und bettercap-sslstrip2/BeEF"
-	arr["TURKISH",396]="${pending_of_translation} 8.  Sniffing ve bettercap-sslstrip2/BeEF ile Kötü İkiz AP saldırısı"
+	arr["TURKISH",396]="8.  Sniffing ve bettercap-sslstrip2/BeEF ile Kötü İkiz AP saldırısı"
 
 	arr["ENGLISH",397]="Evil Twin AP attack with sniffing and bettercap-sslstrip2/BeEF"
 	arr["SPANISH",397]="Ataque Evil Twin AP con sniffing y bettercap-sslstrip2/BeEF"
@@ -5367,7 +5367,7 @@ function language_strings() {
 	arr["ITALIAN",397]="Attacco Evil Twin AP con sniffing e bettercap-sslstrip2/BeEF"
 	arr["POLISH",397]="Atak Evil Twin AP ze sniffingiem i bettercap-sslstrip2/BeEF"
 	arr["GERMAN",397]="Evil Twin AP Angriff mit Sniffing und bettercap-sslstrip2/BeEF"
-	arr["TURKISH",397]="${pending_of_translation} Ataque Evil İkiz AP con sniffing y bettercap-sslstrip2/BeEF"
+	arr["TURKISH",397]="Şeytani İkiz AP saldırısı (sniffing ile) bettercap-sslstrip2/BeEF"
 
 	arr["ENGLISH",398]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${default_bettercap_logpath}]"
 	arr["SPANISH",398]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${default_bettercap_logpath}]"
@@ -5379,7 +5379,7 @@ function language_strings() {
 	arr["ITALIAN",398]="Digitare il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${default_bettercap_logpath}]"
 	arr["POLISH",398]="Wpisz ścieżkę, w której będzie zapisany plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${default_bettercap_logpath}]"
 	arr["GERMAN",398]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die Enter-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${default_bettercap_logpath}]"
-	arr["TURKISH",398]="${pending_of_translation} Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın ${normal_color}[${default_bettercap_logpath}]"
+	arr["TURKISH",398]="Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın ${normal_color}[${default_bettercap_logpath}]"
 
 	arr["ENGLISH",399]="Passwords captured by sniffer. File saved at ${normal_color}[${bettercap_logpath}]"
 	arr["SPANISH",399]="El sniffer ha capturado contraseñas. Fichero salvado en ${normal_color}[${bettercap_logpath}]"
@@ -5391,7 +5391,7 @@ function language_strings() {
 	arr["ITALIAN",399]="Lo sniffer ha catturato passwords. File salvato in ${normal_color}[${bettercap_logpath}]"
 	arr["POLISH",399]="Sniffer przechwycił hasła. Plik zapisany w ${normal_color}[${bettercap_logpath}]"
 	arr["GERMAN",399]="Der Sniffer hat Passwörter erfasst. Datei in ${normal_color}[${bettercap_logpath}] gespeichert"
-	arr["TURKISH",399]="${pending_of_translation} Parolalar sniffer tarafından yakalandı. Dosyada kaydedildi ${normal_color}[${bettercap_logpath}]"
+	arr["TURKISH",399]="Parolalar sniffer tarafından yakalandı. Şuraya kaydedildi: ${normal_color}[${bettercap_logpath}]"
 
 	arr["ENGLISH",400]="On Evil Twin attack with BeEF integrated, in addition to obtaining keys using sniffing techniques, you can try to control the client's browser launching numerous attack vectors. The success of these will depend on many factors such as the kind of client's browser and its version"
 	arr["SPANISH",400]="En el ataque Evil Twin con BeEF integrado, además de obtener claves con sniffing, podrás intentar controlar el navegador de los clientes lanzando numerosos vectores de ataque. El éxito de estos dependerá de muchos factores como el tipo de navegador y la versión que utilice el cliente"
@@ -5403,7 +5403,7 @@ function language_strings() {
 	arr["ITALIAN",400]="Nell'attacco Evil Twin con BeEF integrato, oltre ad ottenere le chiavi con sniffing, si può provare a controllare il browser dei clienti lanciando numerosi vettori di attacco. Il successo di questi attacchi dipende da molti fattori, come il tipo di browser e la versione utilizzata dal cliente"
 	arr["POLISH",400]="W ataku Evil Twin ze zintegrowanym BeEF, oprócz uzyskiwania kluczy sniffingiem, można spróbować kontrolować przeglądarkę klientów, uruchamiając liczne ataki. Sukces tych działań będzie zależał od wielu czynników, takich jak typ przeglądarki i wersja używana przez klienta"
 	arr["GERMAN",400]="Beim Evil-Twin Angriff mit integriertem BeEF können Sie nicht nur Schlüssel mit Sniffing erhalten, sondern auch versuchen, den Browser des Clients zu steuern, indem Sie zahlreiche Angriffsvektoren starten. Der Erfolg hängt von vielen Faktoren ab, beispielsweise vom Browsertyp und der vom Client verwendeten Version"
-	arr["TURKISH",400]="${pending_of_translation} BeEF ile Evil Twin saldırısında entegre olarak, koklama tekniklerini kullanarak anahtar elde etmenin yanı sıra, müşterinin tarayıcısını çok sayıda saldırı vektörünü başlatmaya çalışmayı deneyebilirsiniz. Bunların başarısı, müşterinin tarayıcısının türü ve versiyonu gibi birçok faktöre bağlı olacaktır"
+	arr["TURKISH",400]="BeEF ile Evil Twin saldırısında entegre olarak, koklama tekniklerini kullanarak anahtar elde etmenin yanı sıra, müşterinin tarayıcısını çok sayıda saldırı vektörünü başlatmaya çalışmayı deneyebilirsiniz. Bunların başarısı, müşterinin tarayıcısının türü ve versiyonu gibi birçok faktöre bağlı olacaktır"
 
 	arr["ENGLISH",401]="The beef package you have installed is not BeEF (Browser Exploitation Framework). You have Beef (Flexible Brainfuck interpreter) installed. Both executables have the same name and can lead to confusion. Uninstall it and install what airgeddon needs if you want to use that feature. Installation guide: ${beef_installation_url}"
 	arr["SPANISH",401]="El paquete beef que tienes instalado no es BeEF (Browser Exploitation Framework). Tienes instalado Beef (Flexible Brainfuck interpreter). Ambos ejecutables se llaman igual y puede dar lugar a confusión. Desinstálalo e instala el que airgeddon necesita si quieres usar esa característica. Guía de instalación: ${beef_installation_url}"
@@ -5415,7 +5415,7 @@ function language_strings() {
 	arr["ITALIAN",401]="Il pacchetto beef che hai installato non è BeEF (Browser Exploitation Framework). È stato installato Beef (Flexible Brainfuck interpreter). Entrambi gli eseguibili hanno lo nome e può essere fonte di confusione. Disinstallarlo e installare quello di cui ha bisogno airgeddon se si desidera utilizzare questa funzione. Guida all'installazione: ${beef_installation_url}"
 	arr["POLISH",401]="Zainstalowany pakiet beef nie jest BeEF (Browser Exploitation Framework). Masz zainstalowaną Beef (Flexible Brainfuck interpreter). Obydwa pliki wykonywalne są nazywane tak samo i mogą prowadzić do zamieszania. Odinstaluj i zainstaluj system airgeddon, jeśli potrzebujesz tej funkcji. Instrukcja instalacji: ${beef_installation_url}"
 	arr["GERMAN",401]="Das von Ihnen installierte beef-Paket ist nicht BeEF (Browser Exploitation Framework). Sie haben Beef (Flexible Brainfuck Interpreter) installiert. Beide ausführbare Dateien werden als gleich bezeichnet und können zu Verwirrung führen. Deinstallieren Sie es und installieren Sie das, das airgeddon benötigt, wenn Sie diese Funktion verwenden möchten. Installationsanleitung: ${beef_installation_url}"
-	arr["TURKISH",401]="${pending_of_translation} Yüklediğiniz beef paketi, BeEF (Browser Exploitation Framework) değildir. Beef (Flexible Brainfuck interpreter) kurulu. Her iki yürütücü de aynı ada sahip ve karışıklığa yol açabilir. Bu özelliği kullanmak istiyorsanız kaldırın ve hangi airgeddon'un gereksinimlerini karşılayın. Kurulum kılavuzu: ${beef_installation_url}"
+	arr["TURKISH",401]="Yüklediğiniz beef paketi, BeEF (Browser Exploitation Framework) değildir. Beef (Flexible Brainfuck interpreter) kurulu. Her iki yürütücü de aynı ada sahip ve karışıklığa yol açabilir. Bu özelliği kullanmak istiyorsanız kaldırın ve hangi airgeddon'un gereksinimlerini karşılayın. Kurulum kılavuzu: ${beef_installation_url}"
 
 	arr["ENGLISH",402]="Enter the absolute path of the directory where BeEF is installed:"
 	arr["SPANISH",402]="Introduce la ruta absoluta del directorio donde está instalado BeEF:"
@@ -5427,7 +5427,7 @@ function language_strings() {
 	arr["ITALIAN",402]="Immettere il percorso assoluto della directory in cui è installato BeEF:"
 	arr["POLISH",402]="Wprowadż ścieżkę absolutną do instalacji BeEF:"
 	arr["GERMAN",402]="Geben Sie den absoluten Pfad des Verzeichnisses ein, in dem BeEF installiert ist:"
-	arr["TURKISH",402]="${pending_of_translation} "
+	arr["TURKISH",402]="BeEf'in kurulu olduğu dizini tam olarak giriniz: "
 
 	arr["ENGLISH",403]="The directory you entered doesn't exist"
 	arr["SPANISH",403]="El directorio introducido no existe"
@@ -5439,7 +5439,7 @@ function language_strings() {
 	arr["ITALIAN",403]="La cartella indicata non esiste"
 	arr["POLISH",403]="Wprowadzony katalog nie istnieje"
 	arr["GERMAN",403]="Das eingegebene Verzeichnis existiert nicht"
-	arr["TURKISH",403]="${pending_of_translation} Girdiğiniz dizin mevcut değil"
+	arr["TURKISH",403]="Girdiğiniz dizin mevcut değil"
 
 	arr["ENGLISH",404]="The entered path isn't absolute. An absolute path must always begin with \"/\""
 	arr["SPANISH",404]="La ruta introducida no es absoluta. Una ruta absoluta siempre debe comenzar por \"/\""
@@ -5451,7 +5451,7 @@ function language_strings() {
 	arr["ITALIAN",404]="Il percorso immesso non è assoluto. Un percorso assoluto deve sempre iniziare con \"/\""
 	arr["POLISH",404]="Wprowadzona ścieżka nie jest absolutna. Ścieżka abolutna musi się zawsze zaczynać od \"/\""
 	arr["GERMAN",404]="Der eingegebene Pfad ist nicht absolut. Ein absoluter Pfad sollte immer mit \"/\" beginnen"
-	arr["TURKISH",404]="${pending_of_translation} Girilen yol mutlak değildir. Mutlak bir yol daima \"/\" ile başlamalıdır"
+	arr["TURKISH",404]="Girilen yol mutlak değildir. Mutlak bir yol daima \"/\" ile başlamalıdır"
 
 	arr["ENGLISH",405]="Checking BeEF..."
 	arr["SPANISH",405]="Comprobando BeEF..."
@@ -5475,7 +5475,7 @@ function language_strings() {
 	arr["ITALIAN",406]="Non è stato rilevato un eseguibile di BeEF nella directory specificata"
 	arr["POLISH",406]="Nie znaleziono pliku wykonywalnego BeEF w danym katalogu"
 	arr["GERMAN",406]="Keine BeEF-Programmdatei wurde im angegebenen Verzeichnis nicht gefunden"
-	arr["TURKISH",406]="${pending_of_translation} Verilen dizinde BeEF yürütülebilir bulunamadı"
+	arr["TURKISH",406]="Girilen dizinde BeEF yürütülebilir bulunamadı"
 
 	arr["ENGLISH",407]="BeEF preparation"
 	arr["SPANISH",407]="Preparación BeEF"
@@ -5499,7 +5499,7 @@ function language_strings() {
 	arr["ITALIAN",408]="Se BeEF è stato installato manualmente, airgeddon potrebbe non essere in grado di trovarlo e l'opzione di attacco apparirà limitata. Si può cercare di risolvere il problema utilizzando l'opzione del menú specifica per questo. Questo funzionerá solo se BeEF è già installato correttamente e l'unico problema che hai è che lo script non lo rileva"
 	arr["POLISH",408]="Jeśli zainstalowałeś BeEF ręcznie, airgeddon może nie być w stanie go znaleźć, a opcja atakowania będzie ograniczona. Możesz spróbować rozwiązać ten problem używając specjalnej opcji menu. To będzie działać tylko wtedy, gdy BeEF jest już poprawnie zainstalowany i jedynym problemem jest to, że skrypt go nie wykrywa"
 	arr["GERMAN",408]="Wenn Sie BeEF manuell installiert haben, kann airgeddon es möglicherweise nicht finden und die Angriffsoption scheint eingeschränkt zu sein. Sie können versuchen, es mit hilfe der speziellen Menüoption dafür zu lösen. Dies funktioniert nur, wenn BeEF bereits korrekt installiert ist und das einzige Problem, das Sie haben, ist, dass das Skript es nicht erkennt"
-	arr["TURKISH",408]="${pending_of_translation} BeEF'i manuel olarak yüklediyseniz, airgeddon onu bulamayabilir ve saldırı seçeneği kısıtlı olarak görünebilir. Bunu düzeltmek için özel menü seçeneğini kullanarak çözmeyi deneyebilirsiniz. Sadece BeEF zaten doğru bir şekilde kurulmuşsa ve tek sorun, komut dosyasının bunu algılamaması durumunda çalışır"
+	arr["TURKISH",408]="BeEF'i manuel olarak yüklediyseniz, airgeddon onu bulamayabilir ve saldırı seçeneği kısıtlı olarak görünebilir. Bunu düzeltmek için özel menü seçeneğini kullanarak çözmeyi deneyebilirsiniz. Sadece BeEF zaten doğru bir şekilde kurulmuşsa ve tek sorun, komut dosyasının bunu algılamaması durumunda çalışır"
 
 	arr["ENGLISH",409]="1.  Evil Twin AP attack with sniffing and bettercap-sslstrip2/BeEF"
 	arr["SPANISH",409]="1.  Ataque Evil Twin AP con sniffing y bettercap-sslstrip2/BeEF"
@@ -5511,7 +5511,7 @@ function language_strings() {
 	arr["ITALIAN",409]="1.  Attacco Evil Twin AP con sniffing e bettercap-sslstrip2/BeEF"
 	arr["POLISH",409]="1.  Atak Evil Twin AP ze sniffingiem i bettercap-sslstrip2/BeEF"
 	arr["GERMAN",409]="1.  Evil Twin AP Angriff mit Sniffing und bettercap-sslstrip2/BeEF"
-	arr["TURKISH",409]="${pending_of_translation} 1.  Sniffing ve bettercap-sslstrip2/BeEF ile Kötü İkiz AP saldırısı"
+	arr["TURKISH",409]="1.  Sniffing ve bettercap-sslstrip2/BeEF ile Kötü İkiz AP saldırısı"
 
 	arr["ENGLISH",410]="2.  Try to troubleshoot manually installed BeEF dependency problem"
 	arr["SPANISH",410]="2.  Intentar solucionar problema de dependencia BeEF instalado manualmente"
@@ -5523,7 +5523,7 @@ function language_strings() {
 	arr["ITALIAN",410]="2.  Cercare di risolvere il problema delle dipende di BeEF installato manualmente"
 	arr["POLISH",410]="2.  Próba rozwiązywania problemów z ręcznie zainstalowanym BeEF"
 	arr["GERMAN",410]="2.  Versuche manuell installierte BeEF-Abhängigkeitsprobleme zu lösen"
-	arr["TURKISH",410]="${pending_of_translation} 2.  El ile yüklenmiş BeEF bağımlılık sorununu gidermeye çalışın"
+	arr["TURKISH",410]="2.  El ile yüklenmiş BeEF bağımlılık sorununu gidermeye çalışın"
 
 	arr["ENGLISH",411]="WPS filter enabled in scan. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",411]="Filtro WPS activado en escaneo. Una vez empezado, pulse [Ctrl+C] para pararlo..."
@@ -5535,7 +5535,7 @@ function language_strings() {
 	arr["ITALIAN",411]="Filtro WPS attivato nella scansione. Una volta avviata, premere [Ctrl+C] per fermarla..."
 	arr["POLISH",411]="Filtr WPS aktywowany podczas skanowania. Naciśnij [Ctrl+C] w trakcie trwania, aby zatrzymać..."
 	arr["GERMAN",411]="WPS-Filter beim Scannen aktiviert. Nach dem Start, drücken Sie [Ctrl+C], um es zu stoppen..."
-	arr["TURKISH",411]="${pending_of_translation} WPS filtresi taramada etkinleştirildi. Başladığınızda, durdurmak için [Ctrl+C] tuşlarına basın..."
+	arr["TURKISH",411]="WPS filtresi taramada etkinleştirildi. Başladığınızda, durdurmak için [Ctrl+C] tuşlarına basın..."
 
 	arr["ENGLISH",412]="You don't need to perform this action. Your BeEF is operational"
 	arr["SPANISH",412]="No necesitas realizar esta acción. Tu BeEF está operativo"
@@ -5547,7 +5547,7 @@ function language_strings() {
 	arr["ITALIAN",412]="Non è necessario fare questo. Il tuo BeEF è operativo"
 	arr["POLISH",412]="Nie musisz tego robić. Twoja BeEF działa"
 	arr["GERMAN",412]="Sie müssen diese Aktion nicht durchführen. Ihr BeEF ist betriebsbereit"
-	arr["TURKISH",412]="${pending_of_translation} Bu eylemi gerçekleştirmeniz gerekmez. BeEF'in operasyonel"
+	arr["TURKISH",412]="Bu eylemi gerçekleştirmeniz gerekmez. BeEF'in operasyonel"
 
 	arr["ENGLISH",413]="airgeddon fixed the problem. Your BeEF is operational"
 	arr["SPANISH",413]="airgeddon ha solucionado el problema. Tu BeEF está operativo"
@@ -5559,7 +5559,7 @@ function language_strings() {
 	arr["ITALIAN",413]="airgeddon ha risolto il problema. Il tuo BeEF è operativo"
 	arr["POLISH",413]="airgeddon rozwiązał problem. Twoja BeEF działa"
 	arr["GERMAN",413]="airgeddon hat das Problem gelöst. Ihr BeEF ist betriebsbereit"
-	arr["TURKISH",413]="${pending_of_translation} airgeddon sorunu çözdü. BeEF'in operasyonel"
+	arr["TURKISH",413]="airgeddon sorunu çözdü. BeEF'in operasyonel"
 
 	arr["ENGLISH",414]="You don't have curl installed. Is not possible to download PINs database file"
 	arr["SPANISH",414]="No tienes curl instalado. No se puede descargar el fichero de la base de datos de PINs"
@@ -5571,7 +5571,7 @@ function language_strings() {
 	arr["ITALIAN",414]="Non si dispone di curl installato. Non è possibile scaricare il file della base dati dei PINs"
 	arr["POLISH",414]="Nie masz zainstalowanego curl. Nie można pobrać pliku bazy danych kodu PIN"
 	arr["GERMAN",414]="Sie haben curl nicht installiert. Die PIN-Datenbank konnte nicht heruntergeladen werden"
-	arr["TURKISH",414]="${pending_of_translation} Yüklü curl yok. PIN veritabanı dosyasını indirmek mümkün değil"
+	arr["TURKISH",414]="Curl yüklü değil. PIN veritabanı dosyasını indirmek için Curl kurulu olmalı"
 
 	arr["ENGLISH",415]="${blue_color}airgeddon knows you have BeEF installed and you pass the validation, but it was unable to locate the right directory path where you have BeEF installed. Knowing the location gives some advantages for the execution because its configuration file can be customized instead of generic. ${green_color}Do you want to enter it manually? ${normal_color}${visual_choice}"
 	arr["SPANISH",415]="${blue_color}airgeddon sabe que tienes BeEF instalado y pasas la validación, pero no ha podido concretar la ruta del directorio exacto donde tienes instalado BeEF. Conocer la localización exacta tiene algunas ventajas a la hora de ejecutarlo ya que la configuración será personalizada en lugar de ser una configuración genérica. ${green_color}¿Quieres introducirla manualmente? ${normal_color}${visual_choice}"
@@ -5583,7 +5583,7 @@ function language_strings() {
 	arr["ITALIAN",415]="${blue_color}airgeddon sa che hai BeEF installato e passi la validazione, peró non ha potuto trovare il percorso esatto della directory in cui hai installato BeEF. Conoscere l'esatta posizione ha alcuni vantaggi all'ora di eseguiro perchè la configurazione sarà personalizzata, piuttosto che una configurazione generica. ${green_color}Vuoi inserirla manualmente? ${normal_color}${visual_choice}"
 	arr["POLISH",415]="${blue_color}airgeddon wie, że masz zainstalowaną wersję BeEF i przejdziesz walidację, ale nie możesz określić dokładnej ścieżki katalogu, w której zainstalowałeś BeEF. Znajomość dokładnej lokalizacji ma pewne zalety w czasie jej wykonywania, ponieważ konfiguracja zostanie dostosowana do indywidualnych potrzeb, a nie jako konfiguracja ogólna. ${green_color}Czy chcesz ją wprowadzić ręcznie? ${normal_color}${visual_choice}"
 	arr["GERMAN",415]="${blue_color}airgeddon weiß, dass Sie BeEF installiert haben und Sie die Validierung bestehen, aber airgeddon konnte den genauen Verzeichnispfad, in den BeEF installiert ist, nicht angeben. Die genaue Position zu kennen, hat zum Zeitpunkt der Ausführung einige Vorteile, da die Konfiguration personalisiert wird, anstatt eine generische Konfiguration zu sein. ${green_color} Möchten Sie es manuell eingeben? ${normal_color}${visual_choice}"
-	arr["TURKISH",415]="${pending_of_translation} ${blue_color}airgeddon, BeEF'in yüklü olduğunu ve doğrulama işlemini geçtiğinizi biliyor, ancak BeEF'in kurulu olduğu doğru dizin yolunu bulamadı. Konumun bilinmesi, yapılandırma dosyasının jenerik yerine özelleştirilebilmesi nedeniyle yürütme için bazı avantajlar sağlar. ${green_color} El ile girmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",415]="${blue_color}airgeddon, BeEF'in yüklü olduğunu ve doğrulama işlemini geçtiğinizi biliyor, ancak BeEF'in kurulu olduğu doğru dizin yolunu bulamadı. Konumun bilinmesi, yapılandırma dosyasının jenerik yerine özelleştirilebilmesi nedeniyle yürütme için bazı avantajlar sağlar. ${green_color} El ile girmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",416]="    You can run BeEF, but it is better if you run the second option before"
 	arr["SPANISH",416]="    Puedes ejecutar BeEF, pero es recomendable ejecutar la segunda opción antes"
@@ -5595,7 +5595,7 @@ function language_strings() {
 	arr["ITALIAN",416]="    Puoi eseguire BeEF, peró si consiglia di eseguire prima la seconda opzione"
 	arr["POLISH",416]="    Możesz uruchomić BeEF, ale zaleca się uruchomienie drugiej opcji najpierw"
 	arr["GERMAN",416]="     Sie können BeEF ausführen, es wird jedoch empfohlen, die zweite Option vorher auszuführen"
-	arr["TURKISH",416]="${pending_of_translation}     BeEF'i çalıştırabilirsiniz, ancak daha önce ikinci seçeneği çalıştırırsanız daha iyi olur"
+	arr["TURKISH",416]="     BeEF'i çalıştırabilirsiniz, ancak daha önce ikinci seçeneği çalıştırırsanız daha iyi olur"
 
 	arr["ENGLISH",417]="An unexpected error occurred, redirecting to the menu"
 	arr["SPANISH",417]="Ocurrió un error inesperado. Volviendo al menú"
@@ -5607,7 +5607,7 @@ function language_strings() {
 	arr["ITALIAN",417]="Errore imprevisto. Tornando al menú"
 	arr["POLISH",417]="Wystąpił nieoczekiwany błąd. Powrót do menu"
 	arr["GERMAN",417]="Ein unerwarteter Fehler ist aufgetreten. Zurück zum Menü"
-	arr["TURKISH",417]="${pending_of_translation} Menüye yönlendirme beklenmeyen bir hata oluştu"
+	arr["TURKISH",417]="Beklenmeyen bir hata oluştu, menüye yönlendiriliyorsunuz"
 
 	arr["ENGLISH",418]="Restoring MAC"
 	arr["SPANISH",418]="Restaurando MAC"
@@ -5619,7 +5619,7 @@ function language_strings() {
 	arr["ITALIAN",418]="Ripristinando MAC"
 	arr["POLISH",418]="Przywracanie MAC"
 	arr["GERMAN",418]="Wiederherstellen von MAC"
-	arr["TURKISH",418]="${pending_of_translation} Geri yükleme MAC"
+	arr["TURKISH",418]="MAC eski haline getiriliyor"
 
 	arr["ENGLISH",419]="Do you want to spoof your MAC address during this attack? ${normal_color}${visual_choice}"
 	arr["SPANISH",419]="¿Deseas falsear la dirección MAC de tu tarjeta durante el ataque? ${normal_color}${visual_choice}"
@@ -5631,7 +5631,7 @@ function language_strings() {
 	arr["ITALIAN",419]="Vuoi falsificare l'indirizzo MAC della scheda durante l'attacco? ${normal_color}${visual_choice}"
 	arr["POLISH",419]="Chcesz spoofować adres MAC karty podczas ataku? ${normal_color}${visual_choice}"
 	arr["GERMAN",419]="Möchten Sie die MAC-Adresse Ihrer Karte während des Angriffs verfälschen? ${normal_color}${visual_choice}"
-	arr["TURKISH",419]="${pending_of_translation} Bu saldırı sırasında MAC adresinizi taklit etmek ister misiniz? ${normal_color}${visual_choice}"
+	arr["TURKISH",419]="Bu saldırı sırasında MAC adresinizi değiştirmek ister misiniz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",420]="It has been detected that you are running airgeddon inside a Docker container. During this attack hostapd is used to create a fake AP. This component often conflicts with network-manager. From inside the container, airgeddon can't handle it. If you have network-manager installed on your host machine, close it or kill the conflicting processes or you'll get an error. For more information, see the Docker section of the Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["SPANISH",420]="Se ha detectado que estás ejecutando airgeddon en un contenedor de Docker. En este ataque se utiliza hostapd para crear un falso AP. Este componente suele dar conflicto con network-manager. Desde el contenedor, airgeddon no puede gestionarlo. Si tienes network-manager instalado en tu máquina host, ciérralo o mata los procesos en conflicto u obtendrás un error. Para más información consulta la sección Docker del Wiki: ${normal_color}${urlgithub_wiki}/Docker"
@@ -5643,7 +5643,7 @@ function language_strings() {
 	arr["ITALIAN",420]="È stato rilevato che si sta eseguendo airgeddon in un contenitore Docker. In questo attacco viene utilizzato hostapd per creare un falso AP. Questo componente tende a creare un conflitto con il network-manager. Dal contenitore, airgeddon non può gestirlo. Se si dispone di network-manager installato sul computer host, chiuderlo o uccidere i processi in conflitto o ci sará un errore. Per ulteriori informazioni consultare la sezione Docker della nostra Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["POLISH",420]="Wykryto, że używasz airgeddon w kontenerze Docker. W tym ataku hostapd służy do utworzenia fałszywego AP. Ten komponent często ma konflikt z network-manager. Z kontenera airgeddon nie może sobie z tym poradzić. Jeśli na komputerze hosta zainstalowano network-manager, zamknij lub zabij sprzeczne procesy lub otrzymasz błąd. Aby uzyskać więcej informacji, zobacz sekcję Docker Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["GERMAN",420]="Es wurde festgestellt, dass Sie airgeddon in einem Docker-Container ausführen. Bei diesem Angriff wird mit hostapd ein falscher AP erstellt. Diese Komponente steht normalerweise im Konflikt mit dem network-manager. Aus dem Container kann airgeddon das nicht schaffen. Wenn Sie den network-manager auf Ihrem Host-Computer installiert haben, schließen Sie ihn oder beenden Sie die Prozesse im Konflikt oder Sie erhalten einen Fehler. Weitere Informationen finden Sie im Abschnitt Docker des Wiki: ${normal_color}${urlgithub_wiki}/Docker"
-	arr["TURKISH",420]="${pending_of_translation} Bir Docker kabının içinde airgeddon çalıştırdığınız tespit edildi. Bu saldırı sırasında hostapd sahte bir AP oluşturmak için kullanılır. Bu bileşen genellikle ağ yöneticisi ile çakışır. Konteynırın içinden, hava hücresi bunu kaldıramaz. Ana makinenize ağ yöneticisi yüklüyse, kapat veya çakışan işlemleri durdurun veya bir hatayla karşılaşırsınız. Daha fazla bilgi için, Wiki'nin Docker bölümüne bakın: ${normal_color}${urlgithub_wiki}/Docker"
+	arr["TURKISH",420]="Bir Docker konteynırı içinde airgeddon çalıştırdığınız tespit edildi. Bu saldırı sırasında hostapd sahte bir AP oluşturmak için kullanılır. Bu bileşen genellikle ağ yöneticisi ile çakışır. Konteynırın içinden, hava hücresi bunu kaldıramaz. Ana makinenize ağ yöneticisi yüklüyse, kapat veya çakışan işlemleri durdurun veya bir hatayla karşılaşırsınız. Daha fazla bilgi için, Wiki'nin Docker bölümüne bakın: ${normal_color}${urlgithub_wiki}/Docker"
 
 	arr["ENGLISH",421]="Doubts? Visit our Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["SPANISH",421]="¿Dudas? Visita nuestro Wiki: ${normal_color}${urlgithub_wiki}"
@@ -5655,7 +5655,7 @@ function language_strings() {
 	arr["ITALIAN",421]="Domande? Visita la nostra Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["POLISH",421]="Czy masz wątpliwości? Odwiedź nasze Wiki: ${normal_color}${urlgithub_wiki}"
 	arr["GERMAN",421]="Zweifel? Besuchen Sie unser Wiki: ${normal_color}${urlgithub_wiki}"
-	arr["TURKISH",421]="${pending_of_translation} Şüpheler? Wiki'mizi ziyaret edin: ${normal_color}${urlgithub_wiki}"
+	arr["TURKISH",421]="Yardım? Wiki'mizi ziyaret edin: ${normal_color}${urlgithub_wiki}"
 
 	arr["ENGLISH",422]="The automatic update has been disabled when airgeddon is running in a Docker container. If you want to update it, download again the image tagged as \"latest\""
 	arr["SPANISH",422]="La actualización automática se ha desactivado cuando airgeddon se ejecuta en un contenedor de Docker. Si deseas actualizarlo descarga de nuevo la imagen con tag \"latest\""
@@ -5667,7 +5667,7 @@ function language_strings() {
 	arr["ITALIAN",422]="L'aggiornamento automatico viene disabilitato quando airgeddon viene eseguito in un contenitore Docker. Se vuoi aggiornarlo scaricare di nuovo l'immagine con il tag \"latest\""
 	arr["POLISH",422]="Automatyczna aktualizacja została wyłączona, gdy airgeddon jest uruchomiony w kontenerze Docker. Jeśli chcesz go zaktualizować, pobierz ponownie obraz oznaczony jako \"latest\""
 	arr["GERMAN",422]="Die automatische Aktualisierung wird deaktiviert, wenn airgeddon in einem Docker-Container ausgeführt wird. Wenn Sie es aktualisieren möchten, laden Sie das Bild erneut mit dem Tag \"latest\""
-	arr["TURKISH",422]="${pending_of_translation} Airgeddon bir Docker konteynerinde çalışırken otomatik güncelleme devre dışı bırakıldı. Güncellemek isterseniz, \"latest\" etiketli görüntüyü tekrar indirin"
+	arr["TURKISH",422]="Airgeddon bir Docker konteynerinde çalışırken otomatik güncelleme devre dışı bırakıldı. Güncellemek isterseniz, \"latest\" etiketli görüntüyü tekrar indirin"
 
 	arr["ENGLISH",423]="5.  WEP \"All-in-One\" attack"
 	arr["SPANISH",423]="5.  Ataque WEP \"Todo-en-Uno\""
@@ -5679,7 +5679,7 @@ function language_strings() {
 	arr["ITALIAN",423]="5.  Attacco WEP \"Tutto-in-Uno\""
 	arr["POLISH",423]="5.  Atak WEP \"Wszystko-w-Jednym\""
 	arr["GERMAN",423]="5.  WEP-Angriff \"All-in-One\""
-	arr["TURKISH",423]="${pending_of_translation} 5.  WEP \"All-in-One\" saldırı"
+	arr["TURKISH",423]="5.  WEP \"Hepsi-bir-arada\" saldırı"
 
 	arr["ENGLISH",424]="The selected network is invalid. Encryption type of target network must be WEP"
 	arr["SPANISH",424]="La red seleccionada no es válida. El tipo de encriptación de la red objetivo debe ser WEP"
@@ -5691,7 +5691,7 @@ function language_strings() {
 	arr["ITALIAN",424]="La rete selezionata non è valida. Il tipo di crittografia della rete obiettivo deve essere WEP"
 	arr["POLISH",424]="Wybrana sieć nie jest prawidłowa. Typem szyfrowania sieci docelowej musi być WEP"
 	arr["GERMAN",424]="Das ausgewählte Netzwerk ist nicht gültig. Die Art der Verschlüsselung des Zielnetzwerks muss WEP sein"
-	arr["TURKISH",424]="${pending_of_translation} Seçilen ağ geçersiz. Hedef ağ şifreleme türü WEP olmalıdır"
+	arr["TURKISH",424]="Seçilen ağ geçersiz. Hedef ağ şifreleme türü WEP olmalıdır"
 
 	arr["ENGLISH",425]="You have a valid WEP target network selected. Script can continue..."
 	arr["SPANISH",425]="Tienes una red objetivo WEP válida seleccionada. El script puede continuar..."
@@ -5703,7 +5703,7 @@ function language_strings() {
 	arr["ITALIAN",425]="Hai selezionato una rete obiettivo WEP valida. Lo script può continuare..."
 	arr["POLISH",425]="Wybrano prawidłową sieć docelową WEP. Skrypt może kontynuować..."
 	arr["GERMAN",425]="Sie haben ein gültiges WEP-Zielnetzwerk ausgewählt. Das Skript kann fortfahren..."
-	arr["TURKISH",425]="${pending_of_translation} Seçtiğiniz geçerli bir WEP hedef ağınız var. Komut dosyası devam edebilir..."
+	arr["TURKISH",425]="Seçtiğiniz geçerli bir WEP hedef ağınız var. Komut dosyası devam edebilir..."
 
 	arr["ENGLISH",426]="9.  WEP attacks menu"
 	arr["SPANISH",426]="9.  Menú de ataques WEP"
@@ -5739,7 +5739,7 @@ function language_strings() {
 	arr["ITALIAN",428]="Se esistono dei clienti reali connessi alla rete con crittografia WEP il processo sará piú veloce. Si otterrano prima sufficienti IV (Vettori di Inizializzazione)"
 	arr["POLISH",428]="Jeśli istnieją prawdziwi klienci podłączeni do sieci z szyfrowaniem WEP, proces przyspiesza zauważalnie. Szybciej uzyskane zostaną wystarczające IVs (Wektory Inicjujące)"
 	arr["GERMAN",428]="Wenn echte Clients über die WEP-Verschlüsselung mit dem Netzwerk verbunden sind, beschleunigt sich der Prozess erheblich. Ausreichende IVs werden vorher erhalten (InitialisierungsVektoren)"
-	arr["TURKISH",428]="${pending_of_translation} Gerçek istemciler WEP şifreli ağa bağlıysa, süreç önemli ölçüde hızlandırılacaktır. Yeterli İV'ler (Başlatma Vektörleri) daha hızlı yakalanacak"
+	arr["TURKISH",428]="Gerçek istemciler WEP şifreli ağa bağlıysa, süreç önemli ölçüde hızlandırılacaktır. Yeterli İV'ler (Başlatma Vektörleri) daha hızlı yakalanacak"
 
 	arr["ENGLISH",429]="The WEP \"All-in-One\" attack combines different techniques to generate enough traffic to decrypt the key (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentation, Fake association, etc.)"
 	arr["SPANISH",429]="El ataque WEP \"Todo-en-Uno\" combina diversas técnicas para generar el tráfico suficiente que hace falta para desencriptar la clave (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentación, Falsa asociación, etc.)"
@@ -5751,7 +5751,7 @@ function language_strings() {
 	arr["ITALIAN",429]="L'attacco WEP \"Tutto-in-Uno\" combina diverse tecniche per generare il traffico necessario per decifrare la chiave (Caffe Latte, Hirte, Replay, Chop-Chop, Frammentazione, Falsa associazione, etc.)"
 	arr["POLISH",429]="WEP typu \"Wszystko-w-Jednym\" łączy różne techniki, aby uzyskać wystarczająco dużo ruchu, aby odszyfrować klucz (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentation, Fałszywe asocjacja, itd.)"
 	arr["GERMAN",429]="Der WEP-Angriff \"All-in-One\" kombiniert verschiedene Techniken, um genug Verkehr zu erzeugen, um den Schlüssel zu entschlüsseln (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentierung, falsche Assoziation, etc.)"
-	arr["TURKISH",429]="${pending_of_translation} WEP \"All-in-One\" saldırısı, anahtarın şifresini çözmek için yeterli teknikleri üretmek için farklı teknikleri birleştirir (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentation, Fake association, vb.)"
+	arr["TURKISH",429]="WEP \"Hepsi-bir-arada\" saldırısı, anahtarın şifresini çözmek için yeterli teknikleri üretmek için farklı teknikleri birleştirir (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentation, Fake association, vb.)"
 
 	arr["ENGLISH",430]="If the password for the wifi network is obtained with the \"All-in-One\" WEP attack, you should decide where to save it. ${green_color}Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${wep_potpath}]"
 	arr["SPANISH",430]="Si se consigue la contraseña de la red wifi con el ataque WEP \"Todo-en-Uno\", hay que decidir donde guardarla. ${green_color}Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${wep_potpath}]"
@@ -5763,7 +5763,7 @@ function language_strings() {
 	arr["ITALIAN",430]="Se si ottiene la password della rete wireless con l'attacco WEP \"Tutto-en-Uno\", decidere dove salvarla. ${green_color}Immettere il percorso dove memorizzare il file o premere [Enter] per accettare la proposta di default ${normal_color}[${wep_potpath}]"
 	arr["POLISH",430]="Jeśli hasło sieci wifi zostanie zdobyte atakiem WEP \"Wszystko-w-Jednym\", musisz zdecydować, gdzie je zapisać. ${green_color}Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${wep_potpath}]"
 	arr["GERMAN",430]="Wenn Sie das WLAN-Passwort mit dem WEP-Angriff \"All-in-One\" erhalten, müssen Sie entscheiden, wo Sie es speichern möchten. ${green_color} Geben Sie den Pfad ein, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag ${normal_color}[${wep_potpath}] ${blue_color}zu akzeptieren"
-	arr["TURKISH",430]="${pending_of_translation} Kablosuz ağın şifresi \"All-in-One\" WEP saldırısıyla elde edilirse, nereye kaydedeceğinize karar vermelisiniz. ${green_color}Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın ${normal_color}[${wep_potpath}]"
+	arr["TURKISH",430]="Kablosuz ağın şifresi \"Hepsi-bir-arada\" WEP saldırısıyla elde edilirse, nereye kaydedeceğinize karar vermelisiniz. ${green_color}Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın ${normal_color}[${wep_potpath}]"
 
 	arr["ENGLISH",431]="The WEP protocol had a bad design and can be cracked in a few minutes if we have enough generated traffic"
 	arr["SPANISH",431]="El protocolo WEP tuvo un diseño erróneo y se puede romper en pocos minutos si se genera tráfico suficiente"
@@ -5775,7 +5775,7 @@ function language_strings() {
 	arr["ITALIAN",431]="Il protocollo WEP fú disegnato male e si puó rompere in pochi minuti se si genera abbastanza traffico"
 	arr["POLISH",431]="Protokół WEP został nieprawidłowo zaprojektowany i może zostać złamany po kilku minutach, jeśli zostanie wygenerowany wystarczający ruch"
 	arr["GERMAN",431]="Das WEP-Protokoll hatte ein falsches Design und kann in wenigen Minuten unterbrochen werden, wenn genügend Datenverkehr generiert wird"
-	arr["TURKISH",431]="${pending_of_translation} WEP protokolü kötü bir tasarıma sahipti ve yeterli sayıda trafiğe sahip olmamız durumunda birkaç dakika içinde çatlayabiliriz"
+	arr["TURKISH",431]="WEP protokolü kötü bir tasarıma sahipti ve yeterli trafik oluşturulması durumunda bir kaç dakika içinde kırılabilir."
 
 	arr["ENGLISH",432]="Captured IVs (Initialization Vectors) are shown on airodump capture window as \"Data\""
 	arr["SPANISH",432]="Los IVs (Vectores de Inicialización) capturados, son representados en la ventana de captura de airodump como \"Data\""
@@ -5787,7 +5787,7 @@ function language_strings() {
 	arr["ITALIAN",432]="I IV (Vettori di Inizializzazione) catturati, sono rappresentati nella finestra di acquisizione di airodump come \"Data\""
 	arr["POLISH",432]="Uchwycone obiekty IV (Wektory Inicjujące) są prezentowane w oknie przechwytywania airodump jako \"Data\""
 	arr["GERMAN",432]="Die erfassten IVs (InitialisierungsVektoren) werden im Erfassungsfenster von airodump als \"Data\" dargestellt"
-	arr["TURKISH",432]="${pending_of_translation} Yakalanan IV'ler (Başlatma Vektörleri) airodump yakalama penceresinde \"Data\" olarak gösterilir"
+	arr["TURKISH",432]="Yakalanan IV'ler (Başlatma Vektörleri) airodump yakalama penceresinde \"Data\" olarak gösterilir"
 
 	arr["ENGLISH",433]="Some access points are not vulnerable to certain WEP attacks. Like for example the Chop-Chop attack, that only affects some of them"
 	arr["SPANISH",433]="Algunos puntos de acceso no son vulnerables a ciertos ataques WEP. Como por ejemplo el ataque Chop-Chop, que solo afecta a algunos"
@@ -5799,7 +5799,7 @@ function language_strings() {
 	arr["ITALIAN",433]="Alcuni punti di accesso non sono vulnerabili a certi attacchi WEP. Come ad esempio l'attacco Chop-Chop, che colpisce solo alcuni"
 	arr["POLISH",433]="Niektóre punkty dostępu nie są podatne na niektóre ataki WEP. Na przykład atak Chop-Chop, który dotyka tylko niektórych osób"
 	arr["GERMAN",433]="Einige Access Points sind nicht anfällig für bestimmte WEP-Angriffe. Zum Beispiel der Chop-Chop-Angriff, der nur einige betrifft"
-	arr["TURKISH",433]="${pending_of_translation} Bazı erişim noktaları belirli WEP saldırılarına karşı savunmasız değildir. Örneğin Chop-Chop saldırısı gibi, sadece bazılarını etkiler"
+	arr["TURKISH",433]="Bazı erişim noktaları belirli WEP saldırılarına karşı savunmasız değildir. Örneğin Chop-Chop saldırısı gibi, sadece bazılarını etkiler"
 
 	arr["ENGLISH",434]="WEP \"All-in-One\" attack has been started. Press [Enter] key on this window to stop it"
 	arr["SPANISH",434]="El ataque WEP \"Todo-en-Uno\" ha comenzado. Pulse la tecla [Enter] en esta ventana para pararlo"
@@ -5811,7 +5811,7 @@ function language_strings() {
 	arr["ITALIAN",434]="L'attacco WEP \"Tutto-in-Uno\" è iniziato. Premere il tasto [Enter] in questa finestra per fermarlo"
 	arr["POLISH",434]="Rozpoczął się atak WEP \"Wszystko-w-Jednym\". Naciśnij klawisz [Enter] w tym oknie, aby go zatrzymać"
 	arr["GERMAN",434]="Der WEP-Angriff \"All-in-One\" hat begonnen. Drücken Sie die [Enter]-Taste in diesem Fenster, um sie zu stoppen"
-	arr["TURKISH",434]="${pending_of_translation} WEP \"All-in-One\" saldırı başlatıldı. Bunu durdurmak için bu pencerede [Enter] tuşuna basın"
+	arr["TURKISH",434]="WEP \"Hepsi-bir-arada\" saldırı başlatıldı. Bunu durdurmak için bu pencerede [Enter] tuşuna basın"
 
 	arr["ENGLISH",435]="Error trying to change interface mode. During the process the interface name must be changed, but it looks like you already have an interface occupying the name that would be needed (${normal_color}${desired_interface_name}${red_color})"
 	arr["SPANISH",435]="Error al intentar cambiar el modo de la interfaz. En el proceso el nombre de la interfaz cambia, pero parece que ya tienes una interfaz ocupando el nombre que se necesitaría (${normal_color}${desired_interface_name}${red_color})"
@@ -5823,7 +5823,7 @@ function language_strings() {
 	arr["ITALIAN",435]="Errore cercando di cambiare la modalità dell'interfaccia. Nel processo il nome dell'interfaccia cambia, peró sembra che già disponi di un'interfaccia che usa il nome di cui avresti bisogno (${normal_color}${desired_interface_name}${red_color})"
 	arr["POLISH",435]="Wystąpił błąd podczas próby zmiany trybu interfejsu. Wymaga to zmiany jego nazwy, ale wygląda jednak na to, że masz już interfejs o nazwie, która będzie potrzebna (${normal_color}${desired_interface_name}${red_color})"
 	arr["GERMAN",435]="Fehler beim Versuch, den Modus der Interface zu ändern. Dabei ändert sich der Name der Interface, aber es scheint, dass Sie bereits eine Interface haben, die den Namen belegt, der benötigt ist (${normal_color}${desired_interface_name}${red_color})"
-	arr["TURKISH",435]="${pending_of_translation} Arabirim modunu değiştirmeye çalışırken hata oluştu. İşlem sırasında arabirim adı değiştirilmeli, ancak gerekli olan adı taşıyan bir arabirime sahip olduğunuz anlaşılıyor (${normal_color}${desired_interface_name}${red_color})"
+	arr["TURKISH",435]="Arabirim modunu değiştirmeye çalışırken hata oluştu. İşlem sırasında arabirim adı değiştirilmeli, ancak gerekli olan adı taşıyan bir arabirime sahip olduğunuz anlaşılıyor (${normal_color}${desired_interface_name}${red_color})"
 
 	arr["ENGLISH",436]="The hashcat version you have installed (${hashcat_version}) is greater or equal than ${hashcat_hccapx_version} so you need to convert the capture files to \"hccapx\" format, airgeddon will do this automatically. To do this you need a converter that is not present on your system (hashcat-utils package), install it to be able to perform this attack"
 	arr["SPANISH",436]="La versión de hashcat que tienes instalada (${hashcat_version}) es igual o superior a la ${hashcat_hccapx_version} por lo que es necesario convertir los ficheros de captura a formato \"hccapx\", airgeddon lo hará automáticamente. Pero para ello hace falta un conversor que no está presente en tu sistema (paquete hashcat-utils), instálalo para poder realizar este ataque"
@@ -5835,7 +5835,7 @@ function language_strings() {
 	arr["ITALIAN",436]="La versione di hashcat installata (${hashcat_version}) è uguale o superiore alla ${hashcat_hccapx_version} quindi è necessario convertire i file di acquisizione al formato \"hccapx\", airgeddon lo fará automaticamente. Peró questo richiede un convertitore che non è presente nel sistema (pacchetto hashcat-utils), installalo per eseguire questo attacco"
 	arr["POLISH",436]="Zainstalowana wersja programu hashcat (${hashcat_version}) jest równa lub większa niż ${hashcat_hccapx_version}, dlatego konieczne jest przekonwertowanie plików przechwytywania do formatu \"hccapx\", airgeddon zrobi to automatycznie. Do tego potrzebny jest konwerter, który nie jest obecny w systemie (pakiet hashcat-utils), zainstaluj go, aby móc wykonać ten atak"
 	arr["GERMAN",436]="Ihre installierte hashcat-Version (${hashcat_version}) ist gleich oder größer als ${hashcat_hccapx_version}. Daher ist es notwendig, die Capture-Dateien in das Format \"hccapx\" zu konvertieren. airgeddon macht das automatisch. Dafür benötigen Sie einen Konverter, der nicht in Ihrem System vorhanden ist (Paket hashcat-utils), installieren Sie es, um diesen Angriff ausführen zu können"
-	arr["TURKISH",436]="${pending_of_translation} Yüklediğiniz hashcat sürümü (${hashcat_version}) ${hashcat_hccapx_version} boyutundan büyük ya da eşittir. Bu nedenle, yakalama dosyalarını \"hccapx\" biçimine dönüştürmeniz gerekir, bu nedenle airgeddon bunu otomatik olarak yapar. Bunu yapmak için sisteminizde mevcut olmayan bir dönüştürücüye ihtiyacınız vardır (hashcat-utils paketi), bu saldırıyı gerçekleştirebilmek için kurun"
+	arr["TURKISH",436]="Yüklediğiniz hashcat sürümü (${hashcat_version}) ${hashcat_hccapx_version} boyutundan büyük ya da eşittir. Bu nedenle, yakalama dosyalarını \"hccapx\" biçimine dönüştürmeniz gerekir, bu nedenle airgeddon bunu otomatik olarak yapar. Bunu yapmak için sisteminizde mevcut olmayan bir dönüştürücüye ihtiyacınız vardır (hashcat-utils paketi), bu saldırıyı gerçekleştirebilmek için kurun"
 
 	arr["ENGLISH",437]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through PayPal (${normal_color}${mail}${pink_color}) or sending a fraction of cryptocurrency (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["SPANISH",437]="Si te gustó el script y te pareció útil, puedes apoyar el proyecto haciendo una donación. A través de PayPal (${normal_color}${mail}${pink_color}) o enviando una fracción de criptomoneda (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Cualquier cantidad por pequeña que sea (1, 2, 5 $/€) es bien recibida. Más información y enlaces directos para realizarla en: ${normal_color}${urlgithub_wiki}/Contributing"
@@ -5847,7 +5847,7 @@ function language_strings() {
 	arr["ITALIAN",437]="Se ti è piaciuto lo script e l'hai trovato utile, puoi sostenere il progetto con una donazione. Attraverso PayPal (${normal_color}${mail}${pink_color}) o inviando una frazione di criptovaluta (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Qualsiasi importo per quanto piccolo (1, 2, 5 $/€) è ben accolto. Piú informazioni e collegamenti diretti per realizzarla in: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["POLISH",437]="Jeśli podobał Ci się ten skrypt i okazał się użyteczny, możesz poprzeć ten projekt, składając donację. Za pośrednictwem usługi PayPal (${normal_color}${mail}${pink_color}) lub wysyłając ułamek kryptowaluty (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Każda kwota, nawet malutka (1, 2, 5 $/€) będzie mile widziana. Więcej informacji i linki do donacji: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["GERMAN",437]="Wenn Ihnen das Skript gefallen hat und Sie es nützlich fanden, können Sie das Projekt mit einer Spende unterstützen. Durch PayPal (${normal_color}${mail}${pink_color}) oder durch Senden eines Bruchteils der Kryptowährung (${normal_color}Bitcoin, Ethereum, Litecoin...${pink_color}). Jeder kleine Betrag (1, 2, 5 $/€) wird gut angenommen. Mehr Informationen und direkte Links, um es zu machen: ${normal_color}${urlgithub_wiki}/Contributing"
-	arr["TURKISH",437]="${pending_of_translation} Senaryoyu beğendiyseniz ve yararlı bulduysanız, projeyi bağış yaparak destekleyebilirsiniz. PayPal (${normal_color}${mail}${pink_color}) veya cryptocurrency'ın bir kısmını (${normal_color}Bitcoin, Ethereum, Litecoin... ${pink_color}) göndererek. Ne kadar küçük olursa olsun, ne kadar küçük olursa olsun (1, 2, 5 $/€) kabul edilir. Bunu yapmak için daha fazla bilgi ve doğrudan bağlantı: ${normal_color}${urlgithub_wiki}/Contributing"
+	arr["TURKISH",437]="Senaryoyu beğendiyseniz ve yararlı bulduysanız, projeyi bağış yaparak destekleyebilirsiniz. PayPal (${normal_color}${mail}${pink_color}) veya cryptocurrency'ın bir kısmını (${normal_color}Bitcoin, Ethereum, Litecoin... ${pink_color}) göndererek. Ne kadar küçük olursa olsun, ne kadar küçük olursa olsun (1, 2, 5 $/€) kabul edilir. Bunu yapmak için daha fazla bilgi ve doğrudan bağlantı: ${normal_color}${urlgithub_wiki}/Contributing"
 
 	arr["ENGLISH",438]="We are looking for translators to other languages. If you want to see airgeddon in your native language and you also know english, contact us. More information at: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["SPANISH",438]="Buscamos traductores para otros idiomas. Si quieres ver airgeddon en tu lengua materna y además sabes inglés, contáctanos. Más información en: ${normal_color}${urlgithub_wiki}/Contributing"
@@ -5859,7 +5859,7 @@ function language_strings() {
 	arr["ITALIAN",438]="Cerchiamo traduttori per le altre lingue. Se volete vedere airgeddon nella vostra lingua madre e conoscete anche l'inglese, non esitate a contattarci. Per maggiori informazioni: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["POLISH",438]="Szukamy tłumaczy na inne języki. Jeśli chcesz zobaczyć airgeddon w swoim ojczystym języku i znasz angielski, skontaktuj się z nami. Więcej informacji: ${normal_color}${urlgithub_wiki}/Contributing"
 	arr["GERMAN",438]="Wir suchen Übersetzer für andere Sprachen. Wenn Sie airgeddon in Ihrer Muttersprache sehen möchten, kontaktieren Sie uns. Weitere Informationen unter: ${normal_color}${urlgithub_wiki}/Contributing"
-	arr["TURKISH",438]="${pending_of_translation} Diğer dillere tercümanlar arıyoruz. Eğer kendi dilinizde airgeddon görmek ve ayrıca ingilizce bilmek isterseniz, bize ulaşın. Daha fazla bilgi için: ${normal_color}${urlgithub_wiki}/Contributing"
+	arr["TURKISH",438]="Diğer dillere tercümanlar arıyoruz. Eğer kendi dilinizde airgeddon görmek ve ayrıca ingilizce bilmek isterseniz, bize ulaşın. Daha fazla bilgi için: ${normal_color}${urlgithub_wiki}/Contributing"
 
 	arr["ENGLISH",439]="${blue_color}You haven't selected any target, you'll be prompted to input data manually. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",439]="${blue_color}Se ha detectado que no tienes seleccionado ningún objetivo, tendrás que introducir los datos manualmente. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -5871,7 +5871,7 @@ function language_strings() {
 	arr["ITALIAN",439]="${blue_color}Abbiamo rilevato che non è stato selezionato alcun obiettivo, è necessario immettere manualmente i dati. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",439]="${blue_color}Wykryto, że nie wybrano żadnych celów, konieczne będzie ręczne wprowadzanie danych. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",439]="${blue_color}Es wurde festgestellt, dass Sie kein Ziel ausgewählt haben. Sie müssen die Daten manuell eingeben. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
-	arr["TURKISH",439]="${pending_of_translation} ${blue_color}Hiçbir hedef seçmediyseniz, verileri manuel olarak girmeniz istenir. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",439]="${blue_color}Hiçbir hedef seçmediyseniz, verileri manuel olarak girmeniz istenir. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",440]="Aircrack trophy file generated successfully at [${normal_color}${aircrackpotenteredpath}${blue_color}]"
 	arr["SPANISH",440]="Fichero de trofeo aircrack generado con éxito en [${normal_color}${aircrackpotenteredpath}${blue_color}]"
@@ -5883,7 +5883,7 @@ function language_strings() {
 	arr["ITALIAN",440]="Il file trofeo di aircrack è stato generato con successo in [${normal_color}${aircrackpotenteredpath}${blue_color}]"
 	arr["POLISH",440]="Plik trofeum aircrack został pomyślnie wygenerowany w [${normal_color}${aircrackpotenteredpath}${blue_color}]"
 	arr["GERMAN",440]="Aircrack-Trophäendatei erfolgreich erstellt in [${normal_color}${aircrackpotenteredpath}${blue_color}]"
-	arr["TURKISH",440]="${pending_of_translation} Aircrack kupa dosyası başarıyla oluşturuldu [${normal_color}${aircrackpotenteredpath}${blue_color}]"
+	arr["TURKISH",440]="Aircrack kupa dosyası başarıyla oluşturuldu [${normal_color}${aircrackpotenteredpath}${blue_color}]"
 
 	arr["ENGLISH",441]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${aircrack_potpath}]"
 	arr["SPANISH",441]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${aircrack_potpath}]"
