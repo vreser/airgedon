@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180827
+#Date.........: 20180924
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -6823,8 +6823,8 @@ function language_strings() {
 
 	arr["ENGLISH",519]="11. Turkish"
 	arr["SPANISH",519]="11. Turco"
-	arr["FRENCH",519]="11. Turc"
-	arr["CATALAN",519]="${pending_of_translation} 11. Turc"
+	arr["FRENCH",519]="${pending_of_translation} 11. Turc"
+	arr["CATALAN",519]="11. Turc"
 	arr["PORTUGUESE",519]="11. Turco"
 	arr["RUSSIAN",519]="${pending_of_translation} 11. Турецкий"
 	arr["GREEK",519]="11. Τουρκικά"
