@@ -3339,7 +3339,7 @@ function language_strings() {
 	arr["ITALIAN",228]="                             Sviluppato da ${author}"
 	arr["POLISH",228]="                             Opracowany przez ${author}"
 	arr["GERMAN",228]="                             Entwickelt von ${author}"
-	arr["TURKISH",228]="${pending_of_translation}                              ${author} tarafından geliştirilen"
+	arr["TURKISH",228]="${author} tarafından geliştirildi"
 
 	arr["ENGLISH",229]="hashcat CPU, non GPU attacks"
 	arr["SPANISH",229]="ataques hashcat CPU, no GPU"
