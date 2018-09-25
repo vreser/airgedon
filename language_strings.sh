@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20180924
+#Date.........: 20180925
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -1491,7 +1491,7 @@ function language_strings() {
 	arr["ITALIAN",74]="Questo script è sotto GPLv3 (o versione successiva)"
 	arr["POLISH",74]="Ten skrypt objęty jest licencją GPLv3 (lub nowszą)"
 	arr["GERMAN",74]="Dieses Skript ist unter GPLv3 (oder höher) lizenziert"
-	arr["TURKISH",74]="Bu yazılım GPLv3 (ya da daha üstü) lisansı altındadır "
+	arr["TURKISH",74]="Bu yazılım GPLv3 (ya da daha üstü) lisansı altındadır"
 
 	arr["ENGLISH",75]="Thanks to the \"Spanish pentesting crew\", to the \"Wifislax Staff\", to the forums people who help me, my collaborators, translators and specially to kcdtv and xtonousou for beta testing and support received"
 	arr["SPANISH",75]="Gracias al \"Spanish pentesting crew\", al \"Wifislax Staff\", a la gente de los foros que me ayuda, a mis colaboradores, traductores y en especial a kcdtv y xtonousou por el beta testing y el apoyo recibido"
@@ -5427,7 +5427,7 @@ function language_strings() {
 	arr["ITALIAN",402]="Immettere il percorso assoluto della directory in cui è installato BeEF:"
 	arr["POLISH",402]="Wprowadż ścieżkę absolutną do instalacji BeEF:"
 	arr["GERMAN",402]="Geben Sie den absoluten Pfad des Verzeichnisses ein, in dem BeEF installiert ist:"
-	arr["TURKISH",402]="BeEf'in kurulu olduğu dizini tam olarak giriniz: "
+	arr["TURKISH",402]="BeEf'in kurulu olduğu dizini tam olarak giriniz:"
 
 	arr["ENGLISH",403]="The directory you entered doesn't exist"
 	arr["SPANISH",403]="El directorio introducido no existe"
