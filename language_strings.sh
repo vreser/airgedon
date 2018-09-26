@@ -6811,7 +6811,7 @@ function language_strings() {
 
 	arr["ENGLISH",518]="Language changed to Turkish"
 	arr["SPANISH",518]="Idioma cambiado a Turco"
-	arr["FRENCH",518]="${pending_of_translation} Le script sera maintenant en Turc"
+	arr["FRENCH",518]="Le script sera maintenant en Turc"
 	arr["CATALAN",518]="Idioma canviat a Turc"
 	arr["PORTUGUESE",518]="Idioma alterado para Turco"
 	arr["RUSSIAN",518]="${pending_of_translation} Язык изменён на Турецкий"
@@ -6823,7 +6823,7 @@ function language_strings() {
 
 	arr["ENGLISH",519]="11. Turkish"
 	arr["SPANISH",519]="11. Turco"
-	arr["FRENCH",519]="${pending_of_translation} 11. Turc"
+	arr["FRENCH",519]="11. Turc"
 	arr["CATALAN",519]="11. Turc"
 	arr["PORTUGUESE",519]="11. Turco"
 	arr["RUSSIAN",519]="${pending_of_translation} 11. Турецкий"
