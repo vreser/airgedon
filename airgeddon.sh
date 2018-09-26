@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180906
+#Date.........: 20180926
 #Version......: 8.12
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -6916,7 +6916,7 @@ function set_control_script() {
 	EOF
 
 	cat >&7 <<-'EOF'
-				echo "${msg_good_pass} $( (cat < ${success_pass_path}) 2> /dev/null)" >> ${log_path}
+				echo "${msg_good_pass} $( (cat < ${success_pass_path}) 2> /dev/null)" >> "${log_path}"
 				attempts_number=$( (cat < "${attempts_path}" | wc -l) 2> /dev/null)
 				et_password=$( (cat < ${success_pass_path}) 2> /dev/null)
 				echo -e "\t${et_password}"
