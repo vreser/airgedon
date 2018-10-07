@@ -4,7 +4,7 @@
  - Added prompt symbol for every user interaction
  - Improved regex for BSSID check
  - Changes on contributing policies
- - Github pull request template added
+ - Github pull request template added and issue templates updated
 
 ### 8.11
  - Turkish language translation added (Thank you to "UN5T48L3")
