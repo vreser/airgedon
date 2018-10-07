@@ -3,6 +3,7 @@
  - Tested compatibility with Kali 2018.3, Fedora 28, Backbox 5.x and BlackArch 2018.06.01
  - Added prompt symbol for every user interaction
  - Improved regex for BSSID check
+ - Changes on contributing policies
 
 ### 8.11
  - Turkish language translation added (Thank you to "UN5T48L3")
