@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20180919
+#Date.........: 20181013
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -2310,7 +2310,7 @@ function ask_bssid() {
 
 	debug_print
 
-	local regexp="^([a-fA-F0-9]{2}:){5}[a-zA-Z0-9]{2}$"
+	local regexp="^([[:xdigit:]]{2}:){5}[[:xdigit:]]{2}$"
 
 	if [ "${1}" = "wps" ]; then
 		if [ -z "${wps_bssid}" ]; then
@@ -7820,7 +7820,7 @@ function set_et_control_script() {
 	EOF
 
 	cat >&7 <<-'EOF'
-				echo "${msg_good_pass} $( (cat < ${success_pass_path}) 2> /dev/null)" >> ${log_path}
+				echo "${msg_good_pass} $( (cat < ${success_pass_path}) 2> /dev/null)" >> "${log_path}"
 				attempts_number=$( (cat < "${attempts_path}" | wc -l) 2> /dev/null)
 				et_password=$( (cat < ${success_pass_path}) 2> /dev/null)
 				echo -e "\t${et_password}"
@@ -11706,15 +11706,17 @@ function initialize_script_settings() {
 	declare -gA wps_data_array
 }
 
-#Detect if there is a working X window system excepting for docker container
+#Detect if there is a working X window system excepting for docker container and wayland
 function check_xwindow_system() {
 
 	debug_print
 
 	if hash xset 2> /dev/null; then
 		if ! xset -q > /dev/null 2>&1; then
-			if [ "${is_docker}" -eq 0 ]; then
-				xterm_ok=0
+			if [ "${XDG_SESSION_TYPE}" != "wayland" ]; then
+				if [ "${is_docker}" -eq 0 ]; then
+					xterm_ok=0
+				fi
 			fi
 		fi
 	fi

@@ -1,3 +1,9 @@
+---
+name: Bug report
+about: Create a report to help us improve
+
+---
+
 <!--- Please, answer the questions to provide maximum of info -->
 <!--- Filling this issue template is mandatory. Otherwise the issue can be directly closed -->
 <!--- Write in English only -->
