@@ -6,6 +6,7 @@
  - Changes on contributing policies
  - Github pull request template added and issue templates updated
  - Added Wayland graphic system support (Thank you to "fr0xk")
+ - Fixed print error on flying saucer intro for some terminals
 
 ### 8.11
  - Turkish language translation added (Thank you to "UN5T48L3")
