@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181013
+#Date.........: 20181102
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -72,6 +72,7 @@ optional_tools_names=(
 						"packetforge-ng"
 						"hostapd-wpe"
 						"asleap"
+						"john"
 					)
 
 update_tools=("curl")
@@ -108,6 +109,7 @@ declare -A possible_package_names=(
 									[${optional_tools_names[20]}]="aircrack-ng" #packetforge-ng
 									[${optional_tools_names[21]}]="hostapd-wpe" #hostapd-wpe
 									[${optional_tools_names[22]}]="asleap" #asleap
+									[${optional_tools_names[23]}]="john" #john
 									[${update_tools[0]}]="curl" #curl
 								)
 
@@ -4064,6 +4066,8 @@ function initialize_menu_options_dependencies() {
 	et_sniffing_sslstrip2_dependencies=(${optional_tools_names[5]} ${optional_tools_names[6]} ${optional_tools_names[7]} ${optional_tools_names[18]} ${optional_tools_names[19]})
 	wep_attack_dependencies=(${optional_tools_names[2]} ${optional_tools_names[20]})
 	enterprise_attack_dependencies=(${optional_tools_names[21]} ${optional_tools_names[22]})
+	asleap_attacks_dependencies=(${optional_tools_names[22]})
+	john_attacks_dependencies=(${optional_tools_names[23]})
 }
 
 #Set possible changes for some commands that can be found in different ways depending of the O.S.
@@ -5376,15 +5380,15 @@ function enterprise_decrypt_menu() {
 	print_simple_separator
 	language_strings "${language}" 536
 	language_strings "${language}" 544 "separator"
-	language_strings "${language}" 545 #TODO jtr dependencies
-	language_strings "${language}" 546 #TODO jtr dependencies
-	language_strings "${language}" 547 #TODO jtr dependencies
+	language_strings "${language}" 545 john_attacks_dependencies[@]
+	language_strings "${language}" 546 john_attacks_dependencies[@]
+	language_strings "${language}" 547 john_attacks_dependencies[@]
 	language_strings "${language}" 229 "separator"
 	language_strings "${language}" 550 hashcat_attacks_dependencies[@]
 	language_strings "${language}" 551 hashcat_attacks_dependencies[@]
 	language_strings "${language}" 552 hashcat_attacks_dependencies[@]
 	language_strings "${language}" 548 "separator"
-	language_strings "${language}" 549 #TODO asleap dependencies
+	language_strings "${language}" 549 asleap_attacks_dependencies[@]
 
 	print_hint ${current_menu}
 
