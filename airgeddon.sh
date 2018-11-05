@@ -11662,15 +11662,15 @@ function print_animated_flying_saucer() {
 
 	debug_print
 
-	echo -e "\033[s"
+	echo -e "\033[6B"
 
 	for i in $(seq 1 8); do
+		echo -e "\033[7A"
 		if [ "${i}" -le 4 ]; then
 			saucer_frame=${i}
 		else
 			saucer_frame=$((i-4))
 		fi
-		echo -e "\033[u"
 		flying_saucer ${saucer_frame}
 	done
 }
