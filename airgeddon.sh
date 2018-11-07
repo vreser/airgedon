@@ -7,11 +7,17 @@
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
 
+#Enabled with extra-verbose mode 2 / Enabled 1 / Disabled 0 - Debug mode for faster development skipping intro and initial checks - Default value 0
+debug_mode=${debug_mode:-0}
+
+#Enabled 1 / Disabled 0 - Auto update feature (it has no effect on debug mode) - Default value 1
+auto_update=${auto_update:-1}
+
 #Enabled 1 / Disabled 0 - Auto change language feature - Default value 1
-auto_change_language=1
+auto_change_language=${auto_change_language:-0}
 
 #Enabled 1 / Disabled 0 - Allow colorized output - Default value 1
-allow_colorization=1
+allow_colorization=${auto_update:1}
 
 #Language vars
 #Change this line to select another default language. Select one from available values in array
@@ -127,7 +133,6 @@ escaped_pending_of_translation="\[PoT\]"
 standard_resolution="1024x768"
 curl_404_error="404: Not Found"
 language_strings_file="language_strings.sh"
-rc_file=".airgeddonrc"
 broadcast_mac="FF:FF:FF:FF:FF:FF"
 
 #5Ghz vars
@@ -330,9 +335,6 @@ yellow_color="\033[1;33m"
 pink_color="\033[1;35m"
 white_color="\e[1;97m"
 normal_color="\e[1;0m"
-
-#Source environmental variables
-source "${rc_file}"
 
 #Check coherence between script and language_strings file
 function check_language_strings() {
@@ -584,18 +586,18 @@ function auto_update_toggle() {
 
 	debug_print
 
-	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
-		sed -ri 's:(AIRGEDDON_AUTO_UPDATE)=(true):\1=false:' "${scriptfolder}${rc_file}" 2> /dev/null
-		if ! grep -E "AIRGEDDON_AUTO_[U]PDATE=false" "${scriptfolder}${rc_file}" > /dev/null; then
+	if [ "${auto_update}" -eq 1 ]; then
+		sed -ri 's:(auto_update)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
+		if ! grep -E "auto_[u]pdate=0" "${scriptfolder}${scriptname}" > /dev/null; then
 			return 1
 		fi
-		export AIRGEDDON_AUTO_UPDATE=false
+		auto_update=$((auto_update-1))
 	else
-		sed -ri 's:(AIRGEDDON_AUTO_UPDATE)=(false):\1=true:' "${scriptfolder}${rc_file}" 2> /dev/null
-		if ! grep -E "AIRGEDDON_AUTO_[U]PDATE=true" "${scriptfolder}${rc_file}" > /dev/null; then
+		sed -ri 's:(auto_update)=(0):\1=1:' "${scriptfolder}${scriptname}" 2> /dev/null
+		if ! grep -E "auto_[u]pdate=1" "${scriptfolder}${scriptname}" > /dev/null; then
 			return 1
 		fi
-		export AIRGEDDON_AUTO_UPDATE=true
+		auto_update=$((auto_update+1))
 	fi
 	return 0
 }
@@ -624,7 +626,7 @@ function set_permanent_language() {
 #Print the current line of where this was called and the function's name. Applies to some (which are useful) functions
 function debug_print() {
 
-	if "${AIRGEDDON_DEBUG_MODE:-false}"; then
+	if [ ${debug_mode} -eq 2 ]; then
 
 		declare excluded_functions=(
 								"ask_yesno"
@@ -693,7 +695,7 @@ function special_text_missed_optional_tool() {
 	declare -a required_tools=("${!3}")
 
 	allowed_menu_option=1
-	if ! "${AIRGEDDON_DEBUG_MODE:-false}"; then
+	if [ ${debug_mode} -eq 0 ]; then
 		tools_needed="${optionaltool_needed[${1}]}"
 		for item in "${required_tools[@]}"; do
 			if [ "${optional_tools[${item}]}" -eq 0 ]; then
@@ -1575,7 +1577,7 @@ function option_menu() {
 	print_simple_separator
 	language_strings "${language}" 78
 	print_simple_separator
-	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
+	if [ "${auto_update}" -eq 1 ]; then
 		language_strings "${language}" 455
 	else
 		language_strings "${language}" 449
@@ -1602,7 +1604,7 @@ function option_menu() {
 			language_menu
 		;;
 		2)
-			if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
+			if [ "${auto_update}" -eq 1 ]; then
 				ask_yesno 457 "no"
 				if [ "${yesno}" = "y" ]; then
 					if auto_update_toggle; then
@@ -3800,7 +3802,7 @@ function print_options() {
 
 	debug_print
 
-	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
+	if [ "${auto_update}" -eq 1 ]; then
 		language_strings "${language}" 451 "blue"
 	else
 		language_strings "${language}" 452 "blue"
@@ -11553,7 +11555,7 @@ function check_compatibility() {
 	done
 
 	update_toolsok=1
-	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
+	if [ "${auto_update}" -eq 1 ]; then
 
 		echo
 		language_strings "${language}" 226 "blue"
@@ -11617,7 +11619,7 @@ function check_update_tools() {
 
 	debug_print
 
-	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
+	if [ "${auto_update}" -eq 1 ]; then
 		if [ ${update_toolsok} -eq 1 ]; then
 			autoupdate_check
 		else
@@ -11954,7 +11956,7 @@ function welcome() {
 	set_possible_aliases
 	initialize_optional_tools_values
 
-	if ! "${AIRGEDDON_DEBUG_MODE:-false}"; then
+	if [ ${debug_mode} -eq 0 ]; then
 		language_strings "${language}" 86 "title"
 		language_strings "${language}" 6 "blue"
 		echo
