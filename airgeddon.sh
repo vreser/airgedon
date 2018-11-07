@@ -7,9 +7,6 @@
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
 
-#Enabled with extra-verbose mode 2 / Enabled 1 / Disabled 0 - Debug mode for faster development skipping intro and initial checks - Default value 0
-debug_mode=0
-
 #Enabled 1 / Disabled 0 - Auto update feature (it has no effect on debug mode) - Default value 1
 auto_update=1
 
@@ -626,7 +623,7 @@ function set_permanent_language() {
 #Print the current line of where this was called and the function's name. Applies to some (which are useful) functions
 function debug_print() {
 
-	if [ ${debug_mode} -eq 2 ]; then
+	if "${AIRGEDDON_DEBUG_MODE:-true}"; then
 
 		declare excluded_functions=(
 								"ask_yesno"
@@ -695,7 +692,7 @@ function special_text_missed_optional_tool() {
 	declare -a required_tools=("${!3}")
 
 	allowed_menu_option=1
-	if [ ${debug_mode} -eq 0 ]; then
+	if ! "${AIRGEDDON_DEBUG_MODE:-false}"; then
 		tools_needed="${optionaltool_needed[${1}]}"
 		for item in "${required_tools[@]}"; do
 			if [ "${optional_tools[${item}]}" -eq 0 ]; then
@@ -11895,7 +11892,7 @@ function welcome() {
 	set_possible_aliases
 	initialize_optional_tools_values
 
-	if [ ${debug_mode} -eq 0 ]; then
+	if ! "${AIRGEDDON_DEBUG_MODE:-false}"; then
 		language_strings "${language}" 86 "title"
 		language_strings "${language}" 6 "blue"
 		echo
