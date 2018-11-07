@@ -586,13 +586,13 @@ function auto_update_toggle() {
 		if ! grep -E "AIRGEDDON_AUTO_[U]PDATE=false" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		AIRGEDDON_AUTO_UPDATE=false
+		export AIRGEDDON_AUTO_UPDATE=false
 	else
 		sed -ri 's:(AIRGEDDON_AUTO_UPDATE)=(false):\1=true:' "${scriptfolder}${rc_file}" 2> /dev/null
 		if ! grep -E "AIRGEDDON_AUTO_[U]PDATE=true" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		AIRGEDDON_AUTO_UPDATE=true
+		export AIRGEDDON_AUTO_UPDATE=true
 	fi
 	return 0
 }
