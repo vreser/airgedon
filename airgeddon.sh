@@ -17,7 +17,7 @@ auto_update=${auto_update:-1}
 auto_change_language=${auto_change_language:-0}
 
 #Enabled 1 / Disabled 0 - Allow colorized output - Default value 1
-allow_colorization=${auto_update:1}
+allow_colorization=${allow_colorization:1}
 
 #Language vars
 #Change this line to select another default language. Select one from available values in array
