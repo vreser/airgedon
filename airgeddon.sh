@@ -538,7 +538,7 @@ function auto_change_language_toggle() {
 
 	debug_print
 
-	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
+	if [ "${auto_change_language}" -eq 1 ]; then
 		sed -ri 's:(auto_change_language)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
 		if ! grep -E "auto_[c]hange_language=0" "${scriptfolder}${scriptname}" > /dev/null; then
 			return 1
