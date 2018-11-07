@@ -331,6 +331,9 @@ pink_color="\033[1;35m"
 white_color="\e[1;97m"
 normal_color="\e[1;0m"
 
+#Source environmental variables
+source "${rc_file}"
+
 #Check coherence between script and language_strings file
 function check_language_strings() {
 
@@ -621,7 +624,7 @@ function set_permanent_language() {
 #Print the current line of where this was called and the function's name. Applies to some (which are useful) functions
 function debug_print() {
 
-	if "${AIRGEDDON_DEBUG_MODE:-true}"; then
+	if "${AIRGEDDON_DEBUG_MODE:-false}"; then
 
 		declare excluded_functions=(
 								"ask_yesno"
