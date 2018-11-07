@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181101
+#Date.........: 20181107
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -7387,6 +7387,30 @@ function language_strings() {
 	arr["POLISH",552]="6.  (hashcat) Atak bazujący na regułach na plik przechwytywania"
 	arr["GERMAN",552]="6.  (hashcat) Regeln-basierender Angriff gegen der Capture-Datei"
 	arr["TURKISH",552]="6.  (hashcat) Yakalama dosyasına karşı kural tabanlı saldırı"
+
+	arr["ENGLISH",553]="Type challenge (example: 00:11:22:33:44:55:66:77):"
+	arr["SPANISH",553]="Escribe el challenge (ejemplo: 00:11:22:33:44:55:66:77):"
+	arr["FRENCH",553]="${pending_of_translation} Veuillez entrer le défi (exemple: 00:11:22:33:44:55:66:77):"
+	arr["CATALAN",553]="${pending_of_translation} Escriu el challenge (exemple: 00:11:22:33:44:55:66:77):"
+	arr["PORTUGUESE",553]="${pending_of_translation} Escreva o desafio (exemplo: 00:11:22:33:44:55:66:77):"
+	arr["RUSSIAN",553]="${pending_of_translation} Введите вызовом (пример: 00:11:22:33:44:55:66:77):"
+	arr["GREEK",553]="${pending_of_translation} Πληκτρολογήστε πρόκλησης (παράδειγμα: 00:11:22:33:44:55:66:77):"
+	arr["ITALIAN",553]="${pending_of_translation} Scrivere l'sfida (es: 00:11:22:33:44:55:66:77):"
+	arr["POLISH",553]="${pending_of_translation} Wpisz wyzwania (przykład: 00:11:22:33:44:55:66:77):"
+	arr["GERMAN",553]="${pending_of_translation} Schreiben Herausforderung (Beispiel: 00:11:22:33:44:55:66:77):"
+	arr["TURKISH",553]="${pending_of_translation} Hedef okuması (example: 00:11:22:33:44:55:66:77):"
+
+	arr["ENGLISH",554]="Type response (example: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+	arr["SPANISH",554]="Escribe el response (ejemplo: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+	arr["FRENCH",554]="${pending_of_translation} Veuillez entrer le réponse (exemple: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+	arr["CATALAN",554]="${pending_of_translation} Escriu el response (exemple: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+	arr["PORTUGUESE",554]="${pending_of_translation} Escreva o resposta (exemplo: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+	arr["RUSSIAN",554]="${pending_of_translation} Введите ответом (пример: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+	arr["GREEK",554]="${pending_of_translation} Πληκτρολογήστε απόκρισης (παράδειγμα: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+	arr["ITALIAN",554]="${pending_of_translation} Scrivere l'risposta (es: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+	arr["POLISH",554]="${pending_of_translation} Wpisz odpowiedzi (przykład: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+	arr["GERMAN",554]="${pending_of_translation} Schreiben Antwort (Beispiel: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+	arr["TURKISH",554]="${pending_of_translation} Hedef yanıtı (example: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
 
 	case "${3}" in
 		"yellow")

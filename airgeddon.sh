@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181102
+#Date.........: 20181107
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -2291,6 +2291,26 @@ function ask_channel() {
 	return 0
 }
 
+#Read the user input on asleap challenge
+function read_challenge() {
+
+	debug_print
+
+	echo
+	language_strings "${language}" 553 "green"
+	read -rp "> " enterprise_asleap_challenge
+}
+
+#Read the user input on asleap response
+function read_response() {
+
+	debug_print
+
+	echo
+	language_strings "${language}" 554 "green"
+	read -rp "> " enterprise_asleap_response
+}
+
 #Read the user input on bssid questions
 function read_bssid() {
 
@@ -4117,6 +4137,8 @@ function initialize_menu_and_print_selections() {
 		;;
 		"enterprise_decrypt_menu")
 			print_enterprise_decrypt_vars
+			enterprise_asleap_challenge=""
+			enterprise_asleap_response=""
 		;;
 		"handshake_tools_menu")
 			print_iface_selected
@@ -5387,7 +5409,6 @@ function enterprise_decrypt_menu() {
 	language_strings "${language}" 552 hashcat_attacks_dependencies[@]
 	language_strings "${language}" 548 "separator"
 	language_strings "${language}" 549 asleap_attacks_dependencies[@]
-
 	print_hint ${current_menu}
 
 	read -rp "> " enterprise_decrypt_option
@@ -5414,7 +5435,11 @@ function enterprise_decrypt_menu() {
 			under_construction_message
 		;;
 		7)
-			under_construction_message
+			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
+				forbidden_menu_option
+			else
+				enterprise_asleap_dictionary_attack_option
+			fi
 		;;
 		*)
 			invalid_menu_option
@@ -5475,6 +5500,24 @@ function manage_asking_for_captured_file() {
 	else
 		ask_capture_file
 	fi
+}
+
+#Manage the questions on challenge response input
+manage_asking_for_challenge_response() {
+
+	debug_print
+
+	local regexp="^([[:xdigit:]]{2}:){7}[[:xdigit:]]{2}$"
+
+	while [[ ! ${enterprise_asleap_challenge} =~ ${regexp} ]]; do
+		read_challenge
+	done
+
+	regexp="^([[:xdigit:]]{2}:){23}[[:xdigit:]]{2}$"
+
+	while [[ ! ${enterprise_asleap_response} =~ ${regexp} ]]; do
+		read_response
+	done
 }
 
 #Manage the questions on dictionary file questions
@@ -5669,6 +5712,24 @@ function select_wpa_bssid_target_from_captured_file() {
 	fi
 
 	return 0
+}
+
+#Validate and ask for the different parameters used in an enterprise asleap dictionary based attack
+function enterprise_asleap_dictionary_attack_option() {
+
+	debug_print
+
+	manage_asking_for_challenge_response
+	manage_asking_for_dictionary_file
+
+	echo
+	language_strings "${language}" 190 "yellow"
+	language_strings "${language}" 115 "read"
+
+	under_construction_message
+	#TODO pending to do these two functions
+	#exec_enterprise_asleap_dictionary_attack
+	#manage_offline_cracked_asleap_pot
 }
 
 #Validate and ask for the different parameters used in an aircrack dictionary based attack
