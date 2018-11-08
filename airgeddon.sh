@@ -4562,7 +4562,7 @@ function enterprise_attacks_menu() {
 	language_strings "${language}" 307 enterprise_attack_dependencies[@]
 	print_hint ${current_menu}
 
-	read -r enterprise_option
+	read -rp "> " enterprise_option
 	case ${enterprise_option} in
 		0)
 			return
@@ -6696,7 +6696,7 @@ function select_captured_enterprise_user() {
 
 	option_enterprise_user_selected=""
 	while [[ -z "${option_enterprise_user_selected}" ]]; do
-		read -r option_enterprise_user_selected
+		read -rp "> " option_enterprise_user_selected
 		if [[ ! "${option_enterprise_user_selected}" =~ ^[0-9]+$ ]] || [[ ${option_enterprise_user_selected} -lt 1 ]] || [[ ${option_enterprise_user_selected} -gt ${counter} ]]; then
 			option_enterprise_user_selected=""
 			echo
