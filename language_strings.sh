@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181107
+#Date.........: 20181108
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -565,6 +565,30 @@ function language_strings() {
 	asleap_texts["POLISH",1]="airgeddon. Hasło odszyfrowane z użyciem asleap"
 	asleap_texts["GERMAN",1]="airgeddon. Passwort mit asleap entschlüsselt"
 	asleap_texts["TURKISH",1]="airgeddon. asleap kullanarak şifreyi çözdü"
+
+	asleap_texts["ENGLISH",2]="Challenge"
+	asleap_texts["SPANISH",2]="Challenge"
+	asleap_texts["FRENCH",2]="${pending_of_translation} Défi"
+	asleap_texts["CATALAN",2]="${pending_of_translation} Challenge"
+	asleap_texts["PORTUGUESE",2]="${pending_of_translation} Desafio"
+	asleap_texts["RUSSIAN",2]="${pending_of_translation} Вызовом"
+	asleap_texts["GREEK",2]="${pending_of_translation} Πρόκλησης"
+	asleap_texts["ITALIAN",2]="${pending_of_translation} Sfida"
+	asleap_texts["POLISH",2]="${pending_of_translation} Wyzwania"
+	asleap_texts["GERMAN",2]="${pending_of_translation} Herausforderung"
+	asleap_texts["TURKISH",2]="${pending_of_translation} Okuması"
+
+	asleap_texts["ENGLISH",3]="Response"
+	asleap_texts["SPANISH",3]="Response"
+	asleap_texts["FRENCH",3]="${pending_of_translation} Réponse"
+	asleap_texts["CATALAN",3]="${pending_of_translation} Response"
+	asleap_texts["PORTUGUESE",3]="${pending_of_translation} Resposta"
+	asleap_texts["RUSSIAN",3]="${pending_of_translation} Ответом"
+	asleap_texts["GREEK",3]="${pending_of_translation} Απόκρισης"
+	asleap_texts["ITALIAN",3]="${pending_of_translation} Risposta"
+	asleap_texts["POLISH",3]="${pending_of_translation} Odpowiedzi"
+	asleap_texts["GERMAN",3]="${pending_of_translation} Antwort"
+	asleap_texts["TURKISH",3]="${pending_of_translation} Yanıtı"
 
 	declare -gA hashcat_texts
 	hashcat_texts["ENGLISH",1]="airgeddon. Decrypted password using hashcat"
@@ -7220,17 +7244,17 @@ function language_strings() {
 	arr["GERMAN",538]="${pending_of_translation} Wir werden versuchen, mit dem asleap-Tool das Passwort des Benutzers ${normal_color}${enterprise_username}${blue_color} zu entschlüsseln, dessen Challenge und Antwort lauten: ${normal_color}${enterprise_captured_challenges_responses[${enterprise_username}]}"
 	arr["TURKISH",538]="${pending_of_translation} Asleap aracıyla, sorunu ve yanıtı olan kullanıcının ${normal_color}${enterprise_username}${blue_color} şifresini çözmeyi deneyeceğiz: ${normal_color}${enterprise_captured_challenges_responses[${enterprise_username}]}"
 
-	arr["ENGLISH",539]="Asleap trophy file generated successfully at [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["SPANISH",539]="Fichero de trofeo asleap generado con éxito en [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["FRENCH",539]="Le fichier trophée asleap a bien été crée dans [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["CATALAN",539]="Fitxer de trofeu asleap generat amb èxit a [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["PORTUGUESE",539]="Arquivo de troféu asleap gerado com sucesso [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["RUSSIAN",539]="Трофейный файл asleap был успешно сгенерирован в [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["GREEK",539]="Το asleap αρχείο τρόπαιο δημιουργήθηκε επιτυχώς [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["ITALIAN",539]="File di trofeo di asleap generato con successo [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["POLISH",539]="Plik trofeum asleap został pomyślnie wygenerowany w [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["GERMAN",539]="Trophäen-Datei-Asleap erfolgreich in [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}] generiert"
-	arr["TURKISH",539]="Asleap trophy dosyası başarıyla şurada oluşturuldu [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+	arr["ENGLISH",539]="Asleap trophy file generated successfully at [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["SPANISH",539]="Fichero de trofeo asleap generado con éxito en [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["FRENCH",539]="Le fichier trophée asleap a bien été crée dans [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["CATALAN",539]="Fitxer de trofeu asleap generat amb èxit a [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["PORTUGUESE",539]="Arquivo de troféu asleap gerado com sucesso [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["RUSSIAN",539]="Трофейный файл asleap был успешно сгенерирован в [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["GREEK",539]="Το asleap αρχείο τρόπαιο δημιουργήθηκε επιτυχώς [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["ITALIAN",539]="File di trofeo di asleap generato con successo [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["POLISH",539]="Plik trofeum asleap został pomyślnie wygenerowany w [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["GERMAN",539]="Trophäen-Datei-Asleap erfolgreich in [${normal_color}${path_to_asleap_trophy}${blue_color}] generiert"
+	arr["TURKISH",539]="Asleap trophy dosyası başarıyla şurada oluşturuldu [${normal_color}${path_to_asleap_trophy}${blue_color}]"
 
 	arr["ENGLISH",540]="It seems we failed... try it again using another dictionary or choose bruteforce/rule based attack from the offline WPA/WPA2 decrypt menu"
 	arr["SPANISH",540]="Parece que no lo hemos conseguido... inténtalo de nuevo con otro diccionario o por fuerza bruta/ataque basado en reglas desde el menú de desencriptado offline WPA/WPA2"

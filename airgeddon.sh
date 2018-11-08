@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181107
+#Date.........: 20181108
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -5728,10 +5728,10 @@ function enterprise_asleap_dictionary_attack_option() {
 	language_strings "${language}" 190 "yellow"
 	language_strings "${language}" 115 "read"
 
-	under_construction_message
-	#TODO pending to do these two functions
-	#exec_enterprise_asleap_dictionary_attack
-	#manage_offline_cracked_asleap_pot
+	echo
+	exec_asleap_attack "offline_menu"
+	echo
+	manage_asleap_pot "offline_menu"
 }
 
 #Validate and ask for the different parameters used in an aircrack dictionary based attack
@@ -5980,7 +5980,7 @@ function manage_aircrack_pot() {
 	fi
 }
 
-#Check if the password was decrypted using asleap and manage to save it on a file
+#Check if the password was decrypted using asleap against challenges and responses
 function manage_asleap_pot() {
 
 	debug_print
@@ -5989,36 +5989,62 @@ function manage_asleap_pot() {
 
 	if [[ "${asleap_output}" =~ password:[[:blank:]]+(.*) ]]; then
 
-		asleap_attack_finished=1
-		rm -rf "${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt" > /dev/null 2>&1
+		if [ "${1}" != "offline_menu" ]; then
+			asleap_attack_finished=1
+			path_to_asleap_trophy="${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt"
+		else
+			#TODO pending filename for offline cracking. For now fixed path to test
+			path_to_asleap_trophy="/home/v1s1t0r/Desktop/asleap_trophy.txt"
+		fi
+
+		rm -rf "${path_to_asleap_trophy}" > /dev/null 2>&1
 
 		{
 		echo ""
 		date +%Y-%m-%d
 		echo "${asleap_texts[${language},1]}"
 		echo ""
-		echo "ESSID: ${essid}"
-		echo "BSSID: ${bssid}"
+		} >> "${path_to_asleap_trophy}"
+
+		if [ "${1}" != "offline_menu" ]; then
+			{
+			echo "ESSID: ${essid}"
+			echo "BSSID: ${bssid}"
+			} >> "${path_to_asleap_trophy}"
+		fi
+
+		{
+		echo "${asleap_texts[${language},2]}: ${enterprise_asleap_challenge}"
+		echo "${asleap_texts[${language},3]}: ${enterprise_asleap_response}"
 		echo ""
 		echo "---------------"
 		echo ""
-		echo "${enterprise_username} / ${BASH_REMATCH[1]}"
-		} >> "${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt"
+		} >> "${path_to_asleap_trophy}"
 
-		add_contributing_footer_to_file "${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt"
+		if [ "${1}" != "offline_menu" ]; then
+			{
+			echo "${enterprise_username} / ${BASH_REMATCH[1]}"
+			} >> "${path_to_asleap_trophy}"
+		else
+			{
+			echo "${BASH_REMATCH[1]}"
+			} >> "${path_to_asleap_trophy}"
+		fi
 
-		echo
+		add_contributing_footer_to_file "${path_to_asleap_trophy}"
+
 		language_strings "${language}" 234 "yellow"
 		echo
 		language_strings "${language}" 539 "blue"
 		language_strings "${language}" 115 "read"
 	else
-		echo
-		language_strings "${language}" 540 "red"
+		if [ "${1}" != "offline_menu" ]; then
+			language_strings "${language}" 540 "red"
 
-		ask_yesno 541 "no"
-		if [ "${yesno}" = "n" ]; then
-			asleap_attack_finished=1
+			ask_yesno 541 "no"
+			if [ "${yesno}" = "n" ]; then
+				asleap_attack_finished=1
+			fi
 		fi
 	fi
 }
@@ -6191,6 +6217,7 @@ function parse_from_enterprise() {
 	local passwords=()
 	local line_to_check
 	local text_to_check
+	unset enterprise_captured_challenges_responses
 	declare -gA enterprise_captured_challenges_responses
 
 	readarray -t CAPTURED_USERNAMES < <(grep -n -E "username:" "${tmpdir}${hostapd_wpe_log}" | sort -k 2,2 | uniq --skip-fields=1 2> /dev/null)
@@ -6638,6 +6665,7 @@ function handle_asleap_attack() {
 				ask_dictionary
 				echo
 				exec_asleap_attack
+				echo
 				manage_asleap_pot
 			done
 		fi
@@ -6684,13 +6712,12 @@ function exec_asleap_attack() {
 
 	debug_print
 
-	local challenge
-	local response
-
 	rm -rf "${tmpdir}${asleap_pot_tmp}" > /dev/null 2>&1
 
-	[[ "${enterprise_captured_challenges_responses[${enterprise_username}]}" =~ (([0-9a-zA-Z]{2}:?)+)[[:blank:]]/[[:blank:]](.*) ]] && challenge="${BASH_REMATCH[1]}" && response="${BASH_REMATCH[3]}"
-	asleap_cmd="asleap -C \"${challenge}\" -R \"${response}\" -W \"${DICTIONARY}\" -v | tee \"${tmpdir}${asleap_pot_tmp}\" ${colorize}"
+	if [ "${1}" != "offline_menu" ]; then
+		[[ "${enterprise_captured_challenges_responses[${enterprise_username}]}" =~ (([0-9a-zA-Z]{2}:?)+)[[:blank:]]/[[:blank:]](.*) ]] && enterprise_asleap_challenge="${BASH_REMATCH[1]}" && enterprise_asleap_response="${BASH_REMATCH[3]}"
+	fi
+	asleap_cmd="asleap -C \"${enterprise_asleap_challenge}\" -R \"${enterprise_asleap_response}\" -W \"${DICTIONARY}\" -v | tee \"${tmpdir}${asleap_pot_tmp}\" ${colorize}"
 	eval "${asleap_cmd}"
 }
 
