@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181108
+#Date.........: 20181109
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -7225,8 +7225,8 @@ function language_strings() {
 	arr["FRENCH",537]="${pending_of_translation} Voulez-vous essayer de déchiffrer ce qui a été capturé? ${blue_color}L'outil asleap sera utilisé. Si vous ne répondez pas \"n\", vous pourrez l’essayer ultérieurement avec hashcat ou john the ripper à partir du menu de décryptage hors connexion WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["CATALAN",537]="${pending_of_translation} Vols intentar desxifrar el capturat? ${blue_color}S'utilitzarà l'eina asleap. Si respons no \"n\" podràs provar més tard utilitzant hashcat o John the ripper des del menú de desencriptat offline WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["PORTUGUESE",537]="${pending_of_translation} Você quer tentar decifrar o que foi capturado? ${blue_color}A ferramenta asleap será usada. Se você responder não \"n\" você pode tentar mais tarde usando o hashcat ou john the ripper no menu de descriptografia offline WPA/WPA2 ${normal_color}${visual_choice}"
-	arr["RUSSIAN",537]="${pending_of_translation} Вы хотите попытаться расшифровать захваченные вещи? ${blue_color}Будет использован инструмент Asleap. Если вы ответите no \"n\", вы можете попытаться сделать это позже, используя hashcat или john the ripper из меню дешифрования WPA/WPA2 в автономном режиме ${normal_color}${visual_choice}"
-	arr["GREEK",537]="${pending_of_translation} Θέλετε να προσπαθήσετε να αποκρυπτογραφήσετε τα περιεχόμενα; ${blue_color}Το εργαλείο Asleap θα χρησιμοποιηθεί. Εάν απαντήσετε όχι \"n\", μπορείτε να προσπαθήσετε να το κάνετε αργότερα χρησιμοποιώντας hashcat ή john the ripper από το αποκρυπτογραφημένο μενού WPA/WPA2 ${normal_color}${visual_choice}"
+	arr["RUSSIAN",537]="${pending_of_translation} Вы хотите попытаться расшифровать захваченные вещи? ${blue_color}Будет использован инструмент asleap. Если вы ответите no \"n\", вы можете попытаться сделать это позже, используя hashcat или john the ripper из меню дешифрования WPA/WPA2 в автономном режиме ${normal_color}${visual_choice}"
+	arr["GREEK",537]="${pending_of_translation} Θέλετε να προσπαθήσετε να αποκρυπτογραφήσετε τα περιεχόμενα; ${blue_color}Το εργαλείο asleap θα χρησιμοποιηθεί. Εάν απαντήσετε όχι \"n\", μπορείτε να προσπαθήσετε να το κάνετε αργότερα χρησιμοποιώντας hashcat ή john the ripper από το αποκρυπτογραφημένο μενού WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["ITALIAN",537]="${pending_of_translation} Vuoi provare a decifrare ciò che è stato catturato? ${blue_color}Verrà utilizzato lo strumento asleap. Se non rispondi a nessun \"n\" puoi provarlo in seguito usando hashcat o john the ripper dal menu di decrittazione offline WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["POLISH",537]="${pending_of_translation} Czy chcesz spróbować odczytać, co zostało zrobione? ${blue_color}Zostanie użyte narzędzie o nazwie asleap. Jeśli nie odpowiesz \"n\", możesz spróbować później za pomocą programu hashcat lub john the ripper z menu deszyfrowania offline WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["GERMAN",537]="${pending_of_translation} Möchten Sie versuchen zu entschlüsseln, was erfasst wurde? ${blue_color}Das Werkzeug asleap wird verwendet. Wenn Sie mit \"n\" nicht antworten, können Sie es später mit hashcat oder john the ripper vom Offline-Entschlüsselungsmenü WPA/WPA2 versuchen ${normal_color}${visual_choice}"
