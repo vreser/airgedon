@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181108
+#Date.........: 20181109
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -5989,54 +5989,65 @@ function manage_asleap_pot() {
 
 	if [[ "${asleap_output}" =~ password:[[:blank:]]+(.*) ]]; then
 
+		local asleap_decrypted_password="${BASH_REMATCH[1]}"
+		local write_to_file=0
+
+		language_strings "${language}" 234 "yellow"
+
 		if [ "${1}" != "offline_menu" ]; then
+			echo
+			local write_to_file=1
 			asleap_attack_finished=1
 			path_to_asleap_trophy="${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt"
 		else
-			#TODO pending filename for offline cracking. For now fixed path to test
-			path_to_asleap_trophy="/home/v1s1t0r/Desktop/asleap_trophy.txt"
+			ask_yesno 235 "yes"
+			if [ "${yesno}" = "y" ]; then
+				local write_to_file=1
+				#TODO pending filename for offline cracking. For now fixed path to test
+				path_to_asleap_trophy="/home/v1s1t0r/Desktop/asleap_trophy.txt"
+			fi
 		fi
 
-		rm -rf "${path_to_asleap_trophy}" > /dev/null 2>&1
+		if [ "${write_to_file}" = "1" ]; then
+			rm -rf "${path_to_asleap_trophy}" > /dev/null 2>&1
 
-		{
-		echo ""
-		date +%Y-%m-%d
-		echo "${asleap_texts[${language},1]}"
-		echo ""
-		} >> "${path_to_asleap_trophy}"
-
-		if [ "${1}" != "offline_menu" ]; then
 			{
-			echo "ESSID: ${essid}"
-			echo "BSSID: ${bssid}"
+			echo ""
+			date +%Y-%m-%d
+			echo "${asleap_texts[${language},1]}"
+			echo ""
 			} >> "${path_to_asleap_trophy}"
+
+			if [ "${1}" != "offline_menu" ]; then
+				{
+				echo "ESSID: ${essid}"
+				echo "BSSID: ${bssid}"
+				} >> "${path_to_asleap_trophy}"
+			fi
+
+			{
+			echo "${asleap_texts[${language},2]}: ${enterprise_asleap_challenge}"
+			echo "${asleap_texts[${language},3]}: ${enterprise_asleap_response}"
+			echo ""
+			echo "---------------"
+			echo ""
+			} >> "${path_to_asleap_trophy}"
+
+			if [ "${1}" != "offline_menu" ]; then
+				{
+				echo "${enterprise_username} / ${asleap_decrypted_password}"
+				} >> "${path_to_asleap_trophy}"
+			else
+				{
+				echo "${asleap_decrypted_password}"
+				} >> "${path_to_asleap_trophy}"
+			fi
+
+			add_contributing_footer_to_file "${path_to_asleap_trophy}"
+
+			language_strings "${language}" 539 "blue"
+			language_strings "${language}" 115 "read"
 		fi
-
-		{
-		echo "${asleap_texts[${language},2]}: ${enterprise_asleap_challenge}"
-		echo "${asleap_texts[${language},3]}: ${enterprise_asleap_response}"
-		echo ""
-		echo "---------------"
-		echo ""
-		} >> "${path_to_asleap_trophy}"
-
-		if [ "${1}" != "offline_menu" ]; then
-			{
-			echo "${enterprise_username} / ${BASH_REMATCH[1]}"
-			} >> "${path_to_asleap_trophy}"
-		else
-			{
-			echo "${BASH_REMATCH[1]}"
-			} >> "${path_to_asleap_trophy}"
-		fi
-
-		add_contributing_footer_to_file "${path_to_asleap_trophy}"
-
-		language_strings "${language}" 234 "yellow"
-		echo
-		language_strings "${language}" 539 "blue"
-		language_strings "${language}" 115 "read"
 	else
 		if [ "${1}" != "offline_menu" ]; then
 			language_strings "${language}" 540 "red"
