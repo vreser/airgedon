@@ -7436,6 +7436,18 @@ function language_strings() {
 	arr["GERMAN",554]="${pending_of_translation} Schreiben Antwort (Beispiel: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
 	arr["TURKISH",554]="${pending_of_translation} Hedef yanıtı (example: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
 
+	arr["ENGLISH",555]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${asleap_potpath}]"
+	arr["SPANISH",555]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${asleap_potpath}]"
+	arr["FRENCH",555]="Entrez le chemin où vous voulez enregistrer le fichier ou bien appuyez sur [Enter] pour utiliser le chemin proposé ${normal_color}[${asleap_potpath}]"
+	arr["CATALAN",555]="Escriu la ruta on guardarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${asleap_potpath}]"
+	arr["PORTUGUESE",555]="Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${asleap_potpath}]"
+	arr["RUSSIAN",555]="Напечатайте путь к сохранённому файлу или нажмите [Enter] для принятия предложения по умолчанию ${normal_color}[${asleap_potpath}]"
+	arr["GREEK",555]="Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${asleap_potpath}]"
+	arr["ITALIAN",555]="Immettere il percorso dove memorizzare il file o premere [Enter] per accettare quello proposto di default ${normal_color}[${asleap_potpath}]"
+	arr["POLISH",555]="Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${asleap_potpath}]"
+	arr["GERMAN",555]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${asleap_potpath}]"
+	arr["TURKISH",555]="Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın ${normal_color}[${asleap_potpath}]"
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"

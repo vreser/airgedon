@@ -6003,8 +6003,21 @@ function manage_asleap_pot() {
 			ask_yesno 235 "yes"
 			if [ "${yesno}" = "y" ]; then
 				local write_to_file=1
-				#TODO pending filename for offline cracking. For now fixed path to test
-				path_to_asleap_trophy="/home/v1s1t0r/Desktop/asleap_trophy.txt"
+
+				asleap_potpath="${default_save_path}"
+				lastcharasleap_potpath=${asleap_potpath: -1}
+				if [ "${lastcharasleap_potpath}" != "/" ]; then
+					asleap_potpath="${asleap_potpath}/"
+				fi
+				asleappot_filename="asleap_decrypted_password.txt"
+				asleap_potpath="${asleap_potpath}${asleappot_filename}"
+
+				validpath=1
+				while [[ "${validpath}" != "0" ]]; do
+					read_path "asleappot"
+				done
+
+				path_to_asleap_trophy="${asleapenteredpath}"
 			fi
 		fi
 
@@ -9308,6 +9321,10 @@ function validate_path() {
 				suggested_filename="${hashcatpot_filename}"
 				potenteredpath+="${hashcatpot_filename}"
 			;;
+			"asleappot")
+				suggested_filename="${asleappot_filename}"
+				asleapenteredpath+="${asleappot_filename}"
+			;;
 			"ettercaplog")
 				suggested_filename="${default_ettercaplogfilename}"
 				ettercap_logpath="${ettercap_logpath}${default_ettercaplogfilename}"
@@ -9459,6 +9476,14 @@ function read_path() {
 				potenteredpath="${hashcat_potpath}"
 			fi
 			validate_path "${potenteredpath}" "${1}"
+		;;
+		"asleappot")
+			language_strings "${language}" 555 "green"
+			read_and_clean_path "asleapenteredpath"
+			if [ -z "${asleapenteredpath}" ]; then
+				asleapenteredpath="${asleap_potpath}"
+			fi
+			validate_path "${asleapenteredpath}" "${1}"
 		;;
 		"ettercaplog")
 			language_strings "${language}" 303 "green"
