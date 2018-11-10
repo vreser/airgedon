@@ -11945,7 +11945,7 @@ function initialize_colorized_output() {
 }
 
 #Script starting point
-function welcome() {
+function main() {
 
 	debug_print
 
@@ -12491,4 +12491,4 @@ for f in SIGINT SIGHUP INT SIGTSTP; do
 	trap_cmd="trap \"capture_traps ${f}\" \"${f}\""
 	eval "${trap_cmd}"
 done
-welcome
+main
