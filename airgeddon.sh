@@ -317,19 +317,6 @@ crunch_numbercharset="0123456789"
 crunch_symbolcharset="!#$%/=?{}[]-*:;"
 hashcat_charsets=("?l" "?u" "?d" "?s")
 
-#Colors vars
-green_color="\033[1;32m"
-green_color_title="\033[0;32m"
-red_color="\033[1;31m"
-red_color_slim="\033[0;031m"
-blue_color="\033[1;34m"
-cyan_color="\033[1;36m"
-brown_color="\033[0;33m"
-yellow_color="\033[1;33m"
-pink_color="\033[1;35m"
-white_color="\e[1;97m"
-normal_color="\e[1;0m"
-
 #Check coherence between script and language_strings file
 function check_language_strings() {
 
@@ -649,6 +636,7 @@ function debug_print() {
 								"special_text_missed_optional_tool"
 								"store_array"
 								"under_construction_message"
+								"initialize_colors"
 							)
 
 		if (IFS=$'\n'; echo "${excluded_functions[*]}") | grep -qFx "${FUNCNAME[1]}"; then
@@ -11924,7 +11912,7 @@ function env_vars_initialization() {
 	export AIRGEDDON_COLORS=true
 
 	#Enabled true / Disabled false - Allow extended colorized output (ccze) - Default value true
-	export AIRGEDDON_ADVANCED_COLORS=true
+	export AIRGEDDON_EXTENDED_COLORS=true
 
 	#shellcheck source=./.airgeddonrc
 	source "${scriptfolder}${rc_file}" 2> /dev/null
@@ -11953,12 +11941,48 @@ function initialize_colorized_output() {
 	fi
 }
 
+#Initialize colors vars
+function initialize_colors() {
+
+	normal_color="\e[1;0m"
+
+	if "${AIRGEDDON_COLORS:-true}"; then
+		green_color="\033[1;32m"
+		green_color_title="\033[0;32m"
+		red_color="\033[1;31m"
+		red_color_slim="\033[0;031m"
+		blue_color="\033[1;34m"
+		cyan_color="\033[1;36m"
+		brown_color="\033[0;33m"
+		yellow_color="\033[1;33m"
+		pink_color="\033[1;35m"
+		white_color="\e[1;97m"
+	else
+		green_color="${normal_color}"
+		green_color_title="${normal_color}"
+		red_color="${normal_color}"
+		red_color_slim="${normal_color}"
+		blue_color="${normal_color}"
+		cyan_color="${normal_color}"
+		brown_color="${normal_color}"
+		yellow_color="${normal_color}"
+		pink_color="${normal_color}"
+		white_color="${normal_color}"
+
+		if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
+			export AIRGEDDON_EXTENDED_COLORS=false
+		fi
+	fi
+}
+
 #Script starting point
 function main() {
 
 	env_vars_initialization
 
 	debug_print
+
+	initialize_colors
 
 	clear
 	current_menu="pre_main_menu"
