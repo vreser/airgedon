@@ -11947,6 +11947,9 @@ function initialize_colorized_output() {
 #Script starting point
 function main() {
 
+	#shellcheck source=./.airgeddonrc
+	source "${scriptfolder}${rc_file}" 2> /dev/null
+
 	debug_print
 
 	clear
