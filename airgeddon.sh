@@ -12,6 +12,13 @@ auto_update=1
 auto_change_language=1
 allow_colorization=1
 
+#TODO perform the import of .airgeddonrc keeping the flags if they exist
+
+#TODO modify options menu for autochange language to use new env var system
+#TODO modify options menu for colors to use new env var system
+#TODO modify options menu for auto update to use new env var system
+#TODO modify options menu for language to use new env var system
+
 #Language vars
 #Change this line to select another default language. Select one from available values in array
 language="ENGLISH"
@@ -11934,7 +11941,7 @@ function initialize_colorized_output() {
 	debug_print
 
 	colorize=""
-	if [ "${allow_colorization}" -eq 1 ]; then
+	if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 		if hash ccze 2> /dev/null; then
 			colorize="| ccze -A"
 		fi
