@@ -8,6 +8,7 @@
 #Bash Version.: 4.2 or later
 
 #Initializing env vars
+#Don't change any env var here. It should be done on ".airgeddonrc" file. This is just for initialization
 
 #Enabled true / Disabled false - Develop mode for faster development skipping intro and initial checks - Default value false
 export AIRGEDDON_DEVELOP_MODE=false
