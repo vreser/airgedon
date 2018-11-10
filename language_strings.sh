@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181107
+#Date.........: 20181109
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -565,6 +565,30 @@ function language_strings() {
 	asleap_texts["POLISH",1]="airgeddon. Hasło odszyfrowane z użyciem asleap"
 	asleap_texts["GERMAN",1]="airgeddon. Passwort mit asleap entschlüsselt"
 	asleap_texts["TURKISH",1]="airgeddon. asleap kullanarak şifreyi çözdü"
+
+	asleap_texts["ENGLISH",2]="Challenge"
+	asleap_texts["SPANISH",2]="Challenge"
+	asleap_texts["FRENCH",2]="${pending_of_translation} Défi"
+	asleap_texts["CATALAN",2]="${pending_of_translation} Challenge"
+	asleap_texts["PORTUGUESE",2]="${pending_of_translation} Desafio"
+	asleap_texts["RUSSIAN",2]="${pending_of_translation} Вызовом"
+	asleap_texts["GREEK",2]="${pending_of_translation} Πρόκλησης"
+	asleap_texts["ITALIAN",2]="${pending_of_translation} Sfida"
+	asleap_texts["POLISH",2]="${pending_of_translation} Wyzwania"
+	asleap_texts["GERMAN",2]="${pending_of_translation} Herausforderung"
+	asleap_texts["TURKISH",2]="${pending_of_translation} Okuması"
+
+	asleap_texts["ENGLISH",3]="Response"
+	asleap_texts["SPANISH",3]="Response"
+	asleap_texts["FRENCH",3]="${pending_of_translation} Réponse"
+	asleap_texts["CATALAN",3]="${pending_of_translation} Response"
+	asleap_texts["PORTUGUESE",3]="${pending_of_translation} Resposta"
+	asleap_texts["RUSSIAN",3]="${pending_of_translation} Ответом"
+	asleap_texts["GREEK",3]="${pending_of_translation} Απόκρισης"
+	asleap_texts["ITALIAN",3]="${pending_of_translation} Risposta"
+	asleap_texts["POLISH",3]="${pending_of_translation} Odpowiedzi"
+	asleap_texts["GERMAN",3]="${pending_of_translation} Antwort"
+	asleap_texts["TURKISH",3]="${pending_of_translation} Yanıtı"
 
 	declare -gA hashcat_texts
 	hashcat_texts["ENGLISH",1]="airgeddon. Decrypted password using hashcat"
@@ -7201,8 +7225,8 @@ function language_strings() {
 	arr["FRENCH",537]="${pending_of_translation} Voulez-vous essayer de déchiffrer ce qui a été capturé? ${blue_color}L'outil asleap sera utilisé. Si vous ne répondez pas \"n\", vous pourrez l’essayer ultérieurement avec hashcat ou john the ripper à partir du menu de décryptage hors connexion WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["CATALAN",537]="${pending_of_translation} Vols intentar desxifrar el capturat? ${blue_color}S'utilitzarà l'eina asleap. Si respons no \"n\" podràs provar més tard utilitzant hashcat o John the ripper des del menú de desencriptat offline WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["PORTUGUESE",537]="${pending_of_translation} Você quer tentar decifrar o que foi capturado? ${blue_color}A ferramenta asleap será usada. Se você responder não \"n\" você pode tentar mais tarde usando o hashcat ou john the ripper no menu de descriptografia offline WPA/WPA2 ${normal_color}${visual_choice}"
-	arr["RUSSIAN",537]="${pending_of_translation} Вы хотите попытаться расшифровать захваченные вещи? ${blue_color}Будет использован инструмент Asleap. Если вы ответите no \"n\", вы можете попытаться сделать это позже, используя hashcat или john the ripper из меню дешифрования WPA/WPA2 в автономном режиме ${normal_color}${visual_choice}"
-	arr["GREEK",537]="${pending_of_translation} Θέλετε να προσπαθήσετε να αποκρυπτογραφήσετε τα περιεχόμενα; ${blue_color}Το εργαλείο Asleap θα χρησιμοποιηθεί. Εάν απαντήσετε όχι \"n\", μπορείτε να προσπαθήσετε να το κάνετε αργότερα χρησιμοποιώντας hashcat ή john the ripper από το αποκρυπτογραφημένο μενού WPA/WPA2 ${normal_color}${visual_choice}"
+	arr["RUSSIAN",537]="${pending_of_translation} Вы хотите попытаться расшифровать захваченные вещи? ${blue_color}Будет использован инструмент asleap. Если вы ответите no \"n\", вы можете попытаться сделать это позже, используя hashcat или john the ripper из меню дешифрования WPA/WPA2 в автономном режиме ${normal_color}${visual_choice}"
+	arr["GREEK",537]="${pending_of_translation} Θέλετε να προσπαθήσετε να αποκρυπτογραφήσετε τα περιεχόμενα; ${blue_color}Το εργαλείο asleap θα χρησιμοποιηθεί. Εάν απαντήσετε όχι \"n\", μπορείτε να προσπαθήσετε να το κάνετε αργότερα χρησιμοποιώντας hashcat ή john the ripper από το αποκρυπτογραφημένο μενού WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["ITALIAN",537]="${pending_of_translation} Vuoi provare a decifrare ciò che è stato catturato? ${blue_color}Verrà utilizzato lo strumento asleap. Se non rispondi a nessun \"n\" puoi provarlo in seguito usando hashcat o john the ripper dal menu di decrittazione offline WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["POLISH",537]="${pending_of_translation} Czy chcesz spróbować odczytać, co zostało zrobione? ${blue_color}Zostanie użyte narzędzie o nazwie asleap. Jeśli nie odpowiesz \"n\", możesz spróbować później za pomocą programu hashcat lub john the ripper z menu deszyfrowania offline WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["GERMAN",537]="${pending_of_translation} Möchten Sie versuchen zu entschlüsseln, was erfasst wurde? ${blue_color}Das Werkzeug asleap wird verwendet. Wenn Sie mit \"n\" nicht antworten, können Sie es später mit hashcat oder john the ripper vom Offline-Entschlüsselungsmenü WPA/WPA2 versuchen ${normal_color}${visual_choice}"
@@ -7220,17 +7244,17 @@ function language_strings() {
 	arr["GERMAN",538]="${pending_of_translation} Wir werden versuchen, mit dem asleap-Tool das Passwort des Benutzers ${normal_color}${enterprise_username}${blue_color} zu entschlüsseln, dessen Challenge und Antwort lauten: ${normal_color}${enterprise_captured_challenges_responses[${enterprise_username}]}"
 	arr["TURKISH",538]="${pending_of_translation} Asleap aracıyla, sorunu ve yanıtı olan kullanıcının ${normal_color}${enterprise_username}${blue_color} şifresini çözmeyi deneyeceğiz: ${normal_color}${enterprise_captured_challenges_responses[${enterprise_username}]}"
 
-	arr["ENGLISH",539]="Asleap trophy file generated successfully at [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["SPANISH",539]="Fichero de trofeo asleap generado con éxito en [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["FRENCH",539]="Le fichier trophée asleap a bien été crée dans [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["CATALAN",539]="Fitxer de trofeu asleap generat amb èxit a [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["PORTUGUESE",539]="Arquivo de troféu asleap gerado com sucesso [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["RUSSIAN",539]="Трофейный файл asleap был успешно сгенерирован в [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["GREEK",539]="Το asleap αρχείο τρόπαιο δημιουργήθηκε επιτυχώς [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["ITALIAN",539]="File di trofeo di asleap generato con successo [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["POLISH",539]="Plik trofeum asleap został pomyślnie wygenerowany w [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
-	arr["GERMAN",539]="Trophäen-Datei-Asleap erfolgreich in [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}] generiert"
-	arr["TURKISH",539]="Asleap trophy dosyası başarıyla şurada oluşturuldu [${normal_color}${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt${blue_color}]"
+	arr["ENGLISH",539]="Asleap trophy file generated successfully at [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["SPANISH",539]="Fichero de trofeo asleap generado con éxito en [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["FRENCH",539]="Le fichier trophée asleap a bien été crée dans [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["CATALAN",539]="Fitxer de trofeu asleap generat amb èxit a [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["PORTUGUESE",539]="Arquivo de troféu asleap gerado com sucesso [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["RUSSIAN",539]="Трофейный файл asleap был успешно сгенерирован в [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["GREEK",539]="Το asleap αρχείο τρόπαιο δημιουργήθηκε επιτυχώς [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["ITALIAN",539]="File di trofeo di asleap generato con successo [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["POLISH",539]="Plik trofeum asleap został pomyślnie wygenerowany w [${normal_color}${path_to_asleap_trophy}${blue_color}]"
+	arr["GERMAN",539]="Trophäen-Datei-Asleap erfolgreich in [${normal_color}${path_to_asleap_trophy}${blue_color}] generiert"
+	arr["TURKISH",539]="Asleap trophy dosyası başarıyla şurada oluşturuldu [${normal_color}${path_to_asleap_trophy}${blue_color}]"
 
 	arr["ENGLISH",540]="It seems we failed... try it again using another dictionary or choose bruteforce/rule based attack from the offline WPA/WPA2 decrypt menu"
 	arr["SPANISH",540]="Parece que no lo hemos conseguido... inténtalo de nuevo con otro diccionario o por fuerza bruta/ataque basado en reglas desde el menú de desencriptado offline WPA/WPA2"
@@ -7411,6 +7435,18 @@ function language_strings() {
 	arr["POLISH",554]="${pending_of_translation} Wpisz odpowiedzi (przykład: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
 	arr["GERMAN",554]="${pending_of_translation} Schreiben Antwort (Beispiel: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
 	arr["TURKISH",554]="${pending_of_translation} Hedef yanıtı (example: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+
+	arr["ENGLISH",555]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${asleap_potpath}]"
+	arr["SPANISH",555]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${asleap_potpath}]"
+	arr["FRENCH",555]="Entrez le chemin où vous voulez enregistrer le fichier ou bien appuyez sur [Enter] pour utiliser le chemin proposé ${normal_color}[${asleap_potpath}]"
+	arr["CATALAN",555]="Escriu la ruta on guardarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${asleap_potpath}]"
+	arr["PORTUGUESE",555]="Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${asleap_potpath}]"
+	arr["RUSSIAN",555]="Напечатайте путь к сохранённому файлу или нажмите [Enter] для принятия предложения по умолчанию ${normal_color}[${asleap_potpath}]"
+	arr["GREEK",555]="Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${asleap_potpath}]"
+	arr["ITALIAN",555]="Immettere il percorso dove memorizzare il file o premere [Enter] per accettare quello proposto di default ${normal_color}[${asleap_potpath}]"
+	arr["POLISH",555]="Wpisz ścieżkę, w której będziemy zapisywać plik lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${asleap_potpath}]"
+	arr["GERMAN",555]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${asleap_potpath}]"
+	arr["TURKISH",555]="Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın ${normal_color}[${asleap_potpath}]"
 
 	case "${3}" in
 		"yellow")

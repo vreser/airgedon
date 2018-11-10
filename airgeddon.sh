@@ -4551,7 +4551,7 @@ function enterprise_attacks_menu() {
 	language_strings "${language}" 307 enterprise_attack_dependencies[@]
 	print_hint ${current_menu}
 
-	read -r enterprise_option
+	read -rp "> " enterprise_option
 	case ${enterprise_option} in
 		0)
 			return
@@ -5717,10 +5717,10 @@ function enterprise_asleap_dictionary_attack_option() {
 	language_strings "${language}" 190 "yellow"
 	language_strings "${language}" 115 "read"
 
-	under_construction_message
-	#TODO pending to do these two functions
-	#exec_enterprise_asleap_dictionary_attack
-	#manage_offline_cracked_asleap_pot
+	echo
+	exec_asleap_attack "offline_menu"
+	echo
+	manage_asleap_pot "offline_menu"
 }
 
 #Validate and ask for the different parameters used in an aircrack dictionary based attack
@@ -5969,7 +5969,7 @@ function manage_aircrack_pot() {
 	fi
 }
 
-#Check if the password was decrypted using asleap and manage to save it on a file
+#Check if the password was decrypted using asleap against challenges and responses
 function manage_asleap_pot() {
 
 	debug_print
@@ -5978,36 +5978,86 @@ function manage_asleap_pot() {
 
 	if [[ "${asleap_output}" =~ password:[[:blank:]]+(.*) ]]; then
 
-		asleap_attack_finished=1
-		rm -rf "${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt" > /dev/null 2>&1
+		local asleap_decrypted_password="${BASH_REMATCH[1]}"
+		local write_to_file=0
 
-		{
-		echo ""
-		date +%Y-%m-%d
-		echo "${asleap_texts[${language},1]}"
-		echo ""
-		echo "ESSID: ${essid}"
-		echo "BSSID: ${bssid}"
-		echo ""
-		echo "---------------"
-		echo ""
-		echo "${enterprise_username} / ${BASH_REMATCH[1]}"
-		} >> "${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt"
-
-		add_contributing_footer_to_file "${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt"
-
-		echo
 		language_strings "${language}" 234 "yellow"
-		echo
-		language_strings "${language}" 539 "blue"
-		language_strings "${language}" 115 "read"
-	else
-		echo
-		language_strings "${language}" 540 "red"
 
-		ask_yesno 541 "no"
-		if [ "${yesno}" = "n" ]; then
+		if [ "${1}" != "offline_menu" ]; then
+			echo
+			local write_to_file=1
 			asleap_attack_finished=1
+			path_to_asleap_trophy="${enterprise_completepath}enterprise_asleap_decrypted_${bssid}_password.txt"
+		else
+			ask_yesno 235 "yes"
+			if [ "${yesno}" = "y" ]; then
+				local write_to_file=1
+
+				asleap_potpath="${default_save_path}"
+				lastcharasleap_potpath=${asleap_potpath: -1}
+				if [ "${lastcharasleap_potpath}" != "/" ]; then
+					asleap_potpath="${asleap_potpath}/"
+				fi
+				asleappot_filename="asleap_decrypted_password.txt"
+				asleap_potpath="${asleap_potpath}${asleappot_filename}"
+
+				validpath=1
+				while [[ "${validpath}" != "0" ]]; do
+					read_path "asleappot"
+				done
+
+				path_to_asleap_trophy="${asleapenteredpath}"
+			fi
+		fi
+
+		if [ "${write_to_file}" = "1" ]; then
+			rm -rf "${path_to_asleap_trophy}" > /dev/null 2>&1
+
+			{
+			echo ""
+			date +%Y-%m-%d
+			echo "${asleap_texts[${language},1]}"
+			echo ""
+			} >> "${path_to_asleap_trophy}"
+
+			if [ "${1}" != "offline_menu" ]; then
+				{
+				echo "ESSID: ${essid}"
+				echo "BSSID: ${bssid}"
+				} >> "${path_to_asleap_trophy}"
+			fi
+
+			{
+			echo "${asleap_texts[${language},2]}: ${enterprise_asleap_challenge}"
+			echo "${asleap_texts[${language},3]}: ${enterprise_asleap_response}"
+			echo ""
+			echo "---------------"
+			echo ""
+			} >> "${path_to_asleap_trophy}"
+
+			if [ "${1}" != "offline_menu" ]; then
+				{
+				echo "${enterprise_username} / ${asleap_decrypted_password}"
+				} >> "${path_to_asleap_trophy}"
+			else
+				{
+				echo "${asleap_decrypted_password}"
+				} >> "${path_to_asleap_trophy}"
+			fi
+
+			add_contributing_footer_to_file "${path_to_asleap_trophy}"
+
+			language_strings "${language}" 539 "blue"
+			language_strings "${language}" 115 "read"
+		fi
+	else
+		if [ "${1}" != "offline_menu" ]; then
+			language_strings "${language}" 540 "red"
+
+			ask_yesno 541 "no"
+			if [ "${yesno}" = "n" ]; then
+				asleap_attack_finished=1
+			fi
 		fi
 	fi
 }
@@ -6180,6 +6230,7 @@ function parse_from_enterprise() {
 	local passwords=()
 	local line_to_check
 	local text_to_check
+	unset enterprise_captured_challenges_responses
 	declare -gA enterprise_captured_challenges_responses
 
 	readarray -t CAPTURED_USERNAMES < <(grep -n -E "username:" "${tmpdir}${hostapd_wpe_log}" | sort -k 2,2 | uniq --skip-fields=1 2> /dev/null)
@@ -6627,6 +6678,7 @@ function handle_asleap_attack() {
 				ask_dictionary
 				echo
 				exec_asleap_attack
+				echo
 				manage_asleap_pot
 			done
 		fi
@@ -6657,7 +6709,7 @@ function select_captured_enterprise_user() {
 
 	option_enterprise_user_selected=""
 	while [[ -z "${option_enterprise_user_selected}" ]]; do
-		read -r option_enterprise_user_selected
+		read -rp "> " option_enterprise_user_selected
 		if [[ ! "${option_enterprise_user_selected}" =~ ^[0-9]+$ ]] || [[ ${option_enterprise_user_selected} -lt 1 ]] || [[ ${option_enterprise_user_selected} -gt ${counter} ]]; then
 			option_enterprise_user_selected=""
 			echo
@@ -6673,13 +6725,12 @@ function exec_asleap_attack() {
 
 	debug_print
 
-	local challenge
-	local response
-
 	rm -rf "${tmpdir}${asleap_pot_tmp}" > /dev/null 2>&1
 
-	[[ "${enterprise_captured_challenges_responses[${enterprise_username}]}" =~ (([0-9a-zA-Z]{2}:?)+)[[:blank:]]/[[:blank:]](.*) ]] && challenge="${BASH_REMATCH[1]}" && response="${BASH_REMATCH[3]}"
-	asleap_cmd="asleap -C \"${challenge}\" -R \"${response}\" -W \"${DICTIONARY}\" -v | tee \"${tmpdir}${asleap_pot_tmp}\" ${colorize}"
+	if [ "${1}" != "offline_menu" ]; then
+		[[ "${enterprise_captured_challenges_responses[${enterprise_username}]}" =~ (([0-9a-zA-Z]{2}:?)+)[[:blank:]]/[[:blank:]](.*) ]] && enterprise_asleap_challenge="${BASH_REMATCH[1]}" && enterprise_asleap_response="${BASH_REMATCH[3]}"
+	fi
+	asleap_cmd="asleap -C \"${enterprise_asleap_challenge}\" -R \"${enterprise_asleap_response}\" -W \"${DICTIONARY}\" -v | tee \"${tmpdir}${asleap_pot_tmp}\" ${colorize}"
 	eval "${asleap_cmd}"
 }
 
@@ -9259,6 +9310,10 @@ function validate_path() {
 				suggested_filename="${hashcatpot_filename}"
 				potenteredpath+="${hashcatpot_filename}"
 			;;
+			"asleappot")
+				suggested_filename="${asleappot_filename}"
+				asleapenteredpath+="${asleappot_filename}"
+			;;
 			"ettercaplog")
 				suggested_filename="${default_ettercaplogfilename}"
 				ettercap_logpath="${ettercap_logpath}${default_ettercaplogfilename}"
@@ -9410,6 +9465,14 @@ function read_path() {
 				potenteredpath="${hashcat_potpath}"
 			fi
 			validate_path "${potenteredpath}" "${1}"
+		;;
+		"asleappot")
+			language_strings "${language}" 555 "green"
+			read_and_clean_path "asleapenteredpath"
+			if [ -z "${asleapenteredpath}" ]; then
+				asleapenteredpath="${asleap_potpath}"
+			fi
+			validate_path "${asleapenteredpath}" "${1}"
 		;;
 		"ettercaplog")
 			language_strings "${language}" 303 "green"
