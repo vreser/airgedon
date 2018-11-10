@@ -12487,8 +12487,10 @@ function echo_white() {
 	last_echo "${1}" "${white_color}"
 }
 
+#Script starts to executing stuff from this point, traps and then main function
 for f in SIGINT SIGHUP INT SIGTSTP; do
 	trap_cmd="trap \"capture_traps ${f}\" \"${f}\""
 	eval "${trap_cmd}"
 done
+
 main
