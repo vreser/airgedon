@@ -2,22 +2,30 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181107
+#Date.........: 20181110
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
 
-#Enabled with extra-verbose mode 2 / Enabled 1 / Disabled 0 - Debug mode for faster development skipping intro and initial checks - Default value 0
-debug_mode=0
+#Initializing env vars
 
-#Enabled 1 / Disabled 0 - Auto update feature (it has no effect on debug mode) - Default value 1
-auto_update=1
+#Enabled true / Disabled false - Develop mode for faster development skipping intro and initial checks - Default value false
+export AIRGEDDON_DEVELOP_MODE=false
 
-#Enabled 1 / Disabled 0 - Auto change language feature - Default value 1
-auto_change_language=1
+#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false
+export AIRGEDDON_DEBUG_MODE=false
 
-#Enabled 1 / Disabled 0 - Allow colorized output - Default value 1
-allow_colorization=1
+#Enabled true / Disabled false - Auto update feature (it has no effect on debug mode) - Default value true
+export AIRGEDDON_AUTO_UPDATE=true
+
+#Enabled true / Disabled false - Auto change language feature - Default value true
+export AIRGEDDON_AUTO_LANGUAGE=true
+
+#Enabled true / Disabled false - Allow colorized output - Default value true
+export AIRGEDDON_COLORS=true
+
+#Enabled true / Disabled false - Allow extended colorized output (ccze) - Default value true
+export AIRGEDDON_ADVANCED_COLORS=true
 
 #Language vars
 #Change this line to select another default language. Select one from available values in array
@@ -132,6 +140,7 @@ pending_of_translation="[PoT]"
 escaped_pending_of_translation="\[PoT\]"
 standard_resolution="1024x768"
 curl_404_error="404: Not Found"
+rc_file=".airgeddonrc"
 language_strings_file="language_strings.sh"
 broadcast_mac="FF:FF:FF:FF:FF:FF"
 
