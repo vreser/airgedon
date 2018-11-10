@@ -7,31 +7,10 @@
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
 
-#Initializing env vars
-#Don't change any env var here. It should be done on ".airgeddonrc" file. This is just for initialization
-
 #TODO old vars temporary added until development of env vars is finished
 auto_update=1
 auto_change_language=1
 allow_colorization=1
-
-#Enabled true / Disabled false - Develop mode for faster development skipping intro and initial checks - Default value false
-export AIRGEDDON_DEVELOP_MODE=false
-
-#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false
-export AIRGEDDON_DEBUG_MODE=false
-
-#Enabled true / Disabled false - Auto update feature (it has no effect on debug mode) - Default value true
-export AIRGEDDON_AUTO_UPDATE=true
-
-#Enabled true / Disabled false - Auto change language feature - Default value true
-export AIRGEDDON_AUTO_LANGUAGE=true
-
-#Enabled true / Disabled false - Allow colorized output - Default value true
-export AIRGEDDON_COLORS=true
-
-#Enabled true / Disabled false - Allow extended colorized output (ccze) - Default value true
-export AIRGEDDON_ADVANCED_COLORS=true
 
 #Language vars
 #Change this line to select another default language. Select one from available values in array
@@ -11926,6 +11905,31 @@ function recalculate_windows_sizes() {
 	set_windows_sizes
 }
 
+#Initialization of env vars. Never change any env var here. It should be done on ".airgeddonrc" file. This is just for initialization
+function env_vars_initialization() {
+
+	#Enabled true / Disabled false - Develop mode for faster development skipping intro and initial checks - Default value false
+	export AIRGEDDON_DEVELOP_MODE=false
+
+	#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false
+	export AIRGEDDON_DEBUG_MODE=false
+
+	#Enabled true / Disabled false - Auto update feature (it has no effect on debug mode) - Default value true
+	export AIRGEDDON_AUTO_UPDATE=true
+
+	#Enabled true / Disabled false - Auto change language feature - Default value true
+	export AIRGEDDON_AUTO_LANGUAGE=true
+
+	#Enabled true / Disabled false - Allow colorized output - Default value true
+	export AIRGEDDON_COLORS=true
+
+	#Enabled true / Disabled false - Allow extended colorized output (ccze) - Default value true
+	export AIRGEDDON_ADVANCED_COLORS=true
+
+	#shellcheck source=./.airgeddonrc
+	source "${scriptfolder}${rc_file}" 2> /dev/null
+}
+
 #Detect if airgeddon is working inside a docker container
 function docker_detection() {
 
@@ -11952,8 +11956,7 @@ function initialize_colorized_output() {
 #Script starting point
 function main() {
 
-	#shellcheck source=./.airgeddonrc
-	source "${scriptfolder}${rc_file}" 2> /dev/null
+	env_vars_initialization
 
 	debug_print
 
