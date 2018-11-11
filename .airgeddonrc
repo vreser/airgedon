@@ -2,7 +2,7 @@
 AIRGEDDON_AUTO_UPDATE=true
 
 #Enabled true / Disabled false - Auto change language feature - Default value true
-AIRGEDDON_AUTO_LANGUAGE=true
+AIRGEDDON_AUTO_CHANGE_LANGUAGE=true
 
 #Enabled true / Disabled false - Allow colorized output - Default value true
 AIRGEDDON_COLORS=true

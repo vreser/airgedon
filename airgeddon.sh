@@ -4215,7 +4215,7 @@ function clean_env_vars() {
 
 	debug_print
 
-	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_AUTO_LANGUAGE AIRGEDDON_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
+	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
 }
 
 #Clean temporary files
@@ -11990,11 +11990,11 @@ function env_vars_initialization() {
 	fi
 
 
-	if [ -z "${AIRGEDDON_AUTO_LANGUAGE}" ]; then
+	if [ -z "${AIRGEDDON_AUTO_CHANGE_LANGUAGE}" ]; then
 		if [ -f "${scriptfolder}${rc_file}" ]; then
-			eval "export $(grep AIRGEDDON_AUTO_LANGUAGE "${scriptfolder}${rc_file}")"
+			eval "export $(grep AIRGEDDON_AUTO_CHANGE_LANGUAGE "${scriptfolder}${rc_file}")"
 		else
-			export AIRGEDDON_AUTO_LANGUAGE="${AIRGEDDON_AUTO_LANGUAGE:-true}"
+			export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
 		fi
 	fi
 
