@@ -1,6 +1,17 @@
-export AIRGEDDON_DEVELOP_MODE=false
-export AIRGEDDON_DEBUG_MODE=false
-export AIRGEDDON_AUTO_UPDATE=true
-export AIRGEDDON_AUTO_LANGUAGE=true
-export AIRGEDDON_COLORS=true
-export AIRGEDDON_EXTENDED_COLORS=true
+#Enabled true / Disabled false - Auto update feature (it has no effect on develop mode) - Default value true
+AIRGEDDON_AUTO_UPDATE=true
+
+#Enabled true / Disabled false - Auto change language feature - Default value true
+AIRGEDDON_AUTO_LANGUAGE=true
+
+#Enabled true / Disabled false - Allow colorized output - Default value true
+AIRGEDDON_COLORS=true
+
+#Enabled true / Disabled false - Allow extended colorized output (ccze needed, it has no effect on disabled colors) - Default value true
+AIRGEDDON_EXTENDED_COLORS=true
+
+#Enabled true / Disabled false - Develop mode for faster development skipping intro and initial checks - Default value false
+AIRGEDDON_DEVELOP_MODE=false
+
+#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false
+AIRGEDDON_DEBUG_MODE=false

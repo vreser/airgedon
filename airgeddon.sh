@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181110
+#Date.........: 20181111
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -11,8 +11,6 @@
 auto_update=1
 auto_change_language=1
 allow_colorization=1
-
-#TODO perform the import of .airgeddonrc keeping the flags if they exist
 
 #TODO modify options menu for autochange language to use new env var system
 #TODO modify options menu for colors to use new env var system
@@ -644,6 +642,9 @@ function debug_print() {
 								"store_array"
 								"under_construction_message"
 								"initialize_colors"
+								"clean_env_vars"
+								"env_vars_initialization"
+								"initialize_script_settings"
 							)
 
 		if (IFS=$'\n'; echo "${excluded_functions[*]}") | grep -qFx "${FUNCNAME[1]}"; then
@@ -4207,6 +4208,14 @@ function initialize_menu_and_print_selections() {
 			print_all_target_vars
 		;;
 	esac
+}
+
+#Clean environment vars
+function clean_env_vars() {
+
+	debug_print
+
+	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_AUTO_LANGUAGE AIRGEDDON_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
 }
 
 #Clean temporary files
@@ -10863,6 +10872,8 @@ function exit_script_option() {
 		language_strings "${language}" 160 "yellow"
 	fi
 
+	clean_env_vars
+
 	echo
 	exit ${exit_code}
 }
@@ -10900,6 +10911,8 @@ function hardcore_exit() {
 		time_loop
 		echo -e "${green_color} Ok\r${normal_color}"
 	fi
+
+	clean_env_vars
 
 	exit ${exit_code}
 }
@@ -11966,26 +11979,56 @@ function recalculate_windows_sizes() {
 #Initialization of env vars. Never change any env var here. It should be done on ".airgeddonrc" file. This is just for initialization
 function env_vars_initialization() {
 
-	#Enabled true / Disabled false - Develop mode for faster development skipping intro and initial checks - Default value false
-	export AIRGEDDON_DEVELOP_MODE=false
+	debug_print
 
-	#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false
-	export AIRGEDDON_DEBUG_MODE=false
+	if [ -z "${AIRGEDDON_AUTO_UPDATE}" ]; then
+		if [ -f "${scriptfolder}${rc_file}" ]; then
+			eval "export $(grep AIRGEDDON_AUTO_UPDATE "${scriptfolder}${rc_file}")"
+		else
+			export AIRGEDDON_AUTO_UPDATE="${AIRGEDDON_AUTO_UPDATE:-true}"
+		fi
+	fi
 
-	#Enabled true / Disabled false - Auto update feature (it has no effect on debug mode) - Default value true
-	export AIRGEDDON_AUTO_UPDATE=true
 
-	#Enabled true / Disabled false - Auto change language feature - Default value true
-	export AIRGEDDON_AUTO_LANGUAGE=true
+	if [ -z "${AIRGEDDON_AUTO_LANGUAGE}" ]; then
+		if [ -f "${scriptfolder}${rc_file}" ]; then
+			eval "export $(grep AIRGEDDON_AUTO_LANGUAGE "${scriptfolder}${rc_file}")"
+		else
+			export AIRGEDDON_AUTO_LANGUAGE="${AIRGEDDON_AUTO_LANGUAGE:-true}"
+		fi
+	fi
 
-	#Enabled true / Disabled false - Allow colorized output - Default value true
-	export AIRGEDDON_COLORS=true
+	if [ -z "${AIRGEDDON_COLORS}" ]; then
+		if [ -f "${scriptfolder}${rc_file}" ]; then
+			eval "export $(grep AIRGEDDON_COLORS "${scriptfolder}${rc_file}")"
+		else
+			export AIRGEDDON_COLORS="${AIRGEDDON_COLORS:-true}"
+		fi
+	fi
 
-	#Enabled true / Disabled false - Allow extended colorized output (ccze) - Default value true
-	export AIRGEDDON_EXTENDED_COLORS=true
+	if [ -z "${AIRGEDDON_EXTENDED_COLORS}" ]; then
+		if [ -f "${scriptfolder}${rc_file}" ]; then
+			eval "export $(grep AIRGEDDON_EXTENDED_COLORS "${scriptfolder}${rc_file}")"
+		else
+			export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
+		fi
+	fi
 
-	#shellcheck source=./.airgeddonrc
-	source "${scriptfolder}${rc_file}" 2> /dev/null
+	if [ -z "${AIRGEDDON_DEVELOP_MODE}" ]; then
+		if [ -f "${scriptfolder}${rc_file}" ]; then
+			eval "export $(grep AIRGEDDON_DEVELOP_MODE "${scriptfolder}${rc_file}")"
+		else
+			export AIRGEDDON_DEVELOP_MODE="${AIRGEDDON_DEVELOP_MODE:-false}"
+		fi
+	fi
+
+	if [ -z "${AIRGEDDON_DEBUG_MODE}" ]; then
+		if [ -f "${scriptfolder}${rc_file}" ]; then
+			eval "export $(grep AIRGEDDON_DEBUG_MODE "${scriptfolder}${rc_file}")"
+		else
+			export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
+		fi
+	fi
 }
 
 #Detect if airgeddon is working inside a docker container
@@ -12048,6 +12091,7 @@ function initialize_colors() {
 #Script starting point
 function main() {
 
+	initialize_script_settings
 	env_vars_initialization
 
 	debug_print
@@ -12056,7 +12100,6 @@ function main() {
 
 	clear
 	current_menu="pre_main_menu"
-	initialize_script_settings
 	docker_detection
 	set_default_save_path
 
