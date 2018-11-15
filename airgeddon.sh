@@ -12103,7 +12103,7 @@ function main() {
 	docker_detection
 	set_default_save_path
 
-	if [ ${auto_change_language} -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 		autodetect_language
 	fi
 
