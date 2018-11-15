@@ -8,10 +8,10 @@
 #Bash Version.: 4.2 or later
 
 #TODO old vars temporary added until development of env vars is finished
-auto_update=1
 auto_change_language=1
 allow_colorization=1
 
+#TODO create a function to ensure rcfile exists always on options toggle
 #TODO modify options menu for autochange language to use new env var system
 #TODO modify options menu for colors to use new env var system
 #TODO modify options menu for auto update to use new env var system
@@ -572,18 +572,19 @@ function auto_update_toggle() {
 
 	debug_print
 
-	if [ "${auto_update}" -eq 1 ]; then
-		sed -ri 's:(auto_update)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "auto_[u]pdate=0" "${scriptfolder}${scriptname}" > /dev/null; then
+	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
+
+		sed -ri 's:(AIRGEDDON_AUTO_UPDATE)=(true):\1=false:' "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "AIRGEDDON_AUTO_UPDATE=false" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		auto_update=$((auto_update-1))
+		export AIRGEDDON_AUTO_UPDATE=false
 	else
-		sed -ri 's:(auto_update)=(0):\1=1:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "auto_[u]pdate=1" "${scriptfolder}${scriptname}" > /dev/null; then
+		sed -ri 's:(AIRGEDDON_AUTO_UPDATE)=(false):\1=true:' "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "AIRGEDDON_AUTO_UPDATE=true" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		auto_update=$((auto_update+1))
+		export AIRGEDDON_AUTO_UPDATE=true
 	fi
 	return 0
 }
@@ -1567,7 +1568,7 @@ function option_menu() {
 	print_simple_separator
 	language_strings "${language}" 78
 	print_simple_separator
-	if [ "${auto_update}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 		language_strings "${language}" 455
 	else
 		language_strings "${language}" 449
@@ -1594,7 +1595,7 @@ function option_menu() {
 			language_menu
 		;;
 		2)
-			if [ "${auto_update}" -eq 1 ]; then
+			if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 				ask_yesno 457 "no"
 				if [ "${yesno}" = "y" ]; then
 					if auto_update_toggle; then
@@ -3792,7 +3793,7 @@ function print_options() {
 
 	debug_print
 
-	if [ "${auto_update}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 		language_strings "${language}" 451 "blue"
 	else
 		language_strings "${language}" 452 "blue"
