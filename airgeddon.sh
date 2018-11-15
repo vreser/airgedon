@@ -544,23 +544,23 @@ function auto_change_language_toggle() {
 	return 0
 }
 
-#Toggle allow colorization feature
-function allow_colorization_toggle() {
+#Toggle allow extended colorization feature
+function allow_extended_colorization_toggle() {
 
 	debug_print
 
-	if [ "${allow_colorization}" -eq 1 ]; then
-		sed -ri 's:(allow_colorization)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "allow_[c]olorization=0" "${scriptfolder}${scriptname}" > /dev/null; then
+	if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
+		sed -ri 's:(AIRGEDDON_EXTENDED_COLORS)=(true):\1=false:' "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "AIRGEDDON_EXTENDED_COLORS=false" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		allow_colorization=$((allow_colorization-1))
+		export AIRGEDDON_EXTENDED_COLORS=false
 	else
-		sed -ri 's:(allow_colorization)=(0):\1=1:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "allow_[c]olorization=1" "${scriptfolder}${scriptname}" > /dev/null; then
+		sed -ri 's:(AIRGEDDON_EXTENDED_COLORS)=(false):\1=true:' "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "AIRGEDDON_EXTENDED_COLORS=true" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		allow_colorization=$((allow_colorization+1))
+		export AIRGEDDON_EXTENDED_COLORS=true
 	fi
 	initialize_colorized_output
 	return 0
@@ -1572,7 +1572,7 @@ function option_menu() {
 	else
 		language_strings "${language}" 449
 	fi
-	if [ "${allow_colorization}" -eq 1 ]; then
+	if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 		language_strings "${language}" 456
 	else
 		language_strings "${language}" 450
@@ -1627,10 +1627,10 @@ function option_menu() {
 				language_strings "${language}" 464 "yellow"
 			fi
 
-			if [ "${allow_colorization}" -eq 1 ]; then
+			if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 				ask_yesno 462 "yes"
 				if [ "${yesno}" = "y" ]; then
-					if allow_colorization_toggle; then
+					if allow_extended_colorization_toggle; then
 						echo
 						language_strings "${language}" 466 "blue"
 					else
@@ -1642,7 +1642,7 @@ function option_menu() {
 			else
 				ask_yesno 463 "yes"
 				if [ "${yesno}" = "y" ]; then
-					if allow_colorization_toggle; then
+					if allow_extended_colorization_toggle; then
 						echo
 						language_strings "${language}" 465 "blue"
 					else
@@ -3798,7 +3798,7 @@ function print_options() {
 		language_strings "${language}" 452 "blue"
 	fi
 
-	if [ "${allow_colorization}" -eq 1 ]; then
+	if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 		language_strings "${language}" 453 "blue"
 	else
 		language_strings "${language}" 454 "blue"
@@ -12253,6 +12253,7 @@ function download_last_version() {
 			rewrite_script_with_custom_beef "set" "${beef_custom_path}"
 		fi
 
+		#TODO "${AIRGEDDON_EXTENDED_COLORS}"
 		if [ "${allow_colorization}" -ne 1 ]; then
 			sed -ri 's:(allow_colorization)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
 		fi
