@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181111
+#Date.........: 20181115
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -11620,7 +11620,7 @@ function check_compatibility() {
 	done
 
 	update_toolsok=1
-	if [ "${auto_update}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 
 		echo
 		language_strings "${language}" 226 "blue"
@@ -11684,7 +11684,7 @@ function check_update_tools() {
 
 	debug_print
 
-	if [ "${auto_update}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 		if [ ${update_toolsok} -eq 1 ]; then
 			autoupdate_check
 		else
