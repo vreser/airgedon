@@ -14,7 +14,6 @@ allow_colorization=1
 #TODO create a function to ensure rcfile exists always on options toggle
 #TODO modify options menu for autochange language to use new env var system
 #TODO modify options menu for colors to use new env var system
-#TODO modify options menu for auto update to use new env var system
 #TODO modify options menu for language to use new env var system
 
 #Language vars
