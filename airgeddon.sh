@@ -12495,6 +12495,8 @@ function remove_warnings() {
 	echo "${reaver_pixie_dust_attack_dependencies[@]}" > /dev/null 2>&1
 	echo "${wep_attack_dependencies[@]}" > /dev/null 2>&1
 	echo "${enterprise_attack_dependencies[@]}" > /dev/null 2>&1
+	echo "${asleap_attacks_dependencies[@]}" > /dev/null 2>&1
+	echo "${john_attacks_dependencies[@]}" > /dev/null 2>&1
 	echo "${is_arm}" > /dev/null 2>&1
 }
 
