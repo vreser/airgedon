@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181115
+#Date.........: 20181122
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -12,7 +12,6 @@ auto_change_language=1
 allow_colorization=1
 
 #TODO create a function to ensure rcfile exists always on options toggle
-#TODO modify options menu for autochange language to use new env var system
 #TODO create options menu for basic colors using the new env var system
 #TODO create options menu for skip intro using the new env var system
 #TODO create skip intro env var and integration in options menu
@@ -531,18 +530,18 @@ function auto_change_language_toggle() {
 
 	debug_print
 
-	if [ "${auto_change_language}" -eq 1 ]; then
-		sed -ri 's:(auto_change_language)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "auto_[c]hange_language=0" "${scriptfolder}${scriptname}" > /dev/null; then
+	if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
+		sed -ri 's:(AIRGEDDON_AUTO_CHANGE_LANGUAGE)=(true):\1=false:' "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "AIRGEDDON_AUTO_CHANGE_LANGUAGE=false" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		auto_change_language=$((auto_change_language-1))
+		export AIRGEDDON_AUTO_CHANGE_LANGUAGE=false
 	else
-		sed -ri 's:(auto_change_language)=(0):\1=1:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "auto_[c]hange_language=1" "${scriptfolder}${scriptname}" > /dev/null; then
+		sed -ri 's:(AIRGEDDON_AUTO_CHANGE_LANGUAGE)=(false):\1=true:' "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "AIRGEDDON_AUTO_CHANGE_LANGUAGE=true" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		auto_change_language=$((auto_change_language+1))
+		export AIRGEDDON_AUTO_CHANGE_LANGUAGE=true
 	fi
 	return 0
 }
@@ -1580,7 +1579,7 @@ function option_menu() {
 	else
 		language_strings "${language}" 450
 	fi
-	if [ "${auto_change_language}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 		language_strings "${language}" 468
 	else
 		language_strings "${language}" 467
@@ -1657,7 +1656,7 @@ function option_menu() {
 			fi
 		;;
 		4)
-			if [ "${auto_change_language}" -eq 1 ]; then
+			if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 				ask_yesno 469 "no"
 				if [ "${yesno}" = "y" ]; then
 					if auto_change_language_toggle; then
@@ -3807,7 +3806,7 @@ function print_options() {
 		language_strings "${language}" 454 "blue"
 	fi
 
-	if [ "${auto_change_language}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 		language_strings "${language}" 474 "blue"
 	else
 		language_strings "${language}" 475 "blue"
@@ -12261,6 +12260,7 @@ function download_last_version() {
 			sed -ri 's:(allow_colorization)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
 		fi
 
+		#TODO "${AIRGEDDON_AUTO_CHANGE_LANGUAGE}"
 		if [ "${auto_change_language}" -ne 1 ]; then
 			sed -ri 's:(auto_change_language)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
 		fi
