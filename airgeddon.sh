@@ -11,7 +11,6 @@
 auto_change_language=1
 allow_colorization=1
 
-#TODO create a function to ensure rcfile exists always on options toggle
 #TODO create options menu for basic colors using the new env var system
 #TODO create options menu for skip intro using the new env var system
 #TODO create skip intro env var and integration in options menu
