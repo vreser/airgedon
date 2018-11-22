@@ -11983,53 +11983,32 @@ function env_vars_initialization() {
 
 	debug_print
 
-	if [ -z "${AIRGEDDON_AUTO_UPDATE}" ]; then
-		if [ -f "${scriptfolder}${rc_file}" ]; then
+	if [ -f "${scriptfolder}${rc_file}" ]; then
+		if [ -z "${AIRGEDDON_AUTO_UPDATE}" ]; then
 			eval "export $(grep AIRGEDDON_AUTO_UPDATE "${scriptfolder}${rc_file}")"
-		else
-			export AIRGEDDON_AUTO_UPDATE="${AIRGEDDON_AUTO_UPDATE:-true}"
 		fi
-	fi
-
-
-	if [ -z "${AIRGEDDON_AUTO_CHANGE_LANGUAGE}" ]; then
-		if [ -f "${scriptfolder}${rc_file}" ]; then
+		if [ -z "${AIRGEDDON_AUTO_CHANGE_LANGUAGE}" ]; then
 			eval "export $(grep AIRGEDDON_AUTO_CHANGE_LANGUAGE "${scriptfolder}${rc_file}")"
-		else
-			export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
 		fi
-	fi
-
-	if [ -z "${AIRGEDDON_COLORS}" ]; then
-		if [ -f "${scriptfolder}${rc_file}" ]; then
+		if [ -z "${AIRGEDDON_COLORS}" ]; then
 			eval "export $(grep AIRGEDDON_COLORS "${scriptfolder}${rc_file}")"
-		else
-			export AIRGEDDON_COLORS="${AIRGEDDON_COLORS:-true}"
 		fi
-	fi
-
-	if [ -z "${AIRGEDDON_EXTENDED_COLORS}" ]; then
-		if [ -f "${scriptfolder}${rc_file}" ]; then
+		if [ -z "${AIRGEDDON_EXTENDED_COLORS}" ]; then
 			eval "export $(grep AIRGEDDON_EXTENDED_COLORS "${scriptfolder}${rc_file}")"
-		else
-			export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
 		fi
-	fi
-
-	if [ -z "${AIRGEDDON_DEVELOP_MODE}" ]; then
-		if [ -f "${scriptfolder}${rc_file}" ]; then
+		if [ -z "${AIRGEDDON_DEVELOP_MODE}" ]; then
 			eval "export $(grep AIRGEDDON_DEVELOP_MODE "${scriptfolder}${rc_file}")"
-		else
-			export AIRGEDDON_DEVELOP_MODE="${AIRGEDDON_DEVELOP_MODE:-false}"
 		fi
-	fi
-
-	if [ -z "${AIRGEDDON_DEBUG_MODE}" ]; then
-		if [ -f "${scriptfolder}${rc_file}" ]; then
+		if [ -z "${AIRGEDDON_DEBUG_MODE}" ]; then
 			eval "export $(grep AIRGEDDON_DEBUG_MODE "${scriptfolder}${rc_file}")"
-		else
-			export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
 		fi
+	else
+		export AIRGEDDON_AUTO_UPDATE="${AIRGEDDON_AUTO_UPDATE:-true}"
+		export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
+		export AIRGEDDON_COLORS="${AIRGEDDON_COLORS:-true}"
+		export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
+		export AIRGEDDON_DEVELOP_MODE="${AIRGEDDON_DEVELOP_MODE:-false}"
+		export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
 	fi
 }
 
