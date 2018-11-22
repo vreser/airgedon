@@ -12009,7 +12009,29 @@ function env_vars_initialization() {
 		export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
 		export AIRGEDDON_DEVELOP_MODE="${AIRGEDDON_DEVELOP_MODE:-false}"
 		export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
+		create_rcfile
 	fi
+}
+
+#Create env vars file and fill it with current values
+function create_rcfile() {
+
+	debug_print
+
+	{
+	echo -e "#Enabled true / Disabled false - Auto update feature (it has no effect on develop mode) - Default value true"
+	echo -e "AIRGEDDON_AUTO_UPDATE=${AIRGEDDON_AUTO_UPDATE}\n"
+	echo -e "#Enabled true / Disabled false - Auto change language feature - Default value true"
+	echo -e "AIRGEDDON_AUTO_CHANGE_LANGUAGE=${AIRGEDDON_AUTO_CHANGE_LANGUAGE}\n"
+	echo -e "#Enabled true / Disabled false - Allow colorized output - Default value true"
+	echo -e "AIRGEDDON_COLORS=${AIRGEDDON_COLORS}\n"
+	echo -e "#Enabled true / Disabled false - Allow extended colorized output (ccze needed, it has no effect on disabled colors) - Default value true"
+	echo -e "AIRGEDDON_EXTENDED_COLORS=${AIRGEDDON_EXTENDED_COLORS}\n"
+	echo -e "#Enabled true / Disabled false - Develop mode for faster development skipping intro and initial checks - Default value false"
+	echo -e "AIRGEDDON_DEVELOP_MODE=${AIRGEDDON_DEVELOP_MODE}\n"
+	echo -e "#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false"
+	echo -e "AIRGEDDON_DEBUG_MODE=${AIRGEDDON_DEBUG_MODE}\n"
+	} > "${scriptfolder}${rc_file}" 2> /dev/null
 }
 
 #Detect if airgeddon is working inside a docker container
