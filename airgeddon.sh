@@ -11,8 +11,6 @@
 auto_change_language=1
 allow_colorization=1
 
-#TODO create options menu for basic colors using the new env var system
-#TODO create options menu for skip intro using the new env var system
 #TODO create skip intro env var and integration in options menu
 #TODO create hide hints env var and integration in options menu
 #TODO modify options menu for language to use new env var system
@@ -545,6 +543,28 @@ function auto_change_language_toggle() {
 	return 0
 }
 
+#Toggle allow colorization feature
+function allow_colorization_toggle() {
+
+	debug_print
+
+	if "${AIRGEDDON_COLORS:-true}"; then
+		sed -ri 's:(AIRGEDDON_COLORS)=(true):\1=false:' "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "AIRGEDDON_COLORS=false" "${scriptfolder}${rc_file}" > /dev/null; then
+			return 1
+		fi
+		export AIRGEDDON_COLORS=false
+	else
+		sed -ri 's:(AIRGEDDON_COLORS)=(false):\1=true:' "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "AIRGEDDON_COLORS=true" "${scriptfolder}${rc_file}" > /dev/null; then
+			return 1
+		fi
+		export AIRGEDDON_COLORS=true
+	fi
+	initialize_colors
+	return 0
+}
+
 #Toggle allow extended colorization feature
 function allow_extended_colorization_toggle() {
 
@@ -563,7 +583,7 @@ function allow_extended_colorization_toggle() {
 		fi
 		export AIRGEDDON_EXTENDED_COLORS=true
 	fi
-	initialize_colorized_output
+	initialize_extended_colorized_output
 	return 0
 }
 
@@ -1573,6 +1593,11 @@ function option_menu() {
 	else
 		language_strings "${language}" 449
 	fi
+	if "${AIRGEDDON_COLORS:-true}"; then
+		language_strings "${language}" 557
+	else
+		language_strings "${language}" 556
+	fi
 	if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 		language_strings "${language}" 456
 	else
@@ -1623,6 +1648,33 @@ function option_menu() {
 			fi
 		;;
 		3)
+			if "${AIRGEDDON_COLORS:-true}"; then
+				ask_yesno 558 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if allow_colorization_toggle; then
+						echo
+						language_strings "${language}" 560 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			else
+				ask_yesno 559 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if allow_colorization_toggle; then
+						echo
+						language_strings "${language}" 561 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			fi
+		;;
+		4)
 			if ! hash ccze 2> /dev/null; then
 				echo
 				language_strings "${language}" 464 "yellow"
@@ -1646,6 +1698,10 @@ function option_menu() {
 					if allow_extended_colorization_toggle; then
 						echo
 						language_strings "${language}" 465 "blue"
+						if ! "${AIRGEDDON_COLORS:-true}"; then
+							echo
+							language_strings "${language}" 562 "yellow"
+						fi
 					else
 						echo
 						language_strings "${language}" 417 "red"
@@ -1654,7 +1710,7 @@ function option_menu() {
 				fi
 			fi
 		;;
-		4)
+		5)
 			if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 				ask_yesno 469 "no"
 				if [ "${yesno}" = "y" ]; then
@@ -1683,7 +1739,7 @@ function option_menu() {
 				fi
 			fi
 		;;
-		5)
+		6)
 			ask_yesno 478 "yes"
 			if [ "${yesno}" = "y" ]; then
 				get_current_permanent_language
@@ -3797,6 +3853,12 @@ function print_options() {
 		language_strings "${language}" 451 "blue"
 	else
 		language_strings "${language}" 452 "blue"
+	fi
+
+	if "${AIRGEDDON_COLORS:-true}"; then
+		language_strings "${language}" 563 "blue"
+	else
+		language_strings "${language}" 564 "blue"
 	fi
 
 	if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
@@ -12044,12 +12106,12 @@ function docker_detection() {
 }
 
 #Set colorization output if set
-function initialize_colorized_output() {
+function initialize_extended_colorized_output() {
 
 	debug_print
 
 	colorize=""
-	if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
+	if "${AIRGEDDON_COLORS:-true}" && "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 		if hash ccze 2> /dev/null; then
 			colorize="| ccze -A"
 		fi
@@ -12083,10 +12145,6 @@ function initialize_colors() {
 		yellow_color="${normal_color}"
 		pink_color="${normal_color}"
 		white_color="${normal_color}"
-
-		if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
-			export AIRGEDDON_EXTENDED_COLORS=false
-		fi
 	fi
 }
 
@@ -12170,7 +12228,7 @@ function main() {
 		check_update_tools
 	fi
 
-	initialize_colorized_output
+	initialize_extended_colorized_output
 	set_windows_sizes
 	select_interface
 	initialize_menu_options_dependencies
