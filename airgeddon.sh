@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181122
+#Date.........: 20181123
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -525,6 +525,8 @@ function language_strings_handling_messages() {
 #Toggle language auto-detection feature
 function auto_change_language_toggle() {
 
+	#TODO delete this after testing
+
 	debug_print
 
 	if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
@@ -543,69 +545,37 @@ function auto_change_language_toggle() {
 	return 0
 }
 
-#Toggle allow colorization feature
-function allow_colorization_toggle() {
+#Generic toggle option function
+function option_toggle() {
 
 	debug_print
 
-	if "${AIRGEDDON_COLORS:-true}"; then
-		sed -ri 's:(AIRGEDDON_COLORS)=(true):\1=false:' "${scriptfolder}${rc_file}" 2> /dev/null
-		if ! grep "AIRGEDDON_COLORS=false" "${scriptfolder}${rc_file}" > /dev/null; then
+	local option_var_name="${1}"
+	local option_var_value="${!1}"
+
+	if "${option_var_value:-true}"; then
+		sed -ri "s:(${option_var_name})=(true):\1=false:" "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "${option_var_name}=false" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		export AIRGEDDON_COLORS=false
+		export ${option_var_name}=false
 	else
-		sed -ri 's:(AIRGEDDON_COLORS)=(false):\1=true:' "${scriptfolder}${rc_file}" 2> /dev/null
-		if ! grep "AIRGEDDON_COLORS=true" "${scriptfolder}${rc_file}" > /dev/null; then
+		sed -ri "s:(${option_var_name})=(false):\1=true:" "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "${option_var_name}=true" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		export AIRGEDDON_COLORS=true
+		export ${option_var_name}=true
 	fi
-	initialize_colors
-	return 0
-}
 
-#Toggle allow extended colorization feature
-function allow_extended_colorization_toggle() {
+	case "${option_var_name}" in
+		"AIRGEDDON_COLORS")
+			initialize_colors
+		;;
+		"AIRGEDDON_EXTENDED_COLORS")
+			initialize_extended_colorized_output
+		;;
+	esac
 
-	debug_print
-
-	if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
-		sed -ri 's:(AIRGEDDON_EXTENDED_COLORS)=(true):\1=false:' "${scriptfolder}${rc_file}" 2> /dev/null
-		if ! grep "AIRGEDDON_EXTENDED_COLORS=false" "${scriptfolder}${rc_file}" > /dev/null; then
-			return 1
-		fi
-		export AIRGEDDON_EXTENDED_COLORS=false
-	else
-		sed -ri 's:(AIRGEDDON_EXTENDED_COLORS)=(false):\1=true:' "${scriptfolder}${rc_file}" 2> /dev/null
-		if ! grep "AIRGEDDON_EXTENDED_COLORS=true" "${scriptfolder}${rc_file}" > /dev/null; then
-			return 1
-		fi
-		export AIRGEDDON_EXTENDED_COLORS=true
-	fi
-	initialize_extended_colorized_output
-	return 0
-}
-
-#Toggle auto-update feature
-function auto_update_toggle() {
-
-	debug_print
-
-	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
-
-		sed -ri 's:(AIRGEDDON_AUTO_UPDATE)=(true):\1=false:' "${scriptfolder}${rc_file}" 2> /dev/null
-		if ! grep "AIRGEDDON_AUTO_UPDATE=false" "${scriptfolder}${rc_file}" > /dev/null; then
-			return 1
-		fi
-		export AIRGEDDON_AUTO_UPDATE=false
-	else
-		sed -ri 's:(AIRGEDDON_AUTO_UPDATE)=(false):\1=true:' "${scriptfolder}${rc_file}" 2> /dev/null
-		if ! grep "AIRGEDDON_AUTO_UPDATE=true" "${scriptfolder}${rc_file}" > /dev/null; then
-			return 1
-		fi
-		export AIRGEDDON_AUTO_UPDATE=true
-	fi
 	return 0
 }
 
@@ -1623,7 +1593,7 @@ function option_menu() {
 			if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 				ask_yesno 457 "no"
 				if [ "${yesno}" = "y" ]; then
-					if auto_update_toggle; then
+					if option_toggle "AIRGEDDON_AUTO_UPDATE"; then
 						echo
 						language_strings "${language}" 461 "blue"
 					else
@@ -1636,7 +1606,7 @@ function option_menu() {
 				language_strings "${language}" 459 "yellow"
 				ask_yesno 458 "no"
 				if [ "${yesno}" = "y" ]; then
-					if auto_update_toggle; then
+					if option_toggle "AIRGEDDON_AUTO_UPDATE"; then
 						echo
 						language_strings "${language}" 460 "blue"
 					else
@@ -1651,7 +1621,7 @@ function option_menu() {
 			if "${AIRGEDDON_COLORS:-true}"; then
 				ask_yesno 558 "yes"
 				if [ "${yesno}" = "y" ]; then
-					if allow_colorization_toggle; then
+					if option_toggle "AIRGEDDON_COLORS"; then
 						echo
 						language_strings "${language}" 560 "blue"
 					else
@@ -1663,7 +1633,7 @@ function option_menu() {
 			else
 				ask_yesno 559 "yes"
 				if [ "${yesno}" = "y" ]; then
-					if allow_colorization_toggle; then
+					if option_toggle "AIRGEDDON_COLORS"; then
 						echo
 						language_strings "${language}" 561 "blue"
 					else
@@ -1683,7 +1653,7 @@ function option_menu() {
 			if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 				ask_yesno 462 "yes"
 				if [ "${yesno}" = "y" ]; then
-					if allow_extended_colorization_toggle; then
+					if option_toggle "AIRGEDDON_EXTENDED_COLORS"; then
 						echo
 						language_strings "${language}" 466 "blue"
 					else
@@ -1695,7 +1665,7 @@ function option_menu() {
 			else
 				ask_yesno 463 "yes"
 				if [ "${yesno}" = "y" ]; then
-					if allow_extended_colorization_toggle; then
+					if option_toggle "AIRGEDDON_EXTENDED_COLORS"; then
 						echo
 						language_strings "${language}" 465 "blue"
 						if ! "${AIRGEDDON_COLORS:-true}"; then
@@ -1714,7 +1684,7 @@ function option_menu() {
 			if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 				ask_yesno 469 "no"
 				if [ "${yesno}" = "y" ]; then
-					if auto_change_language_toggle; then
+					if option_toggle "AIRGEDDON_AUTO_CHANGE_LANGUAGE"; then
 						echo
 						language_strings "${language}" 473 "blue"
 					else
@@ -1728,7 +1698,7 @@ function option_menu() {
 				language_strings "${language}" 471 "yellow"
 				ask_yesno 470 "no"
 				if [ "${yesno}" = "y" ]; then
-					if auto_change_language_toggle; then
+					if option_toggle "AIRGEDDON_AUTO_CHANGE_LANGUAGE"; then
 						echo
 						language_strings "${language}" 472 "blue"
 					else
@@ -1752,6 +1722,7 @@ function option_menu() {
 					if [ "${auto_change_value}" -eq 1 ]; then
 						echo
 						language_strings "${language}" 479 "yellow"
+						#TODO change this for option_toggle "AIRGEDDON_AUTO_CHANGE_LANGUAGE" and test it
 						auto_change_language_toggle
 					fi
 
