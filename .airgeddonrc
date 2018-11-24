@@ -1,6 +1,9 @@
 #Enabled true / Disabled false - Auto update feature (it has no effect on develop mode) - Default value true
 AIRGEDDON_AUTO_UPDATE=true
 
+#Enabled true / Disabled false - Skip intro (it has no effect on develop mode) - Default value false
+AIRGEDDON_SKIP_INTRO=false
+
 #Enabled true / Disabled false - Allow colorized output - Default value true
 AIRGEDDON_COLORS=true
 

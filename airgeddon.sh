@@ -1535,6 +1535,11 @@ function option_menu() {
 	else
 		language_strings "${language}" 449
 	fi
+	if "${AIRGEDDON_SKIP_INTRO:-true}"; then
+		language_strings "${language}" 565
+	else
+		language_strings "${language}" 566
+	fi
 	if "${AIRGEDDON_COLORS:-true}"; then
 		language_strings "${language}" 557
 	else
@@ -1590,6 +1595,33 @@ function option_menu() {
 			fi
 		;;
 		3)
+			if "${AIRGEDDON_SKIP_INTRO:-true}"; then
+				ask_yesno 569 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_SKIP_INTRO"; then
+						echo
+						language_strings "${language}" 571 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			else
+				ask_yesno 570 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_SKIP_INTRO"; then
+						echo
+						language_strings "${language}" 572 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			fi
+		;;
+		4)
 			if "${AIRGEDDON_COLORS:-true}"; then
 				ask_yesno 558 "yes"
 				if [ "${yesno}" = "y" ]; then
@@ -1616,7 +1648,7 @@ function option_menu() {
 				fi
 			fi
 		;;
-		4)
+		5)
 			if ! hash ccze 2> /dev/null; then
 				echo
 				language_strings "${language}" 464 "yellow"
@@ -1652,7 +1684,7 @@ function option_menu() {
 				fi
 			fi
 		;;
-		5)
+		6)
 			if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 				ask_yesno 469 "no"
 				if [ "${yesno}" = "y" ]; then
@@ -1681,7 +1713,7 @@ function option_menu() {
 				fi
 			fi
 		;;
-		6)
+		7)
 			ask_yesno 478 "yes"
 			if [ "${yesno}" = "y" ]; then
 				get_current_permanent_language
@@ -3795,6 +3827,12 @@ function print_options() {
 		language_strings "${language}" 452 "blue"
 	fi
 
+	if "${AIRGEDDON_SKIP_INTRO:-true}"; then
+		language_strings "${language}" 567 "blue"
+	else
+		language_strings "${language}" 568 "blue"
+	fi
+
 	if "${AIRGEDDON_COLORS:-true}"; then
 		language_strings "${language}" 563 "blue"
 	else
@@ -4218,7 +4256,7 @@ function clean_env_vars() {
 
 	debug_print
 
-	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
+	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
 }
 
 #Clean temporary files
@@ -11988,6 +12026,9 @@ function env_vars_initialization() {
 		if [ -z "${AIRGEDDON_AUTO_UPDATE}" ]; then
 			eval "export $(grep AIRGEDDON_AUTO_UPDATE "${scriptfolder}${rc_file}")"
 		fi
+		if [ -z "${AIRGEDDON_SKIP_INTRO}" ]; then
+			eval "export $(grep AIRGEDDON_SKIP_INTRO "${scriptfolder}${rc_file}")"
+		fi
 		if [ -z "${AIRGEDDON_COLORS}" ]; then
 			eval "export $(grep AIRGEDDON_COLORS "${scriptfolder}${rc_file}")"
 		fi
@@ -12005,6 +12046,7 @@ function env_vars_initialization() {
 		fi
 	else
 		export AIRGEDDON_AUTO_UPDATE="${AIRGEDDON_AUTO_UPDATE:-true}"
+		export AIRGEDDON_SKIP_INTRO="${AIRGEDDON_SKIP_INTRO:-false}"
 		export AIRGEDDON_COLORS="${AIRGEDDON_COLORS:-true}"
 		export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
 		export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
@@ -12022,6 +12064,8 @@ function create_rcfile() {
 	{
 	echo -e "#Enabled true / Disabled false - Auto update feature (it has no effect on develop mode) - Default value true"
 	echo -e "AIRGEDDON_AUTO_UPDATE=${AIRGEDDON_AUTO_UPDATE}\n"
+	echo -e "##Enabled true / Disabled false - Skip intro (it has no effect on develop mode) - Default value false"
+	echo -e "AIRGEDDON_SKIP_INTRO=${AIRGEDDON_SKIP_INTRO}\n"
 	echo -e "#Enabled true / Disabled false - Allow colorized output - Default value true"
 	echo -e "AIRGEDDON_COLORS=${AIRGEDDON_COLORS}\n"
 	echo -e "#Enabled true / Disabled false - Allow extended colorized output (ccze needed, it has no effect on disabled colors) - Default value true"
@@ -12115,16 +12159,18 @@ function main() {
 	initialize_optional_tools_values
 
 	if ! "${AIRGEDDON_DEVELOP_MODE:-false}"; then
-		language_strings "${language}" 86 "title"
-		language_strings "${language}" 6 "blue"
-		echo
-		if check_window_size_for_intro; then
-			print_intro
-		else
-			language_strings "${language}" 228 "green"
+		if ! "${AIRGEDDON_SKIP_INTRO:-false}"; then
+			language_strings "${language}" 86 "title"
+			language_strings "${language}" 6 "blue"
 			echo
-			language_strings "${language}" 395 "yellow"
-		sleep 3
+			if check_window_size_for_intro; then
+				print_intro
+			else
+				language_strings "${language}" 228 "green"
+				echo
+				language_strings "${language}" 395 "yellow"
+			sleep 3
+			fi
 		fi
 
 		clear
