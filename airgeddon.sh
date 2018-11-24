@@ -7,7 +7,6 @@
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
 
-#TODO create skip intro env var and integration in options menu
 #TODO create hide hints env var and integration in options menu
 #TODO modify options menu for language to use new env var system
 
@@ -4219,7 +4218,7 @@ function clean_env_vars() {
 
 	debug_print
 
-	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
+	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
 }
 
 #Clean temporary files
@@ -11989,14 +11988,14 @@ function env_vars_initialization() {
 		if [ -z "${AIRGEDDON_AUTO_UPDATE}" ]; then
 			eval "export $(grep AIRGEDDON_AUTO_UPDATE "${scriptfolder}${rc_file}")"
 		fi
-		if [ -z "${AIRGEDDON_AUTO_CHANGE_LANGUAGE}" ]; then
-			eval "export $(grep AIRGEDDON_AUTO_CHANGE_LANGUAGE "${scriptfolder}${rc_file}")"
-		fi
 		if [ -z "${AIRGEDDON_COLORS}" ]; then
 			eval "export $(grep AIRGEDDON_COLORS "${scriptfolder}${rc_file}")"
 		fi
 		if [ -z "${AIRGEDDON_EXTENDED_COLORS}" ]; then
 			eval "export $(grep AIRGEDDON_EXTENDED_COLORS "${scriptfolder}${rc_file}")"
+		fi
+		if [ -z "${AIRGEDDON_AUTO_CHANGE_LANGUAGE}" ]; then
+			eval "export $(grep AIRGEDDON_AUTO_CHANGE_LANGUAGE "${scriptfolder}${rc_file}")"
 		fi
 		if [ -z "${AIRGEDDON_DEVELOP_MODE}" ]; then
 			eval "export $(grep AIRGEDDON_DEVELOP_MODE "${scriptfolder}${rc_file}")"
@@ -12006,9 +12005,9 @@ function env_vars_initialization() {
 		fi
 	else
 		export AIRGEDDON_AUTO_UPDATE="${AIRGEDDON_AUTO_UPDATE:-true}"
-		export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
 		export AIRGEDDON_COLORS="${AIRGEDDON_COLORS:-true}"
 		export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
+		export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
 		export AIRGEDDON_DEVELOP_MODE="${AIRGEDDON_DEVELOP_MODE:-false}"
 		export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
 		create_rcfile
@@ -12023,12 +12022,12 @@ function create_rcfile() {
 	{
 	echo -e "#Enabled true / Disabled false - Auto update feature (it has no effect on develop mode) - Default value true"
 	echo -e "AIRGEDDON_AUTO_UPDATE=${AIRGEDDON_AUTO_UPDATE}\n"
-	echo -e "#Enabled true / Disabled false - Auto change language feature - Default value true"
-	echo -e "AIRGEDDON_AUTO_CHANGE_LANGUAGE=${AIRGEDDON_AUTO_CHANGE_LANGUAGE}\n"
 	echo -e "#Enabled true / Disabled false - Allow colorized output - Default value true"
 	echo -e "AIRGEDDON_COLORS=${AIRGEDDON_COLORS}\n"
 	echo -e "#Enabled true / Disabled false - Allow extended colorized output (ccze needed, it has no effect on disabled colors) - Default value true"
 	echo -e "AIRGEDDON_EXTENDED_COLORS=${AIRGEDDON_EXTENDED_COLORS}\n"
+	echo -e "#Enabled true / Disabled false - Auto change language feature - Default value true"
+	echo -e "AIRGEDDON_AUTO_CHANGE_LANGUAGE=${AIRGEDDON_AUTO_CHANGE_LANGUAGE}\n"
 	echo -e "#Enabled true / Disabled false - Develop mode for faster development skipping intro and initial checks - Default value false"
 	echo -e "AIRGEDDON_DEVELOP_MODE=${AIRGEDDON_DEVELOP_MODE}\n"
 	echo -e "#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false"
