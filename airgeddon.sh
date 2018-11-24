@@ -2,14 +2,10 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181123
+#Date.........: 20181124
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
-
-#TODO old vars temporary added until development of env vars is finished
-auto_change_language=1
-allow_colorization=1
 
 #TODO create skip intro env var and integration in options menu
 #TODO create hide hints env var and integration in options menu
@@ -520,29 +516,6 @@ function language_strings_handling_messages() {
 	language_strings_key_to_continue["POLISH"]="Naciśnij klawisz [Enter] aby kontynuować..."
 	language_strings_key_to_continue["GERMAN"]="Drücken Sie die [Enter]-Taste um fortzufahren..."
 	language_strings_key_to_continue["TURKISH"]="Devam etmek için [Enter] tuşuna basın..."
-}
-
-#Toggle language auto-detection feature
-function auto_change_language_toggle() {
-
-	#TODO delete this after testing
-
-	debug_print
-
-	if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
-		sed -ri 's:(AIRGEDDON_AUTO_CHANGE_LANGUAGE)=(true):\1=false:' "${scriptfolder}${rc_file}" 2> /dev/null
-		if ! grep "AIRGEDDON_AUTO_CHANGE_LANGUAGE=false" "${scriptfolder}${rc_file}" > /dev/null; then
-			return 1
-		fi
-		export AIRGEDDON_AUTO_CHANGE_LANGUAGE=false
-	else
-		sed -ri 's:(AIRGEDDON_AUTO_CHANGE_LANGUAGE)=(false):\1=true:' "${scriptfolder}${rc_file}" 2> /dev/null
-		if ! grep "AIRGEDDON_AUTO_CHANGE_LANGUAGE=true" "${scriptfolder}${rc_file}" > /dev/null; then
-			return 1
-		fi
-		export AIRGEDDON_AUTO_CHANGE_LANGUAGE=true
-	fi
-	return 0
 }
 
 #Generic toggle option function
@@ -1717,13 +1690,10 @@ function option_menu() {
 					echo
 					language_strings "${language}" 480 "red"
 				else
-					local auto_change_value
-					auto_change_value=$(grep "auto_change_language=" "${scriptfolder}${scriptname}" | head -n 1 | awk -F "=" '{print $2}')
-					if [ "${auto_change_value}" -eq 1 ]; then
+					if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 						echo
 						language_strings "${language}" 479 "yellow"
-						#TODO change this for option_toggle "AIRGEDDON_AUTO_CHANGE_LANGUAGE" and test it
-						auto_change_language_toggle
+						option_toggle "AIRGEDDON_AUTO_CHANGE_LANGUAGE"
 					fi
 
 					if set_permanent_language; then
@@ -12282,16 +12252,6 @@ function download_last_version() {
 
 		if [ -n "${beef_custom_path}" ]; then
 			rewrite_script_with_custom_beef "set" "${beef_custom_path}"
-		fi
-
-		#TODO "${AIRGEDDON_EXTENDED_COLORS}"
-		if [ "${allow_colorization}" -ne 1 ]; then
-			sed -ri 's:(allow_colorization)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
-		fi
-
-		#TODO "${AIRGEDDON_AUTO_CHANGE_LANGUAGE}"
-		if [ "${auto_change_language}" -ne 1 ]; then
-			sed -ri 's:(auto_change_language)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
 		fi
 
 		sed -ri "s:^([l]anguage)=\"[a-zA-Z]+\":\1=\"${current_permanent_language}\":" "${scriptfolder}${scriptname}" 2> /dev/null
