@@ -291,7 +291,7 @@ known_arm_compatible_distros=(
 							)
 
 #Hint vars
-declare main_hints=(128 134 163 437 438 442 445 516)
+declare main_hints=(128 134 163 437 438 442 445 516) #TODO env var system hint
 declare dos_hints=(129 131 133)
 declare handshake_hints=(127 130 132 136)
 declare handshake_attack_hints=(142)
@@ -300,7 +300,7 @@ declare personal_decrypt_hints=(171 178 179 208 244 163)
 declare enterprise_decrypt_hints=(171 179 208 244 163) #TODO jtr hint
 declare select_interface_hints=(246)
 declare language_hints=(250 438)
-declare option_hints=(445 250 448 477)
+declare option_hints=(445 250 448 477) #TODO some new var hint
 declare evil_twin_hints=(254 258 264 269 309 328 400 509)
 declare evil_twin_dos_hints=(267 268 509)
 declare beef_hints=(408)
@@ -1555,6 +1555,11 @@ function option_menu() {
 	else
 		language_strings "${language}" 467
 	fi
+	if "${AIRGEDDON_SILENT_CHECKS:-true}"; then
+		language_strings "${language}" 573
+	else
+		language_strings "${language}" 574
+	fi
 	language_strings "${language}" 447
 	print_hint ${current_menu}
 
@@ -1714,6 +1719,33 @@ function option_menu() {
 			fi
 		;;
 		7)
+			if "${AIRGEDDON_SILENT_CHECKS:-true}"; then
+				ask_yesno 577 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_SILENT_CHECKS"; then
+						echo
+						language_strings "${language}" 579 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			else
+				ask_yesno 578 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_SILENT_CHECKS"; then
+						echo
+						language_strings "${language}" 580 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			fi
+		;;
+		8)
 			ask_yesno 478 "yes"
 			if [ "${yesno}" = "y" ]; then
 				get_current_permanent_language
@@ -3850,6 +3882,12 @@ function print_options() {
 	else
 		language_strings "${language}" 475 "blue"
 	fi
+
+	if "${AIRGEDDON_SILENT_CHECKS:-true}"; then
+		language_strings "${language}" 575 "blue"
+	else
+		language_strings "${language}" 576 "blue"
+	fi
 }
 
 #Print selected interface
@@ -4256,7 +4294,7 @@ function clean_env_vars() {
 
 	debug_print
 
-	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_BASIC_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
+	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_BASIC_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_SILENT_CHECKS AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
 }
 
 #Clean temporary files
@@ -11579,8 +11617,12 @@ function check_root_permissions() {
 	user=$(whoami)
 
 	if [ "${user}" = "root" ]; then
-		language_strings "${language}" 484 "yellow"
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			echo
+			language_strings "${language}" 484 "yellow"
+		fi
 	else
+		echo
 		language_strings "${language}" 223 "red"
 		exit_code=1
 		exit_script_option
@@ -11608,53 +11650,73 @@ function check_compatibility() {
 
 	debug_print
 
-	echo
-	language_strings "${language}" 108 "blue"
-	language_strings "${language}" 115 "read"
+	if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+		echo
+		language_strings "${language}" 108 "blue"
+		language_strings "${language}" 115 "read"
 
-	echo
-	language_strings "${language}" 109 "blue"
+		echo
+		language_strings "${language}" 109 "blue"
+	fi
 
 	essential_toolsok=1
 	for i in "${essential_tools_names[@]}"; do
-		echo -ne "${i}"
-		time_loop
-		if ! hash "${i}" 2> /dev/null; then
-			echo -ne "${red_color} Error${normal_color}"
-			essential_toolsok=0
-			echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
-			echo -e "\r"
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			echo -ne "${i}"
+			time_loop
+			if ! hash "${i}" 2> /dev/null; then
+				echo -ne "${red_color} Error${normal_color}"
+				essential_toolsok=0
+				echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
+				echo -e "\r"
+			else
+				echo -e "${green_color} Ok\r${normal_color}"
+			fi
 		else
-			echo -e "${green_color} Ok\r${normal_color}"
+			if ! hash "${i}" 2> /dev/null; then
+				essential_toolsok=0
+			fi
 		fi
 	done
 
-	echo
-	language_strings "${language}" 218 "blue"
+	if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+		echo
+		language_strings "${language}" 218 "blue"
+	fi
 
 	optional_toolsok=1
 	for i in "${!optional_tools[@]}"; do
-		echo -ne "${i}"
-		time_loop
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			echo -ne "${i}"
+			time_loop
+		fi
 		if ! hash "${i}" 2> /dev/null; then
-			echo -ne "${red_color} Error${normal_color}"
+			if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+				echo -ne "${red_color} Error${normal_color}"
+				echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
+				echo -e "\r"
+			fi
 			optional_toolsok=0
-			echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
-			echo -e "\r"
 		else
 			if [ "${i}" = "beef" ]; then
 				detect_fake_beef
 				if [ ${fake_beef_found} -eq 1 ]; then
-					echo -ne "${red_color} Error${normal_color}"
+					if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+						echo -ne "${red_color} Error${normal_color}"
+						echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
+						echo -e "\r"
+					fi
 					optional_toolsok=0
-					echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
-					echo -e "\r"
 				else
-					echo -e "${green_color} Ok\r${normal_color}"
+					if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+						echo -e "${green_color} Ok\r${normal_color}"
+					fi
 					optional_tools[${i}]=1
 				fi
 			else
-				echo -e "${green_color} Ok\r${normal_color}"
+				if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+					echo -e "${green_color} Ok\r${normal_color}"
+				fi
 				optional_tools[${i}]=1
 			fi
 		fi
@@ -11663,19 +11725,27 @@ function check_compatibility() {
 	update_toolsok=1
 	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 
-		echo
-		language_strings "${language}" 226 "blue"
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			echo
+			language_strings "${language}" 226 "blue"
+		fi
 
 		for i in "${update_tools[@]}"; do
-			echo -ne "${i}"
-			time_loop
-			if ! hash "${i}" 2> /dev/null; then
-				echo -ne "${red_color} Error${normal_color}"
-				update_toolsok=0
-				echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
-				echo -e "\r"
+			if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+				echo -ne "${i}"
+				time_loop
+				if ! hash "${i}" 2> /dev/null; then
+					echo -ne "${red_color} Error${normal_color}"
+					update_toolsok=0
+					echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
+					echo -e "\r"
+				else
+					echo -e "${green_color} Ok\r${normal_color}"
+				fi
 			else
-				echo -e "${green_color} Ok\r${normal_color}"
+				if ! hash "${i}" 2> /dev/null; then
+					update_toolsok=0
+				fi
 			fi
 		done
 	fi
@@ -11684,24 +11754,30 @@ function check_compatibility() {
 		echo
 		language_strings "${language}" 111 "red"
 		echo
-		return
-	fi
-
-	compatible=1
-
-	if [ ${optional_toolsok} -eq 0 ]; then
-		echo
-		language_strings "${language}" 219 "yellow"
-		echo
-		if [ ${fake_beef_found} -eq 1 ]; then
-			language_strings "${language}" 401 "red"
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			language_strings "${language}" 581 "blue"
 			echo
 		fi
 		return
 	fi
 
-	echo
-	language_strings "${language}" 110 "yellow"
+	compatible=1
+
+	if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+		if [ ${optional_toolsok} -eq 0 ]; then
+			echo
+			language_strings "${language}" 219 "yellow"
+			echo
+			if [ ${fake_beef_found} -eq 1 ]; then
+				language_strings "${language}" 401 "red"
+				echo
+			fi
+			return
+		fi
+
+		echo
+		language_strings "${language}" 110 "yellow"
+	fi
 }
 
 #Check for the minimum bash version requirement
@@ -11709,11 +11785,14 @@ function check_bash_version() {
 
 	debug_print
 
-	echo
 	bashversion="${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}"
 	if compare_floats_greater_or_equal "${bashversion}" ${minimum_bash_version_required}; then
-		language_strings "${language}" 221 "yellow"
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			echo
+			language_strings "${language}" 221 "yellow"
+		fi
 	else
+		echo
 		language_strings "${language}" 222 "red"
 		exit_code=1
 		exit_script_option
@@ -12038,6 +12117,9 @@ function env_vars_initialization() {
 		if [ -z "${AIRGEDDON_AUTO_CHANGE_LANGUAGE}" ]; then
 			eval "export $(grep AIRGEDDON_AUTO_CHANGE_LANGUAGE "${scriptfolder}${rc_file}")"
 		fi
+		if [ -z "${AIRGEDDON_SILENT_CHECKS}" ]; then
+			eval "export $(grep AIRGEDDON_SILENT_CHECKS "${scriptfolder}${rc_file}")"
+		fi
 		if [ -z "${AIRGEDDON_DEVELOP_MODE}" ]; then
 			eval "export $(grep AIRGEDDON_DEVELOP_MODE "${scriptfolder}${rc_file}")"
 		fi
@@ -12050,6 +12132,7 @@ function env_vars_initialization() {
 		export AIRGEDDON_BASIC_COLORS="${AIRGEDDON_BASIC_COLORS:-true}"
 		export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
 		export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
+		export AIRGEDDON_SILENT_CHECKS="${AIRGEDDON_SILENT_CHECKS:-false}"
 		export AIRGEDDON_DEVELOP_MODE="${AIRGEDDON_DEVELOP_MODE:-false}"
 		export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
 		create_rcfile
@@ -12072,6 +12155,8 @@ function create_rcfile() {
 	echo -e "AIRGEDDON_EXTENDED_COLORS=${AIRGEDDON_EXTENDED_COLORS}\n"
 	echo -e "#Enabled true / Disabled false - Auto change language feature - Default value true"
 	echo -e "AIRGEDDON_AUTO_CHANGE_LANGUAGE=${AIRGEDDON_AUTO_CHANGE_LANGUAGE}\n"
+	echo -e "#Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on develop mode) - Default value false"
+	echo -e "AIRGEDDON_SILENT_CHECKS=${AIRGEDDON_SILENT_CHECKS}\n"
 	echo -e "#Enabled true / Disabled false - Develop mode for faster development skipping intro and initial checks - Default value false"
 	echo -e "AIRGEDDON_DEVELOP_MODE=${AIRGEDDON_DEVELOP_MODE}\n"
 	echo -e "#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false"
@@ -12184,7 +12269,6 @@ function main() {
 		fi
 
 		check_bash_version
-		echo
 		check_root_permissions
 
 		echo
