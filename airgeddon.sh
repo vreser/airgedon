@@ -578,8 +578,10 @@ function debug_print() {
 	if "${AIRGEDDON_DEBUG_MODE:-true}"; then
 
 		declare excluded_functions=(
+								"airmon_fix"
 								"ask_yesno"
 								"check_pending_of_translation"
+								"clean_env_vars"
 								"contains_element"
 								"echo_blue"
 								"echo_brown"
@@ -591,7 +593,10 @@ function debug_print() {
 								"echo_red_slim"
 								"echo_white"
 								"echo_yellow"
+								"env_vars_initialization"
 								"generate_dynamic_line"
+								"initialize_colors"
+								"initialize_script_settings"
 								"interrupt_checkpoint"
 								"language_strings"
 								"last_echo"
@@ -601,15 +606,10 @@ function debug_print() {
 								"print_simple_separator"
 								"read_yesno"
 								"remove_warnings"
+								"set_script_folder_and_name"
 								"special_text_missed_optional_tool"
 								"store_array"
 								"under_construction_message"
-								"initialize_colors"
-								"clean_env_vars"
-								"env_vars_initialization"
-								"initialize_script_settings"
-								"airmon_fix"
-								"set_script_folder_and_name"
 							)
 
 		if (IFS=$'\n'; echo "${excluded_functions[*]}") | grep -qFx "${FUNCNAME[1]}"; then
