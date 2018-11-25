@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181124
+#Date.........: 20181125
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -540,7 +540,7 @@ function option_toggle() {
 	fi
 
 	case "${option_var_name}" in
-		"AIRGEDDON_COLORS")
+		"AIRGEDDON_BASIC_COLORS")
 			initialize_colors
 		;;
 		"AIRGEDDON_EXTENDED_COLORS")
@@ -1540,7 +1540,7 @@ function option_menu() {
 	else
 		language_strings "${language}" 566
 	fi
-	if "${AIRGEDDON_COLORS:-true}"; then
+	if "${AIRGEDDON_BASIC_COLORS:-true}"; then
 		language_strings "${language}" 557
 	else
 		language_strings "${language}" 556
@@ -1622,10 +1622,10 @@ function option_menu() {
 			fi
 		;;
 		4)
-			if "${AIRGEDDON_COLORS:-true}"; then
+			if "${AIRGEDDON_BASIC_COLORS:-true}"; then
 				ask_yesno 558 "yes"
 				if [ "${yesno}" = "y" ]; then
-					if option_toggle "AIRGEDDON_COLORS"; then
+					if option_toggle "AIRGEDDON_BASIC_COLORS"; then
 						echo
 						language_strings "${language}" 560 "blue"
 					else
@@ -1637,7 +1637,7 @@ function option_menu() {
 			else
 				ask_yesno 559 "yes"
 				if [ "${yesno}" = "y" ]; then
-					if option_toggle "AIRGEDDON_COLORS"; then
+					if option_toggle "AIRGEDDON_BASIC_COLORS"; then
 						echo
 						language_strings "${language}" 561 "blue"
 					else
@@ -1672,7 +1672,7 @@ function option_menu() {
 					if option_toggle "AIRGEDDON_EXTENDED_COLORS"; then
 						echo
 						language_strings "${language}" 465 "blue"
-						if ! "${AIRGEDDON_COLORS:-true}"; then
+						if ! "${AIRGEDDON_BASIC_COLORS:-true}"; then
 							echo
 							language_strings "${language}" 562 "yellow"
 						fi
@@ -3833,7 +3833,7 @@ function print_options() {
 		language_strings "${language}" 568 "blue"
 	fi
 
-	if "${AIRGEDDON_COLORS:-true}"; then
+	if "${AIRGEDDON_BASIC_COLORS:-true}"; then
 		language_strings "${language}" 563 "blue"
 	else
 		language_strings "${language}" 564 "blue"
@@ -4256,7 +4256,7 @@ function clean_env_vars() {
 
 	debug_print
 
-	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
+	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_BASIC_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
 }
 
 #Clean temporary files
@@ -12029,8 +12029,8 @@ function env_vars_initialization() {
 		if [ -z "${AIRGEDDON_SKIP_INTRO}" ]; then
 			eval "export $(grep AIRGEDDON_SKIP_INTRO "${scriptfolder}${rc_file}")"
 		fi
-		if [ -z "${AIRGEDDON_COLORS}" ]; then
-			eval "export $(grep AIRGEDDON_COLORS "${scriptfolder}${rc_file}")"
+		if [ -z "${AIRGEDDON_BASIC_COLORS}" ]; then
+			eval "export $(grep AIRGEDDON_BASIC_COLORS "${scriptfolder}${rc_file}")"
 		fi
 		if [ -z "${AIRGEDDON_EXTENDED_COLORS}" ]; then
 			eval "export $(grep AIRGEDDON_EXTENDED_COLORS "${scriptfolder}${rc_file}")"
@@ -12047,7 +12047,7 @@ function env_vars_initialization() {
 	else
 		export AIRGEDDON_AUTO_UPDATE="${AIRGEDDON_AUTO_UPDATE:-true}"
 		export AIRGEDDON_SKIP_INTRO="${AIRGEDDON_SKIP_INTRO:-false}"
-		export AIRGEDDON_COLORS="${AIRGEDDON_COLORS:-true}"
+		export AIRGEDDON_BASIC_COLORS="${AIRGEDDON_BASIC_COLORS:-true}"
 		export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
 		export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
 		export AIRGEDDON_DEVELOP_MODE="${AIRGEDDON_DEVELOP_MODE:-false}"
@@ -12067,7 +12067,7 @@ function create_rcfile() {
 	echo -e "##Enabled true / Disabled false - Skip intro (it has no effect on develop mode) - Default value false"
 	echo -e "AIRGEDDON_SKIP_INTRO=${AIRGEDDON_SKIP_INTRO}\n"
 	echo -e "#Enabled true / Disabled false - Allow colorized output - Default value true"
-	echo -e "AIRGEDDON_COLORS=${AIRGEDDON_COLORS}\n"
+	echo -e "AIRGEDDON_BASIC_COLORS=${AIRGEDDON_BASIC_COLORS}\n"
 	echo -e "#Enabled true / Disabled false - Allow extended colorized output (ccze needed, it has no effect on disabled colors) - Default value true"
 	echo -e "AIRGEDDON_EXTENDED_COLORS=${AIRGEDDON_EXTENDED_COLORS}\n"
 	echo -e "#Enabled true / Disabled false - Auto change language feature - Default value true"
@@ -12095,7 +12095,7 @@ function initialize_extended_colorized_output() {
 	debug_print
 
 	colorize=""
-	if "${AIRGEDDON_COLORS:-true}" && "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
+	if "${AIRGEDDON_BASIC_COLORS:-true}" && "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 		if hash ccze 2> /dev/null; then
 			colorize="| ccze -A"
 		fi
@@ -12107,7 +12107,7 @@ function initialize_colors() {
 
 	normal_color="\e[1;0m"
 
-	if "${AIRGEDDON_COLORS:-true}"; then
+	if "${AIRGEDDON_BASIC_COLORS:-true}"; then
 		green_color="\033[1;32m"
 		green_color_title="\033[0;32m"
 		red_color="\033[1;31m"
