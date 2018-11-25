@@ -608,6 +608,8 @@ function debug_print() {
 								"clean_env_vars"
 								"env_vars_initialization"
 								"initialize_script_settings"
+								"airmon_fix"
+								"set_script_folder_and_name"
 							)
 
 		if (IFS=$'\n'; echo "${excluded_functions[*]}") | grep -qFx "${FUNCNAME[1]}"; then
