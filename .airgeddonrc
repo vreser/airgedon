@@ -16,8 +16,8 @@ AIRGEDDON_AUTO_CHANGE_LANGUAGE=true
 #Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on develop mode) - Default value false
 AIRGEDDON_SILENT_CHECKS=false
 
-#Enabled true / Disabled false - Develop mode for faster development skipping intro and initial checks - Default value false
-AIRGEDDON_DEVELOP_MODE=false
+#Enabled true / Disabled false - Develop mode for faster development skipping intro and all initial checks - Default value false
+AIRGEDDON_DEVELOPMENT_MODE=false
 
 #Enabled true / Disabled false - Debug mode for development printing debug information - Default value false
 AIRGEDDON_DEBUG_MODE=false

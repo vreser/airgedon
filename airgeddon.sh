@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181125
+#Date.........: 20181128
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -650,7 +650,7 @@ function special_text_missed_optional_tool() {
 	declare -a required_tools=("${!3}")
 
 	allowed_menu_option=1
-	if ! "${AIRGEDDON_DEVELOP_MODE:-false}"; then
+	if ! "${AIRGEDDON_DEVELOPMENT_MODE:-false}"; then
 		tools_needed="${optionaltool_needed[${1}]}"
 		for item in "${required_tools[@]}"; do
 			if [ "${optional_tools[${item}]}" -eq 0 ]; then
@@ -4296,7 +4296,7 @@ function clean_env_vars() {
 
 	debug_print
 
-	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_BASIC_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_SILENT_CHECKS AIRGEDDON_DEVELOP_MODE AIRGEDDON_DEBUG_MODE
+	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_BASIC_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_SILENT_CHECKS AIRGEDDON_DEVELOPMENT_MODE AIRGEDDON_DEBUG_MODE
 }
 
 #Clean temporary files
@@ -12122,8 +12122,8 @@ function env_vars_initialization() {
 		if [ -z "${AIRGEDDON_SILENT_CHECKS}" ]; then
 			eval "export $(grep AIRGEDDON_SILENT_CHECKS "${scriptfolder}${rc_file}")"
 		fi
-		if [ -z "${AIRGEDDON_DEVELOP_MODE}" ]; then
-			eval "export $(grep AIRGEDDON_DEVELOP_MODE "${scriptfolder}${rc_file}")"
+		if [ -z "${AIRGEDDON_DEVELOPMENT_MODE}" ]; then
+			eval "export $(grep AIRGEDDON_DEVELOPMENT_MODE "${scriptfolder}${rc_file}")"
 		fi
 		if [ -z "${AIRGEDDON_DEBUG_MODE}" ]; then
 			eval "export $(grep AIRGEDDON_DEBUG_MODE "${scriptfolder}${rc_file}")"
@@ -12135,7 +12135,7 @@ function env_vars_initialization() {
 		export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
 		export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
 		export AIRGEDDON_SILENT_CHECKS="${AIRGEDDON_SILENT_CHECKS:-false}"
-		export AIRGEDDON_DEVELOP_MODE="${AIRGEDDON_DEVELOP_MODE:-false}"
+		export AIRGEDDON_DEVELOPMENT_MODE="${AIRGEDDON_DEVELOPMENT_MODE:-false}"
 		export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
 		create_rcfile
 	fi
@@ -12159,8 +12159,8 @@ function create_rcfile() {
 	echo -e "AIRGEDDON_AUTO_CHANGE_LANGUAGE=${AIRGEDDON_AUTO_CHANGE_LANGUAGE}\n"
 	echo -e "#Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on develop mode) - Default value false"
 	echo -e "AIRGEDDON_SILENT_CHECKS=${AIRGEDDON_SILENT_CHECKS}\n"
-	echo -e "#Enabled true / Disabled false - Develop mode for faster development skipping intro and initial checks - Default value false"
-	echo -e "AIRGEDDON_DEVELOP_MODE=${AIRGEDDON_DEVELOP_MODE}\n"
+	echo -e "#Enabled true / Disabled false - Develop mode for faster development skipping intro and all initial checks - Default value false"
+	echo -e "AIRGEDDON_DEVELOPMENT_MODE=${AIRGEDDON_DEVELOPMENT_MODE}\n"
 	echo -e "#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false"
 	echo -e "AIRGEDDON_DEBUG_MODE=${AIRGEDDON_DEBUG_MODE}\n"
 	} > "${scriptfolder}${rc_file}" 2> /dev/null
@@ -12245,7 +12245,7 @@ function main() {
 	set_possible_aliases
 	initialize_optional_tools_values
 
-	if ! "${AIRGEDDON_DEVELOP_MODE:-false}"; then
+	if ! "${AIRGEDDON_DEVELOPMENT_MODE:-false}"; then
 		if ! "${AIRGEDDON_SKIP_INTRO:-false}"; then
 			language_strings "${language}" 86 "title"
 			language_strings "${language}" 6 "blue"
