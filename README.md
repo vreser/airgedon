@@ -29,6 +29,7 @@ All the needed info about how to "install | use | enjoy" `airgeddon` is present 
 
 - *III. Getting started*
   - [Installation & Usage]
+  - [Options]
   - [Docker]
 	 - [Linux]
 	 - [Mac OSX]
@@ -65,6 +66,7 @@ All the needed info about how to "install | use | enjoy" `airgeddon` is present 
 [Internal Tools]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Internal%20Tools
 [Known incompatibilities]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Known%20incompatibilities
 [Installation & Usage]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Installation%20&%20Usage
+[Options]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Options
 [Docker]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Docker
 [Linux]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Docker%20Linux
 [Mac OSX]: https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Docker%20Mac%20OSX
