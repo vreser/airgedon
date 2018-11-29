@@ -2,12 +2,11 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181128
+#Date.........: 20181129
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
 
-#TODO create hide hints env var and integration in options menu
 #TODO modify options menu for language to use new env var system
 
 #Language vars
@@ -1562,6 +1561,11 @@ function option_menu() {
 	else
 		language_strings "${language}" 574
 	fi
+	if "${AIRGEDDON_PRINT_HINTS:-true}"; then
+		language_strings "${language}" 584
+	else
+		language_strings "${language}" 585
+	fi
 	language_strings "${language}" 447
 	print_hint ${current_menu}
 
@@ -1748,6 +1752,33 @@ function option_menu() {
 			fi
 		;;
 		8)
+			if "${AIRGEDDON_PRINT_HINTS:-true}"; then
+				ask_yesno 586 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_PRINT_HINTS"; then
+						echo
+						language_strings "${language}" 588 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			else
+				ask_yesno 587 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_PRINT_HINTS"; then
+						echo
+						language_strings "${language}" 589 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			fi
+		;;
+		9)
 			ask_yesno 478 "yes"
 			if [ "${yesno}" = "y" ]; then
 				get_current_permanent_language
@@ -3890,6 +3921,12 @@ function print_options() {
 	else
 		language_strings "${language}" 576 "blue"
 	fi
+
+	if "${AIRGEDDON_PRINT_HINTS:-true}"; then
+		language_strings "${language}" 582 "blue"
+	else
+		language_strings "${language}" 583 "blue"
+	fi
 }
 
 #Print selected interface
@@ -4296,7 +4333,7 @@ function clean_env_vars() {
 
 	debug_print
 
-	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_BASIC_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_SILENT_CHECKS AIRGEDDON_DEVELOPMENT_MODE AIRGEDDON_DEBUG_MODE
+	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_BASIC_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_SILENT_CHECKS AIRGEDDON_PRINT_HINTS AIRGEDDON_DEVELOPMENT_MODE AIRGEDDON_DEBUG_MODE
 }
 
 #Clean temporary files
@@ -4535,8 +4572,10 @@ function print_hint() {
 		;;
 	esac
 
-	print_simple_separator
-	language_strings "${language}" "${strtoprint}" "hint"
+	if "${AIRGEDDON_PRINT_HINTS:-true}"; then
+		print_simple_separator
+		language_strings "${language}" "${strtoprint}" "hint"
+	fi
 	print_simple_separator
 }
 
@@ -12122,6 +12161,9 @@ function env_vars_initialization() {
 		if [ -z "${AIRGEDDON_SILENT_CHECKS}" ]; then
 			eval "export $(grep AIRGEDDON_SILENT_CHECKS "${scriptfolder}${rc_file}")"
 		fi
+		if [ -z "${AIRGEDDON_PRINT_HINTS}" ]; then
+			eval "export $(grep AIRGEDDON_PRINT_HINTS "${scriptfolder}${rc_file}")"
+		fi
 		if [ -z "${AIRGEDDON_DEVELOPMENT_MODE}" ]; then
 			eval "export $(grep AIRGEDDON_DEVELOPMENT_MODE "${scriptfolder}${rc_file}")"
 		fi
@@ -12135,6 +12177,7 @@ function env_vars_initialization() {
 		export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
 		export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
 		export AIRGEDDON_SILENT_CHECKS="${AIRGEDDON_SILENT_CHECKS:-false}"
+		export AIRGEDDON_PRINT_HINTS="${AIRGEDDON_PRINT_HINTS:-true}"
 		export AIRGEDDON_DEVELOPMENT_MODE="${AIRGEDDON_DEVELOPMENT_MODE:-false}"
 		export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
 		create_rcfile
@@ -12159,6 +12202,8 @@ function create_rcfile() {
 	echo -e "AIRGEDDON_AUTO_CHANGE_LANGUAGE=${AIRGEDDON_AUTO_CHANGE_LANGUAGE}\n"
 	echo -e "#Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on develop mode) - Default value false"
 	echo -e "AIRGEDDON_SILENT_CHECKS=${AIRGEDDON_SILENT_CHECKS}\n"
+	echo -e "#Enabled true / Disabled false - Print help hints on menus - Default value true"
+	echo -e "AIRGEDDON_PRINT_HINTS=${AIRGEDDON_PRINT_HINTS}\n"
 	echo -e "#Enabled true / Disabled false - Develop mode for faster development skipping intro and all initial checks - Default value false"
 	echo -e "AIRGEDDON_DEVELOPMENT_MODE=${AIRGEDDON_DEVELOPMENT_MODE}\n"
 	echo -e "#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false"
