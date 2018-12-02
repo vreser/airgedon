@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181129
+#Date.........: 20181202
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -290,7 +290,7 @@ known_arm_compatible_distros=(
 							)
 
 #Hint vars
-declare main_hints=(128 134 163 437 438 442 445 516) #TODO env var system hint
+declare main_hints=(128 134 163 437 438 442 445 516 590)
 declare dos_hints=(129 131 133)
 declare handshake_hints=(127 130 132 136)
 declare handshake_attack_hints=(142)
@@ -299,7 +299,7 @@ declare personal_decrypt_hints=(171 178 179 208 244 163)
 declare enterprise_decrypt_hints=(171 179 208 244 163) #TODO jtr hint
 declare select_interface_hints=(246)
 declare language_hints=(250 438)
-declare option_hints=(445 250 448 477) #TODO some new var hint
+declare option_hints=(445 250 448 477 591)
 declare evil_twin_hints=(254 258 264 269 309 328 400 509)
 declare evil_twin_dos_hints=(267 268 509)
 declare beef_hints=(408)

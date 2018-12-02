@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181129
+#Date.........: 20181202
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -7855,6 +7855,30 @@ function language_strings() {
 	arr["POLISH",589]="${pending_of_translation} Wskazówki do drukowania zostały włączone"
 	arr["GERMAN",589]="${pending_of_translation} Hinweise zum Drucken wurden aktiviert"
 	arr["TURKISH",589]="${pending_of_translation} Baskı ipuçları etkinleştirildi"
+
+	arr["ENGLISH",590]="You can modify manually ${rc_file} file which is in same directory as script to change some options. You can also launch \"flags\" on the command line. More info at: ${urlgithub_wiki}/Options"
+	arr["SPANISH",590]="Puedes modificar manualmente el fichero ${rc_file} que está en el mismo directorio que el script para modificar sus opciones. También puedes lanzar \"flags\" en la línea de comandos. Más información en: ${urlgithub_wiki}/Options"
+	arr["FRENCH",590]="${pending_of_translation} Vous pouvez modifier manuellement le fichier ${rc_file} qui se trouve dans le même répertoire que le script pour modifier ses options. Vous pouvez également lancer \"flags\" sur la ligne de commande. Plus d'informations sur: ${urlgithub_wiki}/Options"
+	arr["CATALAN",590]="${pending_of_translation} Pots modificar manualment el fitxer ${rc_file} que està en el mateix directori que l'script per modificar les seves opcions. També pots llançar \"flags\" a la línia d'ordres. Més informació a: ${urlgithub_wiki}/Options"
+	arr["PORTUGUESE",590]="${pending_of_translation} Você pode modificar manualmente o arquivo ${rc_file} que está no mesmo diretório que o script para modificar suas opções. Você também pode jogar \"flags\" na linha de comando. Mais informações sobre: ${urlgithub_wiki}/Options"
+	arr["RUSSIAN",590]="${pending_of_translation} Вы можете вручную изменить файл ${rc_file}, который находится в том же каталоге, что и скрипт, чтобы изменить его параметры. Вы также можете выкинуть \"flags\" в командной строке. Дополнительная информация о: ${urlgithub_wiki}/Options"
+	arr["GREEK",590]="${pending_of_translation} Μπορείτε να τροποποιήσετε με μη αυτόματο τρόπο το αρχείο ${rc_file} που βρίσκεται στον ίδιο κατάλογο με το σενάριο για να τροποποιήσετε τις επιλογές του. Μπορείτε επίσης να ρίξετε \"flags\" στη γραμμή εντολών. Περισσότερες πληροφορίες σχετικά με το: ${urlgithub_wiki}/Options"
+	arr["ITALIAN",590]="${pending_of_translation} È possibile modificare manualmente il file ${rc_file} che si trova nella stessa directory dello script per modificarne le opzioni. Puoi anche lanciare \"flags\" sulla riga di comando. Maggiori informazioni su: ${urlgithub_wiki}/Options"
+	arr["POLISH",590]="${pending_of_translation} Możesz ręcznie zmodyfikować plik ${rc_file} znajdujący się w tym samym katalogu co skrypt, aby zmodyfikować jego opcje. Możesz także wyrzucić \"flags\" w linii poleceń. Więcej informacji na temat: ${urlgithub_wiki}/Options"
+	arr["GERMAN",590]="${pending_of_translation} Sie können die Datei ${rc_file}, die sich im selben Verzeichnis wie das Skript befindet, manuell ändern, um die Optionen zu ändern. Sie können auch \"flags\" in die Befehlszeile werfen. Weitere Informationen zu: ${urlgithub_wiki}/Options"
+	arr["TURKISH",590]="${pending_of_translation} Seçeneklerini değiştirmek için komut dosyasıyla aynı dizinde bulunan ${rc_file} dosyasını manuel olarak değiştirebilirsiniz. Komut satırında \"flags\" da atabilirsiniz. Hakkında daha fazla bilgi: ${urlgithub_wiki}/Options"
+
+	arr["ENGLISH",591]="Changing these options ${rc_file} is modified as well and the changes are permanent"
+	arr["SPANISH",591]="Cambiando estas opciones modificas el fichero ${rc_file} y los cambios son permanentes"
+	arr["FRENCH",591]="${pending_of_translation} La modification de ces options modifie le fichier ${rc_file} et les modifications sont permanentes"
+	arr["CATALAN",591]="${pending_of_translation} Canviant aquestes opcions modifiqueu el fitxer ${rc_file} i els canvis són permanents"
+	arr["PORTUGUESE",591]="${pending_of_translation} A alteração dessas opções modifica o arquivo ${rc_file} e as alterações são permanentes"
+	arr["RUSSIAN",591]="${pending_of_translation} Изменение этих параметров изменяет файл ${rc_file}, и изменения постоянные"
+	arr["GREEK",591]="${pending_of_translation} Η αλλαγή αυτών των επιλογών τροποποιεί το αρχείο ${rc_file} και οι αλλαγές είναι μόνιμες"
+	arr["ITALIAN",591]="${pending_of_translation} La modifica di queste opzioni modifica il file ${rc_file} e le modifiche sono permanenti"
+	arr["POLISH",591]="${pending_of_translation} Zmiana tych opcji modyfikuje plik ${rc_file}, a zmiany są trwałe"
+	arr["GERMAN",591]="${pending_of_translation} Durch das Ändern dieser Optionen wird die Datei ${rc_file} geändert, und die Änderungen sind dauerhaft"
+	arr["TURKISH",591]="${pending_of_translation} Bu seçenekleri değiştirmek, ${rc_file} dosyasını değiştirir ve değişiklikler kalıcıdır"
 
 	case "${3}" in
 		"yellow")
