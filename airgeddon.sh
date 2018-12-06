@@ -2,12 +2,10 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181202
+#Date.........: 20181206
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
-
-#TODO modify options menu for language to use new env var system
 
 #Language vars
 #Change this line to select another default language. Select one from available values in array
@@ -544,6 +542,12 @@ function option_toggle() {
 		;;
 		"AIRGEDDON_EXTENDED_COLORS")
 			initialize_extended_colorized_output
+		;;
+		"AIRGEDDON_5GHZ_ENABLED")
+			phy_interface=$(physical_interface_finder "${interface}")
+			check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
+			secondary_phy_interface=$(physical_interface_finder "${secondary_wifi_interface}")
+			check_interface_supported_bands "${secondary_phy_interface}" "secondary_wifi_interface"
 		;;
 	esac
 
@@ -1203,8 +1207,10 @@ function get_5ghz_band_info_from_phy_interface() {
 
 	debug_print
 
-	if iw phy "${1}" info 2> /dev/null | grep "5200 MHz" > /dev/null; then
-		return 0
+	if "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
+		if iw phy "${1}" info 2> /dev/null | grep "5200 MHz" > /dev/null; then
+			return 0
+		fi
 	fi
 
 	return 1
@@ -1566,6 +1572,11 @@ function option_menu() {
 	else
 		language_strings "${language}" 585
 	fi
+	if "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
+		language_strings "${language}" 592
+	else
+		language_strings "${language}" 593
+	fi
 	language_strings "${language}" 447
 	print_hint ${current_menu}
 
@@ -1779,6 +1790,33 @@ function option_menu() {
 			fi
 		;;
 		9)
+			if "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
+				ask_yesno 596 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_5GHZ_ENABLED"; then
+						echo
+						language_strings "${language}" 598 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			else
+				ask_yesno 597 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_5GHZ_ENABLED"; then
+						echo
+						language_strings "${language}" 599 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			fi
+		;;
+		10)
 			ask_yesno 478 "yes"
 			if [ "${yesno}" = "y" ]; then
 				get_current_permanent_language
@@ -3927,6 +3965,12 @@ function print_options() {
 	else
 		language_strings "${language}" 583 "blue"
 	fi
+
+	if "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
+		language_strings "${language}" 594 "blue"
+	else
+		language_strings "${language}" 595 "blue"
+	fi
 }
 
 #Print selected interface
@@ -4333,7 +4377,7 @@ function clean_env_vars() {
 
 	debug_print
 
-	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_BASIC_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_SILENT_CHECKS AIRGEDDON_PRINT_HINTS AIRGEDDON_DEVELOPMENT_MODE AIRGEDDON_DEBUG_MODE
+	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_BASIC_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_SILENT_CHECKS AIRGEDDON_PRINT_HINTS AIRGEDDON_5GHZ_ENABLED AIRGEDDON_DEVELOPMENT_MODE AIRGEDDON_DEBUG_MODE
 }
 
 #Clean temporary files
@@ -12164,6 +12208,9 @@ function env_vars_initialization() {
 		if [ -z "${AIRGEDDON_PRINT_HINTS}" ]; then
 			eval "export $(grep AIRGEDDON_PRINT_HINTS "${scriptfolder}${rc_file}")"
 		fi
+		if [ -z "${AIRGEDDON_5GHZ_ENABLED}" ]; then
+			eval "export $(grep AIRGEDDON_5GHZ_ENABLED "${scriptfolder}${rc_file}")"
+		fi
 		if [ -z "${AIRGEDDON_DEVELOPMENT_MODE}" ]; then
 			eval "export $(grep AIRGEDDON_DEVELOPMENT_MODE "${scriptfolder}${rc_file}")"
 		fi
@@ -12178,6 +12225,7 @@ function env_vars_initialization() {
 		export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
 		export AIRGEDDON_SILENT_CHECKS="${AIRGEDDON_SILENT_CHECKS:-false}"
 		export AIRGEDDON_PRINT_HINTS="${AIRGEDDON_PRINT_HINTS:-true}"
+		export AIRGEDDON_5GHZ_ENABLED="${AIRGEDDON_5GHZ_ENABLED:-true}"
 		export AIRGEDDON_DEVELOPMENT_MODE="${AIRGEDDON_DEVELOPMENT_MODE:-false}"
 		export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
 		create_rcfile
@@ -12204,6 +12252,8 @@ function create_rcfile() {
 	echo -e "AIRGEDDON_SILENT_CHECKS=${AIRGEDDON_SILENT_CHECKS}\n"
 	echo -e "#Enabled true / Disabled false - Print help hints on menus - Default value true"
 	echo -e "AIRGEDDON_PRINT_HINTS=${AIRGEDDON_PRINT_HINTS}\n"
+	echo -e "#Enabled true / Disabled false - Enable 5Ghz support (it has no effect if your cards are not 5Ghz compatible cards) - Default value true"
+	echo -e "AIRGEDDON_5GHZ_ENABLED=${AIRGEDDON_5GHZ_ENABLED}\n"
 	echo -e "#Enabled true / Disabled false - Develop mode for faster development skipping intro and all initial checks - Default value false"
 	echo -e "AIRGEDDON_DEVELOPMENT_MODE=${AIRGEDDON_DEVELOPMENT_MODE}\n"
 	echo -e "#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false"
