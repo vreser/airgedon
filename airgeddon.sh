@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181206
+#Date.........: 20181207
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -12238,9 +12238,9 @@ function create_rcfile() {
 	debug_print
 
 	{
-	echo -e "#Enabled true / Disabled false - Auto update feature (it has no effect on develop mode) - Default value true"
+	echo -e "#Enabled true / Disabled false - Auto update feature (it has no effect on development mode) - Default value true"
 	echo -e "AIRGEDDON_AUTO_UPDATE=${AIRGEDDON_AUTO_UPDATE}\n"
-	echo -e "##Enabled true / Disabled false - Skip intro (it has no effect on develop mode) - Default value false"
+	echo -e "##Enabled true / Disabled false - Skip intro (it has no effect on development mode) - Default value false"
 	echo -e "AIRGEDDON_SKIP_INTRO=${AIRGEDDON_SKIP_INTRO}\n"
 	echo -e "#Enabled true / Disabled false - Allow colorized output - Default value true"
 	echo -e "AIRGEDDON_BASIC_COLORS=${AIRGEDDON_BASIC_COLORS}\n"
@@ -12248,13 +12248,13 @@ function create_rcfile() {
 	echo -e "AIRGEDDON_EXTENDED_COLORS=${AIRGEDDON_EXTENDED_COLORS}\n"
 	echo -e "#Enabled true / Disabled false - Auto change language feature - Default value true"
 	echo -e "AIRGEDDON_AUTO_CHANGE_LANGUAGE=${AIRGEDDON_AUTO_CHANGE_LANGUAGE}\n"
-	echo -e "#Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on develop mode) - Default value false"
+	echo -e "#Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on development mode) - Default value false"
 	echo -e "AIRGEDDON_SILENT_CHECKS=${AIRGEDDON_SILENT_CHECKS}\n"
 	echo -e "#Enabled true / Disabled false - Print help hints on menus - Default value true"
 	echo -e "AIRGEDDON_PRINT_HINTS=${AIRGEDDON_PRINT_HINTS}\n"
 	echo -e "#Enabled true / Disabled false - Enable 5Ghz support (it has no effect if your cards are not 5Ghz compatible cards) - Default value true"
 	echo -e "AIRGEDDON_5GHZ_ENABLED=${AIRGEDDON_5GHZ_ENABLED}\n"
-	echo -e "#Enabled true / Disabled false - Develop mode for faster development skipping intro and all initial checks - Default value false"
+	echo -e "#Enabled true / Disabled false - Development mode for faster development skipping intro and all initial checks - Default value false"
 	echo -e "AIRGEDDON_DEVELOPMENT_MODE=${AIRGEDDON_DEVELOPMENT_MODE}\n"
 	echo -e "#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false"
 	echo -e "AIRGEDDON_DEBUG_MODE=${AIRGEDDON_DEBUG_MODE}\n"
