@@ -6313,7 +6313,11 @@ function manage_wps_log() {
 	if [ "${lastcharwps_potpath}" != "/" ]; then
 		wps_potpath="${wps_potpath}/"
 	fi
-	wpspot_filename="wps_captured_key-${wps_essid}.txt"
+	if [ -z "${wps_essid}" ]; then
+		wpspot_filename="wps_captured_key-${wps_bssid}.txt"
+	else
+		wpspot_filename="wps_captured_key-${wps_essid}.txt"
+	fi
 	wps_potpath="${wps_potpath}${wpspot_filename}"
 
 	validpath=1
