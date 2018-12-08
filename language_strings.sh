@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181206
+#Date.........: 20181208
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -93,6 +93,19 @@ function language_strings() {
 	possible_package_names_text["POLISH"]="Możliwa nazwa pakietu"
 	possible_package_names_text["GERMAN"]="Möglicher Paketname"
 	possible_package_names_text["TURKISH"]="Olası paket adı"
+
+	declare -gA disabled_text
+	disabled_text["ENGLISH"]="Disabled"
+	disabled_text["SPANISH"]="Desactivado"
+	disabled_text["FRENCH"]="${pending_of_translation} Désactivé"
+	disabled_text["CATALAN"]="${pending_of_translation} Desactivat"
+	disabled_text["PORTUGUESE"]="${pending_of_translation} Desativado"
+	disabled_text["RUSSIAN"]="${pending_of_translation} Дезактивированный"
+	disabled_text["GREEK"]="${pending_of_translation} Απενεργοποιημένο"
+	disabled_text["ITALIAN"]="${pending_of_translation} Disabilitato"
+	disabled_text["POLISH"]="${pending_of_translation} Dezaktywowane"
+	disabled_text["GERMAN"]="${pending_of_translation} Deaktiviert"
+	disabled_text["TURKISH"]="${pending_of_translation} Devreden"
 
 	declare -gA et_misc_texts
 	et_misc_texts["ENGLISH",0]="Evil Twin AP Info"
@@ -5504,17 +5517,17 @@ function language_strings() {
 	arr["GERMAN",393]="Geben Sie einen Wert in Sekunden (${min_max_timeout}) für die Zeitüberschreitung ein oder drücken Sie [Enter], um den vorgeschlagenen Wert zu übernehmen [${normal_color}${timeout_shown}${green_color}]:"
 	arr["TURKISH",393]="Zaman aşımı için saniye cinsinden değeri (${min_max_timeout}) yazın veya teklifi kabul etmek için [Enter] tuşuna basın [${normal_color}${timeout_shown}${green_color}]:"
 
-	arr["ENGLISH",394]="You have selected a 5Ghz target network and the \"DoS pursuit mode\", but the second interface needed to perform the attack doesn't support the 5Ghz band so the attack can't be performed"
-	arr["SPANISH",394]="Has seleccionado una red objetivo de 5Ghz y el \"modo persecución DoS\", pero el segundo interfaz necesario para llevar a cabo el ataque no soporta la banda de los 5Ghz por lo que este no se puede realizar"
-	arr["FRENCH",394]="Vous avez sélectionné un réseau cible de 5Ghz et le \"mode de poursuite DoS\", mais la deuxième interface nécessaire pour effectuer l'attaque ne supporte pas la bande 5Ghz donc elle ne peut pas être effectuée"
-	arr["CATALAN",394]="Has seleccionat una xarxa objectiu de 5Ghz i el \"mode persecució DoS\", però el segon interfície necessari per dur a terme l'atac no suporta la banda dels 5Ghz pel que aquest no es pot realitzar"
-	arr["PORTUGUESE",394]="Você selecionou uma rede de 5Ghz e DoS com o \"modo de perseguição\", mas a segunda interface necessária para realizar o ataque não suporta a banda de 5Ghz. O ataque não pode ser realizado"
-	arr["RUSSIAN",394]="Вы выбрали целевую сеть на 5Ghz и \"режим преследования DoS\", но второй интерфейс, необходимый для выполнения атаки, не поддерживает полосу 5Ghz, поэтому атака не может быть выполнена"
-	arr["GREEK",394]="Έχετε επιλέξει ένα 5Ghz δίκτυο στόχος και το \"DoS pursuit mode\", αλλά η δεύτερη διεπαφή που απαιτείται για να εκτελέσετε την επίθεση δεν υποστηρίζει την 5Ghz ζώνη, ως αποτέλεσμα η επίθεση να μην μπορεί να εκτελεστεί"
-	arr["ITALIAN",394]="Hai selezionato come obbiettivo una rete di 5Ghz e la \"DoS pursuit mode\", ma la seconda interfaccia necessaria per eseguire l'attacco non supporta la banda 5Ghz, quindi l'attacco non puó essere eseguito"
-	arr["POLISH",394]="Wybrałeś docelową sieć 5Ghz i \"tryb DoS pursuit\", ale drugi interfejs potrzebny do przeprowadzenia ataku nie obsługuje pasma 5Ghz, więc nie można go wykonać"
-	arr["GERMAN",394]="Sie haben ein Zielnetzwerk mit 5Ghz und den \"DoS pursuit mode\" gewählt, aber die zweite Schnittstelle, die zur Ausführung des Angriffs benötigt wird, unterstützt das 5Ghz-Band nicht, so dass es nicht ausgeführt werden kann"
-	arr["TURKISH",394]="Bir 5Ghz hedef ağı ve \"DoS peşinde koşma modu\" nı seçtiniz, ancak saldırıyı gerçekleştirmek için gereken ikinci arabirim, 5Ghz bandını desteklemiyor, böylece saldırı gerçekleştirilemiyor"
+	arr["ENGLISH",394]="You have selected a 5Ghz target network and the \"DoS pursuit mode\", but the second interface needed to perform the attack doesn't support the 5Ghz band or it is disabled, so the attack can't be performed"
+	arr["SPANISH",394]="Has seleccionado una red objetivo de 5Ghz y el \"modo persecución DoS\", pero el segundo interfaz necesario para llevar a cabo el ataque no soporta la banda de los 5Ghz o está desactivado, por lo que este no se puede realizar"
+	arr["FRENCH",394]="${pending_of_translation} Vous avez sélectionné un réseau cible de 5Ghz et le \"mode de poursuite DoS\", mais la deuxième interface nécessaire pour effectuer l'attaque ne supporte pas la bande 5Ghz ou est désactivée, donc elle ne peut pas être effectuée"
+	arr["CATALAN",394]="${pending_of_translation} Has seleccionat una xarxa objectiu de 5Ghz i el \"mode persecució DoS\", però el segon interfície necessari per dur a terme l'atac no suporta la banda dels 5Ghz o està desactivado, pel que aquest no es pot realitzar"
+	arr["PORTUGUESE",394]="${pending_of_translation} Você selecionou uma rede de 5Ghz e DoS com o \"modo de perseguição\", mas a segunda interface necessária para realizar o ataque não suporta a banda de 5Ghz ou está desativado. O ataque não pode ser realizado"
+	arr["RUSSIAN",394]="${pending_of_translation} Вы выбрали целевую сеть на 5Ghz и \"режим преследования DoS\", но второй интерфейс, необходимый для выполнения атаки, не поддерживает полосу 5Ghz, или она отключена, поэтому атака не может быть выполнена"
+	arr["GREEK",394]="${pending_of_translation} Έχετε επιλέξει ένα 5Ghz δίκτυο στόχος και το \"DoS pursuit mode\", αλλά η δεύτερη διεπαφή που απαιτείται για να εκτελέσετε την επίθεση δεν υποστηρίζει την 5Ghz ζώνη ή είναι απενεργοποιημένη, ως αποτέλεσμα η επίθεση να μην μπορεί να εκτελεστεί"
+	arr["ITALIAN",394]="${pending_of_translation} Hai selezionato come obbiettivo una rete di 5Ghz e la \"DoS pursuit mode\", ma la seconda interfaccia necessaria per eseguire l'attacco non supporta la banda 5Ghz o è disabilitato, quindi l'attacco non puó essere eseguito"
+	arr["POLISH",394]="${pending_of_translation} Wybrałeś docelową sieć 5Ghz i \"tryb DoS pursuit\", ale drugi interfejs potrzebny do przeprowadzenia ataku nie obsługuje pasma 5Ghz lub jest wyłączona, więc nie można go wykonać"
+	arr["GERMAN",394]="${pending_of_translation} Sie haben ein Zielnetzwerk mit 5Ghz und den \"DoS pursuit mode\" gewählt, aber die zweite Schnittstelle, die zur Ausführung des Angriffs benötigt wird, unterstützt das 5Ghz-Band nicht oder sie ist deaktiviert, so dass es nicht ausgeführt werden kann"
+	arr["TURKISH",394]="${pending_of_translation} Bir 5Ghz hedef ağı ve \"DoS peşinde koşma modu\" nı seçtiniz, ancak saldırıyı gerçekleştirmek için gereken ikinci arabirim, 5Ghz'yi bandını desteklemiyor veya devre dışı bırakılmış, böylece saldırı gerçekleştirilemiyor"
 
 	arr["ENGLISH",395]="Skipping intro, more window size needed"
 	arr["SPANISH",395]="Saltando presentación, se necesita más tamaño de ventana"
@@ -6956,17 +6969,17 @@ function language_strings() {
 	arr["GERMAN",514]="Interface ${pink_color}${current_iface_on_messages}${blue_color} ausgewählt. Modus: ${pink_color}${ifacemode}${blue_color}. Unterstützte Bänder: ${pink_color}${interface_supported_bands}${normal_color}"
 	arr["TURKISH",514]="${pending_of_translation} Arayüz ${pink_color}${current_iface_on_messages}${blue_color}seçildi. Kip: ${pink_color}${ifacemode}${blue_color}. Desteklenen bantlar: ${pink_color}${interface_supported_bands}${normal_color}"
 
-	arr["ENGLISH",515]="You have selected a 5Ghz band channel but your wifi card doesn't support 5Ghz. The operation can't be performed"
-	arr["SPANISH",515]="Tienes un canal de la banda de 5Ghz seleccionado pero tu tarjeta wifi no soporta 5Ghz. La operación no se puede llevar a cabo"
-	arr["FRENCH",515]="Vous avez sélectionné un canal 5Ghz mais votre carte wifi ne prend pas en charge la 5Ghz. L'opération ne peut pas être effectuée"
-	arr["CATALAN",515]="Tens un canal de la banda de 5Ghz seleccionat però la teva targeta wifi no suporta 5Ghz. L'operació no es pot dur a terme"
-	arr["PORTUGUESE",515]="Você selecionou um canal da banda de 5Ghz, mas sua interface wifi não suporta 5Ghz. A operação não pode ser realizada"
-	arr["RUSSIAN",515]="Вы выбрали канал на частотах 5Ghz, но ваша wifi карта не поддерживает 5Ghz. Операция не может быть выполнена"
-	arr["GREEK",515]="Έχετε επιλέξει κανάλι της ζώνης 5Ghz, αλλά η κάρτα wifi σας δεν υποστηρίζει 5Ghz. Η λειτουργία δεν μπορεί να πραγματοποιηθεί"
-	arr["ITALIAN",515]="Hai selezionato un canale della banda 5Ghz, ma la tua scheda wifi non supporta 5Ghz. L'operazione non può essere eseguita"
-	arr["POLISH",515]="Masz wybrane pasmo 5Ghz, lecz Twoja karta wifi go nie obsługuje. Operacja nie może być wykonana"
-	arr["GERMAN",515]="Sie haben einen Kanal des 5Ghz-Bandes ausgewählt, aber Ihre WLAN-Karte unterstützt 5Ghz nicht. Die Operation kann nicht ausgeführt werden"
-	arr["TURKISH",515]="5Ghz bant kanalı seçtiniz, ancak wifi kartınız 5Ghz'yi desteklemiyor. İşlem gerçekleştirilemiyor"
+	arr["ENGLISH",515]="You have selected a 5Ghz band channel but your wifi card doesn't support 5Ghz or it is disabled. The operation can't be performed"
+	arr["SPANISH",515]="Tienes un canal de la banda de 5Ghz seleccionado pero tu tarjeta wifi no soporta 5Ghz o está desactivado. La operación no se puede llevar a cabo"
+	arr["FRENCH",515]="${pending_of_translation} Vous avez sélectionné un canal 5Ghz mais votre carte wifi ne prend pas en charge la 5Ghz ou est désactivée. L'opération ne peut pas être effectuée"
+	arr["CATALAN",515]="${pending_of_translation} Tens un canal de la banda de 5Ghz seleccionat però la teva targeta wifi no suporta 5Ghz o està desactivado. L'operació no es pot dur a terme"
+	arr["PORTUGUESE",515]="${pending_of_translation} Você selecionou um canal da banda de 5Ghz, mas sua interface wifi não suporta 5Ghz ou está desativado. A operação não pode ser realizada"
+	arr["RUSSIAN",515]="${pending_of_translation} Вы выбрали канал на частотах 5Ghz, но ваша wifi карта не поддерживает 5Ghz, или она отключена. Операция не может быть выполнена"
+	arr["GREEK",515]="${pending_of_translation} Έχετε επιλέξει κανάλι της ζώνης 5Ghz, αλλά η κάρτα wifi σας δεν υποστηρίζει 5Ghz ή είναι απενεργοποιημένη. Η λειτουργία δεν μπορεί να πραγματοποιηθεί"
+	arr["ITALIAN",515]="${pending_of_translation} Hai selezionato un canale della banda 5Ghz, ma la tua scheda wifi non supporta 5Ghz o è disabilitato. L'operazione non può essere eseguita"
+	arr["POLISH",515]="${pending_of_translation} Masz wybrane pasmo 5Ghz, lecz Twoja karta wifi go nie obsługuje 5Ghz lub jest wyłączona. Operacja nie może być wykonana"
+	arr["GERMAN",515]="${pending_of_translation} Sie haben einen Kanal des 5Ghz-Bandes ausgewählt, aber Ihre WLAN-Karte unterstützt 5Ghz nicht oder sie ist deaktiviert. Die Operation kann nicht ausgeführt werden"
+	arr["TURKISH",515]="${pending_of_translation} 5Ghz bant kanalı seçtiniz, ancak wifi kartınız 5Ghz'yi desteklemiyor veya devre dışı bırakılmış. İşlem gerçekleştirilemiyor"
 
 	arr["ENGLISH",516]="It is known that the software used in the 5Ghz band still presents some problems sometimes. For example airodump, that when scanning networks can show a value \"-1\" on channel depending of the card chipset and the driver. It is also known that Ralink chipsets sometimes are getting errors on high channels \">=60\""
 	arr["SPANISH",516]="Es conocido que el software utilizado en la banda de 5Ghz aún presenta algunos problemas a veces. Como por ejemplo airodump, que al escanear redes puede mostrar un valor \"-1\" en el canal dependiendo del chipset de tu tarjeta y del driver. También es conocido que los chipsets Ralink a veces dan fallos en los canales altos \">=60\""

@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181207
+#Date.........: 20181208
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -908,7 +908,7 @@ function wash_json_scan() {
 
 	wash_band_modifier=""
 	if [ "${wps_channel}" -gt 14 ]; then
-		if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+		if [[ "${interface_supported_bands}" = "${band_24ghz}" ]] || ! "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 			echo
 			language_strings "${language}" 515 "red"
 			language_strings "${language}" 115 "read"
@@ -1189,15 +1189,27 @@ function check_interface_supported_bands() {
 	case "${2}" in
 		"main_wifi_interface")
 			interface_supported_bands="${band_24ghz}"
-			if get_5ghz_band_info_from_phy_interface "${1}"; then
-				interface_supported_bands+=", ${band_5ghz}"
-			fi
+			get_5ghz_band_info_from_phy_interface "${1}"
+			case "$?" in
+				"2")
+					interface_supported_bands+=", ${band_5ghz} (${red_color}${disabled_text[${language}]}${pink_color})"
+				;;
+				"0")
+					interface_supported_bands+=", ${band_5ghz}"
+				;;
+			esac
 		;;
 		"secondary_wifi_interface")
 			secondary_interface_supported_bands="${band_24ghz}"
-			if get_5ghz_band_info_from_phy_interface "${1}"; then
-				secondary_interface_supported_bands+=", ${band_5ghz}"
-			fi
+			get_5ghz_band_info_from_phy_interface "${1}"
+			case "$?" in
+				"2")
+					secondary_interface_supported_bands+=", ${band_5ghz} (${red_color}${disabled_text[${language}]}${pink_color})"
+				;;
+				"0")
+					secondary_interface_supported_bands+=", ${band_5ghz}"
+				;;
+			esac
 		;;
 	esac
 }
@@ -1207,9 +1219,11 @@ function get_5ghz_band_info_from_phy_interface() {
 
 	debug_print
 
-	if "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
-		if iw phy "${1}" info 2> /dev/null | grep "5200 MHz" > /dev/null; then
+	if iw phy "${1}" info 2> /dev/null | grep "5200 MHz" > /dev/null; then
+		if "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 			return 0
+		else
+			return 2
 		fi
 	fi
 
@@ -2055,7 +2069,7 @@ function dos_pursuit_mode_et_handler() {
 
 		if select_secondary_et_interface "dos_pursuit_mode"; then
 
-			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ -n "${channel}" ]] && [[ "${channel}" -gt 14 ]] && [[ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]]; then
+			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ -n "${channel}" ]] && [[ "${channel}" -gt 14 ]] && [[ "${secondary_interface_supported_bands}" != ", ${band_5ghz}" ]]; then
 				echo
 				language_strings "${language}" 394 "red"
 				language_strings "${language}" 115 "read"
@@ -2272,11 +2286,15 @@ function select_interface() {
 			interface_menu_band=""
 			if check_interface_wifi "${item}"; then
 				interface_menu_band+="${blue_color}// ${pink_color}"
-				if get_5ghz_band_info_from_phy_interface "$(physical_interface_finder "${item}")"; then
-					interface_menu_band+="${band_24ghz}, ${band_5ghz}"
-				else
-					interface_menu_band+="${band_24ghz}"
-				fi
+				get_5ghz_band_info_from_phy_interface "$(physical_interface_finder "${item}")"
+				case "$?" in
+					"1")
+						interface_menu_band+="${band_24ghz}"
+					;;
+					*)
+						interface_menu_band+="${band_24ghz}, ${band_5ghz}"
+					;;
+				esac
 			fi
 			echo -e "${interface_menu_band} ${blue_color}// ${yellow_color}Chipset:${normal_color} ${chipset}"
 		fi
@@ -2355,7 +2373,7 @@ function read_channel() {
 	debug_print
 
 	echo
-	if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+	if [[ "${interface_supported_bands}" = "${band_24ghz}" ]] || ! "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 		language_strings "${language}" 25 "green"
 	else
 		language_strings "${language}" 517 "green"
@@ -2374,7 +2392,7 @@ function ask_channel() {
 	debug_print
 
 	local regexp
-	if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+	if [[ "${interface_supported_bands}" = "${band_24ghz}" ]] || ! "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 		regexp="^${valid_channels_24_ghz_regexp}$"
 	else
 		regexp="^${valid_channels_24_and_5_ghz_regexp}$"
@@ -2382,7 +2400,7 @@ function ask_channel() {
 
 	if [ "${1}" = "wps" ]; then
 		if [[ -n "${wps_channel}" ]] && [[ "${wps_channel}" -gt 14 ]]; then
-			if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [[ "${interface_supported_bands}" = "${band_24ghz}" ]] || ! "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 				echo
 				language_strings "${language}" 515 "red"
 				language_strings "${language}" 115 "read"
@@ -2397,7 +2415,7 @@ function ask_channel() {
 		language_strings "${language}" 365 "blue"
 	else
 		if [[ -n "${channel}" ]] && [[ "${channel}" -gt 14 ]]; then
-			if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [[ "${interface_supported_bands}" = "${band_24ghz}" ]] || ! "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 				echo
 				language_strings "${language}" 515 "red"
 				language_strings "${language}" 115 "read"
@@ -3383,7 +3401,7 @@ function launch_dos_pursuit_mode_attack() {
 
 	if [ "${channel}" -gt 14 ]; then
 		if [ "${interface_pursuit_mode_scan}" = "${interface}" ]; then
-			if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [[ "${interface_supported_bands}" = "${band_24ghz}" ]] || ! "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 				echo
 				language_strings "${language}" 515 "red"
 				kill_dos_pursuit_mode_processes
@@ -3393,7 +3411,7 @@ function launch_dos_pursuit_mode_attack() {
 				airodump_band_modifier="abg"
 			fi
 		else
-			if [ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [[ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]] || ! "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 				echo
 				language_strings "${language}" 515 "red"
 				kill_dos_pursuit_mode_processes
@@ -3405,13 +3423,13 @@ function launch_dos_pursuit_mode_attack() {
 		fi
 	else
 		if [ "${interface_pursuit_mode_scan}" = "${interface}" ]; then
-			if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [[ "${interface_supported_bands}" = "${band_24ghz}" ]] || ! "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 				airodump_band_modifier="bg"
 			else
 				airodump_band_modifier="abg"
 			fi
 		else
-			if [ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [[ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]] || ! "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 				airodump_band_modifier="bg"
 			else
 				airodump_band_modifier="abg"
@@ -7446,7 +7464,7 @@ function set_wps_attack_script() {
 	rm -rf "${tmpdir}${wps_out_file}" > /dev/null 2>&1
 
 	bully_reaver_band_modifier=""
-	if [[ "${wps_channel}" -gt 14 ]] && [[ "${interface_supported_bands}" != "${band_24ghz}" ]]; then
+	if [[ "${wps_channel}" -gt 14 ]] && [[ "${interface_supported_bands}" = ", ${band_5ghz}" ]] && "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 		bully_reaver_band_modifier="-5"
 	fi
 
@@ -9883,7 +9901,7 @@ function explore_for_targets_option() {
 	rm -rf "${tmpdir}nws"* > /dev/null 2>&1
 	rm -rf "${tmpdir}clts.csv" > /dev/null 2>&1
 
-	if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+	if [[ "${interface_supported_bands}" = "${band_24ghz}" ]] || ! "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 		airodump_band_modifier="bg"
 	else
 		airodump_band_modifier="abg"
@@ -9977,7 +9995,7 @@ function explore_for_wps_targets_option() {
 	fi
 
 	wash_band_modifier=""
-	if [ "${interface_supported_bands}" != "${band_24ghz}" ]; then
+	if [[ "${interface_supported_bands}" != "${band_24ghz}" ]] && "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
 		if check_dual_scan_on_wash; then
 			wash_band_modifier="-2 -5"
 		else
@@ -10466,7 +10484,7 @@ function et_prerequisites() {
 			fi
 			return
 		else
-			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ "${channel}" -gt 14 ]] && [[ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]]; then
+			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ -n "${channel}" ]] && [[ "${channel}" -gt 14 ]] && [[ "${secondary_interface_supported_bands}" != ", ${band_5ghz}" ]]; then
 				echo
 				language_strings "${language}" 394 "red"
 				language_strings "${language}" 115 "read"
