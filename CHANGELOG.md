@@ -2,6 +2,7 @@
  - New WPA/WPA2 enterprise attacks menu
  - New WPA/WPA2 enterprise offline decryption menu
  - Compatibility extended to Linux Mint 18.x
+ - Flag system for options based on fallback substitution variables
 
 ### 8.12
  - Fixed error on WPS attacks for strange chars in some SSIDs

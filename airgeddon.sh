@@ -2,22 +2,10 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181111
+#Date.........: 20181208
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
-
-#Enabled with extra-verbose mode 2 / Enabled 1 / Disabled 0 - Debug mode for faster development skipping intro and initial checks - Default value 0
-debug_mode=0
-
-#Enabled 1 / Disabled 0 - Auto update feature (it has no effect on debug mode) - Default value 1
-auto_update=1
-
-#Enabled 1 / Disabled 0 - Auto change language feature - Default value 1
-auto_change_language=1
-
-#Enabled 1 / Disabled 0 - Allow colorized output - Default value 1
-allow_colorization=1
 
 #Language vars
 #Change this line to select another default language. Select one from available values in array
@@ -132,6 +120,7 @@ pending_of_translation="[PoT]"
 escaped_pending_of_translation="\[PoT\]"
 standard_resolution="1024x768"
 curl_404_error="404: Not Found"
+rc_file=".airgeddonrc"
 language_strings_file="language_strings.sh"
 broadcast_mac="FF:FF:FF:FF:FF:FF"
 
@@ -299,7 +288,7 @@ known_arm_compatible_distros=(
 							)
 
 #Hint vars
-declare main_hints=(128 134 163 437 438 442 445 516)
+declare main_hints=(128 134 163 437 438 442 445 516 590)
 declare dos_hints=(129 131 133)
 declare handshake_hints=(127 130 132 136)
 declare handshake_attack_hints=(142)
@@ -308,7 +297,7 @@ declare personal_decrypt_hints=(171 178 179 208 244 163)
 declare enterprise_decrypt_hints=(171 179 208 244 163) #TODO jtr hint
 declare select_interface_hints=(246)
 declare language_hints=(250 438)
-declare option_hints=(445 250 448 477)
+declare option_hints=(445 250 448 477 591)
 declare evil_twin_hints=(254 258 264 269 309 328 400 509)
 declare evil_twin_dos_hints=(267 268 509)
 declare beef_hints=(408)
@@ -322,19 +311,6 @@ crunch_uppercasecharset="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 crunch_numbercharset="0123456789"
 crunch_symbolcharset="!#$%/=?{}[]-*:;"
 hashcat_charsets=("?l" "?u" "?d" "?s")
-
-#Colors vars
-green_color="\033[1;32m"
-green_color_title="\033[0;32m"
-red_color="\033[1;31m"
-red_color_slim="\033[0;031m"
-blue_color="\033[1;34m"
-cyan_color="\033[1;36m"
-brown_color="\033[0;33m"
-yellow_color="\033[1;33m"
-pink_color="\033[1;35m"
-white_color="\e[1;97m"
-normal_color="\e[1;0m"
 
 #Check coherence between script and language_strings file
 function check_language_strings() {
@@ -538,67 +514,43 @@ function language_strings_handling_messages() {
 	language_strings_key_to_continue["TURKISH"]="Devam etmek için [Enter] tuşuna basın..."
 }
 
-#Toggle language auto-detection feature
-function auto_change_language_toggle() {
+#Generic toggle option function
+function option_toggle() {
 
 	debug_print
 
-	if [ "${auto_change_language}" -eq 1 ]; then
-		sed -ri 's:(auto_change_language)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "auto_[c]hange_language=0" "${scriptfolder}${scriptname}" > /dev/null; then
+	local option_var_name="${1}"
+	local option_var_value="${!1}"
+
+	if "${option_var_value:-true}"; then
+		sed -ri "s:(${option_var_name})=(true):\1=false:" "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "${option_var_name}=false" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		auto_change_language=$((auto_change_language-1))
+		export ${option_var_name}=false
 	else
-		sed -ri 's:(auto_change_language)=(0):\1=1:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "auto_[c]hange_language=1" "${scriptfolder}${scriptname}" > /dev/null; then
+		sed -ri "s:(${option_var_name})=(false):\1=true:" "${scriptfolder}${rc_file}" 2> /dev/null
+		if ! grep "${option_var_name}=true" "${scriptfolder}${rc_file}" > /dev/null; then
 			return 1
 		fi
-		auto_change_language=$((auto_change_language+1))
+		export ${option_var_name}=true
 	fi
-	return 0
-}
 
-#Toggle allow colorization feature
-function allow_colorization_toggle() {
+	case "${option_var_name}" in
+		"AIRGEDDON_BASIC_COLORS")
+			initialize_colors
+		;;
+		"AIRGEDDON_EXTENDED_COLORS")
+			initialize_extended_colorized_output
+		;;
+		"AIRGEDDON_5GHZ_ENABLED")
+			phy_interface=$(physical_interface_finder "${interface}")
+			check_interface_supported_bands "${phy_interface}" "main_wifi_interface"
+			secondary_phy_interface=$(physical_interface_finder "${secondary_wifi_interface}")
+			check_interface_supported_bands "${secondary_phy_interface}" "secondary_wifi_interface"
+		;;
+	esac
 
-	debug_print
-
-	if [ "${allow_colorization}" -eq 1 ]; then
-		sed -ri 's:(allow_colorization)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "allow_[c]olorization=0" "${scriptfolder}${scriptname}" > /dev/null; then
-			return 1
-		fi
-		allow_colorization=$((allow_colorization-1))
-	else
-		sed -ri 's:(allow_colorization)=(0):\1=1:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "allow_[c]olorization=1" "${scriptfolder}${scriptname}" > /dev/null; then
-			return 1
-		fi
-		allow_colorization=$((allow_colorization+1))
-	fi
-	initialize_colorized_output
-	return 0
-}
-
-#Toggle auto-update feature
-function auto_update_toggle() {
-
-	debug_print
-
-	if [ "${auto_update}" -eq 1 ]; then
-		sed -ri 's:(auto_update)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "auto_[u]pdate=0" "${scriptfolder}${scriptname}" > /dev/null; then
-			return 1
-		fi
-		auto_update=$((auto_update-1))
-	else
-		sed -ri 's:(auto_update)=(0):\1=1:' "${scriptfolder}${scriptname}" 2> /dev/null
-		if ! grep -E "auto_[u]pdate=1" "${scriptfolder}${scriptname}" > /dev/null; then
-			return 1
-		fi
-		auto_update=$((auto_update+1))
-	fi
 	return 0
 }
 
@@ -626,11 +578,13 @@ function set_permanent_language() {
 #Print the current line of where this was called and the function's name. Applies to some (which are useful) functions
 function debug_print() {
 
-	if [ ${debug_mode} -eq 2 ]; then
+	if "${AIRGEDDON_DEBUG_MODE:-true}"; then
 
 		declare excluded_functions=(
+								"airmon_fix"
 								"ask_yesno"
 								"check_pending_of_translation"
+								"clean_env_vars"
 								"contains_element"
 								"echo_blue"
 								"echo_brown"
@@ -642,7 +596,10 @@ function debug_print() {
 								"echo_red_slim"
 								"echo_white"
 								"echo_yellow"
+								"env_vars_initialization"
 								"generate_dynamic_line"
+								"initialize_colors"
+								"initialize_script_settings"
 								"interrupt_checkpoint"
 								"language_strings"
 								"last_echo"
@@ -652,6 +609,7 @@ function debug_print() {
 								"print_simple_separator"
 								"read_yesno"
 								"remove_warnings"
+								"set_script_folder_and_name"
 								"special_text_missed_optional_tool"
 								"store_array"
 								"under_construction_message"
@@ -695,7 +653,7 @@ function special_text_missed_optional_tool() {
 	declare -a required_tools=("${!3}")
 
 	allowed_menu_option=1
-	if [ ${debug_mode} -eq 0 ]; then
+	if ! "${AIRGEDDON_DEVELOPMENT_MODE:-false}"; then
 		tools_needed="${optionaltool_needed[${1}]}"
 		for item in "${required_tools[@]}"; do
 			if [ "${optional_tools[${item}]}" -eq 0 ]; then
@@ -950,7 +908,7 @@ function wash_json_scan() {
 
 	wash_band_modifier=""
 	if [ "${wps_channel}" -gt 14 ]; then
-		if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+		if [ "${interfaces_band_info['main_wifi_interface','5Ghz_allowed']}" -eq 0 ]; then
 			echo
 			language_strings "${language}" 515 "red"
 			language_strings "${language}" 115 "read"
@@ -1228,18 +1186,19 @@ function check_interface_supported_bands() {
 
 	debug_print
 
-	case "${2}" in
-		"main_wifi_interface")
-			interface_supported_bands="${band_24ghz}"
-			if get_5ghz_band_info_from_phy_interface "${1}"; then
-				interface_supported_bands+=", ${band_5ghz}"
-			fi
+	get_5ghz_band_info_from_phy_interface "${1}"
+	case "$?" in
+		"0")
+			interfaces_band_info["${2}","5Ghz_allowed"]=1
+			interfaces_band_info["${2}","text"]="${band_24ghz}, ${band_5ghz}"
 		;;
-		"secondary_wifi_interface")
-			secondary_interface_supported_bands="${band_24ghz}"
-			if get_5ghz_band_info_from_phy_interface "${1}"; then
-				secondary_interface_supported_bands+=", ${band_5ghz}"
-			fi
+		"1")
+			interfaces_band_info["${2}","5Ghz_allowed"]=0
+			interfaces_band_info["${2}","text"]="${band_24ghz}"
+		;;
+		"2")
+			interfaces_band_info["${2}","5Ghz_allowed"]=0
+			interfaces_band_info["${2}","text"]="${band_24ghz}, ${band_5ghz} (${red_color}${disabled_text[${language}]}${pink_color})"
 		;;
 	esac
 }
@@ -1250,7 +1209,11 @@ function get_5ghz_band_info_from_phy_interface() {
 	debug_print
 
 	if iw phy "${1}" info 2> /dev/null | grep "5200 MHz" > /dev/null; then
-		return 0
+		if "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
+			return 0
+		else
+			return 2
+		fi
 	fi
 
 	return 1
@@ -1577,20 +1540,45 @@ function option_menu() {
 	print_simple_separator
 	language_strings "${language}" 78
 	print_simple_separator
-	if [ "${auto_update}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 		language_strings "${language}" 455
 	else
 		language_strings "${language}" 449
 	fi
-	if [ "${allow_colorization}" -eq 1 ]; then
+	if "${AIRGEDDON_SKIP_INTRO:-true}"; then
+		language_strings "${language}" 565
+	else
+		language_strings "${language}" 566
+	fi
+	if "${AIRGEDDON_BASIC_COLORS:-true}"; then
+		language_strings "${language}" 557
+	else
+		language_strings "${language}" 556
+	fi
+	if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 		language_strings "${language}" 456
 	else
 		language_strings "${language}" 450
 	fi
-	if [ "${auto_change_language}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 		language_strings "${language}" 468
 	else
 		language_strings "${language}" 467
+	fi
+	if "${AIRGEDDON_SILENT_CHECKS:-true}"; then
+		language_strings "${language}" 573
+	else
+		language_strings "${language}" 574
+	fi
+	if "${AIRGEDDON_PRINT_HINTS:-true}"; then
+		language_strings "${language}" 584
+	else
+		language_strings "${language}" 585
+	fi
+	if "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
+		language_strings "${language}" 592
+	else
+		language_strings "${language}" 593
 	fi
 	language_strings "${language}" 447
 	print_hint ${current_menu}
@@ -1604,10 +1592,10 @@ function option_menu() {
 			language_menu
 		;;
 		2)
-			if [ "${auto_update}" -eq 1 ]; then
+			if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 				ask_yesno 457 "no"
 				if [ "${yesno}" = "y" ]; then
-					if auto_update_toggle; then
+					if option_toggle "AIRGEDDON_AUTO_UPDATE"; then
 						echo
 						language_strings "${language}" 461 "blue"
 					else
@@ -1620,7 +1608,7 @@ function option_menu() {
 				language_strings "${language}" 459 "yellow"
 				ask_yesno 458 "no"
 				if [ "${yesno}" = "y" ]; then
-					if auto_update_toggle; then
+					if option_toggle "AIRGEDDON_AUTO_UPDATE"; then
 						echo
 						language_strings "${language}" 460 "blue"
 					else
@@ -1632,15 +1620,69 @@ function option_menu() {
 			fi
 		;;
 		3)
+			if "${AIRGEDDON_SKIP_INTRO:-true}"; then
+				ask_yesno 569 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_SKIP_INTRO"; then
+						echo
+						language_strings "${language}" 571 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			else
+				ask_yesno 570 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_SKIP_INTRO"; then
+						echo
+						language_strings "${language}" 572 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			fi
+		;;
+		4)
+			if "${AIRGEDDON_BASIC_COLORS:-true}"; then
+				ask_yesno 558 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_BASIC_COLORS"; then
+						echo
+						language_strings "${language}" 560 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			else
+				ask_yesno 559 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_BASIC_COLORS"; then
+						echo
+						language_strings "${language}" 561 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			fi
+		;;
+		5)
 			if ! hash ccze 2> /dev/null; then
 				echo
 				language_strings "${language}" 464 "yellow"
 			fi
 
-			if [ "${allow_colorization}" -eq 1 ]; then
+			if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 				ask_yesno 462 "yes"
 				if [ "${yesno}" = "y" ]; then
-					if allow_colorization_toggle; then
+					if option_toggle "AIRGEDDON_EXTENDED_COLORS"; then
 						echo
 						language_strings "${language}" 466 "blue"
 					else
@@ -1652,9 +1694,13 @@ function option_menu() {
 			else
 				ask_yesno 463 "yes"
 				if [ "${yesno}" = "y" ]; then
-					if allow_colorization_toggle; then
+					if option_toggle "AIRGEDDON_EXTENDED_COLORS"; then
 						echo
 						language_strings "${language}" 465 "blue"
+						if ! "${AIRGEDDON_BASIC_COLORS:-true}"; then
+							echo
+							language_strings "${language}" 562 "yellow"
+						fi
 					else
 						echo
 						language_strings "${language}" 417 "red"
@@ -1663,11 +1709,11 @@ function option_menu() {
 				fi
 			fi
 		;;
-		4)
-			if [ "${auto_change_language}" -eq 1 ]; then
+		6)
+			if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 				ask_yesno 469 "no"
 				if [ "${yesno}" = "y" ]; then
-					if auto_change_language_toggle; then
+					if option_toggle "AIRGEDDON_AUTO_CHANGE_LANGUAGE"; then
 						echo
 						language_strings "${language}" 473 "blue"
 					else
@@ -1681,7 +1727,7 @@ function option_menu() {
 				language_strings "${language}" 471 "yellow"
 				ask_yesno 470 "no"
 				if [ "${yesno}" = "y" ]; then
-					if auto_change_language_toggle; then
+					if option_toggle "AIRGEDDON_AUTO_CHANGE_LANGUAGE"; then
 						echo
 						language_strings "${language}" 472 "blue"
 					else
@@ -1692,7 +1738,88 @@ function option_menu() {
 				fi
 			fi
 		;;
-		5)
+		7)
+			if "${AIRGEDDON_SILENT_CHECKS:-true}"; then
+				ask_yesno 577 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_SILENT_CHECKS"; then
+						echo
+						language_strings "${language}" 579 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			else
+				ask_yesno 578 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_SILENT_CHECKS"; then
+						echo
+						language_strings "${language}" 580 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			fi
+		;;
+		8)
+			if "${AIRGEDDON_PRINT_HINTS:-true}"; then
+				ask_yesno 586 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_PRINT_HINTS"; then
+						echo
+						language_strings "${language}" 588 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			else
+				ask_yesno 587 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_PRINT_HINTS"; then
+						echo
+						language_strings "${language}" 589 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			fi
+		;;
+		9)
+			if "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
+				ask_yesno 596 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_5GHZ_ENABLED"; then
+						echo
+						language_strings "${language}" 598 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			else
+				ask_yesno 597 "yes"
+				if [ "${yesno}" = "y" ]; then
+					if option_toggle "AIRGEDDON_5GHZ_ENABLED"; then
+						echo
+						language_strings "${language}" 599 "blue"
+					else
+						echo
+						language_strings "${language}" 417 "red"
+					fi
+					language_strings "${language}" 115 "read"
+				fi
+			fi
+		;;
+		10)
 			ask_yesno 478 "yes"
 			if [ "${yesno}" = "y" ]; then
 				get_current_permanent_language
@@ -1700,12 +1827,10 @@ function option_menu() {
 					echo
 					language_strings "${language}" 480 "red"
 				else
-					local auto_change_value
-					auto_change_value=$(grep "auto_change_language=" "${scriptfolder}${scriptname}" | head -n 1 | awk -F "=" '{print $2}')
-					if [ "${auto_change_value}" -eq 1 ]; then
+					if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 						echo
 						language_strings "${language}" 479 "yellow"
-						auto_change_language_toggle
+						option_toggle "AIRGEDDON_AUTO_CHANGE_LANGUAGE"
 					fi
 
 					if set_permanent_language; then
@@ -1933,7 +2058,7 @@ function dos_pursuit_mode_et_handler() {
 
 		if select_secondary_et_interface "dos_pursuit_mode"; then
 
-			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ -n "${channel}" ]] && [[ "${channel}" -gt 14 ]] && [[ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]]; then
+			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ -n "${channel}" ]] && [[ "${channel}" -gt 14 ]] && [[ "${interfaces_band_info['secondary_wifi_interface','5Ghz_allowed']}" -eq 0 ]]; then
 				echo
 				language_strings "${language}" 394 "red"
 				language_strings "${language}" 115 "read"
@@ -2150,11 +2275,15 @@ function select_interface() {
 			interface_menu_band=""
 			if check_interface_wifi "${item}"; then
 				interface_menu_band+="${blue_color}// ${pink_color}"
-				if get_5ghz_band_info_from_phy_interface "$(physical_interface_finder "${item}")"; then
-					interface_menu_band+="${band_24ghz}, ${band_5ghz}"
-				else
-					interface_menu_band+="${band_24ghz}"
-				fi
+				get_5ghz_band_info_from_phy_interface "$(physical_interface_finder "${item}")"
+				case "$?" in
+					"1")
+						interface_menu_band+="${band_24ghz}"
+					;;
+					*)
+						interface_menu_band+="${band_24ghz}, ${band_5ghz}"
+					;;
+				esac
 			fi
 			echo -e "${interface_menu_band} ${blue_color}// ${yellow_color}Chipset:${normal_color} ${chipset}"
 		fi
@@ -2233,7 +2362,7 @@ function read_channel() {
 	debug_print
 
 	echo
-	if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+	if [ "${interfaces_band_info['main_wifi_interface','5Ghz_allowed']}" -eq 0 ]; then
 		language_strings "${language}" 25 "green"
 	else
 		language_strings "${language}" 517 "green"
@@ -2252,7 +2381,7 @@ function ask_channel() {
 	debug_print
 
 	local regexp
-	if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+	if [ "${interfaces_band_info['main_wifi_interface','5Ghz_allowed']}" -eq 0 ]; then
 		regexp="^${valid_channels_24_ghz_regexp}$"
 	else
 		regexp="^${valid_channels_24_and_5_ghz_regexp}$"
@@ -2260,7 +2389,7 @@ function ask_channel() {
 
 	if [ "${1}" = "wps" ]; then
 		if [[ -n "${wps_channel}" ]] && [[ "${wps_channel}" -gt 14 ]]; then
-			if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [ "${interfaces_band_info['main_wifi_interface','5Ghz_allowed']}" -eq 0 ]; then
 				echo
 				language_strings "${language}" 515 "red"
 				language_strings "${language}" 115 "read"
@@ -2275,7 +2404,7 @@ function ask_channel() {
 		language_strings "${language}" 365 "blue"
 	else
 		if [[ -n "${channel}" ]] && [[ "${channel}" -gt 14 ]]; then
-			if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [ "${interfaces_band_info['main_wifi_interface','5Ghz_allowed']}" -eq 0 ]; then
 				echo
 				language_strings "${language}" 515 "red"
 				language_strings "${language}" 115 "read"
@@ -3261,7 +3390,7 @@ function launch_dos_pursuit_mode_attack() {
 
 	if [ "${channel}" -gt 14 ]; then
 		if [ "${interface_pursuit_mode_scan}" = "${interface}" ]; then
-			if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [ "${interfaces_band_info['main_wifi_interface','5Ghz_allowed']}" -eq 0 ]; then
 				echo
 				language_strings "${language}" 515 "red"
 				kill_dos_pursuit_mode_processes
@@ -3271,7 +3400,7 @@ function launch_dos_pursuit_mode_attack() {
 				airodump_band_modifier="abg"
 			fi
 		else
-			if [ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [ "${interfaces_band_info['secondary_wifi_interface','5Ghz_allowed']}" -eq 0 ]; then
 				echo
 				language_strings "${language}" 515 "red"
 				kill_dos_pursuit_mode_processes
@@ -3283,13 +3412,13 @@ function launch_dos_pursuit_mode_attack() {
 		fi
 	else
 		if [ "${interface_pursuit_mode_scan}" = "${interface}" ]; then
-			if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [ "${interfaces_band_info['main_wifi_interface','5Ghz_allowed']}" -eq 0 ]; then
 				airodump_band_modifier="bg"
 			else
 				airodump_band_modifier="abg"
 			fi
 		else
-			if [ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]; then
+			if [ "${interfaces_band_info['secondary_wifi_interface','5Ghz_allowed']}" -eq 0 ]; then
 				airodump_band_modifier="bg"
 			else
 				airodump_band_modifier="abg"
@@ -3802,22 +3931,52 @@ function print_options() {
 
 	debug_print
 
-	if [ "${auto_update}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 		language_strings "${language}" 451 "blue"
 	else
 		language_strings "${language}" 452 "blue"
 	fi
 
-	if [ "${allow_colorization}" -eq 1 ]; then
+	if "${AIRGEDDON_SKIP_INTRO:-true}"; then
+		language_strings "${language}" 567 "blue"
+	else
+		language_strings "${language}" 568 "blue"
+	fi
+
+	if "${AIRGEDDON_BASIC_COLORS:-true}"; then
+		language_strings "${language}" 563 "blue"
+	else
+		language_strings "${language}" 564 "blue"
+	fi
+
+	if "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 		language_strings "${language}" 453 "blue"
 	else
 		language_strings "${language}" 454 "blue"
 	fi
 
-	if [ "${auto_change_language}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 		language_strings "${language}" 474 "blue"
 	else
 		language_strings "${language}" 475 "blue"
+	fi
+
+	if "${AIRGEDDON_SILENT_CHECKS:-true}"; then
+		language_strings "${language}" 575 "blue"
+	else
+		language_strings "${language}" 576 "blue"
+	fi
+
+	if "${AIRGEDDON_PRINT_HINTS:-true}"; then
+		language_strings "${language}" 582 "blue"
+	else
+		language_strings "${language}" 583 "blue"
+	fi
+
+	if "${AIRGEDDON_5GHZ_ENABLED:-true}"; then
+		language_strings "${language}" 594 "blue"
+	else
+		language_strings "${language}" 595 "blue"
 	fi
 }
 
@@ -4220,6 +4379,14 @@ function initialize_menu_and_print_selections() {
 	esac
 }
 
+#Clean environment vars
+function clean_env_vars() {
+
+	debug_print
+
+	unset AIRGEDDON_AUTO_UPDATE AIRGEDDON_SKIP_INTRO AIRGEDDON_BASIC_COLORS AIRGEDDON_EXTENDED_COLORS AIRGEDDON_AUTO_CHANGE_LANGUAGE AIRGEDDON_SILENT_CHECKS AIRGEDDON_PRINT_HINTS AIRGEDDON_5GHZ_ENABLED AIRGEDDON_DEVELOPMENT_MODE AIRGEDDON_DEBUG_MODE
+}
+
 #Clean temporary files
 function clean_tmpfiles() {
 
@@ -4456,8 +4623,10 @@ function print_hint() {
 		;;
 	esac
 
-	print_simple_separator
-	language_strings "${language}" "${strtoprint}" "hint"
+	if "${AIRGEDDON_PRINT_HINTS:-true}"; then
+		print_simple_separator
+		language_strings "${language}" "${strtoprint}" "hint"
+	fi
 	print_simple_separator
 }
 
@@ -6133,7 +6302,11 @@ function manage_wps_log() {
 	if [ "${lastcharwps_potpath}" != "/" ]; then
 		wps_potpath="${wps_potpath}/"
 	fi
-	wpspot_filename="wps_captured_key-${wps_essid}.txt"
+	if [ -z "${wps_essid}" ]; then
+		wpspot_filename="wps_captured_key-${wps_bssid}.txt"
+	else
+		wpspot_filename="wps_captured_key-${wps_essid}.txt"
+	fi
 	wps_potpath="${wps_potpath}${wpspot_filename}"
 
 	validpath=1
@@ -7284,7 +7457,7 @@ function set_wps_attack_script() {
 	rm -rf "${tmpdir}${wps_out_file}" > /dev/null 2>&1
 
 	bully_reaver_band_modifier=""
-	if [[ "${wps_channel}" -gt 14 ]] && [[ "${interface_supported_bands}" != "${band_24ghz}" ]]; then
+	if [[ "${wps_channel}" -gt 14 ]] && [[ "${interfaces_band_info['main_wifi_interface','5Ghz_allowed']}" -eq 1 ]]; then
 		bully_reaver_band_modifier="-5"
 	fi
 
@@ -9721,7 +9894,7 @@ function explore_for_targets_option() {
 	rm -rf "${tmpdir}nws"* > /dev/null 2>&1
 	rm -rf "${tmpdir}clts.csv" > /dev/null 2>&1
 
-	if [ "${interface_supported_bands}" = "${band_24ghz}" ]; then
+	if [ "${interfaces_band_info['main_wifi_interface','5Ghz_allowed']}" -eq 0 ]; then
 		airodump_band_modifier="bg"
 	else
 		airodump_band_modifier="abg"
@@ -9815,7 +9988,7 @@ function explore_for_wps_targets_option() {
 	fi
 
 	wash_band_modifier=""
-	if [ "${interface_supported_bands}" != "${band_24ghz}" ]; then
+	if [ "${interfaces_band_info['main_wifi_interface','5Ghz_allowed']}" -eq 1 ]; then
 		if check_dual_scan_on_wash; then
 			wash_band_modifier="-2 -5"
 		else
@@ -10304,7 +10477,7 @@ function et_prerequisites() {
 			fi
 			return
 		else
-			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ "${channel}" -gt 14 ]] && [[ "${secondary_interface_supported_bands}" = "${band_24ghz}" ]]; then
+			if [[ "${dos_pursuit_mode}" -eq 1 ]] && [[ -n "${channel}" ]] && [[ "${channel}" -gt 14 ]] && [[ "${interfaces_band_info['secondary_wifi_interface','5Ghz_allowed']}" -eq 0 ]]; then
 				echo
 				language_strings "${language}" 394 "red"
 				language_strings "${language}" 115 "read"
@@ -10874,6 +11047,8 @@ function exit_script_option() {
 		language_strings "${language}" 160 "yellow"
 	fi
 
+	clean_env_vars
+
 	echo
 	exit ${exit_code}
 }
@@ -10911,6 +11086,8 @@ function hardcore_exit() {
 		time_loop
 		echo -e "${green_color} Ok\r${normal_color}"
 	fi
+
+	clean_env_vars
 
 	exit ${exit_code}
 }
@@ -11536,8 +11713,12 @@ function check_root_permissions() {
 	user=$(whoami)
 
 	if [ "${user}" = "root" ]; then
-		language_strings "${language}" 484 "yellow"
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			echo
+			language_strings "${language}" 484 "yellow"
+		fi
 	else
+		echo
 		language_strings "${language}" 223 "red"
 		exit_code=1
 		exit_script_option
@@ -11565,74 +11746,102 @@ function check_compatibility() {
 
 	debug_print
 
-	echo
-	language_strings "${language}" 108 "blue"
-	language_strings "${language}" 115 "read"
+	if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+		echo
+		language_strings "${language}" 108 "blue"
+		language_strings "${language}" 115 "read"
 
-	echo
-	language_strings "${language}" 109 "blue"
+		echo
+		language_strings "${language}" 109 "blue"
+	fi
 
 	essential_toolsok=1
 	for i in "${essential_tools_names[@]}"; do
-		echo -ne "${i}"
-		time_loop
-		if ! hash "${i}" 2> /dev/null; then
-			echo -ne "${red_color} Error${normal_color}"
-			essential_toolsok=0
-			echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
-			echo -e "\r"
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			echo -ne "${i}"
+			time_loop
+			if ! hash "${i}" 2> /dev/null; then
+				echo -ne "${red_color} Error${normal_color}"
+				essential_toolsok=0
+				echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
+				echo -e "\r"
+			else
+				echo -e "${green_color} Ok\r${normal_color}"
+			fi
 		else
-			echo -e "${green_color} Ok\r${normal_color}"
+			if ! hash "${i}" 2> /dev/null; then
+				essential_toolsok=0
+			fi
 		fi
 	done
 
-	echo
-	language_strings "${language}" 218 "blue"
+	if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+		echo
+		language_strings "${language}" 218 "blue"
+	fi
 
 	optional_toolsok=1
 	for i in "${!optional_tools[@]}"; do
-		echo -ne "${i}"
-		time_loop
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			echo -ne "${i}"
+			time_loop
+		fi
 		if ! hash "${i}" 2> /dev/null; then
-			echo -ne "${red_color} Error${normal_color}"
+			if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+				echo -ne "${red_color} Error${normal_color}"
+				echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
+				echo -e "\r"
+			fi
 			optional_toolsok=0
-			echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
-			echo -e "\r"
 		else
 			if [ "${i}" = "beef" ]; then
 				detect_fake_beef
 				if [ ${fake_beef_found} -eq 1 ]; then
-					echo -ne "${red_color} Error${normal_color}"
+					if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+						echo -ne "${red_color} Error${normal_color}"
+						echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
+						echo -e "\r"
+					fi
 					optional_toolsok=0
-					echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
-					echo -e "\r"
 				else
-					echo -e "${green_color} Ok\r${normal_color}"
+					if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+						echo -e "${green_color} Ok\r${normal_color}"
+					fi
 					optional_tools[${i}]=1
 				fi
 			else
-				echo -e "${green_color} Ok\r${normal_color}"
+				if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+					echo -e "${green_color} Ok\r${normal_color}"
+				fi
 				optional_tools[${i}]=1
 			fi
 		fi
 	done
 
 	update_toolsok=1
-	if [ "${auto_update}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 
-		echo
-		language_strings "${language}" 226 "blue"
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			echo
+			language_strings "${language}" 226 "blue"
+		fi
 
 		for i in "${update_tools[@]}"; do
-			echo -ne "${i}"
-			time_loop
-			if ! hash "${i}" 2> /dev/null; then
-				echo -ne "${red_color} Error${normal_color}"
-				update_toolsok=0
-				echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
-				echo -e "\r"
+			if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+				echo -ne "${i}"
+				time_loop
+				if ! hash "${i}" 2> /dev/null; then
+					echo -ne "${red_color} Error${normal_color}"
+					update_toolsok=0
+					echo -ne " (${possible_package_names_text[${language}]} : ${possible_package_names[${i}]})"
+					echo -e "\r"
+				else
+					echo -e "${green_color} Ok\r${normal_color}"
+				fi
 			else
-				echo -e "${green_color} Ok\r${normal_color}"
+				if ! hash "${i}" 2> /dev/null; then
+					update_toolsok=0
+				fi
 			fi
 		done
 	fi
@@ -11641,24 +11850,30 @@ function check_compatibility() {
 		echo
 		language_strings "${language}" 111 "red"
 		echo
-		return
-	fi
-
-	compatible=1
-
-	if [ ${optional_toolsok} -eq 0 ]; then
-		echo
-		language_strings "${language}" 219 "yellow"
-		echo
-		if [ ${fake_beef_found} -eq 1 ]; then
-			language_strings "${language}" 401 "red"
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			language_strings "${language}" 581 "blue"
 			echo
 		fi
 		return
 	fi
 
-	echo
-	language_strings "${language}" 110 "yellow"
+	compatible=1
+
+	if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+		if [ ${optional_toolsok} -eq 0 ]; then
+			echo
+			language_strings "${language}" 219 "yellow"
+			echo
+			if [ ${fake_beef_found} -eq 1 ]; then
+				language_strings "${language}" 401 "red"
+				echo
+			fi
+			return
+		fi
+
+		echo
+		language_strings "${language}" 110 "yellow"
+	fi
 }
 
 #Check for the minimum bash version requirement
@@ -11666,11 +11881,14 @@ function check_bash_version() {
 
 	debug_print
 
-	echo
 	bashversion="${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}"
 	if compare_floats_greater_or_equal "${bashversion}" ${minimum_bash_version_required}; then
-		language_strings "${language}" 221 "yellow"
+		if ! "${AIRGEDDON_SILENT_CHECKS:-false}"; then
+			echo
+			language_strings "${language}" 221 "yellow"
+		fi
 	else
+		echo
 		language_strings "${language}" 222 "red"
 		exit_code=1
 		exit_script_option
@@ -11682,7 +11900,7 @@ function check_update_tools() {
 
 	debug_print
 
-	if [ "${auto_update}" -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_UPDATE:-true}"; then
 		if [ ${update_toolsok} -eq 1 ]; then
 			autoupdate_check
 		else
@@ -11832,6 +12050,7 @@ function initialize_script_settings() {
 	interface_airmon_compatible=1
 	secondary_interface_airmon_compatible=1
 	declare -gA wps_data_array
+	declare -gA interfaces_band_info
 }
 
 #Detect if there is a working X window system excepting for docker container and wayland
@@ -11974,6 +12193,86 @@ function recalculate_windows_sizes() {
 	set_windows_sizes
 }
 
+#Initialization of env vars. Never change any env var here. It should be done on ".airgeddonrc" file. This is just for initialization
+function env_vars_initialization() {
+
+	debug_print
+
+	if [ -f "${scriptfolder}${rc_file}" ]; then
+		if [ -z "${AIRGEDDON_AUTO_UPDATE}" ]; then
+			eval "export $(grep AIRGEDDON_AUTO_UPDATE "${scriptfolder}${rc_file}")"
+		fi
+		if [ -z "${AIRGEDDON_SKIP_INTRO}" ]; then
+			eval "export $(grep AIRGEDDON_SKIP_INTRO "${scriptfolder}${rc_file}")"
+		fi
+		if [ -z "${AIRGEDDON_BASIC_COLORS}" ]; then
+			eval "export $(grep AIRGEDDON_BASIC_COLORS "${scriptfolder}${rc_file}")"
+		fi
+		if [ -z "${AIRGEDDON_EXTENDED_COLORS}" ]; then
+			eval "export $(grep AIRGEDDON_EXTENDED_COLORS "${scriptfolder}${rc_file}")"
+		fi
+		if [ -z "${AIRGEDDON_AUTO_CHANGE_LANGUAGE}" ]; then
+			eval "export $(grep AIRGEDDON_AUTO_CHANGE_LANGUAGE "${scriptfolder}${rc_file}")"
+		fi
+		if [ -z "${AIRGEDDON_SILENT_CHECKS}" ]; then
+			eval "export $(grep AIRGEDDON_SILENT_CHECKS "${scriptfolder}${rc_file}")"
+		fi
+		if [ -z "${AIRGEDDON_PRINT_HINTS}" ]; then
+			eval "export $(grep AIRGEDDON_PRINT_HINTS "${scriptfolder}${rc_file}")"
+		fi
+		if [ -z "${AIRGEDDON_5GHZ_ENABLED}" ]; then
+			eval "export $(grep AIRGEDDON_5GHZ_ENABLED "${scriptfolder}${rc_file}")"
+		fi
+		if [ -z "${AIRGEDDON_DEVELOPMENT_MODE}" ]; then
+			eval "export $(grep AIRGEDDON_DEVELOPMENT_MODE "${scriptfolder}${rc_file}")"
+		fi
+		if [ -z "${AIRGEDDON_DEBUG_MODE}" ]; then
+			eval "export $(grep AIRGEDDON_DEBUG_MODE "${scriptfolder}${rc_file}")"
+		fi
+	else
+		export AIRGEDDON_AUTO_UPDATE="${AIRGEDDON_AUTO_UPDATE:-true}"
+		export AIRGEDDON_SKIP_INTRO="${AIRGEDDON_SKIP_INTRO:-false}"
+		export AIRGEDDON_BASIC_COLORS="${AIRGEDDON_BASIC_COLORS:-true}"
+		export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
+		export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
+		export AIRGEDDON_SILENT_CHECKS="${AIRGEDDON_SILENT_CHECKS:-false}"
+		export AIRGEDDON_PRINT_HINTS="${AIRGEDDON_PRINT_HINTS:-true}"
+		export AIRGEDDON_5GHZ_ENABLED="${AIRGEDDON_5GHZ_ENABLED:-true}"
+		export AIRGEDDON_DEVELOPMENT_MODE="${AIRGEDDON_DEVELOPMENT_MODE:-false}"
+		export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
+		create_rcfile
+	fi
+}
+
+#Create env vars file and fill it with current values
+function create_rcfile() {
+
+	debug_print
+
+	{
+	echo -e "#Enabled true / Disabled false - Auto update feature (it has no effect on development mode) - Default value true"
+	echo -e "AIRGEDDON_AUTO_UPDATE=${AIRGEDDON_AUTO_UPDATE}\n"
+	echo -e "##Enabled true / Disabled false - Skip intro (it has no effect on development mode) - Default value false"
+	echo -e "AIRGEDDON_SKIP_INTRO=${AIRGEDDON_SKIP_INTRO}\n"
+	echo -e "#Enabled true / Disabled false - Allow colorized output - Default value true"
+	echo -e "AIRGEDDON_BASIC_COLORS=${AIRGEDDON_BASIC_COLORS}\n"
+	echo -e "#Enabled true / Disabled false - Allow extended colorized output (ccze needed, it has no effect on disabled colors) - Default value true"
+	echo -e "AIRGEDDON_EXTENDED_COLORS=${AIRGEDDON_EXTENDED_COLORS}\n"
+	echo -e "#Enabled true / Disabled false - Auto change language feature - Default value true"
+	echo -e "AIRGEDDON_AUTO_CHANGE_LANGUAGE=${AIRGEDDON_AUTO_CHANGE_LANGUAGE}\n"
+	echo -e "#Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on development mode) - Default value false"
+	echo -e "AIRGEDDON_SILENT_CHECKS=${AIRGEDDON_SILENT_CHECKS}\n"
+	echo -e "#Enabled true / Disabled false - Print help hints on menus - Default value true"
+	echo -e "AIRGEDDON_PRINT_HINTS=${AIRGEDDON_PRINT_HINTS}\n"
+	echo -e "#Enabled true / Disabled false - Enable 5Ghz support (it has no effect if your cards are not 5Ghz compatible cards) - Default value true"
+	echo -e "AIRGEDDON_5GHZ_ENABLED=${AIRGEDDON_5GHZ_ENABLED}\n"
+	echo -e "#Enabled true / Disabled false - Development mode for faster development skipping intro and all initial checks - Default value false"
+	echo -e "AIRGEDDON_DEVELOPMENT_MODE=${AIRGEDDON_DEVELOPMENT_MODE}\n"
+	echo -e "#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false"
+	echo -e "AIRGEDDON_DEBUG_MODE=${AIRGEDDON_DEBUG_MODE}\n"
+	} > "${scriptfolder}${rc_file}" 2> /dev/null
+}
+
 #Detect if airgeddon is working inside a docker container
 function docker_detection() {
 
@@ -11985,30 +12284,64 @@ function docker_detection() {
 }
 
 #Set colorization output if set
-function initialize_colorized_output() {
+function initialize_extended_colorized_output() {
 
 	debug_print
 
 	colorize=""
-	if [ "${allow_colorization}" -eq 1 ]; then
+	if "${AIRGEDDON_BASIC_COLORS:-true}" && "${AIRGEDDON_EXTENDED_COLORS:-true}"; then
 		if hash ccze 2> /dev/null; then
 			colorize="| ccze -A"
 		fi
 	fi
 }
 
+#Initialize colors vars
+function initialize_colors() {
+
+	normal_color="\e[1;0m"
+
+	if "${AIRGEDDON_BASIC_COLORS:-true}"; then
+		green_color="\033[1;32m"
+		green_color_title="\033[0;32m"
+		red_color="\033[1;31m"
+		red_color_slim="\033[0;031m"
+		blue_color="\033[1;34m"
+		cyan_color="\033[1;36m"
+		brown_color="\033[0;33m"
+		yellow_color="\033[1;33m"
+		pink_color="\033[1;35m"
+		white_color="\e[1;97m"
+	else
+		green_color="${normal_color}"
+		green_color_title="${normal_color}"
+		red_color="${normal_color}"
+		red_color_slim="${normal_color}"
+		blue_color="${normal_color}"
+		cyan_color="${normal_color}"
+		brown_color="${normal_color}"
+		yellow_color="${normal_color}"
+		pink_color="${normal_color}"
+		white_color="${normal_color}"
+	fi
+}
+
 #Script starting point
-function welcome() {
+function main() {
+
+	initialize_script_settings
+	env_vars_initialization
 
 	debug_print
 
+	initialize_colors
+
 	clear
 	current_menu="pre_main_menu"
-	initialize_script_settings
 	docker_detection
 	set_default_save_path
 
-	if [ ${auto_change_language} -eq 1 ]; then
+	if "${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"; then
 		autodetect_language
 	fi
 
@@ -12019,17 +12352,19 @@ function welcome() {
 	set_possible_aliases
 	initialize_optional_tools_values
 
-	if [ ${debug_mode} -eq 0 ]; then
-		language_strings "${language}" 86 "title"
-		language_strings "${language}" 6 "blue"
-		echo
-		if check_window_size_for_intro; then
-			print_intro
-		else
-			language_strings "${language}" 228 "green"
+	if ! "${AIRGEDDON_DEVELOPMENT_MODE:-false}"; then
+		if ! "${AIRGEDDON_SKIP_INTRO:-false}"; then
+			language_strings "${language}" 86 "title"
+			language_strings "${language}" 6 "blue"
 			echo
-			language_strings "${language}" 395 "yellow"
-		sleep 3
+			if check_window_size_for_intro; then
+				print_intro
+			else
+				language_strings "${language}" 228 "green"
+				echo
+				language_strings "${language}" 395 "yellow"
+			sleep 3
+			fi
 		fi
 
 		clear
@@ -12043,7 +12378,6 @@ function welcome() {
 		fi
 
 		check_bash_version
-		echo
 		check_root_permissions
 
 		echo
@@ -12073,7 +12407,7 @@ function welcome() {
 		check_update_tools
 	fi
 
-	initialize_colorized_output
+	initialize_extended_colorized_output
 	set_windows_sizes
 	select_interface
 	initialize_menu_options_dependencies
@@ -12156,14 +12490,6 @@ function download_last_version() {
 
 		if [ -n "${beef_custom_path}" ]; then
 			rewrite_script_with_custom_beef "set" "${beef_custom_path}"
-		fi
-
-		if [ "${allow_colorization}" -ne 1 ]; then
-			sed -ri 's:(allow_colorization)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
-		fi
-
-		if [ "${auto_change_language}" -ne 1 ]; then
-			sed -ri 's:(auto_change_language)=(1):\1=0:' "${scriptfolder}${scriptname}" 2> /dev/null
 		fi
 
 		sed -ri "s:^([l]anguage)=\"[a-zA-Z]+\":\1=\"${current_permanent_language}\":" "${scriptfolder}${scriptname}" 2> /dev/null
@@ -12542,8 +12868,10 @@ function echo_white() {
 	last_echo "${1}" "${white_color}"
 }
 
+#Script starts to executing stuff from this point, traps and then main function
 for f in SIGINT SIGHUP INT SIGTSTP; do
 	trap_cmd="trap \"capture_traps ${f}\" \"${f}\""
 	eval "${trap_cmd}"
 done
-welcome
+
+main
