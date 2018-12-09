@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181208
+#Date.........: 20181209
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -7461,8 +7461,8 @@ function language_strings() {
 	arr["GERMAN",555]="Schreiben Sie den Pfad, unter dem die Datei gespeichert werden soll, oder drücken Sie die [Enter]-Taste, um den Standardvorschlag zu akzeptieren ${normal_color}[${asleap_potpath}]"
 	arr["TURKISH",555]="Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın ${normal_color}[${asleap_potpath}]"
 
-	arr["ENGLISH",556]="3.  Enable basic colorization permanently"
-	arr["SPANISH",556]="3.  Habilitar permanentemente la colorización básica"
+	arr["ENGLISH",556]="4.  Enable basic colorization permanently"
+	arr["SPANISH",556]="4.  Habilitar permanentemente la colorización básica"
 	arr["FRENCH",556]="${pending_of_translation} 4.  Activer dé façon permanante la colorisation de base"
 	arr["CATALAN",556]="${pending_of_translation} 4.  Habilita permanentment la coloració bàsica"
 	arr["PORTUGUESE",556]="${pending_of_translation} 4.  Ativar permanentemente a colorização básica"
