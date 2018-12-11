@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181208
+#Date.........: 20181211
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -514,6 +514,23 @@ function language_strings_handling_messages() {
 	language_strings_key_to_continue["TURKISH"]="Devam etmek için [Enter] tuşuna basın..."
 }
 
+#Set messages for configuration variables handling
+function configuration_variables_handling_messages() {
+
+	declare -gA error_on_configuration_variable
+	error_on_configuration_variable["ENGLISH"]="An error occurred with configuration options variables. Please check ${rc_file} file or command line flags. Invalid value on ${normal_color}${option_var_with_error}${red_color} variable"
+	error_on_configuration_variable["SPANISH"]="Ha habido un error con las variables de configuración de las opciones. Por favor revisa el fichero ${rc_file} o los flags de la línea de comandos. Valor no válido en la variable ${normal_color}${option_var_with_error}"
+	error_on_configuration_variable["FRENCH"]="${pending_of_translation} Une erreur s'est produite avec les variables de configuration des options. Veuillez vérifier le fichier ${rc_file} ou les drapeaux de la ligne de commande. Valeur invalide dans la variable ${normal_color}${option_var_with_error}"
+	error_on_configuration_variable["CATALAN"]="${pending_of_translation} Hi ha hagut un error amb les variables de configuració de les opcions. Si us plau revisa el fitxer ${rc_file} o els flags de la línia d'ordres. Valor no vàlid en la variable ${normal_color}${option_var_with_error}"
+	error_on_configuration_variable["PORTUGUESE"]="${pending_of_translation} Houve um erro com as variáveis de configuração das opções. Por favor, verifique o arquivo ${rc_file} ou os sinalizadores de linha de comando. Valor inválido na variável ${normal_color}${option_var_with_error}"
+	error_on_configuration_variable["RUSSIAN"]="${pending_of_translation} Произошла ошибка с переменными конфигурации параметров. Пожалуйста, проверьте файл ${rc_file} или флаги командной строки. Неверное значение в переменной ${normal_color}${option_var_with_error}"
+	error_on_configuration_variable["GREEK"]="${pending_of_translation} Παρουσιάστηκε σφάλμα στις μεταβλητές διαμόρφωσης των επιλογών. Ελέγξτε το αρχείο ${rc_file} ή τις σημαίες γραμμής εντολών. Μη έγκυρη τιμή στη μεταβλητή ${normal_color}${option_var_with_error}"
+	error_on_configuration_variable["ITALIAN"]="${pending_of_translation} Si è verificato un errore con le variabili di configurazione delle opzioni. Controlla il file ${rc_file} o i flag della riga di comando. Valore non valido nella variabile ${normal_color}${option_var_with_error}"
+	error_on_configuration_variable["POLISH"]="${pending_of_translation} Wystąpił błąd związany ze zmiennymi konfiguracyjnymi opcji. Nieprawidłowa wartość Sprawdź plik ${rc_file} lub flagi linii poleceń. Nieprawidłowa wartość na zmiennej ${normal_color}${option_var_with_error}"
+	error_on_configuration_variable["GERMAN"]="${pending_of_translation} Bei den Konfigurationsvariablen der Optionen ist ein Fehler aufgetreten. Bitte überprüfen Sie die Datei ${rc_file} oder die Befehlszeilenflaggen. Ungültiger Wert in Variable ${normal_color}${option_var_with_error}"
+	error_on_configuration_variable["TURKISH"]="${pending_of_translation} Seçeneklerin yapılandırma değişkenlerinde bir hata oluştu. Lütfen ${rc_file} dosyasını veya komut satırı bayraklarını kontrol edin. ${normal_color}${option_var_with_error}${red_color} değişkeninde geçersiz değer"
+}
+
 #Generic toggle option function
 function option_toggle() {
 
@@ -538,7 +555,7 @@ function option_toggle() {
 
 	case "${option_var_name}" in
 		"AIRGEDDON_BASIC_COLORS")
-			initialize_colors
+			remap_colors
 		;;
 		"AIRGEDDON_EXTENDED_COLORS")
 			initialize_extended_colorized_output
@@ -597,6 +614,7 @@ function debug_print() {
 								"echo_white"
 								"echo_yellow"
 								"env_vars_initialization"
+								"env_vars_validation"
 								"generate_dynamic_line"
 								"initialize_colors"
 								"initialize_script_settings"
@@ -12198,6 +12216,8 @@ function env_vars_initialization() {
 
 	debug_print
 
+	option_var_with_error=""
+
 	if [ -f "${scriptfolder}${rc_file}" ]; then
 		if [ -z "${AIRGEDDON_AUTO_UPDATE}" ]; then
 			eval "export $(grep AIRGEDDON_AUTO_UPDATE "${scriptfolder}${rc_file}")"
@@ -12242,6 +12262,42 @@ function env_vars_initialization() {
 		export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
 		create_rcfile
 	fi
+
+	if ! env_vars_validation; then
+		configuration_variables_handling_messages
+		echo
+		echo_red "${error_on_configuration_variable[${language}]}"
+		echo
+		hardcore_exit
+	fi
+}
+
+#Validation of env vars. They must contain only right values
+function env_vars_validation() {
+
+	debug_print
+
+	boolean_options_env_vars=(
+							"AIRGEDDON_AUTO_UPDATE"
+							"AIRGEDDON_SKIP_INTRO"
+							"AIRGEDDON_BASIC_COLORS"
+							"AIRGEDDON_EXTENDED_COLORS"
+							"AIRGEDDON_AUTO_CHANGE_LANGUAGE"
+							"AIRGEDDON_SILENT_CHECKS"
+							"AIRGEDDON_PRINT_HINTS"
+							"AIRGEDDON_5GHZ_ENABLED"
+							"AIRGEDDON_DEVELOPMENT_MODE"
+							"AIRGEDDON_DEBUG_MODE"
+							)
+
+	for item in "${boolean_options_env_vars[@]}"; do
+		if ! [[ "${!item,,}" =~ ^(true|false)$ ]]; then
+			option_var_with_error="${item}"
+			return 1
+		fi
+	done
+
+	return 0
 }
 
 #Create env vars file and fill it with current values
@@ -12296,23 +12352,12 @@ function initialize_extended_colorized_output() {
 	fi
 }
 
-#Initialize colors vars
-function initialize_colors() {
+#Remap colors vars
+function remap_colors() {
 
-	normal_color="\e[1;0m"
+	debug_print
 
-	if "${AIRGEDDON_BASIC_COLORS:-true}"; then
-		green_color="\033[1;32m"
-		green_color_title="\033[0;32m"
-		red_color="\033[1;31m"
-		red_color_slim="\033[0;031m"
-		blue_color="\033[1;34m"
-		cyan_color="\033[1;36m"
-		brown_color="\033[0;33m"
-		yellow_color="\033[1;33m"
-		pink_color="\033[1;35m"
-		white_color="\e[1;97m"
-	else
+	if ! "${AIRGEDDON_BASIC_COLORS:-true}"; then
 		green_color="${normal_color}"
 		green_color_title="${normal_color}"
 		red_color="${normal_color}"
@@ -12323,18 +12368,39 @@ function initialize_colors() {
 		yellow_color="${normal_color}"
 		pink_color="${normal_color}"
 		white_color="${normal_color}"
+	else
+		initialize_colors
 	fi
+}
+
+#Initialize colors vars
+function initialize_colors() {
+
+	debug_print
+
+	normal_color="\e[1;0m"
+	green_color="\033[1;32m"
+	green_color_title="\033[0;32m"
+	red_color="\033[1;31m"
+	red_color_slim="\033[0;031m"
+	blue_color="\033[1;34m"
+	cyan_color="\033[1;36m"
+	brown_color="\033[0;33m"
+	yellow_color="\033[1;33m"
+	pink_color="\033[1;35m"
+	white_color="\e[1;97m"
 }
 
 #Script starting point
 function main() {
 
 	initialize_script_settings
+	initialize_colors
 	env_vars_initialization
 
 	debug_print
 
-	initialize_colors
+	remap_colors
 
 	clear
 	current_menu="pre_main_menu"
