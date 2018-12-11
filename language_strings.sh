@@ -3918,7 +3918,7 @@ function language_strings() {
 	arr["GREEK",260]="${pending_of_translation} 5.  Smooth λειτουργία Enterprise Evil Twin"
 	arr["ITALIAN",260]="${pending_of_translation} 5.  Modalità smooth Evil Twin Enterprise"
 	arr["POLISH",260]="${pending_of_translation} 5.  Tryb smooth Enterprise Evil Twin"
-	arr["GERMAN",260]="${pending_of_translation} 5.  Smooth-Modus Enterprise Evil Twin"
+	arr["GERMAN",260]="5.  Smooth-Modus Enterprise Evil Twin"
 	arr["TURKISH",260]="${pending_of_translation} 5.  Smooth mod Enterprise Evil Twin"
 
 	arr["ENGLISH",261]="7.  Evil Twin AP attack with sniffing and sslstrip"
@@ -4482,7 +4482,7 @@ function language_strings() {
 	arr["GREEK",307]="${pending_of_translation} 6.  Noisy λειτουργία Enterprise Evil Twin"
 	arr["ITALIAN",307]="${pending_of_translation} 6.  Modalità noisy Evil Twin Enterprise"
 	arr["POLISH",307]="${pending_of_translation} 6.  Tryb noisy Enterprise Evil Twin"
-	arr["GERMAN",307]="${pending_of_translation} 6.  Noisy-Modus Enterprise Evil Twin"
+	arr["GERMAN",307]="6.  Noisy-Modus Enterprise Evil Twin"
 	arr["TURKISH",307]="${pending_of_translation} 6.  Noisy mod Enterprise Evil Twin"
 
 	arr["ENGLISH",308]="6.  Russian"
@@ -6198,7 +6198,7 @@ function language_strings() {
 	arr["GREEK",450]="${pending_of_translation} 5.  Ενεργοποιήστε τον εκτεταμένο χρωματισμό μόνιμα"
 	arr["ITALIAN",450]="${pending_of_translation} 5.  Abilitare permanentemente la colorazione estesa"
 	arr["POLISH",450]="${pending_of_translation} 5.  Trwale włącz przedłużona kolorowanie"
-	arr["GERMAN",450]="${pending_of_translation} 5.  Die erweiterte Einfärbung dauerhaft aktivieren"
+	arr["GERMAN",450]="5.  Die erweiterte Einfärbung dauerhaft aktivieren"
 	arr["TURKISH",450]="${pending_of_translation} 5.  Genişletilmiş renklendirmeyi kalıcı olarak etkinleştir"
 
 	arr["ENGLISH",451]="Automatic updates: ${pink_color}Enabled${normal_color}"
