@@ -104,7 +104,7 @@ function language_strings() {
 	disabled_text["GREEK"]="${pending_of_translation} Απενεργοποιημένο"
 	disabled_text["ITALIAN"]="${pending_of_translation} Disabilitato"
 	disabled_text["POLISH"]="${pending_of_translation} Dezaktywowane"
-	disabled_text["GERMAN"]="${pending_of_translation} Deaktiviert"
+	disabled_text["GERMAN"]="Deaktiviert"
 	disabled_text["TURKISH"]="${pending_of_translation} Devreden"
 
 	declare -gA et_misc_texts
