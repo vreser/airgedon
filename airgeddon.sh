@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181211
+#Date.........: 20181213
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -603,6 +603,7 @@ function debug_print() {
 								"check_pending_of_translation"
 								"clean_env_vars"
 								"contains_element"
+								"create_rcfile"
 								"echo_blue"
 								"echo_brown"
 								"echo_cyan"
@@ -12218,50 +12219,56 @@ function env_vars_initialization() {
 
 	option_var_with_error=""
 
-	if [ -f "${scriptfolder}${rc_file}" ]; then
-		if [ -z "${AIRGEDDON_AUTO_UPDATE}" ]; then
-			eval "export $(grep AIRGEDDON_AUTO_UPDATE "${scriptfolder}${rc_file}")"
-		fi
-		if [ -z "${AIRGEDDON_SKIP_INTRO}" ]; then
-			eval "export $(grep AIRGEDDON_SKIP_INTRO "${scriptfolder}${rc_file}")"
-		fi
-		if [ -z "${AIRGEDDON_BASIC_COLORS}" ]; then
-			eval "export $(grep AIRGEDDON_BASIC_COLORS "${scriptfolder}${rc_file}")"
-		fi
-		if [ -z "${AIRGEDDON_EXTENDED_COLORS}" ]; then
-			eval "export $(grep AIRGEDDON_EXTENDED_COLORS "${scriptfolder}${rc_file}")"
-		fi
-		if [ -z "${AIRGEDDON_AUTO_CHANGE_LANGUAGE}" ]; then
-			eval "export $(grep AIRGEDDON_AUTO_CHANGE_LANGUAGE "${scriptfolder}${rc_file}")"
-		fi
-		if [ -z "${AIRGEDDON_SILENT_CHECKS}" ]; then
-			eval "export $(grep AIRGEDDON_SILENT_CHECKS "${scriptfolder}${rc_file}")"
-		fi
-		if [ -z "${AIRGEDDON_PRINT_HINTS}" ]; then
-			eval "export $(grep AIRGEDDON_PRINT_HINTS "${scriptfolder}${rc_file}")"
-		fi
-		if [ -z "${AIRGEDDON_5GHZ_ENABLED}" ]; then
-			eval "export $(grep AIRGEDDON_5GHZ_ENABLED "${scriptfolder}${rc_file}")"
-		fi
-		if [ -z "${AIRGEDDON_DEVELOPMENT_MODE}" ]; then
-			eval "export $(grep AIRGEDDON_DEVELOPMENT_MODE "${scriptfolder}${rc_file}")"
-		fi
-		if [ -z "${AIRGEDDON_DEBUG_MODE}" ]; then
-			eval "export $(grep AIRGEDDON_DEBUG_MODE "${scriptfolder}${rc_file}")"
-		fi
-	else
-		export AIRGEDDON_AUTO_UPDATE="${AIRGEDDON_AUTO_UPDATE:-true}"
-		export AIRGEDDON_SKIP_INTRO="${AIRGEDDON_SKIP_INTRO:-false}"
-		export AIRGEDDON_BASIC_COLORS="${AIRGEDDON_BASIC_COLORS:-true}"
-		export AIRGEDDON_EXTENDED_COLORS="${AIRGEDDON_EXTENDED_COLORS:-true}"
-		export AIRGEDDON_AUTO_CHANGE_LANGUAGE="${AIRGEDDON_AUTO_CHANGE_LANGUAGE:-true}"
-		export AIRGEDDON_SILENT_CHECKS="${AIRGEDDON_SILENT_CHECKS:-false}"
-		export AIRGEDDON_PRINT_HINTS="${AIRGEDDON_PRINT_HINTS:-true}"
-		export AIRGEDDON_5GHZ_ENABLED="${AIRGEDDON_5GHZ_ENABLED:-true}"
-		export AIRGEDDON_DEVELOPMENT_MODE="${AIRGEDDON_DEVELOPMENT_MODE:-false}"
-		export AIRGEDDON_DEBUG_MODE="${AIRGEDDON_DEBUG_MODE:-false}"
+	ordered_boolean_options_env_vars=(
+									"AIRGEDDON_AUTO_UPDATE"
+									"AIRGEDDON_SKIP_INTRO"
+									"AIRGEDDON_BASIC_COLORS"
+									"AIRGEDDON_EXTENDED_COLORS"
+									"AIRGEDDON_AUTO_CHANGE_LANGUAGE"
+									"AIRGEDDON_SILENT_CHECKS"
+									"AIRGEDDON_PRINT_HINTS"
+									"AIRGEDDON_5GHZ_ENABLED"
+									"AIRGEDDON_DEVELOPMENT_MODE"
+									"AIRGEDDON_DEBUG_MODE"
+									)
+
+	declare -gA boolean_options_env_vars
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[0]},default_value"]="true"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[1]},default_value"]="false"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[2]},default_value"]="true"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[3]},default_value"]="true"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[4]},default_value"]="true"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[5]},default_value"]="false"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[6]},default_value"]="true"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[7]},default_value"]="true"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[8]},default_value"]="false"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[9]},default_value"]="false"
+
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[0]},rcfile_text"]="#Enabled true / Disabled false - Auto update feature (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[0]},'default_value']}"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[1]},rcfile_text"]="#Enabled true / Disabled false - Skip intro (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[1]},'default_value']}"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[2]},rcfile_text"]="#Enabled true / Disabled false - Allow colorized output - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[2]},'default_value']}"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[3]},rcfile_text"]="#Enabled true / Disabled false - Allow extended colorized output (ccze needed, it has no effect on disabled colors) - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[3]},'default_value']}"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[4]},rcfile_text"]="#Enabled true / Disabled false - Auto change language feature - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[4]},'default_value']}"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[5]},rcfile_text"]="#Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[5]},'default_value']}"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[6]},rcfile_text"]="#Enabled true / Disabled false - Print help hints on menus - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[6]},'default_value']}"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[7]},rcfile_text"]="#Enabled true / Disabled false - Enable 5Ghz support (it has no effect if your cards are not 5Ghz compatible cards) - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[7]},'default_value']}"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[8]},rcfile_text"]="#Enabled true / Disabled false - Development mode for faster development skipping intro and all initial checks - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[8]},'default_value']}"
+	boolean_options_env_vars["${ordered_boolean_options_env_vars[9]},rcfile_text"]="#Enabled true / Disabled false - Debug mode for development printing debug information - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[9]},'default_value']}"
+
+	readarray -t ENV_VARS_ELEMENTS < <(printf %s\\n "${!boolean_options_env_vars[@]}" | cut -d, -f1 | sort -u)
+	if [ ! -f "${scriptfolder}${rc_file}" ]; then
 		create_rcfile
 	fi
+
+	for item in "${ENV_VARS_ELEMENTS[@]}"; do
+		if [ -z "${!item}" ]; then
+			if grep "${item}" "${scriptfolder}${rc_file}" > /dev/null; then
+				eval "export $(grep "${item}" "${scriptfolder}${rc_file}")"
+			else
+				export ${item}=${boolean_options_env_vars[${item},'default_value']}
+			fi
+		fi
+	done
 
 	if ! env_vars_validation; then
 		configuration_variables_handling_messages
@@ -12277,20 +12284,7 @@ function env_vars_validation() {
 
 	debug_print
 
-	boolean_options_env_vars=(
-							"AIRGEDDON_AUTO_UPDATE"
-							"AIRGEDDON_SKIP_INTRO"
-							"AIRGEDDON_BASIC_COLORS"
-							"AIRGEDDON_EXTENDED_COLORS"
-							"AIRGEDDON_AUTO_CHANGE_LANGUAGE"
-							"AIRGEDDON_SILENT_CHECKS"
-							"AIRGEDDON_PRINT_HINTS"
-							"AIRGEDDON_5GHZ_ENABLED"
-							"AIRGEDDON_DEVELOPMENT_MODE"
-							"AIRGEDDON_DEBUG_MODE"
-							)
-
-	for item in "${boolean_options_env_vars[@]}"; do
+	for item in "${ENV_VARS_ELEMENTS[@]}"; do
 		if ! [[ "${!item,,}" =~ ^(true|false)$ ]]; then
 			option_var_with_error="${item}"
 			return 1
@@ -12300,33 +12294,22 @@ function env_vars_validation() {
 	return 0
 }
 
-#Create env vars file and fill it with current values
+#Create env vars file and fill it with default values
 function create_rcfile() {
 
 	debug_print
 
-	{
-	echo -e "#Enabled true / Disabled false - Auto update feature (it has no effect on development mode) - Default value true"
-	echo -e "AIRGEDDON_AUTO_UPDATE=${AIRGEDDON_AUTO_UPDATE}\n"
-	echo -e "##Enabled true / Disabled false - Skip intro (it has no effect on development mode) - Default value false"
-	echo -e "AIRGEDDON_SKIP_INTRO=${AIRGEDDON_SKIP_INTRO}\n"
-	echo -e "#Enabled true / Disabled false - Allow colorized output - Default value true"
-	echo -e "AIRGEDDON_BASIC_COLORS=${AIRGEDDON_BASIC_COLORS}\n"
-	echo -e "#Enabled true / Disabled false - Allow extended colorized output (ccze needed, it has no effect on disabled colors) - Default value true"
-	echo -e "AIRGEDDON_EXTENDED_COLORS=${AIRGEDDON_EXTENDED_COLORS}\n"
-	echo -e "#Enabled true / Disabled false - Auto change language feature - Default value true"
-	echo -e "AIRGEDDON_AUTO_CHANGE_LANGUAGE=${AIRGEDDON_AUTO_CHANGE_LANGUAGE}\n"
-	echo -e "#Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on development mode) - Default value false"
-	echo -e "AIRGEDDON_SILENT_CHECKS=${AIRGEDDON_SILENT_CHECKS}\n"
-	echo -e "#Enabled true / Disabled false - Print help hints on menus - Default value true"
-	echo -e "AIRGEDDON_PRINT_HINTS=${AIRGEDDON_PRINT_HINTS}\n"
-	echo -e "#Enabled true / Disabled false - Enable 5Ghz support (it has no effect if your cards are not 5Ghz compatible cards) - Default value true"
-	echo -e "AIRGEDDON_5GHZ_ENABLED=${AIRGEDDON_5GHZ_ENABLED}\n"
-	echo -e "#Enabled true / Disabled false - Development mode for faster development skipping intro and all initial checks - Default value false"
-	echo -e "AIRGEDDON_DEVELOPMENT_MODE=${AIRGEDDON_DEVELOPMENT_MODE}\n"
-	echo -e "#Enabled true / Disabled false - Debug mode for development printing debug information - Default value false"
-	echo -e "AIRGEDDON_DEBUG_MODE=${AIRGEDDON_DEBUG_MODE}\n"
-	} > "${scriptfolder}${rc_file}" 2> /dev/null
+	local counter=0
+	for item in "${ordered_boolean_options_env_vars[@]}"; do
+		counter=$((counter + 1))
+		{
+		echo -e "${boolean_options_env_vars[${item},"rcfile_text"]}"
+		echo -e "${item}=${boolean_options_env_vars[${item},"default_value"]}"
+		if [ ${counter} -ne ${#ordered_boolean_options_env_vars[@]} ]; then
+			echo -ne "\n"
+		fi
+		} >> "${scriptfolder}${rc_file}" 2> /dev/null
+	done
 }
 
 #Detect if airgeddon is working inside a docker container
