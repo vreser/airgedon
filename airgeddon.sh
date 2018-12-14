@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181213
+#Date.........: 20181214
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -12212,14 +12212,14 @@ function recalculate_windows_sizes() {
 	set_windows_sizes
 }
 
-#Initialization of env vars. Never change any env var here. It should be done on ".airgeddonrc" file. This is just for initialization
+#Initialization of env vars
 function env_vars_initialization() {
 
 	debug_print
 
 	option_var_with_error=""
 
-	ordered_boolean_options_env_vars=(
+	ordered_options_env_vars=(
 									"AIRGEDDON_AUTO_UPDATE"
 									"AIRGEDDON_SKIP_INTRO"
 									"AIRGEDDON_BASIC_COLORS"
@@ -12233,29 +12233,31 @@ function env_vars_initialization() {
 									)
 
 	declare -gA boolean_options_env_vars
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[0]},default_value"]="true"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[1]},default_value"]="false"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[2]},default_value"]="true"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[3]},default_value"]="true"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[4]},default_value"]="true"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[5]},default_value"]="false"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[6]},default_value"]="true"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[7]},default_value"]="true"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[8]},default_value"]="false"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[9]},default_value"]="false"
+	boolean_options_env_vars["${ordered_options_env_vars[0]},default_value"]="true"
+	boolean_options_env_vars["${ordered_options_env_vars[1]},default_value"]="false"
+	boolean_options_env_vars["${ordered_options_env_vars[2]},default_value"]="true"
+	boolean_options_env_vars["${ordered_options_env_vars[3]},default_value"]="true"
+	boolean_options_env_vars["${ordered_options_env_vars[4]},default_value"]="true"
+	boolean_options_env_vars["${ordered_options_env_vars[5]},default_value"]="false"
+	boolean_options_env_vars["${ordered_options_env_vars[6]},default_value"]="true"
+	boolean_options_env_vars["${ordered_options_env_vars[7]},default_value"]="true"
+	boolean_options_env_vars["${ordered_options_env_vars[8]},default_value"]="false"
+	boolean_options_env_vars["${ordered_options_env_vars[9]},default_value"]="false"
 
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[0]},rcfile_text"]="#Enabled true / Disabled false - Auto update feature (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[0]},'default_value']}"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[1]},rcfile_text"]="#Enabled true / Disabled false - Skip intro (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[1]},'default_value']}"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[2]},rcfile_text"]="#Enabled true / Disabled false - Allow colorized output - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[2]},'default_value']}"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[3]},rcfile_text"]="#Enabled true / Disabled false - Allow extended colorized output (ccze needed, it has no effect on disabled colors) - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[3]},'default_value']}"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[4]},rcfile_text"]="#Enabled true / Disabled false - Auto change language feature - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[4]},'default_value']}"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[5]},rcfile_text"]="#Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[5]},'default_value']}"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[6]},rcfile_text"]="#Enabled true / Disabled false - Print help hints on menus - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[6]},'default_value']}"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[7]},rcfile_text"]="#Enabled true / Disabled false - Enable 5Ghz support (it has no effect if your cards are not 5Ghz compatible cards) - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[7]},'default_value']}"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[8]},rcfile_text"]="#Enabled true / Disabled false - Development mode for faster development skipping intro and all initial checks - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[8]},'default_value']}"
-	boolean_options_env_vars["${ordered_boolean_options_env_vars[9]},rcfile_text"]="#Enabled true / Disabled false - Debug mode for development printing debug information - Default value ${boolean_options_env_vars[${ordered_boolean_options_env_vars[9]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[0]},rcfile_text"]="#Enabled true / Disabled false - Auto update feature (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_options_env_vars[0]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[1]},rcfile_text"]="#Enabled true / Disabled false - Skip intro (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_options_env_vars[1]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[2]},rcfile_text"]="#Enabled true / Disabled false - Allow colorized output - Default value ${boolean_options_env_vars[${ordered_options_env_vars[2]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[3]},rcfile_text"]="#Enabled true / Disabled false - Allow extended colorized output (ccze needed, it has no effect on disabled colors) - Default value ${boolean_options_env_vars[${ordered_options_env_vars[3]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[4]},rcfile_text"]="#Enabled true / Disabled false - Auto change language feature - Default value ${boolean_options_env_vars[${ordered_options_env_vars[4]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[5]},rcfile_text"]="#Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_options_env_vars[5]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[6]},rcfile_text"]="#Enabled true / Disabled false - Print help hints on menus - Default value ${boolean_options_env_vars[${ordered_options_env_vars[6]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[7]},rcfile_text"]="#Enabled true / Disabled false - Enable 5Ghz support (it has no effect if your cards are not 5Ghz compatible cards) - Default value ${boolean_options_env_vars[${ordered_options_env_vars[7]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[8]},rcfile_text"]="#Enabled true / Disabled false - Development mode for faster development skipping intro and all initial checks - Default value ${boolean_options_env_vars[${ordered_options_env_vars[8]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[9]},rcfile_text"]="#Enabled true / Disabled false - Debug mode for development printing debug information - Default value ${boolean_options_env_vars[${ordered_options_env_vars[9]},'default_value']}"
 
 	readarray -t ENV_VARS_ELEMENTS < <(printf %s\\n "${!boolean_options_env_vars[@]}" | cut -d, -f1 | sort -u)
+	ENV_BOOLEAN_VARS_ELEMENTS=("${ENV_VARS_ELEMENTS[@]}")
+
 	if [ ! -f "${scriptfolder}${rc_file}" ]; then
 		create_rcfile
 	fi
@@ -12284,7 +12286,7 @@ function env_vars_validation() {
 
 	debug_print
 
-	for item in "${ENV_VARS_ELEMENTS[@]}"; do
+	for item in "${ENV_BOOLEAN_VARS_ELEMENTS[@]}"; do
 		if ! [[ "${!item,,}" =~ ^(true|false)$ ]]; then
 			option_var_with_error="${item}"
 			return 1
@@ -12300,15 +12302,17 @@ function create_rcfile() {
 	debug_print
 
 	local counter=0
-	for item in "${ordered_boolean_options_env_vars[@]}"; do
+	for item in "${ordered_options_env_vars[@]}"; do
 		counter=$((counter + 1))
-		{
-		echo -e "${boolean_options_env_vars[${item},"rcfile_text"]}"
-		echo -e "${item}=${boolean_options_env_vars[${item},"default_value"]}"
-		if [ ${counter} -ne ${#ordered_boolean_options_env_vars[@]} ]; then
-			echo -ne "\n"
+		if [ -n "${ENV_BOOLEAN_VARS_ELEMENTS[${item}]}" ]; then
+			{
+			echo -e "${boolean_options_env_vars[${item},"rcfile_text"]}"
+			echo -e "${item}=${boolean_options_env_vars[${item},"default_value"]}"
+			if [ ${counter} -ne ${#ordered_options_env_vars[@]} ]; then
+				echo -ne "\n"
+			fi
+			} >> "${scriptfolder}${rc_file}" 2> /dev/null
 		fi
-		} >> "${scriptfolder}${rc_file}" 2> /dev/null
 	done
 }
 
