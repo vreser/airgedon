@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181214
+#Date.........: 20181216
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -5546,7 +5546,7 @@ function personal_decrypt_menu() {
 			else
 				get_hashcat_version
 				set_hashcat_parameters
-				hashcat_dictionary_attack_option
+				hashcat_dictionary_attack_option "personal"
 			fi
 		;;
 		4)
@@ -5616,7 +5616,13 @@ function enterprise_decrypt_menu() {
 			under_construction_message
 		;;
 		4)
-			under_construction_message
+			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
+				forbidden_menu_option
+			else
+				get_hashcat_version
+				set_hashcat_parameters
+				hashcat_dictionary_attack_option "enterprise"
+			fi
 		;;
 		5)
 			under_construction_message
@@ -5663,32 +5669,52 @@ function ask_dictionary() {
 	language_strings "${language}" 181 "yellow"
 }
 
-#Read the user input on Handshake file questions
+#Read the user input on Handshake/enterprise file questions
 function ask_capture_file() {
 
 	debug_print
 
 	validpath=1
-	while [[ "${validpath}" != "0" ]]; do
-		read_path "targetfilefordecrypt"
-	done
+
+	if [ "${1}" = "personal" ]; then
+		while [[ "${validpath}" != "0" ]]; do
+			read_path "targetfilefordecrypt"
+		done
+	else
+		while [[ "${validpath}" != "0" ]]; do
+			read_path "targetenterprisefilefordecrypt"
+		done
+	fi
 	language_strings "${language}" 189 "yellow"
 }
 
-#Manage the questions on Handshake file questions
+#Manage the questions on Handshake/enterprise file questions
 function manage_asking_for_captured_file() {
 
 	debug_print
 
-	if [ -n "${enteredpath}" ]; then
-		echo
-		language_strings "${language}" 186 "blue"
-		ask_yesno 187 "yes"
-		if [ "${yesno}" = "n" ]; then
-			ask_capture_file
+	if [ "${1}" = "personal" ]; then
+		if [ -n "${enteredpath}" ]; then
+			echo
+			language_strings "${language}" 186 "blue"
+			ask_yesno 187 "yes"
+			if [ "${yesno}" = "n" ]; then
+				ask_capture_file "${1}"
+			fi
+		else
+			ask_capture_file "${1}"
 		fi
 	else
-		ask_capture_file
+		if [ -n "${hashcatenterpriseenteredpath}" ]; then
+			echo
+			language_strings "${language}" 600 "blue"
+			ask_yesno 187 "yes"
+			if [ "${yesno}" = "n" ]; then
+				ask_capture_file "${1}"
+			fi
+		else
+			ask_capture_file "${1}"
+		fi
 	fi
 }
 
@@ -5904,6 +5930,27 @@ function select_wpa_bssid_target_from_captured_file() {
 	return 0
 }
 
+#Validate if given file has a valid enterprise hashcat format
+function validate_enterprise_hashcat_file() {
+
+	debug_print
+
+	echo
+	readarray -t HASHCAT_LINES_TO_VALIDATE < <(cat "${1}" 2> /dev/null)
+
+	for item in "${HASHCAT_LINES_TO_VALIDATE[@]}"; do
+		if [[ ! "${item}" =~ ^(.+)::::(.+):(.+)$ ]]; then
+			language_strings "${language}" 601 "red"
+			language_strings "${language}" 115 "read"
+			return 1
+		fi
+	done
+
+	language_strings "${language}" 602 "blue"
+	language_strings "${language}" 115 "read"
+	return 0
+}
+
 #Validate and ask for the different parameters used in an enterprise asleap dictionary based attack
 function enterprise_asleap_dictionary_attack_option() {
 
@@ -5927,7 +5974,7 @@ function aircrack_dictionary_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file
+	manage_asking_for_captured_file "personal"
 
 	if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
 		return
@@ -5947,7 +5994,7 @@ function aircrack_bruteforce_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file
+	manage_asking_for_captured_file "personal"
 
 	if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
 		return
@@ -5974,14 +6021,22 @@ function hashcat_dictionary_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file
+	if [ "${1}" = "personal" ]; then
+		manage_asking_for_captured_file "personal"
 
-	if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
-		return
-	fi
+		if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
+			return
+		fi
 
-	if ! convert_cap_to_hashcat_format; then
-		return
+		if ! convert_cap_to_hashcat_format; then
+			return
+		fi
+	else
+		manage_asking_for_captured_file "enterprise"
+
+		if ! validate_enterprise_hashcat_file "${hashcatenterpriseenteredpath}"; then
+			return
+		fi
 	fi
 
 	manage_asking_for_dictionary_file
@@ -5989,8 +6044,8 @@ function hashcat_dictionary_attack_option() {
 	echo
 	language_strings "${language}" 190 "yellow"
 	language_strings "${language}" 115 "read"
-	exec_hashcat_dictionary_attack
-	manage_hashcat_pot
+	exec_hashcat_dictionary_attack "${1}"
+	manage_hashcat_pot "${1}"
 }
 
 #Validate and ask for the different parameters used in a hashcat bruteforce based attack
@@ -5998,7 +6053,7 @@ function hashcat_bruteforce_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file
+	manage_asking_for_captured_file "personal"
 
 	if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
 		return
@@ -6021,7 +6076,7 @@ function hashcat_bruteforce_attack_option() {
 	language_strings "${language}" 190 "yellow"
 	language_strings "${language}" 115 "read"
 	exec_hashcat_bruteforce_attack
-	manage_hashcat_pot
+	manage_hashcat_pot "${1}"
 }
 
 #Validate and ask for the different parameters used in a hashcat rule based attack
@@ -6029,7 +6084,7 @@ function hashcat_rulebased_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file
+	manage_asking_for_captured_file "personal"
 
 	if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
 		return
@@ -6046,7 +6101,7 @@ function hashcat_rulebased_attack_option() {
 	language_strings "${language}" 190 "yellow"
 	language_strings "${language}" 115 "read"
 	exec_hashcat_rulebased_attack
-	manage_hashcat_pot
+	manage_hashcat_pot "${1}"
 }
 
 #Check if the password was decrypted using hashcat and manage to save it on a file
@@ -6087,7 +6142,14 @@ function manage_hashcat_pot() {
 			if [ "${lastcharhashcat_potpath}" != "/" ]; then
 				hashcat_potpath="${hashcat_potpath}/"
 			fi
-			hashcatpot_filename="hashcat-${bssid}.txt"
+
+			if [ "${1}" = "personal" ]; then
+				hashcatpot_filename="hashcat-${bssid}.txt"
+			else
+				local enterprise_user
+				[[ $(cat "${hashcatenterpriseenteredpath}") =~ ^([^:]+:?[^:]+) ]] && enterprise_user="${BASH_REMATCH[1]}"
+				hashcatpot_filename="hashcat-enterprise_user-${enterprise_user}.txt"
+			fi
 			hashcat_potpath="${hashcat_potpath}${hashcatpot_filename}"
 
 			validpath=1
@@ -6101,7 +6163,19 @@ function manage_hashcat_pot() {
 			date +%Y-%m-%d
 			echo "${hashcat_texts[${language},1]}"
 			echo ""
-			echo "BSSID: ${bssid}"
+			} >> "${potenteredpath}"
+
+			if [ "${1}" = "personal" ]; then
+				{
+				echo "BSSID: ${bssid}"
+				} >> "${potenteredpath}"
+			else
+				{
+				echo "${hashcat_texts[${language},2]}: ${enterprise_user}"
+				} >> "${potenteredpath}"
+			fi
+
+			{
 			echo ""
 			echo "---------------"
 			echo ""
@@ -6803,7 +6877,11 @@ function exec_hashcat_dictionary_attack() {
 
 	debug_print
 
-	hashcat_cmd="hashcat -m 2500 -a 0 \"${tmpdir}${hashcat_tmp_file}\" \"${DICTIONARY}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	if [ "${1}" = "personal" ]; then
+		hashcat_cmd="hashcat -m 2500 -a 0 \"${tmpdir}${hashcat_tmp_file}\" \"${DICTIONARY}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	else
+		hashcat_cmd="hashcat -m 5500 -a 0 \"${hashcatenterpriseenteredpath}\" \"${DICTIONARY}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	fi
 	eval "${hashcat_cmd}"
 	language_strings "${language}" 115 "read"
 }
@@ -9647,6 +9725,11 @@ function read_path() {
 			language_strings "${language}" 188 "green"
 			read_and_clean_path "enteredpath"
 			check_file_exists "${enteredpath}"
+		;;
+		"targetenterprisefilefordecrypt")
+			language_strings "${language}" 188 "green"
+			read_and_clean_path "hashcatenterpriseenteredpath"
+			check_file_exists "${hashcatenterpriseenteredpath}"
 		;;
 		"rules")
 			language_strings "${language}" 242 "green"

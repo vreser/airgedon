@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181211
+#Date.........: 20181216
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -615,6 +615,18 @@ function language_strings() {
 	hashcat_texts["POLISH",1]="airgeddon. Hasło odszyfrowane z użyciem hashcat"
 	hashcat_texts["GERMAN",1]="airgeddon. Passwort mit hashcat entschlüsselt"
 	hashcat_texts["TURKISH",1]="airgeddon. Hashcat kullanarak şifreyi çözdü"
+
+	hashcat_texts["ENGLISH",2]="Enterprise user"
+	hashcat_texts["SPANISH",2]="Usuario enterprise"
+	hashcat_texts["FRENCH",2]="${pending_of_translation} Nom d'utilisateur enterprise"
+	hashcat_texts["CATALAN",2]="${pending_of_translation} Nom d'usuari enterprise"
+	hashcat_texts["PORTUGUESE",2]="${pending_of_translation} Nome de usuário enterprise"
+	hashcat_texts["RUSSIAN",2]="${pending_of_translation} Имя пользователя enterprise"
+	hashcat_texts["GREEK",2]="${pending_of_translation} Όνομα χρήστη enterprise"
+	hashcat_texts["ITALIAN",2]="${pending_of_translation} Nome utente enterprise"
+	hashcat_texts["POLISH",2]="${pending_of_translation} Nazwa użytkownika w enterprise"
+	hashcat_texts["GERMAN",2]="${pending_of_translation} Enterprise-Benutzername"
+	hashcat_texts["TURKISH",2]="${pending_of_translation} Kullanıcı adı enterprise"
 
 	declare -gA aircrack_texts
 	aircrack_texts["ENGLISH",1]="airgeddon. Decrypted password using aircrack"
@@ -7988,6 +8000,42 @@ function language_strings() {
 	arr["POLISH",599]="${pending_of_translation} 5Ghz zostało włączone"
 	arr["GERMAN",599]="5Ghz wurde aktiviert"
 	arr["TURKISH",599]="${pending_of_translation} 5Ghz etkinleştirildi"
+
+	arr["ENGLISH",600]="You already have selected a capture file during this session [${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
+	arr["SPANISH",600]="Ya tienes seleccionado un fichero de captura en esta sesión [${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
+	arr["FRENCH",600]="Vous avez déjà sélectionné un fichier de capture pour cette session ${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
+	arr["CATALAN",600]="Ja tens seleccionat un fitxer de captura en aquesta sessió [${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
+	arr["PORTUGUESE",600]="Você selecionou um arquivo de captura nesta sessão [${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
+	arr["RUSSIAN",600]="Вы уже выбрали файл захвата во время этой сессии [${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
+	arr["GREEK",600]="Έχετε ήδη επιλέξει αρχείο καταγραφής κατά τη διάρκεια της συνεδρίας [${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
+	arr["ITALIAN",600]="È stato selezionato un file di cattura in questa sessione [${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
+	arr["POLISH",600]="W tej sesji wybrano już plik przechwytywania [${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
+	arr["GERMAN",600]="Sie haben bereits eine Capture-Datei in dieser Sitzung ausgewählt [${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
+	arr["TURKISH",600]="Bu oturumda zaten bir yakalama dosyası seçtiniz [${normal_color} ${hashcatenterpriseenteredpath}${blue_color}]"
+
+	arr["ENGLISH",601]="Selected file has an invalid hashcat enterprise hashes format"
+	arr["SPANISH",601]="El fichero seleccionado no tiene un formato válido de hashes enterprise para hashcat"
+	arr["FRENCH",601]="${pending_of_translation} Le fichier sélectionné n'a pas un format d'entreprise de hashes valide pour hashcat"
+	arr["CATALAN",601]="${pending_of_translation} El fitxer seleccionat no té un format vàlid de hashes enterprise per hashcat"
+	arr["PORTUGUESE",601]="${pending_of_translation} O arquivo selecionado não possui um formato enterprise de hashes válido para o hashcat"
+	arr["RUSSIAN",601]="${pending_of_translation} Выбранный файл имеет недопустимый формат хеш-кода предприятия hashcat"
+	arr["GREEK",601]="${pending_of_translation} Το επιλεγμένο αρχείο έχει μια μη έγκυρη μορφή hashes της επιχείρησης hashcat"
+	arr["ITALIAN",601]="${pending_of_translation} Il file selezionato non ha un formato enterprise hash valido per hashcat"
+	arr["POLISH",601]="${pending_of_translation} Wybrany plik ma nieprawidłowy format haszy korporacyjnego hashcat"
+	arr["GERMAN",601]="${pending_of_translation} Die ausgewählte Datei hat kein gültiges Hash-Enterpriseformat für hashcat"
+	arr["TURKISH",601]="${pending_of_translation} Seçilen dosyanın geçersiz bir hashcat kuruluş karma biçimi var"
+
+	arr["ENGLISH",602]="Selected file has a valid hashcat enterprise hashes format"
+	arr["SPANISH",602]="El fichero seleccionado tiene un formato válido de hashes enterprise para hashcat"
+	arr["FRENCH",602]="${pending_of_translation} Le fichier sélectionné a un format d’entreprise de hashes valide pour hashcat."
+	arr["CATALAN",602]="${pending_of_translation} El fitxer seleccionat té un format vàlid de hashes enterprise per hashcat"
+	arr["PORTUGUESE",602]="${pending_of_translation} O arquivo selecionado tem um formato de empresa de hashes válido para hashcat"
+	arr["RUSSIAN",602]="${pending_of_translation} Выбранный файл имеет допустимый формат хеш-кода предприятия hashcat"
+	arr["GREEK",602]="${pending_of_translation} Το επιλεγμένο αρχείο έχει μια έγκυρη μορφή hashes της επιχείρησης hashes hashcat"
+	arr["ITALIAN",602]="${pending_of_translation} Il file selezionato ha un formato enterprise hash valido per hashcat"
+	arr["POLISH",602]="${pending_of_translation} Wybrany plik ma poprawny format haszy korporacyjnego hashcat"
+	arr["GERMAN",602]="${pending_of_translation} Die ausgewählte Datei hat ein gültiges Hash-Unternehmensformat für hashcat"
+	arr["TURKISH",602]="${pending_of_translation} Seçilen dosyanın geçerli bir hashcat kurumsal karma biçimi var"
 
 	case "${3}" in
 		"yellow")
