@@ -7612,7 +7612,7 @@ function language_strings() {
 	arr["PORTUGUESE",567]="Introdução: ${pink_color}Desativa${normal_color}"
 	arr["RUSSIAN",567]="${pending_of_translation} Пропустить вступление: ${pink_color}Активированный${normal_color}"
 	arr["GREEK",567]="${pending_of_translation} Παράλειψη εισαγωγής: ${pink_color}Ενεργοποιήθηκε${normal_color}"
-	arr["ITALIAN",567]="${pending_of_translation} Salta l'introduzione: ${pink_color}Habilitato${normal_color}"
+	arr["ITALIAN",567]="Saltare l'introduzione: ${pink_color}Habilitato${normal_color}"
 	arr["POLISH",567]="${pending_of_translation} Pomiń wstęp: ${pink_color}Aktywowany${normal_color}"
 	arr["GERMAN",567]="Intro überspringen: ${pink_color}Aktiviert${normal_color}"
 	arr["TURKISH",567]="${pending_of_translation} Tanıtımı geç: ${pink_color}Aktive${normal_color}"
