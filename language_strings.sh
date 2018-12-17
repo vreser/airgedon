@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181216
+#Date.........: 20181217
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -8036,6 +8036,54 @@ function language_strings() {
 	arr["POLISH",602]="${pending_of_translation} Wybrany plik ma poprawny format haszy korporacyjnego hashcat"
 	arr["GERMAN",602]="${pending_of_translation} Die ausgewählte Datei hat ein gültiges Hash-Unternehmensformat für hashcat"
 	arr["TURKISH",602]="${pending_of_translation} Seçilen dosyanın geçerli bir hashcat kurumsal karma biçimi var"
+
+	arr["ENGLISH",603]="Selected hashcat enterprise captured file: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["SPANISH",603]="Fichero de captura enterprise hashcat seleccionado: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["FRENCH",603]="${pending_of_translation} Fichier de capture enterprise hashcat sélectionné: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["CATALAN",603]="${pending_of_translation} Fitxer de captura enterprise hashcat seleccionat: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["PORTUGUESE",603]="${pending_of_translation} Arquivo de captura enterprise hashcat selecionado: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["RUSSIAN",603]="${pending_of_translation} Выбранный файл enterprise hashcat захвата: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["GREEK",603]="${pending_of_translation} Επιλεγμένο αρχείο enterprise hashcat καταγραφής: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["ITALIAN",603]="${pending_of_translation} File di cattura enterprise hashcat selezionato: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["POLISH",603]="${pending_of_translation} Wybrany plik enterprise hashcat przechwytywania: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["GERMAN",603]="${pending_of_translation} Ausgewählte Enterprise-hashcat-Capture-Datei: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["TURKISH",603]="${pending_of_translation} Seçilen yakalama enterprise hashcat dosyası: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+
+	arr["ENGLISH",604]="Selected hashcat enterprise captured file: ${pink_color}None${normal_color}"
+	arr["SPANISH",604]="Fichero de captura enterprise hashcat seleccionado: ${pink_color}Ninguno${normal_color}"
+	arr["FRENCH",604]="${pending_of_translation} Fichier de capture enterprise hashcat sélectionné: ${pink_color}Aucun${normal_color}"
+	arr["CATALAN",604]="${pending_of_translation} Fitxer de captura enterprise hashcat seleccionat: ${pink_color}Ningú${normal_color}"
+	arr["PORTUGUESE",604]="${pending_of_translation}  Arquivo de captura enterprise hashcat selecionado: ${pink_color}Nenhum${normal_color}"
+	arr["RUSSIAN",604]="${pending_of_translation} Выбранный файл enterprise hashcat захвата: ${pink_color}Нет${normal_color}"
+	arr["GREEK",604]="${pending_of_translation} Επιλεγμένο αρχείο enterprise hashcat καταγραφής: ${pink_color}Κανένα${normal_color}"
+	arr["ITALIAN",604]="${pending_of_translation} File di cattura enterprise hashcat selezionato: ${pink_color}Nessuno${normal_color}"
+	arr["POLISH",604]="${pending_of_translation} Wybrany plik enterprise hashcat przechwytywania ${pink_color}Brak${normal_color}"
+	arr["GERMAN",604]="${pending_of_translation} Ausgewählte Enterprise-hashcat-Capture-Datei: ${pink_color}Keine${normal_color}"
+	arr["TURKISH",604]="${pending_of_translation} Seçilen yakalama enterprise hashcat dosyası: ${pink_color}None${normal_color}"
+
+	arr["ENGLISH",605]="Selected john the ripper enterprise captured file: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["SPANISH",605]="Fichero de captura enterprise john the ripper seleccionado: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["FRENCH",605]="${pending_of_translation} Fichier de capture enterprise john the ripper sélectionné: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["CATALAN",605]="${pending_of_translation} Fitxer de captura enterprise john the ripper seleccionat: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["PORTUGUESE",605]="${pending_of_translation} Arquivo de captura enterprise john the ripper selecionado: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["RUSSIAN",605]="${pending_of_translation} Выбранный файл enterprise john the ripper захвата: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["GREEK",605]="${pending_of_translation} Επιλεγμένο αρχείο enterprise john the ripper καταγραφής: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["ITALIAN",605]="${pending_of_translation} File di cattura enterprise john the ripper selezionato: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["POLISH",605]="${pending_of_translation} Wybrany plik enterprise john the ripper przechwytywania: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["GERMAN",605]="${pending_of_translation} Ausgewählte Enterprise-john the ripper-Capture-Datei: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["TURKISH",605]="${pending_of_translation} Seçilen yakalama enterprise john the ripper dosyası: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+
+	arr["ENGLISH",606]="Selected john the ripper enterprise captured file: ${pink_color}None${normal_color}"
+	arr["SPANISH",606]="Fichero de captura enterprise john the ripper seleccionado: ${pink_color}Ninguno${normal_color}"
+	arr["FRENCH",606]="${pending_of_translation} Fichier de capture enterprise john the ripper sélectionné: ${pink_color}Aucun${normal_color}"
+	arr["CATALAN",606]="${pending_of_translation} Fitxer de captura enterprise john the ripper seleccionat: ${pink_color}Ningú${normal_color}"
+	arr["PORTUGUESE",606]="${pending_of_translation}  Arquivo de captura enterprise john the ripper selecionado: ${pink_color}Nenhum${normal_color}"
+	arr["RUSSIAN",606]="${pending_of_translation} Выбранный файл enterprise john the ripper захвата: ${pink_color}Нет${normal_color}"
+	arr["GREEK",606]="${pending_of_translation} Επιλεγμένο αρχείο enterprise john the ripper καταγραφής: ${pink_color}Κανένα${normal_color}"
+	arr["ITALIAN",606]="${pending_of_translation} File di cattura enterprise john the ripper selezionato: ${pink_color}Nessuno${normal_color}"
+	arr["POLISH",606]="${pending_of_translation} Wybrany plik enterprise john the ripper przechwytywania ${pink_color}Brak${normal_color}"
+	arr["GERMAN",606]="${pending_of_translation} Ausgewählte Enterprise-john the ripper-Capture-Datei: ${pink_color}Keine${normal_color}"
+	arr["TURKISH",606]="${pending_of_translation} Seçilen yakalama enterprise john the ripper dosyası: ${pink_color}None${normal_color}"
 
 	case "${3}" in
 		"yellow")

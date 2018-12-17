@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181216
+#Date.........: 20181217
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -4171,6 +4171,18 @@ function print_decrypt_vars() {
 
 	debug_print
 
+	if [ -n "${jtrenterpriseenteredpath}" ]; then
+		language_strings "${language}" 605 "blue"
+	else
+		language_strings "${language}" 606 "blue"
+	fi
+
+	if [ -n "${hashcatenterpriseenteredpath}" ]; then
+		language_strings "${language}" 603 "blue"
+	else
+		language_strings "${language}" 604 "blue"
+	fi
+
 	if [ -n "${bssid}" ]; then
 		language_strings "${language}" 43 "blue"
 	else
@@ -4190,8 +4202,6 @@ function print_decrypt_vars() {
 	if [ -n "${RULES}" ]; then
 		language_strings "${language}" 243 "blue"
 	fi
-
-	#TODO print enterprise decryption vars
 }
 
 #Print selected target parameters on personal decrypt menu (bssid, Handshake file, dictionary file and rules file)
@@ -4220,15 +4230,21 @@ function print_personal_decrypt_vars() {
 	fi
 }
 
-#Print selected target parameters on enterprise decrypt menu (bssid, dictionary file, rules file and hashes files)
+#Print selected target parameters on enterprise decrypt menu (dictionary file, rules file and hashes files)
 function print_enterprise_decrypt_vars() {
 
 	debug_print
 
-	if [ -n "${bssid}" ]; then
-		language_strings "${language}" 43 "blue"
+	if [ -n "${jtrenterpriseenteredpath}" ]; then
+		language_strings "${language}" 605 "blue"
 	else
-		language_strings "${language}" 185 "blue"
+		language_strings "${language}" 606 "blue"
+	fi
+
+	if [ -n "${hashcatenterpriseenteredpath}" ]; then
+		language_strings "${language}" 603 "blue"
+	else
+		language_strings "${language}" 604 "blue"
 	fi
 
 	if [ -n "${DICTIONARY}" ]; then
@@ -4238,8 +4254,6 @@ function print_enterprise_decrypt_vars() {
 	if [ -n "${RULES}" ]; then
 		language_strings "${language}" 243 "blue"
 	fi
-
-	#TODO print enterprise decryption vars
 }
 
 #Create the dependencies arrays
