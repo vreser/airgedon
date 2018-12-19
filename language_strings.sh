@@ -6196,7 +6196,7 @@ function language_strings() {
 	arr["PORTUGUESE",449]="2.  Ativar permanentemente a atualização automática"
 	arr["RUSSIAN",449]="2.  Включение постоянных автоматических обновлений"
 	arr["GREEK",449]="2.  Ενεργοποιήστε μόνιμα τις αυτόματες ενημερώσεις"
-	arr["ITALIAN",449]="2.  Attivate permanentemente l'aggiornamento automatico"
+	arr["ITALIAN",449]="2.  Attivare permanentemente l'aggiornamento automatico"
 	arr["POLISH",449]="2.  Trwale włącz automatyczną aktualizację"
 	arr["GERMAN",449]="2.  Aktivieren Sie die automatische Aktualisierung dauerhaft"
 	arr["TURKISH",449]="2.  Otomatik güncellemeleri kalıcı olarak etkinleştir"
