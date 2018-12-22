@@ -6047,9 +6047,9 @@ function hashcat_dictionary_attack_option() {
 
 	debug_print
 
-	if [ "${1}" = "personal" ]; then
-		manage_asking_for_captured_file "personal"
+	manage_asking_for_captured_file "${1}"
 
+	if [ "${1}" = "personal" ]; then
 		if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
 			return
 		fi
@@ -6058,8 +6058,6 @@ function hashcat_dictionary_attack_option() {
 			return
 		fi
 	else
-		manage_asking_for_captured_file "enterprise"
-
 		if ! validate_enterprise_hashcat_file "${hashcatenterpriseenteredpath}"; then
 			return
 		fi
@@ -6079,9 +6077,9 @@ function hashcat_bruteforce_attack_option() {
 
 	debug_print
 
-	if [ "${1}" = "personal" ]; then
-		manage_asking_for_captured_file "personal"
+	manage_asking_for_captured_file "${1}"
 
+	if [ "${1}" = "personal" ]; then
 		if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
 			return
 		fi
@@ -6090,8 +6088,6 @@ function hashcat_bruteforce_attack_option() {
 			return
 		fi
 	else
-		manage_asking_for_captured_file "enterprise"
-
 		if ! validate_enterprise_hashcat_file "${hashcatenterpriseenteredpath}"; then
 			return
 		fi
@@ -6118,9 +6114,9 @@ function hashcat_rulebased_attack_option() {
 
 	debug_print
 
-	if [ "${1}" = "personal" ]; then
-		manage_asking_for_captured_file "personal"
+	manage_asking_for_captured_file "${1}"
 
+	if [ "${1}" = "personal" ]; then
 		if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
 			return
 		fi
@@ -6129,8 +6125,6 @@ function hashcat_rulebased_attack_option() {
 			return
 		fi
 	else
-		manage_asking_for_captured_file "enterprise"
-
 		if ! validate_enterprise_hashcat_file "${hashcatenterpriseenteredpath}"; then
 			return
 		fi
