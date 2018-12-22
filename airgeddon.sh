@@ -5569,7 +5569,7 @@ function personal_decrypt_menu() {
 			else
 				get_hashcat_version
 				set_hashcat_parameters
-				hashcat_bruteforce_attack_option
+				hashcat_bruteforce_attack_option "personal"
 			fi
 		;;
 		5)
@@ -5639,7 +5639,13 @@ function enterprise_decrypt_menu() {
 			fi
 		;;
 		5)
-			under_construction_message
+			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
+				forbidden_menu_option
+			else
+				get_hashcat_version
+				set_hashcat_parameters
+				hashcat_bruteforce_attack_option "enterprise"
+			fi
 		;;
 		6)
 			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
@@ -6020,7 +6026,7 @@ function aircrack_bruteforce_attack_option() {
 		return
 	fi
 
-	set_minlength_and_maxlength
+	set_minlength_and_maxlength "personal"
 
 	charset_option=0
 	while [[ ! ${charset_option} =~ ^[[:digit:]]+$ ]] || (( charset_option < 1 || charset_option > 11 )); do
@@ -6073,17 +6079,25 @@ function hashcat_bruteforce_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file "personal"
+	if [ "${1}" = "personal" ]; then
+		manage_asking_for_captured_file "personal"
 
-	if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
-		return
+		if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
+			return
+		fi
+
+		if ! convert_cap_to_hashcat_format; then
+			return
+		fi
+	else
+		manage_asking_for_captured_file "enterprise"
+
+		if ! validate_enterprise_hashcat_file "${hashcatenterpriseenteredpath}"; then
+			return
+		fi
 	fi
 
-	if ! convert_cap_to_hashcat_format; then
-		return
-	fi
-
-	set_minlength_and_maxlength
+	set_minlength_and_maxlength "${1}"
 
 	charset_option=0
 	while [[ ! ${charset_option} =~ ^[[:digit:]]+$ ]] || (( charset_option < 1 || charset_option > 5 )); do
@@ -6095,7 +6109,7 @@ function hashcat_bruteforce_attack_option() {
 	echo
 	language_strings "${language}" 190 "yellow"
 	language_strings "${language}" 115 "read"
-	exec_hashcat_bruteforce_attack
+	exec_hashcat_bruteforce_attack "${1}"
 	manage_hashcat_pot "${1}"
 }
 
@@ -6753,8 +6767,17 @@ function set_minlength() {
 
 	debug_print
 
+	local regexp
+	if [ "${1}" = "personal" ]; then
+		regexp="^[8-9]$|^[1-5][0-9]$|^6[0-3]$"
+		minlength_text=8
+	else
+		regexp="^[1-9]$|^[1-5][0-9]$|^6[0-3]$"
+		minlength_text=1
+	fi
+
 	minlength=0
-	while [[ ! ${minlength} =~ ^[8-9]$|^[1-5][0-9]$|^6[0-3]$ ]]; do
+	while [[ ! ${minlength} =~ ${regexp} ]]; do
 		echo
 		language_strings "${language}" 194 "green"
 		read -rp "> " minlength
@@ -6766,8 +6789,15 @@ function set_maxlength() {
 
 	debug_print
 
+	local regexp
+	if [ "${1}" = "personal" ]; then
+		regexp="^[8-9]$|^[1-5][0-9]$|^6[0-3]$"
+	else
+		regexp="^[1-9]$|^[1-5][0-9]$|^6[0-3]$"
+	fi
+
 	maxlength=0
-	while [[ ! ${maxlength} =~ ^[8-9]$|^[1-5][0-9]$|^6[0-3]$ ]]; do
+	while [[ ! ${maxlength} =~ ${regexp} ]]; do
 		echo
 		language_strings "${language}" 195 "green"
 		read -rp "> " maxlength
@@ -6779,10 +6809,10 @@ function set_minlength_and_maxlength() {
 
 	debug_print
 
-	set_minlength
+	set_minlength "${1}"
 	maxlength=0
 	while [[ ${maxlength} -lt ${minlength} ]]; do
-		set_maxlength
+		set_maxlength "${1}"
 	done
 }
 
@@ -6959,7 +6989,11 @@ function exec_hashcat_bruteforce_attack() {
 	tmpfiles_toclean=1
 	rm -rf "${tmpdir}hctmp"* > /dev/null 2>&1
 
-	hashcat_cmd="hashcat -m 2500 -a 3 \"${tmpdir}${hashcat_tmp_file}\" \"${charset}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	if [ "${1}" = "personal" ]; then
+		hashcat_cmd="hashcat -m 2500 -a 3 \"${tmpdir}${hashcat_tmp_file}\" \"${charset}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	else
+		hashcat_cmd="hashcat -m 5500 -a 3 \"${hashcatenterpriseenteredpath}\" \"${charset}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	fi
 	eval "${hashcat_cmd}"
 	language_strings "${language}" 115 "read"
 }
