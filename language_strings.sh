@@ -446,9 +446,9 @@ function language_strings() {
 
 	declare -gA wps_texts
 	wps_texts["ENGLISH",1]="airgeddon. Decrypted password during WPS attack"
-	wps_texts["SPANISH",1]="airgeddon. Contraseña desencriptada en ataque WPS"
+	wps_texts["SPANISH",1]="airgeddon. Contraseña descifrada en ataque WPS"
 	wps_texts["FRENCH",1]="airgeddon. Mot de passe déchiffré à l'aide de l'attaque WPS"
-	wps_texts["CATALAN",1]="airgeddon. Contrasenya desencriptada amb l'atac WPS"
+	wps_texts["CATALAN",1]="airgeddon. Contrasenya desxifrada amb l'atac WPS"
 	wps_texts["PORTUGUESE",1]="airgeddon. Senha decifrada no ataque WPS"
 	wps_texts["RUSSIAN",1]="airgeddon. Пароль расшифрован во время WPS атаки"
 	wps_texts["GREEK",1]="airgeddon. Ο κωδικός αποκρυπτογραφήθηκε κατά την επίθεση WPS"
@@ -483,9 +483,9 @@ function language_strings() {
 
 	declare -gA wep_texts
 	wep_texts["ENGLISH",1]="airgeddon. Decrypted password during WEP attack"
-	wep_texts["SPANISH",1]="airgeddon. Contraseña desencriptada en ataque WEP"
+	wep_texts["SPANISH",1]="airgeddon. Contraseña descifrada en ataque WEP"
 	wep_texts["FRENCH",1]="airgeddon. Mot de passe déchiffré à l'aide de l'attaque WEP"
-	wep_texts["CATALAN",1]="airgeddon. Contrasenya desencriptada amb l'atac WEP"
+	wep_texts["CATALAN",1]="airgeddon. Contrasenya desxifrada amb l'atac WEP"
 	wep_texts["PORTUGUESE",1]="airgeddon. Senha decifrada no ataque WEP"
 	wep_texts["RUSSIAN",1]="airgeddon. Пароль расшифрован во время WEP атаки"
 	wep_texts["GREEK",1]="airgeddon. Ο κωδικός αποκρυπτογραφήθηκε κατά την επίθεση WEP"
@@ -519,9 +519,9 @@ function language_strings() {
 	wep_texts["TURKISH",3]="Hexadecimal"
 
 	wep_texts["ENGLISH",4]="WEP key decrypted successfully:"
-	wep_texts["SPANISH",4]="Clave WEP desencriptada con éxito:"
+	wep_texts["SPANISH",4]="Clave WEP descifrada con éxito:"
 	wep_texts["FRENCH",4]="Clef WEP déchiffré:"
-	wep_texts["CATALAN",4]="Clau WEP desencriptada amb èxit:"
+	wep_texts["CATALAN",4]="Clau WEP desxifrada amb èxit:"
 	wep_texts["PORTUGUESE",4]="Senha WEP descriptografada com sucesso:"
 	wep_texts["RUSSIAN",4]="Ключ WEP расшифрован:"
 	wep_texts["GREEK",4]="Το κλειδί WEP αποκρυπτογραφήθηκε με επιτυχία:"
@@ -568,9 +568,9 @@ function language_strings() {
 
 	declare -gA asleap_texts
 	asleap_texts["ENGLISH",1]="airgeddon. Decrypted password using asleap"
-	asleap_texts["SPANISH",1]="airgeddon. Contraseña desencriptada con asleap"
+	asleap_texts["SPANISH",1]="airgeddon. Contraseña descifrada con asleap"
 	asleap_texts["FRENCH",1]="airgeddon. Mot de passe déchiffré avec asleap"
-	asleap_texts["CATALAN",1]="airgeddon. Contrasenya desencriptada amb asleap"
+	asleap_texts["CATALAN",1]="airgeddon. Contrasenya desxifrada amb asleap"
 	asleap_texts["PORTUGUESE",1]="airgeddon descriptografou a senha usando asleap"
 	asleap_texts["RUSSIAN",1]="airgeddon. Пароль расшифрован с использованием asleap"
 	asleap_texts["GREEK",1]="airgeddon. Αποκρυπτογραφημένος κωδικός πρόσβασης με χρήση asleap"
@@ -605,9 +605,9 @@ function language_strings() {
 
 	declare -gA hashcat_texts
 	hashcat_texts["ENGLISH",1]="airgeddon. Decrypted password using hashcat"
-	hashcat_texts["SPANISH",1]="airgeddon. Contraseña desencriptada con hashcat"
+	hashcat_texts["SPANISH",1]="airgeddon. Contraseña descifrada con hashcat"
 	hashcat_texts["FRENCH",1]="airgeddon. Mot de passe déchiffré avec hashcat"
-	hashcat_texts["CATALAN",1]="airgeddon. Contrasenya desencriptada amb hashcat"
+	hashcat_texts["CATALAN",1]="airgeddon. Contrasenya desxifrada amb hashcat"
 	hashcat_texts["PORTUGUESE",1]="airgeddon descriptografou a senha usando hashcat"
 	hashcat_texts["RUSSIAN",1]="airgeddon. Пароль расшифрован с использованием hashcat"
 	hashcat_texts["GREEK",1]="airgeddon. Αποκρυπτογραφημένος κωδικός πρόσβασης με χρήση hashcat"
@@ -642,9 +642,9 @@ function language_strings() {
 
 	declare -gA aircrack_texts
 	aircrack_texts["ENGLISH",1]="airgeddon. Decrypted password using aircrack"
-	aircrack_texts["SPANISH",1]="airgeddon. Contraseña desencriptada con aircrack"
+	aircrack_texts["SPANISH",1]="airgeddon. Contraseña descifrada con aircrack"
 	aircrack_texts["FRENCH",1]="airgeddon. Mot de passe déchiffré avec aircrack"
-	aircrack_texts["CATALAN",1]="airgeddon. Contrasenya desencriptada amb aircrack"
+	aircrack_texts["CATALAN",1]="airgeddon. Contrasenya desxifrada amb aircrack"
 	aircrack_texts["PORTUGUESE",1]="airgeddon descriptografou a senha usando aircrack"
 	aircrack_texts["RUSSIAN",1]="airgeddon. Пароль расшифрован с использованием aircrack"
 	aircrack_texts["GREEK",1]="airgeddon. Αποκρυπτογραφημένος κωδικός πρόσβασης με χρήση aircrack"
@@ -2842,7 +2842,7 @@ function language_strings() {
 	arr["TURKISH",168]="Daha önce sonlandırılan görevler başlatılıyor"
 
 	arr["ENGLISH",169]="6.  Offline WPA/WPA2 decrypt menu"
-	arr["SPANISH",169]="6.  Menú de desencriptado WPA/WPA2 offline"
+	arr["SPANISH",169]="6.  Menú de descifrado WPA/WPA2 offline"
 	arr["FRENCH",169]="6.  Menu crack WPA/WPA2 offline"
 	arr["CATALAN",169]="6.  Menú per desxifrar WPA/WPA2 offline"
 	arr["PORTUGUESE",169]="6.  Menu de descriptografia WPA/WPA2 offline"
@@ -2854,7 +2854,7 @@ function language_strings() {
 	arr["TURKISH",169]="6.  Çevrimdışı WPA/WPA2 decrypt menüsü"
 
 	arr["ENGLISH",170]="Offline WPA/WPA2 decrypt menu"
-	arr["SPANISH",170]="Menú de desencriptado WPA/WPA2 offline"
+	arr["SPANISH",170]="Menú de descifrado WPA/WPA2 offline"
 	arr["FRENCH",170]="Menu crack WPA/WPA2 offline"
 	arr["CATALAN",170]="Menú per desxifrar WPA/WPA2 offline"
 	arr["PORTUGUESE",170]="Menu de descriptografia WPA/WPA2 offline"
@@ -2866,9 +2866,9 @@ function language_strings() {
 	arr["TURKISH",170]="Çevrimdışı WPA/WPA2 decrypt menüsü"
 
 	arr["ENGLISH",171]="The key decrypt process is performed offline on a previously captured file"
-	arr["SPANISH",171]="El proceso de desencriptado de las claves se realiza de manera offline sobre un fichero capturado previamente"
+	arr["SPANISH",171]="El proceso de descifrado de las claves se realiza de manera offline sobre un fichero capturado previamente"
 	arr["FRENCH",171]="Le crack de la clef s'effectue offline en utilisant le fichier capturé antérieurement"
-	arr["CATALAN",171]="El procés de desencriptació de les claus es realitza de manera offline sobre un fitxer capturat prèviament"
+	arr["CATALAN",171]="El procés de desxifrat de les claus es realitza de manera offline sobre un fitxer capturat prèviament"
 	arr["PORTUGUESE",171]="O processo de descriptografia é realizada de modo offline em um arquivo previamente capturado"
 	arr["RUSSIAN",171]="Процесс расшифровки ключа выполняется офлайн на ранее захваченном файле"
 	arr["GREEK",171]="Η διεργασία αποκρυπτογράφησης κλειδιού έχει εκτελεστεί offline σε προηγούμενο αρχείο καταγραφής"
@@ -2950,9 +2950,9 @@ function language_strings() {
 	arr["TURKISH",177]="Seçilen yakalanmış dosya: ${pink_color}None${normal_color}"
 
 	arr["ENGLISH",178]="To decrypt the key of a WPA/WPA2 network, the capture file must contain a Handshake"
-	arr["SPANISH",178]="Para desencriptar la clave de una red WPA/WPA2, el fichero de captura debe contener un Handshake"
+	arr["SPANISH",178]="Para descifrar la clave de una red WPA/WPA2, el fichero de captura debe contener un Handshake"
 	arr["FRENCH",178]="Pour cracker la clé d'un réseau WPA/WPA2 le fichier de capture doit contenir un Handshake"
-	arr["CATALAN",178]="Per desencriptar la clau d'una xarxa WPA/WPA2 el fitxer de captura ha de contenir un Handshake"
+	arr["CATALAN",178]="Per desxifrar la clau d'una xarxa WPA/WPA2 el fitxer de captura ha de contenir un Handshake"
 	arr["PORTUGUESE",178]="Para descriptografar a senha de uma rede WPA/WPA2, o arquivo de captura deve conter um Handshake"
 	arr["RUSSIAN",178]="Для расшифровки ключа сетей WPA/WPA2, файл захвата должен содержать четырёхэтапное рукопожатие"
 	arr["GREEK",178]="Για να αποκρυπτογραφήσετε το κλειδί ενός WPA/WPA2 δικτύου, το αρχείο καταγραφής πρέπει να περιέχει μία Χειραψία"
@@ -2962,9 +2962,9 @@ function language_strings() {
 	arr["TURKISH",178]="WPA/WPA2 ağının şifresini çözmek için, yakalama dosyası bir Handshake içermelidir"
 
 	arr["ENGLISH",179]="Decrypting by bruteforce, it could pass hours, days, weeks or even months to take it depending on the complexity of the password and your processing speed"
-	arr["SPANISH",179]="Desencriptando por fuerza bruta, podrían pasar horas, días, semanas o incluso meses hasta conseguirlo dependiendo de la complejidad de la contraseña y de tu velocidad de proceso"
+	arr["SPANISH",179]="Descifrando por fuerza bruta, podrían pasar horas, días, semanas o incluso meses hasta conseguirlo dependiendo de la complejidad de la contraseña y de tu velocidad de proceso"
 	arr["FRENCH",179]="Le crack de la clef par attaque de type brute force peut prendre des heures, des jours, des semaines ou même des mois en fonction de la complexité de la clef et de la puissance de calcul de votre matériel"
-	arr["CATALAN",179]="Desencriptant per força bruta, podrien passar hores, dies, setmanes o fins i tot mesos fins a aconseguir-ho depenent de la complexitat de la contrasenya i de la teva velocitat de procés"
+	arr["CATALAN",179]="Desxifrant per força bruta, podrien passar hores, dies, setmanes o fins i tot mesos fins a aconseguir-ho depenent de la complexitat de la contrasenya i de la teva velocitat de procés"
 	arr["PORTUGUESE",179]="Descriptografar com força bruta pode levar horas, dias, semanas ou mesmo meses dependendo da complexidade da senha e velocidade de processamento"
 	arr["RUSSIAN",179]="Расшифровка полным перебором может занять часы, дни, недели или даже месяцы в зависимости от сложности пароля и вашей скорости обработки"
 	arr["GREEK",179]="Αποκρυπτογραφώντας με χρήση ωμής βίας, μπορεί να περάσουν ώρες, μέρες, εβδομάδες ή ακόμη και μήνες για να το αποκτήσετε έχοντας υπόψιν την πολυπλοκότητα του κωδικού πρόσβασης και την ταχύτητα του επεξεργαστή"
@@ -3094,9 +3094,9 @@ function language_strings() {
 	arr["TURKISH",189]="Yakalama dosyasının yolu doğru. Yazılım devam edebilir..."
 
 	arr["ENGLISH",190]="Starting decrypt. When started, press [Ctrl+C] to stop..."
-	arr["SPANISH",190]="Comenzando desencriptado. Una vez empezado, pulse [Ctrl+C] para pararlo..."
+	arr["SPANISH",190]="Comenzando descifrado. Una vez empezado, pulse [Ctrl+C] para pararlo..."
 	arr["FRENCH",190]="Lancement du crack. Pressez [Ctrl+C] pour l'arrêter..."
-	arr["CATALAN",190]="Començant el desencriptat. Un cop començat, premeu [Ctrl+C] per aturar-lo..."
+	arr["CATALAN",190]="Començant el desxifrat. Un cop començat, premeu [Ctrl+C] per aturar-lo..."
 	arr["PORTUGUESE",190]="Começando a descriptografar. Uma vez iniciado, pressione [Ctrl+C] para parar..."
 	arr["RUSSIAN",190]="Начало расшифровки. После запуска, нажмите [Ctrl+C] для остановки..."
 	arr["GREEK",190]="Γίνεται έναρξη αποκρυπτογράφησης. Όταν ξεκινήσει, πατήστε [Ctrl+C] για να σταματήσει..."
@@ -3142,7 +3142,7 @@ function language_strings() {
 	arr["TURKISH",193]="Seçilen BSSID ile devam etmek ister misiniz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",194]="Enter the minimum length of the key to decrypt (${minlength_text}-63):"
-	arr["SPANISH",194]="Introduce la longitud mínima de la clave a desencriptar (${minlength_text}-63):"
+	arr["SPANISH",194]="Introduce la longitud mínima de la clave a descifrar (${minlength_text}-63):"
 	arr["FRENCH",194]="Entrez la longueur minimale de la clef à cracker (${minlength_text}-63):"
 	arr["CATALAN",194]="Introdueix la longitud mínima de la clau a desxifrar (${minlength_text}-63):"
 	arr["PORTUGUESE",194]="Digite o comprimento mínimo da senha para descriptografar (${minlength_text}-63):"
@@ -3154,7 +3154,7 @@ function language_strings() {
 	arr["TURKISH",194]="Şifreyi çözmek için anahtarın minimum uzunluğunu girin (${minlength_text}-63):"
 
 	arr["ENGLISH",195]="Enter the maximum length of the key to decrypt (${minlength}-63):"
-	arr["SPANISH",195]="Introduce la longitud máxima de la clave a desencriptar (${minlength}-63):"
+	arr["SPANISH",195]="Introduce la longitud máxima de la clave a descifrar (${minlength}-63):"
 	arr["FRENCH",195]="Entrez la longueur maximale de la clef à cracker (${minlength}-63):"
 	arr["CATALAN",195]="Introdueix la longitud màxima de la clau a desxifrar (${minlength}-63):"
 	arr["PORTUGUESE",195]="Digite o comprimento máximo da senha para descriptografar (${minlength}-63):"
@@ -3622,9 +3622,9 @@ function language_strings() {
 	arr["TURKISH",233]="Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın. ${normal_color}[${hashcat_potpath}]"
 
 	arr["ENGLISH",234]="Contratulations!! It seems the key has been decrypted"
-	arr["SPANISH",234]="Enhorabuena!! Parece que la clave ha sido desencriptada"
+	arr["SPANISH",234]="Enhorabuena!! Parece que la clave ha sido descifrada"
 	arr["FRENCH",234]="Félicitations!! Il semble que la clef a été décryptée"
-	arr["CATALAN",234]="Enhorabona!! Sembla que la clau ha estat desencriptada"
+	arr["CATALAN",234]="Enhorabona!! Sembla que la clau ha estat desxifrada"
 	arr["PORTUGUESE",234]="Parabéns!! Parece que a senha foi descriptografada"
 	arr["RUSSIAN",234]="Поздравления!! Похоже на то, что ключ был расшифрован"
 	arr["GREEK",234]="Συγχαρητήρια!! Φαίνεται πως το κλειδί αποκρυπτογραφήθηκε"
@@ -3634,9 +3634,9 @@ function language_strings() {
 	arr["TURKISH",234]="Tebrikler!! Görünüşe göre key şifresi çözüldü"
 
 	arr["ENGLISH",235]="Do you want to save the trophy file with the decrypted password? ${normal_color}${visual_choice}"
-	arr["SPANISH",235]="¿Quieres guardar el fichero de trofeo con la clave desencriptada? ${normal_color}${visual_choice}"
+	arr["SPANISH",235]="¿Quieres guardar el fichero de trofeo con la clave descifrada? ${normal_color}${visual_choice}"
 	arr["FRENCH",235]="Voulez-vous enregistrer le fichier trophée avec le mot de passe déchiffré? ${normal_color}${visual_choice}"
-	arr["CATALAN",235]="¿Vols desar el fitxer de trofeu amb la clau desencriptada? ${normal_color}${visual_choice}"
+	arr["CATALAN",235]="¿Vols desar el fitxer de trofeu amb la clau desxifrada? ${normal_color}${visual_choice}"
 	arr["PORTUGUESE",235]="Você quer salvar arquivo com a senha descriptografada? ${normal_color}${visual_choice}"
 	arr["RUSSIAN",235]="Вы хотите сохранить трофейный файл с расшифрованным паролем? ${normal_color}${visual_choice}"
 	arr["GREEK",235]="Θέλετε να αποθηκεύσετε το αρχείο τρόπαιο με τον αποκρυπτογραφημένο κωδικό πρόσβασης; ${normal_color}${visual_choice}"
@@ -5962,10 +5962,10 @@ function language_strings() {
 	arr["TURKISH",428]="Gerçek istemciler WEP şifreli ağa bağlıysa, süreç önemli ölçüde hızlandırılacaktır. Yeterli İV'ler (Başlatma Vektörleri) daha hızlı yakalanacak"
 
 	arr["ENGLISH",429]="The WEP \"All-in-One\" attack combines different techniques to generate enough traffic to decrypt the key (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentation, Fake association, etc.)"
-	arr["SPANISH",429]="El ataque WEP \"Todo-en-Uno\" combina diversas técnicas para generar el tráfico suficiente que hace falta para desencriptar la clave (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentación, Falsa asociación, etc.)"
+	arr["SPANISH",429]="El ataque WEP \"Todo-en-Uno\" combina diversas técnicas para generar el tráfico suficiente que hace falta para descifrar la clave (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentación, Falsa asociación, etc.)"
 	arr["FRENCH",429]="L'attaque WEP \"Tout-en-Un\" combine plusieurs techniques pour générer le trafic nécessaire au décryptage de la clef (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentation, Fausse association, etc.)"
 	arr["CATALAN",429]="L'atac WEP \"Tot-en-Un\" combina diverses tècniques per generar el trànsit suficient que cal per desxifrar la clau (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentació, Falsa associació, etc.)"
-	arr["PORTUGUESE",429]="O ataque WEP \"Tudo-em-Um\" combina várias técnicas para gerar tráfego suficiente que é necessário para desencriptar a chave (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentação, Falsa associação, etc.)"
+	arr["PORTUGUESE",429]="O ataque WEP \"Tudo-em-Um\" combina várias técnicas para gerar tráfego suficiente que é necessário para descriptografar a chave (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentação, Falsa associação, etc.)"
 	arr["RUSSIAN",429]="Атака WEP \"Все-в-Одном\" сочетает в себе различные методы генерации трафика, достаточного для расшифровки ключа (Caffe Latte, Hirte, Replay, Chop-Chop, Дробление, Фальшивые ассоциации и т.д.)"
 	arr["GREEK",429]="Η \"All-in-One\" επίθεση WEP συνδυάζει διαφορετικές τεχνικές για να παραχθεί αρκετή κίνηση για να αποκρυπτογραφήσει το κλειδί (Caffe Latte, Hirte, Replay, Chop-Chop, Fragmentation, Fake association, κλπ)"
 	arr["ITALIAN",429]="L'attacco WEP \"Tutto-in-Uno\" combina diverse tecniche per generare il traffico necessario per decifrare la chiave (Caffe Latte, Hirte, Replay, Chop-Chop, Frammentazione, Falsa associazione, etc.)"
@@ -7030,7 +7030,7 @@ function language_strings() {
 	arr["TURKISH",517]="Kanal seç (2.4Ghz 1-14) or (5Ghz 36|38|40|44|46|48|52|54|56|60|62|64|100|102|104|108|110|112):"
 
 	arr["ENGLISH",518]="After capturing credentials during an Enterprise network attack, remember that you can try to decrypt NTLM hashes using the \"Offline WPA/WPA2 decrypt menu\""
-	arr["SPANISH",518]="Tras capturar unas credenciales en un ataque a una red Enterprise, recuerda que puedes intentar descifrar los hashes NTLM usando el \"Menú de desencriptado WPA/WPA2 offline\""
+	arr["SPANISH",518]="Tras capturar unas credenciales en un ataque a una red Enterprise, recuerda que puedes intentar descifrar los hashes NTLM usando el \"Menú de descifrado WPA/WPA2 offline\""
 	arr["FRENCH",518]="${pending_of_translation} Après avoir capturé les informations d'identification dans une attaque réseau Enterprise, n'oubliez pas que vous pouvez essayer de décrypter les hachages NTLM à l'aide du \"Menu crack WPA/WPA2 offline\""
 	arr["CATALAN",518]="Després de capturar unes credencials en un atac a una xarxa Enterprise, recorda que pots intentar desxifrar els hashes NTLM usant el \"Menú per desxifrar WPA/WPA2 offline\""
 	arr["PORTUGUESE",518]="Depois de capturar credenciais em um ataque de rede Enterprise, lembre-se de que você pode tentar descriptografar as hashes NTLM usando o \"Menu de descriptografia WPA/WPA2 offline\""
@@ -7246,7 +7246,7 @@ function language_strings() {
 	arr["TURKISH",535]="${pending_of_translation} 2.  Enterprise"
 
 	arr["ENGLISH",536]="0.  Return to offline WPA/WPA2 decrypt menu"
-	arr["SPANISH",536]="0.  Volver al menú de desencriptado WPA/WPA2 offline"
+	arr["SPANISH",536]="0.  Volver al menú de descifrado WPA/WPA2 offline"
 	arr["FRENCH",536]="${pending_of_translation} 0.  Retour au menu crack WPA/WPA2 offline"
 	arr["CATALAN",536]="0.  Tornar al menú per desxifrar WPA/WPA2 offline"
 	arr["PORTUGUESE",536]="0.  Voltar ao menu de descriptografia WPA/WPA2 offline"
@@ -7258,9 +7258,9 @@ function language_strings() {
 	arr["TURKISH",536]="${pending_of_translation} 0.  Çevrimdışı WPA/WPA2 şifre çözme menüsüne dön"
 
 	arr["ENGLISH",537]="Do you want to try to decrypt captured stuff? ${blue_color}Asleap tool will be used. If you answer no \"n\" you'll can try to do it later using hashcat or john the ripper from the offline WPA/WPA2 decrypt menu ${normal_color}${visual_choice}"
-	arr["SPANISH",537]="¿Quieres intentar descifrar lo capturado? ${blue_color}Se utilizará la herramienta asleap. Si respondes no \"n\" podrás intentarlo más tarde utilizando hashcat o john the ripper desde el menú de desencriptado offline WPA/WPA2 ${normal_color}${visual_choice}"
+	arr["SPANISH",537]="¿Quieres intentar descifrar lo capturado? ${blue_color}Se utilizará la herramienta asleap. Si respondes no \"n\" podrás intentarlo más tarde utilizando hashcat o john the ripper desde el menú de descifrado offline WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["FRENCH",537]="${pending_of_translation} Voulez-vous essayer de déchiffrer ce qui a été capturé? ${blue_color}L'outil asleap sera utilisé. Si vous ne répondez pas \"n\", vous pourrez l’essayer ultérieurement avec hashcat ou john the ripper à partir du menu de décryptage hors connexion WPA/WPA2 ${normal_color}${visual_choice}"
-	arr["CATALAN",537]="Vols intentar desxifrar el capturat? ${blue_color}S'utilitzarà l'eina asleap. Si respons no \"n\" podràs provar més tard utilitzant hashcat o john the ripper des del menú de desencriptat offline WPA/WPA2 ${normal_color}${visual_choice}"
+	arr["CATALAN",537]="Vols intentar desxifrar el capturat? ${blue_color}S'utilitzarà l'eina asleap. Si respons no \"n\" podràs provar més tard utilitzant hashcat o john the ripper des del menú de desxifrat offline WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["PORTUGUESE",537]="Você quer tentar decifrar o que foi capturado? ${blue_color}A ferramenta asleap será usada. Se você responder não \"n\" você pode tentar mais tarde usando o hashcat ou john the ripper no menu de descriptografia WPA/WPA2 offline ${normal_color}${visual_choice}"
 	arr["RUSSIAN",537]="Вы хотите попытаться расшифровать захваченные хеши? ${blue_color}Будет использован инструмент asleap. Если вы ответите нет \"n\", вы можете попытаться сделать это позже, используя hashcat или john the ripper из меню офлайн расшифровки WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["GREEK",537]="${pending_of_translation} Θέλετε να προσπαθήσετε να αποκρυπτογραφήσετε τα περιεχόμενα; ${blue_color}Το εργαλείο asleap θα χρησιμοποιηθεί. Εάν απαντήσετε όχι \"n\", μπορείτε να προσπαθήσετε να το κάνετε αργότερα χρησιμοποιώντας hashcat ή john the ripper από το αποκρυπτογραφημένο μενού WPA/WPA2 ${normal_color}${visual_choice}"
@@ -7294,9 +7294,9 @@ function language_strings() {
 	arr["TURKISH",539]="Asleap trophy dosyası başarıyla şurada oluşturuldu [${normal_color}${path_to_asleap_trophy}${blue_color}]"
 
 	arr["ENGLISH",540]="It seems we failed... try it again using another dictionary or choose bruteforce/rule based attack from the offline WPA/WPA2 decrypt menu"
-	arr["SPANISH",540]="Parece que no lo hemos conseguido... inténtalo de nuevo con otro diccionario o por fuerza bruta/ataque basado en reglas desde el menú de desencriptado offline WPA/WPA2"
+	arr["SPANISH",540]="Parece que no lo hemos conseguido... inténtalo de nuevo con otro diccionario o por fuerza bruta/ataque basado en reglas desde el menú de descifrado offline WPA/WPA2"
 	arr["FRENCH",540]="${pending_of_translation} Il semble que nous n'ayons pas réussi... essayez à nouveau avec un autre dictionnaire ou par force brutale/attaque basée sur les règles du menu de décryptage hors ligne WPA/WPA2"
-	arr["CATALAN",540]="Sembla que no ho hem aconseguit... intenta-ho de nou amb un altre diccionari o per força bruta/atac basat en regles des del menú de desencriptat offline WPA/WPA2"
+	arr["CATALAN",540]="Sembla que no ho hem aconseguit... intenta-ho de nou amb un altre diccionari o per força bruta/atac basat en regles des del menú de desxifrat offline WPA/WPA2"
 	arr["PORTUGUESE",540]="Parece que não conseguimos... Tente novamente usando outro dicionário ou fazendo um ataque de força bruta baseado em regras do menu de descriptografia WPA/WPA2 offline"
 	arr["RUSSIAN",540]="Кажется, мы потерпели неудачу... повторите попытку с помощью другого словаря или выберите атаку, основанную на грубой силе/правилах, из меню офлайн расшифровки WPA/WPA2"
 	arr["GREEK",540]="${pending_of_translation} Φαίνεται ότι αποτύχαμε... Δοκιμάστε το ξανά χρησιμοποιώντας ένα άλλο λεξικό ή επιλέξτε τη βίαιη επίθεση/εξάρτηση βάσει κανόνων από το μενού αποκρυπτογράφησης WPA/WPA2 εκτός σύνδεσης"
