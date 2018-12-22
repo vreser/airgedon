@@ -6171,12 +6171,27 @@ function manage_hashcat_pot() {
 				hashcat_potpath="${hashcat_potpath}/"
 			fi
 
+			local multiple_users=0
 			if [ "${1}" = "personal" ]; then
 				hashcatpot_filename="hashcat-${bssid}.txt"
+				[[ $(cat "${tmpdir}${hashcat_pot_tmp}") =~ .+:(.+)$ ]] && hashcat_key="${BASH_REMATCH[1]}"
 			else
-				local enterprise_user
-				[[ $(cat "${hashcatenterpriseenteredpath}") =~ ^([^:]+:?[^:]+) ]] && enterprise_user="${BASH_REMATCH[1]}"
-				hashcatpot_filename="hashcat-enterprise_user-${enterprise_user}.txt"
+				if [[ $(wc -l "${tmpdir}${hashcat_pot_tmp}" | awk '{print $1}') -gt 1 ]]; then
+					multiple_users=1
+					hashcatpot_filename="hashcat-enterprise_user-multiple_users.txt"
+					local enterprise_users=()
+					local hashcat_keys=()
+					readarray -t DECRYPTED_MULTIPLE_USER_PASS < <(uniq "${tmpdir}${hashcat_pot_tmp}" | sort 2> /dev/null)
+					for item in "${DECRYPTED_MULTIPLE_USER_PASS[@]}"; do
+						[[ "${item}" =~ ^([^:]+:?[^:]+) ]] && enterprise_users+=("${BASH_REMATCH[1]}")
+						[[ "${item}" =~ .+:(.+)$ ]] && hashcat_keys+=("${BASH_REMATCH[1]}")
+					done
+				else
+					local enterprise_user
+					[[ $(cat "${hashcatenterpriseenteredpath}") =~ ^([^:]+:?[^:]+) ]] && enterprise_user="${BASH_REMATCH[1]}"
+					hashcatpot_filename="hashcat-enterprise_user-${enterprise_user}.txt"
+					[[ $(cat "${tmpdir}${hashcat_pot_tmp}") =~ .+:(.+)$ ]] && hashcat_key="${BASH_REMATCH[1]}"
+				fi
 			fi
 			hashcat_potpath="${hashcat_potpath}${hashcatpot_filename}"
 
@@ -6185,7 +6200,6 @@ function manage_hashcat_pot() {
 				read_path "hashcatpot"
 			done
 
-			[[ $(cat "${tmpdir}${hashcat_pot_tmp}") =~ .+:(.+)$ ]] && hashcat_key="${BASH_REMATCH[1]}"
 			{
 			echo ""
 			date +%Y-%m-%d
@@ -6198,17 +6212,37 @@ function manage_hashcat_pot() {
 				echo "BSSID: ${bssid}"
 				} >> "${potenteredpath}"
 			else
-				{
-				echo "${hashcat_texts[${language},2]}: ${enterprise_user}"
-				} >> "${potenteredpath}"
+				if [ "${multiple_users}" -eq 1 ]; then
+					{
+					echo "${hashcat_texts[${language},3]}"
+					} >> "${potenteredpath}"
+				else
+					{
+					echo "${hashcat_texts[${language},2]}: ${enterprise_user}"
+					} >> "${potenteredpath}"
+				fi
 			fi
 
-			{
-			echo ""
-			echo "---------------"
-			echo ""
-			echo "${hashcat_key}"
-			} >> "${potenteredpath}"
+			if [ "${multiple_users}" -eq 1 ]; then
+				{
+				echo ""
+				echo "---------------"
+				echo ""
+				} >> "${potenteredpath}"
+
+				for (( x=0; x<${#enterprise_users[@]}; x++ )); do
+					{
+					echo "${enterprise_users[${x}]} / ${hashcat_keys[${x}]}"
+					} >> "${potenteredpath}"
+				done
+			else
+				{
+				echo ""
+				echo "---------------"
+				echo ""
+				echo "${hashcat_key}"
+				} >> "${potenteredpath}"
+			fi
 
 			add_contributing_footer_to_file "${potenteredpath}"
 

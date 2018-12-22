@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181217
+#Date.........: 20181222
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -627,6 +627,18 @@ function language_strings() {
 	hashcat_texts["POLISH",2]="${pending_of_translation} Nazwa użytkownika w enterprise"
 	hashcat_texts["GERMAN",2]="${pending_of_translation} Enterprise-Benutzername"
 	hashcat_texts["TURKISH",2]="${pending_of_translation} Kullanıcı adı enterprise"
+
+	hashcat_texts["ENGLISH",3]="Enterprise users and passwords"
+	hashcat_texts["SPANISH",3]="Usuarios y contraseñas enterprise"
+	hashcat_texts["FRENCH",3]="${pending_of_translation} Utilisateurs et mots de passe d'entreprise"
+	hashcat_texts["CATALAN",3]="${pending_of_translation} Usuaris i contrasenyes enterprise"
+	hashcat_texts["PORTUGUESE",3]="${pending_of_translation} Usuários e senhas enterprise"
+	hashcat_texts["RUSSIAN",3]="${pending_of_translation} Пользовательские и enterprise пароли"
+	hashcat_texts["GREEK",3]="${pending_of_translation} Χρήστες και enterprise κωδικοί πρόσβασης"
+	hashcat_texts["ITALIAN",3]="${pending_of_translation} Utenti e password enterprise"
+	hashcat_texts["POLISH",3]="${pending_of_translation} Użytkownicy i hasła enterprise"
+	hashcat_texts["GERMAN",3]="${pending_of_translation} Enterprise-Benutzername und Kennwörter"
+	hashcat_texts["TURKISH",3]="${pending_of_translation} Kullanıcılar ve enterprise şifreler"
 
 	declare -gA aircrack_texts
 	aircrack_texts["ENGLISH",1]="airgeddon. Decrypted password using aircrack"
