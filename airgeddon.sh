@@ -6939,6 +6939,9 @@ function exec_hashcat_dictionary_attack() {
 
 	debug_print
 
+	tmpfiles_toclean=1
+	rm -rf "${tmpdir}hctmp"* > /dev/null 2>&1
+
 	if [ "${1}" = "personal" ]; then
 		hashcat_cmd="hashcat -m 2500 -a 0 \"${tmpdir}${hashcat_tmp_file}\" \"${DICTIONARY}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
 	else
@@ -6953,6 +6956,9 @@ function exec_hashcat_bruteforce_attack() {
 
 	debug_print
 
+	tmpfiles_toclean=1
+	rm -rf "${tmpdir}hctmp"* > /dev/null 2>&1
+
 	hashcat_cmd="hashcat -m 2500 -a 3 \"${tmpdir}${hashcat_tmp_file}\" \"${charset}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
 	eval "${hashcat_cmd}"
 	language_strings "${language}" 115 "read"
@@ -6962,6 +6968,9 @@ function exec_hashcat_bruteforce_attack() {
 function exec_hashcat_rulebased_attack() {
 
 	debug_print
+
+	tmpfiles_toclean=1
+	rm -rf "${tmpdir}hctmp"* > /dev/null 2>&1
 
 	if [ "${1}" = "personal" ]; then
 		hashcat_cmd="hashcat -m 2500 -a 0 \"${tmpdir}${hashcat_tmp_file}\" \"${DICTIONARY}\" -r \"${RULES}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
