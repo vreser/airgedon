@@ -6984,9 +6984,9 @@ function exec_hashcat_bruteforce_attack() {
 	rm -rf "${tmpdir}hctmp"* > /dev/null 2>&1
 
 	if [ "${1}" = "personal" ]; then
-		hashcat_cmd="hashcat -m 2500 -a 3 \"${tmpdir}${hashcat_tmp_file}\" \"${charset}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+		hashcat_cmd="hashcat -m 2500 -a 3 \"${tmpdir}${hashcat_tmp_file}\" \"${charset}\" --increment --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
 	else
-		hashcat_cmd="hashcat -m 5500 -a 3 \"${hashcatenterpriseenteredpath}\" \"${charset}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+		hashcat_cmd="hashcat -m 5500 -a 3 \"${hashcatenterpriseenteredpath}\" \"${charset}\" --increment --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
 	fi
 	eval "${hashcat_cmd}"
 	language_strings "${language}" 115 "read"
