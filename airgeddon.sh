@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181221
+#Date.........: 20181222
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -5578,7 +5578,7 @@ function personal_decrypt_menu() {
 			else
 				get_hashcat_version
 				set_hashcat_parameters
-				hashcat_rulebased_attack_option
+				hashcat_rulebased_attack_option "personal"
 			fi
 		;;
 		*)
@@ -5642,7 +5642,13 @@ function enterprise_decrypt_menu() {
 			under_construction_message
 		;;
 		6)
-			under_construction_message
+			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
+				forbidden_menu_option
+			else
+				get_hashcat_version
+				set_hashcat_parameters
+				hashcat_rulebased_attack_option "enterprise"
+			fi
 		;;
 		7)
 			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
@@ -6098,14 +6104,22 @@ function hashcat_rulebased_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file "personal"
+	if [ "${1}" = "personal" ]; then
+		manage_asking_for_captured_file "personal"
 
-	if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
-		return
-	fi
+		if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
+			return
+		fi
 
-	if ! convert_cap_to_hashcat_format; then
-		return
+		if ! convert_cap_to_hashcat_format; then
+			return
+		fi
+	else
+		manage_asking_for_captured_file "enterprise"
+
+		if ! validate_enterprise_hashcat_file "${hashcatenterpriseenteredpath}"; then
+			return
+		fi
 	fi
 
 	manage_asking_for_dictionary_file
@@ -6114,7 +6128,7 @@ function hashcat_rulebased_attack_option() {
 	echo
 	language_strings "${language}" 190 "yellow"
 	language_strings "${language}" 115 "read"
-	exec_hashcat_rulebased_attack
+	exec_hashcat_rulebased_attack "${1}"
 	manage_hashcat_pot "${1}"
 }
 
@@ -6915,7 +6929,11 @@ function exec_hashcat_rulebased_attack() {
 
 	debug_print
 
-	hashcat_cmd="hashcat -m 2500 -a 0 \"${tmpdir}${hashcat_tmp_file}\" \"${DICTIONARY}\" -r \"${RULES}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	if [ "${1}" = "personal" ]; then
+		hashcat_cmd="hashcat -m 2500 -a 0 \"${tmpdir}${hashcat_tmp_file}\" \"${DICTIONARY}\" -r \"${RULES}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	else
+		hashcat_cmd="hashcat -m 5500 -a 0 \"${hashcatenterpriseenteredpath}\" \"${DICTIONARY}\" -r \"${RULES}\" --potfile-disable -o \"${tmpdir}${hashcat_pot_tmp}\"${hashcat_cmd_fix} | tee \"${tmpdir}${hashcat_output_file}\" ${colorize}"
+	fi
 	eval "${hashcat_cmd}"
 	language_strings "${language}" 115 "read"
 }
