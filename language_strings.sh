@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181222
+#Date.........: 20181228
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -8096,6 +8096,42 @@ function language_strings() {
 	arr["POLISH",606]="${pending_of_translation} Wybrany plik enterprise john the ripper przechwytywania ${pink_color}Brak${normal_color}"
 	arr["GERMAN",606]="${pending_of_translation} Ausgewählte Enterprise-john the ripper-Capture-Datei: ${pink_color}Keine${normal_color}"
 	arr["TURKISH",606]="${pending_of_translation} Seçilen yakalama enterprise john the ripper dosyası: ${pink_color}None${normal_color}"
+
+	arr["ENGLISH",607]="Selected file has an invalid john the ripper enterprise hashes format"
+	arr["SPANISH",607]="El fichero seleccionado no tiene un formato válido de hashes enterprise para john the ripper"
+	arr["FRENCH",607]="${pending_of_translation} Le fichier sélectionné n'a pas un format d'entreprise de hashes valide pour john the ripper"
+	arr["CATALAN",607]="El fitxer seleccionat no té un format vàlid de hashes enterprise per john the ripper"
+	arr["PORTUGUESE",607]="${pending_of_translation} O arquivo selecionado não possui um formato enterprise de hashes válido para o john the ripper"
+	arr["RUSSIAN",607]="Выбранный файл имеет недопустимый формат хеша enterprise для john the ripper"
+	arr["GREEK",607]="${pending_of_translation} Το επιλεγμένο αρχείο έχει μια μη έγκυρη μορφή hashes της επιχείρησης john the ripper"
+	arr["ITALIAN",607]="Il file selezionato non ha un hash valido in formato enterprise per john the ripper"
+	arr["POLISH",607]="${pending_of_translation} Wybrany plik ma nieprawidłowy format haszy korporacyjnego john the ripper"
+	arr["GERMAN",607]="${pending_of_translation} Die ausgewählte Datei hat kein gültiges Hash-Enterpriseformat für john the ripper"
+	arr["TURKISH",607]="${pending_of_translation} Seçilen dosyanın geçersiz bir john the ripper kuruluş karma biçimi var"
+
+	arr["ENGLISH",608]="Selected file has a valid john the ripper enterprise hashes format"
+	arr["SPANISH",608]="El fichero seleccionado tiene un formato válido de hashes enterprise para john the ripper"
+	arr["FRENCH",608]="${pending_of_translation} Le fichier sélectionné a un format d’entreprise de hashes valide pour john the ripper."
+	arr["CATALAN",608]="El fitxer seleccionat té un format vàlid de hashes enterprise per john the ripper"
+	arr["PORTUGUESE",608]="${pending_of_translation} O arquivo selecionado tem um formato de empresa de hashes válido para john the ripper"
+	arr["RUSSIAN",608]="Выбранный файл имеет правильный формат хеша enterprise для john the ripper"
+	arr["GREEK",608]="${pending_of_translation} Το επιλεγμένο αρχείο έχει μια έγκυρη μορφή hashes της επιχείρησης hashes john the ripper"
+	arr["ITALIAN",608]="Il file selezionato ha un hash valido in formato enterprise per john the ripper"
+	arr["POLISH",608]="${pending_of_translation} Wybrany plik ma poprawny format haszy korporacyjnego john the ripper"
+	arr["GERMAN",608]="${pending_of_translation} Die ausgewählte Datei hat ein gültiges Hash-Unternehmensformat für john the ripper"
+	arr["TURKISH",608]="${pending_of_translation} Seçilen dosyanın geçerli bir john the ripper kurumsal karma biçimi var"
+
+	arr["ENGLISH",609]="You already have selected a capture file during this session [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
+	arr["SPANISH",609]="Ya tienes seleccionado un fichero de captura en esta sesión [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
+	arr["FRENCH",609]="Vous avez déjà sélectionné un fichier de capture pour cette session ${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
+	arr["CATALAN",609]="Ja tens seleccionat un fitxer de captura en aquesta sessió [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
+	arr["PORTUGUESE",609]="Você selecionou um arquivo de captura nesta sessão [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
+	arr["RUSSIAN",609]="Вы уже выбрали файл захвата во время этой сессии [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
+	arr["GREEK",609]="Έχετε ήδη επιλέξει αρχείο καταγραφής κατά τη διάρκεια της συνεδρίας [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
+	arr["ITALIAN",609]="È stato selezionato un file di cattura in questa sessione [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
+	arr["POLISH",609]="W tej sesji wybrano już plik przechwytywania [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
+	arr["GERMAN",609]="Sie haben bereits eine Capture-Datei in dieser Sitzung ausgewählt [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
+	arr["TURKISH",609]="Bu oturumda zaten bir yakalama dosyası seçtiniz [${normal_color} ${jtrenterpriseenteredpath}${blue_color}]"
 
 	case "${3}" in
 		"yellow")

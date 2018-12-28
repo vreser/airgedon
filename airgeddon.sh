@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181222
+#Date.........: 20181228
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -148,6 +148,11 @@ hccapx_tool="cap2hccapx"
 possible_hccapx_converter_known_locations=(
 										"/usr/lib/hashcat-utils/${hccapx_tool}.bin"
 									)
+
+#john the ripper vars
+jtr_tmp_simple_name_file="jtrtmp"
+jtr_pot_tmp="${jtr_tmp_simple_name_file}.pot"
+jtr_output_file="${jtr_tmp_simple_name_file}.out"
 
 #WEP vars
 wep_data="wepdata"
@@ -4431,6 +4436,7 @@ function clean_tmpfiles() {
 	rm -rf "${tmpdir}clts"* > /dev/null 2>&1
 	rm -rf "${tmpdir}wnws.txt" > /dev/null 2>&1
 	rm -rf "${tmpdir}hctmp"* > /dev/null 2>&1
+	rm -rf "${tmpdir}jtrtmp"* > /dev/null 2>&1
 	rm -rf "${tmpdir}${aircrack_pot_tmp}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${hostapd_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${hostapd_wpe_file}" > /dev/null 2>&1
@@ -5621,7 +5627,12 @@ function enterprise_decrypt_menu() {
 			return
 		;;
 		1)
-			under_construction_message
+			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
+				forbidden_menu_option
+			else
+				get_jtr_version
+				enterprise_jtr_dictionary_attack_option
+			fi
 		;;
 		2)
 			under_construction_message
@@ -5707,9 +5718,15 @@ function ask_capture_file() {
 			read_path "targetfilefordecrypt"
 		done
 	else
-		while [[ "${validpath}" != "0" ]]; do
-			read_path "targetenterprisefilefordecrypt"
-		done
+		if [ "${2}" = "hashcat" ]; then
+			while [[ "${validpath}" != "0" ]]; do
+				read_path "targethashcatenterprisefilefordecrypt"
+			done
+		else
+			while [[ "${validpath}" != "0" ]]; do
+				read_path "targetjtrenterprisefilefordecrypt"
+			done
+		fi
 	fi
 	language_strings "${language}" 189 "yellow"
 }
@@ -5725,21 +5742,34 @@ function manage_asking_for_captured_file() {
 			language_strings "${language}" 186 "blue"
 			ask_yesno 187 "yes"
 			if [ "${yesno}" = "n" ]; then
-				ask_capture_file "${1}"
+				ask_capture_file "${1}" "${2}"
 			fi
 		else
-			ask_capture_file "${1}"
+			ask_capture_file "${1}" "${2}"
 		fi
 	else
-		if [ -n "${hashcatenterpriseenteredpath}" ]; then
-			echo
-			language_strings "${language}" 600 "blue"
-			ask_yesno 187 "yes"
-			if [ "${yesno}" = "n" ]; then
-				ask_capture_file "${1}"
+		if [ "${2}" = "hashcat" ]; then
+			if [ -n "${hashcatenterpriseenteredpath}" ]; then
+				echo
+				language_strings "${language}" 600 "blue"
+				ask_yesno 187 "yes"
+				if [ "${yesno}" = "n" ]; then
+					ask_capture_file "${1}" "${2}"
+				fi
+			else
+				ask_capture_file "${1}" "${2}"
 			fi
 		else
-			ask_capture_file "${1}"
+			if [ -n "${jtrenterpriseenteredpath}" ]; then
+				echo
+				language_strings "${language}" 609 "blue"
+				ask_yesno 187 "yes"
+				if [ "${yesno}" = "n" ]; then
+					ask_capture_file "${1}" "${2}"
+				fi
+			else
+				ask_capture_file "${1}" "${2}"
+			fi
 		fi
 	fi
 }
@@ -5956,6 +5986,27 @@ function select_wpa_bssid_target_from_captured_file() {
 	return 0
 }
 
+#Validate if given file has a valid enterprise john the ripper format
+function validate_enterprise_jtr_file() {
+
+	debug_print
+
+	echo
+	readarray -t JTR_LINES_TO_VALIDATE < <(cat "${1}" 2> /dev/null)
+
+	for item in "${JTR_LINES_TO_VALIDATE[@]}"; do
+		if [[ ! "${item}" =~ ^.+:\$NETNTLM\$[a-zA-Z0-9\$]+$ ]]; then
+			language_strings "${language}" 607 "red"
+			language_strings "${language}" 115 "read"
+			return 1
+		fi
+	done
+
+	language_strings "${language}" 608 "blue"
+	language_strings "${language}" 115 "read"
+	return 0
+}
+
 #Validate if given file has a valid enterprise hashcat format
 function validate_enterprise_hashcat_file() {
 
@@ -6000,7 +6051,7 @@ function aircrack_dictionary_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file "personal"
+	manage_asking_for_captured_file "personal" "aircrack"
 
 	if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
 		return
@@ -6020,7 +6071,7 @@ function aircrack_bruteforce_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file "personal"
+	manage_asking_for_captured_file "personal" "aircrack"
 
 	if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
 		return
@@ -6042,12 +6093,32 @@ function aircrack_bruteforce_attack_option() {
 	manage_aircrack_pot
 }
 
+#Validate and ask for the different parameters used in a john the ripper dictionary based attack
+function enterprise_jtr_dictionary_attack_option() {
+
+	debug_print
+
+	manage_asking_for_captured_file "enterprise" "jtr"
+
+	if ! validate_enterprise_jtr_file "${jtrenterpriseenteredpath}"; then
+		return
+	fi
+
+	manage_asking_for_dictionary_file
+
+	echo
+	language_strings "${language}" 190 "yellow"
+	language_strings "${language}" 115 "read"
+	exec_jtr_dictionary_attack
+	#TODO manage_jtr_pot function
+}
+
 #Validate and ask for the different parameters used in a hashcat dictionary based attack
 function hashcat_dictionary_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file "${1}"
+	manage_asking_for_captured_file "${1}" "hashcat"
 
 	if [ "${1}" = "personal" ]; then
 		if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
@@ -6077,7 +6148,7 @@ function hashcat_bruteforce_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file "${1}"
+	manage_asking_for_captured_file "${1}" "hashcat"
 
 	if [ "${1}" = "personal" ]; then
 		if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
@@ -6114,7 +6185,7 @@ function hashcat_rulebased_attack_option() {
 
 	debug_print
 
-	manage_asking_for_captured_file "${1}"
+	manage_asking_for_captured_file "${1}" "hashcat"
 
 	if [ "${1}" = "personal" ]; then
 		if ! select_wpa_bssid_target_from_captured_file "${enteredpath}"; then
@@ -6955,6 +7026,19 @@ function exec_aircrack_dictionary_attack() {
 	rm -rf "${tmpdir}${aircrack_pot_tmp}" > /dev/null 2>&1
 	aircrack_cmd="aircrack-ng -a 2 -b \"${bssid}\" -l \"${tmpdir}${aircrack_pot_tmp}\" -w \"${DICTIONARY}\" \"${enteredpath}\" ${colorize}"
 	eval "${aircrack_cmd}"
+	language_strings "${language}" 115 "read"
+}
+
+#Execute john the ripper dictionary attack
+function exec_jtr_dictionary_attack() {
+
+	debug_print
+
+	tmpfiles_toclean=1
+	rm -rf "${tmpdir}jtrtmp"* > /dev/null 2>&1
+
+	jtr_cmd="john \"${jtrenterpriseenteredpath}\" --format=netntlm-naive --wordlist=\"${DICTIONARY}\" --pot=\"${tmpdir}${jtr_pot_tmp}\" --encoding=UTF-8 | tee \"${tmpdir}${jtr_output_file}\" ${colorize}"
+	eval "${jtr_cmd}"
 	language_strings "${language}" 115 "read"
 }
 
@@ -9829,10 +9913,15 @@ function read_path() {
 			read_and_clean_path "enteredpath"
 			check_file_exists "${enteredpath}"
 		;;
-		"targetenterprisefilefordecrypt")
+		"targethashcatenterprisefilefordecrypt")
 			language_strings "${language}" 188 "green"
 			read_and_clean_path "hashcatenterpriseenteredpath"
 			check_file_exists "${hashcatenterpriseenteredpath}"
+		;;
+		"targetjtrenterprisefilefordecrypt")
+			language_strings "${language}" 188 "green"
+			read_and_clean_path "jtrenterpriseenteredpath"
+			check_file_exists "${jtrenterpriseenteredpath}"
 		;;
 		"rules")
 			language_strings "${language}" 242 "green"
@@ -11355,6 +11444,14 @@ function set_hashcat_parameters() {
 			hccapx_needed=1
 		fi
 	fi
+}
+
+#Determine john the ripper version
+function get_jtr_version() {
+
+	debug_print
+
+	jtr_version=$(john --help | grep -Ei "version" | awk '{print $7}' | awk -F '-' '{print $1}')
 }
 
 #Determine hashcat version
