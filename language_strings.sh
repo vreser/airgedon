@@ -8133,6 +8133,18 @@ function language_strings() {
 	arr["GERMAN",609]="Sie haben bereits eine Capture-Datei in dieser Sitzung ausgewählt [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
 	arr["TURKISH",609]="Bu oturumda zaten bir yakalama dosyası seçtiniz [${normal_color} ${jtrenterpriseenteredpath}${blue_color}]"
 
+	arr["ENGLISH",610]="Hashes obtained during an enterprise wifi network attack can be also decrypted using john the ripper tool. Dictionary, rule based or bruteforce attacks can be performed from airgeddon menus"
+	arr["SPANISH",610]="También se puede usar john the ripper para descifrar los hashes obtenidos en un ataque a una red wifi enterprise. Ataques de diccionario, basados en reglas o por fuerza bruta pueden ser usados desde los menús de airgeddon"
+	arr["FRENCH",610]="${pending_of_translation} Vous pouvez également utiliser john the ripper pour déchiffrer les hachages obtenus lors d'une attaque contre un réseau wifi d'entreprise. Les attaques de dictionnaire, basées sur des règles ou la force brute peuvent être utilisées à partir des menus de airgeddon"
+	arr["CATALAN",610]="${pending_of_translation} També es pot usar john the ripper per desxifrar els hashes obtinguts en un atac a una xarxa wifi enterprise. Atacs de diccionari, basats en regles o per força bruta poden ser usats des dels menús de airgeddon"
+	arr["PORTUGUESE",610]="${pending_of_translation} Você também pode usar john the ripper para descriptografar os hashes obtidos em um ataque a uma rede wifi corporativa. Ataques de dicionário, baseados em regras ou força bruta, podem ser usados nos menus do airgeddon"
+	arr["RUSSIAN",610]="${pending_of_translation} Хэши, полученные во время атаки на корпоративную сеть wifi, также могут быть расшифрованы с помощью инструмента john the ripper. Словарь, основанные на правилах или грубые атаки могут быть выполнены из меню airgeddon"
+	arr["GREEK",610]="${pending_of_translation} Οι χασίχες που αποκτήθηκαν κατά τη διάρκεια μιας επιχείρησης wifi δικτύου επιθέσεις μπορούν επίσης να αποκρυπτογραφηθούν χρησιμοποιώντας το εργαλείο john the ripper. Λεξικό, επιθέσεις βασισμένες σε κανόνες ή bruteforce μπορούν να εκτελεστούν από μενού airgeddon"
+	arr["ITALIAN",610]="${pending_of_translation} È inoltre possibile utilizzare john the ripper per decrittografare gli hash ottenuti in un attacco a una rete wifi aziendale. Gli attacchi di dizionario, basati su regole o forza bruta, possono essere utilizzati dai menu di airgeddon"
+	arr["POLISH",610]="${pending_of_translation} Możesz również użyć ripera john, aby odszyfrować hasze uzyskane podczas ataku na firmową sieć wifi. Ataki słownikowe, oparte na regułach lub brutalnej sile, mogą być używane z menu airgeddon"
+	arr["GERMAN",610]="${pending_of_translation} Sie können john the ripper auch verwenden, um die bei einem Angriff auf ein Wi-Fi-Netzwerk eines Unternehmens erhaltenen Hashes zu entschlüsseln. Wörterbuchangriffe, die auf Regeln oder Brute Force basieren, können aus den Menüs von airgeddon verwendet werden"
+	arr["TURKISH",610]="${pending_of_translation} Bir kurumsal wifi ağına yapılan saldırıda elde edilen karmaşanın şifresini çözmek için john the ripper'i kullanabilirsiniz. Kurallara veya kaba kuvvetlere dayalı sözlük saldırıları, airgeddon menülerinden kullanılabilir"
+
 	case "${3}" in
 		"yellow")
 			interrupt_checkpoint "${2}" "${3}"
