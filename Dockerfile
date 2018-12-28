@@ -42,7 +42,8 @@ RUN \
 	wireless-tools \
 	iw \
 	aircrack-ng \
-	xterm
+	xterm \
+	iproute2
 
 #Install airgeddon internal tools
 RUN \
