@@ -34,6 +34,7 @@ essential_tools_names=(
 						"airodump-ng"
 						"aircrack-ng"
 						"xterm"
+						"ip"
 					)
 
 optional_tools_names=(
@@ -74,6 +75,7 @@ declare -A possible_package_names=(
 									[${essential_tools_names[5]}]="aircrack-ng" #airodump-ng
 									[${essential_tools_names[6]}]="aircrack-ng" #aircrack-ng
 									[${essential_tools_names[7]}]="xterm" #xterm
+									[${essential_tools_names[8]}]="iproute2" #ip
 									[${optional_tools_names[0]}]="aircrack-ng" #wpaclean
 									[${optional_tools_names[1]}]="crunch" #crunch
 									[${optional_tools_names[2]}]="aircrack-ng" #aireplay-ng
