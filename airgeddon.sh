@@ -11558,6 +11558,7 @@ function set_hashcat_parameters() {
 }
 
 #Determine john the ripper
+#shellcheck disable=SC2034
 function get_jtr_version() {
 
 	debug_print
