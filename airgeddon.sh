@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181228
+#Date.........: 20181229
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -6112,7 +6112,7 @@ function enterprise_jtr_dictionary_attack_option() {
 	language_strings "${language}" 190 "yellow"
 	language_strings "${language}" 115 "read"
 	exec_jtr_dictionary_attack
-	#TODO manage_jtr_pot function
+	manage_jtr_pot
 }
 
 #Validate and ask for the different parameters used in a hashcat dictionary based attack
@@ -6257,7 +6257,7 @@ function manage_hashcat_pot() {
 				hashcatpot_filename="hashcat-${bssid}.txt"
 				[[ $(cat "${tmpdir}${hashcat_pot_tmp}") =~ .+:(.+)$ ]] && hashcat_key="${BASH_REMATCH[1]}"
 			else
-				if [[ $(wc -l "${tmpdir}${hashcat_pot_tmp}" | awk '{print $1}') -gt 1 ]]; then
+				if [[ $(wc -l "${tmpdir}${hashcat_pot_tmp}" 2> /dev/null | awk '{print $1}') -gt 1 ]]; then
 					multiple_users=1
 					hashcatpot_filename="hashcat-enterprise_user-multiple_users.txt"
 					local enterprise_users=()
@@ -6329,6 +6329,103 @@ function manage_hashcat_pot() {
 
 			echo
 			language_strings "${language}" 236 "blue"
+			language_strings "${language}" 115 "read"
+		fi
+	fi
+}
+
+#Check if the password was decrypted using john the ripper and manage to save it on a file
+function manage_jtr_pot() {
+
+	debug_print
+
+	jtr_pot=$(cat "${tmpdir}${jtr_pot_tmp}")
+
+	pass_decrypted_by_jtr=0
+
+	if [[ ${jtr_pot} =~ ^\$NETNTLM\$[^:]+:.+$ ]]; then
+		pass_decrypted_by_jtr=1
+	fi
+
+	if [ "${pass_decrypted_by_jtr}" -eq 1 ]; then
+
+		echo
+		language_strings "${language}" 234 "yellow"
+		ask_yesno 235 "yes"
+		if [ "${yesno}" = "y" ]; then
+			jtr_potpath="${default_save_path}"
+			lastcharjtr_potpath=${jtr_potpath: -1}
+			if [ "${lastcharjtr_potpath}" != "/" ]; then
+				jtr_potpath="${jtr_potpath}/"
+			fi
+
+			local multiple_users=0
+
+			if [[ $(wc -l "${tmpdir}${jtr_pot_tmp}" 2> /dev/null | awk '{print $1}') -gt 1 ]]; then
+				multiple_users=1
+				jtrpot_filename="jtr-enterprise_user-multiple_users.txt"
+				local enterprise_users=()
+				local jtr_keys=()
+				readarray -t DECRYPTED_MULTIPLE_PASS < <(uniq "${tmpdir}${jtr_pot_tmp}" | sort 2> /dev/null)
+				for item in "${DECRYPTED_MULTIPLE_PASS[@]}"; do
+					[[ "${item}" =~ ^\$NETNTLM\$[^:]+:(.+)$ ]] && jtr_keys+=("${BASH_REMATCH[1]}")
+					[[ $(grep -E "^${BASH_REMATCH[1]}" "${tmpdir}${jtr_output_file}") =~ [[:blank:]]+\((.+)\) ]] && enterprise_users+=("${BASH_REMATCH[1]}")
+				done
+			else
+				local enterprise_user
+				[[ $(cat "${jtrenterpriseenteredpath}") =~ ^([^:\$]+:?[^:\$]+) ]] && enterprise_user="${BASH_REMATCH[1]}"
+				jtrpot_filename="jtr-enterprise_user-${enterprise_user}.txt"
+				[[ "${jtr_pot}" =~ ^\$NETNTLM\$[^:]+:(.+)$ ]] && jtr_key="${BASH_REMATCH[1]}"
+			fi
+			jtr_potpath="${jtr_potpath}${jtrpot_filename}"
+
+			validpath=1
+			while [[ "${validpath}" != "0" ]]; do
+				read_path "jtrpot"
+			done
+
+			{
+			echo ""
+			date +%Y-%m-%d
+			echo "${jtr_texts[${language},1]}"
+			echo ""
+			} >> "${jtrpotenteredpath}"
+
+			if [ "${multiple_users}" -eq 1 ]; then
+				{
+				echo "${jtr_texts[${language},3]}"
+				} >> "${jtrpotenteredpath}"
+			else
+				{
+				echo "${jtr_texts[${language},2]}: ${enterprise_user}"
+				} >> "${jtrpotenteredpath}"
+			fi
+
+			if [ "${multiple_users}" -eq 1 ]; then
+				{
+				echo ""
+				echo "---------------"
+				echo ""
+				} >> "${jtrpotenteredpath}"
+
+				for (( x=0; x<${#enterprise_users[@]}; x++ )); do
+					{
+					echo "${enterprise_users[${x}]} / ${jtr_keys[${x}]}"
+					} >> "${jtrpotenteredpath}"
+				done
+			else
+				{
+				echo ""
+				echo "---------------"
+				echo ""
+				echo "${jtr_key}"
+				} >> "${jtrpotenteredpath}"
+			fi
+
+			add_contributing_footer_to_file "${jtrpotenteredpath}"
+
+			echo
+			language_strings "${language}" 612 "blue"
 			language_strings "${language}" 115 "read"
 		fi
 	fi
@@ -9776,6 +9873,10 @@ function validate_path() {
 				suggested_filename="${aircrackpot_filename}"
 				aircrackpotenteredpath+="${aircrackpot_filename}"
 			;;
+			"jtrpot")
+				suggested_filename="${jtrpot_filename}"
+				jtrpotenteredpath+="${jtrpot_filename}"
+			;;
 			"hashcatpot")
 				suggested_filename="${hashcatpot_filename}"
 				potenteredpath+="${hashcatpot_filename}"
@@ -9937,6 +10038,14 @@ function read_path() {
 				aircrackpotenteredpath="${aircrack_potpath}"
 			fi
 			validate_path "${aircrackpotenteredpath}" "${1}"
+		;;
+		"jtrpot")
+			language_strings "${language}" 611 "green"
+			read_and_clean_path "jtrpotenteredpath"
+			if [ -z "${jtrpotenteredpath}" ]; then
+				jtrpotenteredpath="${jtr_potpath}"
+			fi
+			validate_path "${jtrpotenteredpath}" "${1}"
 		;;
 		"hashcatpot")
 			language_strings "${language}" 233 "green"
@@ -11448,7 +11557,7 @@ function set_hashcat_parameters() {
 	fi
 }
 
-#Determine john the ripper version
+#Determine john the ripper
 function get_jtr_version() {
 
 	debug_print

@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181228
+#Date.........: 20181229
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -602,6 +602,43 @@ function language_strings() {
 	asleap_texts["POLISH",3]="${pending_of_translation} Odpowiedzi"
 	asleap_texts["GERMAN",3]="Response"
 	asleap_texts["TURKISH",3]="${pending_of_translation} Yanıtı"
+
+	declare -gA jtr_texts
+	jtr_texts["ENGLISH",1]="airgeddon. Decrypted password using john the ripper"
+	jtr_texts["SPANISH",1]="airgeddon. Contraseña descifrada con john the ripper"
+	jtr_texts["FRENCH",1]="airgeddon. Mot de passe déchiffré avec john the ripper"
+	jtr_texts["CATALAN",1]="airgeddon. Contrasenya desxifrada amb john the ripper"
+	jtr_texts["PORTUGUESE",1]="airgeddon descriptografou a senha usando john the ripper"
+	jtr_texts["RUSSIAN",1]="airgeddon. Пароль расшифрован с использованием john the ripper"
+	jtr_texts["GREEK",1]="airgeddon. Αποκρυπτογραφημένος κωδικός πρόσβασης με χρήση john the ripper"
+	jtr_texts["ITALIAN",1]="airgeddon. Password decifrata con john the ripper"
+	jtr_texts["POLISH",1]="airgeddon. Hasło odszyfrowane z użyciem john the ripper"
+	jtr_texts["GERMAN",1]="airgeddon. Passwort mit john the ripper entschlüsselt"
+	jtr_texts["TURKISH",1]="airgeddon. John the ripper kullanarak şifreyi çözdü"
+
+	jtr_texts["ENGLISH",2]="Enterprise user"
+	jtr_texts["SPANISH",2]="Usuario enterprise"
+	jtr_texts["FRENCH",2]="${pending_of_translation} Nom d'utilisateur enterprise"
+	jtr_texts["CATALAN",2]="Nom d'usuari enterprise"
+	jtr_texts["PORTUGUESE",2]="${pending_of_translation} Nome de usuário enterprise"
+	jtr_texts["RUSSIAN",2]="${pending_of_translation} Имя пользователя enterprise"
+	jtr_texts["GREEK",2]="Όνομα χρήστη enterprise"
+	jtr_texts["ITALIAN",2]="Utente enterprise"
+	jtr_texts["POLISH",2]="${pending_of_translation} Nazwa użytkownika w enterprise"
+	jtr_texts["GERMAN",2]="${pending_of_translation} Enterprise-Benutzername"
+	jtr_texts["TURKISH",2]="${pending_of_translation} Kullanıcı adı enterprise"
+
+	jtr_texts["ENGLISH",3]="Enterprise users and passwords"
+	jtr_texts["SPANISH",3]="Usuarios y contraseñas enterprise"
+	jtr_texts["FRENCH",3]="${pending_of_translation} Utilisateurs et mots de passe d'entreprise"
+	jtr_texts["CATALAN",3]="Usuaris i contrasenyes enterprise"
+	jtr_texts["PORTUGUESE",3]="${pending_of_translation} Usuários e senhas enterprise"
+	jtr_texts["RUSSIAN",3]="${pending_of_translation} Пользовательские и enterprise пароли"
+	jtr_texts["GREEK",3]="Enterprise χρήστες και κωδικοί πρόσβασης"
+	jtr_texts["ITALIAN",3]="${pending_of_translation} Utenti e password enterprise"
+	jtr_texts["POLISH",3]="${pending_of_translation} Użytkownicy i hasła enterprise"
+	jtr_texts["GERMAN",3]="${pending_of_translation} Enterprise-Benutzername und Kennwörter"
+	jtr_texts["TURKISH",3]="${pending_of_translation} Kullanıcılar ve enterprise şifreler"
 
 	declare -gA hashcat_texts
 	hashcat_texts["ENGLISH",1]="airgeddon. Decrypted password using hashcat"
@@ -8144,6 +8181,30 @@ function language_strings() {
 	arr["POLISH",610]="${pending_of_translation} Możesz również użyć ripera john, aby odszyfrować hasze uzyskane podczas ataku na firmową sieć wifi. Ataki słownikowe, oparte na regułach lub brutalnej sile, mogą być używane z menu airgeddon"
 	arr["GERMAN",610]="${pending_of_translation} Sie können john the ripper auch verwenden, um die bei einem Angriff auf ein Wi-Fi-Netzwerk eines Unternehmens erhaltenen Hashes zu entschlüsseln. Wörterbuchangriffe, die auf Regeln oder Brute Force basieren, können aus den Menüs von airgeddon verwendet werden"
 	arr["TURKISH",610]="${pending_of_translation} Bir kurumsal wifi ağına yapılan saldırıda elde edilen karmaşanın şifresini çözmek için john the ripper'i kullanabilirsiniz. Kurallara veya kaba kuvvetlere dayalı sözlük saldırıları, airgeddon menülerinden kullanılabilir"
+
+	arr["ENGLISH",611]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${jtr_potpath}]"
+	arr["SPANISH",611]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${jtr_potpath}]"
+	arr["FRENCH",611]="Entrez le chemin où vous voulez enregistrer le fichier ou bien appuyez sur [Enter] pour utiliser le chemin proposé ${normal_color}[${jtr_potpath}]"
+	arr["CATALAN",611]="Escriu la ruta on guardarem el fitxer o prem [Enter] per acceptar la proposta per defecte ${normal_color}[${jtr_potpath}]"
+	arr["PORTUGUESE",611]="Digite o caminho onde armazenar o arquivo ou pressione [Enter] para aceitar o padrão ${normal_color}[${jtr_potpath}]"
+	arr["RUSSIAN",611]="Напечатайте путь к сохранённому файлу или нажмите [Enter] для принятия предложения по умолчанию ${normal_color}[${jtr_potpath}]"
+	arr["GREEK",611]="Πληκτρολογήστε το μονοπάτι για την αποθήκευση του αρχείου ή πατήστε [Enter] για την προεπιλεγμένη επιλογή ${normal_color}[${jtr_potpath}]"
+	arr["ITALIAN",611]="Immettere il percorso dove memorizzare il file o premere [Enter] per accettare quello di default ${normal_color}[${jtr_potpath}]"
+	arr["POLISH",611]="Wpisz ścieżkę do zapisu pliku lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${jtr_potpath}]"
+	arr["GERMAN",611]="Schreiben Sie den Pfad wo die Datei gespeichert werden soll, oder drücken Sie die [Enter], um den Standardvorschlag zu akzeptieren ${normal_color}[${jtr_potpath}]"
+	arr["TURKISH",611]="Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın. ${normal_color}[${jtr_potpath}]"
+
+	arr["ENGLISH",612]="John the ripper trophy file generated successfully at [${normal_color}${jtrpotenteredpath}${blue_color}]"
+	arr["SPANISH",612]="Fichero de trofeo john the ripper generado con éxito en [${normal_color}${jtrpotenteredpath}${blue_color}]"
+	arr["FRENCH",612]="Le fichier trophée john the ripper a bien été crée dans [${normal_color}${jtrpotenteredpath}${blue_color}]"
+	arr["CATALAN",612]="Fitxer de trofeu john the ripper generat amb èxit a [${normal_color}${jtrpotenteredpath}${blue_color}]"
+	arr["PORTUGUESE",612]="Arquivo de troféu john the ripper gerado com sucesso [${normal_color}${jtrpotenteredpath}${blue_color}]"
+	arr["RUSSIAN",612]="Трофейный файл john the ripper был успешно сгенерирован в [${normal_color}${jtrpotenteredpath}${blue_color}]"
+	arr["GREEK",612]="Το john the ripper αρχείο τρόπαιο δημιουργήθηκε επιτυχώς [${normal_color}${jtrpotenteredpath}${blue_color}]"
+	arr["ITALIAN",612]="File di trofeo di john the ripper generato con successo [${normal_color}${jtrpotenteredpath}${blue_color}]"
+	arr["POLISH",612]="Plik trofeum john the ripper został pomyślnie wygenerowany w [${normal_color}${jtrpotenteredpath}${blue_color}]"
+	arr["GERMAN",612]="Trophäen-Datei-John the ripper erfolgreich in [${normal_color}${jtrpotenteredpath}${blue_color}] generiert"
+	arr["TURKISH",612]="John the ripper trophy dosyası başarıyla şurada oluşturuldu [${normal_color}${jtrpotenteredpath}${blue_color}]"
 
 	case "${3}" in
 		"yellow")
