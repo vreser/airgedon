@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181229
+#Date.........: 20181231
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -5614,7 +5614,6 @@ function enterprise_decrypt_menu() {
 	language_strings "${language}" 544 "separator"
 	language_strings "${language}" 545 john_attacks_dependencies[@]
 	language_strings "${language}" 546 john_attacks_dependencies[@]
-	language_strings "${language}" 547 john_attacks_dependencies[@]
 	language_strings "${language}" 229 "separator"
 	language_strings "${language}" 550 hashcat_attacks_dependencies[@]
 	language_strings "${language}" 551 hashcat_attacks_dependencies[@]
@@ -5640,9 +5639,6 @@ function enterprise_decrypt_menu() {
 			under_construction_message
 		;;
 		3)
-			under_construction_message
-		;;
-		4)
 			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
@@ -5651,7 +5647,7 @@ function enterprise_decrypt_menu() {
 				hashcat_dictionary_attack_option "enterprise"
 			fi
 		;;
-		5)
+		4)
 			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
@@ -5660,7 +5656,7 @@ function enterprise_decrypt_menu() {
 				hashcat_bruteforce_attack_option "enterprise"
 			fi
 		;;
-		6)
+		5)
 			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
@@ -5669,7 +5665,7 @@ function enterprise_decrypt_menu() {
 				hashcat_rulebased_attack_option "enterprise"
 			fi
 		;;
-		7)
+		6)
 			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
@@ -6425,7 +6421,7 @@ function manage_jtr_pot() {
 			add_contributing_footer_to_file "${jtrpotenteredpath}"
 
 			echo
-			language_strings "${language}" 612 "blue"
+			language_strings "${language}" 547 "blue"
 			language_strings "${language}" 115 "read"
 		fi
 	fi
