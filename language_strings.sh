@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20181231
+#Date.........: 20190102
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -7402,17 +7402,17 @@ function language_strings() {
 	arr["GERMAN",545]="1.  (john the ripper) Wörterbuchangriff auf die Aufnahmedatei"
 	arr["TURKISH",545]="1.  (john the ripper) Yakalama dosyasına karşı sözlük saldırısı"
 
-	arr["ENGLISH",546]="2.  (john the ripper) Bruteforce attack against capture file"
-	arr["SPANISH",546]="2.  (john the ripper) Ataque de fuerza bruta sobre fichero de captura"
-	arr["FRENCH",546]="2.  (john the ripper) Attaque de force brute en utilisant le fichier de capture"
-	arr["CATALAN",546]="2.  (john the ripper) Atac de força bruta sobre fitxer de captura"
-	arr["PORTUGUESE",546]="2.  (john the ripper) Ataque de força bruta em um handshake"
-	arr["RUSSIAN",546]="2.  (john the ripper) Атака рукопожатия полным перебором"
-	arr["GREEK",546]="2.  (john the ripper) Επίθεση ωμής βίας σε αρχείο καταγραφής"
-	arr["ITALIAN",546]="2.  (john the ripper) Attacco di forza bruta sul file di cattura"
-	arr["POLISH",546]="2.  (john the ripper) Atak brute force na plik przechwytywania"
-	arr["GERMAN",546]="2.  (john the ripper) Brute-Force-Angriff auf die Capture-Datei"
-	arr["TURKISH",546]="2.  (john the ripper) Yakalama dosyasına karşı bruteforce saldırısı"
+	arr["ENGLISH",546]="2.  (john the ripper + crunch) Bruteforce attack against capture file"
+	arr["SPANISH",546]="2.  (john the ripper + crunch) Ataque de fuerza bruta sobre fichero de captura"
+	arr["FRENCH",546]="2.  (john the ripper + crunch) Attaque de force brute en utilisant le fichier de capture"
+	arr["CATALAN",546]="2.  (john the ripper + crunch) Atac de força bruta sobre fitxer de captura"
+	arr["PORTUGUESE",546]="2.  (john the ripper + crunch) Ataque de força bruta em um arquivo de captura"
+	arr["RUSSIAN",546]="2.  (john the ripper + crunch) Атака грубой силы на файл захвата"
+	arr["GREEK",546]="2.  (john the ripper + crunch) Επίθεση ωμής βίας σε αρχείο καταγραφής"
+	arr["ITALIAN",546]="2.  (john the ripper + crunch) Attacco di forza bruta sul file di cattura"
+	arr["POLISH",546]="2.  (john the ripper + crunch) Atak brute force na plik przechwytywania"
+	arr["GERMAN",546]="2.  (john the ripper + crunch) Brute-Force-Angriff auf die Capture-Datei"
+	arr["TURKISH",546]="2.  (john the ripper + crunch) Yakalama dosyasına karşı bruteforce saldırısı"
 
 	arr["ENGLISH",547]="John the ripper trophy file generated successfully at [${normal_color}${jtrpotenteredpath}${blue_color}]"
 	arr["SPANISH",547]="Fichero de trofeo john the ripper generado con éxito en [${normal_color}${jtrpotenteredpath}${blue_color}]"

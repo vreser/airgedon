@@ -4287,6 +4287,7 @@ function initialize_menu_options_dependencies() {
 	enterprise_attack_dependencies=(${optional_tools_names[21]} ${optional_tools_names[22]})
 	asleap_attacks_dependencies=(${optional_tools_names[22]})
 	john_attacks_dependencies=(${optional_tools_names[23]})
+	johncrunch_attacks_dependencies=(${optional_tools_names[23]} ${optional_tools_names[1]})
 }
 
 #Set possible changes for some commands that can be found in different ways depending of the O.S.
@@ -5598,7 +5599,6 @@ function personal_decrypt_menu() {
 }
 
 #Offline enterprise decryption attacks menu
-#TODO enterprise_decrypt_menu
 function enterprise_decrypt_menu() {
 
 	debug_print
@@ -5613,7 +5613,7 @@ function enterprise_decrypt_menu() {
 	language_strings "${language}" 536
 	language_strings "${language}" 544 "separator"
 	language_strings "${language}" 545 john_attacks_dependencies[@]
-	language_strings "${language}" 546 john_attacks_dependencies[@]
+	language_strings "${language}" 546 johncrunch_attacks_dependencies[@]
 	language_strings "${language}" 229 "separator"
 	language_strings "${language}" 550 hashcat_attacks_dependencies[@]
 	language_strings "${language}" 551 hashcat_attacks_dependencies[@]
@@ -5636,7 +5636,12 @@ function enterprise_decrypt_menu() {
 			fi
 		;;
 		2)
-			under_construction_message
+			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
+				forbidden_menu_option
+			else
+				get_jtr_version
+				enterprise_jtr_bruteforce_attack_option
+			fi
 		;;
 		3)
 			if contains_element "${enterprise_decrypt_option}" "${forbidden_options[@]}"; then
@@ -6108,6 +6113,33 @@ function enterprise_jtr_dictionary_attack_option() {
 	language_strings "${language}" 190 "yellow"
 	language_strings "${language}" 115 "read"
 	exec_jtr_dictionary_attack
+	manage_jtr_pot
+}
+
+#Validate and ask for the different parameters used in a john the ripper bruteforce based attack
+function enterprise_jtr_bruteforce_attack_option() {
+
+	debug_print
+
+	manage_asking_for_captured_file "enterprise" "jtr"
+
+	if ! validate_enterprise_jtr_file "${jtrenterpriseenteredpath}"; then
+		return
+	fi
+
+	set_minlength_and_maxlength "enterprise"
+
+	charset_option=0
+	while [[ ! ${charset_option} =~ ^[[:digit:]]+$ ]] || (( charset_option < 1 || charset_option > 11 )); do
+		set_charset "jtr"
+	done
+
+	echo
+	language_strings "${language}" 209 "blue"
+	echo
+	language_strings "${language}" 190 "yellow"
+	language_strings "${language}" 115 "read"
+	exec_jtr_bruteforce_attack
 	manage_jtr_pot
 }
 
@@ -6991,7 +7023,7 @@ function set_charset() {
 	language_strings "${language}" 200
 
 	case ${1} in
-		"aircrack")
+		"aircrack"|"jtr")
 			language_strings "${language}" 201
 			language_strings "${language}" 202
 			language_strings "${language}" 203
@@ -7077,7 +7109,7 @@ function set_show_charset() {
 	showcharset=""
 
 	case ${1} in
-		"aircrack")
+		"aircrack"|"jtr")
 			showcharset="${charset}"
 		;;
 		"hashcat")
@@ -7133,6 +7165,19 @@ function exec_jtr_dictionary_attack() {
 	rm -rf "${tmpdir}jtrtmp"* > /dev/null 2>&1
 
 	jtr_cmd="john \"${jtrenterpriseenteredpath}\" --format=netntlm-naive --wordlist=\"${DICTIONARY}\" --pot=\"${tmpdir}${jtr_pot_tmp}\" --encoding=UTF-8 | tee \"${tmpdir}${jtr_output_file}\" ${colorize}"
+	eval "${jtr_cmd}"
+	language_strings "${language}" 115 "read"
+}
+
+#Execute john the ripper bruteforce attack
+function exec_jtr_bruteforce_attack() {
+
+	debug_print
+
+	tmpfiles_toclean=1
+	rm -rf "${tmpdir}jtrtmp"* > /dev/null 2>&1
+
+	jtr_cmd="crunch \"${minlength}\" \"${maxlength}\" \"${charset}\" | john \"${jtrenterpriseenteredpath}\" --stdin --format=netntlm-naive --pot=\"${tmpdir}${jtr_pot_tmp}\" --encoding=UTF-8 | tee \"${tmpdir}${jtr_output_file}\" ${colorize}"
 	eval "${jtr_cmd}"
 	language_strings "${language}" 115 "read"
 }
@@ -13168,6 +13213,7 @@ function remove_warnings() {
 	echo "${enterprise_attack_dependencies[@]}" > /dev/null 2>&1
 	echo "${asleap_attacks_dependencies[@]}" > /dev/null 2>&1
 	echo "${john_attacks_dependencies[@]}" > /dev/null 2>&1
+	echo "${johncrunch_attacks_dependencies[@]}" > /dev/null 2>&1
 	echo "${is_arm}" > /dev/null 2>&1
 }
 
