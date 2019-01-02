@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20181231
+#Date.........: 20190102
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -11559,7 +11559,7 @@ function get_jtr_version() {
 
 	debug_print
 
-	jtr_version=$(john --help | grep -Ei "version" | awk '{print $7}' | awk -F '-' '{print $1}')
+	jtr_version=$(john --help | grep -Eio 'version [a-z0-9\.]+' | awk '{print $2}')
 }
 
 #Determine hashcat version
