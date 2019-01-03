@@ -5998,7 +5998,7 @@ function validate_enterprise_jtr_file() {
 	readarray -t JTR_LINES_TO_VALIDATE < <(cat "${1}" 2> /dev/null)
 
 	for item in "${JTR_LINES_TO_VALIDATE[@]}"; do
-		if [[ ! "${item}" =~ ^.+:\$NETNTLM\$[a-zA-Z0-9\$]+$ ]]; then
+		if [[ ! "${item}" =~ ^.+:\$NETNTLM\$[[:xdigit:]\$]+$ ]]; then
 			language_strings "${language}" 607 "red"
 			language_strings "${language}" 115 "read"
 			return 1
@@ -6397,7 +6397,7 @@ function manage_jtr_pot() {
 				readarray -t DECRYPTED_MULTIPLE_PASS < <(uniq "${tmpdir}${jtr_pot_tmp}" | sort 2> /dev/null)
 				for item in "${DECRYPTED_MULTIPLE_PASS[@]}"; do
 					[[ "${item}" =~ ^\$NETNTLM\$[^:]+:(.+)$ ]] && jtr_keys+=("${BASH_REMATCH[1]}")
-					[[ $(grep -E "^${BASH_REMATCH[1]}" "${tmpdir}${jtr_output_file}") =~ [[:blank:]]+\((.+)\) ]] && enterprise_users+=("${BASH_REMATCH[1]}")
+					[[ $(grep -E "^${BASH_REMATCH[1]}" "${tmpdir}${jtr_output_file}") =~ ^"${BASH_REMATCH[1]}"[[:blank:]]+\((.+)\) ]] && enterprise_users+=("${BASH_REMATCH[1]}")
 				done
 			else
 				local enterprise_user
