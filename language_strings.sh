@@ -625,7 +625,7 @@ function language_strings() {
 	jtr_texts["GREEK",2]="Όνομα χρήστη enterprise"
 	jtr_texts["ITALIAN",2]="Utente enterprise"
 	jtr_texts["POLISH",2]="${pending_of_translation} Nazwa użytkownika w enterprise"
-	jtr_texts["GERMAN",2]="${pending_of_translation} Enterprise-Benutzername"
+	jtr_texts["GERMAN",2]="Enterprise-Benutzername"
 	jtr_texts["TURKISH",2]="${pending_of_translation} Kullanıcı adı enterprise"
 
 	jtr_texts["ENGLISH",3]="Enterprise users and passwords"
@@ -637,7 +637,7 @@ function language_strings() {
 	jtr_texts["GREEK",3]="Enterprise χρήστες και κωδικοί πρόσβασης"
 	jtr_texts["ITALIAN",3]="${pending_of_translation} Utenti e password enterprise"
 	jtr_texts["POLISH",3]="${pending_of_translation} Użytkownicy i hasła enterprise"
-	jtr_texts["GERMAN",3]="${pending_of_translation} Enterprise-Benutzername und Kennwörter"
+	jtr_texts["GERMAN",3]="Enterprise-Benutzernamen und Kennwörter"
 	jtr_texts["TURKISH",3]="${pending_of_translation} Kullanıcılar ve enterprise şifreler"
 
 	declare -gA hashcat_texts
@@ -662,7 +662,7 @@ function language_strings() {
 	hashcat_texts["GREEK",2]="Όνομα χρήστη enterprise"
 	hashcat_texts["ITALIAN",2]="Utente enterprise"
 	hashcat_texts["POLISH",2]="${pending_of_translation} Nazwa użytkownika w enterprise"
-	hashcat_texts["GERMAN",2]="${pending_of_translation} Enterprise-Benutzername"
+	hashcat_texts["GERMAN",2]="Enterprise-Benutzername"
 	hashcat_texts["TURKISH",2]="${pending_of_translation} Kullanıcı adı enterprise"
 
 	hashcat_texts["ENGLISH",3]="Enterprise users and passwords"
@@ -674,7 +674,7 @@ function language_strings() {
 	hashcat_texts["GREEK",3]="Enterprise χρήστες και κωδικοί πρόσβασης"
 	hashcat_texts["ITALIAN",3]="${pending_of_translation} Utenti e password enterprise"
 	hashcat_texts["POLISH",3]="${pending_of_translation} Użytkownicy i hasła enterprise"
-	hashcat_texts["GERMAN",3]="${pending_of_translation} Enterprise-Benutzername und Kennwörter"
+	hashcat_texts["GERMAN",3]="Enterprise-Benutzernamen und Kennwörter"
 	hashcat_texts["TURKISH",3]="${pending_of_translation} Kullanıcılar ve enterprise şifreler"
 
 	declare -gA aircrack_texts
@@ -8071,7 +8071,7 @@ function language_strings() {
 	arr["GREEK",601]="${pending_of_translation} Το επιλεγμένο αρχείο έχει μια μη έγκυρη μορφή hashes της επιχείρησης hashcat"
 	arr["ITALIAN",601]="Il file selezionato non ha un hash valido in formato enterprise per hashcat"
 	arr["POLISH",601]="${pending_of_translation} Wybrany plik ma nieprawidłowy format haszy korporacyjnego hashcat"
-	arr["GERMAN",601]="${pending_of_translation} Die ausgewählte Datei hat kein gültiges Hash-Enterpriseformat für hashcat"
+	arr["GERMAN",601]="Die ausgewählte Datei hat kein gültiges Enterprise-Hashformat für hashcat"
 	arr["TURKISH",601]="${pending_of_translation} Seçilen dosyanın geçersiz bir hashcat kuruluş karma biçimi var"
 
 	arr["ENGLISH",602]="Selected file has a valid hashcat enterprise hashes format"
@@ -8083,7 +8083,7 @@ function language_strings() {
 	arr["GREEK",602]="${pending_of_translation} Το επιλεγμένο αρχείο έχει μια έγκυρη μορφή hashes της επιχείρησης hashes hashcat"
 	arr["ITALIAN",602]="Il file selezionato ha un hash valido in formato enterprise per hashcat"
 	arr["POLISH",602]="${pending_of_translation} Wybrany plik ma poprawny format haszy korporacyjnego hashcat"
-	arr["GERMAN",602]="${pending_of_translation} Die ausgewählte Datei hat ein gültiges Hash-Unternehmensformat für hashcat"
+	arr["GERMAN",602]="Die ausgewählte Datei hat ein gültiges Enterprise-Hashformat für hashcat"
 	arr["TURKISH",602]="${pending_of_translation} Seçilen dosyanın geçerli bir hashcat kurumsal karma biçimi var"
 
 	arr["ENGLISH",603]="Selected hashcat enterprise captured file: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
@@ -8095,7 +8095,7 @@ function language_strings() {
 	arr["GREEK",603]="${pending_of_translation} Επιλεγμένο αρχείο enterprise hashcat καταγραφής: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
 	arr["ITALIAN",603]="File di cattura enterprise hashcat selezionato: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
 	arr["POLISH",603]="${pending_of_translation} Wybrany plik enterprise hashcat przechwytywania: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
-	arr["GERMAN",603]="${pending_of_translation} Ausgewählte Enterprise-hashcat-Capture-Datei: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["GERMAN",603]="Ausgewählte Enterprise-hashcat-Capture-Datei: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
 	arr["TURKISH",603]="${pending_of_translation} Seçilen yakalama enterprise hashcat dosyası: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
 
 	arr["ENGLISH",604]="Selected hashcat enterprise captured file: ${pink_color}None${normal_color}"
@@ -8107,7 +8107,7 @@ function language_strings() {
 	arr["GREEK",604]="${pending_of_translation} Επιλεγμένο αρχείο enterprise hashcat καταγραφής: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",604]="File di cattura enterprise hashcat selezionato: ${pink_color}Nessuno${normal_color}"
 	arr["POLISH",604]="${pending_of_translation} Wybrany plik enterprise hashcat przechwytywania ${pink_color}Brak${normal_color}"
-	arr["GERMAN",604]="${pending_of_translation} Ausgewählte Enterprise-hashcat-Capture-Datei: ${pink_color}Keine${normal_color}"
+	arr["GERMAN",604]="Ausgewählte Enterprise-hashcat-Capture-Datei: ${pink_color}Keine${normal_color}"
 	arr["TURKISH",604]="${pending_of_translation} Seçilen yakalama enterprise hashcat dosyası: ${pink_color}None${normal_color}"
 
 	arr["ENGLISH",605]="Selected john the ripper enterprise captured file: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
@@ -8119,7 +8119,7 @@ function language_strings() {
 	arr["GREEK",605]="${pending_of_translation} Επιλεγμένο αρχείο enterprise john the ripper καταγραφής: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
 	arr["ITALIAN",605]="File di cattura enterprise john the ripper selezionato: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
 	arr["POLISH",605]="${pending_of_translation} Wybrany plik enterprise john the ripper przechwytywania: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
-	arr["GERMAN",605]="${pending_of_translation} Ausgewählte Enterprise-john the ripper-Capture-Datei: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["GERMAN",605]="Ausgewählte Enterprise-john the ripper-Capture-Datei: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
 	arr["TURKISH",605]="${pending_of_translation} Seçilen yakalama enterprise john the ripper dosyası: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
 
 	arr["ENGLISH",606]="Selected john the ripper enterprise captured file: ${pink_color}None${normal_color}"
@@ -8131,7 +8131,7 @@ function language_strings() {
 	arr["GREEK",606]="${pending_of_translation} Επιλεγμένο αρχείο enterprise john the ripper καταγραφής: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",606]="File di cattura enterprise john the ripper selezionato: ${pink_color}Nessuno${normal_color}"
 	arr["POLISH",606]="${pending_of_translation} Wybrany plik enterprise john the ripper przechwytywania ${pink_color}Brak${normal_color}"
-	arr["GERMAN",606]="${pending_of_translation} Ausgewählte Enterprise-john the ripper-Capture-Datei: ${pink_color}Keine${normal_color}"
+	arr["GERMAN",606]="Ausgewählte Enterprise-john the ripper-Capture-Datei: ${pink_color}Keine${normal_color}"
 	arr["TURKISH",606]="${pending_of_translation} Seçilen yakalama enterprise john the ripper dosyası: ${pink_color}None${normal_color}"
 
 	arr["ENGLISH",607]="Selected file has an invalid john the ripper enterprise hashes format"
@@ -8143,7 +8143,7 @@ function language_strings() {
 	arr["GREEK",607]="${pending_of_translation} Το επιλεγμένο αρχείο έχει μια μη έγκυρη μορφή hashes της επιχείρησης john the ripper"
 	arr["ITALIAN",607]="Il file selezionato non ha un hash valido in formato enterprise per john the ripper"
 	arr["POLISH",607]="${pending_of_translation} Wybrany plik ma nieprawidłowy format haszy korporacyjnego john the ripper"
-	arr["GERMAN",607]="${pending_of_translation} Die ausgewählte Datei hat kein gültiges Hash-Enterpriseformat für john the ripper"
+	arr["GERMAN",607]="Die ausgewählte Datei hat kein gültiges Enterprise-Hashformat für john the ripper"
 	arr["TURKISH",607]="${pending_of_translation} Seçilen dosyanın geçersiz bir john the ripper kuruluş karma biçimi var"
 
 	arr["ENGLISH",608]="Selected file has a valid john the ripper enterprise hashes format"
@@ -8155,7 +8155,7 @@ function language_strings() {
 	arr["GREEK",608]="${pending_of_translation} Το επιλεγμένο αρχείο έχει μια έγκυρη μορφή hashes της επιχείρησης hashes john the ripper"
 	arr["ITALIAN",608]="Il file selezionato ha un hash valido in formato enterprise per john the ripper"
 	arr["POLISH",608]="${pending_of_translation} Wybrany plik ma poprawny format haszy korporacyjnego john the ripper"
-	arr["GERMAN",608]="${pending_of_translation} Die ausgewählte Datei hat ein gültiges Hash-Unternehmensformat für john the ripper"
+	arr["GERMAN",608]="Die ausgewählte Datei hat ein gültiges Enterprise-Hashformat für John the ripper"
 	arr["TURKISH",608]="${pending_of_translation} Seçilen dosyanın geçerli bir john the ripper kurumsal karma biçimi var"
 
 	arr["ENGLISH",609]="You already have selected a capture file during this session [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
@@ -8179,7 +8179,7 @@ function language_strings() {
 	arr["GREEK",610]="${pending_of_translation} Οι χασίχες που αποκτήθηκαν κατά τη διάρκεια μιας επιχείρησης wifi δικτύου επιθέσεις μπορούν επίσης να αποκρυπτογραφηθούν χρησιμοποιώντας το εργαλείο john the ripper. Λεξικό ή επιθέσεις βίαιης δύναμης μπορούν να χρησιμοποιηθούν από τα μενού airgeddon"
 	arr["ITALIAN",610]="${pending_of_translation} È inoltre possibile utilizzare john the ripper per decrittografare gli hash ottenuti in un attacco a una rete wifi aziendale. Gli attacchi di dizionario o forza bruta, possono essere utilizzati dai menu di airgeddon"
 	arr["POLISH",610]="${pending_of_translation} Możesz również użyć ripera john, aby odszyfrować hasze uzyskane podczas ataku na firmową sieć wifi. Ataki słownikowe lub brutalna siła mogą być użyte z menu airgeddon"
-	arr["GERMAN",610]="${pending_of_translation} Sie können john the ripper auch verwenden, um die bei einem Angriff auf ein Wi-Fi-Netzwerk eines Unternehmens erhaltenen Hashes zu entschlüsseln. Wörterbuchangriffe oder Brute Force basieren, können aus den Menüs von airgeddon verwendet werden"
+	arr["GERMAN",610]="Sie können auch John the ripper verwenden, um die Hashes, die auf ein WLAN-Enterprise Netzwerk erhalten wurden, zu entschlüsseln. Wörterbuchangriffe oder Brute Force Angriffe können aus den Menüs von airgeddon verwendet werden"
 	arr["TURKISH",610]="${pending_of_translation} Bir kurumsal wifi ağına yapılan saldırıda elde edilen karmaşanın şifresini çözmek için john the ripper'i kullanabilirsiniz. Sözlük veya kaba kuvvet saldırıları airgeddon menülerinden kullanılabilir"
 
 	arr["ENGLISH",611]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${jtr_potpath}]"
