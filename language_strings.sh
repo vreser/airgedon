@@ -103,7 +103,7 @@ function language_strings() {
 	disabled_text["RUSSIAN"]="${pending_of_translation} Дезактивированный"
 	disabled_text["GREEK"]="Απενεργοποιημένο"
 	disabled_text["ITALIAN"]="Disattivato"
-	disabled_text["POLISH"]="${pending_of_translation} Dezaktywowane"
+	disabled_text["POLISH"]="Dezaktywowany"
 	disabled_text["GERMAN"]="Deaktiviert"
 	disabled_text["TURKISH"]="${pending_of_translation} Devreden"
 
@@ -587,7 +587,7 @@ function language_strings() {
 	asleap_texts["RUSSIAN",2]="${pending_of_translation} Вызовом"
 	asleap_texts["GREEK",2]="Challenge"
 	asleap_texts["ITALIAN",2]="Challenge"
-	asleap_texts["POLISH",2]="${pending_of_translation} Wyzwania"
+	asleap_texts["POLISH",2]="Challenge"
 	asleap_texts["GERMAN",2]="Challenge"
 	asleap_texts["TURKISH",2]="${pending_of_translation} Okuması"
 
@@ -599,7 +599,7 @@ function language_strings() {
 	asleap_texts["RUSSIAN",3]="${pending_of_translation} Ответом"
 	asleap_texts["GREEK",3]="Response"
 	asleap_texts["ITALIAN",3]="Response"
-	asleap_texts["POLISH",3]="${pending_of_translation} Odpowiedzi"
+	asleap_texts["POLISH",3]="Odpowiedź"
 	asleap_texts["GERMAN",3]="Response"
 	asleap_texts["TURKISH",3]="${pending_of_translation} Yanıtı"
 
@@ -624,7 +624,7 @@ function language_strings() {
 	jtr_texts["RUSSIAN",2]="${pending_of_translation} Имя пользователя enterprise"
 	jtr_texts["GREEK",2]="Όνομα χρήστη enterprise"
 	jtr_texts["ITALIAN",2]="Utente enterprise"
-	jtr_texts["POLISH",2]="${pending_of_translation} Nazwa użytkownika w enterprise"
+	jtr_texts["POLISH",2]="Użytkownik enterprise"
 	jtr_texts["GERMAN",2]="Enterprise-Benutzername"
 	jtr_texts["TURKISH",2]="${pending_of_translation} Kullanıcı adı enterprise"
 
@@ -636,7 +636,7 @@ function language_strings() {
 	jtr_texts["RUSSIAN",3]="${pending_of_translation} Пользовательские и enterprise пароли"
 	jtr_texts["GREEK",3]="Enterprise χρήστες και κωδικοί πρόσβασης"
 	jtr_texts["ITALIAN",3]="Utenti e password enterprise"
-	jtr_texts["POLISH",3]="${pending_of_translation} Użytkownicy i hasła enterprise"
+	jtr_texts["POLISH",3]="Użytkownicy i hasła enterprise"
 	jtr_texts["GERMAN",3]="Enterprise-Benutzernamen und Kennwörter"
 	jtr_texts["TURKISH",3]="${pending_of_translation} Kullanıcılar ve enterprise şifreler"
 
@@ -661,7 +661,7 @@ function language_strings() {
 	hashcat_texts["RUSSIAN",2]="${pending_of_translation} Имя пользователя enterprise"
 	hashcat_texts["GREEK",2]="Όνομα χρήστη enterprise"
 	hashcat_texts["ITALIAN",2]="Utente enterprise"
-	hashcat_texts["POLISH",2]="${pending_of_translation} Nazwa użytkownika w enterprise"
+	hashcat_texts["POLISH",2]="Użytkownik enterprise"
 	hashcat_texts["GERMAN",2]="Enterprise-Benutzername"
 	hashcat_texts["TURKISH",2]="${pending_of_translation} Kullanıcı adı enterprise"
 
@@ -673,7 +673,7 @@ function language_strings() {
 	hashcat_texts["RUSSIAN",3]="${pending_of_translation} Пользовательские и enterprise пароли"
 	hashcat_texts["GREEK",3]="Enterprise χρήστες και κωδικοί πρόσβασης"
 	hashcat_texts["ITALIAN",3]="Utenti e password enterprise"
-	hashcat_texts["POLISH",3]="${pending_of_translation} Użytkownicy i hasła enterprise"
+	hashcat_texts["POLISH",3]="Użytkownicy i hasła enterprise"
 	hashcat_texts["GERMAN",3]="Enterprise-Benutzernamen und Kennwörter"
 	hashcat_texts["TURKISH",3]="${pending_of_translation} Kullanıcılar ve enterprise şifreler"
 
@@ -699,7 +699,7 @@ function language_strings() {
 	enterprise_texts["RUSSIAN",0]="${pending_of_translation} Информация о Enterprise Evil Twin"
 	enterprise_texts["GREEK",0]="Πληροφορίες Enterprise Evil Twin AP"
 	enterprise_texts["ITALIAN",0]="Info Evil Twin Enterprise AP"
-	enterprise_texts["POLISH",0]="${pending_of_translation} Informacja Evil Twin Enterprise AP"
+	enterprise_texts["POLISH",0]="Informacja o Evil Twin Enterprise AP"
 	enterprise_texts["GERMAN",0]="Information über Evil Twin Enterprise AP"
 	enterprise_texts["TURKISH",0]="${pending_of_translation} Bilgi Enterprise Şeytani İkiz"
 
@@ -735,7 +735,7 @@ function language_strings() {
 	enterprise_texts["RUSSIAN",3]="${pending_of_translation} С этой атакой мы будем ждать, пока клиент предоставит нам хэш или его пароль для сети Enterprise wifi в нашей поддельной AP. \"smooth\", поэтому, как только хеш или пароль будут захвачены, атака остановится. Вы также можете остановить атаку, нажав клавишу [Enter] на главном экране"
 	enterprise_texts["GREEK",3]="Σε αυτήν την επίθεση, θα περιμένουμε έναν πελάτη του δικτύου να μας δώσει ένα hash ή τον κωδικό του για το Enterprise wifi δίκτυο στο fake AP μας. \"smooth\", έτσι ώστε μόλις καταγραφεί ένα hash ή ένας κωδικός πρόσβασης, η επίθεση θα σταματήσει. Μπορείτε επίσης να σταματήσετε την επίθεση πατώντας το πλήκτρο [Enter] στην κύρια οθόνη"
 	enterprise_texts["ITALIAN",3]="Con questo attacco, aspetteremo che un cliente ci dia un hash o la sua password per la rete wifi Enterprise attraverso il nostro AP falso. Hai selezione la modalità \"smooth\", quindi non appena viene catturato un hash o una password, l'attacco si interrompe. Puoi anche fermare l'attacco premendo il tasto [Enter] nella schermata principale"
-	enterprise_texts["POLISH",3]="${pending_of_translation} Za pomocą tego ataku poczekamy, aż klient poda nam skrót lub hasło do sieci wifi przedsiębiorstwa w naszym fałszywym AP. Tryb \"smooth\", tak szybko, jak tylko hash lub hasło zostanie przechwycone, atak się zatrzyma. Możesz także zatrzymać atak, naciskając klawisz [Enter] na ekranie głównym"
+	enterprise_texts["POLISH",3]="W tym ataku poczekamy aż klient poda nam hash lub hasło do sieci wifi Enterprise w naszym fałszywym AP. W trybie \"smooth\", gdy tylko hash lub hasło zostanie przechwycone atak się zatrzyma. Możesz także zatrzymać atak naciskając klawisz [Enter] na ekranie głównym"
 	enterprise_texts["GERMAN",3]="Mit diesem Angriff werden wir darauf warten, dass uns ein Kunde einen Hash oder sein Passwort für das Enterprise WLAN-Netzwerk in unserem gefälschten AP gibt. Mit dem \"smooth\" Modus wird der Angriff sobald ein Hash oder Passwort erfasst wurde beenden. Sie können den Angriff auch durch Drücken der [Enter]-Taste auf dem Hauptbildschirm stoppen"
 	enterprise_texts["TURKISH",3]="${pending_of_translation} Bu saldırı ile, bir müşterinin sahte AP'deki Enterprise wifi ağı için bize bir karma veya şifresini vermesini bekleyeceğiz. \"smooth\" modu, böylece bir karma veya şifre yakalanır yakalanmaz, saldırı duracaktır. Ana ekranda [Enter] tuşuna basarak da saldırıyı durdurabilirsiniz"
 
@@ -747,7 +747,7 @@ function language_strings() {
 	enterprise_texts["RUSSIAN",4]="${pending_of_translation} С этой атакой мы будем ждать, пока клиент предоставит нам хэш или его пароль для сети Enterprise wifi в нашей поддельной AP. Вы выбрали режим \"noisy\", поэтому атака не остановится, пока вы не нажмете клавишу [Enter] на главном экране"
 	enterprise_texts["GREEK",4]="Σε αυτήν την επίθεση, θα περιμένουμε έναν πελάτη του δικτύου να μας δώσει ένα hash ή τον κωδικό του για το Enterprise wifi δίκτυο στο fake AP μας. Έχετε επιλέξει τη λειτουργία \"noisy\", οπότε η επίθεση δεν θα σταματήσει μέχρι να πατήσετε το πλήκτρο [Enter] στην κύρια οθόνη"
 	enterprise_texts["ITALIAN",4]="Con questo attacco, aspetteremo che un cliente ci dia un hash o la sua password per la rete wifi Enterprise attraverso il nostro AP falso. Hai selezionato la modalità \"noisy\", quindi l'attacco non si fermerà finché non premi il tasto [Enter] nella schermata principale"
-	enterprise_texts["POLISH",4]="${pending_of_translation} Za pomocą tego ataku poczekamy, aż klient poda nam skrót lub hasło do sieci Wi-Fi przedsiębiorstwa w naszym fałszywym AP. Wybrałeś tryb \"noisy\", więc atak nie zostanie zatrzymany, dopóki nie naciśniesz klawisza [Enter] na głównym ekranie"
+	enterprise_texts["POLISH",4]="W tym ataku poczekamy aż klient poda nam skrót lub hasło do sieci wifi Enterprise w naszym fałszywym AP. Wybrałeś tryb \"noisy\" więc atak nie zostanie zatrzymany dopóki nie naciśniesz klawisza [Enter] na głównym ekranie"
 	enterprise_texts["GERMAN",4]="Mit diesem Angriff werden wir darauf warten, dass uns ein Kunde einen Hash oder sein Passwort für das Enterprise Wi-Fi-Netzwerk in unserem gefälschten AP gibt. Sie haben den \"noisy\" Modus gewählt, der Angriff wird somit nicht stoppen, bis Sie die [Enter]-Taste auf dem Hauptbildschirm drücken"
 	enterprise_texts["TURKISH",4]="${pending_of_translation} Bu saldırı ile, bir müşterinin sahte AP'deki Enterprise wifi ağı için bize bir karma veya şifresini vermesini bekleyeceğiz. Modunu \"noisy\" seçtiniz, böylece ana ekranda [Enter] tuşuna basana kadar saldırı durmayacak"
 
@@ -759,7 +759,7 @@ function language_strings() {
 	enterprise_texts["RUSSIAN",5]="${pending_of_translation} Последний захваченный пользователь"
 	enterprise_texts["GREEK",5]="Τελευταίος χρήστης που καταγράφηκε"
 	enterprise_texts["ITALIAN",5]="Ultimo utente catturato"
-	enterprise_texts["POLISH",5]="${pending_of_translation} Ostatni użytkownik przechwycony"
+	enterprise_texts["POLISH",5]="Ostatni przechwycony użytkownik"
 	enterprise_texts["GERMAN",5]="Letzter erfasste Nutzer"
 	enterprise_texts["TURKISH",5]="${pending_of_translation} Son yakalanan kullanıcı"
 
@@ -771,7 +771,7 @@ function language_strings() {
 	enterprise_texts["RUSSIAN",6]="${pending_of_translation} Пока ничего не зафиксировано"
 	enterprise_texts["GREEK",6]="Τίποτα δεν έχει καταγραφεί ακόμα"
 	enterprise_texts["ITALIAN",6]="Non è stato ancora catturato niente"
-	enterprise_texts["POLISH",6]="${pending_of_translation} Nic jeszcze nie zostało uchwycone"
+	enterprise_texts["POLISH",6]="Jeszcze nic nie zostało przechwycone"
 	enterprise_texts["GERMAN",6]="Nichts wurde bisher erfasst"
 	enterprise_texts["TURKISH",6]="${pending_of_translation} Henüz yakalanan bir şey yok"
 
@@ -783,7 +783,7 @@ function language_strings() {
 	enterprise_texts["RUSSIAN",7]="${pending_of_translation} Захваченные хеши"
 	enterprise_texts["GREEK",7]="Καταγεγραμμένα hashes"
 	enterprise_texts["ITALIAN",7]="Hash catturati"
-	enterprise_texts["POLISH",7]="${pending_of_translation} Uchwycone hasze"
+	enterprise_texts["POLISH",7]="Przechwycone hashe"
 	enterprise_texts["GERMAN",7]="Erfasste Hashes"
 	enterprise_texts["TURKISH",7]="${pending_of_translation} Yakalanan karmalar"
 
@@ -795,7 +795,7 @@ function language_strings() {
 	enterprise_texts["RUSSIAN",8]="${pending_of_translation} Записанные пароли открытого текста"
 	enterprise_texts["GREEK",8]="Καταγεγραμμένοι κωδικοί απλού κειμένου"
 	enterprise_texts["ITALIAN",8]="Passwords in chiaro acquisite"
-	enterprise_texts["POLISH",8]="${pending_of_translation} Przechwycone hasła tekstowe"
+	enterprise_texts["POLISH",8]="Przechwycone hasła w tekscie jawnym"
 	enterprise_texts["GERMAN",8]="Erfasste Klartextpasswörter"
 	enterprise_texts["TURKISH",8]="${pending_of_translation} Yakalanan düz metinde şifreler"
 
@@ -807,7 +807,7 @@ function language_strings() {
 	enterprise_texts["RUSSIAN",9]="${pending_of_translation} Нажмите [Enter] в главном окне для продолжения, это окно будет закрыто и файлы будут сгенерированы"
 	enterprise_texts["GREEK",9]="Πατήστε [Enter] στο κύριο παράθυρο του script για να συνεχίσετε, το παράθυρο αυτό θα κλείσει και θα δημιουργηθούν τα ανάλογα αρχεία"
 	enterprise_texts["ITALIAN",9]="Premi il tasto [Enter] nella finestra principale dello script per continuare, questa finestra si chiuderà e i file verranno generati"
-	enterprise_texts["POLISH",9]="${pending_of_translation} Wciśnij [Enter] w oknie głównym skryptu aby kontynuować, to okno zostanie zamknięte i pliki zostaną wygenerowane"
+	enterprise_texts["POLISH",9]="Wciśnij [Enter] w oknie głównym skryptu aby kontynuować, to okno zostanie zamknięte a pliki zostaną wygenerowane"
 	enterprise_texts["GERMAN",9]="Drücken Sie die [Enter]-Taste im Hauptfenster um fortzufahren. Dieses Fenster wird geschlossen und die Dateien werden generiert"
 	enterprise_texts["TURKISH",9]="${pending_of_translation} Devam etmek için [Enter] tuşuna basınız, bu sayfa kapatılacaktır ve dosyalar oluşturulacak"
 
@@ -819,7 +819,7 @@ function language_strings() {
 	enterprise_texts["RUSSIAN",10]="${pending_of_translation} Захваченные файлы будут сохранены в каталоге"
 	enterprise_texts["GREEK",10]="Τα αρχεία που έχουν καταγραφεί θα αποθηκευτούν στον κατάλογο"
 	enterprise_texts["ITALIAN",10]="I file catturati verranno salvati nella directory"
-	enterprise_texts["POLISH",10]="${pending_of_translation} Przechwycone pliki zostaną zapisane w katalogu"
+	enterprise_texts["POLISH",10]="Przechwycone pliki zostaną zapisane w katalogu"
 	enterprise_texts["GERMAN",10]="Die erfassten Dateien werden im Verzeichnis gespeichert"
 	enterprise_texts["TURKISH",10]="${pending_of_translation} Yakalanan dosyalar dizine kaydedilecek"
 
@@ -831,7 +831,7 @@ function language_strings() {
 	enterprise_texts["RUSSIAN",11]="${pending_of_translation} airgeddon. Пароли, записанные в Evil Twin Enterprise"
 	enterprise_texts["GREEK",11]="airgeddon. Κωδικοί που καταγράφηκαν στο Enterprise Evil Twin"
 	enterprise_texts["ITALIAN",11]="airgeddon. Password catturate con Evil Twin Enterprise"
-	enterprise_texts["POLISH",11]="${pending_of_translation} airgeddon. Hasła przechwycone w Evil Twin Enterprise"
+	enterprise_texts["POLISH",11]="airgeddon. Hasła przechwycone w Evil Twin Enterprise"
 	enterprise_texts["GERMAN",11]="airgeddon. Erfasste Passwörter während Evil Twin Enterprise"
 	enterprise_texts["TURKISH",11]="${pending_of_translation} airgeddon. Evil Twin Enterprise'da yakalanan şifreler"
 
@@ -1541,7 +1541,7 @@ function language_strings() {
 	arr["RUSSIAN",57]="${pending_of_translation} 10. Меню Enterprise атак"
 	arr["GREEK",57]="10. Μενού επιλογών Enterprise"
 	arr["ITALIAN",57]="10. Menu dell'attacco Enterprise"
-	arr["POLISH",57]="${pending_of_translation} 10. Menu ataków Enterprise"
+	arr["POLISH",57]="10. Menu ataków Enterprise"
 	arr["GERMAN",57]="10. Enterprise-Angriffsmenü"
 	arr["TURKISH",57]="${pending_of_translation} 10. Enterprise saldırılar menüsü"
 
@@ -1866,7 +1866,7 @@ function language_strings() {
 	arr["RUSSIAN",84]="${pending_of_translation} Меню Enterprise атак"
 	arr["GREEK",84]="Μενού επιλογών Enterprise"
 	arr["ITALIAN",84]="Menu dell'attacco Enterprise"
-	arr["POLISH",84]="${pending_of_translation} Menu ataków Enterprise"
+	arr["POLISH",84]="Menu ataków Enterprise"
 	arr["GERMAN",84]="Enterprise-Angriffsmenü"
 	arr["TURKISH",84]="${pending_of_translation} Enterprise saldırılar menüsü"
 
@@ -2202,7 +2202,7 @@ function language_strings() {
 	arr["RUSSIAN",112]="${pending_of_translation} Сети WPA/WPA2 Enterprise обычно используются в корпоративных средах. Они используют сервер Radius для аутентификации и в отличие от обычных сетей требуют больше элементов аутентификации, а не только пароля. Они могут требовать имя пользователя, пароль и иногда сертификат"
 	arr["GREEK",112]="Τα WPA/WPA2 Enterprise δίκτυα χρησιμοποιούνται συνήθως σε εταιρικά περιβάλλοντα. Χρησιμοποιούν έναν διακομιστή Radius για έλεγχο ταυτότητας και σε αντίθεση με τα συμβατικά δίκτυα απαιτούν περισσότερα στοιχεία για τον έλεγχο ταυτότητας και όχι μόνο τον κωδικό πρόσβασης. Μπορεί να απαιτούν όνομα χρήστη, κωδικό πρόσβασης και περιστασιακά κάποιο certificate"
 	arr["ITALIAN",112]="Le reti WPA/WPA2 Enterprise sono solitamente configurate negli ambienti aziendali. Utilizzano un server Radius per l'autenticazione e, diversamente dalle reti convenzionali, richiedono più elementi per l'autenticazione, non solo una password. Possono richiedere un nome utente e una password oltre a un certificato"
-	arr["POLISH",112]="${pending_of_translation} Sieci Enterprise WPA/WPA2 są powszechnie stosowane w środowiskach korporacyjnych. Korzystają z serwera Radius do uwierzytelniania iw przeciwieństwie do sieci konwencjonalnych wymagają więcej elementów do uwierzytelnienia, a nie tylko hasła. Mogą wymagać nazwy użytkownika, hasła i czasami certyfikatu"
+	arr["POLISH",112]="Sieci WPA/WPA2 Enterprise są powszechnie stosowane w środowiskach korporacyjnych. Korzystają z serwera Radius do uwierzytelniania i w przeciwieństwie do sieci konwencjonalnych wymagają więcej elementów do uwierzytelnienia, a nie tylko hasła. Mogą wymagać nazwy użytkownika, hasła i czasami certyfikatu"
 	arr["GERMAN",112]="WPA/WPA2 Enterprise-Netzwerke werden häufig in Unternehmensumgebungen verwendet. Sie verwenden einen Radius-Server zur Authentifizierung und benötigen im Gegensatz zu herkömmlichen Netzwerken mehr Elemente zur Authentifizierung als ein Passwort. Sie benötigen möglicherweise Benutzernamen, Passwort und gelegentlich ein Zertifikat"
 	arr["TURKISH",112]="${pending_of_translation} WPA/WPA2 Enterprise ağlar, şirket ortamlarında yaygın olarak kullanılır. Kimlik doğrulaması için bir Radius sunucu kullanıyorlar ve geleneksel ağların aksine, yalnızca bir şifre değil, kimlik doğrulama için daha fazla öğe gerekiyor. Kullanıcı adı, şifre ve bazen sertifika isteyebilirler"
 
@@ -2262,7 +2262,7 @@ function language_strings() {
 	arr["RUSSIAN",117]="${pending_of_translation} smooth режим, отключить после захвата"
 	arr["GREEK",117]="smooth mode, αποσυνδέστε τη συσκευή μετά τη λήψη"
 	arr["ITALIAN",117]="modalità smooth, disconnettersi dopo la cattura"
-	arr["POLISH",117]="${pending_of_translation} tryb smooth, odłącz po przechwyceniu"
+	arr["POLISH",117]="tryb smooth, odłącz po przechwyceniu"
 	arr["GERMAN",117]="smooth-Modus, nach dem Erfassen abschalten"
 	arr["TURKISH",117]="${pending_of_translation} smooth mod, yakalamadan sonra bağlantıyı kes"
 
@@ -3834,7 +3834,7 @@ function language_strings() {
 	arr["RUSSIAN",248]="${pending_of_translation} noisy режим, без перерывов"
 	arr["GREEK",248]="noisy mode, χωρίς διακοπές"
 	arr["ITALIAN",248]="modalità noisy, senza interruzioni"
-	arr["POLISH",248]="${pending_of_translation} noisy tryb, bez przerw"
+	arr["POLISH",248]="tryb noisy, bez przerw"
 	arr["GERMAN",248]="noisy-Modus, ununterbrochen"
 	arr["TURKISH",248]="${pending_of_translation} noisy mod, kesinti yok"
 
@@ -3978,7 +3978,7 @@ function language_strings() {
 	arr["RUSSIAN",260]="${pending_of_translation} 5.  Smooth режим Enterprise Evil Twin"
 	arr["GREEK",260]="5.  Smooth mode Enterprise Evil Twin"
 	arr["ITALIAN",260]="5.  Evil Twin Enterprise modalità smooth"
-	arr["POLISH",260]="${pending_of_translation} 5.  Tryb smooth Enterprise Evil Twin"
+	arr["POLISH",260]="5.  Enterprise Evil Twin w trybie smooth"
 	arr["GERMAN",260]="5.  Smooth-Modus Enterprise Evil Twin"
 	arr["TURKISH",260]="${pending_of_translation} 5.  Smooth mod Enterprise Evil Twin"
 
@@ -4542,7 +4542,7 @@ function language_strings() {
 	arr["RUSSIAN",307]="${pending_of_translation} 6.  Noisy режим Enterprise Evil Twin"
 	arr["GREEK",307]="6.  Noisy mode Enterprise Evil Twin"
 	arr["ITALIAN",307]="6.  Evil Twin Enterprise modalità noisy"
-	arr["POLISH",307]="${pending_of_translation} 6.  Tryb noisy Enterprise Evil Twin"
+	arr["POLISH",307]="6.  Enterprise Evil Twin w trybie noisy"
 	arr["GERMAN",307]="6.  Noisy-Modus Enterprise Evil Twin"
 	arr["TURKISH",307]="${pending_of_translation} 6.  Noisy mod Enterprise Evil Twin"
 
@@ -4842,7 +4842,7 @@ function language_strings() {
 	arr["RUSSIAN",332]="${pending_of_translation} Прежде чем приступать к атаке на корпоративную сеть, имейте в виду, что режим \"noisy\" приведет к тому, что законные клиенты будут пытаться аутентифицироваться снова и снова в поддельной сети. Это может вызвать подозрения, и вас можно легко обнаружить"
 	arr["GREEK",332]="Πριν ξεκινήσετε μια επίθεση σε ένα δίκτυο Enterprise, λάβετε υπόψη σας ότι το \"noisy\" mode θα προκαλέσει την παραμονή των πελατών που προσπαθούν να επαληθευθούν ξανά και ξανά στο πλαστό δίκτυο. Αυτό θα μπορούσε να προκαλέσει υποψίες και θα μπορούσε εύκολα να ανακαλυφθεί"
 	arr["ITALIAN",332]="Prima di lanciare un attacco contro una rete Enterpise, tieni presente che la modalità \"noisy\" lascierá i clienti legittimi intrappolati cercando di eseguire ripetutamente l'autenticazione contro la rete falsa. Questo potrebbe sollevare sospetti e potrebbe essere facilmente scoperto"
-	arr["POLISH",332]="${pending_of_translation} Przed rozpoczęciem ataku na sieć Enterprise należy pamiętać, że tryb \"noisy\" uniemożliwi legalnym klientom próbę ponownego uwierzytelnienia się w fałszywej sieci. Może to budzić podejrzenia i można je łatwo wykryć"
+	arr["POLISH",332]="Przed rozpoczęciem ataku na sieć Enterprise należy pamiętać, że tryb \"noisy\" uniemożliwi legalnym klientom próbę ponownego uwierzytelnienia się w fałszywej sieci. Może to wzbudzić podejrzenia i jest łatwe do wykrycia"
 	arr["GERMAN",332]="Beachten Sie vor dem Starten eines Angriffs auf ein Enterprise-Netzwerk, dass der \"noisy\" Modus legitime Clients daran hindert, sich immer wieder gegen das gefälschte Netzwerk zu authentifizieren. Dies könnte zu Misstrauen führen und könnte leicht entdeckt werden"
 	arr["TURKISH",332]="${pending_of_translation} Bir Kurumsal ağa karşı bir saldırı başlatmadan önce, \"noisy\" modun meşru istemcilerin sahte ağa karşı tekrar ve tekrar kimlik doğrulamaya çalışmasını engelleyeceğini unutmayın. Bu şüpheleri artırabilir ve kolayca keşfedilebilir"
 
@@ -5586,7 +5586,7 @@ function language_strings() {
 	arr["RUSSIAN",394]="${pending_of_translation} Вы выбрали целевую сеть на 5Ghz и \"режим преследования DoS\", но второй интерфейс, необходимый для выполнения атаки, не поддерживает полосу 5Ghz, или она отключена, поэтому атака не может быть выполнена"
 	arr["GREEK",394]="Έχετε επιλέξει ένα 5Ghz δίκτυο-στόχος και το \"DoS pursuit mode\", αλλά η δεύτερη διεπαφή που απαιτείται για να εκτελέσετε την επίθεση δεν υποστηρίζει την 5Ghz ζώνη ή είναι απενεργοποιημένη, ως αποτέλεσμα η επίθεση να μην μπορεί να εκτελεστεί"
 	arr["ITALIAN",394]="Hai selezionato come obbiettivo una rete di 5Ghz e il \"DoS pursuit mode\", ma la seconda interfaccia necessaria per eseguire l'attacco non supporta la banda 5Ghz o è disattivata, quindi l'attacco non puó essere eseguito"
-	arr["POLISH",394]="${pending_of_translation} Wybrałeś docelową sieć 5Ghz i \"tryb DoS pursuit\", ale drugi interfejs potrzebny do przeprowadzenia ataku nie obsługuje pasma 5Ghz lub jest wyłączona, więc nie można go wykonać"
+	arr["POLISH",394]="Wybrałeś docelową sieć 5Ghz i \"tryb DoS pursuit\", ale drugi interfejs potrzebny do przeprowadzenia ataku nie obsługuje pasma 5Ghz lub jest ono wyłączone, więc nie można go wykonać"
 	arr["GERMAN",394]="Sie haben ein Zielnetzwerk mit 5Ghz und den \"DoS pursuit mode\" gewählt, aber die zweite Interface, die zur Ausführung des Angriffs benötigt wird, unterstützt das 5Ghz-Band nicht oder sie ist deaktiviert, so dass es nicht ausgeführt werden kann"
 	arr["TURKISH",394]="${pending_of_translation} Bir 5Ghz hedef ağı ve \"DoS peşinde koşma modu\" nı seçtiniz, ancak saldırıyı gerçekleştirmek için gereken ikinci arabirim, 5Ghz'yi bandını desteklemiyor veya devre dışı bırakılmış, böylece saldırı gerçekleştirilemiyor"
 
@@ -6198,7 +6198,7 @@ function language_strings() {
 	arr["RUSSIAN",445]="${pending_of_translation} Если вы установили ccze и испытываете ошибки отображения или сбои в некоторых окнах, вы должны отключить расширенную раскраску в меню параметров и языков"
 	arr["GREEK",445]="Εάν έχετε εγκαταστήσει ccze και αντιμετωπίζετε σφάλματα εμφάνισης ή δυσλειτουργίες σε ορισμένα παράθυρα, θα πρέπει να απενεργοποιήσετε το extended colorization στο μενού επιλογών και γλώσσας"
 	arr["ITALIAN",445]="Se hai installato ccze e vedi errori o alcune finestre tremolanti, disattiva la colorazione estesa nel menú opzioni e lingua"
-	arr["POLISH",445]="${pending_of_translation} Jeśli zainstalowano ccze i wystąpiły błędy wizualizacji lub migotania w niektórych oknach, powinieneś wyłączyć przedłużony kolory w menu opcji i języka"
+	arr["POLISH",445]="Jeśli zainstalowano ccze i wystąpiły błędy wizualizacji lub migotania w niektórych oknach, powinieneś wyłączyć rozszerzone kolory w menu opcji i języka"
 	arr["GERMAN",445]="Wenn Sie ccze installiert haben und in einigen Fenstern Anzeigefehler oder Flimmern auftreten, deaktivieren Sie die erweiterte Einfärbung im Einstellung- und Sprachmenü"
 	arr["TURKISH",445]="${pending_of_translation} Eğer ccze kuruluysa ve bazı pencerelerde görüntü hataları veya hatalar yaşıyorsanız, seçenek ve dil menüsünde genişletilmiş renklendirmeyi devre dışı bırakmalısınız"
 
@@ -6258,7 +6258,7 @@ function language_strings() {
 	arr["RUSSIAN",450]="${pending_of_translation} 5.  Включить расширенную раскраску навсегда"
 	arr["GREEK",450]="5.  Ενεργοποιήστε το extended colorization μόνιμα"
 	arr["ITALIAN",450]="5.  Attivare permanentemente la colorazione estesa"
-	arr["POLISH",450]="${pending_of_translation} 5.  Trwale włącz przedłużona kolorowanie"
+	arr["POLISH",450]="5.  Trwale włącz rozszerzone kolorowanie"
 	arr["GERMAN",450]="5.  Die erweiterte Einfärbung dauerhaft aktivieren"
 	arr["TURKISH",450]="${pending_of_translation} 5.  Genişletilmiş renklendirmeyi kalıcı olarak etkinleştir"
 
@@ -6294,7 +6294,7 @@ function language_strings() {
 	arr["RUSSIAN",453]="${pending_of_translation} Расширенная раскраска: ${pink_color}Включено${normal_color}"
 	arr["GREEK",453]="Extended colorization: ${pink_color}Ενεργοποιημένο${normal_color}"
 	arr["ITALIAN",453]="Colorazione estesa: ${pink_color}Attivata${normal_color}"
-	arr["POLISH",453]="${pending_of_translation} Przedłużona kolorowanie: ${pink_color}Włączone${normal_color}"
+	arr["POLISH",453]="Rozszerzone kolorowanie: ${pink_color}Włączone${normal_color}"
 	arr["GERMAN",453]="Erweiterte Einfärbung: ${pink_color}Aktiviert${normal_color}"
 	arr["TURKISH",453]="${pending_of_translation} Renklendirme: ${pink_color}Etkin${normal_color}"
 
@@ -6306,7 +6306,7 @@ function language_strings() {
 	arr["RUSSIAN",454]="${pending_of_translation} Расширенная раскраска: ${pink_color}Отключено${normal_color}"
 	arr["GREEK",454]="Extended colorization: ${pink_color}Απενεργοποιημένο${normal_color}"
 	arr["ITALIAN",454]="Colorazione estesa: ${pink_color}Disattivata${normal_color}"
-	arr["POLISH",454]="${pending_of_translation} Przedłużona kolorowanie: ${pink_color}Wyłączone${normal_color}"
+	arr["POLISH",454]="Rozszerzone kolorowanie: ${pink_color}Wyłączone${normal_color}"
 	arr["GERMAN",454]="Erweiterte Einfärbung: ${pink_color}Deaktiviert${normal_color}"
 	arr["TURKISH",454]="${pending_of_translation} Genişletilmiş renklendirme: ${pink_color}DevreDışı${normal_color}"
 
@@ -6330,7 +6330,7 @@ function language_strings() {
 	arr["RUSSIAN",456]="${pending_of_translation} 5.  Постоянно отключать расширенную раскраску"
 	arr["GREEK",456]="5.  Απενεργοποιήστε το extended colorization μόνιμα"
 	arr["ITALIAN",456]="5.  Disattivare permanentemente la colorazione estesa"
-	arr["POLISH",456]="${pending_of_translation} 5.  Trwale wyłącz przedłużona kolorowanie"
+	arr["POLISH",456]="5.  Trwale wyłącz rozszerzone kolorowanie"
 	arr["GERMAN",456]="5.  Erweiterte Einfärbung dauerhaft deaktivieren"
 	arr["TURKISH",456]="${pending_of_translation} 5.  Genişletilmiş renklendirmeyi kalıcı olarak devre dışı bırak"
 
@@ -6402,7 +6402,7 @@ function language_strings() {
 	arr["RUSSIAN",462]="${pending_of_translation} ${blue_color}Расширенная раскраска будет включена. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",462]="${blue_color}Το extended colorization θα ενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",462]="${blue_color}La colorazione estesa sará disattivata. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",462]="${pending_of_translation} ${blue_color}Przedłużona koloryzacja zostanie wyłączona. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",462]="${blue_color}Rozszerzone kolorowanie zostanie wyłączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",462]="${blue_color}Erweiterte Einfärbung wird deaktiviert. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
 	arr["TURKISH",462]="${pending_of_translation} ${blue_color}Genişletilmiş renklendirme devre dışı bırakılacak. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
@@ -6414,7 +6414,7 @@ function language_strings() {
 	arr["RUSSIAN",463]="${pending_of_translation} ${blue_color}Расширенная раскраска будет включена. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",463]="${blue_color}Το extended colorization θα ενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",463]="${blue_color}La colorazione estesa sará attivata. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",463]="${pending_of_translation} ${blue_color}Przedłużona kzostanie włączona. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",463]="${blue_color}Rozszerzone kolorowanie zostanie włączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",463]="${blue_color}Erweiterte Einfärbung wird aktiviert. ${green_color}Wollen Sie fortfahren? ${normal_color}${visual_choice}"
 	arr["TURKISH",463]="${pending_of_translation} ${blue_color}Genişletilmiş renklendirme etkinleştirilecektir. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
@@ -6438,7 +6438,7 @@ function language_strings() {
 	arr["RUSSIAN",465]="${pending_of_translation} Расширенная раскраска включена"
 	arr["GREEK",465]="Έχει ενεργοποιηθεί το extended colorization"
 	arr["ITALIAN",465]="La colorazione estesa è stata attivata"
-	arr["POLISH",465]="${pending_of_translation} Przedłużona koloryzacja została aktywowana"
+	arr["POLISH",465]="Rozszerzone kolorowanie zostało aktywowane"
 	arr["GERMAN",465]="Erweiterte Einfärbung wurde aktiviert"
 	arr["TURKISH",465]="${pending_of_translation} Genişletilmiş renklendirme etkinleştirildi"
 
@@ -6450,7 +6450,7 @@ function language_strings() {
 	arr["RUSSIAN",466]="${pending_of_translation} Расширенная раскраска отключена"
 	arr["GREEK",466]="Το extended colorization έχει απενεργοποιηθεί"
 	arr["ITALIAN",466]="La colorazione estesa è stata disattivata"
-	arr["POLISH",466]="${pending_of_translation} Przedłużona koloryzacja została wyłączona"
+	arr["POLISH",466]="Rozszerzone kolorowanie zostało wyłączone"
 	arr["GERMAN",466]="Erweiterte Einfärbung wurde deaktiviert"
 	arr["TURKISH",466]="${pending_of_translation} Genişletilmiş renklendirme devre dışı bırakıldı"
 
@@ -6654,7 +6654,7 @@ function language_strings() {
 	arr["RUSSIAN",483]="${pending_of_translation} Атака в режиме \"smooth\" будет демонтирована, как только будут сняты учетные данные, чтобы клиенты снова подключились к законной сети. Это уменьшает вероятность обнаружения, ищет некоторых пользователей в качестве пунктуальной неисправности беспроводной сети"
 	arr["GREEK",483]="Η επίθεση σε \"smooth\" mode θα σπάσει σε διάφορα μέρη μόλις ληφθεί η πιστοποίηση για να επιτρέψει στους πελάτες να επανασυνδεθούν ξανά στο κανονικό δίκτυο. Αυτό μειώνει την πιθανότητα να ανακαλυφθεί, αναζητώντας ορισμένους χρήστες ως μια εσφαλμένη λειτουργία ασύρματου δικτύου"
 	arr["ITALIAN",483]="L'attacco con la modalità \"smooth\" non appena acquisisce una credenziale verrà fermato per consentire ai client di riconnettersi alla rete legittima. Questo riduce le possibilità di essere scoperti, facendo credere agli utenti che sia stato un errore della rete wireless"
-	arr["POLISH",483]="${pending_of_translation} Atak w trybie \"smooth\" po przechwyceniu referencji zostanie zdemontowany, aby umożliwić klientom ponowne połączenie z uprawnioną siecią. Zmniejsza to szansę na odkrycie, sprawiając, że niektórym użytkownikom wydaje się bezcelowa awaria sieci bezprzewodowej"
+	arr["POLISH",483]="Atak w trybie \"smooth\" zostanie zdemontowany zaraz po przechwyceniu danych, aby umożliwić klientom ponowne połączenie z właściwą siecią. Zmniejsza to szansę na wykrycie, ponieważ niektórym użytkownikom wydaje się że to chwilowa awaria sieci bezprzewodowej"
 	arr["GERMAN",483]="Der Angriff im \"smooth\"-Modus wird sobald er einen Berechtigungsnachweis erfasst abgebaut, damit die Clients sich wieder mit dem legitimen Netzwerk verbinden können. Dies verringert die Wahrscheinlichkeit, entdeckt zu werden, was für einige Benutzer als sinnloser Ausfall des WLANs erscheint."
 	arr["TURKISH",483]="${pending_of_translation} Bir kimlik bilgilerini yakalar yakalamaz modda \"smooth\" saldırı, istemcilerin meşru ağa yeniden bağlanmasına izin vermek için sökülecektir. Bu, keşfedilme şansını azaltır ve bazı kullanıcılar için kablosuz ağın anlamsız bir başarısızlığı gibi görünmesini sağlar"
 
@@ -7038,7 +7038,7 @@ function language_strings() {
 	arr["RUSSIAN",515]="Вы выбрали канал на частотах 5Ghz, но ваша wifi карта не поддерживает 5Ghz, или этот диапазон отключён. Операция не может быть выполнена"
 	arr["GREEK",515]="Έχετε επιλέξει κανάλι της ζώνης 5Ghz, αλλά η κάρτα wifi σας δεν υποστηρίζει 5Ghz ή είναι απενεργοποιημένη. Η λειτουργία δεν μπορεί να πραγματοποιηθεί"
 	arr["ITALIAN",515]="Hai selezionato un canale della banda 5Ghz, ma la tua scheda wifi non supporta 5Ghz o è disattivato. L'operazione non può essere eseguita"
-	arr["POLISH",515]="${pending_of_translation} Masz wybrane pasmo 5Ghz, lecz Twoja karta wifi go nie obsługuje 5Ghz lub jest wyłączona. Operacja nie może być wykonana"
+	arr["POLISH",515]="${pending_of_translation} Masz wybrane pasmo 5Ghz, lecz Twoja karta wifi go nie obsługuje 5Ghz lub ono wyłączone. Operacja nie może być wykonana"
 	arr["GERMAN",515]="Sie haben einen Kanal des 5Ghz-Bandes ausgewählt, aber Ihre WLAN-Karte unterstützt 5Ghz nicht oder sie ist deaktiviert. Die Operation kann nicht ausgeführt werden"
 	arr["TURKISH",515]="${pending_of_translation} 5Ghz bant kanalı seçtiniz, ancak wifi kartınız 5Ghz'yi desteklemiyor veya devre dışı bırakılmış. İşlem gerçekleştirilemiyor"
 
@@ -7074,7 +7074,7 @@ function language_strings() {
 	arr["RUSSIAN",518]="После захвата учетных данных в сетевой атаке Enterprise помните, что вы можете попытаться расшифровать NTLM хеши с помощью \"Меню офлайн расшифровки WPA/WPA2\""
 	arr["GREEK",518]="Αφού καταγράψετε τα certificates σε μια Enterprise επίθεση δικτύου, θυμηθείτε ότι μπορείτε να προσπαθήσετε να αποκρυπτογραφήσετε τα NTLM hashes χρησιμοποιώντας το \"Μενού offline αποκρυπτογράφησης WPA/WPA2\""
 	arr["ITALIAN",518]="Dopo aver catturato le credenziali in un attacco contro una rete Enterprise, ricorda che puoi provare a decifrare gli hash NTLM utilizzando il \"Menù per decifrare WPA/WPA2 offline\""
-	arr["POLISH",518]="${pending_of_translation} Po przechwyceniu poświadczeń w ataku sieciowym Enterprise, pamiętaj, że możesz spróbować odszyfrować hashy NTLM za pomocą \"Menu deszyfrowania WPA/WPA2 offline\""
+	arr["POLISH",518]="Po przechwyceniu danych dostępowych w ataku na sieć Enterprise pamiętaj, że możesz spróbować złamać hash NTLM za pomocą \"Menu deszyfrowania WPA/WPA2 offline\""
 	arr["GERMAN",518]="Erinneren Sie sich dran, dass nach dem Erfassen von Credentials bei einem Enterprise-Netzwerkangriff Sie NTLM-Hashes mit dem \"Offline WPA/WPA2-Entschlüsselungsmenü\" entschlüsseln können."
 	arr["TURKISH",518]="${pending_of_translation} Enterprise ağ saldırısında kimlik bilgilerini aldıktan sonra, \"Çevrimdışı WPA/WPA2 decrypt menüsü\" kullanarak NTLM karmalarını çözmeyi deneyebilirsiniz."
 
@@ -7098,7 +7098,7 @@ function language_strings() {
 	arr["RUSSIAN",520]="Деаутентификация для Enterprise Evil Twin"
 	arr["GREEK",520]="Enterprise Evil Twin deauth"
 	arr["ITALIAN",520]="Desautenticazione per Evil Twin Enterprise"
-	arr["POLISH",520]="${pending_of_translation} Deautentykacja dla Evil Twin Enterprise"
+	arr["POLISH",520]="Deautentykacja dla Evil Twin Enterprise"
 	arr["GERMAN",520]="Evil Twin Enterprise Deauthentifizierung"
 	arr["TURKISH",520]="${pending_of_translation} Şeytani İkiz Enterprise deauth"
 
@@ -7110,7 +7110,7 @@ function language_strings() {
 	arr["RUSSIAN",521]="0.  Вернуться в меню атак Enterprise"
 	arr["GREEK",521]="0.  Επιστροφή στο μενού επιθέσεων Enterprise"
 	arr["ITALIAN",521]="0.  Tornare al menu degli attacchi Enterprise"
-	arr["POLISH",521]="${pending_of_translation} 0.  Wróć do menu Enterprise Atak"
+	arr["POLISH",521]="0.  Wróć do menu ataków Enterprise"
 	arr["GERMAN",521]="0.  Zurück zum Enterprise Angriffsmenü"
 	arr["TURKISH",521]="${pending_of_translation} 0.  Şeytani İkiz Enterprise saldırı menüsüne geri dön"
 
@@ -7122,7 +7122,7 @@ function language_strings() {
 	arr["RUSSIAN",522]="Smooth режим Enterprise Evil Twin"
 	arr["GREEK",522]="Smooth mode Enterprise Evil Twin"
 	arr["ITALIAN",522]="Evil Twin Enterprise modalità smooth"
-	arr["POLISH",522]="${pending_of_translation} Tryb smooth Enterprise Evil Twin"
+	arr["POLISH",522]="Enterprise Evil Twin w trybie smooth"
 	arr["GERMAN",522]="Smooth-Modus Enterprise Evil Twin"
 	arr["TURKISH",522]="${pending_of_translation} Smooth mod Enterprise Evil Twin"
 
@@ -7134,7 +7134,7 @@ function language_strings() {
 	arr["RUSSIAN",523]="Noisy режим Enterprise Evil Twin"
 	arr["GREEK",523]="Noisy mode Enterprise Evil Twin"
 	arr["ITALIAN",523]="Evil Twin Enterprise modalità noisy"
-	arr["POLISH",523]="${pending_of_translation} Tryb noisy Enterprise Evil Twin"
+	arr["POLISH",523]="Enterprise Evil Twin w trybie noisy"
 	arr["GERMAN",523]="Noisy-Modus Enterprise Evil Twin"
 	arr["TURKISH",523]="${pending_of_translation} Noisy mod Enterprise Evil Twin"
 
@@ -7146,7 +7146,7 @@ function language_strings() {
 	arr["RUSSIAN",524]="Атака Злой Двойник начата. Для её остановки клавишу [Enter] в этом окне"
 	arr["GREEK",524]="Η επίθεση Enterprise Evil Twin ξεκίνησε. Πατήστε το κουμπί [Enter] σε αυτό το παράθυρο για να την σταματήσετε"
 	arr["ITALIAN",524]="L'attacco Evil Twin Enterprise è iniziato. Premere il tasto [Enter] in questa finestra per fermarlo"
-	arr["POLISH",524]="${pending_of_translation} Rozpoczął się atak Evil Twin Enterprise. Naciśnij klawisz [Enter] w tym oknie, aby go zatrzymać"
+	arr["POLISH",524]="Rozpoczął się atak Evil Twin Enterprise. Naciśnij klawisz [Enter] w tym oknie, aby go zatrzymać"
 	arr["GERMAN",524]="Der Evil-Twin-Enterprise-Angriff hat begonnen. Drücken Sie die [Enter]-Taste in diesem Fenster, um es zu stoppen"
 	arr["TURKISH",524]="${pending_of_translation} Şeytani İkiz saldırısı Enterprise başlatıldı. Durdurmak için bu pencerede [Enter] tuşlayınız"
 
@@ -7158,7 +7158,7 @@ function language_strings() {
 	arr["RUSSIAN",525]="Если во время атаки Evil Twin Enterprise получен хеш или пароль, вы должны решить, где его сохранить. ${green_color}Будет сохранено более одного файла, введите путь (каталог) для хранения файла(ов). Если каталог не существует, airgeddon создаст его. Нажмите [Enter], чтобы принять предложение по умолчанию ${normal_color}[${enterprise_potpath}]"
 	arr["GREEK",525]="Εάν κατά τη διάρκεια της επίθεσης Enterprise Evil Twin προκύψει ένα hash ή ένας κωδικός πρόσβασης, θα πρέπει να αποφασίσετε πού να το αποθηκεύσετε. ${green_color}Θα αποθηκευτούν περισσότερα από ένα αρχεία, πληκτρολογήστε το path (κατάλογος) για την αποθήκευση των αρχείων. Εάν ο κατάλογος δεν υπάρχει, το airgeddon θα το δημιουργήσει. Πατήστε [Enter] για να αποδεχθείτε την προεπιλεγμένη επιλογή ${normal_color}[${enterprise_potpath}]"
 	arr["ITALIAN",525]="Se riesci a catturare un hash o una password durante l'attacco Evil Twin Enterprise, devi decidere dove salvarlo. ${green_color}Diversi file verranno salvati, scrivi il percorso (la directory) in cui i file saranno scritti. Se la directory non esiste, airgeddon la genererà. Premere [Enter] per accettare il percorso predefinito proposto ${normal_color}[${enterprise_potpath}]"
-	arr["POLISH",525]="${pending_of_translation} Jeśli uda ci się zdobyć hash lub hasło podczas ataku Zło bliźniaczy Enterprise, musisz zdecydować, gdzie go zapisać. ${green_color}Kilka plików zostanie zapisanych, zapisz ścieżkę (katalog), w którym napiszemy plik(y). Jeśli katalog nie istnieje, airgeddon go wygeneruje. Naciśnij [Enter], aby zaakceptować domyślną proponowaną trasę ${normal_color}[${enterprise_potpath}]"
+	arr["POLISH",525]="Jeśli uda ci się zdobyć hash lub hasło podczas ataku Evil Twin Enterprise, musisz zdecydować gdzie je zapisać. ${green_color}Zostanie zapisany wiecej niż jeden plik, podaj ścieżkę (katalog) dla plik(ów). Jeśli katalog nie istnieje, airgeddon go utworzy. Naciśnij [Enter], aby zaakceptować domyślną proponowaną ścieżkę ${normal_color}[${enterprise_potpath}]"
 	arr["GERMAN",525]="Wenn Sie während des Evil Twin Enterprise Angriffs einen Hash oder ein Passwort erfassen, müssen Sie entscheiden, wo es gespeichert werden soll. ${green_color}Mehrere Dateien werden gespeichert. Geben Sie den Pfad (das Verzeichnis) ein, in dem wir die Datei(en) schreiben werden. Wenn das Verzeichnis nicht vorhanden ist, wird es von airgeddon erstellt. Bestätigen Sie mit [Enter], um die standardmäßig vorgeschlagene Route zu akzeptieren ${normal_color}[${enterprise_potpath}]"
 	arr["TURKISH",525]="${pending_of_translation} Evil Twin Enterprise saldırısı sırasında bir karmaşa veya şifre yakalamayı başarabilirseniz, nereye kaydedeceğinize karar vermeniz gerekir. ${green_color}Birkaç dosya kaydedilecek, dosya (lar) ı yazacağımız yolu (dizin) yazacağız. Dizini yoksa, airgeddon onu üretecektir. Önerilen önerilen rotayı kabul etmek için [Enter] tuşuna basın ${normal_color}[${enterprise_potpath}]"
 
@@ -7170,7 +7170,7 @@ function language_strings() {
 	arr["RUSSIAN",526]="Каталог не существует или у вас нет разрешения на запись"
 	arr["GREEK",526]="Ο κατάλογος δεν υπάρχει ή δεν έχετε άδεια εγγραφής"
 	arr["ITALIAN",526]="La directory non esiste o non hai i permessi di scrittura"
-	arr["POLISH",526]="${pending_of_translation} Katalog nie istnieje lub nie masz uprawnień do pisania"
+	arr["POLISH",526]="Katalog nie istnieje lub nie masz uprawnień do zapisu"
 	arr["GERMAN",526]="Verzeichnis existiert nicht oder Sie haben keine Schreibberechtigung"
 	arr["TURKISH",526]="${pending_of_translation} Dizin mevcut değil veya yazma izniniz yok"
 
@@ -7206,7 +7206,7 @@ function language_strings() {
 	arr["RUSSIAN",529]="Судя по всему, ничего не было захвачено во время атаки Enterprise Evil Twin"
 	arr["GREEK",529]="Φαίνεται ότι τίποτα δεν καταγράφηκε κατά τη διάρκεια της επίθεσης Enterprise Evil Twin"
 	arr["ITALIAN",529]="Sembra che non sia stato catturato nulla durante l'attacco Evil Twin Enterprise"
-	arr["POLISH",529]="${pending_of_translation} Wygląda na to, że nic nie zostało złapane podczas ataku Zli Twin Enterprise"
+	arr["POLISH",529]="Wygląda na to, że podczas ataku Evil Twin Enterprise nic nie zostało przechwycone"
 	arr["GERMAN",529]="Es sieht so aus, als wäre nichts während des Evil Twin Enterprise Angriffs gefangen worden"
 	arr["TURKISH",529]="${pending_of_translation} Evil Twin Enterprise saldırısı sırasında yakalanan hiçbir şey yok gibi görünüyor"
 
@@ -7218,7 +7218,7 @@ function language_strings() {
 	arr["RUSSIAN",530]="Поздравления!! Кажется, вы захватили хеши"
 	arr["GREEK",530]="Συγχαρητήρια!! Φαίνεται ότι έχετε καταγράψει κάποιο hash"
 	arr["ITALIAN",530]="Congratulazioni!! Sembra che tu abbia catturato qualche hash"
-	arr["POLISH",530]="${pending_of_translation} Gratulacje!! Wygląda na to, że zdobyłeś hash"
+	arr["POLISH",530]="Gratulacje!! Wygląda na to, że przechwyciłeś hash"
 	arr["GERMAN",530]="Herzlichen Glückwunsch!! Es scheint, dass Sie Hashes erfasst haben"
 	arr["TURKISH",530]="${pending_of_translation} Tebrikler!! Görünüşe göre bazı hashları yakaladın"
 
