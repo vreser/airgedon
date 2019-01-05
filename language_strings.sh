@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20190102
+#Date.........: 20190105
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -7423,7 +7423,7 @@ function language_strings() {
 	arr["GREEK",547]="Το john the ripper αρχείο τρόπαιο δημιουργήθηκε επιτυχώς [${normal_color}${jtrpotenteredpath}${blue_color}]"
 	arr["ITALIAN",547]="File di trofeo di john the ripper generato con successo [${normal_color}${jtrpotenteredpath}${blue_color}]"
 	arr["POLISH",547]="Plik trofeum john the ripper został pomyślnie wygenerowany w [${normal_color}${jtrpotenteredpath}${blue_color}]"
-	arr["GERMAN",547]="Trophäen-Datei-John the ripper erfolgreich in [${normal_color}${jtrpotenteredpath}${blue_color}] generiert"
+	arr["GERMAN",547]="Trophäen-Datei-john the ripper erfolgreich in [${normal_color}${jtrpotenteredpath}${blue_color}] generiert"
 	arr["TURKISH",547]="John the ripper trophy dosyası başarıyla şurada oluşturuldu [${normal_color}${jtrpotenteredpath}${blue_color}]"
 
 	arr["ENGLISH",548]="asleap CPU"
@@ -8155,7 +8155,7 @@ function language_strings() {
 	arr["GREEK",608]="${pending_of_translation} Το επιλεγμένο αρχείο έχει μια έγκυρη μορφή hashes της επιχείρησης hashes john the ripper"
 	arr["ITALIAN",608]="Il file selezionato ha un hash valido in formato enterprise per john the ripper"
 	arr["POLISH",608]="${pending_of_translation} Wybrany plik ma poprawny format haszy korporacyjnego john the ripper"
-	arr["GERMAN",608]="Die ausgewählte Datei hat ein gültiges Enterprise-Hashformat für John the ripper"
+	arr["GERMAN",608]="Die ausgewählte Datei hat ein gültiges Enterprise-Hashformat für john the ripper"
 	arr["TURKISH",608]="${pending_of_translation} Seçilen dosyanın geçerli bir john the ripper kurumsal karma biçimi var"
 
 	arr["ENGLISH",609]="You already have selected a capture file during this session [${normal_color}${jtrenterpriseenteredpath}${blue_color}]"
@@ -8179,7 +8179,7 @@ function language_strings() {
 	arr["GREEK",610]="${pending_of_translation} Οι χασίχες που αποκτήθηκαν κατά τη διάρκεια μιας επιχείρησης wifi δικτύου επιθέσεις μπορούν επίσης να αποκρυπτογραφηθούν χρησιμοποιώντας το εργαλείο john the ripper. Λεξικό ή επιθέσεις βίαιης δύναμης μπορούν να χρησιμοποιηθούν από τα μενού airgeddon"
 	arr["ITALIAN",610]="È anche possibile utilizzare john the ripper per decifrare gli hash ottenuti in un attacco a una rete wifi enterprise. Gli attacchi di dizionario o forza bruta, possono essere utilizzati dai menu di airgeddon"
 	arr["POLISH",610]="${pending_of_translation} Możesz również użyć ripera john, aby odszyfrować hasze uzyskane podczas ataku na firmową sieć wifi. Ataki słownikowe lub brutalna siła mogą być użyte z menu airgeddon"
-	arr["GERMAN",610]="Sie können auch John the ripper verwenden, um die Hashes, die auf ein WLAN-Enterprise Netzwerk erhalten wurden, zu entschlüsseln. Wörterbuchangriffe oder Brute Force Angriffe können aus den Menüs von airgeddon verwendet werden"
+	arr["GERMAN",610]="Sie können auch john the ripper verwenden, um die Hashes, die auf ein WLAN-Enterprise Netzwerk erhalten wurden, zu entschlüsseln. Wörterbuchangriffe oder Brute Force Angriffe können aus den Menüs von airgeddon verwendet werden"
 	arr["TURKISH",610]="${pending_of_translation} Bir kurumsal wifi ağına yapılan saldırıda elde edilen karmaşanın şifresini çözmek için john the ripper'i kullanabilirsiniz. Sözlük veya kaba kuvvet saldırıları airgeddon menülerinden kullanılabilir"
 
 	arr["ENGLISH",611]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${jtr_potpath}]"
