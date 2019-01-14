@@ -626,7 +626,7 @@ function language_strings() {
 	jtr_texts["ITALIAN",2]="Utente enterprise"
 	jtr_texts["POLISH",2]="Użytkownik enterprise"
 	jtr_texts["GERMAN",2]="Enterprise-Benutzername"
-	jtr_texts["TURKISH",2]="${pending_of_translation} Kullanıcı adı enterprise"
+	jtr_texts["TURKISH",2]="Enterprise kullanıcı"
 
 	jtr_texts["ENGLISH",3]="Enterprise users and passwords"
 	jtr_texts["SPANISH",3]="Usuarios y contraseñas enterprise"
@@ -638,7 +638,7 @@ function language_strings() {
 	jtr_texts["ITALIAN",3]="Utenti e password enterprise"
 	jtr_texts["POLISH",3]="Użytkownicy i hasła enterprise"
 	jtr_texts["GERMAN",3]="Enterprise-Benutzernamen und Kennwörter"
-	jtr_texts["TURKISH",3]="${pending_of_translation} Kullanıcılar ve enterprise şifreler"
+	jtr_texts["TURKISH",3]="Enterprise kullanıcılar ve şifreler"
 
 	declare -gA hashcat_texts
 	hashcat_texts["ENGLISH",1]="airgeddon. Decrypted password using hashcat"
@@ -663,7 +663,7 @@ function language_strings() {
 	hashcat_texts["ITALIAN",2]="Utente enterprise"
 	hashcat_texts["POLISH",2]="Użytkownik enterprise"
 	hashcat_texts["GERMAN",2]="Enterprise-Benutzername"
-	hashcat_texts["TURKISH",2]="${pending_of_translation} Kullanıcı adı enterprise"
+	hashcat_texts["TURKISH",2]="Enterprise kullanıcı"
 
 	hashcat_texts["ENGLISH",3]="Enterprise users and passwords"
 	hashcat_texts["SPANISH",3]="Usuarios y contraseñas enterprise"
@@ -675,7 +675,7 @@ function language_strings() {
 	hashcat_texts["ITALIAN",3]="Utenti e password enterprise"
 	hashcat_texts["POLISH",3]="Użytkownicy i hasła enterprise"
 	hashcat_texts["GERMAN",3]="Enterprise-Benutzernamen und Kennwörter"
-	hashcat_texts["TURKISH",3]="${pending_of_translation} Kullanıcılar ve enterprise şifreler"
+	hashcat_texts["TURKISH",3]="Enterprise kullanıcılar ve şifreler"
 
 	declare -gA aircrack_texts
 	aircrack_texts["ENGLISH",1]="airgeddon. Decrypted password using aircrack"
@@ -701,7 +701,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",0]="Info Evil Twin Enterprise AP"
 	enterprise_texts["POLISH",0]="Informacja o Evil Twin Enterprise AP"
 	enterprise_texts["GERMAN",0]="Information über Evil Twin Enterprise AP"
-	enterprise_texts["TURKISH",0]="${pending_of_translation} Bilgi Enterprise Şeytani İkiz"
+	enterprise_texts["TURKISH",0]="Enterprise Şeytani İkiz AP Bilgisi"
 
 	enterprise_texts["ENGLISH",1]="Channel"
 	enterprise_texts["SPANISH",1]="Canal"
@@ -737,7 +737,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",3]="Con questo attacco, aspetteremo che un cliente ci dia un hash o la sua password per la rete wifi Enterprise attraverso il nostro AP falso. Hai selezione la modalità \"smooth\", quindi non appena viene catturato un hash o una password, l'attacco si interrompe. Puoi anche fermare l'attacco premendo il tasto [Enter] nella schermata principale"
 	enterprise_texts["POLISH",3]="W tym ataku poczekamy aż klient poda nam hash lub hasło do sieci wifi Enterprise w naszym fałszywym AP. W trybie \"smooth\", gdy tylko hash lub hasło zostanie przechwycone atak się zatrzyma. Możesz także zatrzymać atak naciskając klawisz [Enter] na ekranie głównym"
 	enterprise_texts["GERMAN",3]="Mit diesem Angriff werden wir darauf warten, dass uns ein Kunde einen Hash oder sein Passwort für das Enterprise WLAN-Netzwerk in unserem gefälschten AP gibt. Mit dem \"smooth\" Modus wird der Angriff sobald ein Hash oder Passwort erfasst wurde beenden. Sie können den Angriff auch durch Drücken der [Enter]-Taste auf dem Hauptbildschirm stoppen"
-	enterprise_texts["TURKISH",3]="${pending_of_translation} Bu saldırı ile, bir müşterinin sahte AP'deki Enterprise wifi ağı için bize bir karma veya şifresini vermesini bekleyeceğiz. \"smooth\" modu, böylece bir karma veya şifre yakalanır yakalanmaz, saldırı duracaktır. Ana ekranda [Enter] tuşuna basarak da saldırıyı durdurabilirsiniz"
+	enterprise_texts["TURKISH",3]="Bu saldırı ile, bir müşterinin sahte AP'deki Enterprise wifi ağı için bize bir hash veya şifre vermesini bekleyeceğiz. \"smooth\" modunu seçtiniz, böylece bir hash veya şifre yakalanır yakalanmaz saldırı duracaktır. Ana ekranda [Enter] tuşuna basarak da saldırıyı durdurabilirsiniz"
 
 	enterprise_texts["ENGLISH",4]="On this attack, we'll wait for a network client to provide us a hash or a password for the Enterprise wifi network in our fake AP. You selected \"noisy\" mode, so the attack won't stop until you press [Enter] key on the main window"
 	enterprise_texts["SPANISH",4]="Con este ataque, esperaremos a que algún cliente nos de un hash o su contraseña de la red wifi Enterprise en nuestro AP falso. Has seleccionado el modo \"noisy\", por lo que el ataque no parará hasta que pulses la tecla [Enter] en la pantalla principal"
