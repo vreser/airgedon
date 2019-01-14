@@ -105,7 +105,7 @@ function language_strings() {
 	disabled_text["ITALIAN"]="Disattivato"
 	disabled_text["POLISH"]="Dezaktywowany"
 	disabled_text["GERMAN"]="Deaktiviert"
-	disabled_text["TURKISH"]="${pending_of_translation} Devreden"
+	disabled_text["TURKISH"]="Aktif Değil"
 
 	declare -gA et_misc_texts
 	et_misc_texts["ENGLISH",0]="Evil Twin AP Info"
@@ -166,7 +166,7 @@ function language_strings() {
 	et_misc_texts["ITALIAN",4]="Con questo attacco è necessario utilizzare uno sniffer esterno per cercare di ottenere le password dei clienti connessi alla rete"
 	et_misc_texts["POLISH",4]="W tym ataku musisz użyć zewnętrznego sniffera, aby spróbować uzyskać hasła od klientów podłączonych do sieci"
 	et_misc_texts["GERMAN",4]="Mit diesem Angriff ist ein externer Sniffer erforderlich um Passwörter von am Netzwerk verbundene clients zu stehlen"
-	et_misc_texts["TURKISH",4]="Bu saldırı sonucunda ağa bağlı müşteri şifrelerini edinmek için harici bir algılayıcı kullanmanız gerekir"
+	et_misc_texts["TURKISH",4]="Bu saldırı sonucunda ağa bağlı client şifrelerini edinmek için harici bir algılayıcı kullanmanız gerekir"
 
 	et_misc_texts["ENGLISH",5]="On this attack, watch the sniffer's screen to see if a password appears"
 	et_misc_texts["SPANISH",5]="Con este ataque, estate atento a la pantalla del sniffer para ver si aparece alguna contraseña"
@@ -589,7 +589,7 @@ function language_strings() {
 	asleap_texts["ITALIAN",2]="Challenge"
 	asleap_texts["POLISH",2]="Challenge"
 	asleap_texts["GERMAN",2]="Challenge"
-	asleap_texts["TURKISH",2]="${pending_of_translation} Okuması"
+	asleap_texts["TURKISH",2]="Challenge"
 
 	asleap_texts["ENGLISH",3]="Response"
 	asleap_texts["SPANISH",3]="Response"
@@ -601,7 +601,7 @@ function language_strings() {
 	asleap_texts["ITALIAN",3]="Response"
 	asleap_texts["POLISH",3]="Odpowiedź"
 	asleap_texts["GERMAN",3]="Response"
-	asleap_texts["TURKISH",3]="${pending_of_translation} Yanıtı"
+	asleap_texts["TURKISH",3]="Yanıt"
 
 	declare -gA jtr_texts
 	jtr_texts["ENGLISH",1]="airgeddon. Decrypted password using john the ripper"
@@ -737,7 +737,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",3]="Con questo attacco, aspetteremo che un cliente ci dia un hash o la sua password per la rete wifi Enterprise attraverso il nostro AP falso. Hai selezione la modalità \"smooth\", quindi non appena viene catturato un hash o una password, l'attacco si interrompe. Puoi anche fermare l'attacco premendo il tasto [Enter] nella schermata principale"
 	enterprise_texts["POLISH",3]="W tym ataku poczekamy aż klient poda nam hash lub hasło do sieci wifi Enterprise w naszym fałszywym AP. W trybie \"smooth\", gdy tylko hash lub hasło zostanie przechwycone atak się zatrzyma. Możesz także zatrzymać atak naciskając klawisz [Enter] na ekranie głównym"
 	enterprise_texts["GERMAN",3]="Mit diesem Angriff werden wir darauf warten, dass uns ein Kunde einen Hash oder sein Passwort für das Enterprise WLAN-Netzwerk in unserem gefälschten AP gibt. Mit dem \"smooth\" Modus wird der Angriff sobald ein Hash oder Passwort erfasst wurde beenden. Sie können den Angriff auch durch Drücken der [Enter]-Taste auf dem Hauptbildschirm stoppen"
-	enterprise_texts["TURKISH",3]="Bu saldırı ile, bir müşterinin sahte AP'deki Enterprise wifi ağı için bize bir hash veya şifre vermesini bekleyeceğiz. \"smooth\" modunu seçtiniz, böylece bir hash veya şifre yakalanır yakalanmaz saldırı duracaktır. Ana ekranda [Enter] tuşuna basarak da saldırıyı durdurabilirsiniz"
+	enterprise_texts["TURKISH",3]="Bu saldırı ile, bir clientin sahte AP'deki Enterprise wifi ağı için bize bir hash veya şifre vermesini bekleyeceğiz. \"smooth\" modunu seçtiniz, böylece bir hash veya şifre yakalanır yakalanmaz saldırı duracaktır. Ana ekranda [Enter] tuşuna basarak da saldırıyı durdurabilirsiniz"
 
 	enterprise_texts["ENGLISH",4]="On this attack, we'll wait for a network client to provide us a hash or a password for the Enterprise wifi network in our fake AP. You selected \"noisy\" mode, so the attack won't stop until you press [Enter] key on the main window"
 	enterprise_texts["SPANISH",4]="Con este ataque, esperaremos a que algún cliente nos de un hash o su contraseña de la red wifi Enterprise en nuestro AP falso. Has seleccionado el modo \"noisy\", por lo que el ataque no parará hasta que pulses la tecla [Enter] en la pantalla principal"
@@ -749,7 +749,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",4]="Con questo attacco, aspetteremo che un cliente ci dia un hash o la sua password per la rete wifi Enterprise attraverso il nostro AP falso. Hai selezionato la modalità \"noisy\", quindi l'attacco non si fermerà finché non premi il tasto [Enter] nella schermata principale"
 	enterprise_texts["POLISH",4]="W tym ataku poczekamy aż klient poda nam skrót lub hasło do sieci wifi Enterprise w naszym fałszywym AP. Wybrałeś tryb \"noisy\" więc atak nie zostanie zatrzymany dopóki nie naciśniesz klawisza [Enter] na głównym ekranie"
 	enterprise_texts["GERMAN",4]="Mit diesem Angriff werden wir darauf warten, dass uns ein Kunde einen Hash oder sein Passwort für das Enterprise Wi-Fi-Netzwerk in unserem gefälschten AP gibt. Sie haben den \"noisy\" Modus gewählt, der Angriff wird somit nicht stoppen, bis Sie die [Enter]-Taste auf dem Hauptbildschirm drücken"
-	enterprise_texts["TURKISH",4]="${pending_of_translation} Bu saldırı ile, bir müşterinin sahte AP'deki Enterprise wifi ağı için bize bir karma veya şifresini vermesini bekleyeceğiz. Modunu \"noisy\" seçtiniz, böylece ana ekranda [Enter] tuşuna basana kadar saldırı durmayacak"
+	enterprise_texts["TURKISH",4]="${pending_of_translation} Bu saldırı ile, bir clientin sahte AP'deki Enterprise wifi ağı için bize bir karma veya şifresini vermesini bekleyeceğiz. \"noisy\" modunu seçtiniz, bu yüzden ana ekranda [Enter] tuşuna basana kadar saldırı durmayacak"
 
 	enterprise_texts["ENGLISH",5]="Last captured user"
 	enterprise_texts["SPANISH",5]="Último usuario capturado"
@@ -761,7 +761,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",5]="Ultimo utente catturato"
 	enterprise_texts["POLISH",5]="Ostatni przechwycony użytkownik"
 	enterprise_texts["GERMAN",5]="Letzter erfasste Nutzer"
-	enterprise_texts["TURKISH",5]="${pending_of_translation} Son yakalanan kullanıcı"
+	enterprise_texts["TURKISH",5]="Son yakalanan kullanıcı"
 
 	enterprise_texts["ENGLISH",6]="Nothing captured yet"
 	enterprise_texts["SPANISH",6]="Aún no se ha capturado nada"
@@ -773,7 +773,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",6]="Non è stato ancora catturato niente"
 	enterprise_texts["POLISH",6]="Jeszcze nic nie zostało przechwycone"
 	enterprise_texts["GERMAN",6]="Nichts wurde bisher erfasst"
-	enterprise_texts["TURKISH",6]="${pending_of_translation} Henüz yakalanan bir şey yok"
+	enterprise_texts["TURKISH",6]="Henüz yakalanan bir şey yok"
 
 	enterprise_texts["ENGLISH",7]="Captured hashes"
 	enterprise_texts["SPANISH",7]="Hashes capturados"
@@ -785,7 +785,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",7]="Hash catturati"
 	enterprise_texts["POLISH",7]="Przechwycone hashe"
 	enterprise_texts["GERMAN",7]="Erfasste Hashes"
-	enterprise_texts["TURKISH",7]="${pending_of_translation} Yakalanan karmalar"
+	enterprise_texts["TURKISH",7]="Yakalanan hashler"
 
 	enterprise_texts["ENGLISH",8]="Captured plain text passwords"
 	enterprise_texts["SPANISH",8]="Contraseñas en texto plano capturadas"
@@ -797,7 +797,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",8]="Passwords in chiaro acquisite"
 	enterprise_texts["POLISH",8]="Przechwycone hasła w tekscie jawnym"
 	enterprise_texts["GERMAN",8]="Erfasste Klartextpasswörter"
-	enterprise_texts["TURKISH",8]="${pending_of_translation} Yakalanan düz metinde şifreler"
+	enterprise_texts["TURKISH",8]="Yakalanan text şifreler"
 
 	enterprise_texts["ENGLISH",9]="Press [Enter] on the main script window to continue, this window will be closed and the files will be generated"
 	enterprise_texts["SPANISH",9]="Pulsa [Enter] en la ventana principal del script para continuar, esta ventana se cerrará y los ficheros serán generados"
@@ -809,7 +809,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",9]="Premi il tasto [Enter] nella finestra principale dello script per continuare, questa finestra si chiuderà e i file verranno generati"
 	enterprise_texts["POLISH",9]="Wciśnij [Enter] w oknie głównym skryptu aby kontynuować, to okno zostanie zamknięte a pliki zostaną wygenerowane"
 	enterprise_texts["GERMAN",9]="Drücken Sie die [Enter]-Taste im Hauptfenster um fortzufahren. Dieses Fenster wird geschlossen und die Dateien werden generiert"
-	enterprise_texts["TURKISH",9]="${pending_of_translation} Devam etmek için [Enter] tuşuna basınız, bu sayfa kapatılacaktır ve dosyalar oluşturulacak"
+	enterprise_texts["TURKISH",9]="Devam etmek için [Enter] tuşuna basınız, bu sayfa kapatılacaktır ve dosyalar oluşturulacak"
 
 	enterprise_texts["ENGLISH",10]="The captured files will be saved on directory"
 	enterprise_texts["SPANISH",10]="Los ficheros capturados se guardarán en el directorio"
@@ -821,7 +821,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",10]="I file catturati verranno salvati nella directory"
 	enterprise_texts["POLISH",10]="Przechwycone pliki zostaną zapisane w katalogu"
 	enterprise_texts["GERMAN",10]="Die erfassten Dateien werden im Verzeichnis gespeichert"
-	enterprise_texts["TURKISH",10]="${pending_of_translation} Yakalanan dosyalar dizine kaydedilecek"
+	enterprise_texts["TURKISH",10]="Yakalanan dosyalar dizine kaydedilecek"
 
 	enterprise_texts["ENGLISH",11]="airgeddon. Captured passwords during Enterprise Evil Twin"
 	enterprise_texts["SPANISH",11]="airgeddon. Contraseñas capturadas en Evil Twin Enterprise"
@@ -833,7 +833,7 @@ function language_strings() {
 	enterprise_texts["ITALIAN",11]="airgeddon. Password catturate con Evil Twin Enterprise"
 	enterprise_texts["POLISH",11]="airgeddon. Hasła przechwycone w Evil Twin Enterprise"
 	enterprise_texts["GERMAN",11]="airgeddon. Erfasste Passwörter während Evil Twin Enterprise"
-	enterprise_texts["TURKISH",11]="${pending_of_translation} airgeddon. Evil Twin Enterprise'da yakalanan şifreler"
+	enterprise_texts["TURKISH",11]="airgeddon. Evil Twin Enterprise'da yakalanan şifreler"
 
 	declare -gA footer_texts
 	footer_texts["ENGLISH",1]="If you enjoyed the script and found it useful, you can support the project by making a donation. Through PayPal (${mail}) or sending a fraction of cryptocurrency (Bitcoin, Ethereum, Litecoin...). Any amount, no matter how small (1, 2, 5 $/€) is welcome. More information and direct links to do it at: ${urlgithub_wiki}/Contributing"
@@ -1543,7 +1543,7 @@ function language_strings() {
 	arr["ITALIAN",57]="10. Menu dell'attacco Enterprise"
 	arr["POLISH",57]="10. Menu ataków Enterprise"
 	arr["GERMAN",57]="10. Enterprise-Angriffsmenü"
-	arr["TURKISH",57]="${pending_of_translation} 10. Enterprise saldırılar menüsü"
+	arr["TURKISH",57]="10. Enterprise saldırılar menüsü"
 
 	arr["ENGLISH",58]="9.  Polish"
 	arr["SPANISH",58]="9.  Polaco"
@@ -2204,7 +2204,7 @@ function language_strings() {
 	arr["ITALIAN",112]="Le reti WPA/WPA2 Enterprise sono solitamente configurate negli ambienti aziendali. Utilizzano un server Radius per l'autenticazione e, diversamente dalle reti convenzionali, richiedono più elementi per l'autenticazione, non solo una password. Possono richiedere un nome utente e una password oltre a un certificato"
 	arr["POLISH",112]="Sieci WPA/WPA2 Enterprise są powszechnie stosowane w środowiskach korporacyjnych. Korzystają z serwera Radius do uwierzytelniania i w przeciwieństwie do sieci konwencjonalnych wymagają więcej elementów do uwierzytelnienia, a nie tylko hasła. Mogą wymagać nazwy użytkownika, hasła i czasami certyfikatu"
 	arr["GERMAN",112]="WPA/WPA2 Enterprise-Netzwerke werden häufig in Unternehmensumgebungen verwendet. Sie verwenden einen Radius-Server zur Authentifizierung und benötigen im Gegensatz zu herkömmlichen Netzwerken mehr Elemente zur Authentifizierung als ein Passwort. Sie benötigen möglicherweise Benutzernamen, Passwort und gelegentlich ein Zertifikat"
-	arr["TURKISH",112]="${pending_of_translation} WPA/WPA2 Enterprise ağlar, şirket ortamlarında yaygın olarak kullanılır. Kimlik doğrulaması için bir Radius sunucu kullanıyorlar ve geleneksel ağların aksine, yalnızca bir şifre değil, kimlik doğrulama için daha fazla öğe gerekiyor. Kullanıcı adı, şifre ve bazen sertifika isteyebilirler"
+	arr["TURKISH",112]="WPA/WPA2 Enterprise ağlar, şirket ortamlarında yaygın olarak kullanılır. Kimlik doğrulaması için bir Radius sunucu kullanıyorlar ve geleneksel ağların aksine, yalnızca bir şifre değil, kimlik doğrulama için daha fazla öğe gerekiyor. Kullanıcı adı, şifre ve bazen sertifika isteyebilirler"
 
 	arr["ENGLISH",113]="3.  French"
 	arr["SPANISH",113]="3.  Francés"
@@ -2264,7 +2264,7 @@ function language_strings() {
 	arr["ITALIAN",117]="modalità smooth, disconnettersi dopo la cattura"
 	arr["POLISH",117]="tryb smooth, odłącz po przechwyceniu"
 	arr["GERMAN",117]="smooth-Modus, nach dem Erfassen abschalten"
-	arr["TURKISH",117]="${pending_of_translation} smooth mod, yakalamadan sonra bağlantıyı kes"
+	arr["TURKISH",117]="smooth mod, yakalamadan sonra bağlantıyı keser"
 
 	arr["ENGLISH",118]="4.  DoS attacks menu"
 	arr["SPANISH",118]="4.  Menú de ataques DoS"
@@ -3380,7 +3380,7 @@ function language_strings() {
 	arr["ITALIAN",210]="Lo script controllerà se si ha accesso a internet per vedere se c'è una nuova versione. Si prega di essere pazienti..."
 	arr["POLISH",210]="Skrypt sprawdzi, czy masz dostęp do internetu i czy jest nowa wersja. Cierpliwości..."
 	arr["GERMAN",210]="Das Skript überprüft, ob Sie Zugriff auf das Internet haben, um zu sehen, ob eine neue Version existiert. Wir bitten um Geduld..."
-	arr["TURKISH",210]="${pending_of_translation} Komut, daha yeni bir sürümü arayan internet erişimini kontrol edecektir. Lütfen sabırlı olun..."
+	arr["TURKISH",210]="Yazılım, daha yeni bir sürümü arayan internet erişimini kontrol edecektir. Lütfen sabırlı olun..."
 
 	arr["ENGLISH",211]="It seems you have no internet access. The script can't connect to repository. It will continue without updating..."
 	arr["SPANISH",211]="Parece que no tienes conexión a internet. El script no puede conectar al repositorio. Continuará sin actualizarse..."
@@ -4088,7 +4088,7 @@ function language_strings() {
 	arr["ITALIAN",269]="Per un attacco Evil Twin c'è bisogno di essere vicino al punto di accesso obiettivo o di avere un'antenna wifi potente. Il segnale deve raggiungere i clienti come o piú forte che il legittimo AP"
 	arr["POLISH",269]="Aby wykonać atak Evil Twin, musisz być bardzo blisko docelowego punktu dostępowego lub mieć bardzo silną antenę wifi. Twój sygnał musi dotrzeć do klientów con najmniej tak samo silny lub silniejszy od legalnego AP"
 	arr["GERMAN",269]="Um einen Evil Twin Angriff durchzuführen, müssen Sie sehr nah am Ziel-AP sein oder eine sehr leistungsfähige WLAN-Antenne haben. Ihr Signal muss Kunden als stark oder mindestens stärker als die legitime AP erreichen"
-	arr["TURKISH",269]="Şeytani İkiz bir saldırı gerçekleştirmek için hedef AP'ye çok yakın olmanız veya çok güçlü bir wifi antenine sahip olmanız gerekir. Sinyaliniz, müşterilere yasal AP'den eşit veya daha güçlü olmalıdır"
+	arr["TURKISH",269]="Şeytani İkiz bir saldırı gerçekleştirmek için hedef AP'ye çok yakın olmanız veya çok güçlü bir wifi antenine sahip olmanız gerekir. Sinyaliniz, clientlere yasal AP'den eşit veya daha güçlü olmalıdır"
 
 	arr["ENGLISH",270]="Evil Twin attack just AP"
 	arr["SPANISH",270]="Ataque Evil Twin solo AP"
@@ -5660,7 +5660,7 @@ function language_strings() {
 	arr["ITALIAN",400]="Nell'attacco Evil Twin con BeEF integrato, oltre ad ottenere le chiavi con sniffing, si può provare a controllare il browser dei clienti lanciando numerosi vettori di attacco. Il successo di questi attacchi dipende da molti fattori, come il tipo di browser e la versione utilizzata dal cliente"
 	arr["POLISH",400]="W ataku Evil Twin ze zintegrowanym BeEF, oprócz uzyskiwania kluczy sniffingiem, można spróbować kontrolować przeglądarkę klientów, uruchamiając liczne ataki. Sukces tych działań będzie zależał od wielu czynników, takich jak typ przeglądarki i wersja używana przez klienta"
 	arr["GERMAN",400]="Beim Evil-Twin Angriff mit integriertem BeEF können Sie nicht nur Schlüssel mit Sniffing erhalten, sondern auch versuchen, den Browser des Clients zu steuern, indem Sie zahlreiche Angriffsvektoren starten. Der Erfolg hängt von vielen Faktoren ab, beispielsweise vom Browsertyp und der vom Client verwendeten Version"
-	arr["TURKISH",400]="BeEF ile Evil Twin saldırısında entegre olarak, koklama tekniklerini kullanarak anahtar elde etmenin yanı sıra, müşterinin tarayıcısını çok sayıda saldırı vektörünü başlatmaya çalışmayı deneyebilirsiniz. Bunların başarısı, müşterinin tarayıcısının türü ve versiyonu gibi birçok faktöre bağlı olacaktır"
+	arr["TURKISH",400]="BeEF ile Evil Twin saldırısında entegre olarak, koklama tekniklerini kullanarak anahtar elde etmenin yanı sıra, clientin tarayıcısını çok sayıda saldırı vektörünü başlatmaya çalışmayı deneyebilirsiniz. Bunların başarısı, clientin tarayıcısının türü ve versiyonu gibi birçok faktöre bağlı olacaktır"
 
 	arr["ENGLISH",401]="The beef package you have installed is not BeEF (Browser Exploitation Framework). You have Beef (Flexible Brainfuck interpreter) installed. Both executables have the same name and can lead to confusion. Uninstall it and install what airgeddon needs if you want to use that feature. Installation guide: ${beef_installation_url}"
 	arr["SPANISH",401]="El paquete beef que tienes instalado no es BeEF (Browser Exploitation Framework). Tienes instalado Beef (Flexible Brainfuck interpreter). Ambos ejecutables se llaman igual y puede dar lugar a confusión. Desinstálalo e instala el que airgeddon necesita si quieres usar esa característica. Guía de instalación: ${beef_installation_url}"
