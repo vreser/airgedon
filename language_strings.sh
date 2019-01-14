@@ -7208,7 +7208,7 @@ function language_strings() {
 	arr["ITALIAN",529]="Sembra che non sia stato catturato nulla durante l'attacco Evil Twin Enterprise"
 	arr["POLISH",529]="Wygląda na to, że podczas ataku Evil Twin Enterprise nic nie zostało przechwycone"
 	arr["GERMAN",529]="Es sieht so aus, als wäre nichts während des Evil Twin Enterprise Angriffs gefangen worden"
-	arr["TURKISH",529]="${pending_of_translation} Evil Twin Enterprise saldırısı sırasında yakalanan hiçbir şey yok gibi görünüyor"
+	arr["TURKISH",529]="Enterprise Şeytani İkiz saldırısı sırasında yakalanan hiçbir şey yok gibi görünüyor"
 
 	arr["ENGLISH",530]="Contratulations!! It seems you captured some hashes"
 	arr["SPANISH",530]="Enhorabuena!! Parece que has capturado algún hash"
@@ -7220,7 +7220,7 @@ function language_strings() {
 	arr["ITALIAN",530]="Congratulazioni!! Sembra che tu abbia catturato qualche hash"
 	arr["POLISH",530]="Gratulacje!! Wygląda na to, że przechwyciłeś hash"
 	arr["GERMAN",530]="Herzlichen Glückwunsch!! Es scheint, dass Sie Hashes erfasst haben"
-	arr["TURKISH",530]="${pending_of_translation} Tebrikler!! Görünüşe göre bazı hashları yakaladın"
+	arr["TURKISH",530]="Tebrikler!! Görünüşe göre bazı hashleri yakaladın"
 
 	arr["ENGLISH",531]="Contratulations!! It seems you captured some plain text password/s"
 	arr["SPANISH",531]="Enhorabuena!! Parece que has capturado alguna contraseña en texto plano"
@@ -7232,7 +7232,7 @@ function language_strings() {
 	arr["ITALIAN",531]="Congratulazioni!! Sembra che tu abbia catturato qualche password in chiaro"
 	arr["POLISH",531]="Gratulacje!! Wygląda na to, że zdobyłeś hasło w postaci zwykłego tekstu"
 	arr["GERMAN",531]="Herzlichen Glückwunsch!! Es scheint, dass Sie ein Passwort im Klartext erfasst haben"
-	arr["TURKISH",531]="${pending_of_translation} Tebrikler!! Düz metinde bazı şifreleri yakaladınız gibi görünüyor"
+	arr["TURKISH",531]="Tebrikler!! Text şifreleri yakaladınız gibi görünüyor"
 
 	arr["ENGLISH",532]="Contratulations!! It seems you captured hashes and plain text passwords"
 	arr["SPANISH",532]="Enhorabuena!! Parece que has capturado hashes y contraseñas en texto plano"
@@ -7244,7 +7244,7 @@ function language_strings() {
 	arr["ITALIAN",532]="Congratulazioni!! Sembra che tu abbia catturato degli hash e delle passwords in chiaro"
 	arr["POLISH",532]="${pending_of_translation} Gratulacje!! Wygląda na to, że przechwyciłeś skróty i hasła w postaci zwykłego tekstu"
 	arr["GERMAN",532]="Herzlichen Glückwunsch!! Es scheint, dass Sie Hashes und Passwörter im Klartext erfasst haben"
-	arr["TURKISH",532]="${pending_of_translation} Tebrikler!! Düz metinde karma ve şifreleri ele geçirmişsiniz gibi görünüyor"
+	arr["TURKISH",532]="Tebrikler!! Düz metinde karma ve şifreleri ele geçirmişsiniz gibi görünüyor"
 
 	arr["ENGLISH",533]="The captured files were saved on directory [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
 	arr["SPANISH",533]="Los ficheros capturados se han guardado en el directorio [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
@@ -7256,7 +7256,7 @@ function language_strings() {
 	arr["ITALIAN",533]="I file catturati sono stati salvati nella directory [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
 	arr["POLISH",533]="Przechwycone pliki zostały zapisane w katalogu [${normal_color}${enterprise_completepath}${blue_color}]${normal_color}"
 	arr["GERMAN",533]="Die erfassten Dateien wurden im Verzeichnis [${normal_color}${enterprise_completepath}${blue_color}]${normal_color} gespeichert"
-	arr["TURKISH",533]="${pending_of_translation} Yakalanan dosyalar dizine kaydedildi [${normal_color}${enterprise_completepath}${pink_color}]${blue_color}"
+	arr["TURKISH",533]="Yakalanan dosyalar belirtilen dizine kaydedildi [${normal_color}${enterprise_completepath}${pink_color}]${blue_color}"
 
 	arr["ENGLISH",534]="1.  Personal"
 	arr["SPANISH",534]="1.  Personal"
@@ -7268,7 +7268,7 @@ function language_strings() {
 	arr["ITALIAN",534]="1.  Personal"
 	arr["POLISH",534]="1.  Osobiste"
 	arr["GERMAN",534]="1.  Persönlich"
-	arr["TURKISH",534]="${pending_of_translation} 1.  Personal"
+	arr["TURKISH",534]="1.  Personal"
 
 	arr["ENGLISH",535]="2.  Enterprise"
 	arr["SPANISH",535]="2.  Enterprise"
@@ -7280,7 +7280,7 @@ function language_strings() {
 	arr["ITALIAN",535]="2.  Enterprise"
 	arr["POLISH",535]="2.  Enterprise"
 	arr["GERMAN",535]="2.  Enterprise"
-	arr["TURKISH",535]="${pending_of_translation} 2.  Enterprise"
+	arr["TURKISH",535]="2.  Enterprise"
 
 	arr["ENGLISH",536]="0.  Return to offline WPA/WPA2 decrypt menu"
 	arr["SPANISH",536]="0.  Volver al menú de descifrado WPA/WPA2 offline"
@@ -7292,7 +7292,7 @@ function language_strings() {
 	arr["ITALIAN",536]="0.  Tornare al menù per decifrare WPA/WPA2 offline"
 	arr["POLISH",536]="0.  Wróć do menu deszyfrowania WPA/WPA2 offline"
 	arr["GERMAN",536]="0.  Zurück zum Offline-WPA/WPA2-Entschlüsselungsmenü"
-	arr["TURKISH",536]="${pending_of_translation} 0.  Çevrimdışı WPA/WPA2 şifre çözme menüsüne dön"
+	arr["TURKISH",536]="0.  Çevrimdışı WPA/WPA2 şifre çözme menüsüne dön"
 
 	arr["ENGLISH",537]="Do you want to try to decrypt captured stuff? ${blue_color}Asleap tool will be used. If you answer no \"n\" you'll can try to do it later using hashcat or john the ripper from the offline WPA/WPA2 decrypt menu ${normal_color}${visual_choice}"
 	arr["SPANISH",537]="¿Quieres intentar descifrar lo capturado? ${blue_color}Se utilizará la herramienta asleap. Si respondes no \"n\" podrás intentarlo más tarde utilizando hashcat o john the ripper desde el menú de descifrado offline WPA/WPA2 ${normal_color}${visual_choice}"
@@ -7304,7 +7304,7 @@ function language_strings() {
 	arr["ITALIAN",537]="Vuoi provare a decifrare ciò che è stato catturato? ${blue_color}Verrà utilizzato il programma asleap. Se non rispondi a nessun \"n\" puoi provarci in seguito usando hashcat o john the ripper dal menu di decodifica offline WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["POLISH",537]="Czy chcesz spróbować rozszyfrować przechwycone dane? ${blue_color}Zostanie użyte narzędzie o nazwie asleap. Jeśli nie odpowiesz \"n\", możesz spróbować później za pomocą programu hashcat lub john the ripper z menu deszyfrowania offline WPA/WPA2 ${normal_color}${visual_choice}"
 	arr["GERMAN",537]="Möchten Sie versuchen, das Erfasste zu entschlüsseln? ${blue_color}Das Tool asleap wird verwendet. Wenn Sie nein \"n\" antworten, können Sie es später mit hashcat oder john the ripper vom Offline-Entschlüsselungsmenü WPA/WPA2 versuchen ${normal_color}${visual_choice}"
-	arr["TURKISH",537]="${pending_of_translation} Neyin yakalandığını çözmeyi denemek ister misin? ${blue_color}Asleap aracı kullanılacaktır. Eğer \"n\" yanıtı vermezseniz, daha sonra, çevrimdışı şifre çözme menüsü WPA/WPA2'den, hashcat veya john the ripper'ı kullanarak deneyebilirsiniz ${normal_color}${visual_choice}"
+	arr["TURKISH",537]="Yakalanan şeyleri decrypt(şifre çözme) etmek ister misin? ${blue_color}Asleap aracı kullanılacaktır. Eğer \"n\" yanıtı vermezseniz, daha sonra, çevrimdışı şifre çözme menüsü WPA/WPA2'den, hashcat veya john the ripper'ı kullanarak deneyebilirsiniz ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",538]="The password for the username ${normal_color}${enterprise_username}${blue_color} will be tried to be decrypted with asleap tool using challenge and response: ${normal_color}${enterprise_captured_challenges_responses[${enterprise_username}]}"
 	arr["SPANISH",538]="Se procederá a intentar descifrar con la herramienta asleap la contraseña del usuario ${normal_color}${enterprise_username}${blue_color} cuyo challenge y response son: ${normal_color}${enterprise_captured_challenges_responses[${enterprise_username}]}"
@@ -7340,7 +7340,7 @@ function language_strings() {
 	arr["ITALIAN",540]="Sembra che non ci siamo riusciti... riprova con un altro dizionario o con forza bruta/attacco basato su regole del menu di decodifica offline WPA/WPA2"
 	arr["POLISH",540]="Wygląda na to, że się nie udało... spróbuj ponownie, używając innego słownika lub wybierz atak z użyciem brute force/reguły z menu odszyfrowania offline WPA/WPA2"
 	arr["GERMAN",540]="Es scheint, dass wir es versäumt haben... versuchen Sie es erneut mit einem anderen Wörterbuch oder wählen Sie Brute-Force/Regel-basierte Angriffe aus dem Offline-WPA/WPA2-Entschlüsselungsmenü"
-	arr["TURKISH",540]="${pending_of_translation} Başarısız görünüyoruz... başka bir sözlük kullanarak tekrar deneyin ya da çevrimdışı WPA/WPA2 şifre çözme menüsünden kaba kuvvet/kural tabanlı saldırı seçin"
+	arr["TURKISH",540]="Başarısız olduk gibi görünüyor... başka bir dictionary kullanarak tekrar deneyin ya da çevrimdışı WPA/WPA2 şifre çözme menüsünden bruteforce/rule tabanlı saldırı seçin"
 
 	arr["ENGLISH",541]="Do you want to retry asleap attack using another dictionary? ${normal_color}${visual_choice}"
 	arr["SPANISH",541]="¿Quieres intentar de nuevo el ataque con asleap utilizando otro diccionario? ${normal_color}${visual_choice}"
@@ -7352,7 +7352,7 @@ function language_strings() {
 	arr["ITALIAN",541]="Vuoi provare di nuovo l'attacco con asleap usando un altro dizionario? ${normal_color}${visual_choice}"
 	arr["POLISH",541]="Czy chcesz ponowić atak asleap z użyciem innego słownika? ${normal_color}${visual_choice}"
 	arr["GERMAN",541]="Möchten Sie den Asleap Angriff mit einem anderen Wörterbuch wiederholen? ${normal_color}${visual_choice}"
-	arr["TURKISH",541]="${pending_of_translation} Başka bir sözlük kullanarak asleap saldırısını tekrar denemek ister misiniz? ${normal_color}${visual_choice}"
+	arr["TURKISH",541]="Başka bir dictionary kullanarak asleap saldırısını tekrar denemek ister misiniz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",542]="You captured hash only for one user. Autoselected"
 	arr["SPANISH",542]="Sólo capturaste hash de un usuario. Se ha seleccionado automáticamente"
@@ -7364,7 +7364,7 @@ function language_strings() {
 	arr["ITALIAN",542]="Hai appena catturato l'hash di un utente. È stato selezionato automaticamente"
 	arr["POLISH",542]="Przechwiciłeś hasz tylko dla jednego użytkownika. Wybrano automatycznie"
 	arr["GERMAN",542]="Sie haben nur einen Hash für einen Benutzer erfasst. Dieser wird Automatisch ausgewählt"
-	arr["TURKISH",542]="${pending_of_translation} Sadece bir kullanıcı için karma yakaladınız. Autoselected"
+	arr["TURKISH",542]="Sadece bir kullanıcı için hash yakaladınız. Autoselected"
 
 	arr["ENGLISH",543]="Chosen option is invalid. Select one number shown in the menu"
 	arr["SPANISH",543]="La opción elegida no es válida. Selecciona un número de los mostrados en el menú"
@@ -7376,7 +7376,7 @@ function language_strings() {
 	arr["ITALIAN",543]="L'opzione scelta non è valida. Seleziona un numero tra quelli indicati nel menu"
 	arr["POLISH",543]="Wybrana opcja jest nieprawidłowa. Wybierz numer wyświetlony w menu"
 	arr["GERMAN",543]="Die gewählte Option ist ungültig. Wählen Sie eine Nummer aus dem Menü"
-	arr["TURKISH",543]="${pending_of_translation} Seçilen seçenek geçersiz. Menüde gösterilen bir sayı seçin"
+	arr["TURKISH",543]="Seçilen seçenek geçersiz. Menüde gösterilen bir sayıyı seçin"
 
 	arr["ENGLISH",544]="john the ripper CPU, non GPU attacks"
 	arr["SPANISH",544]="ataques john the ripper CPU, no GPU"
@@ -7448,7 +7448,7 @@ function language_strings() {
 	arr["ITALIAN",549]="6.  (asleap) Attacco di dizionario challenge/response"
 	arr["POLISH",549]="6.  (asleap) Atak słownikowey challenge/odpowiedź"
 	arr["GERMAN",549]="6.  (asleap) Wörterbuch-Angriff: Herausforderung/Antwort"
-	arr["TURKISH",549]="${pending_of_translation} 6.  (asleap) Sözlük meydan okuması/yanıtı"
+	arr["TURKISH",549]="${pending_of_translation} 6.  (asleap) Challenge/response dictionary saldırısı"
 
 	arr["ENGLISH",550]="3.  (hashcat) Dictionary attack against capture file"
 	arr["SPANISH",550]="3.  (hashcat) Ataque de diccionario sobre fichero de captura"
@@ -7496,7 +7496,7 @@ function language_strings() {
 	arr["ITALIAN",553]="Scrivi il challenge (esempio: 00:11:22:33:44:55:66:77):"
 	arr["POLISH",553]="Wpisz challenge (przykład: 00:11:22:33:44:55:66:77):"
 	arr["GERMAN",553]="Schreiben Sie den Challenge (Beispiel: 00:11:22:33:44:55:66:77):"
-	arr["TURKISH",553]="${pending_of_translation} Hedef okuması (example: 00:11:22:33:44:55:66:77):"
+	arr["TURKISH",553]="Challenge tipi (example: 00:11:22:33:44:55:66:77):"
 
 	arr["ENGLISH",554]="Type response (example: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
 	arr["SPANISH",554]="Escribe el response (ejemplo: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
@@ -7508,7 +7508,7 @@ function language_strings() {
 	arr["ITALIAN",554]="Scrivi il response (esempio: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
 	arr["POLISH",554]="Wpisz odpowiedź (przykład: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
 	arr["GERMAN",554]="Schreiben Sie die Antwort (Beispiel: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
-	arr["TURKISH",554]="${pending_of_translation} Hedef yanıtı (example: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
+	arr["TURKISH",554]="Yanıt tipi (example: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17):"
 
 	arr["ENGLISH",555]="Type the path to store the file or press [Enter] to accept the default proposal ${normal_color}[${asleap_potpath}]"
 	arr["SPANISH",555]="Escribe la ruta donde guardaremos el fichero o pulsa [Enter] para aceptar la propuesta por defecto ${normal_color}[${asleap_potpath}]"
@@ -7532,7 +7532,7 @@ function language_strings() {
 	arr["ITALIAN",556]="4.  Attivare permanentemente la colorazione basica"
 	arr["POLISH",556]="4.  Włącz na stałe podstawowe kolorowanie"
 	arr["GERMAN",556]="4.  Grundfärbung dauerhaft aktivieren"
-	arr["TURKISH",556]="${pending_of_translation} 4.  Temel renklendirmeyi kalıcı olarak etkinleştir"
+	arr["TURKISH",556]="4.  Temel renklendirmeyi kalıcı olarak etkinleştir"
 
 	arr["ENGLISH",557]="4.  Disable basic colorization permanently"
 	arr["SPANISH",557]="4.  Deshabilitar permanentemente la colorización básica"
@@ -7542,9 +7542,9 @@ function language_strings() {
 	arr["RUSSIAN",557]="4.  Отключить базовую окраску, в том числе после перезапуска"
 	arr["GREEK",557]="${pending_of_translation} 4.  Απενεργοποιήστε μόνιμα τον βασικό χρωματισμό"
 	arr["ITALIAN",557]="4.  Disattivare permanentemente la colorazione basica"
-	arr["POLISH",557]="$4.  Wyłącz na stałe podstawowe kolorowanie"
+	arr["POLISH",557]="4.  Wyłącz na stałe podstawowe kolorowanie"
 	arr["GERMAN",557]="4.  Grundfärbung dauerhaft deaktivieren"
-	arr["TURKISH",557]="${pending_of_translation} 4.  Temel renklendirmeyi kalıcı olarak devre dışı bırak"
+	arr["TURKISH",557]="4.  Temel renklendirmeyi kalıcı olarak devre dışı bırak"
 
 	arr["ENGLISH",558]="${blue_color}Basic colorization is going to be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",558]="${blue_color}Se va a desactivar la colorización básica. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -7568,7 +7568,7 @@ function language_strings() {
 	arr["ITALIAN",559]="${blue_color}La colorazione basica sará attivata. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",559]="${blue_color}Podstawowe kolorowanie zostanie włączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",559]="${blue_color}Die Grundfärbung wird aktiviert. ${green_color}Wollen Sie fortfahren? ${normal_color}${visual_choice}"
-	arr["TURKISH",559]="${pending_of_translation} ${blue_color}Temel renklendirme etkinleştirilecek. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",559]="${blue_color}Temel renklendirme etkinleştirilecek. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",560]="Basic colorization has been disabled"
 	arr["SPANISH",560]="Se ha desactivado la colorización básica"
@@ -7580,7 +7580,7 @@ function language_strings() {
 	arr["ITALIAN",560]="La colorazione basica è stata disattivata"
 	arr["POLISH",560]="Podstawowe kolorowanie zostało wyłączone"
 	arr["GERMAN",560]="Grundfärbung wurde deaktiviert"
-	arr["TURKISH",560]="${pending_of_translation} Temel renklendirme devre dışı bırakıldı"
+	arr["TURKISH",560]="Temel renklendirme devre dışı bırakıldı"
 
 	arr["ENGLISH",561]="Basic colorization has been enabled"
 	arr["SPANISH",561]="Se ha activado la colorización básica"
@@ -7592,7 +7592,7 @@ function language_strings() {
 	arr["ITALIAN",561]="La colorazione basica è stata attivata"
 	arr["POLISH",561]="Podstawowe kolorowanie zostało wyłączone"
 	arr["GERMAN",561]="Grundfärbung wurde aktiviert"
-	arr["TURKISH",561]="${pending_of_translation} Temel renklendirme etkinleştirildi"
+	arr["TURKISH",561]="Temel renklendirme etkinleştirildi"
 
 	arr["ENGLISH",562]="This setting will have no effect until you enable basic colorization"
 	arr["SPANISH",562]="Esta opción no tendrá efecto hasta que no habilites la colorización básica"
@@ -7604,7 +7604,7 @@ function language_strings() {
 	arr["ITALIAN",562]="Questa opzione non ha effetto finché non si attiva la colorazione basica"
 	arr["POLISH",562]="Ta opcja nie będzię miała efektu, dopóki nie włączysz podstawowego kolorowania"
 	arr["GERMAN",562]="Diese Option wird erst wirksam, wenn Sie die grundlegende Einfärbung aktivieren"
-	arr["TURKISH",562]="${pending_of_translation} Temel renklendirmeyi etkinleştirene kadar bu seçenek geçerli olmaz"
+	arr["TURKISH",562]="Temel renklendirmeyi etkinleştirene kadar bu seçenek geçerli olmaz"
 
 	arr["ENGLISH",563]="Basic colorization: ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",563]="Colorización básica: ${pink_color}Activada${normal_color}"
@@ -7616,7 +7616,7 @@ function language_strings() {
 	arr["ITALIAN",563]="Colorazione basica: ${pink_color}Attivata${normal_color}"
 	arr["POLISH",563]="Podstawowe kolorowanie: ${pink_color}Włączone${normal_color}"
 	arr["GERMAN",563]="Grundfärbung: ${pink_color}Aktiviert${normal_color}"
-	arr["TURKISH",563]="${pending_of_translation} Temel renklendirme: ${pink_color}Etkin${normal_color}"
+	arr["TURKISH",563]="Temel renklendirme: ${pink_color}Etkin${normal_color}"
 
 	arr["ENGLISH",564]="Basic colorization: ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",564]="Colorización básica: ${pink_color}Desactivada${normal_color}"
@@ -7628,7 +7628,7 @@ function language_strings() {
 	arr["ITALIAN",564]="Colorazione basica: ${pink_color}Disattivata${normal_color}"
 	arr["POLISH",564]="Podstawowe kolorowanie: ${pink_color}Wyłączone${normal_color}"
 	arr["GERMAN",564]="Grundfärbung: ${pink_color}Deaktiviert${normal_color}"
-	arr["TURKISH",564]="${pending_of_translation} Temel renklendirme: ${pink_color}DevreDışı${normal_color}"
+	arr["TURKISH",564]="Temel renklendirme: ${pink_color}DevreDışı${normal_color}"
 
 	arr["ENGLISH",565]="3.  Disable skip intro permanently"
 	arr["SPANISH",565]="3.  Deshabilitar permanentemente saltarse la intro"
@@ -7640,7 +7640,7 @@ function language_strings() {
 	arr["ITALIAN",565]="3.  Disattiva permanentemente l'opzione skip intro"
 	arr["POLISH",565]="3.  Trwale wyłącz pominięcie wprowadzenia"
 	arr["GERMAN",565]="3.  Intro nicht überpsringen"
-	arr["TURKISH",565]="${pending_of_translation} 3.  Girişimi atlamak için kalıcı olarak devre dışı bırak"
+	arr["TURKISH",565]="3.  Giriş introsunu kalıcı olarak devredışı bırak"
 
 	arr["ENGLISH",566]="3.  Enable skip intro permanently"
 	arr["SPANISH",566]="3.  Habilitar permanentemente saltarse la intro"
@@ -7652,7 +7652,7 @@ function language_strings() {
 	arr["ITALIAN",566]="3.  Attivare permanentemente skip intro"
 	arr["POLISH",566]="3.  Trwale włącz pominięcie wprowadzenia"
 	arr["GERMAN",566]="3.  Intro überspringen"
-	arr["TURKISH",566]="${pending_of_translation} 3.  Girişimi atlamak için kalıcı olarak etkinleştir"
+	arr["TURKISH",566]="3.  Giriş introsunu kalıcı olarak etkinleştir"
 
 	arr["ENGLISH",567]="Skip intro: ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",567]="Saltarse la intro: ${pink_color}Activado${normal_color}"
@@ -7664,7 +7664,7 @@ function language_strings() {
 	arr["ITALIAN",567]="Skip intro: ${pink_color}Attivato${normal_color}"
 	arr["POLISH",567]="Pomiń wprowadzenie: ${pink_color}Aktywowane${normal_color}"
 	arr["GERMAN",567]="Intro überspringen: ${pink_color}Aktiviert${normal_color}"
-	arr["TURKISH",567]="${pending_of_translation} Tanıtımı geç: ${pink_color}Aktive${normal_color}"
+	arr["TURKISH",567]="Giriş introsunu geç: ${pink_color}Aktif${normal_color}"
 
 	arr["ENGLISH",568]="Skip intro: ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",568]="Saltarse la intro: ${pink_color}Desactivado${normal_color}"
@@ -7676,7 +7676,7 @@ function language_strings() {
 	arr["ITALIAN",568]="Skip intro: ${pink_color}Disattivato${normal_color}"
 	arr["POLISH",568]="Pomiń wprowadzenie: ${pink_color}Dezaktywowane${normal_color}"
 	arr["GERMAN",568]="Intro überspringen: ${pink_color}Deaktiviert${normal_color}"
-	arr["TURKISH",568]="${pending_of_translation} Tanıtımı geç: ${pink_color}Devreden${normal_color}"
+	arr["TURKISH",568]="Giriş introsunu geç: ${pink_color}DeveDışı${normal_color}"
 
 	arr["ENGLISH",569]="${blue_color}Skip intro is going to be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",569]="${blue_color}Se va a desactivar saltarse la intro. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -7688,7 +7688,7 @@ function language_strings() {
 	arr["ITALIAN",569]="${blue_color}Skip intro verrà disattivato. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",569]="${blue_color}Pomijanie wprowadzenia zostanie wyłączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",569]="${blue_color}Die Intro wird nicht überprungen werden. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
-	arr["TURKISH",569]="${pending_of_translation} ${blue_color}Girişimi atlamayı devre dışı bırakacak. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",569]="İntroyu geçme devre dışı bırakılacak. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",570]="${blue_color}Skip intro is going to be enabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",570]="${blue_color}Se va a activar saltarse la intro. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -7700,7 +7700,7 @@ function language_strings() {
 	arr["ITALIAN",570]="${blue_color}Skip intro verrà attivato. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",570]="${blue_color}Pomijanie wprowadzenia zostanie włączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",570]="${blue_color}Die Intro wird übersprungen werden. ${green_color} Möchten Sie fortfahren? ${normal_color}${visual_choice}"
-	arr["TURKISH",570]="${pending_of_translation} ${blue_color}Girişimi atlamak için etkinleştirilecek. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",570]="İntroyu geçme etkinleştirilecek. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",571]="Skip intro has been disabled"
 	arr["SPANISH",571]="Se ha desactivado saltarse la intro"
@@ -7712,7 +7712,7 @@ function language_strings() {
 	arr["ITALIAN",571]="Skip intro è stato disattivato"
 	arr["POLISH",571]="Pominięcie wprowadzenia zostało wyłączone"
 	arr["GERMAN",571]="Intro überspringen wurde deaktiviert"
-	arr["TURKISH",571]="${pending_of_translation} Atla girişi devre dışı bırakıldı"
+	arr["TURKISH",571]="İntroyu geçme devre dışı bırakıldı"
 
 	arr["ENGLISH",572]="Skip intro has been enabled"
 	arr["SPANISH",572]="Se ha activado saltarse la intro"
@@ -7724,7 +7724,7 @@ function language_strings() {
 	arr["ITALIAN",572]="Skip intro è stato attivato"
 	arr["POLISH",572]="Pominięcie wprowadzenia zostało włączone"
 	arr["GERMAN",572]="Intro überspringen wurde aktiviert"
-	arr["TURKISH",572]="${pending_of_translation} Atla girişi etkinleştirildi"
+	arr["TURKISH",572]="İntroyu geçme etkinleştirildi"
 
 	arr["ENGLISH",573]="7.  Disable silent checks permanently"
 	arr["SPANISH",573]="7.  Deshabilitar permanentemente chequeos silenciosos"
@@ -7736,7 +7736,7 @@ function language_strings() {
 	arr["ITALIAN",573]="7.  Disattivare permanentemente i controlli silenziosi"
 	arr["POLISH",573]="7.  Trwale wyłącz ciche sprawdzanie"
 	arr["GERMAN",573]="7.  Deaktivieren Sie die stillen Überprüfungen dauerhaft"
-	arr["TURKISH",573]="${pending_of_translation} 7.  Sessiz çekleri kalıcı olarak devre dışı bırak"
+	arr["TURKISH",573]="7.  Sessiz kontrolleri kalıcı olarak devre dışı bırak"
 
 	arr["ENGLISH",574]="7.  Enable silent checks permanently"
 	arr["SPANISH",574]="7.  Habilitar permanentemente chequeos silenciosos"
@@ -7748,7 +7748,7 @@ function language_strings() {
 	arr["ITALIAN",574]="7.  Abilitare permanentemente i controlli silenziosi"
 	arr["POLISH",574]="7.  Trwale włącz ciche sprawdzanie"
 	arr["GERMAN",574]="7.  Stille Prüfungen dauerhaft aktivieren"
-	arr["TURKISH",574]="${pending_of_translation} 7.  Sessiz çekleri kalıcı olarak etkinleştir"
+	arr["TURKISH",574]="7.  Sessiz kontrolleri kalıcı olarak etkinleştir"
 
 	arr["ENGLISH",575]="Silent checks: ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",575]="Chequeos silenciosos: ${pink_color}Activados${normal_color}"
@@ -7760,7 +7760,7 @@ function language_strings() {
 	arr["ITALIAN",575]="Controlli silenziosi: ${pink_color}Attivati${normal_color}"
 	arr["POLISH",575]="Ciche sprawdzanie: ${pink_color}Aktywowane${normal_color}"
 	arr["GERMAN",575]="Stille Überprüfungen: ${pink_color}Aktiviert${normal_color}"
-	arr["TURKISH",575]="${pending_of_translation} Sessiz çekler: ${pink_color}Etkin${normal_color}"
+	arr["TURKISH",575]="Sessiz kontroller: ${pink_color}Etkin${normal_color}"
 
 	arr["ENGLISH",576]="Silent checks: ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",576]="Chequeos silenciosos: ${pink_color}Desactivados${normal_color}"
@@ -7772,7 +7772,7 @@ function language_strings() {
 	arr["ITALIAN",576]="Controlli silenziosi: ${pink_color}Disattivati${normal_color}"
 	arr["POLISH",576]="Ciche sprawdzanie: ${pink_color}Wyłączone${normal_color}"
 	arr["GERMAN",576]="Stille Überprüfungen: ${pink_color}Deaktiviert${normal_color}"
-	arr["TURKISH",576]="${pending_of_translation} Sessiz çekler: ${pink_color}Engelli${normal_color}"
+	arr["TURKISH",576]="Sessiz kontroller: ${pink_color}DevreDışı${normal_color}"
 
 	arr["ENGLISH",577]="${blue_color}Silent checks will be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",577]="${blue_color}Se van a deshabilitar los chequeos silenciosos. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -7784,7 +7784,7 @@ function language_strings() {
 	arr["ITALIAN",577]="${blue_color}I controlli silenziosi saranno disattivati ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",577]="${blue_color}Ciche sprawdzanie zostanie wyłączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",577]="${blue_color}Stille Überprüfungen werden deaktiviert. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
-	arr["TURKISH",577]="${pending_of_translation} ${blue_color}Sessiz kontroller devre dışı bırakılacak. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",577]="Sessiz kontroller devre dışı bırakılacak. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",578]="${blue_color}Silent checks will be enabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",578]="${blue_color}Se van a habilitar los chequeos silenciosos. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -7796,7 +7796,7 @@ function language_strings() {
 	arr["ITALIAN",578]="${blue_color}I controlli silenziosi saranno attivati ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",578]="${blue_color}Ciche sprawdzanie zostanie włączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",578]="${blue_color}Stille Überprüfungen werden aktiviert. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
-	arr["TURKISH",578]="${pending_of_translation} ${blue_color}Sessiz kontroller etkinleştirilecek. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",578]="Sessiz kontroller etkinleştirilecek. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",579]="Silent checks has been disabled"
 	arr["SPANISH",579]="Se han desactivado los chequeos silenciosos"
@@ -7808,7 +7808,7 @@ function language_strings() {
 	arr["ITALIAN",579]="I controlli silenziosi sono stati disattivati"
 	arr["POLISH",579]="Ciche sprawdzanie zostało wyłączone"
 	arr["GERMAN",579]="Stille Überprüfungen wurden deaktiviert"
-	arr["TURKISH",579]="${pending_of_translation} Sessiz çekler devre dışı bırakıldı"
+	arr["TURKISH",579]="Sessiz kontroller devre dışı bırakıldı"
 
 	arr["ENGLISH",580]="Silent checks has been enabled"
 	arr["SPANISH",580]="Se han activado los chequeos silenciosos"
@@ -7820,7 +7820,7 @@ function language_strings() {
 	arr["ITALIAN",580]="I controlli silenziosi sono stati attivati"
 	arr["POLISH",580]="Ciche sprawdzanie zostało włączone"
 	arr["GERMAN",580]="Stille Überprüfungen wurden aktiviert"
-	arr["TURKISH",580]="${pending_of_translation} Sessiz çekler etkinleştirildi"
+	arr["TURKISH",580]="Sessiz kontroller etkinleştirildi"
 
 	arr["ENGLISH",581]="You launched airgedddon with silent checks enabled. Disable that setting in order to see what is the problem"
 	arr["SPANISH",581]="Lanzaste airgeddon con los chequeos silenciosos activados. Deshabilita esa opción para ver cual es el problema"
@@ -7832,7 +7832,7 @@ function language_strings() {
 	arr["ITALIAN",581]="Hai lanciato airgeddon con i controlli silenziosi attivati. Disabilita questa opzione per vedere qual'è il problema"
 	arr["POLISH",581]="Uruchomiłeś airgeddon z włączonym cichym sprawdzaniem. Wyłącz tę opcję, aby zobaczyć w czym jest problem"
 	arr["GERMAN",581]="Sie haben airgeddon mit aktivierten Silent-Checks gestartet. Deaktivieren Sie diese Option, um das Problem zu sehen"
-	arr["TURKISH",581]="${pending_of_translation} Etkinleştirilmiş sessiz kontrollerle airgeddon'u başlattın. Sorunun ne olduğunu görmek için bu seçeneği devre dışı bırak"
+	arr["TURKISH",581]="Etkinleştirilmiş sessiz kontrollerle airgeddon'u başlattın. Sorunun ne olduğunu görmek için bu seçeneği devre dışı bırak"
 
 	arr["ENGLISH",582]="Print hints: ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",582]="Mostrar consejos: ${pink_color}Activado${normal_color}"
@@ -7844,7 +7844,7 @@ function language_strings() {
 	arr["ITALIAN",582]="Mostra Consigli: ${pink_color}Attivato${normal_color}"
 	arr["POLISH",582]="Pokaż wskazówki: ${pink_color}Włączone${normal_color}"
 	arr["GERMAN",582]="Tipps anzeigen: ${pink_color}Aktiviert${normal_color}"
-	arr["TURKISH",582]="${pending_of_translation} İpuçlarını göster: ${pink_color}Aktive${normal_color}"
+	arr["TURKISH",582]="İpuçlarını göster: ${pink_color}Aktif${normal_color}"
 
 	arr["ENGLISH",583]="Print hints: ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",583]="Mostrar consejos: ${pink_color}Desactivados${normal_color}"
@@ -7856,7 +7856,7 @@ function language_strings() {
 	arr["ITALIAN",583]="Mostra Consigli: ${pink_color}Disattivato${normal_color}"
 	arr["POLISH",583]="Pokaż wskazówki: ${pink_color}Wyłączone${normal_color}"
 	arr["GERMAN",583]="Tipps anzeigen: ${pink_color}Deaktiviert${normal_color}"
-	arr["TURKISH",583]="${pending_of_translation} İpuçlarını göster: ${pink_color}Devreden${normal_color}"
+	arr["TURKISH",583]="İpuçlarını göster: ${pink_color}DevreDışı${normal_color}"
 
 	arr["ENGLISH",584]="8.  Disable print hints permanently"
 	arr["SPANISH",584]="8.  Deshabilitar mostrar consejos permanentemente"
@@ -7868,7 +7868,7 @@ function language_strings() {
 	arr["ITALIAN",584]="8.  Disattivare mostrare i suggerimenti in modo permanente"
 	arr["POLISH",584]="8.  Wyłącz wyświetlanie wskazówek na stałe"
 	arr["GERMAN",584]="8.  Tipps anzeigen dauerhaft deaktivieren"
-	arr["TURKISH",584]="${pending_of_translation} 8.  Gösteri ipuçlarını kalıcı olarak devre dışı bırak"
+	arr["TURKISH",584]="8.  Gösteri ipuçlarını kalıcı olarak devre dışı bırak"
 
 	arr["ENGLISH",585]="8.  Enable print hints permanently"
 	arr["SPANISH",585]="8.  Habilitar mostrar consejos permanentemente"
@@ -7880,7 +7880,7 @@ function language_strings() {
 	arr["ITALIAN",585]="8.  Attivare mostrare i consigli in modo permanente"
 	arr["POLISH",585]="8.  Włącz wyświetlanie wskazówek na stałe"
 	arr["GERMAN",585]="8.  Aktivieren Sie diese Option, um Tipps anzuzeigen"
-	arr["TURKISH",585]="${pending_of_translation} 8.  Öneriyi kalıcı olarak gösterme olanağı"
+	arr["TURKISH",585]="8.  İpuçlarını kalıcı olarak etkinleştir"
 
 	arr["ENGLISH",586]="${blue_color}Print hints will be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",586]="${blue_color}Se va a deshabilitar mostrar consejos. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -7892,7 +7892,7 @@ function language_strings() {
 	arr["ITALIAN",586]="${blue_color}Disattiva i consigli sullo spettacolo ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",586]="${blue_color}Spowoduje to wyłączenie wyświetlania wskazówek. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",586]="${blue_color}Der Show-Hinweis wird deaktiviert. ${green_color}Wollen Sie weitermachen? ${normal_color}${visual_choice}"
-	arr["TURKISH",586]="${pending_of_translation} ${blue_color}Gösteri tavsiyesini devre dışı bırakacak. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",586]="${blue_color}İpuları devre dışı bırakılacak. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",587]="${blue_color}Print hints will be enabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",587]="${blue_color}Se va a habilitar mostrar consejos. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -7904,7 +7904,7 @@ function language_strings() {
 	arr["ITALIAN",587]="${blue_color}Mostrare i suggerimenti sará attivato ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",587]="${blue_color}Wyświetlanie wskazówek zostanie włączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",587]="${blue_color}Tipps werden angezeigt. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
-	arr["TURKISH",587]="${pending_of_translation} ${blue_color}Umożliwi to pokazywanie wskazówek. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",587]="${blue_color}İpuçları etkinleştirilecek. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",588]="Print hints has been disabled"
 	arr["SPANISH",588]="Se ha desactivado mostrar consejos"
@@ -7916,7 +7916,7 @@ function language_strings() {
 	arr["ITALIAN",588]="Mostrare i suggerimenti è stato disattivato"
 	arr["POLISH",588]="Wyświetlanie wskazówek zostało wyłączone"
 	arr["GERMAN",588]="Hinweise wurden deaktiviert"
-	arr["TURKISH",588]="${pending_of_translation} Yazdırma ipuçları devre dışı bırakıldı"
+	arr["TURKISH",588]="İpuçları devre dışı bırakıldı"
 
 	arr["ENGLISH",589]="Print hints has been enabled"
 	arr["SPANISH",589]="Se ha activado mostrar consejos"
@@ -7928,7 +7928,7 @@ function language_strings() {
 	arr["ITALIAN",589]="Mostrare i suggerimenti è stato attivato"
 	arr["POLISH",589]="Wyświetlanie wskazówek zostało włączone"
 	arr["GERMAN",589]="Hinweise wurden aktiviert"
-	arr["TURKISH",589]="${pending_of_translation} Baskı ipuçları etkinleştirildi"
+	arr["TURKISH",589]="İpuçları etkinleştirildi"
 
 	arr["ENGLISH",590]="You can modify manually ${rc_file} file which is in same directory as script to change some options. You can also launch \"flags\" on the command line. More info at: ${urlgithub_wiki}/Options"
 	arr["SPANISH",590]="Puedes modificar manualmente el fichero ${rc_file} que está en el mismo directorio que el script para modificar sus opciones. También puedes lanzar \"flags\" en la línea de comandos. Más información en: ${urlgithub_wiki}/Options"
@@ -7952,7 +7952,7 @@ function language_strings() {
 	arr["ITALIAN",591]="La modifica di queste opzioni modifica il file ${rc_file} e le modifiche sono permanenti"
 	arr["POLISH",591]="Zmiana tych opcji modyfikuje również plik ${rc_file}, a zmiany są trwałe"
 	arr["GERMAN",591]="Durch das Ändern dieser Optionen wird die Datei ${rc_file} geändert, und die Änderungen sind dauerhaft"
-	arr["TURKISH",591]="${pending_of_translation} Bu seçenekleri değiştirmek, ${rc_file} dosyasını değiştirir ve değişiklikler kalıcıdır"
+	arr["TURKISH",591]="Bu seçenekleri değiştirmek, ${rc_file} dosyasını değiştirir ve değişiklikler kalıcıdır"
 
 	arr["ENGLISH",592]="9.  Disable 5Ghz permanently"
 	arr["SPANISH",592]="9.  Deshabilitar 5Ghz permanentemente"
@@ -7964,7 +7964,7 @@ function language_strings() {
 	arr["ITALIAN",592]="9.  Disattivare permanentemente 5Ghz"
 	arr["POLISH",592]="9.  Wyłącz na stałe 5Ghz"
 	arr["GERMAN",592]="9.  5Ghz dauerhaft deaktivieren"
-	arr["TURKISH",592]="${pending_of_translation} 9.  5Ghz'i kalıcı olarak devre dışı bırak"
+	arr["TURKISH",592]="9.  5Ghz'i kalıcı olarak devre dışı bırak"
 
 	arr["ENGLISH",593]="9.  Enable 5Ghz permanently"
 	arr["SPANISH",593]="9.  Habilitar 5Ghz permanentemente"
@@ -7976,7 +7976,7 @@ function language_strings() {
 	arr["ITALIAN",593]="9.  Attivare 5Ghz permanentemente"
 	arr["POLISH",593]="9.  Włącz na stałe 5Ghz"
 	arr["GERMAN",593]="9.  5Ghz dauerhaft aktivieren"
-	arr["TURKISH",593]="${pending_of_translation} 9.  5Ghz'i kalıcı olarak etkinleştir"
+	arr["TURKISH",593]="9.  5Ghz'i kalıcı olarak etkinleştir"
 
 	arr["ENGLISH",594]="5Ghz: ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",594]="5Ghz: ${pink_color}Activado${normal_color}"
@@ -7988,7 +7988,7 @@ function language_strings() {
 	arr["ITALIAN",594]="5Ghz: ${pink_color}Attivato${normal_color}"
 	arr["POLISH",594]="5Ghz: ${pink_color}Włączony${normal_color}"
 	arr["GERMAN",594]="5Ghz: ${pink_color}Aktiviert${normal_color}"
-	arr["TURKISH",594]="${pending_of_translation} 5Ghz: ${pink_color}Aktive${normal_color}"
+	arr["TURKISH",594]="5Ghz: ${pink_color}Aktif${normal_color}"
 
 	arr["ENGLISH",595]="5Ghz: ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",595]="5Ghz: ${pink_color}Desactivado${normal_color}"
@@ -8000,7 +8000,7 @@ function language_strings() {
 	arr["ITALIAN",595]="5Ghz: ${pink_color}Disattivato${normal_color}"
 	arr["POLISH",595]="${pending_of_translation} 5Ghz: ${pink_color}Dezaktywowane${normal_color}"
 	arr["GERMAN",595]="5Ghz: ${pink_color}Deaktiviert${normal_color}"
-	arr["TURKISH",595]="${pending_of_translation} 5Ghz: ${pink_color}Devreden${normal_color}"
+	arr["TURKISH",595]="5Ghz: ${pink_color}DevreDışı${normal_color}"
 
 	arr["ENGLISH",596]="${blue_color}5Ghz will be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",596]="${blue_color}Se va a deshabilitar 5Ghz. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -8012,7 +8012,7 @@ function language_strings() {
 	arr["ITALIAN",596]="${blue_color}5Ghz verrà disattivato. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",596]="${pending_of_translation} ${blue_color}5Ghz zostanie wyłączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",596]="${blue_color}5Ghz wird deaktiviert. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
-	arr["TURKISH",596]="${pending_of_translation} ${blue_color}5Ghz devre dışı bırakılacak. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",596]="${blue_color}5Ghz devre dışı bırakılacak. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",597]="${blue_color}5Ghz will be enabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",597]="${blue_color}Se va a habilitar 5Ghz. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -8024,7 +8024,7 @@ function language_strings() {
 	arr["ITALIAN",597]="${blue_color}5Ghz verrà attivato ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",597]="${pending_of_translation} ${blue_color}5Ghz zostanie włączony. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",597]="${blue_color}5Ghz wird aktiviert. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
-	arr["TURKISH",597]="${pending_of_translation} ${blue_color}Umożliwi to pokazywanie wskazówek. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",597]="${blue_color}5Ghz etkinleştirilecek. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",598]="5Ghz has been disabled"
 	arr["SPANISH",598]="Se ha desactivado 5Ghz"
@@ -8036,7 +8036,7 @@ function language_strings() {
 	arr["ITALIAN",598]="5Ghz è stato disattivato"
 	arr["POLISH",598]="${pending_of_translation} 5Ghz zostało wyłączone"
 	arr["GERMAN",598]="5Ghz wurde deaktiviert"
-	arr["TURKISH",598]="${pending_of_translation} 5Ghz devre dışı bırakıldı"
+	arr["TURKISH",598]="5Ghz devre dışı bırakıldı"
 
 	arr["ENGLISH",599]="5Ghz has been enabled"
 	arr["SPANISH",599]="Se ha activado 5Ghz"
@@ -8048,7 +8048,7 @@ function language_strings() {
 	arr["ITALIAN",599]="5Ghz è stato attivato"
 	arr["POLISH",599]="${pending_of_translation} 5Ghz zostało włączone"
 	arr["GERMAN",599]="5Ghz wurde aktiviert"
-	arr["TURKISH",599]="${pending_of_translation} 5Ghz etkinleştirildi"
+	arr["TURKISH",599]="5Ghz etkinleştirildi"
 
 	arr["ENGLISH",600]="You already have selected a capture file during this session [${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
 	arr["SPANISH",600]="Ya tienes seleccionado un fichero de captura en esta sesión [${normal_color}${hashcatenterpriseenteredpath}${blue_color}]"
