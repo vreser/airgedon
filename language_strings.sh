@@ -3836,7 +3836,7 @@ function language_strings() {
 	arr["ITALIAN",248]="modalità noisy, senza interruzioni"
 	arr["POLISH",248]="tryb noisy, bez przerw"
 	arr["GERMAN",248]="noisy-Modus, ununterbrochen"
-	arr["TURKISH",248]="${pending_of_translation} noisy mod, kesinti yok"
+	arr["TURKISH",248]="noisy mod, aralıksız"
 
 	arr["ENGLISH",249]="5.  Portuguese"
 	arr["SPANISH",249]="5.  Portugués"
@@ -3980,7 +3980,7 @@ function language_strings() {
 	arr["ITALIAN",260]="5.  Evil Twin Enterprise modalità smooth"
 	arr["POLISH",260]="5.  Enterprise Evil Twin w trybie smooth"
 	arr["GERMAN",260]="5.  Smooth-Modus Enterprise Evil Twin"
-	arr["TURKISH",260]="${pending_of_translation} 5.  Smooth mod Enterprise Evil Twin"
+	arr["TURKISH",260]="5.  Smooth mod Enterprise Evil Twin"
 
 	arr["ENGLISH",261]="7.  Evil Twin AP attack with sniffing and sslstrip"
 	arr["SPANISH",261]="7.  Ataque Evil Twin AP con sniffing y sslstrip"
@@ -4544,7 +4544,7 @@ function language_strings() {
 	arr["ITALIAN",307]="6.  Evil Twin Enterprise modalità noisy"
 	arr["POLISH",307]="6.  Enterprise Evil Twin w trybie noisy"
 	arr["GERMAN",307]="6.  Noisy-Modus Enterprise Evil Twin"
-	arr["TURKISH",307]="${pending_of_translation} 6.  Noisy mod Enterprise Evil Twin"
+	arr["TURKISH",307]="6.  Noisy mod Enterprise Evil Twin"
 
 	arr["ENGLISH",308]="6.  Russian"
 	arr["SPANISH",308]="6.  Ruso"
@@ -5588,7 +5588,7 @@ function language_strings() {
 	arr["ITALIAN",394]="Hai selezionato come obbiettivo una rete di 5Ghz e il \"DoS pursuit mode\", ma la seconda interfaccia necessaria per eseguire l'attacco non supporta la banda 5Ghz o è disattivata, quindi l'attacco non puó essere eseguito"
 	arr["POLISH",394]="Wybrałeś docelową sieć 5Ghz i \"tryb DoS pursuit\", ale drugi interfejs potrzebny do przeprowadzenia ataku nie obsługuje pasma 5Ghz lub jest ono wyłączone, więc nie można go wykonać"
 	arr["GERMAN",394]="Sie haben ein Zielnetzwerk mit 5Ghz und den \"DoS pursuit mode\" gewählt, aber die zweite Interface, die zur Ausführung des Angriffs benötigt wird, unterstützt das 5Ghz-Band nicht oder sie ist deaktiviert, so dass es nicht ausgeführt werden kann"
-	arr["TURKISH",394]="${pending_of_translation} Bir 5Ghz hedef ağı ve \"DoS peşinde koşma modu\" nı seçtiniz, ancak saldırıyı gerçekleştirmek için gereken ikinci arabirim, 5Ghz'yi bandını desteklemiyor veya devre dışı bırakılmış, böylece saldırı gerçekleştirilemiyor"
+	arr["TURKISH",394]="5Ghz hedef ve \"DoS pursuit mode\" seçtiniz, ancak saldırıyı gerçekleştirmek için gereken ikinci arayüz, 5Ghz'yi bandını desteklemiyor veya devre dışı bırakılmış, bu yüzden saldırı gerçekleştirilemiyor"
 
 	arr["ENGLISH",395]="Skipping intro, more window size needed"
 	arr["SPANISH",395]="Saltando presentación, se necesita más tamaño de ventana"
@@ -6200,7 +6200,7 @@ function language_strings() {
 	arr["ITALIAN",445]="Se hai installato ccze e vedi errori o alcune finestre tremolanti, disattiva la colorazione estesa nel menú opzioni e lingua"
 	arr["POLISH",445]="Jeśli zainstalowano ccze i wystąpiły błędy wizualizacji lub migotania w niektórych oknach, powinieneś wyłączyć rozszerzone kolory w menu opcji i języka"
 	arr["GERMAN",445]="Wenn Sie ccze installiert haben und in einigen Fenstern Anzeigefehler oder Flimmern auftreten, deaktivieren Sie die erweiterte Einfärbung im Einstellung- und Sprachmenü"
-	arr["TURKISH",445]="${pending_of_translation} Eğer ccze kuruluysa ve bazı pencerelerde görüntü hataları veya hatalar yaşıyorsanız, seçenek ve dil menüsünde genişletilmiş renklendirmeyi devre dışı bırakmalısınız"
+	arr["TURKISH",445]="Eğer ccze kuruluysa ve bazı pencerelerde görüntü hataları veya hatalar yaşıyorsanız, seçenek ve dil menüsünde genişletilmiş renklendirmeyi devre dışı bırakmalısınız"
 
 	arr["ENGLISH",446]="0.  Return to options menu"
 	arr["SPANISH",446]="0.  Volver al menú de opciones"
@@ -6260,7 +6260,7 @@ function language_strings() {
 	arr["ITALIAN",450]="5.  Attivare permanentemente la colorazione estesa"
 	arr["POLISH",450]="5.  Trwale włącz rozszerzone kolorowanie"
 	arr["GERMAN",450]="5.  Die erweiterte Einfärbung dauerhaft aktivieren"
-	arr["TURKISH",450]="${pending_of_translation} 5.  Genişletilmiş renklendirmeyi kalıcı olarak etkinleştir"
+	arr["TURKISH",450]="5.  Genişletilmiş renklendirmeyi kalıcı olarak etkinleştir"
 
 	arr["ENGLISH",451]="Automatic updates: ${pink_color}Enabled${normal_color}"
 	arr["SPANISH",451]="Actualizaciones automáticas: ${pink_color}Activadas${normal_color}"
@@ -6296,7 +6296,7 @@ function language_strings() {
 	arr["ITALIAN",453]="Colorazione estesa: ${pink_color}Attivata${normal_color}"
 	arr["POLISH",453]="Rozszerzone kolorowanie: ${pink_color}Włączone${normal_color}"
 	arr["GERMAN",453]="Erweiterte Einfärbung: ${pink_color}Aktiviert${normal_color}"
-	arr["TURKISH",453]="${pending_of_translation} Renklendirme: ${pink_color}Etkin${normal_color}"
+	arr["TURKISH",453]="Genişletilmiş renklendirme: ${pink_color}Etkin${normal_color}"
 
 	arr["ENGLISH",454]="Extended colorization: ${pink_color}Disabled${normal_color}"
 	arr["SPANISH",454]="Colorización extendida: ${pink_color}Desactivada${normal_color}"
@@ -6308,7 +6308,7 @@ function language_strings() {
 	arr["ITALIAN",454]="Colorazione estesa: ${pink_color}Disattivata${normal_color}"
 	arr["POLISH",454]="Rozszerzone kolorowanie: ${pink_color}Wyłączone${normal_color}"
 	arr["GERMAN",454]="Erweiterte Einfärbung: ${pink_color}Deaktiviert${normal_color}"
-	arr["TURKISH",454]="${pending_of_translation} Genişletilmiş renklendirme: ${pink_color}DevreDışı${normal_color}"
+	arr["TURKISH",454]="Genişletilmiş renklendirme: ${pink_color}DevreDışı${normal_color}"
 
 	arr["ENGLISH",455]="2.  Disable automatic updates permanently"
 	arr["SPANISH",455]="2.  Deshabilitar permanentemente la actualización automática"
@@ -6332,7 +6332,7 @@ function language_strings() {
 	arr["ITALIAN",456]="5.  Disattivare permanentemente la colorazione estesa"
 	arr["POLISH",456]="5.  Trwale wyłącz rozszerzone kolorowanie"
 	arr["GERMAN",456]="5.  Erweiterte Einfärbung dauerhaft deaktivieren"
-	arr["TURKISH",456]="${pending_of_translation} 5.  Genişletilmiş renklendirmeyi kalıcı olarak devre dışı bırak"
+	arr["TURKISH",456]="5.  Genişletilmiş renklendirmeyi kalıcı olarak devre dışı bırak"
 
 	arr["ENGLISH",457]="${blue_color}Automatic updates are going to be disabled. ${green_color}Do you want to continue? ${normal_color}${visual_choice}"
 	arr["SPANISH",457]="${blue_color}Se van a desactivar las actualizaciones automáticas. ${green_color}¿Deseas continuar? ${normal_color}${visual_choice}"
@@ -6416,7 +6416,7 @@ function language_strings() {
 	arr["ITALIAN",463]="${blue_color}La colorazione estesa sará attivata. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",463]="${blue_color}Rozszerzone kolorowanie zostanie włączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",463]="${blue_color}Erweiterte Einfärbung wird aktiviert. ${green_color}Wollen Sie fortfahren? ${normal_color}${visual_choice}"
-	arr["TURKISH",463]="${pending_of_translation} ${blue_color}Genişletilmiş renklendirme etkinleştirilecektir. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",463]="Genişletilmiş renklendirme etkinleştirilecektir. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",464]="You don't have the ccze package installed so any change on this option will have no effect until you install it"
 	arr["SPANISH",464]="No tienes instalado el paquete ccze por lo que cualquier cambio que realices sobre esta opción no tendrá efecto hasta que lo instales"
@@ -6440,7 +6440,7 @@ function language_strings() {
 	arr["ITALIAN",465]="La colorazione estesa è stata attivata"
 	arr["POLISH",465]="Rozszerzone kolorowanie zostało aktywowane"
 	arr["GERMAN",465]="Erweiterte Einfärbung wurde aktiviert"
-	arr["TURKISH",465]="${pending_of_translation} Genişletilmiş renklendirme etkinleştirildi"
+	arr["TURKISH",465]="Genişletilmiş renklendirme etkinleştirildi"
 
 	arr["ENGLISH",466]="Extended colorization has been disabled"
 	arr["SPANISH",466]="Se ha desactivado la colorización extendida"
@@ -6452,7 +6452,7 @@ function language_strings() {
 	arr["ITALIAN",466]="La colorazione estesa è stata disattivata"
 	arr["POLISH",466]="Rozszerzone kolorowanie zostało wyłączone"
 	arr["GERMAN",466]="Erweiterte Einfärbung wurde deaktiviert"
-	arr["TURKISH",466]="${pending_of_translation} Genişletilmiş renklendirme devre dışı bırakıldı"
+	arr["TURKISH",466]="Genişletilmiş renklendirme devre dışı bırakıldı"
 
 	arr["ENGLISH",467]="6.  Enable startup language autodetection permanently"
 	arr["SPANISH",467]="6.  Habilitar permanentemente la autodetección de idioma al inicio"
@@ -6596,7 +6596,7 @@ function language_strings() {
 	arr["ITALIAN",478]="${blue_color}Sarà modificata in modo permanente la lingua corrente in modo che al prossimo avvio di airgeddon questa sia la lingua di avvio. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
 	arr["POLISH",478]="${blue_color}To na stałe zmieni język na aktualny, tak aby był ustawiony przy następnym uruchomieniu airgeddon. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",478]="${blue_color}Die aktuelle Sprache wird permanent geändert, so dass der nächste Start von airgeddon in diese Sprache direkt startet. ${green_color}Möchten Sie weitermachen? ${normal_color}${visual_choice}"
-	arr["TURKISH",478]="${pending_of_translation} ${blue_color}Dil, geçerli olana kalıcı olarak ayarlanacaktır, böylece bir sonraki hava yolu başlatmada doğrudan kullanılacaktır. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",478]="Dil, geçici olarak şu anki olarak ayarlanacaktır, böylece bir sonraki airgeddon başlatmada doğrudan kullanılacaktır. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",479]="This change conflicts with the startup language autodetection which is currently enabled. It will be disabled automatically in order to perform the change"
 	arr["SPANISH",479]="Este cambio entra en conflicto con la autodetección del idioma al inicio que en este momento está activada. Se desactivará automáticamente para poder realizar el cambio"
@@ -6680,7 +6680,7 @@ function language_strings() {
 	arr["ITALIAN",485]="${blue_color}Sono stati aggiunti alcuni PIN calcolati da algoritmi (ComputePIN, EasyBox, etc.), ma è possibile aggiungerne ancora uno (Arcadyan). Il calcolo richiede alcuni dati e deve essere eseguita una scansione in secondo piano. Il processo può essere molto lento. ${green_color}Vuoi procedere con il calcolo per aggiungerlo? ${normal_color}${visual_choice}"
 	arr["POLISH",485]="${blue_color}Niektóre kody PIN zostały dodane obliczone algorytmami (ComputePIN, EasyBox, itd.) ale można jeszcze dodać jeden (Arcadyan). Obliczanie go wymaga pewnych danych oraz będzie musiało zostać wykonane skanowanie w tle. Proces ten może być bardzo powolny. ${green_color}Czy chcesz kontynuować obliczenie, aby go dodać? ${normal_color}${visual_choice}"
 	arr["GERMAN",485]="${blue_color}Einige von Algorithmen berechnete PINs (ComputePIN, EasyBox usw.) wurden hinzugefügt, aber es kann noch eine weitere hinzugefügt werden (Arcadyan). Die Berechnung erfordert bestimmte Daten und ein Scan im Hintergrund muss durchgeführt werden. Es ist möglich, dass der Prozess sehr langsam ist. ${green_color}Möchten Sie mit der Berechnung fortfahren, um sie hinzuzufügen? ${normal_color}${visual_choice}"
-	arr["TURKISH",485]="${pending_of_translation} ${blue_color}Bazı PIN'ler algoritmalar (ComputePIN, EasyBox, vb.) Kullanılarak hesaplanmıştır, ancak bir tane daha ekleyebilirsiniz (Arcadyan). Bunu hesaplamak belirli veriler gerektirir ve bir arka plan taramasının yapılması gerekir. İşlem çok yavaş olabilir. ${green_color}Eklemek istediğiniz hesaplamaya devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
+	arr["TURKISH",485]="Bazı PIN'ler algoritmalar (ComputePIN, EasyBox, vb.) Kullanılarak hesaplanmıştır, ancak bir tane daha ekleyebilirsiniz (Arcadyan). Bunu hesaplamak belirli veriler gerektirir ve bir arka plan taramasının yapılması gerekir. İşlem çok yavaş olabilir. ${green_color}Eklemek istediğiniz hesaplamaya devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
 	arr["ENGLISH",486]="It's not possible to generate PIN with Arcadyan algorithm. To be able to do it, update \"wash\" (included in reaver package) to a newer version including the necessary \"-j\" option (v${minimum_wash_json_version})"
 	arr["SPANISH",486]="No es posible generar el PIN con el algoritmo Arcadyan. Para poder hacerlo actualice \"wash\" (incluido en el paquete reaver) a una versión superior que tenga la necesaria opción \"-j\" (v${minimum_wash_json_version})"
@@ -6740,7 +6740,7 @@ function language_strings() {
 	arr["ITALIAN",490]="L'algoritmo Arcadyan richiede dati molto specifici per calcolare il PIN (il numero di serie del punto di accesso). Ottenere questi dati può richiedere molto tempo. Puoi scegliere opzionalmente di provare a generarlo. Questo PIN generato è molto utile nelle reti di tipo Orange-XXXX"
 	arr["POLISH",490]="Algorytm Arcadyan potrzebuje bardzo specyficznych danych do obliczania numeru PIN (numeru seryjny punktu dostępu). Uzyskanie tych danych może zająć trochę czasu. Można opcjonalnie zdecydować się na jego wygenerowanie. Ten wygenerowany kod PIN jest bardzo przydatny w sieciach typu Orange-XXXX"
 	arr["GERMAN",490]="Der Arcadyan-Algorithmus benötigt sehr spezifische Daten, um die PIN (die Seriennummer des Access Points) berechnen zu können. Die Beschaffung dieser Daten kann sehr lange dauern. Sie können optional auswählen, ob Sie versuchen möchten, es zu generieren. Diese generierte PIN ist sehr nützlich in Netzwerken vom Typ Orange-XXXX"
-	arr["TURKISH",490]="${pending_of_translation} Arcadyan algoritmasının PIN'i hesaplamak için çok özel bir veriye ihtiyacı vardır (erişim noktasının seri numarası). Bu verileri almak çok zaman alabilir. İsteğe bağlı olarak onu oluşturmayı deneyebilirsiniz. Bu oluşturulan PIN, Orange-XXXX türündeki ağlarda çok kullanışlıdır"
+	arr["TURKISH",490]="Arcadyan algoritmasının PIN'i hesaplamak için çok özel bir veriye ihtiyacı vardır (erişim noktasının seri numarası). Bu verileri almak çok zaman alabilir. İsteğe bağlı olarak onu oluşturmayı deneyebilirsiniz. Bu oluşturulan PIN, Orange-XXXX türündeki ağlarda çok kullanışlıdır"
 
 	arr["ENGLISH",491]="Arcadyan algorithm is not useful for the selected target network, a valid value can't be calculated"
 	arr["SPANISH",491]="El algoritmo Arcadyan no sirve para la red objetivo seleccionada, no se puede calcular un valor válido"
@@ -6764,7 +6764,7 @@ function language_strings() {
 	arr["ITALIAN",492]="L'algoritmo Arcadyan non può essere calcolato. Anche se hai scelto l'opzione di attacco con bully, per calcolare quel PIN che devi usare wash (incluso nel pacchetto reaver) e non l'hai installato. Lo script continuerà l'attacco senza includerlo"
 	arr["POLISH",492]="Nie można obliczyć algorytmu Arcadyan. Chociaż wybrano opcję ataku za pomocą bully, aby obliczyć ten kod PIN, musisz użyć wash (dołączonego do pakietu reaver) i nie masz go zainstalowanego. Skrypt będzie kontynuował atak bez jego włączania"
 	arr["GERMAN",492]="Der Arcadyan-Algorithmus kann nicht berechnet werden. Obwohl Sie den bully-Angriff gewählt haben, müssen Sie zur Berechnung dieser PIN die Funktion wash verwenden (im Paket reaver enthalten), und Sie haben sie nicht installiert. Das Skript setzt den Angriff fort, ohne es einzuschließen"
-	arr["TURKISH",492]="${pending_of_translation} Arcadyan algoritması hesaplanamaz. Saldırı için zorlama seçeneğini seçmiş olmanıza rağmen, bu PIN'i hesaplamak için yıkama kullanmanız (reaktif paketine dahil) ve onu yüklememeniz gerekir. Komut dahil etmeden saldırıya devam edecek"
+	arr["TURKISH",492]="${pending_of_translation} Arcadyan algoritması hesaplanamadı. Saldırı için zorlama seçeneğini seçmiş olmanıza rağmen, bu PIN'i hesaplamak için yıkama kullanmanız (reaktif paketine dahil) ve onu yüklememeniz gerekir. Komut dahil etmeden saldırıya devam edecek"
 
 	arr["ENGLISH",493]="The Arcadyan algorithm PIN has already been calculated for this target (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). There is no need to calculate it again"
 	arr["SPANISH",493]="El PIN del algoritmo Arcadyan ya fue calculado para este objetivo (${normal_color}${wps_data_array[${wps_bssid},'Arcadyan']}${yellow_color}). No hace falta calcularlo de nuevo"
@@ -6920,7 +6920,7 @@ function language_strings() {
 	arr["ITALIAN",505]="Vuoi attivare la modalità \"DoS pursuit mode\"? ${blue_color}Questo riprenderà l'attacco se l'AP obiettivo cambia i canali contrastando il \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["POLISH",505]="Czy chcesz uaktywnić \"tryb DoS pursuit\"? ${blue_color}To spowoduje ponowne uruchomienie ataku, jeśli docelowy punkt dostępu AP zmieni kanały \"channel hopping\" ${normal_color}${visual_choice}"
 	arr["GERMAN",505]="Möchten Sie den \"DoS pursuit mode\" aktivieren? ${blue_color}Dadurch wird der Angriff erneut gestartet, wenn der Ziel-AP den Kanal ändert, indem er dem \"channel hopping\" entgegenwirkt ${normal_color}${visual_choice}"
-	arr["TURKISH",505]="${pending_of_translation} \"DoS takip modu\" özelliğini etkinleştirmek ister misiniz? ${blue_color}Bu, hedef AP'nin kanal sayma \"channel hopping\" ${normal_color}${visual_choice} ${blue_color}kanalını değiştirmesi durumunda saldırıyı yeniden başlatır"
+	arr["TURKISH",505]="\"DoS pursuit mode\" özelliğini etkinleştirmek ister misiniz? ${blue_color}Bu, hedef AP'nin kanal sayma \"channel hopping\" ${normal_color}${visual_choice} ${blue_color}kanalını değiştirmesi durumunda saldırıyı yeniden başlatır"
 
 	arr["ENGLISH",506]="DoS attack with the \"DoS pursuit mode\" enabled will start when you press [Enter] on this window. To stop it you must press [Ctrl+C] or close attack window"
 	arr["SPANISH",506]="El ataque DoS con el \"modo persecución DoS\" activado comenzará cuando pulse [Enter] en esta ventana. Para detenerlo deberá pulsar [Ctrl+C] o cerrar la ventana del ataque"
@@ -7004,7 +7004,7 @@ function language_strings() {
 	arr["ITALIAN",512]="Interfaccia per la modalitá \"DoS pursuit mode\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["POLISH",512]="Interfejs dla \"tryb DoS pursuit\": ${pink_color}${secondary_wifi_interface}${normal_color}"
 	arr["GERMAN",512]="Interface für \"DoS pursuit mode\": ${pink_color}${secondary_wifi_interface}${normal_color}"
-	arr["TURKISH",512]="\"DoS takip modu\" arayüzü: ${pink_color}${secondary_wifi_interface}${normal_color}"
+	arr["TURKISH",512]="\"DoS pursuit mode\" arayüzü: ${pink_color}${secondary_wifi_interface}${normal_color}"
 
 	arr["ENGLISH",513]="Interface will be tried to be changed to monitor mode automatically"
 	arr["SPANISH",513]="Se intentará cambiar la interfaz a modo monitor automáticamente"
@@ -7028,7 +7028,7 @@ function language_strings() {
 	arr["ITALIAN",514]="Interfaccia ${pink_color}${current_iface_on_messages}${blue_color} selezionata. Modalità: ${pink_color}${ifacemode}${blue_color}. Bande supportate: ${pink_color}${interfaces_band_info['main_wifi_interface','text']}${normal_color}"
 	arr["POLISH",514]="Wybrany został interfejs ${pink_color}${current_iface_on_messages}${blue_color}. Tryb: ${pink_color}${ifacemode}${blue_color}. Obsługiwane pasma: ${pink_color}${interfaces_band_info['main_wifi_interface','text']}${normal_color}"
 	arr["GERMAN",514]="Interface ${pink_color}${current_iface_on_messages}${blue_color} ausgewählt. Modus: ${pink_color}${ifacemode}${blue_color}. Unterstützte Bänder: ${pink_color}${interfaces_band_info['main_wifi_interface','text']}${normal_color}"
-	arr["TURKISH",514]="${pending_of_translation} Arayüz ${pink_color}${current_iface_on_messages}${blue_color}seçildi. Kip: ${pink_color}${ifacemode}${blue_color}. Desteklenen bantlar: ${pink_color}${interfaces_band_info['main_wifi_interface','text']}${normal_color}"
+	arr["TURKISH",514]="Arayüz ${pink_color}${current_iface_on_messages}${blue_color}seçildi. Mod: ${pink_color}${ifacemode}${blue_color}. Desteklenen bantlar: ${pink_color}${interfaces_band_info['main_wifi_interface','text']}${normal_color}"
 
 	arr["ENGLISH",515]="You have selected a 5Ghz band channel but your wifi card doesn't support 5Ghz or it is disabled. The operation can't be performed"
 	arr["SPANISH",515]="Tienes un canal de la banda de 5Ghz seleccionado pero tu tarjeta wifi no soporta 5Ghz o está desactivado. La operación no se puede llevar a cabo"
@@ -7040,7 +7040,7 @@ function language_strings() {
 	arr["ITALIAN",515]="Hai selezionato un canale della banda 5Ghz, ma la tua scheda wifi non supporta 5Ghz o è disattivato. L'operazione non può essere eseguita"
 	arr["POLISH",515]="${pending_of_translation} Masz wybrane pasmo 5Ghz, lecz Twoja karta wifi go nie obsługuje 5Ghz lub ono wyłączone. Operacja nie może być wykonana"
 	arr["GERMAN",515]="Sie haben einen Kanal des 5Ghz-Bandes ausgewählt, aber Ihre WLAN-Karte unterstützt 5Ghz nicht oder sie ist deaktiviert. Die Operation kann nicht ausgeführt werden"
-	arr["TURKISH",515]="${pending_of_translation} 5Ghz bant kanalı seçtiniz, ancak wifi kartınız 5Ghz'yi desteklemiyor veya devre dışı bırakılmış. İşlem gerçekleştirilemiyor"
+	arr["TURKISH",515]="5Ghz bant kanalı seçtiniz, ancak wifi kartınız 5Ghz'yi desteklemiyor veya devre dışı bırakılmış. İşlem gerçekleştirilemiyor"
 
 	arr["ENGLISH",516]="It is known that the software used in the 5Ghz band still presents some problems sometimes. For example airodump, that when scanning networks can show a value \"-1\" on channel depending of the card chipset and the driver. It is also known that Ralink chipsets sometimes are getting errors on high channels \">=60\""
 	arr["SPANISH",516]="Es conocido que el software utilizado en la banda de 5Ghz aún presenta algunos problemas a veces. Como por ejemplo airodump, que al escanear redes puede mostrar un valor \"-1\" en el canal dependiendo del chipset de tu tarjeta y del driver. También es conocido que los chipsets Ralink a veces dan fallos en los canales altos \">=60\""
@@ -7076,7 +7076,7 @@ function language_strings() {
 	arr["ITALIAN",518]="Dopo aver catturato le credenziali in un attacco contro una rete Enterprise, ricorda che puoi provare a decifrare gli hash NTLM utilizzando il \"Menù per decifrare WPA/WPA2 offline\""
 	arr["POLISH",518]="Po przechwyceniu danych dostępowych w ataku na sieć Enterprise pamiętaj, że możesz spróbować złamać hash NTLM za pomocą \"Menu deszyfrowania WPA/WPA2 offline\""
 	arr["GERMAN",518]="Erinneren Sie sich dran, dass nach dem Erfassen von Credentials bei einem Enterprise-Netzwerkangriff Sie NTLM-Hashes mit dem \"Offline WPA/WPA2-Entschlüsselungsmenü\" entschlüsseln können."
-	arr["TURKISH",518]="${pending_of_translation} Enterprise ağ saldırısında kimlik bilgilerini aldıktan sonra, \"Çevrimdışı WPA/WPA2 decrypt menüsü\" kullanarak NTLM karmalarını çözmeyi deneyebilirsiniz."
+	arr["TURKISH",518]="Enterprise ağ saldırısında kimlik bilgilerini aldıktan sonra, \"Çevrimdışı WPA/WPA2 decrypt menüsü\" kullanarak NTLM karmalarını çözmeyi deneyebilirsiniz."
 
 	arr["ENGLISH",519]="11. Turkish"
 	arr["SPANISH",519]="11. Turco"
@@ -7100,7 +7100,7 @@ function language_strings() {
 	arr["ITALIAN",520]="Desautenticazione per Evil Twin Enterprise"
 	arr["POLISH",520]="Deautentykacja dla Evil Twin Enterprise"
 	arr["GERMAN",520]="Evil Twin Enterprise Deauthentifizierung"
-	arr["TURKISH",520]="${pending_of_translation} Şeytani İkiz Enterprise deauth"
+	arr["TURKISH",520]="pursuit Şeytani İkiz deauth"
 
 	arr["ENGLISH",521]="0.  Return to Enterprise attacks menu"
 	arr["SPANISH",521]="0.  Volver al menú de ataques Enterprise"
@@ -7112,7 +7112,7 @@ function language_strings() {
 	arr["ITALIAN",521]="0.  Tornare al menu degli attacchi Enterprise"
 	arr["POLISH",521]="0.  Wróć do menu ataków Enterprise"
 	arr["GERMAN",521]="0.  Zurück zum Enterprise Angriffsmenü"
-	arr["TURKISH",521]="${pending_of_translation} 0.  Şeytani İkiz Enterprise saldırı menüsüne geri dön"
+	arr["TURKISH",521]="0.  Enterprise Şeytani İkiz saldırı menüsüne geri dön"
 
 	arr["ENGLISH",522]="Smooth mode Enterprise Evil Twin"
 	arr["SPANISH",522]="Evil Twin Enterprise modo smooth"
@@ -7124,7 +7124,7 @@ function language_strings() {
 	arr["ITALIAN",522]="Evil Twin Enterprise modalità smooth"
 	arr["POLISH",522]="Enterprise Evil Twin w trybie smooth"
 	arr["GERMAN",522]="Smooth-Modus Enterprise Evil Twin"
-	arr["TURKISH",522]="${pending_of_translation} Smooth mod Enterprise Evil Twin"
+	arr["TURKISH",522]="${pending_of_translation} Smooth mod Enterprise Şeytani İkiz"
 
 	arr["ENGLISH",523]="Noisy mode Enterprise Evil Twin"
 	arr["SPANISH",523]="Evil Twin Enterprise modo noisy"
@@ -7136,7 +7136,7 @@ function language_strings() {
 	arr["ITALIAN",523]="Evil Twin Enterprise modalità noisy"
 	arr["POLISH",523]="Enterprise Evil Twin w trybie noisy"
 	arr["GERMAN",523]="Noisy-Modus Enterprise Evil Twin"
-	arr["TURKISH",523]="${pending_of_translation} Noisy mod Enterprise Evil Twin"
+	arr["TURKISH",523]="${pending_of_translation} Noisy mod Enterprise Şeytani İkiz"
 
 	arr["ENGLISH",524]="Enterprise Evil Twin attack has been started. Press [Enter] key on this window to stop it"
 	arr["SPANISH",524]="El ataque Evil Twin Enterprise ha comenzado. Pulse la tecla [Enter] en esta ventana para pararlo"
@@ -7148,7 +7148,7 @@ function language_strings() {
 	arr["ITALIAN",524]="L'attacco Evil Twin Enterprise è iniziato. Premere il tasto [Enter] in questa finestra per fermarlo"
 	arr["POLISH",524]="Rozpoczął się atak Evil Twin Enterprise. Naciśnij klawisz [Enter] w tym oknie, aby go zatrzymać"
 	arr["GERMAN",524]="Der Evil-Twin-Enterprise-Angriff hat begonnen. Drücken Sie die [Enter]-Taste in diesem Fenster, um es zu stoppen"
-	arr["TURKISH",524]="${pending_of_translation} Şeytani İkiz saldırısı Enterprise başlatıldı. Durdurmak için bu pencerede [Enter] tuşlayınız"
+	arr["TURKISH",524]="Enterprise Şeytani İkiz saldırısı başlatıldı. Durdurmak için bu pencerede [Enter] tuşlayınız"
 
 	arr["ENGLISH",525]="If a hash or password is obtained during the Evil Twin Enterprise attack, you should decide where to save it. ${green_color} More than one file will be saved, type the path (directory) to store the file/s. If the directory does not exist, airgeddon will create it. Press [Enter] to accept the default proposal ${normal_color}[${enterprise_potpath}]"
 	arr["SPANISH",525]="Si se consigue capturar algún hash o contraseña durante el ataque Evil Twin Enterprise, hay que decidir donde guardarlo. ${green_color}Se guardarán varios ficheros, escribe la ruta (el directorio) donde escribiremos el/los fichero/s. Si en directorio no existe, airgeddon lo generará. Pulsa [Enter] para aceptar la ruta propuesta por defecto ${normal_color}[${enterprise_potpath}]"
@@ -7160,7 +7160,7 @@ function language_strings() {
 	arr["ITALIAN",525]="Se riesci a catturare un hash o una password durante l'attacco Evil Twin Enterprise, devi decidere dove salvarlo. ${green_color}Diversi file verranno salvati, scrivi il percorso (la directory) in cui i file saranno scritti. Se la directory non esiste, airgeddon la genererà. Premere [Enter] per accettare il percorso predefinito proposto ${normal_color}[${enterprise_potpath}]"
 	arr["POLISH",525]="Jeśli uda ci się zdobyć hash lub hasło podczas ataku Evil Twin Enterprise, musisz zdecydować gdzie je zapisać. ${green_color}Zostanie zapisany wiecej niż jeden plik, podaj ścieżkę (katalog) dla plik(ów). Jeśli katalog nie istnieje, airgeddon go utworzy. Naciśnij [Enter], aby zaakceptować domyślną proponowaną ścieżkę ${normal_color}[${enterprise_potpath}]"
 	arr["GERMAN",525]="Wenn Sie während des Evil Twin Enterprise Angriffs einen Hash oder ein Passwort erfassen, müssen Sie entscheiden, wo es gespeichert werden soll. ${green_color}Mehrere Dateien werden gespeichert. Geben Sie den Pfad (das Verzeichnis) ein, in dem wir die Datei(en) schreiben werden. Wenn das Verzeichnis nicht vorhanden ist, wird es von airgeddon erstellt. Bestätigen Sie mit [Enter], um die standardmäßig vorgeschlagene Route zu akzeptieren ${normal_color}[${enterprise_potpath}]"
-	arr["TURKISH",525]="${pending_of_translation} Evil Twin Enterprise saldırısı sırasında bir karmaşa veya şifre yakalamayı başarabilirseniz, nereye kaydedeceğinize karar vermeniz gerekir. ${green_color}Birkaç dosya kaydedilecek, dosya (lar) ı yazacağımız yolu (dizin) yazacağız. Dizini yoksa, airgeddon onu üretecektir. Önerilen önerilen rotayı kabul etmek için [Enter] tuşuna basın ${normal_color}[${enterprise_potpath}]"
+	arr["TURKISH",525]="Enterprise Şeytani İkiz saldırısı sırasında bir şifre yakalamayı başarabilirseniz, nereye kaydedeceğinize karar vermeniz gerekir. ${green_color}Birkaç dosya kaydedilecek, dosya (lar) ı yazacağımız yolu (dizin) yazacağız. Dizini yoksa, airgeddon onu üretecektir. Önerilen önerilen yolu kabul etmek için [Enter] tuşuna basın ${normal_color}[${enterprise_potpath}]"
 
 	arr["ENGLISH",526]="Directory does not exist or you don't have permission to write"
 	arr["SPANISH",526]="El directorio no existe o no tienes permisos de escritura"
@@ -7172,7 +7172,7 @@ function language_strings() {
 	arr["ITALIAN",526]="La directory non esiste o non hai i permessi di scrittura"
 	arr["POLISH",526]="Katalog nie istnieje lub nie masz uprawnień do zapisu"
 	arr["GERMAN",526]="Verzeichnis existiert nicht oder Sie haben keine Schreibberechtigung"
-	arr["TURKISH",526]="${pending_of_translation} Dizin mevcut değil veya yazma izniniz yok"
+	arr["TURKISH",526]="Dizin mevcut değil veya yazma izniniz yok"
 
 	arr["ENGLISH",527]="WPA/WPA2 and Enterprise filter enabled. It's not possible to filter Enterprise networks during the scan, the filter will be applied in network selection menu in which only Enterprise networks will be shown. When started, press [Ctrl+C] to stop..."
 	arr["SPANISH",527]="Filtro WPA/WPA2 y Enterprise activado. Durante el escaneo no es posible filtrar redes Enterprise, el filtro se aplicará en la pantalla de selección de red donde solo se mostrarán redes Enterprise. Una vez empezado, pulse [Ctrl+C] para pararlo..."
@@ -7184,7 +7184,7 @@ function language_strings() {
 	arr["ITALIAN",527]="Filtro WPA/WPA2 e Enterprise attivato. Durante la scansione non è possibile filtrare le reti Enterprise, il filtro verrà applicato nella schermata di selezione della rete in cui verranno visualizzate solo le reti Enterprise. Una volta avviato, premi [Ctrl+C] per fermarlo..."
 	arr["POLISH",527]="Włączone filtry WPA/WPA2 i Enterprise. Nie można filtrować sieci Enterprise podczas skanowania, filtr zostanie zastosowany w menu wyboru sieci, w którym wyświetlane będą tylko sieci Enterprise. Naciśnij w trackie działania [Ctrl+C], aby zatrzymać..."
 	arr["GERMAN",527]="WPA/WPA2- und Enterprise-Filter aktiviert. Es ist nicht möglich, Enterprise-Netzwerke während des Scans zu filtern. Der Filter wird im Netzwerkauswahlmenü angewendet, in dem nur Enterprise-Netzwerke angezeigt werden. Einmal angefangem, drücken Sie [Ctrl+C], um zu stoppen..."
-	arr["TURKISH",527]="${pending_of_translation} WPA/WPA2 ve Enterprise filtre etkinleştirildi. Tarama sırasında Enterprise ağları filtrelemek mümkün değildir, filtre yalnızca Enterprise ağların gösterileceği ağ seçim menüsünde uygulanacaktır. Başladığınızda, durdurmak için [Ctrl+C] tuşlarına basın..."
+	arr["TURKISH",527]="WPA/WPA2 ve Enterprise filtre etkinleştirildi. Tarama sırasında Enterprise ağları filtrelemek mümkün değildir, filtre yalnızca Enterprise ağların gösterileceği ağ seçim menüsünde uygulanacaktır. Başladığınızda, durdurmak için [Ctrl+C] tuşlarına basın..."
 
 	arr["ENGLISH",528]="It has been detected that you are running airgeddon inside a Docker container. During this attack hostapd-wpe is used to create a fake AP. This component often conflicts with network-manager. From inside the container, airgeddon can't handle it. If you have network-manager installed on your host machine, close it or kill the conflicting processes or you'll get an error. For more information, see the Docker section of the Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["SPANISH",528]="Se ha detectado que estás ejecutando airgeddon en un contenedor de Docker. En este ataque se utiliza hostapd-wpe para crear un falso AP. Este componente suele dar conflicto con network-manager. Desde el contenedor, airgeddon no puede gestionarlo. Si tienes network-manager instalado en tu máquina host, ciérralo o mata los procesos en conflicto u obtendrás un error. Para más información consulta la sección Docker del Wiki: ${normal_color}${urlgithub_wiki}/Docker"
@@ -7196,7 +7196,7 @@ function language_strings() {
 	arr["ITALIAN",528]="È stato rilevato che si sta eseguendo airgeddon in un contenitore Docker. In questo attacco viene utilizzato hostapd-wpe per creare un falso AP. Questo componente tende a creare un conflitto con il network-manager. Dal contenitore, airgeddon non può gestirlo. Se si dispone di network-manager installato sul computer host, chiuderlo o uccidere i processi in conflitto o ci sará un errore. Per ulteriori informazioni consultare la sezione Docker della nostra Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["POLISH",528]="Wykryto, że używasz airgeddon w kontenerze Docker. W tym ataku hostapd-wpe służy do utworzenia fałszywego AP. Ten komponent często ma konflikt z network-manager. Z kontenera airgeddon nie może sobie z tym poradzić. Jeśli na komputerze hosta zainstalowano network-manager, zamknij lub zabij sprzeczne procesy lub otrzymasz błąd. Aby uzyskać więcej informacji, zobacz sekcję Docker Wiki: ${normal_color}${urlgithub_wiki}/Docker"
 	arr["GERMAN",528]="Es wurde festgestellt, dass Sie airgeddon in einem Docker-Container ausführen. Bei diesem Angriff wird mit hostapd-wpe ein falscher AP erstellt. Diese Komponente steht normalerweise im Konflikt mit dem network-manager. Aus dem Container kann airgeddon das nicht schaffen. Wenn Sie den network-manager auf Ihrem Host-Computer installiert haben, schließen Sie ihn oder beenden Sie die Prozesse im Konflikt oder Sie erhalten einen Fehler. Weitere Informationen finden Sie im Abschnitt Docker des Wiki: ${normal_color}${urlgithub_wiki}/Docker"
-	arr["TURKISH",528]="${pending_of_translation} Bir Docker kabının içinde airgeddon çalıştırdığınız tespit edildi. Bu saldırı sırasında hostapd-wpe sahte bir AP oluşturmak için kullanılır. Bu bileşen genellikle ağ yöneticisi ile çakışır. Konteynırın içinden, hava hücresi bunu kaldıramaz. Ana makinenize ağ yöneticisi yüklüyse, kapat veya çakışan işlemleri durdurun veya bir hatayla karşılaşırsınız. Daha fazla bilgi için, Wiki'nin Docker bölümüne bakın: ${normal_color}${urlgithub_wiki}/Docker"
+	arr["TURKISH",528]="Bir Docker konteynırı içinde airgeddon çalıştırdığınız tespit edildi. Bu saldırı sırasında hostapd-wpe sahte bir AP oluşturmak için kullanılır. Bu bileşen genellikle ağ yöneticisi ile çakışır. Konteynırın içinden, hava hücresi bunu kaldıramaz. Ana makinenize ağ yöneticisi yüklüyse, kapat veya çakışan işlemleri durdurun veya bir hatayla karşılaşırsınız. Daha fazla bilgi için, Wiki'nin Docker bölümüne bakın: ${normal_color}${urlgithub_wiki}/Docker"
 
 	arr["ENGLISH",529]="It seems that nothing was captured during the Enterprise Evil Twin attack"
 	arr["SPANISH",529]="Parece que no se ha capturado nada durante el ataque Evil Twin Enterprise"
