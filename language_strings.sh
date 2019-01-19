@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20190119
+#Date.........: 20190120
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -7028,7 +7028,7 @@ function language_strings() {
 	arr["ITALIAN",514]="Interfaccia ${pink_color}${current_iface_on_messages}${blue_color} selezionata. Modalità: ${pink_color}${ifacemode}${blue_color}. Bande supportate: ${pink_color}${interfaces_band_info['main_wifi_interface','text']}${normal_color}"
 	arr["POLISH",514]="Wybrany został interfejs ${pink_color}${current_iface_on_messages}${blue_color}. Tryb: ${pink_color}${ifacemode}${blue_color}. Obsługiwane pasma: ${pink_color}${interfaces_band_info['main_wifi_interface','text']}${normal_color}"
 	arr["GERMAN",514]="Interface ${pink_color}${current_iface_on_messages}${blue_color} ausgewählt. Modus: ${pink_color}${ifacemode}${blue_color}. Unterstützte Bänder: ${pink_color}${interfaces_band_info['main_wifi_interface','text']}${normal_color}"
-	arr["TURKISH",514]="Arayüz ${pink_color}${current_iface_on_messages}${blue_color}seçildi. Mod: ${pink_color}${ifacemode}${blue_color}. Desteklenen bantlar: ${pink_color}${interfaces_band_info['main_wifi_interface','text']}${normal_color}"
+	arr["TURKISH",514]="Arayüz ${pink_color}${current_iface_on_messages}${blue_color} seçildi. Mod: ${pink_color}${ifacemode}${blue_color}. Desteklenen bantlar: ${pink_color}${interfaces_band_info['main_wifi_interface','text']}${normal_color}"
 
 	arr["ENGLISH",515]="You have selected a 5Ghz band channel but your wifi card doesn't support 5Ghz or it is disabled. The operation can't be performed"
 	arr["SPANISH",515]="Tienes un canal de la banda de 5Ghz seleccionado pero tu tarjeta wifi no soporta 5Ghz o está desactivado. La operación no se puede llevar a cabo"
@@ -7100,7 +7100,7 @@ function language_strings() {
 	arr["ITALIAN",520]="Desautenticazione per Evil Twin Enterprise"
 	arr["POLISH",520]="Deautentykacja dla Evil Twin Enterprise"
 	arr["GERMAN",520]="Evil Twin Enterprise Deauthentifizierung"
-	arr["TURKISH",520]="pursuit Şeytani İkiz deauth"
+	arr["TURKISH",520]="Enterprise Şeytani İkiz deauth"
 
 	arr["ENGLISH",521]="0.  Return to Enterprise attacks menu"
 	arr["SPANISH",521]="0.  Volver al menú de ataques Enterprise"
