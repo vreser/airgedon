@@ -1188,7 +1188,7 @@ function search_in_pin_database() {
 			bssid_found_in_db=1
 			arrpins=(${PINDB[${item//[[:space:]]/ }]})
 			for item2 in "${arrpins[@]}"; do
-				counter_pins_found=$((counter_pins_found+1))
+				counter_pins_found=$((counter_pins_found + 1))
 				pins_found+=(${item2})
 				fill_wps_data_array "${wps_bssid}" "Database" "${item2}"
 			done
@@ -10367,7 +10367,7 @@ function explore_for_targets_option() {
 
 		chars_mac=${#exp_mac}
 		if [ "${chars_mac}" -ge 17 ]; then
-			i=$((i+1))
+			i=$((i + 1))
 			if [[ ${exp_power} -lt 0 ]]; then
 				if [[ ${exp_power} -eq -1 ]]; then
 					exp_power=0
@@ -10472,7 +10472,7 @@ function explore_for_wps_targets_option() {
 			wash_header_found=1
 			break
 		else
-			wash_line_counter=$((wash_line_counter+1))
+			wash_line_counter=$((wash_line_counter + 1))
 		fi
 	done
 
@@ -10497,18 +10497,18 @@ function explore_for_wps_targets_option() {
 	language_strings "${language}" 349 "green"
 	print_large_separator
 
-	i=0
-	wash_counter=0
+	local i=0
+	local wash_counter=0
 	declare -A wps_lockeds
 	wps_lockeds[${wash_counter}]="No"
 	while IFS=, read -r expwps_line; do
 
-		i=$((i+1))
+		i=$((i + 1))
 
 		if [ ${i} -le ${wash_start_data_line} ]; then
 			continue
 		else
-			wash_counter=$((wash_counter+1))
+			wash_counter=$((wash_counter + 1))
 
 			if [ ${wash_counter} -le 9 ]; then
 				wpssp1=" "
@@ -10621,10 +10621,10 @@ function select_target() {
 	echo
 	language_strings "${language}" 69 "green"
 	print_large_separator
-	i=0
+	local i=0
 	while IFS=, read -r exp_mac exp_channel exp_power exp_essid exp_enc; do
 
-		i=$((i+1))
+		i=$((i + 1))
 
 		if [ ${i} -le 9 ]; then
 			sp1=" "
