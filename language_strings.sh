@@ -7038,7 +7038,7 @@ function language_strings() {
 	arr["RUSSIAN",515]="Вы выбрали канал на частотах 5Ghz, но ваша wifi карта не поддерживает 5Ghz, или этот диапазон отключён. Операция не может быть выполнена"
 	arr["GREEK",515]="Έχετε επιλέξει κανάλι της ζώνης 5Ghz, αλλά η κάρτα wifi σας δεν υποστηρίζει 5Ghz ή είναι απενεργοποιημένη. Η λειτουργία δεν μπορεί να πραγματοποιηθεί"
 	arr["ITALIAN",515]="Hai selezionato un canale della banda 5Ghz, ma la tua scheda wifi non supporta 5Ghz o è disattivato. L'operazione non può essere eseguita"
-	arr["POLISH",515]="${pending_of_translation} Masz wybrane pasmo 5Ghz, lecz Twoja karta wifi go nie obsługuje 5Ghz lub ono wyłączone. Operacja nie może być wykonana"
+	arr["POLISH",515]="Masz wybrane pasmo 5Ghz, lecz Twoja karta wifi go nie obsługuje lub jest ono wyłączone. Operacja nie może być wykonana"
 	arr["GERMAN",515]="Sie haben einen Kanal des 5Ghz-Bandes ausgewählt, aber Ihre WLAN-Karte unterstützt 5Ghz nicht oder sie ist deaktiviert. Die Operation kann nicht ausgeführt werden"
 	arr["TURKISH",515]="5Ghz bant kanalı seçtiniz, ancak wifi kartınız 5Ghz'yi desteklemiyor veya devre dışı bırakılmış. İşlem gerçekleştirilemiyor"
 
@@ -7242,7 +7242,7 @@ function language_strings() {
 	arr["RUSSIAN",532]="Поздравления!! Кажется, что вы захватили хеши и пароли в текстовом виде"
 	arr["GREEK",532]="Συγχαρητήρια!! Φαίνεται ότι έχετε καταγράψει τα hashes και τους κωδικούς πρόσβασης απλού κειμένου"
 	arr["ITALIAN",532]="Congratulazioni!! Sembra che tu abbia catturato degli hash e delle passwords in chiaro"
-	arr["POLISH",532]="${pending_of_translation} Gratulacje!! Wygląda na to, że przechwyciłeś skróty i hasła w postaci zwykłego tekstu"
+	arr["POLISH",532]="Gratulacje!! Wygląda na to, że przechwyciłeś hashe i hasła w postaci zwykłego tekstu"
 	arr["GERMAN",532]="Herzlichen Glückwunsch!! Es scheint, dass Sie Hashes und Passwörter im Klartext erfasst haben"
 	arr["TURKISH",532]="Tebrikler!! Düz metinde karma ve şifreleri ele geçirmişsiniz gibi görünüyor"
 
@@ -7998,7 +7998,7 @@ function language_strings() {
 	arr["RUSSIAN",595]="5Ghz: ${pink_color}Отключено${normal_color}"
 	arr["GREEK",595]="5Ghz: ${pink_color}Απενεργοποιημένο${normal_color}"
 	arr["ITALIAN",595]="5Ghz: ${pink_color}Disattivato${normal_color}"
-	arr["POLISH",595]="${pending_of_translation} 5Ghz: ${pink_color}Dezaktywowane${normal_color}"
+	arr["POLISH",595]="5Ghz: ${pink_color}Dezaktywowane${normal_color}"
 	arr["GERMAN",595]="5Ghz: ${pink_color}Deaktiviert${normal_color}"
 	arr["TURKISH",595]="5Ghz: ${pink_color}DevreDışı${normal_color}"
 
@@ -8010,7 +8010,7 @@ function language_strings() {
 	arr["RUSSIAN",596]="${blue_color}5Ghz будет отключено. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",596]="${blue_color}Το 5Ghz πρόκειται να απενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",596]="${blue_color}5Ghz verrà disattivato. ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",596]="${pending_of_translation} ${blue_color}5Ghz zostanie wyłączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",596]="${blue_color}5Ghz zostanie wyłączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",596]="${blue_color}5Ghz wird deaktiviert. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
 	arr["TURKISH",596]="${blue_color}5Ghz devre dışı bırakılacak. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
@@ -8022,7 +8022,7 @@ function language_strings() {
 	arr["RUSSIAN",597]="${blue_color}5Ghz будет включено. ${green_color}Вы хотите продолжить? ${normal_color}${visual_choice}"
 	arr["GREEK",597]="${blue_color}Το 5Ghz πρόκειται να ενεργοποιηθεί. ${green_color}Θέλετε να συνεχίσετε; ${normal_color}${visual_choice}"
 	arr["ITALIAN",597]="${blue_color}5Ghz verrà attivato ${green_color}Vuoi continuare? ${normal_color}${visual_choice}"
-	arr["POLISH",597]="${pending_of_translation} ${blue_color}5Ghz zostanie włączony. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
+	arr["POLISH",597]="${blue_color}5Ghz zostanie włączone. ${green_color}Czy chcesz kontynuować? ${normal_color}${visual_choice}"
 	arr["GERMAN",597]="${blue_color}5Ghz wird aktiviert. ${green_color}Möchten Sie fortfahren? ${normal_color}${visual_choice}"
 	arr["TURKISH",597]="${blue_color}5Ghz etkinleştirilecek. ${green_color}Devam etmek istiyor musunuz? ${normal_color}${visual_choice}"
 
@@ -8034,7 +8034,7 @@ function language_strings() {
 	arr["RUSSIAN",598]="5Ghz отключено"
 	arr["GREEK",598]="Το 5Ghz απενεργοποιήθηκε"
 	arr["ITALIAN",598]="5Ghz è stato disattivato"
-	arr["POLISH",598]="${pending_of_translation} 5Ghz zostało wyłączone"
+	arr["POLISH",598]="5Ghz zostało wyłączone"
 	arr["GERMAN",598]="5Ghz wurde deaktiviert"
 	arr["TURKISH",598]="5Ghz devre dışı bırakıldı"
 
@@ -8046,7 +8046,7 @@ function language_strings() {
 	arr["RUSSIAN",599]="5Ghz включено"
 	arr["GREEK",599]="Το 5Ghz ενεργοποιήθηκε"
 	arr["ITALIAN",599]="5Ghz è stato attivato"
-	arr["POLISH",599]="${pending_of_translation} 5Ghz zostało włączone"
+	arr["POLISH",599]="5Ghz zostało włączone"
 	arr["GERMAN",599]="5Ghz wurde aktiviert"
 	arr["TURKISH",599]="5Ghz etkinleştirildi"
 
@@ -8070,7 +8070,7 @@ function language_strings() {
 	arr["RUSSIAN",601]="Выбранный файл имеет недопустимый формат хеша enterprise для hashcat"
 	arr["GREEK",601]="Το επιλεγμένο αρχείο δεν έχει έγκυρο hashcat enterprise hash format"
 	arr["ITALIAN",601]="Il file selezionato non ha un hash valido in formato enterprise per hashcat"
-	arr["POLISH",601]="${pending_of_translation} Wybrany plik ma nieprawidłowy format haszy korporacyjnego hashcat"
+	arr["POLISH",601]="Wybrany plik ma nieprawidłowy format hash korporacyjnego dla hashcat"
 	arr["GERMAN",601]="Die ausgewählte Datei hat kein gültiges Enterprise-Hashformat für hashcat"
 	arr["TURKISH",601]="${pending_of_translation} Seçilen dosyanın geçersiz bir hashcat kuruluş karma biçimi var"
 
@@ -8082,7 +8082,7 @@ function language_strings() {
 	arr["RUSSIAN",602]="Выбранный файл имеет правильный формат хеша enterprise для hashcat"
 	arr["GREEK",602]="Το επιλεγμένο αρχείο έχει έγκυρο hashcat enterprise hash format"
 	arr["ITALIAN",602]="Il file selezionato ha un hash valido in formato enterprise per hashcat"
-	arr["POLISH",602]="${pending_of_translation} Wybrany plik ma poprawny format haszy korporacyjnego hashcat"
+	arr["POLISH",602]="Wybrany plik ma poprawny format hash korporacyjnego dla hashcat"
 	arr["GERMAN",602]="Die ausgewählte Datei hat ein gültiges Enterprise-Hashformat für hashcat"
 	arr["TURKISH",602]="${pending_of_translation} Seçilen dosyanın geçerli bir hashcat kurumsal karma biçimi var"
 
@@ -8094,7 +8094,7 @@ function language_strings() {
 	arr["RUSSIAN",603]="Выбранный файл захвата enterprise hashcat: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
 	arr["GREEK",603]="Επιλεγμένο hashcat enterprise αρχείο καταγραφής: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
 	arr["ITALIAN",603]="File di cattura enterprise hashcat selezionato: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
-	arr["POLISH",603]="${pending_of_translation} Wybrany plik enterprise hashcat przechwytywania: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
+	arr["POLISH",603]="Wybrany plik przechwytywania hashcat enterprise: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
 	arr["GERMAN",603]="Ausgewählte Enterprise-hashcat-Capture-Datei: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
 	arr["TURKISH",603]="${pending_of_translation} Seçilen yakalama enterprise hashcat dosyası: ${pink_color}${hashcatenterpriseenteredpath}${normal_color}"
 
@@ -8106,7 +8106,7 @@ function language_strings() {
 	arr["RUSSIAN",604]="Выбранный файл захвата enterprise hashcat: ${pink_color}Ещё не выбран${normal_color}"
 	arr["GREEK",604]="Επιλεγμένο hashcat enterprise αρχείο καταγραφής: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",604]="File di cattura enterprise hashcat selezionato: ${pink_color}Nessuno${normal_color}"
-	arr["POLISH",604]="${pending_of_translation} Wybrany plik enterprise hashcat przechwytywania ${pink_color}Brak${normal_color}"
+	arr["POLISH",604]="Wybrany plik przechwytywania hashcat enterprise: ${pink_color}Brak${normal_color}"
 	arr["GERMAN",604]="Ausgewählte Enterprise-hashcat-Capture-Datei: ${pink_color}Keine${normal_color}"
 	arr["TURKISH",604]="${pending_of_translation} Seçilen yakalama enterprise hashcat dosyası: ${pink_color}None${normal_color}"
 
@@ -8118,7 +8118,7 @@ function language_strings() {
 	arr["RUSSIAN",605]="Выбранный файл захвата enterprise john the ripper: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
 	arr["GREEK",605]="Επιλεγμένο john the ripper enterprise αρχείο καταγραφής: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
 	arr["ITALIAN",605]="File di cattura enterprise john the ripper selezionato: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
-	arr["POLISH",605]="${pending_of_translation} Wybrany plik enterprise john the ripper przechwytywania: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
+	arr["POLISH",605]="Wybrany plik przechwytywania john the ripper enterprise: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
 	arr["GERMAN",605]="Ausgewählte Enterprise-john the ripper-Capture-Datei: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
 	arr["TURKISH",605]="${pending_of_translation} Seçilen yakalama enterprise john the ripper dosyası: ${pink_color}${jtrenterpriseenteredpath}${normal_color}"
 
@@ -8130,7 +8130,7 @@ function language_strings() {
 	arr["RUSSIAN",606]="Выбранный файл захвата enterprise john the ripper: ${pink_color}Ещё не выбран${normal_color}"
 	arr["GREEK",606]="Επιλεγμένο john the ripper enterprise αρχείο καταγραφής: ${pink_color}Κανένα${normal_color}"
 	arr["ITALIAN",606]="File di cattura enterprise john the ripper selezionato: ${pink_color}Nessuno${normal_color}"
-	arr["POLISH",606]="${pending_of_translation} Wybrany plik enterprise john the ripper przechwytywania ${pink_color}Brak${normal_color}"
+	arr["POLISH",606]="Wybrany plik przechwytywania john the ripper enterprise: ${pink_color}Brak${normal_color}"
 	arr["GERMAN",606]="Ausgewählte Enterprise-john the ripper-Capture-Datei: ${pink_color}Keine${normal_color}"
 	arr["TURKISH",606]="${pending_of_translation} Seçilen yakalama enterprise john the ripper dosyası: ${pink_color}None${normal_color}"
 
@@ -8142,7 +8142,7 @@ function language_strings() {
 	arr["RUSSIAN",607]="Выбранный файл имеет недопустимый формат хеша enterprise для john the ripper"
 	arr["GREEK",607]="Το επιλεγμένο αρχείο δεν έχει έγκυρο john the ripper enterprise hash format"
 	arr["ITALIAN",607]="Il file selezionato non ha un hash valido in formato enterprise per john the ripper"
-	arr["POLISH",607]="${pending_of_translation} Wybrany plik ma nieprawidłowy format haszy korporacyjnego john the ripper"
+	arr["POLISH",607]="Wybrany plik ma poprawny format hash korporacyjnego dla john the ripper"
 	arr["GERMAN",607]="Die ausgewählte Datei hat kein gültiges Enterprise-Hashformat für john the ripper"
 	arr["TURKISH",607]="${pending_of_translation} Seçilen dosyanın geçersiz bir john the ripper kuruluş karma biçimi var"
 
@@ -8154,7 +8154,7 @@ function language_strings() {
 	arr["RUSSIAN",608]="Выбранный файл имеет правильный формат хеша enterprise для john the ripper"
 	arr["GREEK",608]="Το επιλεγμένο αρχείο έχει έγκυρο john the ripper enterprise hash format"
 	arr["ITALIAN",608]="Il file selezionato ha un hash valido in formato enterprise per john the ripper"
-	arr["POLISH",608]="${pending_of_translation} Wybrany plik ma poprawny format haszy korporacyjnego john the ripper"
+	arr["POLISH",608]="Wybrany plik ma poprawny format hash korporacyjnego dla john the ripper"
 	arr["GERMAN",608]="Die ausgewählte Datei hat ein gültiges Enterprise-Hashformat für john the ripper"
 	arr["TURKISH",608]="${pending_of_translation} Seçilen dosyanın geçerli bir john the ripper kurumsal karma biçimi var"
 
@@ -8178,7 +8178,7 @@ function language_strings() {
 	arr["RUSSIAN",610]="Хэши, полученные во время атаки на корпоративную сеть wifi, также могут быть расшифрованы с помощью инструмента john the ripper. Атаки по словарю или грубой силой можно использовать из меню airgeddon"
 	arr["GREEK",610]="Τα hashes που καταγράφηκαν κατά τη διάρκεια κάποιας επίθεσης enterprise wifi δικτύου μπορούν επίσης να αποκρυπτογραφηθούν χρησιμοποιώντας το εργαλείο john the ripper. Μπορεί να πραγματοποιηθεί επίθεση με λεξικό ή bruteforce επιλέγοντας κάποια από τα δύο το μενού του airgeddon"
 	arr["ITALIAN",610]="È anche possibile utilizzare john the ripper per decifrare gli hash ottenuti in un attacco a una rete wifi enterprise. Gli attacchi di dizionario o forza bruta, possono essere utilizzati dai menu di airgeddon"
-	arr["POLISH",610]="${pending_of_translation} Możesz również użyć ripera john, aby odszyfrować hasze uzyskane podczas ataku na firmową sieć wifi. Ataki słownikowe lub brutalna siła mogą być użyte z menu airgeddon"
+	arr["POLISH",610]="Możesz również użyć john the ripper aby złamać hasze uzyskane podczas ataku na firmową sieć wifi. Ataki słownikowe lub bruteforce mogą być wykonane z menu airgeddon"
 	arr["GERMAN",610]="Sie können auch john the ripper verwenden, um die Hashes, die auf ein WLAN-Enterprise Netzwerk erhalten wurden, zu entschlüsseln. Wörterbuchangriffe oder Brute Force Angriffe können aus den Menüs von airgeddon verwendet werden"
 	arr["TURKISH",610]="${pending_of_translation} Bir kurumsal wifi ağına yapılan saldırıda elde edilen karmaşanın şifresini çözmek için john the ripper'i kullanabilirsiniz. Sözlük veya kaba kuvvet saldırıları airgeddon menülerinden kullanılabilir"
 
