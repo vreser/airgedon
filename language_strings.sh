@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20190117
+#Date.........: 20190119
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -8193,6 +8193,18 @@ function language_strings() {
 	arr["POLISH",611]="Wpisz ścieżkę do zapisu pliku lub naciśnij [Enter], aby zaakceptować domyślną propozycję ${normal_color}[${jtr_potpath}]"
 	arr["GERMAN",611]="Schreiben Sie den Pfad wo die Datei gespeichert werden soll, oder drücken Sie die [Enter], um den Standardvorschlag zu akzeptieren ${normal_color}[${jtr_potpath}]"
 	arr["TURKISH",611]="Dosyayı depolamak için yolu yazın veya varsayılan teklifi kabul etmek için [Enter] tuşuna basın. ${normal_color}[${jtr_potpath}]"
+
+	arr["ENGLISH",612]="No enterprise networks found"
+	arr["SPANISH",612]="No se encontraron redes enterprise"
+	arr["FRENCH",612]="Aucun réseau enterprise détecté"
+	arr["CATALAN",612]="No s'han trobat xarxes enterprise"
+	arr["PORTUGUESE",612]="Nenhuma rede enterprise encontrada"
+	arr["RUSSIAN",612]="Сети enterprise не найдены"
+	arr["GREEK",612]="Δεν βρέθηκαν enterprise δίκτυα"
+	arr["ITALIAN",612]="Nessuna rete enterprise trovata"
+	arr["POLISH",612]="Nie znaleziono sieci enterprise"
+	arr["GERMAN",612]="Keine Enterprise-Netzwerke wurden gefunden"
+	arr["TURKISH",612]="Herhangi enterprise bir ağ bulunamadı"
 
 	case "${3}" in
 		"yellow")

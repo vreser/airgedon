@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20190117
+#Date.........: 20190119
 #Version......: 9.0
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -10361,7 +10361,8 @@ function explore_for_targets_option() {
 
 	rm -rf "${tmpdir}nws.txt" > /dev/null 2>&1
 	rm -rf "${tmpdir}wnws.txt" > /dev/null 2>&1
-	i=0
+	local i=0
+	local enterprise_network_counter
 	while IFS=, read -r exp_mac _ _ exp_channel _ exp_enc _ exp_auth exp_power _ _ _ exp_idlength exp_essid _; do
 
 		chars_mac=${#exp_mac}
@@ -10392,6 +10393,7 @@ function explore_for_targets_option() {
 
 			if [[ -n "${2}" ]] && [[ "${2}" = "enterprise" ]]; then
 				if [[ "${exp_auth}" =~ "MGT" ]]; then
+					enterprise_network_counter=$((enterprise_network_counter + 1))
 					echo -e "${exp_mac},${exp_channel},${exp_power},${exp_essid},${exp_enc}" >> "${tmpdir}nws.txt"
 				fi
 			else
@@ -10399,6 +10401,14 @@ function explore_for_targets_option() {
 			fi
 		fi
 	done < "${tmpdir}nws.csv"
+
+	if [[ -n "${2}" ]] && [[ "${2}" = "enterprise" ]] && [[ ${enterprise_network_counter} -eq 0 ]]; then
+		echo
+		language_strings "${language}" 612 "red"
+		language_strings "${language}" 115 "read"
+		return 1
+	fi
+
 	sort -t "," -d -k 4 "${tmpdir}nws.txt" > "${tmpdir}wnws.txt"
 	select_target
 }
