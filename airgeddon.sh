@@ -536,6 +536,8 @@ function configuration_variables_handling_messages() {
 	error_on_configuration_variable["POLISH"]="Wystąpił błąd związany ze zmiennymi opcji konfiguracji. Sprawdź plik ${rc_file} lub parametry linii poleceń. Nieprawidłowa wartość zmiennej ${normal_color}${option_var_with_error}"
 	error_on_configuration_variable["GERMAN"]="Bei den Konfigurationsvariablen der Optionen ist ein Fehler aufgetreten. Bitte überprüfen Sie die Datei ${rc_file} oder die Befehlszeilenflaggen. Ungültiger Wert in Variable ${normal_color}${option_var_with_error}"
 	error_on_configuration_variable["TURKISH"]="${pending_of_translation} Seçeneklerin yapılandırma değişkenlerinde bir hata oluştu. Lütfen ${rc_file} dosyasını veya komut satırı bayraklarını kontrol edin. ${normal_color}${option_var_with_error}${red_color} değişkeninde geçersiz değer"
+
+	#TODO add error phrase for missing env var
 }
 
 #Generic toggle option function
@@ -12710,6 +12712,8 @@ function env_vars_initialization() {
 			if grep "${item}" "${scriptfolder}${rc_file}" > /dev/null; then
 				eval "export $(grep "${item}" "${scriptfolder}${rc_file}")"
 			else
+				#TODO load env var messages
+				#TODO show warning to the user
 				export ${item}=${boolean_options_env_vars[${item},'default_value']}
 			fi
 		fi
@@ -12729,6 +12733,7 @@ function env_vars_validation() {
 
 	debug_print
 
+	#TODO set an array of wrong value vars to show all in only one message
 	for item in "${ENV_BOOLEAN_VARS_ELEMENTS[@]}"; do
 		if ! [[ "${!item,,}" =~ ^(true|false)$ ]]; then
 			option_var_with_error="${item}"
