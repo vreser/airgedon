@@ -521,25 +521,6 @@ function language_strings_handling_messages() {
 	language_strings_key_to_continue["TURKISH"]="Devam etmek için [Enter] tuşuna basın..."
 }
 
-#Set messages for configuration variables handling
-function configuration_variables_handling_messages() {
-
-	declare -gA error_on_configuration_variable
-	error_on_configuration_variable["ENGLISH"]="An error occurred with configuration options variables. Please check ${rc_file} file or command line flags. Invalid value on ${normal_color}${option_var_with_error}${red_color} variable"
-	error_on_configuration_variable["SPANISH"]="Ha habido un error con las variables de configuración de las opciones. Por favor revisa el fichero ${rc_file} o los flags de la línea de comandos. Valor no válido en la variable ${normal_color}${option_var_with_error}"
-	error_on_configuration_variable["FRENCH"]="Une erreur s'est produite avec les variables de configuration des options. Veuillez vérifier le fichier ${rc_file} ou les flags de la ligne de commande. Valeur invalide dans la variable ${normal_color}${option_var_with_error}"
-	error_on_configuration_variable["CATALAN"]="Hi ha hagut un error amb les variables de configuració de les opcions. Si us plau revisa el fitxer ${rc_file} o els flags de la línia d'ordres. Valor no vàlid en la variable ${normal_color}${option_var_with_error}"
-	error_on_configuration_variable["PORTUGUESE"]="Existe um erro com a configuração das variáveis. Por favor, verifique o arquivo ${rc_file} ou os argumentos na linha de comando. Valor inválido na variável: ${normal_color}${option_var_with_error}"
-	error_on_configuration_variable["RUSSIAN"]="Произошла ошибка с опциями переменных конфигурации. Пожалуйста, проверьте файл ${rc_file} или флаги командной строки. Неверное значение в переменной ${normal_color}${option_var_with_error}"
-	error_on_configuration_variable["GREEK"]="Παρουσιάστηκε σφάλμα στο αρχείο με τις μεταβλητές διαμόρφωσης των επιλογών του script. Ελέγξτε το αρχείο ${rc_file} ή τα flags της γραμμής εντολών. Εμφανίστηκε μη έγκυρη τιμή στη μεταβλητή ${normal_color}${option_var_with_error}"
-	error_on_configuration_variable["ITALIAN"]="Si è verificato un errore nelle variabili di configurazione delle opzioni. Controlla il file ${rc_file} o i flag inseriti nel comando. Valore non valido nella variabile ${normal_color}${option_var_with_error}"
-	error_on_configuration_variable["POLISH"]="Wystąpił błąd związany ze zmiennymi opcji konfiguracji. Sprawdź plik ${rc_file} lub parametry linii poleceń. Nieprawidłowa wartość zmiennej ${normal_color}${option_var_with_error}"
-	error_on_configuration_variable["GERMAN"]="Bei den Konfigurationsvariablen der Optionen ist ein Fehler aufgetreten. Bitte überprüfen Sie die Datei ${rc_file} oder die Befehlszeilenflaggen. Ungültiger Wert in Variable ${normal_color}${option_var_with_error}"
-	error_on_configuration_variable["TURKISH"]="${pending_of_translation} Seçeneklerin yapılandırma değişkenlerinde bir hata oluştu. Lütfen ${rc_file} dosyasını veya komut satırı bayraklarını kontrol edin. ${normal_color}${option_var_with_error}${red_color} değişkeninde geçersiz değer"
-
-	#TODO add error phrase for missing env var
-}
-
 #Generic toggle option function
 function option_toggle() {
 
@@ -624,7 +605,7 @@ function debug_print() {
 								"echo_white"
 								"echo_yellow"
 								"env_vars_initialization"
-								"env_vars_validation"
+								"env_vars_values_validation"
 								"generate_dynamic_line"
 								"initialize_colors"
 								"initialize_script_settings"
@@ -12662,8 +12643,6 @@ function env_vars_initialization() {
 
 	debug_print
 
-	option_var_with_error=""
-
 	ordered_options_env_vars=(
 									"AIRGEDDON_AUTO_UPDATE"
 									"AIRGEDDON_SKIP_INTRO"
@@ -12707,41 +12686,68 @@ function env_vars_initialization() {
 		create_rcfile
 	fi
 
+	env_vars_values_validation
+}
+
+#Validation of env vars. Missing vars, invalid values, etc. are checked
+function env_vars_values_validation() {
+
+	debug_print
+
+	declare -gA errors_on_configuration_vars
+
 	for item in "${ENV_VARS_ELEMENTS[@]}"; do
 		if [ -z "${!item}" ]; then
 			if grep "${item}" "${scriptfolder}${rc_file}" > /dev/null; then
 				eval "export $(grep "${item}" "${scriptfolder}${rc_file}")"
 			else
-				#TODO load env var messages
-				#TODO show warning to the user
-				export ${item}=${boolean_options_env_vars[${item},'default_value']}
+				export ${item}=${boolean_options_env_vars["${item}",'default_value']}
+				errors_on_configuration_vars["${item},missing_var"]="${boolean_options_env_vars[${item},'default_value']}"
 			fi
 		fi
 	done
 
-	if ! env_vars_validation; then
-		configuration_variables_handling_messages
-		echo
-		echo_red "${error_on_configuration_variable[${language}]}"
-		echo
-		hardcore_exit
-	fi
+	for item in "${ENV_BOOLEAN_VARS_ELEMENTS[@]}"; do
+		if ! [[ "${!item,,}" =~ ^(true|false)$ ]]; then
+			errors_on_configuration_vars["${item},invalid_value"]="${boolean_options_env_vars[${item},'default_value']}"
+			export ${item}=${boolean_options_env_vars["${item}",'default_value']}
+		fi
+	done
 }
 
-#Validation of env vars. They must contain only right values
-function env_vars_validation() {
+#Print possible issues on configuration vars
+function print_configuration_vars_issues() {
 
 	debug_print
 
-	#TODO set an array of wrong value vars to show all in only one message
-	for item in "${ENV_BOOLEAN_VARS_ELEMENTS[@]}"; do
-		if ! [[ "${!item,,}" =~ ^(true|false)$ ]]; then
-			option_var_with_error="${item}"
-			return 1
+	readarray -t ERRORS_ON_CONFIGURATION_VARS_ELEMENTS < <(printf %s\\n "${!errors_on_configuration_vars[@]}" | cut -d, -f1 | sort -u)
+	ERROR_VARS_ELEMENTS=("${ERRORS_ON_CONFIGURATION_VARS_ELEMENTS[@]}")
+
+	local stop_on_var_errors=0
+
+	local error_var_state
+	for item in "${ERROR_VARS_ELEMENTS[@]}"; do
+		if [ -n "${item}" ]; then
+			error_var_name="${item}"
+			error_var_state=$(printf %s\\n "${!errors_on_configuration_vars[@]}" | tr " " "\n" | grep "${item}" | cut -d, -f2)
+			if [ -z "${!error_var_state}" ]; then
+				error_var_default_value="${errors_on_configuration_vars[${item},"${error_var_state}"]}"
+				stop_on_var_errors=1
+				if [ "${error_var_state}" = "missing_var"  ]; then
+					echo
+					language_strings "${language}" 614 "yellow"
+				else
+					echo
+					language_strings "${language}" 613 "yellow"
+				fi
+			fi
 		fi
 	done
 
-	return 0
+	if [ ${stop_on_var_errors} -eq 1 ]; then
+		echo
+		language_strings "${language}" 115 "read"
+	fi
 }
 
 #Create env vars file and fill it with default values
@@ -12908,6 +12914,7 @@ function main() {
 		check_update_tools
 	fi
 
+	print_configuration_vars_issues
 	initialize_extended_colorized_output
 	set_windows_sizes
 	select_interface
