@@ -535,7 +535,7 @@ function configuration_variables_handling_messages() {
 	error_on_configuration_variable["ITALIAN"]="Si è verificato un errore nelle variabili di configurazione delle opzioni. Controlla il file ${rc_file} o i flag inseriti nel comando. Valore non valido nella variabile ${normal_color}${option_var_with_error}"
 	error_on_configuration_variable["POLISH"]="Wystąpił błąd związany ze zmiennymi opcji konfiguracji. Sprawdź plik ${rc_file} lub parametry linii poleceń. Nieprawidłowa wartość zmiennej ${normal_color}${option_var_with_error}"
 	error_on_configuration_variable["GERMAN"]="Bei den Konfigurationsvariablen der Optionen ist ein Fehler aufgetreten. Bitte überprüfen Sie die Datei ${rc_file} oder die Befehlszeilenflaggen. Ungültiger Wert in Variable ${normal_color}${option_var_with_error}"
-	error_on_configuration_variable["TURKISH"]="${pending_of_translation} Seçeneklerin yapılandırma değişkenlerinde bir hata oluştu. Lütfen ${rc_file} dosyasını veya komut satırı bayraklarını kontrol edin. ${normal_color}${option_var_with_error}${red_color} değişkeninde geçersiz değer"
+	error_on_configuration_variable["TURKISH"]="Değişken seçeneklerinin yapılandırılması sırasında bir hata meydana geldi. Lütfen ${rc_file} dosyasını veya komut satırı flags'larını kontrol edin. ${normal_color}${option_var_with_error}${red_color} değişkeninde geçersiz değer"
 }
 
 #Generic toggle option function
