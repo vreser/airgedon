@@ -11613,7 +11613,7 @@ function get_bettercap_version() {
 
 	bettercap_version=$(bettercap -v 2> /dev/null | grep -E "^bettercap [0-9]" | awk '{print $2}')
 	if [ -z "${bettercap_version}" ]; then
-		bettercap_version="2.5"
+		bettercap_version=$(bettercap -eval "version;q" 2>/dev/null | grep -Eo "([0-9]+\.)*([0-9]+)")
 	fi
 }
 
