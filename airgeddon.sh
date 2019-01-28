@@ -4344,6 +4344,7 @@ function initialize_menu_and_print_selections() {
 		"evil_twin_attacks_menu")
 			enterprise_mode=""
 			return_to_et_main_menu=0
+			return_to_enterprise_main_menu=0
 			retry_handshake_capture=0
 			return_to_et_main_menu_from_beef=0
 			retrying_handshake_capture=0
@@ -4357,6 +4358,7 @@ function initialize_menu_and_print_selections() {
 		;;
 		"enterprise_attacks_menu")
 			return_to_enterprise_main_menu=0
+			return_to_et_main_menu=0
 			enterprise_mode=""
 			et_processes=()
 			secondary_wifi_interface=""
