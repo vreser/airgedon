@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20190121
+#Date.........: 20190128
 #Version......: 9.01
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -13132,7 +13132,7 @@ function check_default_route() {
 
 	debug_print
 
-	route | grep "${1}" | grep "default" > /dev/null
+	route | grep "${1}" | grep -E "^default|0\.0\.0\.0" | head -n 1 > /dev/null
 	return $?
 }
 
