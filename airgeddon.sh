@@ -13134,7 +13134,7 @@ function check_default_route() {
 
 	debug_print
 
-	route | grep "${1}" | grep -E "^default|0\.0\.0\.0" | head -n 1 > /dev/null
+	(set -o pipefail && route | grep "${1}" | grep -E "^default|0\.0\.0\.0" | head -n 1 > /dev/null)
 	return $?
 }
 
