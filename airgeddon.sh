@@ -9105,12 +9105,10 @@ function kill_beef() {
 
 	debug_print
 
-	if ! kill "$(ps -C "${optional_tools_names[19]}" --no-headers -o pid)" &> /dev/null; then
-		beef_pid=$(ps uax | pgrep -f "${optional_tools_names[19]}")
-		if ! kill "${beef_pid}" &> /dev/null; then
-			beef_pid=$(ps uax | pgrep -f "beef")
-			kill "${beef_pid}" &> /dev/null
-		fi
+	local beef_pid
+	beef_pid="$(ps -C "${optional_tools_names[19]}" --no-headers -o pid  | tr -d ' ')"
+	if ! kill "${beef_pid}" &> /dev/null; then
+		kill "$(ps -C "beef" --no-headers -o pid  | tr -d ' ')" &> /dev/null
 	fi
 }
 
