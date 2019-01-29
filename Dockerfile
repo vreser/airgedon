@@ -81,7 +81,8 @@ RUN \
 	pixiewps \
 	expect \
 	hostapd-wpe \
-	asleap
+	asleap \
+	john
 
 #Install needed Ruby gems
 RUN \
