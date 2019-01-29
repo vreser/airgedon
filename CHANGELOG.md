@@ -1,3 +1,7 @@
+### 9.01
+ - Improvments on options environment var system
+ - Minor fixes for ARM devices
+
 ### 9.0
  - New WPA/WPA2 enterprise attacks menu
  - New WPA/WPA2 enterprise offline decryption menu
