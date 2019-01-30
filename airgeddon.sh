@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20190129
+#Date.........: 20190130
 #Version......: 9.01
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -11613,7 +11613,8 @@ function get_bettercap_version() {
 
 	bettercap_version=$(bettercap -v 2> /dev/null | grep -E "^bettercap [0-9]" | awk '{print $2}')
 	if [ -z "${bettercap_version}" ]; then
-		bettercap_version=$(bettercap -eval "version;q" 2>/dev/null | grep -Eo "([0-9]+\.)*([0-9]+)")
+		bettercap_version=$(bettercap -eval "q" 2>/dev/null | grep -E "bettercap v[0-9\.]*" | awk '{print $2}')
+		bettercap_version=${bettercap_version#"v"}
 	fi
 }
 
