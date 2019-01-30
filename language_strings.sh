@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20190121
+#Date.........: 20190130
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -2938,6 +2938,7 @@ function language_strings() {
 	arr["GERMAN",173]="Ausgewählte Capture-Datei: ${pink_color}${enteredpath}${normal_color}"
 	arr["TURKISH",173]="Seçilen yakalama dosyası: ${pink_color}${enteredpath}${normal_color}"
 
+	#TODO reuse this string
 	arr["ENGLISH",174]="It seems you have an unsupported by airgeddon bettercap version. The last bettercap supported version is ${maximum_bettercap_supported_version}. If you want to get this attack working you should perform a downgrade of the package. For more information, see the Bettercap section of the Wiki: ${normal_color}${urlgithub_wiki}/Bettercap Tips"
 	arr["SPANISH",174]="Parece que tienes una versión de bettercap no soportada por airgeddon. La última versión soportada de bettercap es la ${maximum_bettercap_supported_version}. Si quieres realizar este ataque deberías hacer un downgrade del paquete. Para más información consulta la sección Bettercap del Wiki: ${normal_color}${urlgithub_wiki}/Bettercap Tips"
 	arr["FRENCH",174]="Il semble que vous avez une version non supportée de bettercap par airgeddon. La dernière version prise en charge par bettercap est ${maximum_bettercap_supported_version}. Si vous voulez que cette attaque fonctionne, vous devez effectuer une downgrade du paquet. Pour plus d'informations, consultez la section Bettercap de notre Wiki: ${normal_color}${urlgithub_wiki}/Bettercap Tips"
