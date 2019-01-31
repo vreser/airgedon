@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20190130
+#Date.........: 20190131
 #Version......: 9.01
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -4485,7 +4485,7 @@ function save_iptables() {
 
 	debug_print
 
-	if iptables-save > "${tmpdir}ag.iptables" 2> /dev/null; then
+	if "${iptables_cmd}-save" > "${tmpdir}ag.iptables" 2> /dev/null; then
 		iptables_saved=1
 	fi
 }
@@ -4495,7 +4495,7 @@ function restore_iptables() {
 
 	debug_print
 
-	iptables-restore < "${tmpdir}ag.iptables" 2> /dev/null
+	"${iptables_cmd}-restore" < "${tmpdir}ag.iptables" 2> /dev/null
 }
 
 #Clean iptables rules
@@ -4503,10 +4503,10 @@ function clean_iptables() {
 
 	debug_print
 
-	iptables -F
-	iptables -t nat -F
-	iptables -X
-	iptables -t nat -X
+	"${iptables_cmd}" -F
+	"${iptables_cmd}" -t nat -F
+	"${iptables_cmd}" -X
+	"${iptables_cmd}" -t nat -X
 }
 
 #Create an array from parameters
@@ -7790,37 +7790,37 @@ function set_std_internet_routing_rules() {
 	clean_iptables
 
 	if [[ "${et_mode}" != "et_captive_portal" ]] || [[ ${captive_portal_mode} = "internet" ]]; then
-		iptables -P FORWARD ACCEPT
+		"${iptables_cmd}" -P FORWARD ACCEPT
 		echo "1" > /proc/sys/net/ipv4/ip_forward
 	else
-		iptables -P FORWARD DROP
+		"${iptables_cmd}" -P FORWARD DROP
 		echo "0" > /proc/sys/net/ipv4/ip_forward
 	fi
 
 	if [ "${et_mode}" = "et_captive_portal" ]; then
-		iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination ${et_ip_router}:80
-		iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination ${et_ip_router}:80
-		iptables -A INPUT -p tcp --destination-port 80 -j ACCEPT
-		iptables -A INPUT -p tcp --destination-port 443 -j ACCEPT
+		"${iptables_cmd}" -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination ${et_ip_router}:80
+		"${iptables_cmd}" -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination ${et_ip_router}:80
+		"${iptables_cmd}" -A INPUT -p tcp --destination-port 80 -j ACCEPT
+		"${iptables_cmd}" -A INPUT -p tcp --destination-port 443 -j ACCEPT
 		if [ ${captive_portal_mode} = "dnsblackhole" ]; then
-			iptables -A INPUT -p udp --destination-port 53 -j ACCEPT
+			"${iptables_cmd}" -A INPUT -p udp --destination-port 53 -j ACCEPT
 		fi
 	elif [ "${et_mode}" = "et_sniffing_sslstrip" ]; then
-		iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port ${sslstrip_port}
-		iptables -A INPUT -p tcp --destination-port ${sslstrip_port} -j ACCEPT
+		"${iptables_cmd}" -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port ${sslstrip_port}
+		"${iptables_cmd}" -A INPUT -p tcp --destination-port ${sslstrip_port} -j ACCEPT
 	elif [ "${et_mode}" = "et_sniffing_sslstrip2" ]; then
-		iptables -A INPUT -p tcp --destination-port ${bettercap_proxy_port} -j ACCEPT
-		iptables -A INPUT -p udp --destination-port ${bettercap_dns_port} -j ACCEPT
-		iptables -A INPUT -i lo -j ACCEPT
-		iptables -A INPUT -p tcp --destination-port ${beef_port} -j ACCEPT
+		"${iptables_cmd}" -A INPUT -p tcp --destination-port ${bettercap_proxy_port} -j ACCEPT
+		"${iptables_cmd}" -A INPUT -p udp --destination-port ${bettercap_dns_port} -j ACCEPT
+		"${iptables_cmd}" -A INPUT -i lo -j ACCEPT
+		"${iptables_cmd}" -A INPUT -p tcp --destination-port ${beef_port} -j ACCEPT
 	fi
 
 	if [[ "${et_mode}" != "et_captive_portal" ]] || [[ ${captive_portal_mode} = "internet" ]]; then
-		iptables -t nat -A POSTROUTING -o "${internet_interface}" -j MASQUERADE
+		"${iptables_cmd}" -t nat -A POSTROUTING -o "${internet_interface}" -j MASQUERADE
 	fi
 
-	iptables -A INPUT -p icmp --icmp-type 8 -s ${et_ip_range}/${std_c_mask} -d ${et_ip_router}/${ip_mask} -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
-	iptables -A INPUT -s ${et_ip_range}/${std_c_mask} -d ${et_ip_router}/${ip_mask} -j DROP
+	"${iptables_cmd}" -A INPUT -p icmp --icmp-type 8 -s ${et_ip_range}/${std_c_mask} -d ${et_ip_router}/${ip_mask} -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+	"${iptables_cmd}" -A INPUT -s ${et_ip_range}/${std_c_mask} -d ${et_ip_router}/${ip_mask} -j DROP
 	sleep 2
 }
 
@@ -11594,6 +11594,18 @@ function time_loop() {
 	done
 }
 
+#Fix iptables if needed
+function iptables_fix() {
+
+	debug_print
+
+	iptables_cmd="iptables"
+
+	if hash iptables-legacy 2> /dev/null; then
+		iptables_cmd="iptables-legacy"
+	fi
+}
+
 #Determine which version of airmon to use
 function airmon_fix() {
 
@@ -12969,6 +12981,7 @@ function main() {
 		check_update_tools
 	fi
 
+	iptables_fix
 	print_configuration_vars_issues
 	initialize_extended_colorized_output
 	set_windows_sizes
