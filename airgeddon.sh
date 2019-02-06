@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20190131
+#Date.........: 20190206
 #Version......: 9.02
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -7491,6 +7491,7 @@ function set_bettercap_config() {
 	rm -rf "${tmpdir}${bettercap_config_file}" > /dev/null 2>&1
 	rm -rf "${tmpdir}${bettercap_hook_file}" > /dev/null 2>&1
 
+	#TODO experimental configuration form bettercap 2.x
 	{
 	echo -e "net.recon off\n"
 	echo -e "set http.proxy.port ${bettercap_proxy_port}"
@@ -7504,16 +7505,9 @@ function set_bettercap_config() {
 	echo -e "events.ignore net.sniff.dns"
 	echo -e "events.ignore net.sniff.tcp"
 	echo -e "events.ignore net.sniff.udp"
-	#echo -e "events.ignore net.sniff.mdns"
-	#TODO experimental
-	#echo -e "events.ignore net.sniff.dhcp"
+	echo -e "events.ignore net.sniff.mdns"
+	echo -e "events.ignore net.sniff.sni"
 	} >> ${tmpdir}${bettercap_config_file}
-
-	if [ ${bettercap_log} -eq 1 ]; then
-		{
-		echo -e "set events.stream.output ${tmp_bettercaplog}"
-		} >> ${tmpdir}${bettercap_config_file}
-	fi
 
 	{
 	echo -e "function onLoad() {"
@@ -9349,9 +9343,15 @@ function launch_bettercap_sniffing() {
 	sniffing_scr_window_position=${g4_bottomright_window}
 
 	if compare_floats_greater_or_equal "${bettercap_version}" "${bettercap2_version}"; then
-		set_bettercap_config
+
 		#TODO test this for bettercap 2.x
+		set_bettercap_config
+
 		bettercap_cmd="bettercap -iface ${interface} -no-history -caplet ${tmpdir}${bettercap_config_file}"
+
+		if [ ${bettercap_log} -eq 1 ]; then
+			bettercap_cmd+=" | tee ${tmp_bettercaplog}"
+		fi
 	else
 		if compare_floats_greater_or_equal "${bettercap_version}" "${minimum_bettercap_advanced_options}"; then
 			bettercap_extra_cmd_options="--disable-parsers URL,HTTPS,DHCP --no-http-logs"
@@ -9413,11 +9413,14 @@ function parse_ettercap_log() {
 #Parse bettercap log searching for captured passwords
 function parse_bettercap_log() {
 
-	#TODO test for bettercap 2.x
 	debug_print
 
 	echo
 	language_strings "${language}" 304 "blue"
+
+	if compare_floats_greater_or_equal "${bettercap_version}" "${bettercap2_version}"; then
+		sed -i 's/\x1b\[[0-9;]*m//g' "${tmp_bettercaplog}"
+	fi
 
 	local regexp='USER|PASS|CREDITCARD|COOKIE|PWD|USUARIO|CONTRASE|CORREO|MAIL'
 	local regexp2='USER-AGENT|COOKIES|BEEFHOOK'
@@ -9435,6 +9438,8 @@ function parse_bettercap_log() {
 	echo "---------------"
 	echo ""
 	} >> "${tmpdir}parsed_file"
+
+	#TODO improve parser for bettercap 2.x
 
 	pass_counter=0
 	captured_cookies=()
