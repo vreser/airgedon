@@ -1,5 +1,6 @@
 ### 9.10
  - Mdk3 replaced by Mdk4
+ - Fixed some minor bugs on Enterprise plain text captured password process
  
 ### 9.01
  - Improvments on options environment var system

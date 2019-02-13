@@ -7247,30 +7247,34 @@ function handle_asleap_attack() {
 	debug_print
 
 	if [ -f "${tmpdir}${enterprisedir}${enterprise_successfile}" ]; then
-		ask_yesno 537 "no"
-		if [ "${yesno}" = "y" ]; then
+		local result
+		result=$(cat "${tmpdir}${enterprisedir}${enterprise_successfile}")
+		if [[ ${result} -eq 0 ]] || [[ ${result} -eq 2 ]]; then
+			ask_yesno 537 "no"
+			if [ "${yesno}" = "y" ]; then
 
-			asleap_attack_finished=0
+				asleap_attack_finished=0
 
-			if [ ${enterprise_mode} = "noisy" ]; then
-				if [ ${#enterprise_captured_challenges_responses[@]} -eq 1 ]; then
-					echo
-					language_strings "${language}" 542 "yellow"
-				else
-					select_captured_enterprise_user
+				if [ ${enterprise_mode} = "noisy" ]; then
+					if [ ${#enterprise_captured_challenges_responses[@]} -eq 1 ]; then
+						echo
+						language_strings "${language}" 542 "yellow"
+					else
+						select_captured_enterprise_user
+					fi
 				fi
+
+				echo
+				language_strings "${language}" 538 "blue"
+
+				while [[ "${asleap_attack_finished}" != "1" ]]; do
+					ask_dictionary
+					echo
+					exec_asleap_attack
+					echo
+					manage_asleap_pot
+				done
 			fi
-
-			echo
-			language_strings "${language}" 538 "blue"
-
-			while [[ "${asleap_attack_finished}" != "1" ]]; do
-				ask_dictionary
-				echo
-				exec_asleap_attack
-				echo
-				manage_asleap_pot
-			done
 		fi
 	fi
 }
