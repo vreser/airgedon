@@ -68,7 +68,7 @@ RUN \
 	apt -y install \
 	crunch \
 	hashcat \
-	mdk3 \
+	mdk4 \
 	hostapd \
 	lighttpd \
 	iptables \
