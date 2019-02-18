@@ -1,6 +1,7 @@
 ### 9.10
  - Mdk3 replaced by Mdk4
- - Fixed some minor bugs on Enterprise plain text captured password process
+ - Fixed some minor bugs on enterprise plain text captured password process
+ - Tested compatibility with Wifislax 64-2.x
  
 ### 9.01
  - Improvments on options environment var system
