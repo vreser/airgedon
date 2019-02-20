@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20190213
+#Date.........: 20190220
 #Version......: 9.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -7574,9 +7574,9 @@ function launch_fake_ap() {
 	debug_print
 
 	if [ -n "${enterprise_mode}" ]; then
-		kill "$(ps -C hostapd-wpe --no-headers -o pid)" &> /dev/null
+		kill "$(ps -C hostapd-wpe --no-headers -o pid | tr -d ' ')" &> /dev/null
 	else
-		kill "$(ps -C hostapd --no-headers -o pid)" &> /dev/null
+		kill "$(ps -C hostapd --no-headers -o pid | tr -d ' ')" &> /dev/null
 	fi
 	${airmon} check kill > /dev/null 2>&1
 	nm_processes_killed=1
@@ -7786,7 +7786,7 @@ function launch_dhcp_server() {
 
 	debug_print
 
-	kill "$(ps -C dhcpd --no-headers -o pid)" &> /dev/null
+	kill "$(ps -C dhcpd --no-headers -o pid | tr -d ' ')" &> /dev/null
 
 	recalculate_windows_sizes
 	case ${et_mode} in
@@ -7814,17 +7814,17 @@ function exec_et_deauth() {
 
 	case ${et_dos_attack} in
 		"Mdk4")
-			kill "$(ps -C mdk4 --no-headers -o pid)" &> /dev/null
+			kill "$(ps -C mdk4 --no-headers -o pid | tr -d ' ')" &> /dev/null
 			rm -rf "${tmpdir}bl.txt" > /dev/null 2>&1
 			echo "${bssid}" > "${tmpdir}bl.txt"
 			deauth_et_cmd="mdk4 ${iface_monitor_et_deauth} d -b ${tmpdir}\"bl.txt\" -c ${channel}"
 		;;
 		"Aireplay")
-			kill "$(ps -C aireplay-ng --no-headers -o pid)" &> /dev/null
+			kill "$(ps -C aireplay-ng --no-headers -o pid | tr -d ' ')" &> /dev/null
 			deauth_et_cmd="aireplay-ng --deauth 0 -a ${bssid} --ignore-negative-one ${iface_monitor_et_deauth}"
 		;;
 		"Wds Confusion")
-			kill "$(ps -C mdk4 --no-headers -o pid)" &> /dev/null
+			kill "$(ps -C mdk4 --no-headers -o pid | tr -d ' ')" &> /dev/null
 			deauth_et_cmd="mdk4 ${iface_monitor_et_deauth} w -e ${essid} -c ${channel}"
 		;;
 	esac
@@ -8559,10 +8559,10 @@ function set_et_control_script() {
 				} >> "${et_captive_portal_logpath}"
 
 				sleep 2
-				kill "$(ps -C hostapd --no-headers -o pid)" &> /dev/null
-				kill "$(ps -C dhcpd --no-headers -o pid)" &> /dev/null
-				kill "$(ps -C aireplay-ng --no-headers -o pid)" &> /dev/null
-				kill "$(ps -C lighttpd --no-headers -o pid)" &> /dev/null
+				kill "$(ps -C hostapd --no-headers -o pid | tr -d ' ')" &> /dev/null
+				kill "$(ps -C dhcpd --no-headers -o pid | tr -d ' ')" &> /dev/null
+				kill "$(ps -C aireplay-ng --no-headers -o pid | tr -d ' ')" &> /dev/null
+				kill "$(ps -C lighttpd --no-headers -o pid | tr -d ' ')" &> /dev/null
 				kill_et_windows
 				exit 0
 			}
@@ -8974,7 +8974,7 @@ function launch_webserver() {
 
 	debug_print
 
-	kill "$(ps -C lighttpd --no-headers -o pid)" &> /dev/null
+	kill "$(ps -C lighttpd --no-headers -o pid | tr -d ' ')" &> /dev/null
 	recalculate_windows_sizes
 	if [ ${captive_portal_mode} = "internet" ]; then
 		lighttpd_window_position=${g3_bottomright_window}
@@ -9112,7 +9112,7 @@ function kill_beef() {
 	local beef_pid
 	beef_pid="$(ps -C "${optional_tools_names[19]}" --no-headers -o pid  | tr -d ' ')"
 	if ! kill "${beef_pid}" &> /dev/null; then
-		kill "$(ps -C "beef" --no-headers -o pid  | tr -d ' ')" &> /dev/null
+		kill "$(ps -C "beef" --no-headers -o pid | tr -d ' ')" &> /dev/null
 	fi
 }
 
@@ -9450,10 +9450,10 @@ function kill_et_windows() {
 		kill_dos_pursuit_mode_processes
 		case ${et_dos_attack} in
 			"Mdk4"|"Wds Confusion")
-				kill "$(ps -C mdk4 --no-headers -o pid)" &> /dev/null
+				kill "$(ps -C mdk4 --no-headers -o pid | tr -d ' ')" &> /dev/null
 			;;
 			"Aireplay")
-				kill "$(ps -C aireplay-ng --no-headers -o pid)" &> /dev/null
+				kill "$(ps -C aireplay-ng --no-headers -o pid | tr -d ' ')" &> /dev/null
 			;;
 		esac
 	fi
@@ -9464,10 +9464,10 @@ function kill_et_windows() {
 
 	if [ -n "${enterprise_mode}" ]; then
 		kill ${enterprise_process_control_window} &> /dev/null
-		kill "$(ps -C hostapd-wpe --no-headers -o pid)" &> /dev/null
+		kill "$(ps -C hostapd-wpe --no-headers -o pid | tr -d ' ')" &> /dev/null
 	else
 		kill ${et_process_control_window} &> /dev/null
-		kill "$(ps -C hostapd --no-headers -o pid)" &> /dev/null
+		kill "$(ps -C hostapd --no-headers -o pid | tr -d ' ')" &> /dev/null
 	fi
 }
 
@@ -11468,9 +11468,9 @@ function exit_script_option() {
 		action_on_exit_taken=1
 		language_strings "${language}" 297 "multiline"
 		clean_routing_rules
-		kill "$(ps -C dhcpd --no-headers -o pid)" &> /dev/null
-		kill "$(ps -C hostapd --no-headers -o pid)" &> /dev/null
-		kill "$(ps -C lighttpd --no-headers -o pid)" &> /dev/null
+		kill "$(ps -C dhcpd --no-headers -o pid | tr -d ' ')" &> /dev/null
+		kill "$(ps -C hostapd --no-headers -o pid | tr -d ' ')" &> /dev/null
+		kill "$(ps -C lighttpd --no-headers -o pid | tr -d ' ')" &> /dev/null
 		kill_beef
 		time_loop
 		echo -e "${green_color} Ok\r${normal_color}"
@@ -11514,9 +11514,9 @@ function hardcore_exit() {
 
 	if [ ${routing_modified} -eq 1 ]; then
 		clean_routing_rules
-		kill "$(ps -C dhcpd --no-headers -o pid)" &> /dev/null
-		kill "$(ps -C hostapd --no-headers -o pid)" &> /dev/null
-		kill "$(ps -C lighttpd --no-headers -o pid)" &> /dev/null
+		kill "$(ps -C dhcpd --no-headers -o pid | tr -d ' ')" &> /dev/null
+		kill "$(ps -C hostapd --no-headers -o pid | tr -d ' ')" &> /dev/null
+		kill "$(ps -C lighttpd --no-headers -o pid | tr -d ' ')" &> /dev/null
 		kill_beef
 	fi
 
