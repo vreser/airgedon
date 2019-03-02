@@ -2,6 +2,7 @@
  - Mdk3 replaced by Mdk4
  - Fixed some minor bugs on enterprise plain text captured password process
  - Tested compatibility with Wifislax 64-2.x
+ - Fixed dependency problem to avoid use of xxd
  
 ### 9.01
  - Improvments on options environment var system

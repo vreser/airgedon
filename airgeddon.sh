@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20190220
+#Date.........: 20190302
 #Version......: 9.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -7496,8 +7496,10 @@ function set_hostapd_config() {
 	tmpfiles_toclean=1
 	rm -rf "${tmpdir}${hostapd_file}" > /dev/null 2>&1
 
-	different_mac_digit=$(xxd -p -u -l 100 < /dev/urandom  | sed "s/${bssid:10:1}//g" | head -c 1)
-	et_bssid=${bssid::10}${different_mac_digit}${bssid:11:6}
+	local digit_to_change
+	digit_to_change="${bssid:10:1}"
+	(( different_mac_digit=("16#${digit_to_change}" + 1 + RANDOM % 15) % 16 ))
+	et_bssid=$(printf %s%X%s\\n "${bssid::10}" "${different_mac_digit}" "${bssid:11}")
 
 	{
 	echo -e "interface=${interface}"
