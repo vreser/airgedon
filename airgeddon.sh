@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20190302
+#Date.........: 20190303
 #Version......: 9.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -45,7 +45,7 @@ optional_tools_names=(
 						"hashcat"
 						"hostapd"
 						"dhcpd"
-						"iptables"
+						"nft"
 						"ettercap"
 						"etterlog"
 						"sslstrip"
@@ -83,7 +83,7 @@ declare -A possible_package_names=(
 									[${optional_tools_names[4]}]="hashcat" #hashcat
 									[${optional_tools_names[5]}]="hostapd" #hostapd
 									[${optional_tools_names[6]}]="isc-dhcp-server / dhcp-server / dhcp" #dhcpd
-									[${optional_tools_names[7]}]="iptables" #iptables
+									[${optional_tools_names[7]}]="nftables" #nft
 									[${optional_tools_names[8]}]="ettercap / ettercap-text-only / ettercap-graphical" #ettercap
 									[${optional_tools_names[9]}]="ettercap / ettercap-text-only / ettercap-graphical" #etterlog
 									[${optional_tools_names[10]}]="sslstrip" #sslstrip
@@ -106,6 +106,7 @@ declare -A possible_package_names=(
 #More than one alias can be defined separated by spaces at value
 declare -A possible_alias_names=(
 									["beef"]="beef-xss beef-server"
+									["nft"]="iptables"
 								)
 
 #General vars
@@ -208,6 +209,9 @@ alt_range_start="172.16.250.33"
 alt_range_stop="172.16.250.100"
 std_c_mask="255.255.255.0"
 ip_mask="255.255.255.255"
+std_c_mask_cidr="24"
+ip_mask_cidr="32"
+routing_tmp_file="ag.iptables_nftables"
 dhcpd_file="ag.dhcpd.conf"
 internet_dns1="8.8.8.8"
 internet_dns2="8.8.4.4"
@@ -4468,41 +4472,77 @@ function clean_routing_rules() {
 	fi
 
 	if [ "${iptables_saved}" -eq 1 ]; then
-		restore_iptables
+		restore_iptables_nftables
 	else
-		clean_iptables
+		clean_initialize_iptables_nftables
 	fi
 
-	rm -rf "${tmpdir}ag.iptables" > /dev/null 2>&1
+	rm -rf "${tmpdir}${routing_tmp_file}" > /dev/null 2>&1
 }
 
-#Save iptables rules
-function save_iptables() {
+#Save iptables/nftables rules
+function save_iptables_nftables() {
 
 	debug_print
 
-	if "${iptables_cmd}-save" > "${tmpdir}ag.iptables" 2> /dev/null; then
-		iptables_saved=1
+	if [ "${iptables_nftables}" -eq 1 ]; then
+		if hash "iptables-${iptables_cmd}-save" 2> /dev/null; then
+			if "iptables-${iptables_cmd}-save" > "${tmpdir}${routing_tmp_file}" 2> /dev/null; then
+				iptables_saved=1
+			fi
+		elif hash "${iptables_cmd}-compat-save" 2> /dev/null; then
+			if "${iptables_cmd}-compat-save" > "${tmpdir}${routing_tmp_file}" 2> /dev/null; then
+				iptables_saved=1
+			fi
+		fi
+	else
+		if hash "${iptables_cmd}-save" 2> /dev/null; then
+			if "${iptables_cmd}-save" > "${tmpdir}${routing_tmp_file}" 2> /dev/null; then
+				iptables_saved=1
+			fi
+		fi
 	fi
 }
 
-#Restore iptables rules
-function restore_iptables() {
+#Restore iptables/nftables rules
+function restore_iptables_nftables() {
 
 	debug_print
 
-	"${iptables_cmd}-restore" < "${tmpdir}ag.iptables" 2> /dev/null
+	if [ "${iptables_nftables}" -eq 1 ]; then
+		if hash "iptables-${iptables_cmd}-restore" 2> /dev/null; then
+			"iptables-${iptables_cmd}-restore" < "${tmpdir}${routing_tmp_file}" 2> /dev/null
+		elif hash "${iptables_cmd}-compat-restore" 2> /dev/null; then
+			"${iptables_cmd}-compat-restore" < "${tmpdir}${routing_tmp_file}" 2> /dev/null
+		fi
+	else
+		if hash "${iptables_cmd}-restore" 2> /dev/null; then
+			"${iptables_cmd}-restore" < "${tmpdir}${routing_tmp_file}" 2> /dev/null
+		fi
+	fi
 }
 
-#Clean iptables rules
-function clean_iptables() {
+#Clean and initialize iptables/nftables rules
+function clean_initialize_iptables_nftables() {
 
 	debug_print
 
-	"${iptables_cmd}" -F
-	"${iptables_cmd}" -t nat -F
-	"${iptables_cmd}" -X
-	"${iptables_cmd}" -t nat -X
+	if [ "${iptables_nftables}" -eq 1 ]; then
+		"${iptables_cmd}" add table ip filter 2> /dev/null
+		"${iptables_cmd}" add chain ip filter INPUT 2> /dev/null
+		"${iptables_cmd}" add chain ip filter OUTPUT 2> /dev/null
+		"${iptables_cmd}" add chain ip filter FORWARD 2> /dev/null
+		"${iptables_cmd}" flush table ip filter 2> /dev/null
+		"${iptables_cmd}" add table ip nat 2> /dev/null
+		"${iptables_cmd}" add chain nat PREROUTING "{ type nat hook prerouting priority 0 ; }" 2> /dev/null
+		"${iptables_cmd}" add chain nat POSTROUTING "{ type nat hook postrouting priority 100 ; }" 2> /dev/null
+		"${iptables_cmd}" flush table ip nat 2> /dev/null
+	else
+		"${iptables_cmd}" -F 2> /dev/null
+		"${iptables_cmd}" -t nat -F 2> /dev/null
+		"${iptables_cmd}" -X 2> /dev/null
+		"${iptables_cmd}" -t nat -X 2> /dev/null
+	fi
 }
 
 #Create an array from parameters
@@ -7740,46 +7780,87 @@ function set_std_internet_routing_rules() {
 
 	if [ "${routing_modified}" -eq 0 ]; then
 		original_routing_state=$(cat /proc/sys/net/ipv4/ip_forward)
-		save_iptables
+		save_iptables_nftables
 	fi
 
 	ifconfig "${interface}" ${et_ip_router} netmask ${std_c_mask} > /dev/null 2>&1
 	routing_modified=1
 
-	clean_iptables
+	clean_initialize_iptables_nftables
 
 	if [[ "${et_mode}" != "et_captive_portal" ]] || [[ ${captive_portal_mode} = "internet" ]]; then
-		"${iptables_cmd}" -P FORWARD ACCEPT
+		if [ "${iptables_nftables}" -eq 1 ]; then
+			"${iptables_cmd}" add rule ip filter FORWARD counter accept
+		else
+			"${iptables_cmd}" -P FORWARD ACCEPT
+		fi
 		echo "1" > /proc/sys/net/ipv4/ip_forward
 	else
-		"${iptables_cmd}" -P FORWARD DROP
+		if [ "${iptables_nftables}" -eq 1 ]; then
+			"${iptables_cmd}" add rule ip filter FORWARD counter drop
+		else
+			"${iptables_cmd}" -P FORWARD DROP
+		fi
 		echo "0" > /proc/sys/net/ipv4/ip_forward
 	fi
 
 	if [ "${et_mode}" = "et_captive_portal" ]; then
-		"${iptables_cmd}" -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination ${et_ip_router}:80
-		"${iptables_cmd}" -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination ${et_ip_router}:80
-		"${iptables_cmd}" -A INPUT -p tcp --destination-port 80 -j ACCEPT
-		"${iptables_cmd}" -A INPUT -p tcp --destination-port 443 -j ACCEPT
+		if [ "${iptables_nftables}" -eq 1 ]; then
+			"${iptables_cmd}" add rule ip nat PREROUTING tcp dport 80 counter dnat to ${et_ip_router}:80
+			"${iptables_cmd}" add rule ip nat PREROUTING tcp dport 443 counter dnat to ${et_ip_router}:443
+			"${iptables_cmd}" add rule ip filter INPUT tcp dport 80 counter accept
+			"${iptables_cmd}" add rule ip filter INPUT tcp dport 443 counter accept
+		else
+			"${iptables_cmd}" -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination ${et_ip_router}:80
+			"${iptables_cmd}" -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination ${et_ip_router}:80
+			"${iptables_cmd}" -A INPUT -p tcp --destination-port 80 -j ACCEPT
+			"${iptables_cmd}" -A INPUT -p tcp --destination-port 443 -j ACCEPT
+		fi
 		if [ ${captive_portal_mode} = "dnsblackhole" ]; then
-			"${iptables_cmd}" -A INPUT -p udp --destination-port 53 -j ACCEPT
+			if [ "${iptables_nftables}" -eq 1 ]; then
+				"${iptables_cmd}" add rule ip filter INPUT udp dport 53 counter accept
+			else
+				"${iptables_cmd}" -A INPUT -p udp --destination-port 53 -j ACCEPT
+			fi
 		fi
 	elif [ "${et_mode}" = "et_sniffing_sslstrip" ]; then
-		"${iptables_cmd}" -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port ${sslstrip_port}
-		"${iptables_cmd}" -A INPUT -p tcp --destination-port ${sslstrip_port} -j ACCEPT
+		if [ "${iptables_nftables}" -eq 1 ]; then
+			"${iptables_cmd}" add rule ip nat PREROUTING tcp dport 80 counter redirect to :${sslstrip_port}
+			"${iptables_cmd}" add rule ip filter INPUT tcp dport ${sslstrip_port} counter accept
+		else
+			"${iptables_cmd}" -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port ${sslstrip_port}
+			"${iptables_cmd}" -A INPUT -p tcp --destination-port ${sslstrip_port} -j ACCEPT
+		fi
 	elif [ "${et_mode}" = "et_sniffing_sslstrip2" ]; then
-		"${iptables_cmd}" -A INPUT -p tcp --destination-port ${bettercap_proxy_port} -j ACCEPT
-		"${iptables_cmd}" -A INPUT -p udp --destination-port ${bettercap_dns_port} -j ACCEPT
-		"${iptables_cmd}" -A INPUT -i lo -j ACCEPT
-		"${iptables_cmd}" -A INPUT -p tcp --destination-port ${beef_port} -j ACCEPT
+		if [ "${iptables_nftables}" -eq 1 ]; then
+			"${iptables_cmd}" add rule ip filter INPUT tcp dport ${bettercap_proxy_port} counter accept
+			"${iptables_cmd}" add rule ip filter INPUT udp dport ${bettercap_dns_port} counter accept
+			"${iptables_cmd}" add rule ip filter INPUT iifname "lo" counter accept
+			"${iptables_cmd}" add rule ip filter INPUT tcp dport ${beef_port} counter accept
+		else
+			"${iptables_cmd}" -A INPUT -p tcp --destination-port ${bettercap_proxy_port} -j ACCEPT
+			"${iptables_cmd}" -A INPUT -p udp --destination-port ${bettercap_dns_port} -j ACCEPT
+			"${iptables_cmd}" -A INPUT -i lo -j ACCEPT
+			"${iptables_cmd}" -A INPUT -p tcp --destination-port ${beef_port} -j ACCEPT
+		fi
 	fi
 
 	if [[ "${et_mode}" != "et_captive_portal" ]] || [[ ${captive_portal_mode} = "internet" ]]; then
-		"${iptables_cmd}" -t nat -A POSTROUTING -o "${internet_interface}" -j MASQUERADE
+		if [ "${iptables_nftables}" -eq 1 ]; then
+			#TODO fix NAT for nftables not working on some distros
+			"${iptables_cmd}" add rule nat POSTROUTING ip saddr ${et_ip_range}/${std_c_mask_cidr} oifname "${internet_interface}" counter masquerade
+		else
+			"${iptables_cmd}" -t nat -A POSTROUTING -o "${internet_interface}" -j MASQUERADE
+		fi
 	fi
 
-	"${iptables_cmd}" -A INPUT -p icmp --icmp-type 8 -s ${et_ip_range}/${std_c_mask} -d ${et_ip_router}/${ip_mask} -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
-	"${iptables_cmd}" -A INPUT -s ${et_ip_range}/${std_c_mask} -d ${et_ip_router}/${ip_mask} -j DROP
+	if [ "${iptables_nftables}" -eq 1 ]; then
+		"${iptables_cmd}" add rule ip filter INPUT ip saddr ${et_ip_range}/${std_c_mask_cidr} ip daddr ${et_ip_router}/${ip_mask_cidr} icmp type echo-request ct state new,related,established counter accept
+		"${iptables_cmd}" add rule ip filter INPUT ip saddr ${et_ip_range}/${std_c_mask_cidr} ip daddr ${et_ip_router}/${ip_mask_cidr} counter drop
+	else
+		"${iptables_cmd}" -A INPUT -p icmp --icmp-type 8 -s ${et_ip_range}/${std_c_mask} -d ${et_ip_router}/${ip_mask} -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+		"${iptables_cmd}" -A INPUT -s ${et_ip_range}/${std_c_mask} -d ${et_ip_router}/${ip_mask} -j DROP
+	fi
 	sleep 2
 }
 
@@ -11546,15 +11627,25 @@ function time_loop() {
 	done
 }
 
-#Fix iptables if needed
-function iptables_fix() {
+#Fix iptables/nftables if needed
+function iptables_nftables_fix() {
 
 	debug_print
 
-	iptables_cmd="iptables"
+	if hash nft 2> /dev/null; then
+		iptables_nftables=1
+	else
+		iptables_nftables=0
+	fi
 
-	if hash iptables-legacy 2> /dev/null; then
-		iptables_cmd="iptables-legacy"
+	if [ "${iptables_nftables}" -eq 0 ]; then
+		if hash iptables-legacy 2> /dev/null; then
+			iptables_cmd="iptables-legacy"
+		else
+			iptables_cmd="iptables"
+		fi
+	else
+		iptables_cmd="nft"
 	fi
 }
 
@@ -12933,7 +13024,7 @@ function main() {
 		check_update_tools
 	fi
 
-	iptables_fix
+	iptables_nftables_fix
 	print_configuration_vars_issues
 	initialize_extended_colorized_output
 	set_windows_sizes
