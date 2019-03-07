@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20190303
+#Date.........: 20190307
 #Version......: 9.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -4471,10 +4471,10 @@ function clean_routing_rules() {
 		echo "${original_routing_state}" > /proc/sys/net/ipv4/ip_forward
 	fi
 
+	clean_initialize_iptables_nftables
+
 	if [ "${iptables_saved}" -eq 1 ]; then
 		restore_iptables_nftables
-	else
-		clean_initialize_iptables_nftables
 	fi
 
 	rm -rf "${tmpdir}${routing_tmp_file}" > /dev/null 2>&1
@@ -7847,7 +7847,6 @@ function set_std_internet_routing_rules() {
 
 	if [[ "${et_mode}" != "et_captive_portal" ]] || [[ ${captive_portal_mode} = "internet" ]]; then
 		if [ "${iptables_nftables}" -eq 1 ]; then
-			#TODO fix NAT for nftables not working on some distros
 			"${iptables_cmd}" add rule nat POSTROUTING ip saddr ${et_ip_range}/${std_c_mask_cidr} oifname "${internet_interface}" counter masquerade
 		else
 			"${iptables_cmd}" -t nat -A POSTROUTING -o "${internet_interface}" -j MASQUERADE
