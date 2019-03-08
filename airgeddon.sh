@@ -2,7 +2,7 @@
 #Title........: airgeddon.sh
 #Description..: This is a multi-use bash script for Linux systems to audit wireless networks.
 #Author.......: v1s1t0r
-#Date.........: 20190307
+#Date.........: 20190308
 #Version......: 9.10
 #Usage........: bash airgeddon.sh
 #Bash Version.: 4.2 or later
@@ -11626,15 +11626,26 @@ function time_loop() {
 	done
 }
 
-#Fix iptables/nftables if needed
-function iptables_nftables_fix() {
+#Detect iptables/nftables
+function iptables_nftables_detection() {
 
 	debug_print
 
-	if hash nft 2> /dev/null; then
-		iptables_nftables=1
+	if ! "${AIRGEDDON_FORCE_IPTABLES:-false}"; then
+		if hash nft  2> /dev/null; then
+			iptables_nftables=1
+		else
+			iptables_nftables=0
+		fi
 	else
-		iptables_nftables=0
+		if ! hash iptables 2> /dev/null && ! hash iptables-legacy 2> /dev/null; then
+			echo
+			language_strings "${language}" 615 "red"
+			exit_code=1
+			exit_script_option
+		else
+			iptables_nftables=0
+		fi
 	fi
 
 	if [ "${iptables_nftables}" -eq 0 ]; then
@@ -12761,6 +12772,7 @@ function env_vars_initialization() {
 									"AIRGEDDON_SILENT_CHECKS"
 									"AIRGEDDON_PRINT_HINTS"
 									"AIRGEDDON_5GHZ_ENABLED"
+									"AIRGEDDON_FORCE_IPTABLES"
 									"AIRGEDDON_DEVELOPMENT_MODE"
 									"AIRGEDDON_DEBUG_MODE"
 									)
@@ -12776,6 +12788,7 @@ function env_vars_initialization() {
 	boolean_options_env_vars["${ordered_options_env_vars[7]},default_value"]="true"
 	boolean_options_env_vars["${ordered_options_env_vars[8]},default_value"]="false"
 	boolean_options_env_vars["${ordered_options_env_vars[9]},default_value"]="false"
+	boolean_options_env_vars["${ordered_options_env_vars[10]},default_value"]="false"
 
 	boolean_options_env_vars["${ordered_options_env_vars[0]},rcfile_text"]="#Enabled true / Disabled false - Auto update feature (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_options_env_vars[0]},'default_value']}"
 	boolean_options_env_vars["${ordered_options_env_vars[1]},rcfile_text"]="#Enabled true / Disabled false - Skip intro (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_options_env_vars[1]},'default_value']}"
@@ -12785,8 +12798,9 @@ function env_vars_initialization() {
 	boolean_options_env_vars["${ordered_options_env_vars[5]},rcfile_text"]="#Enabled true / Disabled false - Dependencies, root and bash version checks are done silently (it has no effect on development mode) - Default value ${boolean_options_env_vars[${ordered_options_env_vars[5]},'default_value']}"
 	boolean_options_env_vars["${ordered_options_env_vars[6]},rcfile_text"]="#Enabled true / Disabled false - Print help hints on menus - Default value ${boolean_options_env_vars[${ordered_options_env_vars[6]},'default_value']}"
 	boolean_options_env_vars["${ordered_options_env_vars[7]},rcfile_text"]="#Enabled true / Disabled false - Enable 5Ghz support (it has no effect if your cards are not 5Ghz compatible cards) - Default value ${boolean_options_env_vars[${ordered_options_env_vars[7]},'default_value']}"
-	boolean_options_env_vars["${ordered_options_env_vars[8]},rcfile_text"]="#Enabled true / Disabled false - Development mode for faster development skipping intro and all initial checks - Default value ${boolean_options_env_vars[${ordered_options_env_vars[8]},'default_value']}"
-	boolean_options_env_vars["${ordered_options_env_vars[9]},rcfile_text"]="#Enabled true / Disabled false - Debug mode for development printing debug information - Default value ${boolean_options_env_vars[${ordered_options_env_vars[9]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[8]},rcfile_text"]="#Enabled true / Disabled false - Force to use iptables instead of nftables (it has no effect if nftables are not present) - Default value ${boolean_options_env_vars[${ordered_options_env_vars[8]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[9]},rcfile_text"]="#Enabled true / Disabled false - Development mode for faster development skipping intro and all initial checks - Default value ${boolean_options_env_vars[${ordered_options_env_vars[9]},'default_value']}"
+	boolean_options_env_vars["${ordered_options_env_vars[10]},rcfile_text"]="#Enabled true / Disabled false - Debug mode for development printing debug information - Default value ${boolean_options_env_vars[${ordered_options_env_vars[10]},'default_value']}"
 
 	readarray -t ENV_VARS_ELEMENTS < <(printf %s\\n "${!boolean_options_env_vars[@]}" | cut -d, -f1 | sort -u)
 	ENV_BOOLEAN_VARS_ELEMENTS=("${ENV_VARS_ELEMENTS[@]}")
@@ -13023,7 +13037,7 @@ function main() {
 		check_update_tools
 	fi
 
-	iptables_nftables_fix
+	iptables_nftables_detection
 	print_configuration_vars_issues
 	initialize_extended_colorized_output
 	set_windows_sizes

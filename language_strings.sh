@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20190213
+#Date.........: 20190308
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -8229,6 +8229,18 @@ function language_strings() {
 	arr["POLISH",614]="${pending_of_translation} Uwaga Sprawdź plik ${rc_file}. Nie znaleziono zmiennej ${normal_color}${error_var_name}${yellow_color}. Użyta zostanie wartość domyślna ${normal_color}${error_var_default_value}${yellow_color}"
 	arr["GERMAN",614]="${pending_of_translation} Warnung. Bitte überprüfen Sie die ${rc_file}-Datei. Konfigurationsvariable ${normal_color}${error_var_name}${yellow_color} nicht gefunden. ${normal_color}${error_var_default_value}${yellow_color} wird verwendet"
 	arr["TURKISH",614]="${pending_of_translation} Uyarı. Lütfen ${rc_file} dosyasını kontrol edin. Yapılandırma değişkeni ${normal_color}${error_var_name}${yellow_color} bulunamadı. ${normal_color}${error_var_default_value}${yellow_color} varsayılan değeri kullanılmak istiyor"
+
+	arr["ENGLISH",615]="There is an error in your configuration. Please check the ${rc_file} file. You have enabled the option to force the use of iptables instead of nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}) but your system doesn't have iptables installed. Disable this option or install iptables to fix the problem"
+	arr["SPANISH",615]="Hay un error en tu configuración. Por favor revisa el fichero ${rc_file}. Has activado la opción para forzar el uso de iptables en lugar de nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}) pero tu sistema no tiene iptables instaladas. Deshabilita esta opción o instala iptables para solucionar el problema"
+	arr["FRENCH",615]="${pending_of_translation} "
+	arr["CATALAN",615]="${pending_of_translation} "
+	arr["PORTUGUESE",615]="${pending_of_translation} "
+	arr["RUSSIAN",615]="${pending_of_translation} "
+	arr["GREEK",615]="${pending_of_translation} "
+	arr["ITALIAN",615]="${pending_of_translation} "
+	arr["POLISH",615]="${pending_of_translation} "
+	arr["GERMAN",615]="${pending_of_translation} "
+	arr["TURKISH",615]="${pending_of_translation} "
 
 	case "${3}" in
 		"yellow")
