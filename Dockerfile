@@ -15,6 +15,10 @@ ENV AIRGEDDON_URL="https://github.com/v1s1t0r1sh3r3/airgeddon.git"
 ENV HASHCAT2_URL="https://github.com/v1s1t0r1sh3r3/hashcat2.0.git"
 ENV BETTERCAP162_URL="https://github.com/v1s1t0r1sh3r3/bettercap1.6.2.git"
 ENV DEBIAN_FRONTEND="noninteractive"
+ENV KALI_REPOSITORY="http://kali.download/kali"
+
+#Fix some problems with Kali repositories
+RUN echo "deb ${KALI_REPOSITORY} kali-rolling main contrib non-free" > /etc/apt/sources.list
 
 #Update system
 RUN apt update
