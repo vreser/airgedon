@@ -2,7 +2,7 @@
 #Title........: language_strings.sh
 #Description..: All the translated strings that airgeddon uses are located here.
 #Author.......: v1s1t0r
-#Date.........: 20190308
+#Date.........: 20190309
 #Bash Version.: 4.2 or later
 
 #Set language_strings file version
@@ -8232,15 +8232,15 @@ function language_strings() {
 
 	arr["ENGLISH",615]="There is an error in your configuration. Please check the ${rc_file} file. You have enabled the option to force the use of iptables instead of nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}) but your system doesn't have iptables installed. Disable this option or install iptables to fix the problem"
 	arr["SPANISH",615]="Hay un error en tu configuración. Por favor revisa el fichero ${rc_file}. Has activado la opción para forzar el uso de iptables en lugar de nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}) pero tu sistema no tiene iptables instaladas. Deshabilita esta opción o instala iptables para solucionar el problema"
-	arr["FRENCH",615]="${pending_of_translation} "
-	arr["CATALAN",615]="${pending_of_translation} "
-	arr["PORTUGUESE",615]="${pending_of_translation} "
-	arr["RUSSIAN",615]="${pending_of_translation} "
-	arr["GREEK",615]="${pending_of_translation} "
-	arr["ITALIAN",615]="${pending_of_translation} "
-	arr["POLISH",615]="${pending_of_translation} "
-	arr["GERMAN",615]="${pending_of_translation} "
-	arr["TURKISH",615]="${pending_of_translation} "
+	arr["FRENCH",615]="${pending_of_translation} Il y a une erreur dans votre configuration. Veuillez vérifier le fichier ${rc_file}. Vous avez activé l'option pour forcer l'utilisation de iptables à la place de nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}) mais iptables n'est pas installé sur votre système. Désactiver cette option ou installer iptables pour résoudre le problème"
+	arr["CATALAN",615]="${pending_of_translation} Hi ha un error en la configuració. Si us plau revisa el fitxer ${rc_file}. Has activat l'opció per forçar l'ús d'iptables en lloc de nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}) però el teu sistema no té iptables instal·lades. Deshabilita aquesta opció o instal iptables per solucionar el problema"
+	arr["PORTUGUESE",615]="${pending_of_translation} Existe um erro na sua configuração. Por favor, verifique o arquivo ${rc_file}. Você ativou a opção para forçar o uso de iptables em vez de nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}), mas seu sistema não possui o iptables instalado. Desabilite esta opção ou instale o iptables para resolver o problema"
+	arr["RUSSIAN",615]="${pending_of_translation} В вашей конфигурации произошла ошибка. Пожалуйста, проверьте файл ${rc_file}. Вы включили опцию принудительного использования iptables вместо nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}), но в вашей системе не установлены iptables. Отключите эту опцию или установите iptables, чтобы исправить проблему"
+	arr["GREEK",615]="${pending_of_translation} Υπάρχει ένα σφάλμα στη διαμόρφωσή σας. Ελέγξτε το αρχείο ${rc_file}. Έχετε ενεργοποιήσει την επιλογή να εξαναγκάσετε τη χρήση του iptables αντί του nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}), αλλά το σύστημά σας δεν έχει εγκατεστημένο το iptables. Απενεργοποιήστε αυτήν την επιλογή ή εγκαταστήστε το iptables για να διορθώσετε το πρόβλημα"
+	arr["ITALIAN",615]="${pending_of_translation} C'è un errore nella tua configurazione. Per favore controlla il file ${rc_file}. Hai attivato l'opzione per forzare l'uso di iptables invece di nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}) ma il tuo sistema non ha iptables installato. Disabilita questa opzione o installa iptables per risolvere il problema"
+	arr["POLISH",615]="${pending_of_translation} Wystąpił błąd w konfiguracji. Sprawdź plik ${rc_file}. Aktywowałeś opcję wymuszania użycia iptables zamiast nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}), ale twój system nie ma zainstalowanego iptables. Wyłącz tę opcję lub zainstaluj iptables, aby rozwiązać problem"
+	arr["GERMAN",615]="${pending_of_translation} Es liegt ein Fehler in Ihrer Konfiguration vor. Bitte überprüfen Sie die Datei ${rc_file}. Sie haben die Option aktiviert, um die Verwendung von iptables anstelle von nftables zu erzwingen (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}), aber auf Ihrem System sind iptables nicht installiert. Deaktivieren Sie diese Option oder installieren Sie iptables, um das Problem zu lösen"
+	arr["TURKISH",615]="${pending_of_translation} Yapılandırmanızda bir hata var. Lütfen ${rc_file} dosyasını kontrol edin. Nftables (${normal_color}AIRGEDDON_FORCE_IPTABLES${red_color}) yerine iptables kullanımını zorlama seçeneğini etkinleştirdiniz, ancak sisteminizde iptables kurulu değil. Bu seçeneği devre dışı bırakın veya sorunu çözmek için iptables yükleyin"
 
 	case "${3}" in
 		"yellow")
